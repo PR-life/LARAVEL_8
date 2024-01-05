@@ -1,5 +1,6 @@
 /brand
 favicon.ico
 robots.txt
+mix-manifest.json
 # 
 !.gitignore
