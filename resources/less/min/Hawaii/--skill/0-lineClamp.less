@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+.lineClamp {
+// input:checked ~ .lineClamp {
+	--lineClamp:1;
+	--lineClamp-padding:1rem;
+}
+
+.lineClamp.var-2 {
+	--lineClamp:2;
+}
+
+.lineClamp.var-3 {
+	--lineClamp:3;
+}
+
+.lineClamp.var-4 {
+// input:checked ~ .A .content.-M {
+	--lineClamp:4;
+}
+
+.lineClamp.var-10 {
+	--lineClamp: 10;
+}
+
+// .Q[data-css-toggle],
+// .A[data-css-toggle],
+// input:checked ~ .A {
+
+.lineClamp {
+	cursor: pointer;
+	// overflow: hidden;
+	// text-overflow: ellipsis;
+	
+	// display: -webkit-box;
+	// -webkit-line-clamp: var(--lineClamp);
+	// -webkit-box-orient: vertical;
+
+	> * {
+		display: none;
+	}
+
+
+	br {display: none;}
+		
+	> :first-child {
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: var(--lineClamp);
+		-webkit-box-orient: vertical;
+	}
+
+}
+
+
+
+.lineClamp.-block.x-2 {
+	> :first-child {display: block;}
+	> :nth-child(2) {
+		overflow: hidden;
+		display: -webkit-box;
+		-webkit-line-clamp: var(--lineClamp);
+		-webkit-box-orient: vertical;
+	}
+}
+
+// .A:not(.On),
+// .A:not(.on) {
+// 	.lineClamp > :first-child {margin-bottom: 0;}
+// }
+
+//
+
+
+.lineClamp.-padding{
+	padding-right: 2rem;
+}
+
+
+
+// .Fog.off,
+// .On,
+// .on {
+// 	.lineClamp.-padding {
+// 		padding-right: 0;
+// 	}
+// }
+
+
+//
+// .lineClamp.-x1 {padding-right: 2rem;}
+
+
+
+
+// .-lineClamp,
+// .On .lineClamp,
+// .owl-lineClamp.lineClamp,
+.On.lineClamp,
+.On .lineClamp,
+.on > .lineClamp {
+	--lineClamp-padding:0;
+	cursor: default;
+	> * {
+		display: block !important;
+	}
+	br {display: block;}
+}
+
+
+// .On,
+.lineClamp.-padding {
+	padding-right: var(--lineClamp-padding);
+}
+

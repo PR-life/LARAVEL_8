@@ -1,0 +1,1 @@
+<span class="block oneLine nowrap Ellipsis / {{$css ?? ''}}">{!!$Var!!}</span>

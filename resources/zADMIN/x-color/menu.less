@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+#milkSherpa,
+.oiBar ._open {
+ 
+	a, a:hover {
+		color: hsla(0, 0%, 100%, 0.85);
+
+		span {color: inherit;}
+	}
+ 
+}
+
+
+.oiBar {
+
+	._menu {
+		.Ico {
+			--c-text: #8ea2b4;
+			color: var(--c-text);
+		}
+
+		.on .Ico,
+		.on .pointer {
+			--c-text: @c-text-2;
+		}
+	}
+
+}

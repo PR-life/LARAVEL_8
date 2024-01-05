@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+html {
+    --family-Adobe:'Adobe';
+}
+
+// токо EN
+
+.familyAdobe,
+.Family-Adobe * {
+	font-family: var(--family-Adobe) !important;
+}
+
+@font-face {
+    font-family: 'Adobe';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Adobe'), url(/font/Adobe/100.woff) format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Adobe';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Adobe'), url(/font/Adobe/600.woff) format('woff');
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Adobe';
+    font-style: italic;
+    font-weight: 600;
+    src: local('Adobe'), url(/font/Adobe/600.woff) format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Adobe';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Adobe'), url(/font/Adobe/700.woff) format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Adobe';
+    font-style: italic;
+    font-weight: 700;
+    src: local('Adobe'), url(/font/Adobe/700.woff) format('woff');
+    font-display: swap;
+}
+
+.Family-Adobe {
+    .b100,
+    .b200,
+    .b300,
+    .b500,
+    .b800,
+    .b900 {
+        color: #eee;
+    }    
+}
+ 

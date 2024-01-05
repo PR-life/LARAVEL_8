@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.Teaser.vol-slide {
+	--x-Teaser-bg-back:#f9f9fb;
+	--x-Teaser-bg-front:#fff;
+	--x-Teaser-radius: 1.5rem;
+	--x-Teaser-translate-oy:0px;
+
+	//
+	background-color: var(--x-Teaser-bg-front);
+
+	.x-1 {
+		transform: translateY(var(--x-Teaser-translate-oy));
+		transition: transform .2s ease;
+
+	}
+
+	.x-1,
+	._front{
+		background-color: var(--x-Teaser-bg-front);
+	}
+
+	._front::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		bottom: 0;
+		height: 4rem;
+		background: linear-gradient(transparent 30%, var(--x-Teaser-bg-front));
+	}
+}
+
+.Teaser.vol-slide:hover {
+	--x-Teaser-translate-oy: -20px;
+}
+
+
+ 

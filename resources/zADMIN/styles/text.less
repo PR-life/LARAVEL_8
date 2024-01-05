@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+
+details > .text.x-Blog {
+    margin-top: 0;
+}
+
+
+.text.x-Blog {
+    .Info,
+    .Citation,
+    .content,
+    ol, ul, h4, dl,
+    p {
+        margin-left: auto;
+        margin-right: auto;
+        max-width: var(--Blog);
+    }
+
+    .x-left {
+        margin-left: 0;
+    }
+
+    > :first-child {
+        margin-top: 2rem;
+    }
+
+    > details:first-child {
+        margin-top: 0;
+    }
+}

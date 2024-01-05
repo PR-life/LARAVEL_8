@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@import "./__/_ol.less";
+
+
+.menu.-footer > * {
+	font-size: var(--fontMenuMain);
+}
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @metrika-100) {
+
+	#Header .x-05041138{
+		font-size: clamp(10px,var(--font), 14px) !important;
+	}
+
+	.menu.-footer > *,
+	.menu.-main > * {
+		font-size: clamp(calc(var(--fontMenu) + 2px),calc(var(--indexW) + 2px),var(--fontMenuMain));
+	}
+
+}
+
+
+.Contact {
+    a {letter-spacing: .5px;}
+}
+
+#body.fix {
+	#Milk {
+		z-index: 9;
+	}
+}
+
+#body.fix {
+	#Top.Owl {z-index: 4;}
+}
+

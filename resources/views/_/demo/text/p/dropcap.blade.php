@@ -1,0 +1,1 @@
+<p class="dropcap">Primum igitur, quid percipit aut in armatum hostem impetum fecisse aut voluptates repudiandae sint et expedita distinctio nam libero cum memoriter, tum etiam ac ratione et benivole collegisti, nec me tamen laudandis maioribus meis corrupisti nec voluptas nulla pariatur? at magnum periculum adiit in.</p>

@@ -1,0 +1,1 @@
+<div class="content-xxs center-text / Grey / noEvents slctn">{{$name}}</div>

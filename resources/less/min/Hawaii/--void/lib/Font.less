@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.Font {
+	--x-Font-void:2rem;
+}
+
+.Font.void-s {
+	--x-Font-void: 1rem;
+}
+
+.Font-voidM {
+	--x-Font-void: 3rem;
+}
+
+
+.Font.-void {
+
+	> ._void,
+	> ._h4,
+	> ._p {
+		margin-top: var(--x-Font-void);
+	}
+	> ._btn {
+		margin-top: calc((var(--x-Font-void)*.5));
+	}
+
+	>.net {margin-top: 0;}
+}

@@ -1,0 +1,61 @@
+@charset "UTF-8";
+
+
+.Badge.-blue,
+.Badge.-green {
+	--x-bg-badge-c: #fff;
+	// svg {
+		// fill: white;
+		// stroke: white;
+	// }
+}
+
+.Badge.-blue {
+	--x-bg-badge: #5282ff;
+}
+
+.Badge.-blue.c2 {
+	--x-bg-badge: #4662b2;
+}
+
+.Badge.-green {
+	--x-bg-badge: #16D895;
+}
+
+.Badge.-red {
+	--x-bg-badge: #FF635D;
+}
+
+.Badge.transparent {
+	--x-bg-badge-bg:transparent;
+}
+
+.Badge {
+	--x-bg-badge-c: inherit;
+	--x-bg-badge-c-text: #455880;
+	--x-bg-badge-bg: #E9EEF4;
+    // background: var(--x-bg-badge);
+    background: var(--x-bg-badge-bg); 
+    > *:first-child {
+        // background: var(--x-bg-badge-bg);
+        background: var(--x-bg-badge);
+        color: var(--x-bg-badge-c);
+    }
+	._text {
+		color: var(--x-bg-badge-c-text);
+	}
+}
+
+.Badge.-reverseBg {
+	background: var(--x-bg-badge);
+
+	> *:first-child {
+		background: var(--x-bg-badge-bg);
+	}
+}
+
+
+.Bg.-grey-2 .Badge {
+	--x-bg-badge-bg: #ccc;
+	--x-bg-badge-c-text: #333;
+}

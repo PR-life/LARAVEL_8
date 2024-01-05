@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+.Ico.-gem {
+	--icoGem-w: 3vw;
+	--icoGem-h: 3vw;
+	--icoGem-w-border: 4px;
+	
+	--icoGem-bg-1: #111;
+	--icoGem-bg-2: #000;
+
+
+	position: relative;
+	width: clamp(var(--Ico), var(--icoGem-w), 3rem);
+	height: clamp(var(--Ico), var(--icoGem-h), 3rem);
+
+	background-image: linear-gradient(
+		to right bottom, 
+		var(--icoGem-bg-1) 0%, 
+		var(--icoGem-bg-2) 100%
+	);
+}
+
+
+.Ico.-gem.-c1{
+	// --bg-icoGem-1: #0d0e13; //333
+	// --bg-icoGem-2: #111;
+	//
+	--icoGem-c-border-1: rgba(0, 0, 0, 0.2);
+	--icoGem-c-border-2: rgba(255, 255, 255, 0.05);
+	--icoGem-c-border-3: rgba(0, 0, 0, 0.25);
+	--icoGem-c-border-4: rgba(255, 255, 255, 0.1);
+}
+
+.Ico.-gem::after {
+	content: "";
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top: 0;
+	border: var(--icoGem-w-border) solid;
+	border-color: var(--icoGem-c-border-1) var(--icoGem-c-border-2) var(--icoGem-c-border-3) var(--icoGem-c-border-4);
+}

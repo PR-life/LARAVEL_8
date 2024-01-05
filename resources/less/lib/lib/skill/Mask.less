@@ -1,0 +1,301 @@
+@charset "UTF-8";
+
+body.mask .mask,
+body.mask .Mask::after {
+	.transition;
+	clip-path: polygon(100% 0%, 100% 0%, 100% 100%, 100% 100%);
+}
+
+div.mask,
+.Mask::after,
+.Mask::before {
+	clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 100%);
+}
+
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+	div.mask,
+	.Mask::after,
+	.Mask::before {
+		.transition();
+	}
+}
+
+@media screen and (max-width:@w-menu-2) {
+	div.mask,
+	.Mask::after,
+	.Mask::before {
+		.transition(all,0);
+	}
+}
+
+
+/////
+
+
+
+//.Zoom .Mask.inline {position: relative; inset: auto;}
+
+.Plot .Mask {position: absolute; 
+	top:0;
+	left: 0;
+	right:0;
+	bottom:0;
+
+}
+
+//
+
+.Mask {position: relative;}
+.Mask::before,
+.Mask::after {
+	content: '';
+	position: absolute;
+	inset:0;
+	pointer-events: none;
+}
+
+.Chunk .r {
+	.Mask.Min.-img::before,
+	.Mask.Min.-img::after  {
+		left: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: var(--Aside);
+	}
+}
+
+@media screen and (max-width:@w-menu-2) {
+
+	.Mask.-img {
+		background-position: right bottom;
+	}
+	
+	.Mask.-img::before,
+	.Mask.-img::after  {
+		left: auto;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		width: var(--Aside);
+	}
+
+	.square {
+		.Mask.-img {
+			background-size: cover;
+			background-position: right bottom;
+		}
+		.Mask.-img::before,
+		.Mask.-img::after  {
+			left: 0;
+			width: auto;
+		}
+	}
+
+
+}
+
+
+
+.Mask.-txt::after,
+.Mask.-txt::before {
+	content: attr(data-label);
+	pointer-events: none;
+	//
+	line-height: inherit;
+	font-size: inherit;
+}
+
+.Mask::before {
+	z-index: 5;
+	//background-color: red;
+}
+
+
+.Mask::after {
+	z-index: 6;
+	//background-color: blue;
+}
+
+.Mask.-img::before,
+.Mask.-img::after {
+	background-size: inherit;
+	background-position: inherit;
+	background-repeat: inherit;
+	background-image: inherit;
+}
+
+.Mask.-txt::before,
+.Mask.-txt::after {
+	background-color: #fff;
+}
+
+
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+
+
+	.right {
+		.Mask.-txt::before,
+		.Mask.-txt::after {
+			left: auto;
+			width: var(--Aside);
+			//
+			display: flex;
+			justify-content: flex-end;
+			//
+			white-space: nowrap;
+		}
+	}
+
+	.void-r {
+		.right {
+			.Mask.-txt::before,
+			.Mask.-txt::after {
+				width: ~"calc(var(--Aside) - var(--Void-r))";
+				
+			}
+		}
+	}
+}
+
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+
+	.mask-mbl::after,
+	.mask-mbl::before {
+		display: none;
+	}
+
+}
+
+
+
+/*
+ 
+.Mask {
+	--x-corrector-Mask: 1rem;
+}
+
+
+
+
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+
+
+	
+
+	.Mask.Min::after,
+	.Mask.Min::before {
+		display: block;
+	}
+
+
+	
+
+	.Mask.Min::after,
+	.Mask.Min::before {
+		left: auto;
+		width: var(--Aside);
+	}
+
+	.Mask.-txt::after,
+	.Mask.-txt::before,
+	.Mask.W::after,
+	.Mask.W::before {
+		display: none;
+	}
+
+}
+
+
+@media screen and (max-width:@w-menu-2) {
+	.Mask.-img::after,
+	.Mask.-img::before {
+		left: 4rem;
+		right: auto;
+		width: var(--Aside);
+	}
+	a.Mask {
+		display: block;
+	}
+
+}
+
+
+
+.Mask.-img::after,
+.Mask.-img::before {
+	content: "";
+	//
+	background-size: inherit;
+	background-position: inherit;
+	background-repeat: inherit;
+	background-image: inherit;
+}
+
+/////
+
+
+
+
+
+
+.Mask::before,
+.Mask.-txt::after {
+	background-color: #fff;
+}
+
+
+
+
+
+
+.right .Mask::after,
+.right .Mask::before {
+		left: auto;
+}
+
+.right .Mask::after,
+.right .Mask::before {
+		left: auto;
+}
+
+
+.right .Mask.void-r::after,
+.right .Mask.void-r::before {
+	right: ~"calc(var(--Void-r) - var(--x-corrector-Mask))";
+	padding-right: var(--x-corrector-Mask);
+}
+
+
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+
+	.right .Mask::after,
+	.right .Mask::before {
+		width: ~"calc(var(--Aside) - var(--Void-r))";
+	}
+
+	.right .Mask.void-r::after,
+	.right .Mask.void-r::before {
+		width: ~"calc(var(--Aside) - var(--Void-r))";
+	}
+
+}
+
+@media screen and (max-width:@w-menu-2) {
+
+	.right .Mask::after,
+	.right .Mask::before {
+		left: 0;
+	}
+
+
+}
+
+
+/**/

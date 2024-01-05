@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+.Noise {
+	position: relative;
+	overflow: hidden;
+}
+
+.Noise::before {
+	content: '';
+	position: absolute;
+}
+
+.Noise.Vol-stat::before{
+	top:0px;
+	right:0px;
+	bottom:0px;
+	left:0px;
+	background-image:url(/images-0/lib/noise/stat.png);
+	background-size: 300px 300px;
+}
+
+.Noise.Vol-1::before {
+
+	top:-3px;
+	right:-3px;
+	bottom:-3px;
+	left:-3px;
+
+	// opacity: 1;
+	opacity: .1;
+
+	//
+    // pointer-events: none;
+	// background-color: #0094d0;
+
+	// background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='500' height='500'%3e%3cfilter id='noise' x='0' y='0'%3e%3cfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3e%3cfeBlend mode='screen'/%3e%3c/filter%3e%3crect width='500' height='500' filter='url(%23noise)' opacity='0.5'/%3e%3c/svg%3e");
+	// background-size:100px;
+	// animation: AnNoise .3s infinite;
+	
+
+	// для белого фона
+	// height: 300%;
+	// left: -50%;
+	// opacity: .75;
+	// position: fixed;
+	// top: -110%;
+	// width: 300%;
+	background-image:url(/images-0/lib/noise/1.gif);
+	// background-size:100px;
+	// animation: AnNoise2 2s infinite;
+
+}
+
+
+// @keyframes AnNoise {
+
+//     0% { transform: translate(0,0)}
+//     12% { transform: translate(2px,0)}
+// 	25% { transform: translate(0,0)}
+//     37% { transform: translate(2px,2px)}
+// 	50% { transform: translate(0,0)}
+//     75% { transform: translate(0,2px)}
+//     100% { transform: translate(0,0) }
+// }
+
+
+// @keyframes AnNoise2 {
+// 	0%, 100% {
+// 		transform: translate(0);
+// 	}
+// 	10% {
+// 		transform: translate(-5%,-10%);
+// 	}
+// 	20% {
+// 		transform: translate(-15%,5%);
+// 	}
+// 	30% {
+// 		transform: translate(7%,-25%);
+// 	}
+// 	40% {
+// 		transform: translate(-5%,25%);
+// 	}
+// 	50% {
+// 		transform: translate(-15%,10%);
+// 	}
+// 	60% {
+// 		transform: translate(15%);
+// 	}
+// 	70% {
+// 		transform: translateY(15%);
+// 	}
+// 	80% {
+// 		transform: translate(3%,35%);
+// 	}
+// 	90% {
+// 		transform: translate(-10%,10%);
+// 	}
+
+// }

@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+
+
+	.menu.-main {
+		--x-menu-corrector-lh:0px;
+	}
+
+
+	.menu.-main > li {
+		line-height: calc(var(--h-menuMain) - var(--x-menu-corrector-lh));
+		// line-height: calc(var(--h-menuMain) - 14px);
+	}
+}

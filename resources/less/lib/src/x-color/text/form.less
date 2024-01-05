@@ -1,0 +1,80 @@
+@charset "UTF-8";
+
+.Form{
+
+	._shell.vol-Abs {
+		input:focus~label,
+		input:not(:placeholder-shown)~label {
+			--c-text:var(--c-input-abs-active);
+			sup {
+				--c-text:var(--c-input-abs-active);
+			}
+		}
+
+		label {
+			--c-text:var(--c-input-abs);
+
+			sup {
+				--c-text:var(--c-input-sup);
+			}
+		}
+	}
+
+
+
+	//
+	input {
+		color: var(--c-input);
+	}
+	
+	input::placeholder {
+		opacity: 1;
+		color: var(--c-input-placeholder);
+	}
+
+
+	input:focus,
+	input:invalid:focus,
+	textarea:focus{
+		color: var(--c-input-focus);
+	}
+
+	input:focus{
+		.transition(color);
+	}
+
+	// input:read-only::placeholder,
+	// input:read-only {
+	// 	color:var(--c-input-readOnly);
+	// }
+	
+	input:disabled::placeholder,
+	input:disabled {
+		color:var(--c-input-disabled);
+	}
+
+	input:invalid,
+	input:out-of-range {
+		color:var(--c-input-invalid);
+	}
+
+
+	input,
+	input[placeholder] {
+		text-overflow: ellipsis;
+	}
+
+	// input:read-only {
+	// 	cursor: not-allowed;
+	// }
+
+	fieldset {
+		border-width: 1px;
+		border-color: var(--c-input-border);
+	}
+
+	legend {
+		color: @grey;
+	}
+
+}

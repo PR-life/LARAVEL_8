@@ -1,0 +1,185 @@
+@charset "UTF-8";
+
+.Cap {
+	--x-Cap-h:1rem;
+}
+
+.Cap.-t::before,
+.Cap.-b::after,
+.Cap.-default::before {
+	content: '';
+}
+
+.Cap::before,
+.Cap::after {
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.Cap.-t::before {
+	bottom: 100%;
+}
+.Cap.-b::after {
+	top: 100%;
+}
+
+.Cap.-h::before,
+.Cap.-h::after {
+	height: var(--x-Cap-h);
+}
+
+//
+.Cap {
+    pointer-events: none;
+    position: relative;
+}
+
+
+.Cap.-default::before {
+    height: 2rem;
+    bottom:-2px;
+    z-index: 5;
+    //
+    background-color:var(--bg);
+    border-radius:2rem 2rem 0 0;
+}
+
+.Cap.-bg2::before {
+	background-color:var(--bg-2);
+}
+
+
+@media screen and (max-width:@w-menu-2) {
+ 
+    .bg-mbl,
+    .bg.-mbl {
+        .Cap.-default::before {
+            background-color:var(--bg-2);
+        }
+    }
+}
+// .Cap.-rotate::before {
+// 	top: -1px;
+// 	bottom: auto;
+// 	transform: rotate(180deg);
+// }
+
+ 
+
+/*
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media screen and (max-width:@w-menu-2) {
+
+    //body.Z2.roll .BreadShema,
+    //body.Z2.capBread .BreadShema,
+    //body.Z2.capEnd .BreadShema 
+    body.Z2.cap .BreadShema,
+    body.Z2.capnone .BreadShema {display: none;}
+
+
+
+	
+
+
+    .Cap::before,
+    //.Cap.-on::before
+    //body.Z2.cap .Cap::before,
+    body.Z2.cap .Cap.-veil::after {
+        opacity: 1;
+    }
+
+    //body.Z2.capnone .Cap::before,
+    body.Z2.capnone .Cap.-veil::after,
+    //body.Z2.roll .Cap::before,
+    body.Z2.roll .Cap.-veil::after {
+        opacity: 0;
+    }
+
+	
+}
+
+
+// @media screen and (max-width:@w-menu-2) {
+
+
+
+	
+
+
+    body.cap .Cap.-shadow::before {
+        -webkit-box-shadow: 0px -9px 5px -5px rgba(34, 60, 80, 0.18);
+        -moz-box-shadow: 0px -9px 5px -5px rgba(34, 60, 80, 0.18);
+        box-shadow: 0px -9px 5px -5px rgba(34, 60, 80, 0.18);
+    }
+
+    ////
+
+    .Cap.-veil::after {
+        transition: opacity .1s ease-out;
+        -webkit-transition: opacity .1s ease-out;
+    }
+
+    body.cap .Cap.-veil::after {
+        opacity: 1;
+        transition: opacity .4s ease-out;
+        -webkit-transition: opacity .4s ease-out;
+    }
+
+    body.capnone .Cap.-veil::after,
+    body.up.cap .Cap.-veil::after {
+        opacity: 0;
+    }
+
+    body.capnone .Cap.-veil::before {
+        box-shadow:none;
+    }
+
+
+
+// }
+
+
+
+
+
+@media screen and (max-width:@w-menu-2) {
+
+    .Item {
+
+        div.Cap {
+            hr.Cap {
+                //position:absolute;
+                //top: ~"calc(var(--h)*.5)";
+            }
+        }
+
+    }
+
+    .Cap.-details {
+        //position:absolute;
+        //bottom:200px;
+    }
+
+}
+
+
+
+
+/**/
+
+

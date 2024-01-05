@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+.Poster {
+    --x-font:var(--rem-p);
+    --x-font-2:var(--rem-h2);
+}
+
+.-M > .Poster {
+    --x-font-2:var(--rem-h1);
+}
+
+.-S > .Poster {
+    --x-font-2:var(--rem-h);
+}
+
+
+
+.Poster {
+    i {
+		display: block;
+        font-style: normal;
+    }
+	a::before {
+		content: '';
+		top: -3rem;
+		height: 3rem;
+		left: 0px;
+		right: 0px;
+		position: absolute;
+		// background-color: red;
+	}
+}
+
+
+/******/
+
+
+
+
+
+
+/*
+.Poster {
+    span i {
+        --x-font: var(--x-font-2);
+    }
+}
+
+.flip > .Poster {
+    span {
+        --x-font: var(--x-font-2);
+    }
+    span i {
+        --x-font:var(--rem-p);
+    }
+}
+
+
+////////
+
+
+
+    span.-bg {
+        padding: 4rem 5px 2rem 2rem;
+    }
+
+
+
+@media screen and (max-width:@w-menu-2) {
+        span,
+        span.-bg {
+            padding-left:1rem;
+        }
+
+        span.-bg {
+            padding-bottom: 1rem;
+        }
+    }
+
+}
+
+
+/**************/

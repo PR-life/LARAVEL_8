@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.SMS,
+	.Sms {
+		min-width: var(--Sms);
+	}
+
+	.Sms.-w {
+		width: var(--Sms);
+	}
+}
+
+
+// @media (min-width: @metrika-80-plus) and (max-width: @metrika-100) {
+// 	.Flaber .Sms {
+// 		width: 320px;
+// 	}
+// }
+
+
+
+// min-width: var(--bar);
+
+
+.-Sms.-bar.off {
+	--Sms:var(--bar);
+	// width: 0;
+	// min-width: 0;
+
+	.sms-off {
+		display: none;
+	}
+	.sms-hidden {
+		display: flex;
+	}
+}
+
+
+.-Sms,
+.SMS,
+.Sms {
+	.sms-hidden {display: none;}
+}

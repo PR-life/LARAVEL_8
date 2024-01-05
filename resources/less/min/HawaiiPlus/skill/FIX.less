@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+.FIX.on {
+	._fix.-hScreen {
+		height: var(--FIX-height);
+	}
+}
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+
+
+
+	.FIX.on>.fix.-jolt {
+		padding-top: var(--jolt);
+	}
+	
+	// .FIX.on>.fix.-island {
+	// 	align-items: center;
+	// }
+
+	.FIX.on {
+		._fix.-hScreen_PC {
+			height: var(--FIX-height);
+		}
+	}
+
+}
+
+
+
+
+@media screen and (max-width:@w-menu-2) {
+ 
+	// .FIX.on {
+	// 	._fix.-hMax {
+	// 		max-height: var(--FIX-height);
+
+	// 	}
+	// }
+
+	.FIX.on {
+		._fix {
+			> ._sticky {
+				position: sticky;
+				top: 0;
+			}
+		}
+
+		// .fix::after {
+		// 	content: '';
+		// 	position: absolute;
+		// 	left: 0;
+		// 	right: 0;
+		// 	top: 90%;
+		// 	height: 8rem;
+		// 	background-color: #fff;
+		// }
+	}
+}

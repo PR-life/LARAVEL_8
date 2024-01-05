@@ -1,0 +1,116 @@
+@charset "UTF-8";
+
+@shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 0 1px rgba(0, 0, 0, 0.05), 0 4px 6px 0 rgba(0, 0, 0, 0.05);
+@shadow-2: rgba(13, 35, 67, 0.07) 0px 0px 0px 1px, rgba(13, 35, 67, 0.4) 0px 5px 15px -8px;
+@shadow-3: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+@shadow-4: 0 1px 8px 0 rgba(0, 0, 0, 0.06), 0 2px 4px 0 rgba(0, 0, 0, 0.12);
+//
+@shadow-pricing: 0 0 2px 0 rgba(0, 0, 0, 0.1), 0 2px 6px 0 rgba(0, 0, 0, 0.1);
+//
+@shadow-card: 0 20px 20px rgba(48, 52, 59, 0.07);
+//
+@shadow-menu: 0 1px 3px 1px rgba(60, 64, 67, 0.15), 0 1px 2px 0 rgba(60, 64, 67, 0.3);
+@shadow-menuTag: 0 8px 20px rgba(117, 115, 111, .2);
+//
+@shadow-google-ads: 60px 40px 120px 0 rgba(0, 0, 0, .05), 30px 20px 60px 0 rgba(0, 0, 0, .05), -25px 0 30px 0 rgba(0, 0, 0, .02);
+//
+@shadow-facebook-form: 0 2px 4px rgba(0, 0, 0, .1), 0 8px 16px rgba(0, 0, 0, .1);
+
+////
+@shadow-input_1: 1px 1px 3px -1px rgba(0, 0, 0, 0.1);
+@shadow-input_2: 1px 1px 3px -1px rgba(0, 0, 0, 0.4);
+
+
+
+
+
+// !!!!!!!
+// box-shadow: 0 3px clamp(5px, 4vw, 50px) 0 rgba(0, 0, 0, .2);
+
+ 
+
+.Shadow.-default{
+	box-shadow: @shadow;
+	-webkit-box-shadow: @shadow;
+}
+
+
+.Shadow.-v2 {
+	box-shadow: @shadow-2;
+	-webkit-box-shadow: @shadow-2;
+}
+.Shadow.-v3 {
+	box-shadow: @shadow-3;
+	-webkit-box-shadow: @shadow-3;
+}
+.Shadow.-v4 {
+	box-shadow: @shadow-4;
+	-webkit-box-shadow: @shadow-4;
+}
+.Shadow.-pricing {
+	box-shadow: @shadow-pricing;
+	-webkit-box-shadow: @shadow-pricing;
+}
+.Shadow.-card {
+	box-shadow: @shadow-card;
+	-webkit-box-shadow: @shadow-pricing;
+}
+.Shadow.-menu {
+	box-shadow: @shadow-menu;
+	-webkit-box-shadow: @shadow-menu;
+}
+.Shadow.-menuTag {
+	box-shadow: @shadow-menuTag;
+	-webkit-box-shadow: @shadow-menuTag;
+}
+.Shadow.-googleAds {
+	box-shadow: @shadow-google-ads;
+	-webkit-box-shadow: @shadow-google-ads;
+}
+.Shadow.-facebookForm {
+	box-shadow: @shadow-menuTag;
+	-webkit-box-shadow: @shadow-menuTag;
+}
+
+
+
+//
+.box-shadow(@x: none) {
+	box-shadow: @x;
+	-webkit-box-shadow: @x;
+}
+
+input.-shadow,
+.Form.-shadow input {
+	box-shadow: @shadow-input_1 inset;
+	.transition(box-shadow);
+}
+
+input.-shadow:focus,
+.Form.-shadow input:focus {
+	box-shadow: @shadow-input_2 inset;
+}
+
+
+textarea.-shadow,
+.Form.-shadow textarea {
+	box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.2) inset;
+}
+
+
+//
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.Wagon.-shadow {
+		box-shadow: 0 20px 20px rgba(48, 52, 59, 0.07);
+	}
+}
+
+
+//
+.Go.-shadow {
+	box-shadow: 0px 12px 15px rgba(140, 152, 164, 0.1);
+}
+
+// .menu.Kite {
+// 	--shadow-menu-kite:0 8px 20px rgba(117, 115, 111, 0.2);
+// }

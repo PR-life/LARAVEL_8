@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.Slider.-move {
+	.Track {
+		.transition(transform)
+	}
+}
+
+.Slider.-flash {
+	.Track .item {
+		opacity: 0;
+		.transition(opacity)
+	}
+}
+
+.Slider.-flash[data-current="6"] .Track .item[data-item="6"],
+.Slider.-flash[data-current="5"] .Track .item[data-item="5"],
+.Slider.-flash[data-current="4"] .Track .item[data-item="4"],
+.Slider.-flash[data-current="3"] .Track .item[data-item="3"],
+.Slider.-flash[data-current="2"] .Track .item[data-item="2"],
+.Slider.-flash[data-current="1"] .Track .item[data-item="1"]{
+	opacity: 1;
+}

@@ -1,0 +1,70 @@
+@charset "UTF-8";
+
+
+.Btn.transparent {
+	--c-btn:var(--text);
+	--c-btn-hover:var(--text);
+	--bg-btn:transparent;
+	--bg-btn-hover:#f7f7f7;
+    // background-color: transparent;
+    // border-color: transparent;
+    // color: rgba(0,0,0,0.85);
+}
+
+// .Btn.-lite:hover {
+//     // background-color: var(--bg-btn-hover);
+//     // background-color: rgba(0,0,0,0.03);
+// }
+
+
+//
+
+
+// button,
+// label.Btn,
+// div.Btn a,
+// div.Btn a:visited,
+// a.Btn:visited,
+// a.Btn,
+.-Btn,
+.Btn {
+    background: var(--bg-btn);
+}
+
+// label.Btn:hover,
+// button.Btn:hover,
+// div.Btn:hover a,
+// a.Btn:hover,
+.-Btn.-active,
+.-Btn:hover,
+.Btn:hover {
+    background: var(--bg-btn-hover);
+}
+
+//
+
+
+/*
+body.SATIRA .Btn {
+	transition: background-color 0.2s linear, background 0.2s linear, color 0.1s linear;
+}
+
+
+.Btn.-grad {
+	background-position: 0% 50%;
+	background-size: 400% 400%;
+	animation: gradient 15s ease infinite;
+}
+
+@keyframes gradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+/**/

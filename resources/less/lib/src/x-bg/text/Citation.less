@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+.Citation {
+	.content {
+		background-color: var(--bg-Citation);
+	}
+}
+
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.Citation.-mblPC {
+		.content {
+			background-color: var(--bg-Citation-mbl);
+		}
+
+		.content,
+		.content::after {
+			background-color: var(--bg-Citation-mbl);
+		}
+	}
+}
+
+
+@media screen and (max-width: @w-menu-2) {
+	.Citation.-mbl {
+		.content {
+			background-color: var(--bg-Citation-mbl);
+		}
+		.content,
+		.content::after {
+			background-color: var(--bg-Citation-mbl);
+		}
+	}
+}

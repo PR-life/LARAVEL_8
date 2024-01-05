@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+#Tools {
+    transform: translateX(var(--x-transform-ox));
+
+    .Badge {
+        padding: 1px 4px 1px 1px;
+    }
+}
+
+@media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
+
+    #Tools {
+        --x-transform-ox:4rem;
+    }
+
+}

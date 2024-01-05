@@ -1,0 +1,285 @@
+@charset "UTF-8";
+
+
+.Q.-S,
+.A.-S {
+	--x-QA-padding-top: .5rem;
+}
+
+.Q,
+.A {
+	--x-QA-padding-top: 1.5rem;
+
+	br {line-height: 50%;}
+}
+
+.Q.-M,
+.A.-M {
+	--x-QA-padding-top: 1.5rem;
+}
+
+
+
+.Chat .face {
+	--x-face-rem: calc(var(--x-face)*.5);
+}
+
+@media (min-width: @metrika-80-plus) and (max-width: @w-max) {
+	.Flaber .Sms {
+		.Q,
+		.A {
+			--x-QA-padding-top: .75rem;
+		}
+	} 
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+    .Chat {
+        --x-chat-edge:100px;
+    }
+    .Talk .Chat {
+        --x-chat-edge:20px;
+    }
+}
+
+@media screen and (max-width:@w-menu-2) {
+
+    .Chat {
+        --x-chat-edge:10%;
+    }
+    .Chat.more-content-w {
+		--Ava:25px;
+		.face-padding {
+			padding-left: 6px;
+
+		}
+		.face-top {
+			.Preamble {
+				margin-top: 4px;
+				margin-bottom: 4px;
+				padding-left: calc(var(--x-face) + .5rem);
+			}
+		}
+		.face-top.Q::before {
+			--x-face-position-top: calc(100% - 1rem - var(--x-face)*.5);
+			left: .5rem;
+		}
+    }
+}
+
+////
+
+// .Teaser.-news .Chat {
+// 	.A {
+// 		// max-width: calc(100% - 100px);
+// 		max-width: calc(100% - var(--x-chat-edge) - var(--Entropy));
+// 	}
+// 	.A.On {
+// 		// max-width: 100%;
+// 		max-width: calc(100% - 2rem);
+// 	}
+// }
+
+.Talk .Chat.-entropy {
+
+	.On .Q, .On .A {
+		max-width: 100%;
+	}
+}
+
+
+
+.Chat.-entropy {
+
+	.Q, .A {
+		max-width: calc(100% - var(--x-chat-edge) - var(--Entropy));
+	}
+
+
+	.Q.full, .A.full,
+	.Q.On, .A.On,
+	.Q.on, .A.on,
+	.On .Q, .On .A {
+		max-width: calc(100% - 2rem);
+	}
+
+ 
+
+	// .Q.On, .A.On,
+	// //
+	// .on .Q, .on .A,
+	// .Q.on, .A.on {
+	// 	max-width: calc(var(--w) - 2rem);
+	// }	
+
+	// .On .Q.-face, .On .A.-face,
+	// .Q.-face.On, .A.-face.On,
+	// //
+	// .on .Q.-face, .on .A.-face,
+	// .Q.-face.on, .A.-face.on {
+	// 	max-width: calc(var(--w) - 2rem);
+	// }
+
+
+    // > .Q, > .A {
+    //     margin-bottom: 2rem;
+    // }
+
+	// > .Teaser {
+    //     margin-bottom: 4rem;
+    // }
+
+	// > :last-child {
+	// 	margin-bottom: 0;
+	// }
+
+}
+
+.Chat {
+	.Q, .A {
+		display: table;
+		min-width: 180px;
+		max-width: calc(100% - 1rem);
+	}
+	.A {
+		margin-left: auto;
+		margin-right: 0;
+	}
+}
+
+ 
+
+//
+
+
+
+
+
+.Q, .A {
+     ._wrap { 
+		padding-top: var(--x-QA-padding-top);
+		padding-bottom: var(--x-QA-padding-top);
+		> * {margin-top: 1rem;}
+		> .net {margin-top: 0;}
+		> svg,
+		> label,
+         > :first-child {margin-top: 0;}
+     }
+ }
+
+
+
+.Q {
+	._wrap {
+		padding-right: 1.5rem;
+		padding-left: 1rem;
+	}
+}
+.Q.On {
+	._wrap {
+		padding-right: .5rem;
+	}
+}
+
+
+
+.A {
+	._wrap {
+		padding-right: 1rem;
+		padding-left: 1.5rem;
+	}
+
+}
+
+.A, .Q {
+	.Preamble {
+		padding-left: ~"calc(var(--radius-Chat) * .5)";
+	}
+	.Preamble.right {
+		padding-right:2rem;
+	}
+}
+
+
+
+
+
+
+
+
+
+// .-A {
+// 	._wrap { 
+// 		padding: 1rem;
+// 		> * {margin-bottom: 1rem;}
+// 		> :last-child {margin-bottom: 0;}
+// 	}
+// }
+
+
+/***/
+
+/*
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+
+
+	
+
+
+
+    .Chat > .A:nth-child(1) input:checked ~ ._wrap,
+    .Chat .Teaser:nth-child(1) input:checked ~ .A {
+        max-width: ~"calc(100% - 160px)";
+    }
+	
+
+    .Chat .Teaser:nth-child(2n) input:checked ~ .A {
+        max-width: ~"calc(100% - 200px)";
+    }
+
+    .Chat .Teaser:nth-child(3) input:checked ~ .A {
+        max-width: ~"calc(100% - 180px)";
+    }
+
+    .Chat .Teaser:nth-child(4) input:checked ~ .A {
+        max-width: ~"calc(100% - 170px)";
+    }
+
+}
+
+@media screen and (max-width:@w-menu-2) {
+
+
+    .Chat input:checked ~ .Q,
+    .Chat input:checked ~ .A {
+        max-width: 88%;
+    }
+
+
+    .Chat > .A {
+        max-width: ~"calc(100% - 3rem)";
+    }
+
+
+    .Chat .Teaser:nth-child(1) input:checked ~ .A {
+        max-width: ~"calc(100% - 3.5rem)";
+    }
+
+    .Chat .Teaser:nth-child(2n) input:checked ~ .A {
+        max-width: ~"calc(100% - 6rem)";
+    }
+
+
+    .Chat .Teaser:nth-child(3) input:checked ~ .A {
+        max-width: ~"calc(100% - 5rem)";
+    }
+
+    .Chat .Teaser:nth-child(4) input:checked ~ .A {
+        max-width: ~"calc(100% - 5.5rem)";
+    }
+
+}
+
+
+/***/

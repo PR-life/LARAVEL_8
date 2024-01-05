@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+
+.Citation {
+	> .content {
+		border: 2px solid var(--c-Citation-border);
+	}
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.Citation.-mblPC {
+		> .content {
+			border-radius: 7px;
+		}
+	}
+}
+
+
+@media screen and (max-width: @w-menu-2) {
+	.Citation.-mbl {
+		> .content {
+			border-radius: 7px;
+		}
+	}
+}

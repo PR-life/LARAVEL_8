@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+// @import "../less/lib/theRearguard/_ol.less";
+
+//
+@import "../less/lib/theFont/font-Inter.less";
+@import "../less/lib/theFont/font-Castle.less";
+@import "../less/lib/theFont/font-Gilroy.less";
+@import "../less/lib/theFont/font-OpenSans.less";
+
+html {
+	--family: var(--family-Inter);
+	--family-2: var(--family-Gilroy);
+}
+
+
+.mail,
+.tel,
+.family-2,
+.family-2 * {
+	font-family: var(--family-2) !important;
+}
+
+
+
+h1 {
+	font-weight: 500;
+}
+
+.text p b {
+	font-weight: 600;
+}
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.menu.-top *,
+	.menu.-main *{
+		font-family: var(--family-2);
+	}
+}
+
+
+
+
+@media screen and (max-width: @w-menu-2) {
+
+}
+
+
+@import "./_ol.less";
+// @import "./Imago.less";

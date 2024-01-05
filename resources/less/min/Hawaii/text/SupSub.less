@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+ 
+.Sup,
+.Sub {
+	// display: inline-block;
+	position: relative;
+	// min-width: 10px;
+	//
+    font-size: inherit;
+    line-height: inherit;
+	
+	._sup,
+	._sub {	
+		position: absolute;        
+		font-size: 80%;
+		line-height: 0;
+	}
+
+  ._sup.-S,
+	._sub.-S {	     
+		font-size: 60%;
+	}
+
+    ._sup {
+		top: 40%;
+    }
+    ._sub {
+		bottom: 40%;
+    }
+ 
+	
+    ._sub.-left,
+    ._sup.-left {
+		right: .5rem;
+    }
+
+    ._op {
+        opacity: 0;
+        line-height: inherit;
+        font-size: inherit;
+    }
+
+}
+
+
+
+@media screen and (max-width:@w-menu-2) {
+
+}

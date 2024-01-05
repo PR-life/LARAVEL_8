@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+[id^="Input-"],
+[id^="Tab-"] {
+	display: none;
+}
+
+[id^="Input-"] ~ .Input,
+[id^="Tab-"] ~ .Input ._input{
+	display:none;
+}
+
+[id^="Input-"]:checked ~ .Input {display:block;}
+
+#Tab-1:checked ~ .Input ._1{display:block;}
+#Tab-2:checked ~ .Input ._2{display:block;}
+#Tab-3:checked ~ .Input ._3{display:block;}
+#Tab-4:checked ~ .Input ._4{display:block;}
+#Tab-5:checked ~ .Input ._5{display:block;}
+
+#Tab-a1:checked ~ .Input ._1{display:block;}
+#Tab-a2:checked ~ .Input ._2{display:block;}
+#Tab-a3:checked ~ .Input ._3{display:block;}
+#Tab-a4:checked ~ .Input ._4{display:block;}
+#Tab-a5:checked ~ .Input ._5{display:block;}
+
+
+@media screen and (max-width:@w-menu-2) {
+	[id^="Tab-"] ~ .Input.-pc ._input{
+		display:block;
+	}
+}
+/**/

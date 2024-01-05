@@ -1,0 +1,115 @@
+@charset "UTF-8";
+
+.Check input,
+.CheckTrigger input,
+.Pointer.FIX:not(.on),
+.Pointer .Q,
+.Close,
+// .Back,
+.menu.Pointer > *,
+.Pointer.Preamble,
+.Pointer.Fog,
+.Pointer.-Fog,
+.FIX.on>.fix::before,
+.a {
+	cursor: pointer;
+}
+
+
+.FIX.on>.fix::before {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	top:0;
+}
+ 
+
+
+// .FIX.on>.fix.lvl-2::before,
+// .Pointer.Fog.off {
+// 	cursor: default;
+// }
+
+// .Pointer.Fog * {
+// 	pointer-events: none;
+// }
+
+// .Pointer.Fog.off * {
+// 	pointer-events: all;
+// }
+
+
+
+
+
+ 
+// .FIX.on ._fix {
+// 	cursor: default;
+
+// 	dl, p,
+ 
+// 	.content {
+// 		cursor: text;
+// 	}
+
+// 	summary.content {
+// 		cursor: pointer;
+// 	}
+
+// }
+
+
+// .Pointer{
+// 	dl, p,
+ 
+// 	.content {
+// 		cursor: text;
+// 	}
+// }
+
+// .FIX.on .Pointer.-all * {
+.pointer,
+.pointer *,
+.Pointer.-all * {
+	cursor: pointer;
+}
+ 
+.pointerHelp {
+	cursor: help;
+}
+
+
+
+.Tool.Pointer {
+	._btn,
+	._btn * {
+		cursor: pointer;
+	}
+
+	> .on,
+	> .on * {cursor: default;}
+}
+
+.CursorDefault *,
+.cursorDefault {
+	cursor: default !important;
+}
+
+.CursorDefault p {
+	cursor: text !important;
+}
+
+.CursorDefault a {
+	cursor: pointer !important;
+}
+
+
+// .pointer .Open {
+// 	cursor: default;
+// }
+
+// .pointer ._span.Open {
+// 	cursor: text;
+// }

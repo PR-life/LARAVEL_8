@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+// .Info.-radius {
+//     border-radius: .5rem;
+// }
+
+.Info.-ico {position: relative;}
+
+
+.Info.-ico::before {
+    content: '';
+    position: absolute;
+    width: ~"calc(var(--font)*1.6)";
+    height: ~"calc(var(--font)*1.6)";
+}
+
+
+.Info.-ico.-left::before {
+	left: ~"calc(var(--font)*.5)";
+	top: calc(var(--x-Info-void) - 2px);
+}
+
+
+.Info.-ico.-left.-out::before {
+	left: ~"calc(0px - var(--font)*1.6 - var(--font)*.5)";
+}
+
+.Info.-ico.-center::before {
+	position: relative;
+	left: auto;
+	top: auto;
+	display: block;
+	margin: 0 auto .5rem;
+}
+

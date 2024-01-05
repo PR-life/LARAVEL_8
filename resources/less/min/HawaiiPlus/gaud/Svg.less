@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+
+.Svg {
+	.svg.-stroke {
+		stroke-dasharray:1000;
+		stroke-dashoffset:1000;
+	}
+}
+
+
+.Svg.visibleOn {
+	.svg.-an.-stroke {
+		animation:dash .5s linear .6s forwards;
+	}
+}
+
+
+//
+@keyframes  dash {
+  to {
+	stroke-dashoffset: 0;
+  }
+}
+
+
+
+
+.Svg.-xGwewgw {overflow: hidden;}
+.Svg.-xGwewgw::after{
+  content: '';
+  left: -1rem;
+  right: -1rem;
+  bottom: -1px;
+  position: absolute;
+  top: 0;
+  //
+  background-size: 100% auto;
+  background-repeat: no-repeat;
+  background-position: center bottom;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 1920 90' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='%23f4f6f8' d='M1920,90H0V0c263.8,49.6,588.6,89.5,960.5,89.5c371.4,0,695.9-39.9,959.5-89.5C1920,30,1920,60,1920,90z'/%3e%3c/svg%3e");
+}

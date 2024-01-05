@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.check-agree {
+   //  position: relative;
+    margin:.5rem 0;
+    padding: .5rem 0 0 0;
+
+    label {
+        position: relative;
+        font-size: var(--font-min);
+        line-height: ~"calc( var(--font-min) + 1px)";
+        padding: 0 0 .5rem 2rem;
+        //
+        .ellipsis;
+        .line-clamp(2);
+    }
+
+    svg {
+        position: absolute;
+        top: 3px;
+        left: 3px;
+        width: 18px;
+        height: 18px;
+    }
+
+}
+
+
+
+//////
+
+#check-agree:checked ~ .Btn {pointer-events: auto;}
+#check-agree:checked ~ .Btn::after {display: none;}
+
+#check-agree ~ .Btn {position: relative;pointer-events: none;}
+#check-agree ~ .Btn::after {
+    content: 'нет согласия';
+    font-size: 1rem;
+    line-height:3.1rem;
+    text-align: center;
+    position: absolute;
+	top:0;
+	left: 0;
+	right:0;
+	bottom:0;
+}
+
+
+/***/

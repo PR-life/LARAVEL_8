@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+
+.Rearguard.-mid::after,
+html::after {
+	content: '';
+	pointer-events: none;
+	//
+	top: 0;
+	left: 50%;
+	margin-left: -1.5px;
+	z-index: @indexMid;
+	//
+	width: 3px;
+	height: 100%;
+	// box-sizing:content-box;
+	//
+	background-color: orange;
+	border-left:1px solid #ddd;
+	border-right:1px solid #ddd;
+	opacity: @opacityMid;
+}
+
+
+
+
+
+html::after {
+	position: fixed;
+}
+
+.Rearguard.-mid {
+	position: relative;
+}
+
+.Rearguard.-mid::after {
+	position: absolute;
+}

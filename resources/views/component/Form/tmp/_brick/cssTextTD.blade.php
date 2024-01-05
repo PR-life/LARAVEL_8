@@ -1,0 +1,1 @@
+border-collapse:collapse;text-align:left;padding:7px 0px;

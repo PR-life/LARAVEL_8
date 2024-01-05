@@ -1,0 +1,257 @@
+@charset "UTF-8";
+
+.Time {
+	// --x-Time-100:100%;
+	--x-Time-abs-time:4s;
+	--x-Time-duration:.5s;
+	--x-Time-abs-left:0rem;
+	--x-Time-abs-right:0rem;
+	--x-Time-abs-bottom:0rem;
+	--x-Time-left:0rem;
+	--x-Time-right:0rem;
+	--x-Time-space-click-top:0px;
+	--x-Time-space-click-bottom:0px;
+	--x-Time-h:3px;
+	// --x-Time-w:calc(var(--x-Time-left) + var(--x-Time-right) + var(--x-Time-100));
+	--x-Time-position:50%;
+	--x-Time-bg-active:rgba(255,255,255,.5);
+	--x-Time-bg: rgba(88, 89, 104,.5); //rgba(88, 89, 104,.5);
+	//
+	position: relative;
+}
+
+
+
+//
+.Time.-abs {
+	
+	._line{
+		position: absolute !important;
+		left: var(--x-Time-abs-left);
+		right: var(--x-Time-abs-right);
+		// overflow: hidden;
+	}
+	
+}
+
+.Time.-abs.-bottom {
+	._line {
+		bottom: var(--x-Time-abs-bottom);
+	}
+}
+
+
+.Pause.pause-active ._line,
+.Pause:hover ._line,
+.Time:hover ._line{
+	animation-play-state: paused !important;
+}
+
+
+.Time.-bg {
+	._line {
+		background: linear-gradient(to right, 
+			var(--x-Time-bg-active) 0%, 
+			var(--x-Time-bg-active) calc(50% - 1px),
+			var(--x-Time-bg) 50%, 
+			var(--x-Time-bg) 100%);
+		//
+		background-size: 202% 100%;
+		background-position:calc(var(--x-Time-position)*2 - 1%) 0%;
+		background-repeat: no-repeat;
+	}
+}
+
+.Time.-bg .active > ._line,
+.Time.-bg.active ._line {
+	animation: TimeGradient var(--x-Time-abs-time) linear;
+	animation-fill-mode: forwards;
+}
+
+
+.Time.-style {
+	overflow: hidden;
+	._line {
+		background-color: var(--x-Time-bg);
+		.line {
+			position: absolute;
+			left: 0;
+			top:0;
+			bottom: 0;
+			width: 100%;
+			background-color: var(--x-Time-bg-active);
+			.transition(transform,linear,var(--x-Time-duration));
+		}
+	}
+}
+
+
+
+
+//
+.Time {
+	> .item {
+		padding-top: var(--x-Time-space-click-top);
+		padding-bottom: var(--x-Time-space-click-bottom);
+	}
+
+	._line {
+		height: var(--x-Time-h);
+	}
+
+	.passed ._line {
+		background-position: 0% 0%;
+	}
+}
+
+
+
+
+
+@keyframes TimeGradient {
+	0% {
+		background-position: calc(var(--x-Time-position)*2 + 1rem) 0;
+	}
+	100% {
+		background-position: 0% 0%;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// .Time.-ins {
+// 	--x-Time-bg:linear-gradient(
+// 		to right,
+// 		rgba(255,255,255,.5) 0%,
+// 		rgba(255,255,255,.5) 50%,
+// 		rgba(88, 89, 104,.5) 50%,
+// 		rgba(88, 89, 104,.5) 100%
+// 		);
+// }
+
+// background-image: -webkit-linear-gradient(left, rgba(255,255,255,.5) 0%, rgba(255,255,255,.5) 50%, rgba(88, 89, 104,.5) 50.001%, rgba(88, 89, 104,.5) 100% );
+
+// .Time.-default {
+
+
+
+
+// .Time ._line {
+// 	animation-delay: .2s;
+// 	animation-timing-function: linear;
+// 	animation-name: dw4b;
+// }
+
+
+
+
+
+
+
+
+/*
+
+
+
+
+
+
+
+// .Time.-inst,
+.Time.-inst ._line {
+	// background-color: var(--x-Time-bg);
+
+	background-image: -webkit-linear-gradient(left, rgba(255,255,255,.5) 0%, rgba(255,255,255,.5) 50%, rgba(88, 89, 104,.5) 50.001%, rgba(88, 89, 104,.5) 100% );
+
+	
+
+	
+
+
+}
+
+
+ 
+
+.Time ._line::before,
+.Time.-abs ._line {
+	position: absolute !important;
+}
+
+
+
+.Time ._line {
+	position:relative;
+	pointer-events: none;
+}
+
+.Time.-abs ._line {
+	bottom: var(--x-Time-abs-bottom);
+	left: var(--x-Time-abs-left);
+	width: var(--x-Time-w);
+}
+
+.Time.-def.-before::before,
+.Time.-def.-after::after,
+.Time ._line::before {
+	width:100%;
+	height: var(--x-Time-h);
+	transform: translate3d(-100%,0,0);
+	background-color: var(--x-Time-bg);
+}
+
+
+.Time ._line.active::before,
+.Time.active ._line::before,
+.Time.-before.active::before,
+.Time.-after.active::after {
+	content: '';
+
+	// background-color: #2951d5;
+	
+	will-change: transform;
+	animation-name: i3L1Y;
+	animation-duration:3000ms;
+	animation-timing-function: steps(270);
+	animation-fill-mode: forwards;
+
+		// -webkit-animation-fill-mode: forwards;
+		// -webkit-animation-name: i3L1Y;
+		// animation-name: i3L1Y;
+		// -webkit-animation-timing-function: steps(270);
+		// animation-timing-function: steps(270);
+		// -webkit-backface-visibility: hidden;
+		// -webkit-perspective: 1000;
+		
+}
+
+// .Time.active {
+// 	display: block;
+// }
+
+ 
+@keyframes i3L1Y {
+	0% {
+		transform: translate3d(-100%,0,0);
+	  }
+	  100% {
+		transform: translateZ(0);
+	  }
+}
+
+
+/**/

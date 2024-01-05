@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+.crossV_PC,
+.crossV {
+	--x-cross:1rem;
+}
+
+.crossV-s {
+	--x-cross:.5rem;
+}
+
+.crossV-xs {
+	--x-cross:.3px;
+}
+
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+	.crossV_PC {
+		> * {
+			margin-bottom: var(--x-cross);
+		}
+	
+	}
+	.crossV_PC {
+		>:last-child {
+			margin-bottom: 0;
+		}
+	}
+}
+
+.crossV-xs,
+.crossV {
+	> * {
+		margin-bottom: var(--x-cross);
+	}
+
+}
+.crossV-s,
+.crossV-xs,
+.crossV {
+	>:last-child {
+		margin-bottom: 0;
+	}
+}
+
+/**/

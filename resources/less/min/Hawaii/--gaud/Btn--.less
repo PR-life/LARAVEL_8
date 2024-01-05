@@ -1,0 +1,84 @@
+@charset "UTF-8";
+
+.BtnW,
+.Btn {
+    --x-btn:var(--Btn);
+}
+
+.BtnH,
+.Btn {
+	--x-btn-H: 45px;
+    --x-padding-left:1rem;
+}
+
+.Btn.-M {
+    --x-btn: ~"calc(var(--Btn) + 2rem)";
+}
+
+.Btn.-upFont {
+    --font:var(--rem-p);
+}
+
+.Btn.-S {
+    --x-btn: ~"calc(var(--Btn) - 2rem)";
+}
+
+.Btn.-edgeS {
+    --x-padding-left:.5rem;
+}
+
+
+.Btn.slim {
+    --x-btn-H: 39px;
+}
+
+.Btn.wide {
+    --x-btn-H: 4rem;
+}
+
+// .Btn.yes,
+// button.Btn,
+// .Btn a,
+// label.Btn,
+// a.Btn,
+
+.BtnW,
+.Btn {
+    min-width:var(--x-btn);
+    min-height: var(--x-btn-H);
+}
+
+.Btn {
+    padding-top: 1px;
+    padding-left: var(--x-padding-left);
+    padding-right: var(--x-padding-left);
+    //
+	display: flex;
+	align-items: center;
+    //
+    line-height: 100%;
+}
+
+// .Btn.yes.-auto,
+// .Btn.-edge,
+// .Btn.-auto,
+// label.Btn.-auto,
+.Btn.-autoS,
+.Btn.-auto {
+    min-width: auto;
+}
+
+.Btn.-auto {
+    padding-left: calc(var(--x-padding-left)*2);
+    padding-right: calc(var(--x-padding-left)*2);
+}
+
+.Btn.-autoS {
+    padding-left: calc(var(--x-padding-left)*1);
+    padding-right: calc(var(--x-padding-left)*1);
+}
+
+// .Btn.-Auto {
+//     padding-left: calc(var(--x-padding-left)*.5);
+//     padding-right: calc(var(--x-padding-left)*.5);
+// }

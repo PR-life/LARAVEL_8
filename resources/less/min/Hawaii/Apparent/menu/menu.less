@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+.menu.-round {
+	--x-menu-round: 100px;
+}
+
+.menu.-roundS {
+	--x-menu-round: 5px;
+}
+
+.menu.-roundS,
+.menu.-round {
+
+	// > li,
+	>li>* {
+		border-radius: var(--x-menu-round);
+	}
+}
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+	.menu.-roundPC {
+		--x-menu-round: 100px;
+	}
+
+	.menu.-roundPC {
+	
+		// > li,
+		>li>* {
+			border-radius: var(--x-menu-round);
+		}
+	}
+
+}
+
+
+//
+.menu {
+	--x-menu-margin-li: .3rem;
+	--x-menu-padding-li--left: 1.5rem;
+	--x-menu-padding-li--top: 10px;
+	//
+	--x-tile-h: var(--h-plitka);
+}
+
+
+.menu.-XXS.-tile {
+	--x-tile-h: ~"calc(var(--h-plitka)*.4 + 5px)";
+}
+
+.menu.-XS.-tile {
+	--x-tile-h: ~"calc(var(--h-plitka)*.6 + 5px)";
+}
+
+.menu.-S {
+	--x-menu-padding-li--left: 1rem;
+	--x-menu-padding-li--top: 7px;
+	--fontMenuTag:var(--font-min);
+}
+
+.menu.-XS {
+	--x-menu-padding-li--left: .5rem;
+	--x-menu-padding-li--top: 5px;
+	--fontMenuTag:calc(var(--font-min) - 1px);
+}
+
+.menu.-XXS {
+	--x-menu-padding-li--left: 2px;
+	--x-menu-padding-li--top: 3px;
+	--fontMenuTag:calc(var(--font-min) - 1px);
+}
+
+
+.menu.-S.-tile {
+	--x-tile-h: ~"calc(var(--h-plitka)*.75 + 5px)";
+}
+
+.menu.-M {
+	--x-menu-padding-li--left: 1.5rem;
+	--x-menu-padding-li--top: 1rem;
+	//
+	--x-tile-h: ~"calc(var(--h-plitka)*1.25 + 5px)";
+}
+
+.menu.-L {
+	--x-tile-h: ~"calc(var(--h-plitka)*2 + 5px)";
+}
+
+
+@media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
+
+	.menu.-tile.-S_PC {
+		--x-tile-h: ~"calc(var(--h-plitka)*.75 + 5px)";
+	}
+}
+
+
+@media screen and (max-width: @w-menu-2) {
+	// .menu.-tag,
+	.menu {
+		--x-menu-margin-li: .5rem;
+	}
+	.menu.-tileMbl {
+		--x-menu-margin-li: 1rem;
+	}
+	// .menu.-tag {menu -tag -dark -shadow -tileMbl / lie Roll_mbl -space -scrollBar
+	// 	--x-menu-margin-li: 1rem;
+	// }
+
+}
+
+// .menu.-tag.Kite {
+//     --x-menu-margin-li:.25rem;
+//     --x-menu-padding-li--left: 1rem;
+//     --x-menu-padding-li--top: .75rem;
+// }
+
+
+// .menu.-tag,
+.menu {
+	--ulol-line: ~"calc(var(--fontMenuTag)*1.4)";
+}
+
+//
+.menu.-block > li > span,
+.menu.-block > li > .a,
+.menu.-block > li > a{
+	max-width:100%;
+}
+
+
+ 
+
+.menu.-block li > .a a,
+.menu.-block li > * {
+	display: block;
+}
+
+ 

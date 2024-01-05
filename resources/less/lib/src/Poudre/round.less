@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.menu.Kite.Round {
+	border-radius: 4rem;
+}
+
+//
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.round-sPC {
+		border-radius: calc(var(--round)*.5);
+	}
+}
+
+.round-xs {
+	border-radius: calc(var(--round)*.25);
+}
+
+.round-s {
+	border-radius: calc(var(--round)*.5);
+}
+ 
+.round-m {
+	border-radius: calc(var(--round)*1.5);
+}
+
+.round-l {
+	border-radius: calc(var(--round)*2);
+}
+
+.round {
+	border-radius: var(--round);
+}
+
+.round-50 {
+	border-radius:  50%;
+}

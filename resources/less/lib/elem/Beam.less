@@ -1,0 +1,201 @@
+@charset "UTF-8";
+
+
+// https://hinderer-wolff.fr/cepages-alsace/pinot-gris
+
+
+.Beam.-up .Anime {
+	--Anime-h: 48px;
+  }
+.Beam.-down .Anime {
+	--Anime-h: 24px;
+}
+
+
+.Beam.-up:hover {
+	--x-Beam-Y:100px;
+	--x-Beam-translate-Y:65px;
+}
+
+.Beam.-up {
+	--x-Beam-translate-Y:65px;
+
+	//
+	width: 100px;
+	height: 100px;
+
+	._circle {
+		bottom: 0;
+	}
+
+	._line{
+		top: 16px;
+		bottom: 36px;
+		//
+		transform-origin: bottom;
+	}
+	._disc {
+		top: 0;
+	}
+
+	._innerDisc {
+		bottom: calc(var(--x-Beam-w-circle)*.5 - var(--x-Beab-w-innerDisc)*.5);
+	}
+}
+
+
+.Beam.-down:hover {
+	--x-Beam-Y:-30px;
+}
+
+.Beam.-down {
+	--x-Beam-translate-Y:-30px;
+
+	//
+	width: 100px;
+	height: 75px;
+
+	._circle {
+		top: 0;
+	}
+
+	._line{
+		top: 36px;
+		bottom: 15px;
+		//
+		transform-origin: top;
+	}
+
+	._disc {
+  		bottom: 0;
+	}
+
+	._innerDisc {
+		top: calc(var(--x-Beam-w-circle)*.5 - var(--x-Beab-w-innerDisc)*.5);
+	}
+}
+
+
+//
+.Beam:hover {
+	--x-Beam-scale:0;
+
+
+	._circle {
+		transform: scale(1.4);
+		transition-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+	}
+ 
+	._innerDisc {
+		opacity: 1;
+		transform: scale(1);
+	}
+}
+
+.Beam {
+	--x-Beam-Y:0px;
+	--x-Beam-scale:1;
+	--x-Beam-color:#1c1c1c;
+	--x-Beam-border-circle:2px;
+	--x-Beam-w-circle:30px;
+	--x-Beab-w-innerDisc:7px;
+	--x-Beam-w-disc:11px;
+
+	display: flex;
+	position: relative;
+	
+	> * {z-index: 5;}
+
+	//
+	._circle,
+	._innerDisc,
+	._line,
+	._disc {
+		position: absolute;
+	}
+
+	// ._line,
+	._disc {
+		z-index: 8;
+		background-color: var(--x-Beam-color);
+	}
+
+
+	//
+	._circle {
+		left: calc(50% - var(--x-Beam-w-circle)*.5);
+		width: var(--x-Beam-w-circle);
+		height: var(--x-Beam-w-circle);
+		border: var(--x-Beam-border-circle) solid var(--x-Beam-color);
+		border-radius: 50%;
+		transition-property: opacity, transform;
+		transition-duration: 0.3s;
+		animation: beamCircle cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s 1.1s backwards;
+	}
+
+	._line{
+		left: calc(50% - .5px);
+		width: 1px;
+		//
+		transform: scaleY(var(--x-Beam-scale));
+		transition: transform linear .2s;
+		animation: beamLine cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s 1.3s backwards;
+	}
+
+	._disc{
+		left: calc(50% - var(--x-Beam-w-disc)*.5);
+		width: var(--x-Beam-w-disc);
+		height: var(--x-Beam-w-disc);
+		//
+		border-radius: 50%;
+		//
+		animation: beamDisc cubic-bezier(0.175, 0.885, 0.32, 1.275) 0.4s 1.3s backwards;
+		transition: transform 0.3s linear;
+		transform: translateY(var(--x-Beam-Y)) scale(var(--x-Beam-scale));
+	}
+
+	._innerDisc {
+		left: calc(50% - var(--x-Beab-w-innerDisc)*.5);
+		//
+		width: var(--x-Beab-w-innerDisc);
+		height: var(--x-Beab-w-innerDisc);
+		//
+		border-radius: 50%;
+		background: var(--x-Beam-color);
+		opacity: 0;
+		//
+		transition: all linear .2s;
+		transform: scale(0.5);
+	}
+}
+
+
+
+@keyframes beamLine {
+	0% {
+		transform: scaleY(0);
+	}
+	0% {
+		transform: scaleY(0);
+	}
+}
+
+@keyframes beamDisc {
+	0% {
+		opacity: 0;
+		transform: translateY(var(--x-Beam-translate-Y)) scale(0);
+	}
+	0% {
+		opacity: 0;
+		transform: translateY(var(--x-Beam-translate-Y)) scale(0);
+	}
+}
+
+@keyframes beamCircle {
+	0% {
+		transform: scale(0);
+	}
+	0% {
+		transform: scale(0);
+	}
+}

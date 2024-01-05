@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+.-Entropy {
+	--x-Entropy:8rem;
+	> .Teaser:nth-child(2n+1) {
+		--Entropy: ~"calc(var(--x-Entropy)*.5)";
+	}
+	
+	> .Teaser:nth-child(2n) {
+		--Entropy: ~"calc(var(--x-Entropy)*.2)";
+	}
+	
+	> .Teaser:nth-child(4) {
+		--Entropy: ~"calc(var(--x-Entropy)*.8)";
+	}
+	
+	> .Teaser:nth-child(5) {
+		--Entropy: ~"calc(var(--x-Entropy)*.9)";
+	}
+	
+	> .Teaser:nth-child(5n-2) {
+		--Entropy: ~"calc(var(--x-Entropy)*.3)";
+	}
+}
+
+
+
+.Entropy.Chat {
+
+	> *:nth-child(2n+1) {
+		--Entropy:~"calc(var(--x-chat-edge)*.5)";
+	}
+	> *:nth-child(2n) {
+		--Entropy:~"calc(var(--x-chat-edge)*.2)";
+	}
+
+	> *:nth-child(4) {
+		--Entropy:~"calc(var(--x-chat-edge)*.8)";
+	}
+
+	> *:nth-child(5) {
+		--Entropy:~"calc(var(--x-chat-edge)*.9)";
+	}
+
+	> *:nth-child(5n-2) {
+		--Entropy:~"calc(var(--x-chat-edge)*.3)";
+	}
+}

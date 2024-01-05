@@ -1,0 +1,90 @@
+@charset "UTF-8";
+
+.-Chunk,
+.Chunk {
+	--Chunk-corrector:0px;
+	--Chunk-ico: 55px;
+}
+
+.-Chunk.diminish.-icoDown {
+	.Chunk {
+		--Chunk-corrector:-7px;
+	}
+
+	.Pr {
+		--x-padding-corrector:var(--Chunk-corrector);
+	}
+}
+
+.Chunk {
+	._ico {
+		width: calc(var(--Chunk-ico) + var(--Chunk-corrector));
+		// min-width: calc(var(--Chunk-ico) + var(--Chunk-corrector));
+	}
+
+	.chunk-100_Ico {
+		width: calc(100% - var(--Chunk-ico) - var(--Chunk-corrector));
+	}
+	.chunk-padiingL {
+		padding-left: calc(var(--Chunk-corrector) * -1);
+	}
+}
+
+#body.asideClose .oiBar .Chunk ._ico {
+	width: auto;
+}
+
+
+// ////
+
+// @media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+
+// 	.Chunk {
+// 		> ._100 {width: 100%;}
+// 		> ._70 {width: 70%;}
+// 		> ._60 {width: 60%;}
+// 		> ._50 {width: 50%;}
+// 		> ._40 {width: 40%;}
+// 		> ._30 {width: 30%;}
+// 		> ._20 {width: 20%;}
+// 		> ._10 {width: 10%;}
+// 		.Min {
+// 			min-width: ~"calc(var(--Aside) + var(--Chunk-corrector))";
+// 		}
+// 	}
+
+// }
+
+// @media screen and (max-width:@w-menu-2) {
+
+// 	.Chunk.gor-mbl {
+// 		flex-direction: row;
+// 		> * {
+// 			width: 50%;
+// 		}
+// 		.l {
+// 			background-position: right bottom;
+// 		}
+// 		.r {
+// 			--Aside:100%;
+// 			background-position: left bottom;
+// 		}
+
+// 		._zoom {
+// 			position: absolute;
+// 			top:0;
+// 			left: 0;
+// 			right:0;
+// 			bottom:0;
+// 		}
+
+
+// 	}
+
+
+
+// }
+
+// /***/
+
+

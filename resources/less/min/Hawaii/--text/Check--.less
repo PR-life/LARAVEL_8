@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.Check {
+	--x-Check-w: var(--Ico);
+	--x-Check-h: var(--Ico);
+	// --x-Checkbox-space-left: 0px;
+	// --x-Checkbox-space-top: 0px;
+	//
+	// --x-Checkbox-knob-h: calc(var(--x-Checkbox-w)*.5 - var(--x-Checkbox-space-top)*2);
+
+	display: flex;
+	align-items: center;
+
+
+	> ._che,
+	> ._che > ._text {
+		position: relative;
+	}
+
+
+	> ._che {
+		min-width: calc(var(--x-Check-w));
+		min-height: calc(var(--x-Check-h));
+
+
+		.check-bg {z-index: 1;}
+		._text {z-index: 9;}
+		input {z-index: 10;}
+
+
+		.check-bg,
+		input {
+			position: absolute;
+			left: 0;
+		}
+
+
+		input {
+			width: 100%;
+			height: 100%;
+			min-height:auto;
+			opacity: .0;
+		}
+
+		._space {
+			padding: .5rem 1rem;
+		}
+	}
+}

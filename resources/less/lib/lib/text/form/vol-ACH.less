@@ -1,0 +1,78 @@
+@charset "UTF-8";
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+.wrap-formACH > ._bg{
+    background: #fff;
+    z-index: 5;
+}
+
+.wrap-formACH::before,
+.wrap-formACH::after {
+	content: '';
+	z-index: 1;
+	position: absolute;
+}
+
+.wrap-formACH::before {
+  --pattern-offset: -1rem;
+    // background: 
+		// linear-gradient(132deg, rgb(247, 216, 218) 12%, rgb(126, 167, 233) 97%),
+		// linear-gradient(132deg, rgb(212, 227, 247) 12%, rgb(197, 242, 212) 97%);
+		// var(--bg);
+		// red;
+    background: linear-gradient(-132deg, rgba(0,0,0,0) 10%, rgba(0, 0, 0,.1) 100%);
+
+    filter: blur(30px);
+    // opacity: .25;
+
+     
+    top: -2px;
+    right: 0;
+    bottom: calc(var(--pattern-offset) + var(--pattern-offset) + var(--pattern-offset));
+    left: var(--pattern-offset);
+}
+
+.wrap-formACH::after {
+    // z-index: 1;
+    // border-radius: 0%;
+    // content: "";
+
+    // background-color: var(--bg);
+    background-color: #fff7fb;
+
+    mask-image: url("/images/bg/svg/waves.svg");
+    mask-size: 4rem 2rem;
+    // mask-size: 64px 32px;
+    mask-repeat: repeat;
+
+ 
+    --pattern-offset: -4rem;
+    top: 0;
+    right: 0;
+    bottom: var(--pattern-offset);
+    left: calc(var(--pattern-offset)*.5);
+  }
+
+
+.Form.vol-ACH {
+
+	.Btn {
+		--c-btn:#fff;
+		--c-btn-border:transparent;
+		--bg-button:#4575cd;
+	}
+
+	textarea {
+		background: #fbfbfb;
+		box-shadow: 1px 1px 3px -1px rgba(0, 0, 0, 0.1) inset;
+	}
+
+	> ._footer {
+		background: #fcfcfd;
+		border-top:1px solid #e6ecf0;
+	}
+}
+
+}
+ 

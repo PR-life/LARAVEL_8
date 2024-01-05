@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.x-btn-plus {
+    --c-text: rgb(142, 162, 180) !important;
+    
+    border-radius: 50%;
+    border:1px solid @c-border;
+}
+
+.x-25101937 {
+    ._btn {
+        opacity: .5;
+        border:1px solid @c-border;
+
+        position: relative;
+    }
+    .active {
+        ._btn {
+            border-color:#d54041;
+        }
+
+        ._btn::before {
+            content: '';
+            left: -5px;
+            right: -5px;
+            top: 50%;
+            height: 1px;
+            transform: rotate(10deg);
+        }
+    }
+
+    ._btn::before,
+    ._btn::after {
+        position: absolute;
+        background-color: #d54041;
+    }
+ 
+}

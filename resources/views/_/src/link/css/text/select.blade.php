@@ -1,0 +1,1 @@
+<link rel="stylesheet" href="{{ asset('lib/plugins/select2/css/select2.css') }}">

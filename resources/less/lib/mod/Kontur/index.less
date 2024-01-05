@@ -1,0 +1,92 @@
+@charset "UTF-8";
+
+#Kontur {
+	._head,
+	._footer {
+		padding: 2rem 1rem;
+	}
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	#Kontur {
+		--x-kontur-w: 400px;
+		--x-kontur-h: 700px;
+		--x-kontur-r: 1rem;
+		--x-kontur-b: 40px;
+
+	}
+}
+
+@media screen and (max-width: @w-menu-2) {
+
+
+	#Kontur {
+		--x-kontur-w: calc(100% - 1.5rem);
+		--x-kontur-h: calc(var(--h) - - var(--h-Top) - var(--h-Header) - 52px - 1rem);
+		--x-kontur-b: 0px;
+		--x-kontur-r: 0.75rem;
+		//
+		padding-bottom: 60px;
+	}
+}
+
+
+#Kontur {
+	width: var(--x-kontur-w);
+	height: clamp(calc(var(--h)*.5),var(--x-kontur-h),calc(var(--h) - var(--h-Top) - var(--h-Header) - 1rem));
+	bottom: var(--x-kontur-b);
+	right: var(--x-kontur-r);
+	//
+	max-height: calc(var(--h) - var(--x-kontur-b) - 1rem - 25px);
+
+
+
+	.Kontur {
+		position: absolute;
+		top:0;
+		right:0;
+		bottom:0;
+		left:0;
+	}
+
+
+	._body {
+		.x-1 {
+			a {
+				padding: .75rem .5rem;
+				border-radius: 8px;
+			}
+		}
+	}
+
+
+}
+
+
+
+/*
+
+
+
+	._edge {
+		padding-left: 1.5rem;
+		padding-right: 1.5rem;
+	}
+
+
+
+	
+
+	._cross>* {
+		margin-left: -7px;
+	}
+
+
+	.Void>.content {
+		margin-bottom: 1.5rem;
+	}
+
+
+}
+
+/**/

@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.generatePersontransform(@n, @i: 1) when (@i =< @n) {
+    .Persons > div:nth-child(@{i}) {
+      transform: translateX(-5px * @i);
+    }
+    .generatePersontransform(@n, @i + 1);
+}
+
+.generatePersontransform(12);
+
+
+
+.Persons> {
+
+    div:first-child {
+        transform: translateX(0px);
+    }
+}
+

@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+.Agree {
+	.Ellipsis {padding-bottom: 3px;}
+	background-color: rgba(179, 69, 72, 0.2);
+
+	g .x-1 {
+		opacity: 0.1
+	}
+
+}
+
+#Agree:checked~ .Agree {
+	background-color: transparent;
+	label {
+		color: @c-30;
+	}
+	svg {
+		.x-1 {
+			opacity: 1;
+			fill: #8bc34a;
+		}
+		.x-2 {
+			opacity: 0.4;
+		}
+	}
+}
+
+#Agree~.Btn::after {
+	color: #666;
+	background-color: #ccc;
+}

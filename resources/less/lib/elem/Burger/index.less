@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+
+.Burger {
+    --Burger-w: 40px;
+    --Burger-line-h: 2px;
+    --Burger-color: #fff;
+}
+
+.Burger{
+    >._burger {
+        position: relative;
+        width: var(--Burger-w);
+        height: var(--Burger-w);
+
+        >div {
+            position: absolute;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+            height: var(--Burger-line-h);
+            background-color: var(--Burger-color);
+        }
+
+    }
+}
+
+
+
+
+
+
+
+
+

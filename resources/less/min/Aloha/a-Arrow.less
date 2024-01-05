@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.Arrow,
+summary {
+	// i {position: relative;}
+	i::before,
+	i::after {
+		.transition();
+	}
+}
+
+.Arrow.ok,
+details[open] > summary {
+    i::before {
+          transform: translate(~"calc(var(--x-Arrow-w) - var(--x-Arrow-w)*2)", 0) rotate(45deg);
+    }
+    i::after {
+          transform: translate(var(--x-Arrow-w), 0) rotate(-45deg);
+    }
+}

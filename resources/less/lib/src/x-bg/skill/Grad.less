@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+.Grad {
+    --Grad-bg-1:rgba(255,255,255,0);
+    --Grad-bg-2:rgba(151,165,193,.2);
+    position: relative; pointer-events: none;
+}
+
+.Grad::before,
+.Grad::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+}
+
+.Grad::before {
+    bottom: 0;
+    height: ~"calc(var(--space) + 1rem)";
+    // background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(0,0,20,.1));
+    background: linear-gradient(to bottom, var(--Grad-bg-1),  var(--Grad-bg-2));
+}
+

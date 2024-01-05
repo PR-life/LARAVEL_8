@@ -1,0 +1,157 @@
+@charset "UTF-8";
+
+.SCROLLskill {
+	overflow: auto;
+	line-height: 1rem;
+	font-size: 1rem;
+}
+
+.SCROLL {
+	position: absolute !important;
+	top:0;
+	left: 0;
+	right:0;
+	bottom:0;
+	> ._scr {
+		.SCROLLskill;
+		height: 100%;		
+		._H {
+			min-height: calc(100% + 1px);
+		}	
+	}
+}
+
+//
+
+.scroll-close * {pointer-events: none;}
+.scroll-close{
+	height: 220px;
+	padding-bottom: 2rem;
+	display: flex;
+	flex-direction: column;
+	// justify-content: flex-end;
+	align-items: center;
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+	.scroll-close{
+		justify-content: center;
+	}
+
+}
+
+@media screen and (max-width: @w-menu-2) {
+	.scroll-close {
+		justify-content: center;
+	}
+
+}
+
+.scroll-close {
+	cursor: pointer;
+}
+.scroll-close::before {
+	content: '';
+	width: var(--Ico);
+	height: var(--Ico);
+	background-color: #eee;
+	border: calc(var(--Ico)*.25) solid #eee;
+	border-radius: 50%;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 12'%3e%3cpath d='M11 4 6 8 1 4' stroke='currentColor' stroke-width='1.2' stroke-linecap='round' stroke-linejoin='round' fill='none'%3e%3c/path%3e%3c/svg%3e ");
+	// background-size: 40%;
+	background-repeat: no-repeat;
+	background-position: center;
+	margin-bottom: 3px;
+}
+
+
+
+
+
+
+
+.Scroll {
+	.SCROLL;
+}
+
+@media (min-width: @metrika-80-plus) and (max-width:@w-max) {
+	.Scroll_80 {
+		.SCROLL;
+		// >._scr {height: 100%;}
+	}
+}
+
+
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+
+	.Scroll.-shift {
+		--x-Scroll-shift:14px;
+		> ._scr {
+			width: calc(100% + var(--x-Scroll-shift));
+			// transform: translateX(var(--x-Scroll-shift));
+		}
+	}
+
+	.Scroll_PC {
+		.SCROLL;
+	}
+
+	// .Scroll,
+	// .Scroll_PC {
+	// 	>._scr {height: 100%;}
+	// }
+}
+
+
+@media screen and (max-width: @w-menu-2) {
+	.Scroll_mbl {
+		.SCROLL;
+	}
+
+	.Scroll.-auto,
+	.FIX.on ._fix{
+		.SCROLLskill;
+	}
+
+
+	// .FIX.on ._fix .Scroll {
+	.Scroll.-auto {
+		position: relative;
+		left: auto;
+		right: auto;
+		bottom: auto;
+		top: auto;
+	}
+
+
+
+}
+
+
+//
+
+
+.FIX.off .Scroll_PC.-scrollFIX,
+.FIX.off .Scroll.-scrollFIX {
+	._scr {
+		overflow-y: hidden;
+	}
+}
+
+
+
+.FIX.on .Scroll_PC.-scrollFIX,
+.FIX.on .Scroll.-scrollFIX {
+	._scr {
+		overflow-y: scroll;
+	}
+}
+
+
+.Scroll_PC.-scroll,
+.Scroll.-scroll {
+	._scr {
+		overflow-y: scroll;
+	}
+}

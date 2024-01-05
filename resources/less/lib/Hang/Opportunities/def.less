@@ -1,0 +1,60 @@
+@charset "UTF-8";
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+    .Opportunities .menu.-def {
+        > li {
+            margin-right: 2px;
+            // .a {
+            //     border-radius: 1rem;
+            // }
+        }
+    }
+}
+
+.Opportunities {
+    --Opportunities-bg: #f4f6fb; //#f1f1f1;
+    --Opportunities-bg-ef: #fff;
+    --Opportunities-bg-info: #f0f2f5;
+
+    .menu.-def {
+        --c-menu:#333;
+        --c-menu-hover:#333;
+        // --c-menu-active:#333;
+        --c-menu-active: #fff;
+        --bg-menu:#f2f3f7; //657786
+        --bg-menu-hover:#f2f3f7;
+        --bg-menu-active:#fff;
+        --c-menu-border:transparent;
+        --c-menu-border-active:transparent;
+
+        li .a {
+            border:var(--border-menu-tile-w) solid #fff;
+            height: 100%;
+        }
+        li.active .a {
+            box-shadow: 0 1px 3px 1px rgba(210, 220, 233, 0.5), 0 1px 2px 0 rgba(210, 220, 233, 0.2);
+        }
+    }
+}
+
+@media screen and (max-width: @w-menu-2) {
+
+
+	.Opportunities .menu.-def {
+		// --bg-menu:var(--bg-imago-1);
+		// --bg-menu-active:#346eb8;
+		// --c-menu-active:#fff;
+		--bg-menu:#262d35;
+		--bg-menu-hover:#262d35;
+		--bg-menu-active:#007bfb;//#434f5d; //#346eb8;
+		--c-menu:#fff;
+		--c-menu-hover:#fff;
+		--c-menu-active:#fff;
+
+ 
+	}
+	 
+}
+
+
+ 

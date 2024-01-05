@@ -1,0 +1,114 @@
+@charset "UTF-8";
+
+.Geek {
+	--x-Geek-w: 480px;
+	// --x-Geek-jolt: 80%;
+	--x-Geek-jolt: calc(100% - 4rem);
+}
+
+.Geek.-M {
+	--x-Geek-w: 680px;
+}
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+    .Geek {
+		--x-Geek-paddingTop:88px;
+		--x-Geek-marginLeft:2rem;
+    }
+}
+
+
+@media screen and (max-width:@w-menu-2) {
+    .Geek {
+		--x-Geek-paddingTop: 50px;
+        --x-Geek-marginLeft:1rem;
+    }
+}
+
+
+
+.Geek {
+    display: block;
+    position: fixed;
+	width: 40%;
+	max-width: var(--x-Geek-w);
+    //
+    top: 0px;
+	right: 0;
+	left: auto;
+    bottom: -80px;
+    right: 200%;
+    // 
+    transform: translateX(calc(100% - var(--x-Geek-jolt)));
+    .transition(transform);
+
+	._win {
+		min-height: calc(100% + 1px);
+	}
+	.Scroll {
+		top: var(--x-Geek-paddingTop);
+	}
+	._Last {
+		height: calc(var(--h)*.25);
+		min-height: 200px;
+	}
+	// ._gee {
+	// 	padding-top: var(--x-Geek-paddingTop);
+	// }
+}
+
+
+
+.Geek.On,
+#inputGeek:checked ~ .Geek.-noJS {
+	right: 0;
+    //
+    transform: translateX(0px);
+    .transition(transform);
+}
+
+
+
+
+
+////
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+	
+	.Geek {
+		min-width: 420px;
+	}
+
+    .Geek.ltr {
+		overflow: hidden;
+        ._gee {
+			width: calc(100% + 16px);
+			transform: translateX(-16px);
+			direction: rtl;
+            // margin-left: -13px;
+            // padding-left: 13px;
+			> * {
+				direction: ltr;
+			}
+            // > :last-child {
+            //     padding-bottom:150px;
+            // }
+        }
+
+    }
+}
+
+
+
+
+
+@media screen and (max-width:@w-menu-2) {
+    .Geek {
+		width: calc(var(--w) - 3rem);
+		//
+		.Hook.edge-right {
+			padding-right: calc(var(--edge)*.5);
+		}
+    }
+}

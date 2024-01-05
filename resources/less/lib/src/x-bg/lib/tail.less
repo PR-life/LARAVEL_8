@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+
+
+.bg-tail {
+	--x-bgtail: #fff;
+}
+
+.bg-tail::before,
+.bg-tail::after {
+	content: '';
+	position: absolute;
+	top: 0;
+	bottom: -.5rem;
+	z-index: -1;
+}
+
+.bg-tail::before {
+	background-color: var(--x-bgtail);
+	left: 0;
+	right: 0;
+}
+
+.bg-tail::after {
+	background: linear-gradient(to right, var(--x-bgtail), rgba(255,255,255,0));
+	left: 100%;
+	width: 4rem;
+}
+

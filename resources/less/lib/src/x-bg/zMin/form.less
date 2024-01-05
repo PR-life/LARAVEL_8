@@ -1,0 +1,71 @@
+@charset "UTF-8";
+
+.Form {
+
+    
+    // input:-webkit-autofill,
+    // input:-webkit-autofill:hover,
+    // input:-webkit-autofill:focus,
+    // input:-webkit-autofill:active,
+    input {
+        background-color: var(--bg-input);
+    }
+
+    input:auto-fill { 
+        background-color: red !important;
+      }
+
+    textarea {
+        background-color: var(--bg-textarea);
+    }
+	// input:read-only {
+	// 	background-color: var(--bg-input-readOnly);
+	// }
+
+	input.-slug {
+		background-color: transparent;
+	}
+
+    button {
+        background: var(--bg-button);
+    }
+
+    // input:auto-fill{
+    //     outline: 3px solid black;   
+    //     animation: scaleUp ease 2.87s infinite;
+    //     background:red;
+    //     border:1px solid blue !important;
+    //   }
+      
+    //   input:-webkit-autofill {
+    //     outline: 3px solid black;   
+    //     animation: scaleUp ease 2.87s infinite;
+    //   }
+      
+    //   @keyframes scaleUp{
+    //     0%{
+    //       transform: scale(1);
+    //     }
+    //     50%{
+    //       transform: scale(1.1);
+    //     }
+    //     100%{
+    //       transform: scale(1);
+    //     }
+    //   }
+
+
+
+}
+
+// @-webkit-keyframes autofill {
+//     to {
+//       color: inherit;
+//       background: var(--bg-input);
+//     }
+//   }
+  
+//   input:-webkit-autofill {
+//     -webkit-animation-name: autofill;
+//     -webkit-animation-fill-mode: both;
+//   }

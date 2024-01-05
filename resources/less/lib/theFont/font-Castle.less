@@ -1,0 +1,35 @@
+@charset "UTF-8";
+
+html {
+    --family-Castle: Castle, Arial, Tahoma, sans-serif;
+}
+
+.familyCastle,
+.Family-Castle * {
+	font-family: var(--family-Castle) !important;
+}
+
+@font-face {
+    font-family: 'Castle';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Castle'), url(/font/Castle/300.woff) format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Castle';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Castle'), url(/font/Castle/400.woff) format('woff');
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Castle';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Castle'), url(/font/Castle/700.woff) format('woff');
+    font-display: swap;
+}
+ 

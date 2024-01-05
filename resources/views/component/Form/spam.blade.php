@@ -1,0 +1,1 @@
+<input id="title" class="none" type="text" name="title" value="_" placeholder='.'>

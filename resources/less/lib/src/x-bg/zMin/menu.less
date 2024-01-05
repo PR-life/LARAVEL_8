@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+
+
+// .menu.-tag {
+//     > li a, > label {
+//         background-color:var(--bg-menu);
+//     }
+//     > li.active a, > label.active {
+//         background-color:var(--bg-menu-active);
+//     }
+// }
+
+
+// //
+
+// .menu.-tile {
+//     --bg-menuTile:#eee;
+//     --bg-menuTile-footer:#ccc;
+// }
+
+
+// .menu.-tile {
+// 	> * {
+// 		background-color: var(--bg-menuTile);
+// 	}
+// 	._footer {
+// 		background-color:var(--bg-menuTile-footer);
+// 	}
+// }
+
+//
+
+
+
+//
+
+
+
+// .menu a,
+// .menu label,
+// .menu a:visited,
+// .menu>div,
+// .menu > div > label,
+.menu > * a,
+.menu > * .a {
+	background-color: var(--bg-menu);
+}
+
+// .menu a:hover,
+// .menu label:hover,
+// .menu>div:hover>label,
+// .menu > li > *:hover
+.menu > *:hover .a{
+	background-color: var(--bg-menu-hover);
+}
+
+.menu {
+	// .active,
+	input:checked ~ label,
+	// > div > label.active,
+	// > div > label.active:hover,
+	li.active a,
+	li.active .a,
+	li.active:hover a,
+	li.active:hover .a {
+		background-color: var(--bg-menu-active);
+	}
+}

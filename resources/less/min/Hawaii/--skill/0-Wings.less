@@ -1,0 +1,58 @@
+@charset "UTF-8";
+ 
+.WINGS {
+    position: relative;
+    width: 100%;
+    > ._win {
+        position: absolute;
+        z-index: 5;
+        left: 0;
+        right: 0;
+        top: 0;
+    }
+	> ._win.-t {
+		top: auto;
+		bottom:100%;
+	}
+	> ._win.-b {
+		top: 100%;
+		bottom:auto;
+	}
+}
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+
+    .Wings {
+		  .WINGS;
+    }
+
+}
+
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@metrika-80) {
+    .Wings_80 {
+		  .WINGS;
+    }
+}
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-beyond) {
+  .Wings_beyond {
+    > ._win {
+      position: relative;
+      left: auto;
+      right: auto;
+      top: auto;
+    }
+  }
+}
+
+@media screen and (max-width:@w-menu-2) {
+
+	.Wings.-mbl,
+  .Wings-mbl {
+		  .WINGS;
+  }
+
+}

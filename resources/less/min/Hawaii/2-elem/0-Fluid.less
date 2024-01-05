@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+
+	.Fluid {
+		height: clamp(320px, 20vmax, 400px);
+		// height: clamp(calc(var(--w)*.25), 15vmax, 420px);
+		// height: calc((var(--w)*.25), calc(var(--h)*.25), 420px);
+		// height: calc(var(--h)*.25);
+		// max-height: 600px;
+		// min-height: 380px;
+	}
+
+
+	.Fluid {
+		display: flex;
+		flex-direction: column;
+		// justify-content: center;
+		// text-align: center;
+	}
+}
+
+
+@media screen and (max-width:@w-menu-2) {
+
+	.Fluid {
+		margin-left: 1rem;
+		margin-right: 1rem;
+		padding: 3rem 0 3rem 2rem;
+	}
+
+	.Fluid.pure {
+		.center {text-align: left;}
+	}
+
+}
+
+ 

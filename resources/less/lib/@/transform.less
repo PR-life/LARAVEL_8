@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+
+.transform(@x:0px, @y:0px, @z:0px, @rotate:0deg, @scale:1, @skewX:0deg, @skewY:0deg) {
+	// -moz-transform: scale(@scale) rotate(@rotate) translateX(@x) translateY(@y) translateZ(@z) skew(@skewX, @skewY);
+	// -webkit-transform: scale(@scale) rotate(@rotate) translateX(@x) translateY(@y) translateZ(@z) skew(@skewX, @skewY);
+	// -o-transform: scale(@scale) rotate(@rotate) translateX(@x) translateY(@y) translateZ(@z) skew(@skewX, @skewY);
+	// -ms-transform: scale(@scale) rotate(@rotate) translateX(@x) translateY(@y) translateZ(@z) skew(@skewX, @skewY);
+	transform: scale(@scale) rotate(@rotate) translateX(@x) translateY(@y) translateZ(@z) skew(@skewX, @skewY);
+}
+
+
+.rotate(@x:0) {
+	// -webkit-transform: rotate(@x);
+	transform: rotate(@x);
+	transform-origin: 0;
+}
+
+

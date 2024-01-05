@@ -1,0 +1,65 @@
+@charset "UTF-8";
+
+.a,
+.a:visited,
+.x-menu a:visited,
+li a,
+body a {
+    color: @c-a;
+}
+
+a.Btn {color: var(--c-text);}
+
+
+li {
+	a:visited {
+		color: @c-avisited;
+	}
+}
+
+ul.-menu li {
+	a:visited {
+		color: @c-a;
+	}
+}
+
+.menu li {
+	.a, a,
+	a:visited {
+		color: var(--c-menu);
+
+		span {
+			color: inherit;
+		}
+	}
+
+	.a:hover,
+	a:visited:hover {
+		color: var(--c-menu-hover)
+	}
+}
+
+
+.menu .active {
+	a:visited,
+	a:visited:hover {
+		color: var(--c-menu-active)
+	}
+}
+
+a:hover {
+    color: @c-ahover;
+}
+
+.Pagination {
+    a:visited {
+        color: inherit;
+    }
+}
+
+.Tag {
+    .active {
+        // background-color: #333;
+        color: #fff;
+    }
+}

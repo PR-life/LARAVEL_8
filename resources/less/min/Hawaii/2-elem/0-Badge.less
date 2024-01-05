@@ -1,0 +1,85 @@
+@charset "UTF-8";
+
+.Badge {
+	--x-badge-padding: 8px;
+}
+.Badge.-paddingS {
+	--x-badge-padding: 2px;
+	padding-right: 5px;
+}
+.Badge.-paddingXS {
+	--x-badge-padding: 1px;
+}
+.Badge.-net {
+	--x-badge-padding: 0;
+	padding-right: 3px;
+}
+
+
+.Badge.-uppercase {
+	>*:first-child {
+		text-transform: uppercase;
+	}
+}
+
+.Badge.-bold {
+	> *:first-child {
+		font-weight: bold;
+	}
+}
+
+
+.Badge.-reverseBg {
+	padding-top: 2px;
+	padding-bottom: 2px;
+}
+
+
+//
+
+
+.Badge,
+.Badge> :first-child {
+    display: flex;
+    align-items: center;
+}
+
+
+.Badge {
+    justify-content: flex-start;
+    // width: auto;
+    //
+    padding: var(--x-badge-padding);
+    //
+    // line-height: 120%;
+}
+
+.Badge {
+
+	// > div:last-child {
+	// 	padding-right: 6px;
+	// }
+	
+    > *:first-child {
+        padding: 0 10px;
+        margin-right: .5rem;
+    }
+
+    > .Ico:first-child {
+        padding: 6px;
+    }
+
+
+	> .net {
+		margin-right: 0 !important;
+	}
+
+	// > div.net:last-child {
+	// 	margin-right: 0;
+	// }
+
+	> ._text {
+		font-size: inherit;
+		line-height: inherit;
+	}
+}

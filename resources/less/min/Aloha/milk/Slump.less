@@ -1,0 +1,53 @@
+@charset "UTF-8";
+
+#Slump {
+    display: block;
+    .Slump {
+        --var-y:120px;
+    }
+	._right {
+		right: 0;
+		// padding-right: var(--bar);
+	}
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-beyond) {
+    #Slump .Edge {
+        padding-right: 0 !important;
+    }
+}
+
+// @media screen and (max-width:@w-menu-2) {
+//     #Slump {
+//         display: none;
+//     }
+// }
+
+//////////////
+
+#Slump {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+}
+
+#Slump .Slump {
+    top: 0;
+    min-height: var(--h-Header);
+    //
+	.transform(0,calc(var(--var-y) - var(--var-y)*2));
+}
+
+
+.Slump {
+	.transition(transform,ease)
+}
+
+
+body.Z2 #Slump .Slump {
+	.transform();
+}
+
+
+/**/

@@ -1,0 +1,21 @@
+@charset "UTF-8";
+
+a.grey {color: inherit;}
+a.grey > span {position: relative;}
+
+a.grey > span::after {
+	content: '';
+	position: absolute;
+	left: 0; right: -.5rem; height: 1px;
+	bottom: 0px;
+	background-color: #b9b9b9;
+	opacity: .5;
+}
+
+a.grey > span:last-child::after {
+	right: 0;
+}
+	
+
+
+/***/

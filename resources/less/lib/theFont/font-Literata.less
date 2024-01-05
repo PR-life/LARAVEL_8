@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+html {
+	--family-Literata: Literata, Arial, sans-serif;
+}
+
+.familyLiterata,
+.Family-Literata * {
+	font-family: var(--family-Literata) !important;
+}
+
+@font-face {
+	font-family: 'Literata';
+	font-style: normal;
+	font-weight: 700;
+	src: local('Literata'), url(/font/Literata/700.woff2) format('woff2');
+	font-display: swap;
+}

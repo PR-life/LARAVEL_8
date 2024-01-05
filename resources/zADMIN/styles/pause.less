@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.Table {
+    .item.pause {
+        ._1 {
+            opacity: .5;
+        }
+        .table-wrap::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            right: 0;
+            height: 1px;
+            bottom: 2px;
+            background: linear-gradient(to right, transparent 0%, #e0bd34 5%, transparent 25%);
+            opacity: 0.5;
+          }
+    }
+}
+ 
+#Table_index.x-active {
+    .Table .item.pause {
+        ._1 {opacity: 1;}
+    }
+}
+
+
+#body.SATIRA {
+    .Table {
+        .item.pause {
+            ._1 {
+                .transition(opacity);
+            }
+        }
+    }
+}

@@ -1,0 +1,1 @@
+<script src="{{ asset('lib/plugins/select2/js/select2.full.min.js') }}"></script>

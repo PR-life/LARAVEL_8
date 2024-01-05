@@ -1,0 +1,1 @@
+<img {!!$css ?? ''!!} src="data:image/gif;base64,R0lGODlhEAAJAIAAAP///wAAACH5BAEAAAEALAAAAAAQAAkAAAIKjI+py+0Po5yUFQA7" width="560" height="315" alt="превью">

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+ 
+.author.flex {
+	>._name,
+	> .Grey {
+		white-space: nowrap;
+	}
+	> .Grey {
+		.ellipsis;
+	}
+}
+
+.author {
+	--x-line-w:1.5rem;
+	> .-line {
+		padding-left: var(--x-line-w);
+		position: relative;
+	}
+	.-line::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: calc(var(--font) * .6 - .5px);
+		//
+		height: 1px;
+		width: calc(var(--x-line-w) - 5px);
+		background-color: var(--c-text);
+	}
+}
+ 

@@ -1,0 +1,26 @@
+@charset "UTF-8";
+
+.Details {
+
+	summary {
+		color: var(--c-summary);
+		// .transition(color,linear,.1s);
+		// transition: opacity 0.15s linear;
+        * {color: inherit;}
+	}
+    summary i::before,
+    summary i::after {
+        background-color: var(--bg-summary-before);
+    }
+
+    details[open] {
+		>summary {
+			color: var(--c-summary-active);
+			* {color: inherit;}
+		}
+        >summary i::before,
+        >summary i::after {
+            background-color: var(--bg-summary-before-open);
+        }
+    }
+}

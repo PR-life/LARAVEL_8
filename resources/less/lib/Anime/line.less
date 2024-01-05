@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+
+.Anime {
+    --Anime-h: 24px;
+}
+
+
+
+.Anime.--abs {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    height: var(--Anime-h);
+  }
+  .Anime.-line {
+    transform: translateX(-50%);
+    overflow: hidden;
+    position: relative;
+  }
+  .Anime.-line > div {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    width: 1px;
+    background-color: #000;
+  }
+  .Anime.-line.-on {
+    transform: translateY(-100%);
+    animation: animeScrollY 2.5s ease-in-out 0.3s infinite normal;
+  }
+  @keyframes animeScrollY {
+    0% {
+      transform: translateY(-100%);
+    }
+    100% {
+      transform: translateY(100%);
+    }
+  }

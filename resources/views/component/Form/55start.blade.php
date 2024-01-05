@@ -1,0 +1,1 @@
+<input id="param_1" class="none" type="text" name="param_1" value="{{url()->previous()}}" placeholder='.'>

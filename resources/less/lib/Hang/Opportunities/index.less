@@ -1,0 +1,98 @@
+@charset "UTF-8";
+
+.Opportunities {
+   
+    ._body {
+        background-color: var(--Opportunities-bg);
+    }
+
+    ._wrapInfo {
+        background-color:var(--Opportunities-bg-info);
+    }
+
+    .Badge  {display: none;}
+
+   .x-filter {
+        padding-bottom: 0;
+        .transition(padding-bottom);
+   }
+    ._head {
+        box-shadow: 0 2px 66px rgba(125, 143, 179, 0.15);
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0), rgba(151, 165, 193, .2));
+    }
+
+    ._ef {
+        background-color: var(--Opportunities-bg-ef);
+        border-radius: 1rem;
+    }
+
+    #Opportunities_list.all {
+        .Badge  {display: flex;}
+    }
+}
+
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+    .Opportunities {
+        --border-menu-tile-w:2px;
+
+        .menu.x-tile {
+            transform: translateY(2rem);
+        }
+
+    }
+}
+
+@media screen and (max-width:@w-menu-2) {
+	.Opportunities {
+        --border-menu-tile-w:1px;
+
+        
+        ._wrap.space-m {
+            padding: calc(var(--void)*.5);
+        }
+
+        .Roll_mbl.menu {
+            padding-left: .5rem;
+        }
+
+
+        .menu.x-tile {
+
+            > li {
+                min-width: calc(var(--w)*.4);
+            }
+
+            ._ico.Ico.-XL {
+                --x-Ico:calc(var(--Ico)*2);
+            }
+
+            .space-m {
+                padding: 1rem .5rem;
+            }
+
+
+            // --fontMenu:13px;
+
+            // display: grid;
+            // grid-template-columns: repeat(3, 1fr);
+
+            // padding: 0;
+
+            // .a {
+            //     padding: 0px 3px;
+            //     min-height: 6rem;
+            // }
+
+            ._ico {
+                margin-bottom: 2rem;
+            }
+        }
+
+        .Details.-edgeS > details summary {
+            padding-left: calc(var(--x-details-margin-left)*.5);
+        }
+    }
+
+}

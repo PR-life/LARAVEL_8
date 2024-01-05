@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+
+.Golden.-left_70 {
+    --Golden-flexbasis-left:70%;
+    --Golden-flexbasis-right:30%;
+}
+
+.Golden.-left_60 {
+    --Golden-flexbasis-left:60%;
+    --Golden-flexbasis-right:40%;
+}
+
+.Golden.-left_40 {
+    --Golden-flexbasis-left:40%;
+    --Golden-flexbasis-right:60%;
+}
+
+
+
+.Golden {
+    --Golden-flexbasis-left:50%;
+    --Golden-flexbasis-right:50%;
+    // --Golden-flexgrow:1;
+
+    // > * {
+    //     // flex-grow: var(--Golden-flexgrow);
+    //     // flex-basis:var(--Golden-flexbasis);
+    // }
+
+    > ._l {
+        flex-basis: var(--Golden-flexbasis-left);
+        // max-width:~"calc(var(--Pente-1) + var(--Pente-paint)*2 + var(--Pente-cross))"
+    }
+
+    > ._r {
+        // flex: 1;
+        flex-basis: var(--Golden-flexbasis-right);
+    }
+
+    // > ._aside {
+    //     max-width:~"calc(var(--col)*3 + var(--gap)*2)";
+    //     margin-right: var(--gap);
+    // }
+}

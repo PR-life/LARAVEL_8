@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+// .Smartphone {
+//     width: var(--Smartphone-W);
+//     min-width: 280px;
+//     height: var(--Smartphone-H);
+//   }
+
+//   .Smartphone,
+//   .Smartphone.-h {
+//     max-height: 640px;
+//   }
+//   .Smartphone.-hMin {
+//     min-height: var(--Smartphone-H);
+//   }
+  
+
+.Smartphone {
+    --x-Smartphone-border-top: 0.3rem;
+    --x-Smartphone-border-left: 0.1rem;
+    --x-Smartphone-shadow: 0.2rem;
+    --x-Smartphone-shadow-top: 4px;
+    --x-Smartphone-shadow-bottom: -4px;
+    --x-Smartphone-space-top: calc(var(--x-Smartphone-border-top) + var(--x-Smartphone-shadow-top));
+    --x-Smartphone-space-left: calc(var(--x-Smartphone-border-left) + var(--x-Smartphone-shadow));
+    position: relative;
+}
+
+.Smartphone ._win {
+    overflow: hidden;
+    top: var(--x-Smartphone-space-top);
+    bottom: var(--x-Smartphone-space-top);
+    left: var(--x-Smartphone-space-left);
+    right: var(--x-Smartphone-space-left);
+}
+
+
+.Smartphone.-galaxy,
+.Smartphone.-galaxy ._win {
+    border-radius: calc(var(--Smartphone-H) / 27);
+}
+
+
+
+.Smartphone.-galaxy {
+    border: var(--x-Smartphone-border-top) solid #606060;
+    border-left-width: var(--x-Smartphone-border);
+    border-right-width: var(--x-Smartphone-border);
+    background-color: #f4f3f7;
+}
+
+
+
+.Smartphone.-galaxy ._camera {
+    border-radius: 50%;
+    background-color: #444444;
+    position: absolute;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 0.8rem;
+    width: 0.8rem;
+    box-shadow: inset 0 1px 0 1px #373737, inset 0 -1px 0 1px #515151;
+}
+
+
+.Smartphone.-galaxy.-shadow {
+    box-shadow: inset 0 var(--x-Smartphone-shadow-top) 0 var(--x-Smartphone-shadow) black, inset 0 var(--x-Smartphone-shadow-bottom) 0 var(--x-Smartphone-shadow) black, 0 0 1rem var(--x-Smartphone-shadow) rgba(0, 0, 0, 0.2);
+}

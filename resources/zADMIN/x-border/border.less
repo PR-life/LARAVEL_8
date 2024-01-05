@@ -1,0 +1,242 @@
+@charset "UTF-8";
+
+
+
+.Table {
+	._nameBadge,
+	._badge {
+		border:1px solid #333;
+	}
+
+	._nameBadge{
+		border-top:0;
+		border-right:0;
+	}
+
+}
+
+
+
+form .x-hr > input {
+	border-bottom: 1px solid var(--c-input-border-focus);
+  }
+
+
+#Flaber_edit .Ava,
+.Manager.-border {
+	border:1px solid @c-border;
+}
+
+
+.oiBar .x-border-top {
+	border-top: 1px solid @c-border;
+}
+
+.x-09081744,
+#TopBranch,
+#Top {
+	border-bottom: 1px solid @c-border;
+}
+
+#TopBranch {
+	border-left: 1px solid @c-border;
+}
+
+.OnOff.on > .x-09081744 {
+	border-width: 0;
+}
+ 
+
+#body.asideClose {
+	#TopBranch {
+		border-left-width: 0px;
+	}
+
+	.oiBar ._menu {
+		
+		._open ._item {
+		  > * {
+			border-bottom:1px solid @c-border;
+		  }
+	   }
+	   ._open ._item.active{
+		> * {
+		  border-color:transparent;
+		}
+	 }
+	}
+
+}
+
+ 
+
+
+.Table {
+	--x-Table-border-c1:#222;
+	--x-Table-border-c2:#333;
+
+	.children.-lvl_1 {
+		--x-Table-border-c1:#111;
+		--x-Table-border-c2:rgba(255, 255, 255, 0.1);
+	}
+
+
+	// .mafiaOff .table-wrap::after,
+	.item::before,
+	.item::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		right: 0;
+		height: 1px;
+	}
+
+
+	.item::before {
+		bottom: 1px;
+		background-color: var(--x-Table-border-c1);
+	}
+
+	.item::after {
+		bottom: 0px;
+		background-color: var(--x-Table-border-c2);
+	}
+
+	.item.-parent::before,
+	.item.-parent::after {
+		display: none;
+	}
+
+}
+
+.x-24051434 {
+	border:1px solid hsla(0,0%,100%,.1);
+
+	// input {border-bottom:1px solid rgba(255, 255, 255, 0.25)}
+}
+ 
+
+
+.Details {
+
+	summary::after {
+		content: '';
+		position: absolute;
+		left: 0;
+		bottom: 1px;
+		right: 0;
+		height: 1px;
+		background-color: #222;
+	}
+
+	details[open] {
+		summary::after {
+			background-color: hsla(0, 0%, 100%, .05);;
+		}
+	
+	}
+}
+
+
+// @media (min-width: @w-beyond-plus) and (max-width: @w-max) {
+// }
+
+
+
+// @media (min-width:@metrika-80-plus) and (max-width: @w-max) {
+
+// }
+
+
+// @media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
+
+
+// 	#managerDiv {
+// 		border-radius: 0 0 0 75px;
+// 	}
+
+// 	#Top {
+// 		border-bottom: 1px solid hsla(0,0%,100%,.1);
+// 	}
+
+// 	#Tools {
+// 		border: 1px solid hsla(0,0%,100%,.1);
+// 	}
+
+// 	.Oi > .oiBar {
+// 		border-right: 1px solid @c-border;
+
+// 		.x-border-top {
+// 			border-top: 1px solid @c-border;
+// 		}
+
+// 		.x-plus {
+// 			border: 1px solid @c-border;
+// 		}
+// 	}
+
+// 	.Aside_2 > ._wrap{
+// 		border-right: 1px solid @c-border;
+// 	}
+
+
+// 	.Table.-paper {
+// 		.mafiaOff .table-wrap::after {
+// 			bottom: 2px;
+// 			background: linear-gradient(to right, transparent 0%, #e0bd34 5%, transparent 25%);
+// 			opacity: .5;
+// 		}
+// 	}
+
+
+
+ 
+	
+
+
+// }
+ 
+// @media screen and (max-width: @w-menu-2) {
+
+// }
+
+
+
+
+ 
+
+
+// form {
+
+// 	textarea {
+// 		--c-input-border:var(--c-input-border-focus);
+// 	}
+
+// 	.x-hr > input{
+// 		border-bottom: 1px solid var(--c-input-border-focus);
+// 	}
+
+// 	.Sms .OnOff {
+// 		border-bottom: 1px solid @c-border;
+// 	}
+
+// 	.Sms .OnOff.on {
+// 		border-color:transparent;
+// 	}
+	
+// }
+
+// #form_managerDiv {
+// 	--c-input-border:var(--c-input-border-focus);
+// }
+
+// .Message.-error .Sms {
+// 	border-bottom:2px solid #c70000;
+// }
+
+
+// .menu.-tile {
+// 	// --c-menu: #000;
+// 	--c-menu-border-active: @c-border;
+// 	// --c-menu-hover: #fff;
+// }

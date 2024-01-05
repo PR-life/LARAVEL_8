@@ -1,0 +1,158 @@
+@charset "UTF-8";
+
+.Gucci {
+	--x-Gucci:2rem;
+	--x-jolt-Gucci:-2rem;
+	--x-w-Gucci:calc(var(--w) - var(--oiBar) - var(--Pente) - 2rem - var(--x-Gucci)*3);
+	--x-h-Gucci:calc(var(--h) + 1rem);
+
+	--bg-Gucci:#fff;
+}
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @metrika-200) {
+	.Gucci {
+		--x-w-Gucci:var(--bar);
+	}
+
+	.Gucci .Hidden::before {
+		content: '';
+		z-index: 10;
+		position: absolute;
+		top: 0;
+		right: 0;
+		bottom: 0;
+		left: 0;
+		background-color: #fff;
+	}
+
+}
+
+.Gucci ._tool {
+	z-index: 15;
+	display: flex;
+	top: 0;
+	left: 100%;
+	pointer-events: all;
+
+	._btn {
+		width: calc(var(--x-Gucci)*1.5);
+		height: calc(var(--x-Gucci)*1.5);
+	}
+	
+}
+
+
+
+#inputGucci:checked~.Gucci {
+	padding-right: var(--x-jolt-Gucci);
+	._tool {
+		// right: 100%;
+		// left: auto;
+	}
+}
+
+
+
+#inputGucci:checked~.Gucci ._shell{
+	transform: translateX(var(--x-jolt-Gucci));
+	.transition(transform, linear, .2s);
+}
+
+.Gucci ._shell{
+	// transform: translateX(var(--x-jolt-Gucci));
+	.transition(transform,linear,.1s);
+}
+
+
+
+#inputGucci:checked ~ .Gucci {
+	display: flex;
+	justify-content: center;
+	
+	// ._scr {
+	// 	border-radius: 1rem;
+	// }
+	>._shell {
+		position: relative;
+		width: 100%;
+		max-width: var(--Pente);
+		display: block;
+		// margin: 0 auto;
+	}
+}
+
+
+
+.Gucci ._shell,
+.Gucci ._shadow {
+	position: absolute;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	// box-shadow: @shadow-card;
+	border-radius: 2rem 2rem 0 0;
+}
+
+.Gucci ._shadow {
+	// box-shadow: @shadow-card;
+	border-radius: 2rem 2rem 0 0;
+}
+
+#inputGucci:checked~.Gucci {
+	--x-w-Gucci:100%;
+	left: 0;
+	right: 0;
+	// top: 0;
+	// bottom: 0;
+}
+
+.Gucci {
+	z-index: 10;
+	position: fixed;
+	right: calc(var(--x-Gucci)*1.5);
+	top: var(--x-Gucci);
+	bottom: calc(var(--x-Gucci)*2);
+	//
+	width: var(--x-w-Gucci);
+	pointer-events: none;
+
+
+	.Scroll {
+		right: -1rem;
+	}
+
+ 
+	._edge {
+		margin-right: 2rem;
+	}
+
+	._gucci {
+		pointer-events: all;
+		min-height: var(--x-h-Gucci);
+		//
+		background-color: var(--bg-Gucci);
+	}
+
+	._minH{
+		min-height: calc(var(--x-h-Gucci)*.4);
+	}
+}
+
+
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+
+
+}
+
+
+
+
+
+@media screen and (max-width: @w-menu-2) {
+
+
+}

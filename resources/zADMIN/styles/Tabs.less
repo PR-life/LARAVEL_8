@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.wrapTabs {
+    border-bottom: 1px solid hsla(0, 0%, 100%, 0.15);
+}
+
+.menu.-tab li.active::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 2px;
+    background-color: #577ed6;
+  }
+
+  .menu.-tab {
+    --c-menu:@c-text-grey;
+    --c-menu-active:@c-a;
+    --ulol-line: 3rem;
+  }
+   
+  .menu.-tab li {
+    position: relative;
+  }

@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+.Branch {
+    --c-text:rgba(255, 255, 255, 0.5);
+
+
+    ._item {
+        border: 1px solid @c-border;
+
+        .x-new {
+            // top: 20%;
+            // background: linear-gradient(to bottom, transparent 0%, var(--bg) 40%, var(--bg) 50%, var(--bg) 60%,transparent 100%);
+            // background: linear-gradient(to bottom, transparent 0%, var(--bg) 50%, var(--bg) 50%, var(--bg) 60%);
+            background: linear-gradient(to bottom, var(--bg) 0%, transparent 20px, var(--bg) 50%, var(--bg) 50%, var(--bg) 60%);
+
+            // padding-top: 50px;
+
+            // border-radius: 100% 100% 0 0;
+            svg {
+                --c-text:#e0bd34;
+            }
+        }
+    }
+
+    ._line {
+        height: 1px;
+        background-color: @c-border;
+        margin: .5rem 0;
+    }
+}

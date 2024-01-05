@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+
+.CheckTrigger.vol-beregovoy {
+	--x-CheckTrigger-c-border: rgba(243, 242, 241, .2);
+	//
+	--x-CheckTrigger-bg-on:#0d0e11;
+	--x-CheckTrigger-bg-off:#0d0e11;
+	--x-CheckTrigger-bg-knob-on:#f3f2f1;
+	--x-CheckTrigger-bg-knob-off:#f3f2f1;
+
+	//
+	--x-CheckTrigger-w:74px;
+	--x-CheckTrigger-h:20px;
+	--x-CheckTrigger-space-left:6px;
+	--x-CheckTrigger-space-top:2px;
+	--x-CheckTrigger-knob-h: calc(var(--x-CheckTrigger-h)*.5 + var(--x-CheckTrigger-space-top)*2);
+
+	.check-bg,
+	.check-knob::before {
+		border-radius: 2rem;
+	}
+}
+
+// .CheckTrigger.vol-beregovoy .chek-knob::before {
+// 	content: '';
+// 	position: absolute;
+// 	top: 50%;
+// 	margin-top: calc(var(--x-CheckTrigger-w) - var(--x-CheckTrigger-w)*1.25);
+// 	left: 0;
+// 	width: calc(var(--x-CheckTrigger-w)*0.5 + 6px);
+// 	height: calc(var(--x-CheckTrigger-w)*0.5 - 6px);
+// }

@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+
+.Logo {
+	width: var(--Logo);
+	min-width: var(--Logo);
+}
+
+
+
+// Wings x-logo / _indexMax
+
+
+
+@media (min-width: @w-beyond-plus) and (max-width: @w-max) {
+
+	#Header .Logo {
+		top: calc(-23px - .5rem);
+		padding: .5rem 0;
+		.x-1 {
+			padding-right: var(--Header-rem);
+		}
+	}
+
+
+	// #Header .Logo a {
+	// 	height: 80px;
+	// }
+
+	// 	.Logo.-h {
+	// 	height: var(--h-Header);
+	// }
+
+	// .Logo.-space {
+	// 	padding-right: 30px;
+	// }
+
+	// .Logo {
+	// 	a div {
+	// 		margin-top: 4px;
+	// 	}
+	// }
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-beyond) {
+	#Header .Logo {
+		min-height: var(--h-Header);
+		// bottom: 0;
+		// padding: .5rem 0;
+		.x-1 {
+			padding-top: 3px;
+		}
+	}
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+
+	// #Header .Logo a {
+	// 	height: 80px;
+	// }
+
+	// .Logo.-h {
+	// 	height: var(--h-Header);
+	// }
+
+
+	
+
+	// .Logo {
+	// 	a div {
+	// 		margin-top: 4px;
+	// 	}
+	// }
+}
+
+@media screen and (max-width: @w-menu-2) {
+	#Header .Logo {
+		max-width: 50vw;
+	}
+}
+
+

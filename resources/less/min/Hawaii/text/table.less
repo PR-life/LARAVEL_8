@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+
+table {
+    --table-h-th:var(--h-th);
+	--table-h-td:var(--h-td);
+    --table-void-table:4px;
+    --table-padding-table: ~"calc(1rem + 10px)";
+    --table-tableFlag: 30px;
+
+	tr.-S {
+		--table-h-td:calc(var(--h-td)*.5);
+	}
+}
+
+table.-M {
+    --table-h-td: ~"calc(var(--h-td) + 1rem)";
+}
+
+
+@media screen and (max-width:@w-menu-2){
+    table {
+        --table-padding-table: ~"calc(1rem + 8px)";
+    }
+
+}
+
+
+
+////
+
+table.-noneair {border-collapse: collapse;}
+
+table {
+	.table-top {
+		vertical-align: top;
+	}
+	.table-bottom {
+		vertical-align: bottom;
+	}
+
+	.table-middle {
+		vertical-align: middle;
+	}
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max){
+	table.center tr td {text-align: center;}
+	table.center tr td:first-child {text-align: left;}
+
+	table.-optimizeMbl {
+		td._last {
+			display: none;
+		}
+	}
+}
+
+@media screen and (max-width:@w-menu-2) {}
+
+
+// @media (min-width: @w-menu-2-plus) and (max-width:@w-max){
+// 	table.-M {
+// 		tbody tr td {
+// 			padding-top:~"calc(var(--table-void-table)*6)";
+// 			padding-bottom:~"calc(var(--table-void-table)*3)";
+// 		}
+// 	}
+// }
+
+
+// table thead tr th {
+//     font-size: 90%;
+//     line-height: 115%;
+//     font-weight: normal;
+//     padding-bottom: var(--table-void-table);
+//     padding-left: var(--table-padding-table);
+//     padding-right: var(--table-padding-table);
+
+//     > * {
+//         font-style: normal;
+//         font-weight: inherit;
+//     }
+
+//     > i {
+//         display: block;
+//     }
+
+//     > span {
+//         padding-top: 3px;
+//         //
+//         font-size: 80%;
+//         letter-spacing: .5px;
+//     }
+// }
+
+
+// table tr > td:first-child,
+// table tr > th:first-child {
+    //text-align: left;
+    //padding-left: var(--table-padding-table);
+// }
+
+
+
+
+table {
+
+	// thead,
+	// tbody,
+	// tfoot {
+	// 	position: relative;
+	// }
+
+	> thead {z-index: 7;}
+	> tbody {z-index: 5;}
+	> tfoot {z-index: 3;}
+
+
+	th, td {
+		padding-left:var(--table-void-table);
+		padding-right:var(--table-void-table);
+	}
+	th {
+		vertical-align: bottom;		
+	}
+
+	td {
+        padding-top:var(--table-void-table);
+        padding-bottom:var(--table-void-table);
+        
+		div {
+			display: inline;
+		}
+		a div {
+			display: inline-block;
+		}
+	}
+
+	thead th {
+		height: var(--table-h-th);
+	}
+	
+    tbody td{
+		height: var(--table-h-td);
+		vertical-align: middle;
+	}
+ 
+    //
+
+    tfoot {
+        tr td {
+            padding-bottom: 10px;
+            padding-top: 10px;
+        }
+        tr:first-child td {
+            padding-top:~"calc(var(--table-padding-table)*1)";
+        }
+        tr:last-child td {
+            padding-bottom:1rem;
+        }
+    }
+}
+
+
+
+

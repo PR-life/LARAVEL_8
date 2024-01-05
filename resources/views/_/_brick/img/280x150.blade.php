@@ -1,0 +1,1 @@
+<img {!!$css ?? ''!!} src="data:image/gif;base64,R0lGODlhHAAPAIAAAP///wAAACH5BAEAAAEALAAAAAAcAA8AAAISjI+py+0Po5y02ouz3rz7D0oFADs=" width="{{$width ?? '297px'}}" alt="заглушка">

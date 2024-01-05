@@ -1,0 +1,123 @@
+@charset "UTF-8";
+
+
+.Pivot {
+	position: relative;
+
+	a:visited,
+	a {
+		color: #7366bd;
+	}
+}
+.Pivot.-bg::after {
+	content: '';
+	position: absolute;
+	left: 0;
+	right: 20%;
+	bottom: 0;
+	height: 1rem;
+	background: linear-gradient(to bottom, rgba(0, 0, 0, 0), rgba(0, 0, 0, .1));
+} 
+
+
+
+
+.Table {
+
+	._nameBadge{
+		background-color: var(--bg);
+	}
+
+	.children.-lvl_1 {
+		background-color: #222;
+	}
+	// .pivot {
+		// background-color: #252733;
+		// background-color: #1c1c1c;
+		// box-shadow: 0px -5px 10px 2px rgba(0, 0, 0, .1) inset;
+		// background:linear-gradient(to bottom, transparent,rgba(0,0,0,.2));
+
+
+	// }
+
+}
+
+
+
+
+
+.Scroll > ._scr {
+	scrollbar-color: #666 #222;
+}
+
+.Scroll > ._scr::-webkit-scrollbar-track {
+	background: #222;        /* цвет дорожки */
+}
+.Scroll > ._scr::-webkit-scrollbar-thumb {
+	background-color: #666;    /* цвет плашки */
+	border-radius: 20px;       /* закругления плашки */
+	border: 3px solid #222;  /* padding вокруг плашки */
+}
+
+
+
+@media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
+	// #body {
+	// 	background-color: var(--bg);
+	// }
+
+	#Fon {
+		background-color: var(--bg);
+	}
+
+	.Design.x-Admin.asideClose {
+	// 	#Fon {
+	// 		background: linear-gradient(95deg, #29323b 0px, #0d141a 600px);
+	// 	}
+
+	// 	#Fon::before {display: none;}
+
+	// 	#Aside_2 {
+	// 		.bgToBottom {
+	// 			background: transparent;
+	// 		}
+
+	// 		#TopBranch {
+	// 			background: transparent;
+	// 		}
+	// 	}
+
+		.oiBar {
+			background:linear-gradient(95deg, #29323b, #0d141a);
+			// background:linear-gradient(95deg, #3a3e51, #0d141a);
+		}
+
+	}
+	
+ 
+
+
+
+}
+
+
+.Goo.-manager {
+	background: linear-gradient(to bottom, rgba(45, 44, 51, 1) 0%,rgba(45, 44, 51, 1) 25%, rgba(45, 44, 51, .9) 8%, transparent);
+}
+
+
+.bg {
+	background-color: var(--bg);
+}
+
+.bg2 {
+	background-color: var(--bg-2);
+}
+
+.bgToBottom {
+	background: linear-gradient(to bottom, var(--bg) 0%, var(--bg) 50%, transparent)
+}
+.bgToTop {
+	background: linear-gradient(to top, var(--bg) 0%, var(--bg) 50%, transparent)
+}
+

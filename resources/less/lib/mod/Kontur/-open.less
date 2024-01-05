@@ -1,0 +1,52 @@
+@charset "UTF-8";
+
+#checkKontur:checked~.kontur-open {
+	._1 {
+		display: none;
+	}
+	._2 {
+		display: flex;
+	}
+}
+
+
+.kontur-open {
+	background-color: #222;
+	border-radius: 100%;
+	._2 * {
+		fill: #fff;
+		color: #fff;
+	}
+}
+
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.kontur-open {
+		right: 2rem;
+		bottom: 2rem;
+	}
+}
+
+
+
+@media (min-width: @w-beyond-plus) and (max-width: @metrika-100) {
+	.kontur-open {
+		right: 1rem;
+	}
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-beyond) {
+	.kontur-open {
+		right: .5rem;
+	}
+}
+
+@media screen and (max-width: @w-menu-2) {
+	.kontur-open {
+		--Ico:15px;
+		//
+		right: 7px;
+		bottom: 66px;
+	}
+}

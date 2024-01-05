@@ -1,0 +1,431 @@
+@charset "UTF-8";
+
+.menu {
+	> * {
+		font-size: var(--fontMenu);
+	}
+}
+
+
+.menu.-tag > * {
+	font-size: var(--fontMenuTag);
+}
+
+@media screen and (max-width:@w-menu-2) {
+
+	.menu.-tag.-tileMbl > * {
+		font-size: var(--fontMenu);
+	}
+
+}
+
+
+
+.menu.-main > * {
+	font-size: var(--fontMenuMain);
+}
+
+.menu.-tile {
+    // > * {
+    //     div {
+    //         font-size: var(--font-tile);
+    //         line-height: ~"calc(var(--font-tile) * 1.4)";
+    //     }
+    // }
+    // span {
+    //     font-size: var(--rem-h);
+    //     line-height: var(--rem-h);
+    // }
+}
+
+
+//
+
+.dropcap:first-letter {
+	float: left;
+	padding-top: 4px;
+	padding-right: 2px;
+	height: calc(var(--rem-p)*2);
+	font-size: calc(var(--rem-p)*3.5);
+	vertical-align: text-top;
+	text-transform: uppercase;
+}
+
+.letterUp {
+	text-transform: uppercase;
+}
+
+
+.letterLow{
+	text-transform: lowercase;
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+	.letterLow_PC {
+		text-transform: lowercase;
+	}
+}
+
+//
+.Badge.text-m {
+	--font-min: var(--font);
+}
+
+
+
+.Badge,
+.Badge > :first-child,
+.Nameplate {
+    font-size: var(--font-min);
+}
+
+// .Badge.-S,
+.Badge.-S > :first-child {
+	font-size: calc(var(--font-min) - 2px);
+}
+.Badge.-XS> :first-child {
+	font-size: calc(var(--font-min) - 4px);
+}
+
+
+.Badge,
+// .Badge > :first-child,
+.Nameplate {
+    line-height: ~"calc(var(--font-min) * 1)";
+}
+
+.Badge> :first-child {
+	height: ~"calc(var(--font-min) * 1.4)";
+	line-height: 0;
+}
+
+h1, .h1 {
+    font-size: var(--rem-h1);
+    line-height: ~"calc(var(--rem-h1) * 1.1)";
+}
+
+
+h2, .h2, h3 {
+    font-size: var(--rem-h2);
+    line-height: calc(var(--rem-h2) * 1.2);
+}
+
+h2.wide, .h2.wide, h3.wide {
+    line-height: calc(var(--rem-h2) * 1.6);
+}
+
+.h3 {
+    font-size: var(--rem-h3);
+    line-height: ~"calc(var(--rem-h3) * 1.2)";
+}
+
+
+h2.-lineHeight, .h2.-lineHeight, h3.-lineHeight {
+    line-height: ~"calc(var(--rem-h2) * 1.1)";
+}
+
+
+summary.-M,
+.h {
+	font-size: var(--rem-h);
+	line-height: calc(var(--rem-h) * 1.4);
+}
+
+
+h1.-vw, .h1.-vw {
+	font-size: clamp(calc(var(--rem-h2) + 2px),var(--rem-h1),calc(var(--indexW)*2.5));
+	line-height: clamp(calc(var(--rem-h2)*1.4 + 2px),calc(var(--rem-h1)*1.4),calc(var(--indexW)*2.5*1.4));
+}
+
+h1.-lineHeight, .h1.-lineHeight, h1.-vw.-lineHeight, .h1.-vw.-lineHeight {
+    line-height: clamp(calc(var(--rem-h2)*1.1 + 2px),calc(var(--rem-h1)*1.1),calc(var(--indexW)*2.5*1.1));
+}
+
+
+.h.-vw {
+	font-size: clamp(calc(var(--font) + 2px),calc(var(--indexW)*1.8),var(--rem-h));
+	line-height: clamp(calc(var(--font)*1.4 + 2px),calc(var(--indexW)*1.8*1.4),calc(var(--rem-h)*1.4));
+}
+
+
+
+.h.-lineHeight {
+    line-height: ~"calc(var(--rem-h) * 1.2)";
+}
+
+.hMin {
+	font-size: var(--rem-h-min);
+	line-height: ~"calc(var(--rem-h-min) * 1.4)";
+}
+
+.hMin.-lineHeight {
+    line-height: ~"calc(var(--rem-h-min) * 1.2)";
+}
+
+
+h4,.h4,h5,h6 {
+    font-size: var(--rem-h);
+    line-height: ~"calc(var(--rem-h) * 1.4)";
+}
+
+ul.-M,
+ol.-M {
+    --ulol-font: var(--rem-li);
+}
+
+ul, ol {
+    --ulol-font: var(--rem-p);
+    --ulol-line:calc(var(--ulol-font)*1.6);
+    //
+    --ulol-padding-left:2rem;
+}
+
+
+@media screen and (max-width:@w-menu-2) {
+
+	.ul.-out,
+	ul.-out {
+		--ulol-padding-left:1.5rem;
+	}
+	
+
+}
+
+
+
+ul.-pl-up--1,
+ol.-pl-up--1 {
+	--ulol-padding-left:3rem;
+}
+
+ul.-pl-down--1,
+ol.-pl-down--1 {
+	--ulol-padding-left:1.5rem;
+}
+
+ul.-S,
+ol.-S {
+    --ulol-font: var(--font);
+}
+
+ul.-XS,
+ol.-XS {
+    --ulol-font: var(--font-min);
+}
+
+ul, ol{
+	li {
+		font-size:var(--ulol-font);
+		line-height:var(--ulol-line);
+	}
+	li.-lineHeight {
+		line-height:calc(var(--ulol-font)*1.4);
+	}
+}
+
+ 
+
+ul > li {
+	> ._span {
+		padding: .5rem .75rem;
+	}
+}
+
+
+//
+
+.p,
+.text,
+summary {
+	font-size: var(--rem-p);
+}
+
+.p {
+	line-height: var(--rem-p);
+}
+
+.p.-text,
+.text {
+	line-height: calc(var(--rem-p)*1.6);
+}
+
+.text-s {
+	--rem-p:var(--font);
+}
+
+
+summary {
+	line-height:~"calc(var(--rem-p)*1.2)";
+	* {font-style: normal;}
+}
+
+
+.Form dl label,
+p {
+	line-height: inherit;
+	font-size: inherit;
+}
+
+
+.content-m {
+	font-size: calc(var(--font) + 1px);
+    line-height: ~"calc(var(--rem-p) * 1.5)";
+}
+
+
+
+
+summary.-XS,
+.content-s {
+    font-size: calc(var(--font) - 1px);
+    line-height: var(--font);
+}
+
+
+select,
+select option.default,
+.content-xs {
+    font-size: calc(var(--font-min)) !important;
+}
+
+.content-xxs {
+	font-size: calc(var(--font-min) - 1px) !important;
+}
+
+.content-xxs,
+.content-xs {
+	line-height: calc(var(--font-min) + 1px) !important;
+}
+
+
+// .content.-justify {
+// 	>* {
+// 		display: inline;
+// 	}
+
+// 	> br {display: none;}
+	
+// }
+
+
+.Bread *,
+.Btn,
+.author,
+.content,
+// .p,
+legend,
+.Details.-summaryS > details > summary,
+summary.-S,
+table tr th,
+table tr td,
+figcaption,
+.Form label,
+.Paginate *,
+dl dt, dl dd,
+input, textarea, select option {
+    font-size: var(--font);
+}
+
+
+
+.content.-vw {
+	font-size: clamp(var(--font-min),calc(var(--indexW)*1),var(--font));
+	line-height: clamp(calc(var(--font-min) + 4px),calc(var(--indexW)*1.4),calc(var(--font)*1.4));
+	// font-size: clamp(calc(var(--font-min)),calc(var(--indexW)*1.8),var(--font));
+	// line-height: clamp(calc(var(--font-min)*1.4),calc(var(--indexW)*1.8*1.4),calc(var(--font)*1.4));
+}
+
+
+.content.-vw.wide {
+	font-size: clamp(var(--font-min),calc(var(--indexW)*1),var(--font));
+	line-height: clamp(calc(var(--font-min) + 6px),calc(var(--indexW)*1.8),calc(var(--font)*1.8));
+	// font-size: clamp(calc(var(--font-min)),calc(var(--indexW)*1.8),var(--font));
+	// line-height: clamp(calc(var(--font-min)*1.4),calc(var(--indexW)*1.8*1.4),calc(var(--font)*1.4));
+}
+
+
+
+.content-xs,
+.content-s,
+.content,
+// .p,
+.author,
+.Details.-summaryS > details > summary,
+summary.-S,
+input, textarea {
+    line-height: ~"calc(var(--font) * 1.4)";
+}
+
+
+.content.wide {
+ 	line-height: ~"calc(var(--font) * 1.8)";
+}
+
+
+legend,
+.Bread *,
+.content-s.slim,
+.Citation.slim .content {
+ 	line-height: ~"calc(var(--font) * 1.2)";
+ }
+
+
+.content.-lineHeight,
+.content-s.-lineHeight,
+.content-xs.-lineHeight {
+    line-height: calc(var(--font));
+}
+
+
+.content-m.-lineHeight {
+    line-height: calc(var(--font) + 6px);
+}
+
+.content-m.-lineHeightM {
+	line-height: ~"calc(var(--rem-p) * 1.75)";
+}
+
+figcaption,
+.Form label,
+table tr th,
+table tr td {
+    line-height: ~"calc(var(--font) * 1.2)";	
+}
+
+
+dl dt, dl dd {
+    line-height: ~"calc(var(--font)*1.6)";
+}
+
+dt.-lineHeight,
+dl.-lineHeight dt, dl.-lineHeight dd {
+    line-height: calc(var(--font)*1.15);
+}
+
+ 
+
+
+/*
+
+ol {
+	padding-left:var(--x-padding-left);
+	> li {
+    counter-increment: list;
+    list-style-type: none;
+	}
+
+	> li::before,
+	> li::after {
+		color: inherit;
+		position: absolute;
+		top: 0;
+		left: ~"calc(var(--x-padding-left) - var(--x-padding-left)*2)";
+	}
+	> li::before {
+		content: counter(list) ".";
+		counter-increment: heading;
+		font-size: 90%;
+	}
+}
+
+/***/

@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+
+.menu {
+
+	input:checked~label,
+	>div>label.active,
+	>div>label.active:hover,
+	li.active>*,
+	li.active:hover>* {
+		border-color: var(--c-menu-border-active);
+	}
+}
+
+
+.menu.-tag.-bright.-shadow,
+.menu.-tag.-white.-shadow {
+	--c-menu-border: transparent;
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.menu.-tag.-whitePC.-shadow {
+		--c-menu-border: transparent;
+	}
+}

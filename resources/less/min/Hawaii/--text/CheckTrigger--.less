@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+.CheckTrigger {
+	--x-CheckTrigger-w: calc(var(--Ico)*2);
+	--x-CheckTrigger-h: var(--Ico);
+	--x-CheckTrigger-space-left: 0px;
+	--x-CheckTrigger-space-top: 0px;
+	//
+	--x-CheckTrigger-knob-h: calc(var(--x-CheckTrigger-w)*.5 - var(--x-CheckTrigger-space-top)*2);
+
+	display: flex;
+	align-items: center;
+
+
+	> ._che {
+		position: relative;
+		width: calc(var(--x-CheckTrigger-w));
+		height: calc(var(--x-CheckTrigger-h));
+
+		 
+		input {
+			width: 100%;
+			height: 100%;
+			min-height:auto;
+		}
+	}
+}

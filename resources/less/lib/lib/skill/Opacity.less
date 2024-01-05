@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+// .Op {opacity: .0;} // в cssMin
+
+body.Z2 .op,
+body.Z2 .opVersa {
+	pointer-events: none
+}
+
+
+body.Z2 .opVersa {
+	opacity: 1;
+}
+
+body.Z2 .op {
+	opacity: 0;
+}
+
+@media screen and (max-width:@w-menu-2) {
+	body.Z2 .op.op-PC {
+		opacity: 1;
+		pointer-events: all;
+	}
+}
+
+
+
+
+//
+body.Z2 .opVersa.-fastZ2,
+.op,
+.opVersa {
+	.transition(opacity, linear, .1s);
+}
+
+.op.-fast,
+.opVersa.-fast {
+	.transition(opacity, linear, .0s);
+}
+
+body .opVersa.-fastZ2 {
+	.transition(opacity, linear, .0s);
+}

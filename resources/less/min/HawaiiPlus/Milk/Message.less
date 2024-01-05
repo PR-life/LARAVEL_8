@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+.Message.x-fix,
+.Message.On {
+	position: fixed;
+	top:0;
+	bottom:0;
+	left: 0;
+	right:0;
+}
+
+@media screen and (max-width:@w-menu-2) {
+	.Message {
+		padding-bottom: 60px;
+	}
+
+	.Message.On {
+		.Rano {display: block;}
+	}
+}
+
+
+
+
+// .Message.screen {
+
+// 	._message {
+// 		position: absolute;
+// 		left: 2rem;
+// 		bottom: var(--x-Message-bottom);
+// 	}
+
+// 	._message.jolt {
+// 		.transform(0, var(--x-Message-jolt));
+// 	}
+
+// 	.Postcard {
+// 		background-color: #fff;
+// 		padding: 1rem;
+// 		border-radius: 1rem;
+
+// 		.Close {
+// 			top: -1rem;
+// 			right: -1rem;
+// 			pointer-events: none;
+// 		}
+// 	}
+
+// }
+
+
+
+// .Message.screen.ok {
+// 	top:0;
+// 	right: 0;
+// 	left: 0;
+
+// 	.Hook {
+// 		background-color: var(--bg-opacity);
+// 		.transition(background-color);
+// 	}
+
+// 	._message.jolt {
+// 		.transform(0, 0);
+// 		.transition(transform);
+// 		// transition-delay: 0.5s;
+// 	}
+
+// }

@@ -1,0 +1,62 @@
+@charset "UTF-8";
+
+.ellipsis {
+	max-width: 100%;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+.ellipsis.nowrap {
+	display: block;
+}
+ 
+
+.line-clamp(@line:1) {
+	display: -webkit-box;
+	-webkit-line-clamp: @line;
+	-webkit-box-orient: vertical;  
+}
+
+
+//
+
+
+.Ellipsis {
+	.ellipsis;
+	// .line-clamp;
+}
+
+.Ellipsis.var-1 {
+	.line-clamp(1);
+}
+
+.Ellipsis.var-2 {
+	.line-clamp(2);
+}
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.Ellipsis {
+		word-break: break-all;
+	}
+	// .Ellipsis.-normal {
+	// 	word-break: normal;
+	// }
+}
+
+@media screen and (max-width: @w-menu-2) {
+	
+	.nowrap_mbl {
+		white-space: nowrap;
+	}
+
+	.Ellipsis.-PC,
+	.Roll .Ellipsis {
+		display: block;
+	}
+
+	.Ellipsis.-mbl {
+		word-break: break-all;
+	}
+
+}

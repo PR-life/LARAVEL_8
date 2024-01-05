@@ -1,0 +1,111 @@
+@charset "UTF-8";
+
+// .text,
+// details {
+//     ul.-S >,
+//     ol.-S > {
+//         li {
+//             margin-bottom:1rem;
+//         }
+//     }
+//     ul.-XS >,
+//     ol.-XS > {
+//         li {
+//             margin-bottom:3px;
+//         }
+//     }
+// }
+
+// .text,
+// details {
+//     ul.-min >,
+//     ol.-min > {
+//         li {
+//             margin-bottom:0;
+//         }
+//     }
+
+// }
+
+
+////////
+
+ 
+.text,
+details {
+
+	ul, ol {
+		.Info {margin-top: calc(var(--font)*.5);}
+		ul.net,
+		ol.net {
+			padding-bottom: 0 !important;
+		}
+	}
+
+    ol > {
+
+        ul {
+            margin-top: calc(var(--void-ulol) * 1.25);
+            > li {
+                margin-top: var(--void-ulol);
+            }
+            > :first-child {
+                margin-top: 0;
+            }
+        }
+
+        li {
+            margin-bottom:calc(var(--void-ulol) * 2);
+            > ul:last-child {
+                padding-bottom:calc(var(--void-ulol) * 2);
+            }
+        }
+        li li {
+            margin-bottom: 0px;
+        }
+
+        // span {
+        //         margin-top: .5rem;
+        // }
+    }
+
+    ///
+
+    > ul > {
+
+        li {
+            margin-bottom:calc(var(--void-ulol) * 2);
+        }
+
+        > li {
+          > span {
+                margin-top: 0.5rem;
+          }
+        }
+
+        li li {
+            margin-bottom: 0.3rem; //4
+
+            span {
+                margin-top: 0.3rem;
+            }
+        }
+
+        ul {
+            margin-top: .6rem;
+        }
+    }
+
+
+    ul > :last-child {
+        margin-bottom: 0;
+    }
+
+}
+
+
+
+@media screen and (max-width:@w-menu-2) {
+
+}
+ 

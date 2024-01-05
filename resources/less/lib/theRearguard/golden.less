@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+body::before {
+	z-index: @indexGolden;
+	background-image: @imgGolden;
+	width: @GoldenW;
+    margin-left: calc(@GoldenW - @GoldenW*1.5);
+	//
+    position:fixed;
+    top: 0;
+    bottom: 0px;
+	left:50%;
+	pointer-events: none;
+	//
+	opacity: @opacityGolden;
+    background-size: 100% auto;
+    background-position: left top;
+	background-repeat: no-repeat;
+	//
+    transform: rotate(180deg);
+    background-position: center bottom;
+}
+
+
+@media screen and (max-width: @GoldenW) {
+	body::before {
+		left: 0%;
+		margin-left:0;
+		//
+		width:100%;
+	}
+}

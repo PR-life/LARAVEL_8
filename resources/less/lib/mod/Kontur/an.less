@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+#Kontur {
+	--x-kontur-jolt: 0px;
+}
+#checkKontur:checked~#Kontur {
+	--x-kontur-jolt: -2rem;
+}
+
+#Kontur {
+	.transform(0, var(--x-kontur-jolt));
+	.transition(transform, linear, .1s);
+}
+
+
+//
+
+#checkKontur:checked~.Hook {
+	right: 0;
+	opacity: 1;
+}
+
+
+#checkKontur:checked~#Kontur .Kontur {
+	opacity: 1;
+}
+
+.Kontur {
+	opacity: 0;
+	.transition(opacity);
+}

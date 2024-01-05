@@ -1,0 +1,141 @@
+@charset "UTF-8";
+
+@import "./details/_ol.less";
+
+
+/////
+
+
+details {
+    min-height: 3rem;
+	.transition(min-height);
+}
+
+details[open] {
+    min-height: 120px;
+    padding-bottom: 40px;
+}
+
+@media screen and (max-width: @w-menu-2) {
+    details[open] {
+        min-height: 80px;
+    }
+}
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+
+    .details-arrow-left_PC > details > summary {
+        padding-right: 0;
+    }
+    .details-arrow-left_PC > details > summary > i {
+        // position: relative;
+        right: auto;
+        left: calc(var(--x-details-margin-left)*.5);
+    }
+    .details-arrow-left_PC.transparent > details > summary > i {
+        left: calc(var(--x-details-margin-left)*.25);
+    }  
+}
+
+
+
+
+.details-arrow-left > details > summary {
+    padding-right: 0;
+}
+.details-arrow-left > details > summary > i {
+    // position: relative;
+    right: auto;
+    left: calc(var(--x-details-margin-left)*.5);
+}
+.details-arrow-left.transparent > details > summary > i {
+    left: calc(var(--x-details-margin-left)*.25);
+}
+
+details {
+    summary {
+        cursor: pointer;
+        position: relative;
+
+        ._ico {
+            // margin-left: -.5rem;
+            margin-right: .5rem;
+        }
+
+        > * {position: relative;z-index: 5;}
+
+        > ._i,
+        > i {position: absolute; top: calc(50% - 3.5px);}
+    }
+    > * {
+        opacity: 0;
+		  .transition(opacity,linear,.15s)
+    }
+
+    > summary {
+        opacity: 1
+    }
+
+}
+
+details[open] {
+    > * {
+        opacity: 1;
+    }
+
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+	details {
+		summary {
+            > ._i,
+			> i {right: .5rem;}
+		}
+	}
+}
+
+@media screen and (max-width: @w-menu-2) {
+	details {
+		summary {
+            > ._i,
+			> i {right: 1.5rem;}
+		}
+	}
+}
+/*
+
+
+
+
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+
+    details .Center {
+        max-width: 680px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-left: 4rem;
+        padding-right: 3rem;
+    }
+
+    details .Center {
+        ._h {padding-right: 1rem;}
+        ul {
+            padding-left: 0;
+        }
+    }
+
+
+
+}
+
+
+
+
+details[open] > summary em {
+  white-space:normal;
+  overflow:inherit;
+}
+
+/***/

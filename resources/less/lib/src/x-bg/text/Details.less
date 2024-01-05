@@ -1,0 +1,83 @@
+@charset "UTF-8";
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:1396px) {
+
+	.Details.-bg.-shiftLeftI > details > :last-child::after{
+		left: calc(var(--Edge) - var(--Edge)*1.5);
+		right: calc(var(--Edge) - var(--Edge)*1.5);
+	}
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+    .Details.-bg {
+        > details {
+            z-index: 5;
+            > :last-child::after {
+                content: '';
+                display: block;
+                position: absolute;
+                z-index: -1;
+                top:0;
+                left: 0;
+                right:0;
+                bottom:2px;
+                background-color: transparent;
+                .transition(background-color,linear,.1s)
+            }
+        }
+        > details[open] {
+            // > summary {
+            //     opacity: .5;
+            // }
+            > :last-child::after {
+                background-color: var(--bg-details);
+                .transition(background-color,linear,.1s);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: @w-menu-2) {
+    .Details.-bgMbl {
+        > details {
+            z-index: 5;
+            > :last-child::after {
+                content: '';
+                display: block;
+                position: absolute;
+                z-index: -1;
+                top:0;
+                left: 0;
+                right:0;
+                bottom:2px;
+                background-color: transparent;
+                .transition(background-color,linear,.1s)
+            }
+        }
+        > details[open] {
+            // > summary {
+            //     opacity: .5;
+            // }
+            > :last-child::after {
+                background-color: var(--bg-details);
+                .transition(background-color,linear,.1s);
+            }
+        }
+    }
+}
+
+summary {
+    background-color: var(--bg-summary);
+}
+
+details[open] > summary{
+	background-color: var(--bg-summary-open);
+}
+
+.Details.transparent > details >summary,
+summary.transparent {
+	background-color: transparent;
+}
+
+

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+
+
+	.Flaber {
+		display: flex;
+		flex-direction: column;
+		flex-wrap: nowrap;
+		justify-content: flex-end;
+		align-items: stretch;
+		align-content: stretch;
+		._flaber {
+			position: sticky;
+			bottom: 0;
+		}
+	}
+
+	.Flaber.-bC {
+		justify-content: space-between;
+	}
+
+
+	.Flaber.-h {
+		min-height: ~"calc(var(--h) - var(--h-Header)*3)";
+	}
+	
+	.Flaber.-min {
+		max-width: 1px;
+		padding-left: 1px;
+	}
+
+
+
+    // .Flaber {
+    //     position: sticky;
+    //     bottom:0;
+    // }
+
+
+}
+
+
+
+
+/**/

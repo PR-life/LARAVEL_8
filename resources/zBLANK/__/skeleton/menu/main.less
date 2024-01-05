@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+
+
+@media (min-width: @w-beyond-plus) and (max-width: @w-max) {
+	#menuMain .Mid_Bey.x-menuMain > .Abs {
+		left: calc(var(--Logo) + var(--Header-rem));
+	}
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-beyond) {
+	#menuMain .Mid_Bey.x-menuMain > .Abs {
+		left: 0;
+	}
+
+	.FixMenu.-pad .Hamburger {
+		--x-Hamburger-shift:7px;
+		--x-Hamburger-height:2px;
+	}
+
+}
+
+
+@media (min-width:@w-beyond-plus) and (max-width: @w-max) {
+
+	#menuMain .Mid_Bey.x-menuMain > .Abs {
+		top: 0;
+	}
+}
+
+
+@media (min-width:@w-menu-2-plus) and (max-width: @w-beyond) {
+
+	#menuMain .Mid_Bey.x-menuMain > .Abs {
+		padding-top: var(--h-Header);
+		
+		height: calc(var(--h) + 2rem)
+	}
+}
+
+//
+@media screen and (max-width: @w-beyond) {
+	.menu.-main .x-1 {display: block;}
+}

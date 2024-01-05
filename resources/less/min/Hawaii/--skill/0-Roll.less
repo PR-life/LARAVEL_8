@@ -1,0 +1,216 @@
+@charset "UTF-8";
+
+.ky-scrollBar {background-color: red;}
+
+.ky-scrollBar,
+.Roll_PC.-scrollBar,
+.Roll_80.-scrollBar,
+.Roll_mbl.-scrollBar {
+	overflow: -moz-scrollBars-none;
+	scrollbar-width: none;
+	scroll-behavior: smooth;
+	scroll-snap-type: x proximity;
+}
+.ky-scrollBar::-webkit-scrollBar,
+.Roll_PC.-scrollBar::-webkit-scrollBar,
+.Roll_80.-scrollBar::-webkit-scrollBar,
+.Roll_mbl.-scrollBar::-webkit-scrollBar {
+	width: 0;
+}
+
+@media screen and (max-width:@w-menu-2) {
+
+	.Roll_PC.-scrollBarPC,
+	.Roll_80.-scrollBarPC,
+	.Roll_mbl.-scrollBarPC {
+		overflow: -moz-scrollBars-none;
+		scrollbar-width: none;
+		scroll-behavior: smooth;
+		scroll-snap-type: x proximity;
+	}
+
+	.Roll_PC.-scrollBarPC::-webkit-scrollBar,
+	.Roll_80.-scrollBarPC::-webkit-scrollBar,
+	.Roll_mbl.-scrollBarPC::-webkit-scrollBar {
+		width: 0;
+	}
+
+}
+
+//
+
+// .Grid.Roll_mbl {
+// 	display: flex;
+// }
+
+.ROLL {
+	overflow-x: auto;
+	-webkit-overflow-scrolling: touch;
+	//
+	display: flex;
+	align-items: flex-start;
+	flex-wrap:nowrap !important;
+    overflow-y: hidden;
+
+    > * {
+        order: 5;
+        //
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+    }
+	> .first {
+		order: 2;
+	}
+
+	._roll {
+		display: flex;
+		align-items: flex-start;
+		flex-wrap: nowrap !important;
+	}
+
+
+    ._roll > * {
+        order: 5;
+        //
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+        margin-left: 0 !important;
+    }
+	._roll > .first {
+		order: 2;
+	}
+
+
+
+	.Preamble *,
+	.content,
+	._text,
+	._h,
+	li a,
+	figcaption,
+	dl,
+	p {
+		white-space: normal;
+	}
+	.nowrap,
+	.nowrap_mbl {
+		white-space: nowrap;
+	}	
+}
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+    .Roll_PC {
+		.ROLL;
+	}
+
+    .Roll_PC.-space {
+        padding-top:2rem;
+        padding-bottom:2rem;
+    }
+	
+	.Roll_PC.-edge,
+	.Roll_PC.-edgePC {
+		padding-left: var(--Edge);
+	}
+
+	// .Roll-edgeSPC,
+	.Roll_PC.-edgeS,
+	.Roll_PC.-edgeSPC {
+		padding-left: calc(var(--Edge)*.5);
+	}
+    // .Roll_PC > .Teaser{
+	// 	min-width: var(--w-min);
+	// }
+	
+}
+
+@media screen and (max-width:@metrika-80) {
+    .Roll_80 {
+		.ROLL;
+	}
+
+    .Roll_80.-space {
+        padding-top:2rem;
+        padding-bottom:2rem;
+    }
+    .Roll_80.-edge {
+        padding-left: calc(var(--Edge) - 1rem)
+    }	
+}
+
+
+@media screen and (max-width:@w-menu-2) {
+
+	.Roll_mbl.menu,
+	.Roll_mbl.Tool {
+		padding-left: calc(var(--edge) * .75);
+	}
+
+	.Roll_mbl.-edge,
+	.Roll_mbl.-edgeMbl {
+		padding-left: calc(var(--edge) * .5);
+	}
+
+
+	.Roll_mbl.-edgeM,
+	.Roll_mbl.-edgeMMbl {
+		padding-left: var(--edge);
+	}
+
+	//
+
+    .Roll_mbl.-spaceM {
+        padding-top:2rem;
+        padding-bottom:2rem;
+    }
+
+    .Roll_mbl.-space {
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
+
+	.Roll_mbl.-spaceBottom {
+        padding-bottom:3rem;
+    }
+	.Roll_mbl.-spaceTop {
+        padding-top:3rem;
+    }
+	.Roll_mbl.-spaceTopM {
+        padding-top:5rem;
+    }
+	///
+
+    // .Roll_mbl > .Teaser{
+	// 	min-width: var(--w-min);
+	// }
+
+    .Roll_mbl {
+		.ROLL;
+	}
+
+	.Roll_mbl.-h100 {
+		align-items:  stretch;
+	}
+
+	.Roll_mbl.cI {
+		align-items: center;
+	}
+
+
+	.Roll_mbl.-cross {
+		> * {margin-right: 2rem;}
+	}
+
+	.Roll_mbl {
+		--x-cross:1rem;
+
+		.menu.-tag > * {
+			margin-left: 0;
+
+			background-color: red;
+		}
+	}
+
+}

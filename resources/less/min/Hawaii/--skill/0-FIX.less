@@ -1,0 +1,159 @@
+@charset "UTF-8";
+
+#Milk > .Fix.On,
+#Milk > .Fix.on {
+	top: 0;
+	left: calc( var(--x-milk-left) + var(--Aside-space) * 2.5 );
+	// left: var(--x-milk-left);
+}
+
+#Milk {
+	--x-milk-left: var(--Aside);
+}
+
+// body {opacity: .5;}
+
+
+.FIX.on {
+
+
+	.edgeFix {
+		padding-left: calc(var(--FIX-edge)*1);
+		padding-right: calc(var(--FIX-edge)*.5);
+	}
+
+	> * {
+		position: relative;
+		z-index: 0;
+	}
+	>.fix {
+		position: fixed !important;
+		top: 0 !important;
+		right: 0 !important;
+		left: 0 !important;
+		bottom: 0px !important;
+		margin: 0 !important;
+		z-index: 5;
+		//
+		display: flex;
+		// justify-content: center;
+
+
+		> ._fix {
+			position: relative;
+			width: 100%;
+			// padding-bottom: 0;
+		}
+
+		> ._fix.-maxW {
+			max-width: calc(var(--Pente) - 2rem);
+		}
+
+
+		//
+		._fix.-ghost {
+			pointer-events: none;
+			> * {
+				pointer-events: all;
+			}
+		}
+
+	}
+
+}
+
+
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+
+	.FIX {
+		--FIX-edge:2rem;
+	}
+
+	// body.fix .owl-edge 
+	body.fix {
+		padding-right: 17px;
+	}
+
+	.FIX.on > .fix.-edge {
+		padding-left: calc(var(--edge)*.5);
+		padding-right: calc(var(--edge)*.5);
+	}
+
+	// .FIX.on > .fix {
+	// 	justify-content: center;
+	// 	// align-items: center;
+	// }
+
+	// .FIX.on > .fix.lvl-2 {
+	// 	padding-top: var(--h-Top);
+	// }
+
+}
+
+
+
+
+@media screen and (max-width: @w-menu-2) {
+
+	.FIX {
+		--FIX-edge:1rem;
+	}
+
+	// .FIX.on > .fix {
+	// 	justify-content: center;
+	// 	align-items: flex-end;
+	// }
+	// .FIX.on > .fix.-cI_mbl {
+	// 	align-items: center;
+	// 	> ._fix {
+	// 		padding-bottom:0;
+	// 	}
+	// }
+
+	// .FIX.on > .fix.-spaceBottom {
+	// 	padding-bottom: 70px;
+	// }
+
+
+	.FIX.on .fix.-spaceTopMbl {
+		padding-top: var(--h-Header);
+	}
+
+	.FIX.on ._fix {
+		padding-bottom: 70px;
+	}
+
+
+	// .Fix.Bee,
+	.FIX_mbl {
+		position: fixed;
+	}
+
+	.FIX_mbl.-t {
+		top: 0;
+	}
+
+	.FIX_mbl.-l {
+		left: 0;
+	}
+
+	.FIX_mbl.-r {
+		right: 0;
+	}
+
+
+	.fix-H_mbl {
+		// min-height: 400px;
+		min-height: calc(var(--h) * .75);
+	}
+
+	// .Fix.Bee {
+	// 	left: 0;
+	// 	right: 0;
+	// 	top: 0;
+	// 	position: fixed;
+	// }
+
+}

@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+.Shift {
+	--x-Shift:0;
+}
+
+
+@media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
+
+	.Shift.-step{
+		--x-Shift:-1rem;
+	}
+
+	.Shift.-stepS{
+		--x-Shift:-.5rem;
+	}
+	.Shift.-stepXS{
+		--x-Shift:-.25rem;
+	}
+	.Shift.-stepScroll{
+		--x-Shift:13px;
+	}
+}
+
+
+@media screen and (max-width:@w-menu-2) {
+	.Shift.-step.-mbl{
+		--x-Shift:-.75rem;
+	}
+
+	.Shift.-stepS.-mbl{
+		--x-Shift:-.4rem;
+	}
+	.Shift.-stepXS.-mbl.-mbl{
+		--x-Shift:-.2rem;
+	}
+}
+
+
+//
+
+.Shift.-stepScroll.shift-space {
+	padding-right: calc(var(--x-Shift)*.75);
+}
+
+
+//
+
+.Shift.-left {
+	transform: translateX(var(--x-Shift));
+}
+
+.Shift.-marginLeft {
+	margin-left: var(--x-Shift);
+}
+
+.Shift.-top {
+	transform: translateY(var(--x-Shift));
+}

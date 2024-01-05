@@ -1,0 +1,127 @@
+@charset "UTF-8";
+
+.H-100 {height: 100%;}
+.HMax {max-height: var(--FIX-height);}
+// .HMin {min-height: calc(var(--Wagon-h) - 100px);}
+.HMinVar {min-height: calc(var(--h));}
+.HMinScroll {min-height: calc(var(--h) + var(--h-Header) + 4px)}
+.HMinMax {min-height: calc(var(--h) - var(--h-head));}
+.HMin-70 {min-height: calc(var(--h) * .7);}
+.HMin-50 {min-height: calc(var(--h) * .5);}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+    
+	.H-100_PC {height: 100%;}
+    .HMinVar_PC {min-height: calc(var(--h));}
+
+    .HMinMax_PC {min-height: calc(var(--h) - var(--h-head));}
+    .HMin-70_PC {min-height: calc(var(--h) * .7);}
+    .HMin-50_PC {min-height: calc(var(--h) * .5);}
+
+
+    .Pop ._pop {
+        min-height: 200px;
+        padding-bottom: 60px;
+    }
+    
+
+}
+
+
+@media screen and (max-width:@w-menu-2) {
+	.HMax_mbl {max-height: var(--FIX-height);}
+
+
+    .Pop ._pop {
+        min-height: 300px;
+    }
+
+
+    .Hgr_mbl.-V.-wagon {
+        min-height: clamp(140px,calc(var(--h)*.32),200px)
+    }
+}
+
+
+
+
+//
+.hill {
+	min-height: var(--hill);
+}
+
+.hill-xs {
+	min-height: var(--hill-xs);
+}
+
+.hill-s {
+	min-height: var(--hill-s);
+}
+
+.hill-m {
+	min-height: var(--hill-m);
+}
+
+.hill-l {
+	min-height: var(--hill-l);
+}
+
+@media screen and (max-width:@w-menu-2) {
+	.hill_mbl {
+		min-height: var(--hill);
+	}
+	.hill_mblS {
+		min-height: var(--hill-s);
+	}
+	.hill_mblM {
+		min-height: var(--hill-m);
+	}
+}
+
+//
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+
+    .Plot.-M {
+        --x-Plot:150px;
+    }
+    .Plot.-S {
+        --x-Plot:260px;
+    }
+    // .Plot.-XS {
+    //     --x-Plot:260px;
+    // }
+
+
+    .Plot {
+        --x-Plot:0px;
+        //
+        height:calc(var(--h) - var(--h-Top) - var(--h-Header) - var(--x-Plot));
+        max-height:1260px;
+        min-height: 560px;
+    }
+
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width:@metrika-80) {
+    .Plot {
+        max-height:700px;
+    }
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width:1080px) {
+    .Plot {
+        max-height:600px;
+    }
+}
+
+
+@media screen and (max-width:@w-menu-2) {
+    .Plot.-mbl {
+        --x-Plot:0px;
+        //
+        height:~"calc(var(--h) - var(--h-Top) - var(--h-Header) - var(--x-Plot))";
+        max-height:740px;
+        min-height: 360px;
+    }
+}
+ 

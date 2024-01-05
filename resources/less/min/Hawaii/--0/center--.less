@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+
+.Font.center > *{
+	text-align: center;
+}
+
+
+.center-text {
+    text-align: center;
+	.menu.-tag > :first-child {
+		margin-left: var(--x-menu-margin-li);
+	}
+	.menu.-tag.Kite > :first-child {
+		margin-left: 0;
+	}
+}
+
+input.center-text {
+	padding-left: 0 !important;
+	padding-right: 0 !important;
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+	.center-text_PC {
+		text-align: center;
+	}
+}
+
+@media screen and (max-width:@w-menu-2) {
+	.center-text_mbl {
+		text-align: center;
+	}
+}

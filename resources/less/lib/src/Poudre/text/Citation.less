@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+.Citation {
+    > .content {
+        position: relative;
+    }
+
+    > .content::after {
+        content: '';
+        position: absolute;
+		top: 10px;
+		left: -1px;
+
+		//
+        width: 6px;
+        height: 6px;
+		background-color: var(--c-Citation-border-tail);
+		border: 2px solid var(--c-Citation-border);
+		border-top: none;
+		border-right: none;
+
+
+        -webkit-transform: rotate(45deg);
+        transform: rotate(45deg);
+        -webkit-transform-origin: top left;
+        transform-origin: top left;
+
+    }
+
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.Citation.-mblPC {
+		> .content::after {display: none;}
+	}
+}
+
+
+@media screen and (max-width: @w-menu-2) {
+	.Citation.-mbl {
+		> .content::after {display: none;}
+	} 
+}

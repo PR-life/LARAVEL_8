@@ -1,0 +1,112 @@
+@charset "UTF-8";
+
+@Rearguard-WrapBefore: 1578px;
+@Rearguard-WrapBefore-plus: 1579px;
+@Rearguard-WrapAfter: 1168px;
+@Rearguard-WrapAfter-plus: 1169px;
+
+
+// body {
+// 	background-attachment: fixed;
+// 	background-position: center top;
+// 	background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iNDAiIGhlaWdodD0iNDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PHBhdHRlcm4gaWQ9ImdyaWQiIHdpZHRoPSI0MCIgaGVpZ2h0PSI0MCIgcGF0dGVyblVuaXRzPSJ1c2VyU3BhY2VPblVzZSI+PHBhdGggZD0iTSAwIDEwIEwgNDAgMTAgTSAxMCAwIEwgMTAgNDAgTSAwIDIwIEwgNDAgMjAgTSAyMCAwIEwgMjAgNDAgTSAwIDMwIEwgNDAgMzAgTSAzMCAwIEwgMzAgNDAiIGZpbGw9Im5vbmUiIHN0cm9rZT0iI2QwZDBkMCIgb3BhY2l0eT0iMC4yIiBzdHJva2Utd2lkdGg9IjEiLz48cGF0aCBkPSJNIDQwIDAgTCAwIDAgMCA0MCIgZmlsbD0ibm9uZSIgc3Ryb2tlPSIjZDBkMGQwIiBzdHJva2Utd2lkdGg9IjEiLz48L3BhdHRlcm4+PC9kZWZzPjxyZWN0IHdpZHRoPSIxMDAlIiBoZWlnaHQ9IjEwMCUiIGZpbGw9InVybCgjZ3JpZCkiLz48L3N2Zz4=");
+// }
+
+
+#Wrap {
+	--Rearguard-WrapBefore: ~"calc(var(--Box))";
+	--Rearguard-WrapAfter: ~"calc(var(--Pente) + 48px)";
+}
+
+
+#Wrap::before,
+#Wrap::after {
+	position: absolute;
+	top: -200px;
+	bottom: 0;
+	z-index:@indexGrid;
+	//
+	background-repeat: repeat-y;
+	background-position-y: top;
+	//
+	opacity: @opacityGrid;
+	//
+	pointer-events: none;
+}
+
+#Wrap::before {
+	background-image: @imgZebra-60;
+	//
+	width: 100%;
+}
+
+#Wrap::after {
+	background-image: @imgZebra-168;
+	background-position-x: left;
+	//
+	width: 100%;
+}
+
+
+
+@media (min-width:@Rearguard-WrapBefore-plus) and (max-width:@w-max) {
+
+	#Wrap::before {
+		left: 50%;
+		//
+		width: var(--Rearguard-WrapBefore);
+		margin-left: ~"calc(var(--Rearguard-WrapBefore) - var(--Rearguard-WrapBefore)*1.5)";
+		//
+		background-position-x: -20px;
+	}
+
+}
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@Rearguard-WrapBefore) {
+	#Wrap::before {
+		background-position-x: left;
+	}
+}
+
+@media screen and (max-width:480px) {
+	#Wrap::before {display: none;}
+}
+
+
+
+///
+
+@media (min-width:@Rearguard-WrapAfter-plus) and (max-width:@w-max) {
+
+	#Wrap::after {
+		left: 50%;
+		//
+		width: var(--Rearguard-WrapAfter);
+		margin-left: ~"calc(var(--Rearguard-WrapAfter) - var(--Rearguard-WrapAfter)*1.5)";
+	}
+
+}
+@media screen and (max-width:@Rearguard-WrapAfter) {
+	#Wrap::after {display: none;}
+}
+
+
+
+
+/*
+ 
+
+
+@media screen and (max-width:@w-menu-2) {
+
+    #Wrap::after,
+    #Wrap::before {
+        display: none;
+    }
+
+}
+
+
+
+/***/

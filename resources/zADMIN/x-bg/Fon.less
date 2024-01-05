@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+@x-color-0205:rgba(133, 168, 255, 0.15);
+@x-color-0306:rgba(133, 168, 255, 0.1);
+@x-color-0205-h:334px;
+@x-color-0306-h:500px;
+
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	#Fon {
+		// --gradient-height: 334px;
+		// --nv-aside-header-background-color: rgba(133, 168, 255, 0.15);
+
+		//
+		background: var(--bg);
+	}
+
+	#Fon::before {
+		content: '';
+		position: absolute;
+		left: 0;
+		top: 0;
+		width: var(--Aside);
+		height: 100%;
+		background: linear-gradient(180deg, @x-color-0205 calc(@x-color-0205-h*0.33), transparent calc(@x-color-0205-h*0.88));
+		// background: linear-gradient(180deg, @x-color-0205 calc(@x-color-0205-h*0.33), transparent calc(@x-color-0205-h*0.88));
+	}
+
+
+	// .x-24051434,
+	#Tools {
+		background: linear-gradient(170deg,@x-color-0306 calc(@x-color-0306-h*0.33), transparent calc(@x-color-0306-h*0.88));
+		
+	}
+
+}
+
+// @media (min-width: @w-beyond-plus) and (max-width: @w-max) {
+// 	#Fon {
+// 		height: calc(var(--h-Header) + var(--h-Top));
+// 	}
+// }
+
+// @media (min-width: @w-menu-2-plus) and (max-width: @w-beyond) {
+// 	#Fon {
+// 		height: calc(var(--h-Header));
+// 	}
+// }
+
+
+// @media screen and (max-width: @w-menu-2) {
+// 	#Fon {
+// 		right: 0;
+// 		height: calc(var(--h-Header));
+// 		background: var(--bg-2);
+// 		border-bottom:1px solid @c-border;
+// 	}
+// }

@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.Message {
+	--Message-bg:#fff;
+	--Message-bg-wrap:#fff;
+	--Message-c-status:@green;
+
+	.Sms {
+		background: var(--Message-bg);
+		border-bottom:2px solid var(--Message-c-status);
+
+		._wrap {
+			background: var(--Message-bg-wrap);
+		}
+	}
+}
+
+.Message.-error {
+	--Message-c-status:@red;
+}
+
+.Message.-error {
+	// .Sms.Success > ._wrap {
+	// 	border-bottom:2px solid @green;
+	// }
+
+	// .Sms.-blue {
+	// 	background-color:#5c9ce6;
+	// 	border:1px solid #5c9ce6;
+	// 	* {color: #fff;}
+	// }
+}
+
+ 

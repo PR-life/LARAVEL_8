@@ -1,0 +1,13 @@
+<div class="A / {{$css ?? ''}}" data-click data-css data-toggle='On'>
+	<div class="_wrap -tail / relative">
+		<div class="content / Void / {{$cssLineClamp ?? 'lineClamp var-2 owl-lineClamp'}}">
+			<p>
+				{{strip_tags($Var->answer, ['a','br'])}}
+			</p>
+		</div>
+		<div class="Abs tail">@svg('tail')</div>
+	</div>
+	<div class="Preamble -row -S / right">
+		<div class="content-s Grey">{{$Var->answer_user_name ?? 'по умолчанию'}}</div>
+	</div>
+</div>

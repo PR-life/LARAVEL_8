@@ -1,0 +1,44 @@
+@charset "UTF-8";
+
+.Ava.-L {
+	--x-Ava: calc(var(--Ava) * 2);
+}
+
+.Ava.-M {
+	--x-Ava: calc(var(--Ava) * 1.5);
+}
+
+.Ava.-S {
+	--x-Ava: calc(var(--Ava) * .75);
+}
+
+.Ava.-XS {
+	--x-Ava: calc(var(--Ava) * .5);
+}
+
+
+.Ava {
+	--x-Ava: var(--Ava);
+}
+
+
+//
+.Ava {
+	min-width: var(--x-Ava);
+	width: var(--x-Ava);
+	height: var(--x-Ava);
+	// min-width: var(--Ava);
+	// min-height: var(--Ava);
+	// border-radius: 50%;
+	// overflow: hidden;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	img {
+		// border-radius: 50%;
+		max-width: 100%;
+		max-height: 100%;
+	}
+}
+

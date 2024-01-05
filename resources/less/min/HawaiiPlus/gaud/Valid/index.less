@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+.Valid {
+	--Valid-bg-ok:#dfd;
+	--Valid-bg-not:#dc3545;
+	//
+	background-repeat: no-repeat;
+	background-position: center;
+}
+
+
+
+form ._shell .Valid {
+	left: 100%;
+	top: 0;
+}
+
+input:valid~.Valid,
+input:invalid~.Valid {
+	display: flex !important;
+	width: var(--Ico);
+	height: var(--Ico);
+}
+
+
+input.-invalid {
+	--c-input-border: @red;
+}
+// input:valid~.Valid {
+// 	background-color: var(--Valid-bg-ok);
+// }
+// input:invalid~.Valid {
+// 	background-color: var(--Valid-bg-not);
+// }

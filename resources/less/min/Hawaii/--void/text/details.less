@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+.Details.slim > details > :nth-child(2) {
+     margin-top: 1rem;
+}
+
+.Details.slim.transparent > details > :nth-child(2) {
+     margin-top: 0rem;
+}
+
+///
+
+.Details > details {margin-bottom: 2px;}
+// .Details > details:last-child {margin-bottom: 0;}
+
+
+details {
+    margin-bottom: 2px;
+
+     > * {
+        margin-bottom: 2rem;
+        margin-top: 2rem;
+    }
+
+    > details {
+        margin-top: 2px;
+        margin-bottom: 2px;
+    }
+
+    > .net,
+    > summary {
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+
+    //  > ol.Net {
+    //      margin-top: 0;
+    //  }
+
+    > table:nth-child(2) {
+        margin-top: 0;
+    }
+
+
+    > .Roll,
+    > .bg,
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+}

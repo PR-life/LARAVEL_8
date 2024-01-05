@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+.Info {
+	--x-Info-void: 0px;
+}
+
+
+// .Info.-ico.--icoS {
+// 	--x-Info-void:: ~"calc(var(--font)*.75)";
+// }
+
+
+.Info.-space {
+	--x-Info-void: ~"calc(var(--font))";
+}
+
+
+.Info {
+    > * {
+        margin-left: 0 !important;
+    }
+    > :last-child {
+        margin-bottom: 0;
+    }
+
+    > strong {
+        display: block;
+        padding-bottom: .5rem;
+    }
+
+}
+
+.Info.-space {
+	padding: var(--x-Info-void);
+}
+
+
+
+
+.Info.ico-left {
+	padding-left: ~"calc(var(--font)*3)";
+}
+
+.Info.ico-left.ico-s {
+	padding-left: ~"calc(var(--font)*2.2)";
+}
+
+
+
+.Info.-ico.ico-left.ico-out {
+	padding-left: 0;
+}
+
+.Info.-ico.ico-center {
+	padding-left: 0;
+}
+
+.Info.-ico.ico-center.-space {
+	padding-left: var(--x-Info-void);
+}
+
+.Info.-center {
+	text-align: center;
+}
+
+
+.Info.-ico.ico-left.ico-out {
+	padding-left: 0;
+}

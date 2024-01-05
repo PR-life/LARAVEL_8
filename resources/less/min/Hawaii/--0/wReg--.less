@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+	.Reg{
+		--x-Reg-S: 268px;
+		--x-Reg-L: var(--Blog);
+
+		
+		._S.Plus {
+			--x-Reg-S: calc(268px + 80px);
+		}
+	}
+
+}
+
+@media (min-width:@metrika-70-plus) and (max-width:@w-max) {
+	.Reg {
+		--x-Reg-M: 36rem;
+	}
+}
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@metrika-70) {
+	.Reg {
+		--x-Reg-M: 28rem;
+	}
+}
+
+
+// @media screen and (max-width:@metrika-80 + 100px + 16px) {
+// 	.Reg.-m80 {
+// 		--x-Reg-M: 100%;
+// 		--x-Reg-M: 100%;
+// 	}
+// }
+
+@media screen and (max-width:@metrika-80) {
+	.Reg.-m80 {
+		--x-Reg-S: 100%;
+		--x-Reg-L: 100%;
+	}
+}
+
+@media screen and (max-width:@w-beyond) {
+	.Reg.-beyond {
+		--x-Reg-S: 100%;
+		--x-Reg-L: 100%;
+	}
+}
+
+
+
+
+
+
+
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+	.Reg{
+
+		>._S {
+			width: var(--x-Reg-S);
+		}
+
+		>._L {
+			width: var(--x-Reg-L);
+			min-width: var(--x-Reg-L);
+		}
+
+		> ._M {
+			width: var(--x-Reg-M);
+			min-width: var(--x-Reg-M);
+		}
+
+		> ._S {
+			width: var(--x-Reg-S);
+			min-width: var(--x-Reg-S);
+		}
+
+		>._L,
+		>._M,
+		> ._S {
+			max-width: 100%;
+		}
+
+
+	}
+
+}
+
+
+ 

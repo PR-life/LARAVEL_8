@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+// .Btn.-lite {
+// 	--c-btn: rgba(0,0,0,0.85);
+// 	--c-btn-hover: rgba(0, 0, 0, 0.85);
+// }
+
+//
+// button,
+// label.Btn,
+// div.Btn a,
+// div.Btn a:visited,
+
+.-Btn,
+a.Btn:visited,
+.Btn {
+	--c-text:var(--c-btn);
+	* {
+		color:inherit !important;
+	}
+}
+
+// label.Btn:hover,
+// a.Btn:hover,
+.-Btn.-active,
+.-Btn:hover,
+a.Btn:visited:hover,
+.Btn:hover {
+	color: var(--c-btn-hover);
+}

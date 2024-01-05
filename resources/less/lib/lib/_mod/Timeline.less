@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+
+.Timeline {
+
+	// ._in.first > ._label {
+	// 	transform: translateX(0%);
+	// }
+
+
+	//
+	._in {
+		position: relative;
+		width: var(--percentage);
+		min-width: 80px;
+		// flex: 0 0 var(--percentage);
+		// z-index: var(--index); !!!!!!!!!!!!!!!!!!!!
+	}
+
+	._label {
+		display: inline-block;
+		// transform: translateX(-50%);
+		padding: 12px 20px;
+		color: #717a7b;
+		background-color: rgb(238, 238, 238);
+		border-radius: 42px;
+		filter: drop-shadow(1px 0 4px rgba(0,0,0,.07));
+	}
+
+	.active:hover > ._label,
+	.active > ._label{
+		background-color: #002e33;
+		color: #fff;
+		z-index: 1;
+	}
+
+}
+
+

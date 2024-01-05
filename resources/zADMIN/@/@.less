@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+@h-Top: 41px;
+@h-Header: 77px;
+//
+@w-Logo: 280px;
+//
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	#body,
+	.body {
+		--h-Top:@h-Top;
+		--h-Header: @h-Header;
+		// --h-logo:61px;
+		--h-menuMain:@h-Header;
+		// --h-plitka:140px;
+		// --h-th:42px;
+		// --h-td:42px;
+		// //
+		// --space:6rem;
+		// --Bee:40px;
+	}
+}
+
+
+@media screen and (max-width: @w-menu-2) {
+
+	// #body,
+	// .body {
+    //     --h-Header: 50px;
+    // }
+}

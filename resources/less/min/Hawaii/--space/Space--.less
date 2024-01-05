@@ -1,0 +1,166 @@
+@charset "UTF-8";
+
+.Space.-v {
+	padding-top: clamp(var(--space), 15vmax, 15rem);
+	padding-bottom: clamp(var(--space), 15vmax, 15rem);
+}
+// .Space.-v {
+// 	padding-top: clamp(2rem, 15vmax, 15rem);
+// 	padding-bottom: clamp(2rem, 15vmax, 15rem);
+// }
+
+
+
+
+//
+@media (min-width:@w-beyond-plus) and (max-width:@w-max) {
+	.Blog {
+		.Teaser.space {
+			padding: 2rem 0;
+		}
+	}
+}
+
+@media screen and (max-width: @w-menu-2) {
+	.Blog {
+		.Teaser.space {
+			padding: 2rem 0;
+		}
+	}
+}
+
+.space-xs {
+	padding: calc(var(--void)*.25);
+}
+
+.space-s {
+	padding: calc(var(--void)*.5);
+}
+
+.space-m {
+	padding: calc(var(--void)*1.5);
+}
+
+.space-l {
+	padding: calc(var(--void)*2);
+}
+
+.space-xl {
+	padding: calc(var(--void)*3);
+}
+
+
+.space {
+	padding: var(--void);
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+	.space-l_PC {
+		padding: calc(var(--void)*2);
+	}
+	.space-m_PC {
+		padding: calc(var(--void)*1.5);
+	}
+	
+}
+
+@media screen and (max-width: @w-menu-2) {
+	.spacePC {
+		padding:0;
+	}
+}
+
+
+
+
+// @media screen and (max-width: @w-menu-2) {
+// 	.space_PC {
+// 		--space:0;
+// 	}
+// }
+//
+
+.space-hL {
+	padding-top: calc(var(--void)*2);
+	padding-bottom: calc(var(--void)*2);
+}
+.space-hM {
+	padding-top: calc(var(--void)*1.5);
+	padding-bottom: calc(var(--void)*1.5);
+}
+.space-h {
+	padding-top: var(--void);
+	padding-bottom: var(--void);
+}
+
+//
+.space-top {
+	padding-top: var(--void);
+}
+
+.space-topX2 {
+	padding-top: calc(var(--void)*2);
+}
+
+.space-bottom {
+	padding-bottom: var(--void);
+}
+
+.space-bottomX2 {
+	padding-bottom: calc(var(--void)*2);
+}
+
+.space-left {
+	padding-left: var(--void);
+}
+
+.space-leftS {
+	padding-left: calc(var(--void)*.5);
+}
+
+.space-leftM {
+	padding-left: calc(var(--void)*1.5);
+}
+.space-rightM {
+	padding-right: calc(var(--void)*1.5);
+}
+
+.space-leftL {
+	padding-left: calc(var(--void)*3);
+}
+
+.space-rightL {
+	padding-right: calc(var(--void)*3);
+}
+
+// .space-leftValid {
+// 	padding-left: calc(var(--void)*2);
+// }
+
+
+.space-topM {
+	padding-top: calc(var(--void)*1.5);
+}
+
+.space-right {
+	padding-right: var(--void);
+}
+
+.space-rightS {
+	padding-right: calc(var(--void)*.5);
+}
+
+.space-rightIco {
+	padding-right: calc(var(--Ico)*1.25);
+}
+
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+	.space-right_PC {
+		padding-right: var(--void);
+	}
+
+	.space-leftM_PC {
+		padding-left: calc(var(--void)*1.5);
+	}
+}

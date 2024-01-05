@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.FixMenu.-pad {
+	top:0;
+	left: calc(var(--Edge)*.5 - var(--Ico)*1.25*.5);
+
+	> ._h {
+		height: var(--h-Header);
+	}
+}
+
+
+
+ 
+
+.FixMenu.-mbl {
+	--x-FixMenu-h:@h-menuFix; // 62px
+	position: sticky;
+	bottom: -6px;
+	// top: 1800px;
+	top: 500px;
+	padding-bottom: 6px;
+	._ico {
+		height: var(--x-FixMenu-h);
+		width: 60px;
+		a, span {
+			font-size: var(--font-min);
+			line-height: var(--font-min);
+		}
+	}
+	.menu.-fix {
+		margin:0 auto;
+		max-width: @w-mobile;		
+		padding: 0 .5rem;
+	}
+}
+
+
+

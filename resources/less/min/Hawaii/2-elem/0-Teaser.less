@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+.teaser.vol-QA {
+    --x-vol-QA-padding:2rem;
+
+    ._close {
+        .content {
+            padding-bottom: var(--x-vol-QA-padding);
+        }
+    }
+
+    .A ._wrap {
+        padding-left: 1rem;
+    }
+}
+
+@media (min-width:@metrika-80-plus) and (max-width: @w-max) {
+    .Talk .teaser.vol-QA {
+        --x-vol-QA-padding:1rem;
+    }
+}
+

@@ -1,0 +1,36 @@
+@charset "UTF-8";
+
+.Roll table {
+    tr > :last-child {
+        display: none;
+    }
+}
+
+
+@media screen and (max-width:@w-menu-2) {
+
+    .Roll.-table {
+        padding-left:0rem;
+    }
+
+
+    .Roll {
+        table {
+            margin: 0 !important;
+        }
+
+        table {
+            tr > :first-child {
+                max-width: ~"calc(var(--w) * .7)";
+					 padding-left: var(--edge);
+					 padding-right: 2rem;
+            }
+            tr > :last-child {
+                display: table-cell;
+                //
+                padding-right: 80px;
+            }
+        }
+    }
+
+}

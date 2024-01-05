@@ -1,0 +1,132 @@
+@charset "UTF-8";
+
+.D-Adham {
+    --bg:#485ccc;
+    --bg-Aside_2:#485ccc;
+    --bg-oiBar:rgba(33, 33, 33,1);
+    --bg-oiBar-alfa:rgba(33, 33, 33,.8);
+    //
+    //
+    
+    --x-Adham-grid-color: rgba(255,255,255,.05);
+    --x-Adham-bg:rgba(72,92,204,1);
+    --x-Adham-bg-9:rgba(72,92,204,.9);
+    --x-Adham-bg-7:rgba(72,92,204,.7);
+    // --x-Adham-bg:rgba(60,84,204,1);
+    // --x-Adham-bg-9:rgba(60,84,204,.9);
+    // --x-Adham-bg-7:rgba(60,84,204,.7);
+
+    .oiBar {
+        // --x-Adham-grid-color: rgba(0,0,0,.05);
+        // --x-Adham-bg:#212121;
+    }
+
+    .oiBar {
+        --x-Adham-28071423-w: 12px;
+    }
+    .oi {
+        --x-Adham-28071423-w: 20px;
+    }
+
+    .oiBar,
+    .oi {      
+        background-size: var(--x-Adham-28071423-w) var(--x-Adham-28071423-w);
+        background-image: linear-gradient(90deg, var(--x-Adham-grid-color) 1px,transparent 0),linear-gradient(180deg,var(--x-Adham-grid-color) 1px,transparent 0);
+    
+    }
+
+    #oiBar {
+        --c-text:rgba(255,255,255,.5);
+        --c-h:rgba(255,255,255,1);
+
+        background-color: var(--bg-oiBar);
+        background-attachment: fixed;
+
+        .menu {
+            // --c-menu-border: #e6e6e6;
+            // --c-menu-border-active: #e6e6e6;
+            --c-menu: #ccc;
+            --c-menu-active: #fff;
+            --c-menu-hover: @c-avisited;
+            // --c-menu-border: transparent;
+          }
+
+    }
+
+    .Aside_2 {
+        background-color: var(--bg-Aside_2);
+    }
+
+    #oi {
+        --c-text:rgba(255,255,255,.5);
+        --c-h:rgba(255,255,255,1);
+        --c-border:#7990ff;
+
+        background-color: var(--bg);
+
+        a {
+            color: #3396ff;
+        }
+
+        .Grey {
+            --x-color-1: rgba(255,255,255,.25);
+        }
+    }
+
+
+    
+
+    .oi,
+    .oiBar {position: relative;}
+
+    .oiBar::before,
+    .oiBar::after,
+    .oi::before,
+    .oi::after {        
+        position: absolute;
+        z-index: 1;
+    }
+
+    .oiBar::before {
+        content: '';
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, var(--bg-oiBar) 0%, var(--bg-oiBar-alfa) 150px, transparent),
+                    linear-gradient(to right, var(--bg-oiBar) 0%, var(--bg-oiBar-alfa) 50%, transparent)
+        ;
+    }
+
+    .oi::before {
+        content: '';
+        left: 4rem;
+        right: 4rem;
+        top: 0;
+        bottom: 0;
+        background: linear-gradient(to bottom, 
+            var(--x-Adham-bg) 0%, 
+            var( --x-Adham-bg-9) 150px, 
+            var( --x-Adham-bg-7) 150px, 
+            var( --x-Adham-bg-7) 80%, 
+            transparent 95%);
+
+            box-shadow: 0px 5px 30px 2px var(--x-Adham-bg);
+    }
+
+
+    .design-shadow::after {
+        content: '';
+        position: absolute;
+        left: -50px;
+        right: 0;
+        top: -50px;
+        bottom: -50px;
+        // background-color: red;
+        box-shadow: -5px -5px 20px 1px rgba(20, 20, 20, .5) inset;
+    }
+
+
+}
+
+@import "./Adham/_ol.less";

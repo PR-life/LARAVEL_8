@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+
+.Details.line-stop--first > details:first-child > summary ,
+.Details.line-flip > details:first-child  > summary {
+    border-top-color: var(--c-summary-border);
+}
+
+.Details.line-flip > details:last-child  > summary {
+    border-bottom-color: transparent;
+}
+
+.Details.-line > details > summary {
+    border-bottom-color: var(--c-summary-border);
+}
+
+.Details.-line > details[open] > summary {
+   border-bottom-color:transparent;
+}
