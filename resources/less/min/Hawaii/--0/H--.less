@@ -36,14 +36,20 @@
         min-height: 300px;
     }
 
-
-    .Hgr_mbl.-V.-wagon {
-        min-height: clamp(140px,calc(var(--h)*.32),200px)
+    // .Hgr_mbl.-V.-wagon,
+    .Smart.-h.vol-tile_mbl {
+        --Smart-h:clamp(140px,calc(var(--h)*.32),200px);
     }
+     
 }
 
+.Smart {
+    --Smart-h:auto;
+}
 
-
+.Smart.-h {
+    min-height:var(--Smart-h);
+}
 
 //
 .hill {

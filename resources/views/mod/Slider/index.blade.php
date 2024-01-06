@@ -3,7 +3,7 @@
  	{!!$manager ?? ""!!}
 	{!!$package ?? ""!!}
 	
-	<div class="Shell shell-13111156 / _indexMin / Fade start-fade scene-3 / hidden">
+	<div class="Shell / _indexMin / Fade555 start-fade5555 scene-35555 / hidden">
 		<div class="Track / {!!$cssTrack ?? ''!!}" style="transform: translateX(0px);" data-switch>
 			{{$slot}}
 		</div>
