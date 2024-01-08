@@ -1,9 +1,9 @@
 @charset "UTF-8";
 
-
+.Badge.-black,
 .Badge.-blue,
 .Badge.-green {
-	--x-bg-badge-c: #fff;
+	--x-c-badge: #fff;
 	// svg {
 		// fill: white;
 		// stroke: white;
@@ -26,12 +26,17 @@
 	--x-bg-badge: #FF635D;
 }
 
+.Badge.-black {
+	--x-bg-badge: #282d3c;
+}
+
 .Badge.transparent {
 	--x-bg-badge-bg:transparent;
 }
 
 .Badge {
-	--x-bg-badge-c: inherit;
+	--x-c-badge: inherit;
+	--c-text: var(--x-c-badge);
 	--x-bg-badge-c-text: #455880;
 	--x-bg-badge-bg: #E9EEF4;
     // background: var(--x-bg-badge);

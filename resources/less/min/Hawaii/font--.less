@@ -267,6 +267,11 @@ p {
 }
 
 
+.content-l {
+	font-size: calc(var(--font) + 2px);
+    line-height: ~"calc(var(--rem-p) * 1.5)";
+}
+
 .content-m {
 	font-size: calc(var(--font) + 1px);
     line-height: ~"calc(var(--rem-p) * 1.5)";
@@ -378,11 +383,15 @@ legend,
 
 
 .content-m.-lineHeight {
-    line-height: calc(var(--font) + 6px);
+    line-height: calc(var(--font) + 1px + 5px);
 }
 
 .content-m.-lineHeightM {
 	line-height: ~"calc(var(--rem-p) * 1.75)";
+}
+
+.content-l.-lineHeight {
+    line-height: calc(var(--font) + 2px + 5px);
 }
 
 figcaption,
