@@ -1,6 +1,36 @@
 @charset "UTF-8";
 
 
+.golden-paddingTop.areaB {
+    --Golden-padding-top: calc(var(--areaB) - var(--x-h-head));
+    // --Golden-padding-top: calc(var(--h-Top) + var(--h-Header));
+}
+
+
+
+
+.golden-paddingTop {
+    padding-top: var(--Golden-padding-top);
+}
+
+
+
+//
+
+.-Golden {
+    --x-h-head:calc(var(--h-Top) + var(--h-Header));
+    --areaB: clamp(var(--x-h-head), 14vw, 220px);
+}
+
+// .x569888 {
+//     width: var(--areaB);
+//     height: var(--areaB);
+//     background-color: red;
+// }
+
+
+
+
 .Golden.-left_70 {
     --Golden-flexbasis-left:70%;
     --Golden-flexbasis-right:30%;
