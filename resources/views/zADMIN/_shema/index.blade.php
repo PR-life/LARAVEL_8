@@ -2,6 +2,8 @@
 @include('zADMIN._shema._brick.src')
 
 @push('css-body', 'x-aside Design x-Admin ')
+@push('css-fon', 'skimp-size_Aside ')
+@push('css-milk', 'skimp-size_Aside ')
 
 @push('style')
 .oneLine br{

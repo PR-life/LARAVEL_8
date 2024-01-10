@@ -1,0 +1,39 @@
+@charset "UTF-8";
+
+.Flipclock.-play {
+
+    ._before {
+        ._up ._shadow {
+            background: linear-gradient(to top, var(--Flipclock-c-shadow-rgba) 0%, var(--Flipclock-c-shadow) 100%);
+            // background-color: red;
+    
+            //
+            animation: Flipclock_show 0.5s linear both;
+        }
+
+        ._down ._shadow {
+            background: linear-gradient(to top, var(--Flipclock-c-shadow) 0%, var(--Flipclock-c-shadow-rgba) 100%);
+            // background-color: blue;
+
+            animation: Flipclock_show 0.5s linear both; }
+    }
+
+
+    
+    ._active {
+        ._up ._shadow {
+            background: linear-gradient(to top, var(--Flipclock-c-shadow-rgba) 0%, var(--Flipclock-c-shadow) 100%);
+            // background-color: yellow;
+
+            animation: Flipclock_hide 0.5s 0.3s linear both;
+        }
+
+        ._down ._shadow {
+            background: linear-gradient(to top, var(--Flipclock-c-shadow) 0%, var(--Flipclock-c-shadow-rgba) 100%);
+            // background-color: orange;
+
+            animation: Flipclock_hide 0.5s 0.2s linear both;
+        }
+    }
+
+}

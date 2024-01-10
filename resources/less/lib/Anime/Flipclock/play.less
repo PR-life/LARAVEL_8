@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+
+.Flipclock {
+
+    // a {
+    //     div {
+    //         z-index: 1;
+    //     }
+    // }
+
+    // ._shadow {
+    //     z-index: 2;
+    // }
+
+    // .item {
+    //     z-index: 1;
+    // }
+
+    // .item:first-child {
+    //     z-index: 2;
+    // }
+
+    // .item._active {
+    //     z-index: 3;
+    // }
+}
+
+
+
+
+
+
+.Flipclock.-play {
+
+    ._before {
+        z-index: 3;
+
+        ._up {
+            z-index: 2;
+            animation: Flipclock_turn2 0.5s linear both;
+            animation: Flipclock_turn2 0.5s linear both;
+        }
+    }
+
+
+    ._active {
+        animation: Flipclock_asd .5s .5s linear both;
+        z-index: 5;
+
+
+        ._down {
+            z-index: 2;
+            animation: Flipclock_turn 0.5s 0.5s linear both;
+        }
+
+
+
+    }
+
+
+}
+

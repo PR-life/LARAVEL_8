@@ -4,7 +4,6 @@ use Illuminate\Support\Facades\Route;
 
 // use App\Http\Livewire\Admin\Dashboard;
 
-
 //
 Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin']], function () {
     Route::get('/', function() {return view('zADMIN.Morda');})->name('morda');

@@ -2,7 +2,7 @@
 
 
 .golden-paddingTop.areaB {
-    --Golden-padding-top: calc(var(--areaB) - var(--x-h-head));
+    --Golden-padding-top: clamp(3rem, calc(var(--areaB) - var(--x-h-head)), 100px);
     // --Golden-padding-top: calc(var(--h-Top) + var(--h-Header));
 }
 

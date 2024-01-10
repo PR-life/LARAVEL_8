@@ -14,8 +14,18 @@
 
 <div id="Fon" class="Abs -all @stack('css-fon')">@stack('fon')</div>
 
+<?
+$arrCSS = [
+	'id' => 'Wrap',
+	'cssOi' => 'HWin',
+	'cssOiBar' => 'skimp-size_Aside x-asideClose',
+	'cssOi' => 'skimp-size_Aside',
+	'cssASIDE' => 'ASIDE',
+	'cssKIRA' => 'KIRA -aside'
+]
+?>
 
-@component('_wrap.oiBar', ['id' => 'Wrap', 'cssOi' => 'HWin', 'cssOiBar' => 'skimp-size_Aside x-asideClose', 'cssASIDE' => 'ASIDE', 'cssKIRA' => 'KIRA -aside'])
+@component('_wrap.oiBar', $arrCSS)
 
 	<div class="index relative">
 		@stack('topBefore')

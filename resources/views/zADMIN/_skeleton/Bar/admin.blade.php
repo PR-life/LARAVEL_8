@@ -45,7 +45,7 @@
                                     <svg><use xlink:href="#svg-exit"></use></svg>
                                 </button>
                             </form>
-                            <a class="Ico -S" href="{{route('morda')}}" target="_blank">
+                            <a class="Ico -S" href="/" target="_blank">
                                 <svg><use xlink:href="#svg-web"></use></svg>
                             </a>
                         </div>

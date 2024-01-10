@@ -144,6 +144,7 @@ body,img,video,input,.block{
 	display:block
 }
 
+#body.Z2 .noneZ2,
 #body:not(.asideClose) .ASIDEclose,
 #body.asideClose .ASIDEopen,
 .none,.Rano,body meta{
@@ -406,6 +407,11 @@ hr,.ghost,.visible,.Op,.opVersa{
 
 @media (min-width:1081px) and (max-width:6000px){
 	.Beyond {display:none !Important}
+}
+
+@media (min-width:799px) and (max-width:1080px){
+	.flex-beyond,
+	.Beyond {display:flex !important}
 }
 
 @media screen and (max-width:1080px){
