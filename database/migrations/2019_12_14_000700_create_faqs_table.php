@@ -48,7 +48,12 @@ class CreateFaqsTable extends Migration
             $table->index('category_id', 'faq_category_idx'); // ИМЯ ед. ч. -- эта тбл. и тбл. на какую ссылаемся + суффикс 
             $table->foreign('category_id', 'faq_category_fk')->on('categories')->references('id'); // ->onDelete('cascade')
 
-            
+            //
+            $table->unsignedBigInteger('group_id')->nullable();          
+
+            $table->index('group_id', 'faq_group_idx'); // ИМЯ ед. ч. -- эта тбл. и тбл. на какую ссылаемся + суффикс 
+            $table->foreign('group_id', 'faq_group_fk')->on('groups')->references('id'); // ->onDelete('cascade')
+           
 
 
             $table->timestamps();

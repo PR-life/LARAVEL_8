@@ -49,6 +49,7 @@ class FaqImport implements ToCollection, WithHeadingRow
                     'mafia' => $item['featured'],
                     'faq_id' => $item['faq_id'],
                     'category_id' => $item['category_id'],
+                    'group_id' => $item['group_id'],
 
 
 					'created_at' => $created_at,
