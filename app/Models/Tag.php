@@ -37,9 +37,11 @@ class Tag extends Model
 	public function posts(){
 		return $this->belongsToMany(Post::class, 'post_tags', 'tag_id', 'post_id');
 	}
+
 	public function categories(){
 		return $this->belongsToMany(Category::class, 'category_tags', 'tag_id', 'category_id');
 	}
+
     public function category() {
         return $this->belongsTo(
             Category::class,
@@ -47,6 +49,7 @@ class Tag extends Model
 			'id',
         );
     }
+
 	public function getDateAsCarbonAttribute(){
 		return Carbon::parse($this->created_at);
 	}

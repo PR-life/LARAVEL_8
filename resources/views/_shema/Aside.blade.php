@@ -17,9 +17,8 @@
 <?
 $arrCSS = [
 	'id' => 'Wrap',
-	'cssOi' => 'HWin',
 	'cssOiBar' => 'skimp-size_Aside x-asideClose',
-	'cssOi' => 'skimp-size_Aside',
+	'cssOi' => 'HWin skimp-size_Aside',
 	'cssASIDE' => 'ASIDE',
 	'cssKIRA' => 'KIRA -aside'
 ]
@@ -30,7 +29,10 @@ $arrCSS = [
 	<div class="index relative">
 		@stack('topBefore')
 		@yield('top')
-		@stack('topAfter')
+
+		<div class="Bee">
+			@stack('topAfter')
+		</div>
 	
 		@stack('contentBefore')
 		@yield('content')

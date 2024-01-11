@@ -7,6 +7,7 @@
 
 
 {{-- https://www.tiny.cloud/docs/configure/content-formatting/ --}}
+{{-- https://www.tiny.cloud/docs/tinymce/latest/customize-ui/ --}}
 
 @push('js-bottom') 
 	tinymce.init({
@@ -44,6 +45,9 @@ tinymce.init({
 	plugins: 'image lists link anchor charmap visualblocks code',
 	toolbar: 'blocks | bold italic bullist numlist | link anchor image charmap | removeformat visualblocks | code',
 	{{-- menubar: false, --}}
+
+
+	
 
 	setup: (editor) => {
 	  editor.on('init', () => {

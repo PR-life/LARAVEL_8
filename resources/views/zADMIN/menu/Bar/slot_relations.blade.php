@@ -23,5 +23,12 @@
         @slot('name', 'Теги')
         @svg('plus')
     @endcomponent 
+    @component('_wrap.Chunk.Aside.index')
+        @slot('routeName', 'admin.group.index')
+        @slot('linkAdd', route('admin.group.create'))
+        @slot('icoCss', '-XS')
+        @slot('name', 'Группы')
+        @svg('plus')
+    @endcomponent 
 </div>
 @endcomponent

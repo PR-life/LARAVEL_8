@@ -1,0 +1,1 @@
+<label class="content-xs / Grey -c50 / pl-1" for="{{$for ?? $name}}">{{$name}}</label>

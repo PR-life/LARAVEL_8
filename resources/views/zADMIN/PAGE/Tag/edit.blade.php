@@ -2,20 +2,7 @@
 
 @section('title')edit. Tag - {{$tag->name}} @endsection
 
-@push('linkCss')
-	@include('_.src.link.css.text.select')
-@endpush
-
-@push('linkJsAfter')
-	@include('_.src.link.js.text.select')
-@endpush
-
-@push('js-bottom-solo')
-	<script>
-		$('#js_categories').select2()
-	</script>
-@endpush
-
+@include('zADMIN.PAGE.Tag.push.edit')
 
 @push('addBread')
 <li>
@@ -31,7 +18,6 @@
 @endpush
 
 
-
 @section('content')
 
 <div class="I aura">
@@ -43,7 +29,7 @@
 
 
 		<div class="_shell">
-			@include('zADMIN._bd.edit.min',['Var'=> $tag])
+			@include('zADMIN._bd.edit.published',['Var'=> $tag])
 		</div>
 
 		

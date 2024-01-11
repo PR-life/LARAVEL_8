@@ -18,7 +18,7 @@
         
         <div class="SMS -bar / relative" data-stopClick>
             <div class="Wings">
-                <div class="_win -t pr-3">
+                <div class="_win -t pr-4">
                     <div class="sms-design sms-off / Plot">
                         <div class="flex eC">
                             <div class="Close -an -black round" data-click data-goto={{$id}} data-foo='click'></div>

@@ -84,6 +84,20 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin']], function
 
 
 
+    //
+
+    Route::group(['namespace' => 'Group', 'prefix' => 'groups'], function(){
+        Route::get('/', 'IndexController')->name('group.index');
+        Route::get('/create', 'CreateController')->name('group.create');
+        Route::post('/', 'StoreController')->name('group.store');
+        // // Route::get('/{tag}', 'ShowController')->name('tag.show');
+        Route::get('/{group}/edit', 'EditController')->name('group.edit');
+        Route::patch('/{group}', 'UpdateController')->name('group.update');
+        Route::delete('/{group}', 'DeleteController')->name('group.delete');
+    });
+
+
+
     Route::group(['namespace' => 'Tag', 'prefix' => 'tags'], function(){
         Route::get('/', 'IndexController')->name('tag.index');
         Route::get('/create', 'CreateController')->name('tag.create');
@@ -93,8 +107,6 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin']], function
         Route::patch('/{tag}', 'UpdateController')->name('tag.update');
         Route::delete('/{tag}', 'DeleteController')->name('tag.delete');
     });
-
-
 
     Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function(){
         Route::get('/', 'IndexController')->name('category.index');

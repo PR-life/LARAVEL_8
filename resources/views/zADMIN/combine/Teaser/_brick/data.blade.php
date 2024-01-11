@@ -5,6 +5,7 @@
             <a class="content b600 / Grey -c30" href="{{route('admin.category.edit',$Var->category->id)}}">{{$Var->category->name}}</a>
             @endisset
 
+            {{-- @dd($Var->tags) --}}
             @if(count($Var->tags))
             <div class="paragraph-s"></div>
             <div class="Wings">
