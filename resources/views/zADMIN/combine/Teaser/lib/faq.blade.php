@@ -32,27 +32,15 @@ if ($Var->name) {
 
             <div class="_1 / flex cC dC / Max -w11">
 
-                @if($Var->slug)
-                    @include('zADMIN.combine.Teaser.lib.brick.slug')
-                @endif
-
                 <div class="flex cI">
                     <a class="content-m b600" href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', [mb_strtolower(class_basename($Var)) => $Var->id, 'page' => $page ?? null, 'tag_id' => $tag_id ?? null, 'category_id' => $category_id ?? null]) }}">
-    
-    
                         <div class="Abs -left / flex dC cC x-12012019 / Grey / v-Status -on">
                             @include('zADMIN.combine.Teaser.lib.lego.icoStatus')
                         </div>
-    
                         <span class="flex / cross">
                             @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $NAME, 'css' => 'x-name'])
                             <span class="EN / content-m b300 / block oneLine nowrap Ellipsis x-name / Grey">{!!$Var->en_name ?? '<em>en_name</em>'!!}</span>
-                        </span>
-    
-                        <span class="v-Meta_title -off">
-                            @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->title ?? '<em>title</em>', 'css' => 'v-Seo -on'])
-                        </span>
-                        
+                        </span>                        
                     </a>
                     @if(isset($Var->pivotItem) && count($Var->pivotItem))
                         <div class="Ico -S / pointer" data-click data-node="pivot_{{$Var->id}}" data-css data-toggle='Block'>
@@ -66,9 +54,6 @@ if ($Var->name) {
 
                 <div class="v-Seo -on / flex cC dC"> 
                     <div class="paragraph-s"></div>
-
-                    @include('zADMIN.combine.Teaser.lib.lego.contentSeo')
-
                     @if($Var->tags)
                         <div class="v-Meta_tags -off">
                             <div class="paragraphX2"></div>

@@ -18,7 +18,7 @@
                     </div>
                 </div>
 
-                <div class="hill-m / Bg -gif">
+                <div class="hill-m">
                     {!!$date ?? ''!!}
                 </div>
 

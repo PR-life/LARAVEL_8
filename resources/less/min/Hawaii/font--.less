@@ -332,10 +332,20 @@ figcaption,
 .Form label,
 .Paginate *,
 dl dt, dl dd,
-input, textarea, select option {
+input, textarea {
     font-size: var(--font);
 }
 
+
+select {
+	font-size: var(--font);
+	line-height: calc(var(--font)*1.6);
+}
+
+option {
+	font-size: inherit;
+	line-height: inherit;
+}
 
 
 .content.-vw {

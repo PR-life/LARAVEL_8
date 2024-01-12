@@ -20,6 +20,32 @@
 	
 }
 
+select {
+	--c-select-border: transparent;
+	--bg-select:#424248; // #424248;
+}
+
+select:hover {
+	--c-text:#393027;
+	--bg-select:#efd1a5; // #424248;
+}
+
+.select2-results > .select2-results__options {
+	--c-text:#393027;
+	background-color: #efd1a5;
+}
+.select2-results__option[aria-selected=true] {
+	opacity: .5;
+	// color: inherit !important;
+}
+
+.select2-results__option:hover {
+	--c-text:#efd1a5;
+	background-color: #393027;
+}
+
+
+
 form {
 	// --c-input:inherit;
 	// --c-input-focus:@c-ahover;
@@ -33,7 +59,6 @@ form {
 	// --c-input-abs-active:#677788;
 	// --c-input-sup:#c70000;
 	// --bg-input: #f0f6fa;
-	--bg-select: #424248;
 	// --bg-button: transparent;
 	--bg-textarea: #2f353b;
 	// --bg-input-readOnly: #f5f5f4;

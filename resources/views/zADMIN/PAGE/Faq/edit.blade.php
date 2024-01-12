@@ -64,7 +64,15 @@
 				@include('zADMIN.PAGE.Faq._lego.edit.sms')	
 			@endslot
 
+			@slot('date')
+				@include('zADMIN.PAGE.Faq._lego.edit.date')	
+			@endslot
+
+			
+
 			<div class="paragraphX2"></div>
+
+
 			@include('zADMIN.PAGE.Faq._lego.edit.body')
 
 		@endcomponent

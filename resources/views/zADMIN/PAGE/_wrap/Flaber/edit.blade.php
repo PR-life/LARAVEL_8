@@ -17,6 +17,6 @@
             </div>
         </div>
 
-        @include('zADMIN.PAGE._wrap.Flaber.lego.bar')
+        @include('zADMIN.PAGE._wrap.Flaber.lego.wrap')
     @endcomponent
 </div>

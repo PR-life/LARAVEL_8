@@ -29,10 +29,7 @@
                 @endforeach --}}
                 @foreach($faqs as $faq)    
                  
-                    @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $faq])
-
-
-            
+                    @include('zADMIN.combine.Teaser.lib.faq', ['Var' => $faq])
 
                     @if(count($faq->childrenFaqs))
                         <div class="children -lvl_1 / round">

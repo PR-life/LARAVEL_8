@@ -1,5 +1,6 @@
 @charset "UTF-8";
 
+.menu.-tag.-shadow,
 .menu.-tile.-shadow{
 	--x-menu-shadow: 0 1px 3px 1px rgba(60, 64, 67, .15), 0 1px 2px 0 rgba(60, 64, 67, .3);
 }
@@ -8,34 +9,9 @@
 	--x-menu-shadow: 0px 1px 3px 0px rgba(0, 0, 0, .05);
 }
 
-.menu.Kite.-shadow {
-	> .active > * {
+.menu.Kite.-shadow,
+.menu.-tag.-shadow{
+	> .active > *{
 		box-shadow: var(--x-menu-shadow);
 	}
 }
-
-// // .menu.-tag.-dark.-shadow > li.active > *,
-.menu.-tag.-white.-shadow,
-.menu.-tag.-bright.-shadow {
-	> li > *{
-		box-shadow: 0 1px 3px 1px rgba(60, 64, 67, .15), 0 1px 2px 0 rgba(60, 64, 67, .3);
-	}
-}
-
- 
-
-// .menu.-tag.-shadow.-dark,
-// .menu.-tag.-shadow.-transparent {
-// 	>*>* {
-// 		// -moz-box-shadow:none;
-// 		box-shadow:none;
-// 	}
-// }
-
-// .menu.-tag.-shadow.-dark>li.active>*,
-// .menu.-tag.-shadow.-transparent>li.active>*,
-// .menu.-tag.-shadow>*>* {
-// 	// -moz-box-shadow: var(--x-menu-shadow);
-// 	box-shadow: var(--x-menu-shadow);
-// }
-

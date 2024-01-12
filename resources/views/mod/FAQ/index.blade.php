@@ -1,7 +1,7 @@
 @push('style')
-	.training > .Ef.-Details > ._ef.training,
-	.equipment > .Ef.-Details > ._ef.equipment,
-	.sensitiv > .Ef.-Details > ._ef.sensitiv {
+	.about > .Ef.-Details > ._ef.slug-detektivnoe-agentstvo,
+	.price > .Ef.-Details > ._ef.tag-ceny,
+	.profession > .Ef.-Details > ._ef.slug-detektiv  {
 		height: auto;
 		min-height: var(--x-Ef-hMin);
 		opacity: 1;
@@ -9,6 +9,7 @@
 	}
 @endpush
 
+ 
 
 
 <div class="{!!$css_wrap_menu ?? ''!!}">
@@ -23,33 +24,17 @@
 
 <div class="paragraph / none_mbl"></div>
 
-
 <div class="{{$css_wrap_content ?? 'I aura / Edge -SPC'}}">
 	<div id="{{$id_package}}" class="{{$id_package_css ?? 'all first'}}">
 		<div class="Ef -list -first / -Details">
             @foreach($Var as $item)
                 @if($loop->first)
-                    <div class="_ef -an -first / Details {{$css_Details ?? ''}} / {{$item->category->slug ?? ''}} {{$item->category->category->slug ?? ''}} {{$item->featured ? 'featured' : ''}}">
-                        <details>
-                            <summary class="-M"><span>{!!$item->name!!}</span><i></i></summary>
-                            <div class="_edge text void net">
-                                @include('mod.FAQ._lego.content')
-                            </div>
-                        </details>
-                    </div>
+                    @include('mod.FAQ.lego.item',['css' => '-first'])
                 @endif
-                    <div class="_ef -an x-{{$loop->iteration}} / Details {{$css_Details ?? ''}} / {{$item->category->slug ?? ''}} {{$item->category->category->slug ?? ''}} {{$item->featured ? 'featured' : ''}}">
-                       <details>
-                           <summary class="-M"><span>{!!$item->name!!}</span><i></i></summary>
-                           <div class="_edge text void net">
-                               @include('mod.FAQ._lego.content')
-                           </div>
-                       </details>
-                   </div>
-               @endforeach
+                @include('mod.FAQ.lego.item',['css' => 'x-'.$loop->iteration])
+             @endforeach
 
-
-               @isset($thisItemFaq)
+            @isset($thisItemFaq)
                 @foreach($thisItemFaq as $thisFaq)
                     <div class="_ef -an thisItem / Details {{$css_Details ?? ''}}">
                         <details>
@@ -60,8 +45,7 @@
                         </details>
                     </div>
                 @endforeach
-                @endisset
-
+            @endisset
 		</div>
 	</div>
 </div>
