@@ -60,9 +60,9 @@
 		
 		@component('zADMIN.PAGE._wrap.Flaber.edit')
 
-		@slot('flaber')
-			@include('zADMIN.PAGE.Faq._lego.edit.sms')	
-		@endslot
+			@slot('flaber')
+				@include('zADMIN.PAGE.Faq._lego.edit.sms')	
+			@endslot
 
 			<div class="paragraphX2"></div>
 			@include('zADMIN.PAGE.Faq._lego.edit.body')

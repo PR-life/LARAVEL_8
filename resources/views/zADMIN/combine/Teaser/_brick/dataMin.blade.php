@@ -1,4 +1,4 @@
-<div class="flex / v-Data -on">
+<div class="flex cI / v-Data -on">
     <div class="flex cross">
         <div class="{{$css}} / Min Max -w2 / none_80">
             <b class="content-s / Grey -c30" title="{{$Var->created_at}}">

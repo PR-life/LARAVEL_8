@@ -1,4 +1,4 @@
-<div class="Bee / Goo -manager / _indexMax">
+<div class="Bee / Goo55 -manager555 / _indexMax">
     <div class="space / flex">
         <form id="form_managerDiv" class="Form -S / flex cI / cross-xxs">
             <div class="{{ ($_GET != [] || request()->routeIs('admin.post.trash')) ? '' : 'notActive noEvents' }}">

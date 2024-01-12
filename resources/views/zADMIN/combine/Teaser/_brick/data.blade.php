@@ -1,8 +1,8 @@
-<div class="flex / v-Data -on">
+<div class="flex cI / v-Data -on">
     <div class="flex cross">
         <div>
             @isset($Var->category)
-            <a class="content b600 / Grey -c30" href="{{route('admin.category.edit',$Var->category->id)}}">{{$Var->category->name}}</a>
+            <a class="content-s b600 / Grey -c30" href="{{route('admin.category.edit',$Var->category->id)}}">{{$Var->category->name}}</a>
             @endisset
 
             {{-- @dd($Var->tags) --}}

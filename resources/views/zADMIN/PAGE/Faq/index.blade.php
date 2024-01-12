@@ -32,9 +32,7 @@
                     @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $faq])
 
 
-                
-
-
+            
 
                     @if(count($faq->childrenFaqs))
                         <div class="children -lvl_1 / round">

@@ -22,6 +22,8 @@ class Service {
 		try {
 			DB::beginTransaction();
 
+			// dd($param);
+
 			//
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);

@@ -1,7 +1,7 @@
 @extends('zADMIN._shema.index')
 @push('css-body', '-edit ')
 
-@include('_._brick.tinymce')
+@include('_.js.component.tinymce.index')
 
 
 @push('linkJs')

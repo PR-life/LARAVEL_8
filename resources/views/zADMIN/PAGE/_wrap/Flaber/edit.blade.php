@@ -9,6 +9,7 @@
         @slot('data', "data-click data-css data-node='parent' data-toggle='off' data-localStorage localStorage-id")
 
         <div class="HWin / sms-off" data-stopClick></div>
+        
         <div class="Plot sms-plot / flex dC cI / sms-hidden" data-stopClick>
             <div class="Bee"></div>
             <div class="Ico / pointer" data-click data-goto='{{$id ?? 'Flaber_edit'}}' data-foo='click'>
@@ -16,21 +17,6 @@
             </div>
         </div>
 
-        <div class="SMS -bar / relative" data-stopClick>
-            <div class="Wings">
-                <div class="_win -t pr-4">
-                    <div class="sms-design sms-off / Plot">
-                        <div class="flex eC">
-                            <div class="Close -an -black round" data-click data-goto='{{$id ?? 'Flaber_edit'}}' data-foo='click'></div>
-                        </div>
-                        {!!$flaber ?? ''!!}
-                    </div>  
-                    <div class="Bar -tool / sms-on"></div>
-                </div>
-            </div>
-        </div>
-        
-
-        <div class="KIRA -sms"></div>
+        @include('zADMIN.PAGE._wrap.Flaber.lego.bar')
     @endcomponent
 </div>

@@ -6,6 +6,7 @@ namespace App\Http\Controllers\ADMIN\Faq;
 use App\Models\Faq;
 use App\Models\Category;
 use App\Models\Tag;
+use App\Models\Group;
 
 
 class EditController extends BaseController
@@ -16,7 +17,8 @@ class EditController extends BaseController
 		$faqs = Faq::all();
 		$categories = Category::all();
 		$tags = Tag::all();
+		$groups = Group::all();
 
-        return view('zADMIN.PAGE.Faq.edit', compact('faq','faqs','categories','tags'));
+        return view('zADMIN.PAGE.Faq.edit', compact('faq','faqs','categories','tags','groups'));
     }
 }

@@ -6,8 +6,6 @@
     @slot('name', 'Управление проектом')
     @svg('oogway')
 @endcomponent
-
-
 @component('_wrap.Chunk.Aside.js_data')
     @slot('routeRegexp', 'admin/sherpa*')
     @slot('data', "data-click data-goto='milkSherpa' data-foo='click' data-css data-toggle='on'")

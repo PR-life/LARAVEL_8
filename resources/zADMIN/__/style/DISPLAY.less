@@ -47,6 +47,7 @@
 
 #body .EN, #body .EN-flex,
 .v-EN.-on,
+.v-Status.-on,
 .v-Data.-on,
 .v-Lite.-on,
 .v-Seo.-on {
@@ -109,6 +110,16 @@
         display: flex;
     }
     .v-Data.-off {
+        display: none;
+    }
+}
+
+//
+.vol-status {
+    .v-Status.-on  {
+        display: flex;
+    }
+    .v-Status.-off {
         display: none;
     }
 }
@@ -178,6 +189,7 @@
 
 #Top .-Btn,
 .Btn.v-Data,
+.Btn.v-Status,
 .Btn.v-Lite,
 .Btn.v-Seo {
     --c-btn-border:hsla(0, 0%, 100%, 0.15);
@@ -186,6 +198,7 @@
  
 
 .Btn.v-Data.-on,
+.Btn.v-Status.-on,
 .Btn.v-Lite.-on,
 .Btn.v-Seo.-on {
     --c-btn-border:var(--c-btn);

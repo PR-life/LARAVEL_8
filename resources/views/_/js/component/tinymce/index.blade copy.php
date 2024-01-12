@@ -9,6 +9,7 @@
 {{-- https://www.tiny.cloud/docs/configure/content-formatting/ --}}
 {{-- https://www.tiny.cloud/docs/tinymce/latest/customize-ui/ --}}
 
+
 @push('js-bottom') 
 	tinymce.init({
 		selector: '#tinymce_lite_1, #tinymce_lite_2, #tinymce_lite_3',
@@ -34,11 +35,14 @@
 @endpush
 
 
-
 @push('js-bottom') 
+
+
+
 tinymce.init({
 	selector: '#tinymce_1, #tinymce_2, #tinymce_3',
-	height:700,
+	height: parseInt(document.documentElement.clientHeight) * .65,
+
 	{{-- skin: 'borderless', --}}
 	{{-- skin: 'bootstrap',
 	icons: 'bootstrap', --}}

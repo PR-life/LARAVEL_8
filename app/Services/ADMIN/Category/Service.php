@@ -27,19 +27,7 @@ class Service {
 			unset($param['tag_ids']);
 			
 			//
-			// isset($param['featured']) ? '' : $param['featured'] = '0';
-			// isset($param['published']) ? '' : $param['published'] = '0';
-			// isset($param['mafia']) ? '' : $param['mafia'] = '0';
-				// isset($param['css_type']) ? $param['css_type'] = implode(" ", $param['css_type']) : $param['css_type'] = null;
-			
-
-			//
-			// if(isset($param['prev_image']) && !is_string($param['prev_image'])) {
-			// 	$param['prev_image'] = Storage::disk('public')->put('/images', $param['prev_image']);
-			// 	// $data['prev_image'] = str_replace('public','',Storage::put('/public/images', $data['prev_image']));
-			// }
-
-			// dd($param);
+			isset($param['published']) ? '' : $param['published'] = '0';
 
 			//
 			$category->update($param);

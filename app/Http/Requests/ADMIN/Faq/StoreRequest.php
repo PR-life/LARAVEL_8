@@ -38,13 +38,14 @@ class StoreRequest extends FormRequest
             'en_text' => 'nullable|string',
 
             //
-            'faq_id' => 'nullable|integer|exists:faqs,id',
-            'faq_ids' => 'nullable|array',
-            'faq_ids.*' => 'nullable|integer|exists:faqs,id',
             'category_id' => 'nullable|integer|exists:categories,id',
             'tag_ids' => 'nullable|array',
             'tag_ids.*' => 'nullable|integer|exists:tags,id',
-            
+            'group_id' => 'nullable|integer|exists:groups,id',
+            'faq_id' => 'nullable|integer|exists:faqs,id',
+            'faq_ids' => 'nullable|array',
+            'faq_ids.*' => 'nullable|integer|exists:faqs,id',
+
             'filter_par_1' => 'nullable',
 
 			//
