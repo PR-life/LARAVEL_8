@@ -112,6 +112,7 @@ Route::group(['namespace' => 'Html', 'prefix' => 'html'], function(){
 
 Route::group(['namespace' => 'Text', 'prefix' => 'text'], function(){
     Route::get('/', function () {return view('zJJ.PAGE.text.index');})->name('text.index');
+    Route::get('/select', function () {return view('zJJ.PAGE.text.select');})->name('text.select');
     Route::get('/font', function () {return view('zJJ.PAGE.text.Font');})->name('text.font');
     Route::get('/form', function () {return view('zJJ.PAGE.text.form');})->name('text.form');
     Route::get('/dl', function () {return view('zJJ.PAGE.text.dl');})->name('text.dl');

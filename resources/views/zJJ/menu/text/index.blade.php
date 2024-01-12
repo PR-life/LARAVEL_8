@@ -8,6 +8,10 @@
         Font
     @endcomponent
     @component('zJJ._wrap.menu.checkMenuActive')
+        @slot('link', 'jj.text.select')
+        select
+    @endcomponent
+    @component('zJJ._wrap.menu.checkMenuActive')
         @slot('link', 'jj.text.form')
         Form
     @endcomponent

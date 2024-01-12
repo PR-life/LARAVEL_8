@@ -18,7 +18,7 @@
                     <div class="paragraph-s"></div>
                 </div>
             </div>
-            @include('zJJ.PAGE._lego.Font.index', ['id' => 'Font_29111325'])
+            {{-- @include('zJJ.PAGE._lego.Font.index', ['id' => 'Font_29111325']) --}}
         </div>
     
 {{-- 
