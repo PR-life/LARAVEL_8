@@ -42,10 +42,14 @@
  
 
 <div class="paragraph"></div>
-@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'текст En'])
-<div class="paragraph"></div>
-<div class="_shell Article aura / Note -lite">
-	<textarea id="tinymce_2" name="en_text" placeholder='текст...'>{{$faq->en_text}}</textarea>
-	{{-- @include('zADMIN._brick.cleanHTML') --}}
+
+<div class="v-EN -on">
+	<div>		
+		@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'текст En'])
+		<div class="paragraph"></div>
+		<div class="_shell Article aura / Note -lite">
+			<textarea id="tinymce_2" name="en_text" placeholder='текст...'>{{$faq->en_text}}</textarea>
+			{{-- @include('zADMIN._brick.cleanHTML') --}}
+		</div>
+	</div>
 </div>
- 

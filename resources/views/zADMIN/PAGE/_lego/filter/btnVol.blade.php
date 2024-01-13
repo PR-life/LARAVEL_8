@@ -4,8 +4,9 @@
         <div class="Abs -all / flex eC">
             <div class="space-s flex / x-20101136">
                 @include('zADMIN.PAGE._lego.filter.brick.btnSeo')
-                @include('zADMIN.PAGE._lego.filter.brick.btnData')
                 @include('zADMIN.PAGE._lego.filter.brick.btnStatus')
+                @include('zADMIN.PAGE._lego.filter.brick.btnSelva')
+                @include('zADMIN.PAGE._lego.filter.brick.btnDB')
                 @include('zADMIN.PAGE._lego.filter.brick.btnLite')
             </div>
         </div>

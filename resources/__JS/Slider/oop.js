@@ -6,11 +6,12 @@ export default class Slider {
 	constructor(selector){
 		this.rootElem = document.getElementById(selector)
 		this.Track = this.rootElem.querySelector('.Track')
-		this.items = this.rootElem.querySelectorAll(".item")
+		this.items = this.Track.querySelectorAll(".item")
 		this.count = this.items.length
 		this.sherpa = this.rootElem.querySelector('.sherpaSlider')
 		this.carousel = this.Track.dataset.carousel ?? false;
 		this.trigger = true;
+
 
 		let btnLeft = this.rootElem.querySelector('._btn.left')
 		let btnRight = this.rootElem.querySelector('._btn.right')
@@ -19,6 +20,8 @@ export default class Slider {
 				this.Go(this.rootElem.dataset.current - 1)
 			}
 		);
+
+		// console.log(this.items)
 		 
 		observer.observe(this.rootElem, {attributes:true});
 		this.sherpa.addEventListener('click', () => this.sliderClick())

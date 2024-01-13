@@ -51,7 +51,7 @@
                     @endif
                     
                     @if(count($faq->friendFaqs))
-                        <div class="Pivot -bg / published pause v-Data -on / space round">
+                        <div class="Pivot -bg / published pause v-DB -on / space round">
                             <ul class="-S ul">
                             @foreach ($faq->friendFaqs as $friendFaq)
                             <li>

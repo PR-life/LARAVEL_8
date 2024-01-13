@@ -1,4 +1,4 @@
-<span class="_about / flex cI_PC bC_mbl dC_mbl / index">
+<span class="_about {{$css ?? ''}} / flex cI_PC bC_mbl dC_mbl / index">
     <span class="_ico / Ico -L / mr-3">
         {!!$ico!!}
     </span>

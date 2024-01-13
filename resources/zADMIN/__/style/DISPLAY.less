@@ -47,8 +47,9 @@
 
 #body .EN, #body .EN-flex,
 .v-EN.-on,
+.v-Selva.-on,
 .v-Status.-on,
-.v-Data.-on,
+.v-DB.-on,
 .v-Lite.-on,
 .v-Seo.-on {
     display: none;
@@ -105,14 +106,22 @@
 }
 
 //
-.vol-data {
-    .v-Data.-on  {
+.vol-db {
+    .v-DB.-on  {
         display: flex;
     }
-    .v-Data.-off {
+    .v-DB.-off {
         display: none;
     }
 }
+// .vol-data {
+//     .v-Data.-on  {
+//         display: flex;
+//     }
+//     .v-Data.-off {
+//         display: none;
+//     }
+// }
 
 //
 .vol-status {
@@ -120,6 +129,15 @@
         display: flex;
     }
     .v-Status.-off {
+        display: none;
+    }
+}
+//
+.vol-selva {
+    .v-Selva.-on  {
+        display: flex;
+    }
+    .v-Selva.-off {
         display: none;
     }
 }
@@ -188,7 +206,8 @@
 
 
 #Top .-Btn,
-.Btn.v-Data,
+.Btn.v-Selva,
+.Btn.v-DB,
 .Btn.v-Status,
 .Btn.v-Lite,
 .Btn.v-Seo {
@@ -197,7 +216,8 @@
 
  
 
-.Btn.v-Data.-on,
+.Btn.v-Selva.-on,
+.Btn.v-DB.-on,
 .Btn.v-Status.-on,
 .Btn.v-Lite.-on,
 .Btn.v-Seo.-on {
