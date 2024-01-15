@@ -1,0 +1,139 @@
+@charset "UTF-8";
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+    .Book {
+        --Book-w-min: 300px;
+        --Book-w-max: 350px;
+        --Book-h-min: 400px;
+        --Book-h-max: 500px;
+    }
+	
+}
+
+
+//   .frame {
+//     position: absolute;
+//     left: 50%;
+//     margin-left: -112px;
+//     top: 50%;
+//     margin-top: -150px;
+//     border-top: 25px solid #784320;
+//     border-right: 25px solid #6a3919;
+//     border-bottom: 25px solid #945a33;
+//     border-left: 25px solid #8f4b1e;
+//     width: 200px;
+//     height: 300px;
+//   }
+
+
+.Book.-hover:hover,
+.Book.-on {
+  
+    .page1 {
+        transform: rotateY(-34deg);
+    }
+      
+    .page2 {
+        transform: rotateY(-27deg);
+    }
+      
+    .page3 {
+        transform: rotateY(-15deg);
+    }
+      
+     ._cover {
+        transform: rotateY(-40deg);
+    }
+      
+}
+ 
+
+
+
+.Book ._page,
+.Book ._wrap,
+.Book {
+    width: var(--Book-w);
+    height: var(--Book-h);
+}
+
+
+.Book.-index {
+    --Book-w:clamp(var(--Book-w-min), 20vw, var(--Book-w-max));
+    --Book-h:clamp(var(--Book-h-min), 30vw, var(--Book-h-max));
+
+    --Book-bg: #333;
+    // --Book-h:300px;
+}
+
+
+.Book {
+    .page1 {
+        transform: rotateY(20deg) translateZ(-1px);
+    }
+    
+    .page2 {
+        transform: rotateY(30deg) translateZ(-2px);
+    }
+    
+    .page3 {
+        transform: rotateY(40deg) translateZ(-3px);
+    }
+    ._cover {
+        transform: rotateY(0deg) translateZ(0px);
+    }
+}
+
+.Book.-hoverClose:hover {
+    .page1 {
+        transform: rotateY(20deg) translateZ(-1px) !important;
+    }
+    
+    .page2 {
+        transform: rotateY(30deg) translateZ(-2px) !important;
+    }
+    
+    .page3 {
+        transform: rotateY(40deg) translateZ(-3px) !important;
+    }
+    ._cover {
+        transform: rotateY(0deg) translateZ(0px) !important;
+    }
+}
+
+.Book {
+
+    background: var(--Book-bg);
+    transform: translate3d(0, 0, 0);
+
+    ._wrap {
+        perspective-origin: 0 50% 0;
+        perspective: 800px;
+        transform: translate3d(0, 0, 0);
+    }
+
+
+    ._page {
+        // background-color: #000000;
+        // *zoom: 1;
+        // filter: progid:DXImageTransform.Microsoft.gradient(gradientType=1, startColorstr='#FF000000', endColorstr='#FFEDEDED');
+        // background-image: url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuMCIgeTE9IjAuNSIgeDI9IjEuMCIgeTI9IjAuNSI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iIzAwMDAwMCIvPjxzdG9wIG9mZnNldD0iOTAlIiBzdG9wLWNvbG9yPSIjMDAwMDAwIi8+PHN0b3Agb2Zmc2V0PSIxMDAlIiBzdG9wLWNvbG9yPSIjZWRlZGVkIi8+PC9saW5lYXJHcmFkaWVudD48L2RlZnM+PHJlY3QgeD0iMCIgeT0iMCIgd2lkdGg9IjEwMCUiIGhlaWdodD0iMTAwJSIgZmlsbD0idXJsKCNncmFkKSIgLz48L3N2Zz4g');
+        // background-size: 100%;
+        background-image: linear-gradient(to right, #000000 0%, #000000 90%, #ededed 100%);
+        transform-origin: 0 50% 0;
+        transform-style: preserve-3d;
+        transition: all .5s cubic-bezier(.25, 1, .25, 1);
+    }
+
+
+  
+    ._cover {
+        background: var(--Book-bg);
+    }
+
+}
+  
+ 
+ 
+  
+
