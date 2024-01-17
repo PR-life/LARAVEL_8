@@ -73,6 +73,7 @@ class StoreRequest extends FormRequest
             //
             'tag_id' => 'nullable|integer|exists:tags,id',
             'category_id' => 'nullable|integer|exists:categories,id',
+
             'tag_ids' => 'nullable|array',
             'tag_ids.*' => 'nullable|integer|exists:tags,id',
 
@@ -81,6 +82,7 @@ class StoreRequest extends FormRequest
             'title' => 'nullable|string',
             'description' => 'nullable|string',
             'keywords' => 'nullable|string',
+
             'canonical' => 'nullable|string',
 
         ];
@@ -91,10 +93,10 @@ class StoreRequest extends FormRequest
 	public function messages() {
 		// return parent::messages(); // по умолчаиню
 		return [
-			'name.required' => 'Название поста',
-			'category_id.integer' => 'category_id должен быть integer',
-			'category_id.exists' => 'такого category_id в таблице categories нет',
-			'prev_image.file' => 'необходимо выбрать файл',
+			// 'name.required' => 'Название поста',
+			// 'category_id.integer' => 'category_id должен быть integer',
+			// 'category_id.exists' => 'такого category_id в таблице categories нет',
+			// 'prev_image.file' => 'необходимо выбрать файл',
 		];
 	}
 }

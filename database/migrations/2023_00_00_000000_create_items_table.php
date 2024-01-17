@@ -68,7 +68,7 @@ class CreateItemsTable extends Migration
 			//
 			$table->unsignedInteger('tag_id')->nullable();
 			
-			$table->unsignedInteger('category_id')->nullable();
+			$table->unsignedBigInteger('category_id')->nullable();
             $table->index('category_id', 'item_category_idx');
             $table->foreign('category_id', 'item_category_fk')->on('categories')->references('id');
         
