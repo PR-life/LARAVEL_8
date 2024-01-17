@@ -30,7 +30,7 @@ class DatabaseSeeder extends Seeder
 
 		// Faq::factory()->count(15)->create();
 		// Sms::factory()->count(100)->create();
-		Face::factory()->count(20)->create();
+		// Face::factory()->count(20)->create();
 
     }
 }
