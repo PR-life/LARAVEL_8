@@ -26,6 +26,7 @@ class CreatePaperTagsTable extends Migration
             $table->foreign('paper_id', 'paper_tag_paper_fk')->on('papers')->references('id')->onDelete('cascade');
             $table->foreign('tag_id', 'paper_tag_tag_fk')->on('tags')->references('id')->onDelete('cascade');
 
+            $table->unique(['paper_id','tag_id']);
 			$table->timestamps();
         });
     }

@@ -60,6 +60,18 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin']], function
     });
 
 
+    Route::group(['namespace' => 'Item', 'prefix' => 'items'], function(){
+        Route::get('/', 'IndexController')->name('item.index');
+        Route::get('/trash', 'IndexTrashedController')->name('item.trash');
+        Route::get('/create', 'CreateController')->name('item.create');
+        Route::post('/', 'StoreController')->name('item.store');
+        // // // // // Route::get('/{item}', 'ShowController')->name('item.show');
+        Route::get('/{item}/edit', 'EditController')->name('item.edit');
+        Route::patch('/{item}', 'UpdateController')->name('item.update');
+        Route::delete('/{item}', 'DeleteController')->name('item.delete');
+    });
+
+
     Route::group(['namespace' => 'Paper', 'prefix' => 'papers'], function(){
         Route::get('/', 'IndexController')->name('paper.index');
         Route::get('/trash', 'IndexTrashedController')->name('paper.trash');

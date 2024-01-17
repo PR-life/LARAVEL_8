@@ -26,17 +26,13 @@
             @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-posts'])
                 @foreach($categories as $category)     
                     @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $category])
-
                     @if($category->childrenCategories)
                         <div class="children -lvl_1 / round">
                             @foreach ($category->childrenCategories as $childCategory)
                                 @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $childCategory])
-                                {{-- @include('zADMIN.combine.Teaser.category', ['Var' => $childCategory, 'route' => route('admin.category.edit',$childCategory->id)]) --}}
                             @endforeach
                         </div>
                     @endif
-
-
                 @endforeach
             @endcomponent
             @include('zADMIN.mod.paginator', ['Var' => $categories])

@@ -23,6 +23,7 @@ class CreateLandingTagsTable extends Migration
             $table->foreign('landing_id', 'landing_tag_landing_fk')->on('landings')->references('id')->onDelete('cascade');
             $table->foreign('tag_id', 'landing_tag_tag_fk')->on('tags')->references('id')->onDelete('cascade');
 
+            $table->unique(['landing_id','tag_id']);
 			$table->timestamps();
         });
     }

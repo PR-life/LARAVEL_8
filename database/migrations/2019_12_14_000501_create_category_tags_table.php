@@ -23,6 +23,8 @@ class CreateCategoryTagsTable extends Migration
             $table->foreign('category_id', 'category_tag_category_fk')->on('categories')->references('id')->onDelete('cascade');
             $table->foreign('tag_id', 'category_tag_tag_fk')->on('tags')->references('id')->onDelete('cascade');
 
+            $table->unique(['category_id','tag_id']);
+            
 			$table->timestamps();
         });
     }

@@ -23,6 +23,7 @@ class CreateCourseTagsTable extends Migration
             $table->foreign('course_id', 'course_tag_course_fk')->on('courses')->references('id')->onDelete('cascade');
             $table->foreign('tag_id', 'course_tag_tag_fk')->on('tags')->references('id')->onDelete('cascade');
 
+            $table->unique(['course_id','tag_id']);
 			$table->timestamps();
         });
     }

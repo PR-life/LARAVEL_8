@@ -30,5 +30,12 @@
         @slot('name', 'Статьи')
         @svg('plus')
     @endcomponent 
+    @component('_wrap.Chunk.Aside.index')
+        @slot('routeName', 'admin.item.index')
+        @slot('linkAdd', route('admin.item.create'))
+        @slot('icoCss', '-XS')
+        @slot('name', 'item')
+        @svg('plus')
+    @endcomponent 
 </div>
 @endcomponent

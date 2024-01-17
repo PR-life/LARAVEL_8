@@ -24,15 +24,8 @@ class CreateFaqFaqsTable extends Migration
             $table->foreign('faqs_id', 'faqs_faq_faqs_fk')->on('faqs')->references('id')->onDelete('cascade');
 
 
-            // $table->unsignedBigInteger('category_id');
-            // $table->unsignedBigInteger('tag_id');
 
-            // $table->index('category_id', 'category_tag_category_idx');
-            // $table->index('tag_id', 'category_tag_tag_idx');
-
-            // $table->foreign('category_id', 'category_tag_category_fk')->on('categories')->references('id')->onDelete('cascade');
-            // $table->foreign('tag_id', 'category_tag_tag_fk')->on('tags')->references('id')->onDelete('cascade');
-
+            $table->unique(['faq_id','faqs_id']);
 			$table->timestamps();
         });
     }

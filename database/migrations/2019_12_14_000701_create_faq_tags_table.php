@@ -23,6 +23,7 @@ class CreateFaqTagsTable extends Migration
             $table->foreign('faq_id', 'faq_tag_faq_fk')->on('faqs')->references('id')->onDelete('cascade');
             $table->foreign('tag_id', 'faq_tag_tag_fk')->on('tags')->references('id')->onDelete('cascade');
 
+            $table->unique(['faq_id','tag_id']);
 			$table->timestamps();
         });
     }

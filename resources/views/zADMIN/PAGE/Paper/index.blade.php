@@ -14,14 +14,14 @@
     @include('zADMIN.PAGE._lego.filter.btnVol')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Статьи', 'add' => route('admin.paper.create'), 'ico' => 'barMenu_relations'])
     @include('zADMIN.PAGE._lego.filter.SHEMA.index.papers')
-    <div class="Wings _indexMax">
+    {{-- <div class="Wings _indexMax">
         <div class="_win -t / space-leftM">
             @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'landing', 'css' => '-paper'])
         </div>
     </div>
     <div class="paragraph"></div>
     <div class="paragraphX2"></div>
-    @include('zADMIN.PAGE._lego.filter.table-indexSeo')
+    @include('zADMIN.PAGE._lego.filter.table-indexSeo') --}}
 @endpush
 
  

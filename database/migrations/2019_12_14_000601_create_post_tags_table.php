@@ -26,6 +26,7 @@ class CreatePostTagsTable extends Migration
             $table->foreign('post_id', 'post_tag_post_fk')->on('posts')->references('id')->onDelete('cascade');
             $table->foreign('tag_id', 'post_tag_tag_fk')->on('tags')->references('id')->onDelete('cascade');
 
+            $table->unique(['post_id','tag_id']);
 			$table->timestamps();
         });
     }

@@ -12,16 +12,9 @@
 
 @push('topAfter')
     @include('zADMIN.PAGE._lego.filter.btnVol')
-    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Материалы', 'add' => route('admin.paper.create'), 'ico' => 'barMenu_editorial'])
-    @include('zADMIN.PAGE._lego.filter.SHEMA.index.posts')
-    <div class="Wings _indexMax">
-        <div class="_win -t / space-leftM">
-            @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'landing', 'css' => '-post'])
-        </div>
-    </div>
-    <div class="paragraph"></div>
-    <div class="paragraphX2"></div>
-    @include('zADMIN.PAGE._lego.filter.table-indexSeo')
+    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Материалы', 'add' => route('admin.post.create'), 'ico' => 'barMenu_editorial'])
+    {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.posts') --}}
+    @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'post'])
 @endpush
 
  
