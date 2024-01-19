@@ -42,8 +42,8 @@
 	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.category.update', $category->id), 'css' => '-category'])
 
 
-		@include('zADMIN._brick.bar.v.edit', ['route' => route('admin.category.index', ['shema' => request()->get('shema')])])
-
+		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.category.index', ['shema' => request()->get('shema')])]) --}}
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.category.index'])
 
 		<div class="_shell">
 			@include('zADMIN._bd.edit.min',['Var'=> $category])

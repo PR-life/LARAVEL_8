@@ -22,6 +22,9 @@
 </div>
 @endcomponent
 
+<div class="flex / cross-xs / space-left">
+    @include('zADMIN._brick.media.emoji.index')
+</div>
 
 @component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' =>'keyword'. (class_basename($Var)),])
 <div class="net">

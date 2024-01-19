@@ -10,7 +10,8 @@
 
 	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.customer.update', $customer->id), 'css' => '-customer'])
 
-		@include('zADMIN._brick.bar.v.edit', ['route' => route('admin.customer.index')])
+		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.customer.index')]) --}}
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.customer.index'])
 
 
 		<div class="_shell">

@@ -23,7 +23,7 @@ class StoreRequest extends FormRequest
             'css' => 'nullable|string',
             'type' => 'nullable|string',
             'action' => 'nullable|string',
-            'fase' => 'nullable|string',
+            'face' => 'nullable|string',
 
 			//
             'name_tag' => 'nullable|string',

@@ -3,7 +3,7 @@
     <div class="W-100 edge-flaber">
         {!!$slot!!}
     </div>
-
+    
     @component('_wrap.Flaber.index')
         @slot('id', $id ?? 'Flaber_edit')
         @slot('data', "data-click data-css data-node='parent' data-toggle='off' data-localStorage localStorage-id")

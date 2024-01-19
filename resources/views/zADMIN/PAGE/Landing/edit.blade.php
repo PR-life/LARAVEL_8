@@ -41,7 +41,8 @@
 
 	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.landing.update', $landing->id), 'css' => '-landing'])
 
-		@include('zADMIN._brick.bar.v.edit', ['route' => route('admin.landing.index', ['shema' => request()->get('shema')])])
+		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.landing.index', ['shema' => request()->get('shema')])]) --}}
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.landing.index'])
 
 
 		<div class="_shell">

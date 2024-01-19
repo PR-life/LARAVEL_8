@@ -43,13 +43,14 @@
 	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.faq.update', $faq->id), 'css' => '-faq'])
 
 
-		@include('zADMIN._brick.bar.v.edit', ['route' => route('admin.faq.index', [
+		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.faq.index', [
 			'shema' => request()->get('shema'),
 			'tag_id' => request()->get('tag_id'),
 			'page' => request()->get('page'),
 			'category_id' => request()->get('category_id'),
 			'tag_id' => request()->get('tag_id')
-			])])
+			])]) --}}
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.faq.index'])
 
 
 

@@ -10,7 +10,8 @@
 
 	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.faq.update', $faq->id), 'css' => '-faq'])
 
-		@include('zADMIN._brick.bar.v.edit', ['route' => route('admin.faq.index')])
+		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.faq.index')]) --}}
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.faq.index'])
 
 
 		<div class="_shell">

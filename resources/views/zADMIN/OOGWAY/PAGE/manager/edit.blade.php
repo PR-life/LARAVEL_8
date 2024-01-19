@@ -21,7 +21,8 @@
 
 	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.oogway.manager.update', $oogway->id), 'css' => '-oogway'])
 
-		@include('zADMIN._brick.bar.v.edit', ['route' => route('admin.oogway.manager.index')])
+		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.oogway.manager.index')]) --}}
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.oogway.manager.index'])
 
 
 		<div class="_shell">

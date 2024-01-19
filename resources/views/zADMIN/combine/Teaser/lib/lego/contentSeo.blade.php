@@ -12,3 +12,11 @@
         {!!$Var->en_description ?? '<em>en_description</em>'!!}
     </span>
 </div>
+ 
+@isset($Var->canonical)
+<div class="paragraph"></div>
+<span class="content-s / space-xs"> 
+    <span class="content-xxs mr-1 / Grey -c50">canonical:</span>
+    <span class="Grey -c30">{{$Var->canonical}}</span>
+</span>
+@endisset

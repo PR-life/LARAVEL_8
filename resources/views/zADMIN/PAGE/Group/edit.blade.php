@@ -39,8 +39,8 @@
 
 	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.group.update', $group->id), 'css' => '-group'])
 
-		@include('zADMIN._brick.bar.v.edit', ['route' => route('admin.group.index', ['shema' => request()->get('shema')])])
-
+		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.group.index', ['shema' => request()->get('shema')])]) --}}
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.group.index'])
 
 		<div class="_shell">
 			@include('zADMIN._bd.edit.published',['Var'=> $group])

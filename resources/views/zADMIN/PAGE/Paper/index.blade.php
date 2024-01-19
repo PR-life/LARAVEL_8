@@ -30,7 +30,7 @@
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-posts'])
+            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-papers'])
                 @foreach($papers as $paper)     
                     @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $paper])
                 @endforeach

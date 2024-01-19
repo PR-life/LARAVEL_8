@@ -25,7 +25,8 @@
 
 	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.tag.update', $tag->id), 'css' => '-tag'])
 
-		@include('zADMIN._brick.bar.v.edit', ['route' => route('admin.tag.index', ['shema' => request()->get('shema')])])
+		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.tag.index', ['shema' => request()->get('shema')])]) --}}
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.tag.index'])
 
 
 		<div class="_shell">

@@ -59,6 +59,8 @@ html {
 }
 
 .menu.-tile {
+	--c-menu:rgba(255, 255, 255, .5);
+	--c-menu-border: hsla(0, 0%, 100%, 0.05);
 	--c-menu-border-active: @c-border;
 	--bg-menu: #0d0e11;
 	--bg-menu-hover: #0d0e11;
@@ -78,6 +80,28 @@ html {
 	}
 }
 
+
+ 
+
+.Tabs ._tab {
+	.menu.-tag label {
+		border-color: hsla(0, 0%, 100%, .05);
+	}
+}
+
+.menu.-tile {
+	label.Bone {
+		--c-text:rgba(255, 255, 255, .5);
+
+		border-color: var(--c-menu-border);
+	}
+	input:checked ~ label {
+		--c-text:rgba(255, 255, 255, .75);
+
+		background: var(--bg-menu-active);
+		border-color: var(--c-menu-border-active);
+	}
+}
 
 // .menu.-tag.Kite {
 // 	--c-menu: inherit;

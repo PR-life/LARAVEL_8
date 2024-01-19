@@ -42,7 +42,8 @@
 	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.post.update', $post->id), 'css' => '-post'])
 
 
-		@include('zADMIN._brick.bar.v.edit', ['route' => route('admin.post.index', ['shema' => request()->get('shema')])])
+		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.post.index', ['shema' => request()->get('shema')])]) --}}
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.post.index'])
 
 
 		<div class="_shell / net">

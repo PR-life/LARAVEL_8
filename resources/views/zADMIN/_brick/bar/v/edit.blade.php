@@ -1,6 +1,16 @@
+<?
+$link = route($routeName, [
+	'shema' => request()->get('shema'),
+	'tag_id' => request()->get('tag_id'),
+	'page' => request()->get('page'),
+	'category_id' => request()->get('category_id'),
+	'tag_id' => request()->get('tag_id')
+]);
+?>
+
 @component('zADMIN._brick.bar.v._wrap.index')
 	<div class="paragraph"></div>
-	<a class="flex cI cC / orb" href="{{$route}}" title="назад">
+	<a class="flex cI cC / orb" href="{{$link}}" title="назад">
 		<span class="Ico -S">@svg('arrow-2')</span>
 	</a>
 	<button class="flex cI cC / orb pointer" type="submit" title="обновить">

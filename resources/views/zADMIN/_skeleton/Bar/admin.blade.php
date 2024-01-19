@@ -61,8 +61,8 @@
         <div class="void / flex dC / OnionAll">
             <div class="paragraph net / _first / x-asideClose-20102011"></div>
 
-            @include('zADMIN.menu.Bar.slot_content')
             @include('zADMIN.menu.Bar.slot_target')
+            @include('zADMIN.menu.Bar.slot_content')
             @include('zADMIN.menu.Bar.slot_relations')
             {{-- @include('zADMIN.menu.Bar.slot_editorial') --}}
             {{-- @include('zADMIN.menu.Bar.slot_customer') --}}

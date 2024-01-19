@@ -10,7 +10,8 @@
 
 	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.sms.update', $sms->id), 'css' => '-sms'])
 
-		@include('zADMIN._brick.bar.v.edit', ['route' => route('admin.sms.index')])
+		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.sms.index')]) --}}
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.sms.index'])
 
 
 		<div class="_shell">

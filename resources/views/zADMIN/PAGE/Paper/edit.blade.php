@@ -42,13 +42,14 @@
 	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.paper.update', $paper->id), 'css' => '-paper'])
 
 
-		@include('zADMIN._brick.bar.v.edit', ['route' => route('admin.paper.index', [
+		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.paper.index', [
 			'shema' => request()->get('shema'),
 			'tag_id' => request()->get('tag_id'),
 			'page' => request()->get('page'),
 			'category_id' => request()->get('category_id'),
 			'tag_id' => request()->get('tag_id')
-			])])
+			])]) --}}
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.paper.index'])
 
 
 

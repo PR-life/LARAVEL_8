@@ -37,7 +37,7 @@ if ($Var->name) {
                 @endif
 
                 <div class="flex cI">
-                    <a class="content-m b600" href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', [mb_strtolower(class_basename($Var)) => $Var->id, 'page' => $page ?? null, 'tag_id' => $tag_id ?? null, 'category_id' => $category_id ?? null]) }}">
+                    <a class="content-m b600 / Article" href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', [mb_strtolower(class_basename($Var)) => $Var->id, 'page' => $page ?? null, 'tag_id' => $tag_id ?? null, 'category_id' => $category_id ?? null]) }}">
     
     
                         <div class="Abs -left / flex dC cC x-12012019 / Grey / v-Status -on">
@@ -45,7 +45,7 @@ if ($Var->name) {
                         </div>
     
                         <span class="flex / cross">
-                            @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $NAME, 'css' => 'x-name'])
+                            @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $NAME, 'h2' => $Var->h2 ?? null, 'css' => 'x-name'])
                             <span class="EN / content-m b300 / block oneLine nowrap Ellipsis x-name / Grey">{!!$Var->en_name ?? '<em>en_name</em>'!!}</span>
                         </span>
     
@@ -155,7 +155,7 @@ if ($Var->name) {
                         @if($Var->category->id != 1)
                             <div class="Wings">
                                 <div class="_win right-text">
-                                    <span class="_nameBadge / content-xxs space-xs round-s / Grey">{{$Var->category->slug}}</span>
+                                    <span class="_nameBadge / content-xxxs space-s round-s / Grey">{{$Var->category->slug}}</span>
                                 </div>
                             </div>
 
