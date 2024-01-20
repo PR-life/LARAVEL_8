@@ -28,7 +28,7 @@
 @section('top')
 <div id="Top" class="Top -h / flex bC cI space-left / Goo -t / bg _indexMax">
     <div class="_l">
-        <ul class="Bread / flex">
+        <ul class="Bread vol-dot / flex / Grey -c30">
             <li>
                 <a href="/admin">
                     <span class="content-xs">Главная</span>

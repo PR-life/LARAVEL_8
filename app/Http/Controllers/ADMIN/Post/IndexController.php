@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\ADMIN\Post;
+// use App\Http\Controllers\Controller;
 ////
 use App\Http\Requests\ADMIN\Post\FilterRequest;
 use App\Http\Filters\PostFilter;
@@ -22,9 +23,9 @@ class IndexController extends BaseController
 		// dd($request->fullUrlWithQuery(['type' => 'phone']));
 		/***/
 
-		$data = [
-			'slug' => 'posts',
-		];
+		// $data = [
+		// 	'slug' => 'posts',
+		// ];
 
         $categories = Category::all();
 		$tags = Tag::all();
@@ -39,7 +40,7 @@ class IndexController extends BaseController
 			// $posts = Post::filter($filter)->orderBy('created_at', 'desc')->get();
 			// $posts = Post::paginate(10);
 
-        return view('zADMIN.PAGE.Post.index', compact('posts','categories','tags','data'));
+        return view('zADMIN.PAGE.Post.index', compact('posts','categories','tags'));
 
     }
 }

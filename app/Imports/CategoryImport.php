@@ -46,12 +46,15 @@ class CategoryImport implements ToCollection, WithHeadingRow
 
                     'menu' => $item['menu'],
 
+                    'bread_name' => $item['bread_name'],
+
                     'prev_h1' => $item['prev_h1'],
                     'prev_h2' => $item['prev_h2'],
                     'link_landing' => $item['link_landing'],
 
                     'category_id' => $item['category_id'],
 
+                    'string_1' => $item['string_1'],
                     'knot_1' => $item['knot_1'],
 
                     'order' => $item['order'],

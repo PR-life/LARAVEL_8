@@ -37,8 +37,25 @@ if ($Var->name) {
                 @endif
 
                 <div class="flex cI">
-                    <a class="content-m b600 / Article" href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', [mb_strtolower(class_basename($Var)) => $Var->id, 'page' => $page ?? null, 'tag_id' => $tag_id ?? null, 'category_id' => $category_id ?? null]) }}">
+
+                    <h1></h1>
+                    <a class="content-m b600 / Article" 
+                        href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', [
+                                mb_strtolower(class_basename($Var)) => $Var->id,
+                                'name' => $name ?? null,
+                                'page' => $page ?? null,
+                                'tag_id' => $tag_id ?? null,
+                                'category_id' => $category_id ?? null
+                            ])
+                        }}"
+                    >
+
     
+
+                        {{-- <a class="content-m b600" href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', [mb_strtolower(class_basename($Var)) => $Var->id, 'page' => $page ?? null, 'tag_id' => $tag_id ?? null, 'category_id' => $category_id ?? null]) }}"> --}}
+    
+
+
     
                         <div class="Abs -left / flex dC cC x-12012019 / Grey / v-Status -on">
                             @include('zADMIN.combine.Teaser.lib.lego.icoStatus')

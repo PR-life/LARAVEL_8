@@ -30,7 +30,7 @@ $arr = array(
  
 
 
-@push('topAfter')
+@push('bee')
 
     @component('zADMIN.mod.Name.oogway')@endcomponent
  

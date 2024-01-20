@@ -21,16 +21,17 @@ class Tag extends Model
 	}
 
 	public function faqs(){
-		$lang = app()->getLocale();
+		// $lang = app()->getLocale();
 
+		return $this->belongsToMany(Faq::class, 'faq_tags', 'tag_id', 'faq_id')->where('name', '!=', null)->orderBy('order', 'asc');
 		
-		if($lang == 'ru') {
-			return $this->belongsToMany(Faq::class, 'faq_tags', 'tag_id', 'faq_id')->where('name', '!=', null)->orderBy('order', 'asc');
-		} elseif($lang == 'en') {
-			return $this->belongsToMany(Faq::class, 'faq_tags', 'tag_id', 'faq_id')->where('en_name', '!=', null)->orderBy('order', 'asc');
-		} else {
-			return null;
-		}
+		// if($lang == 'ru') {
+		// 	return $this->belongsToMany(Faq::class, 'faq_tags', 'tag_id', 'faq_id')->where('name', '!=', null)->orderBy('order', 'asc');
+		// } elseif($lang == 'en') {
+		// 	return $this->belongsToMany(Faq::class, 'faq_tags', 'tag_id', 'faq_id')->where('en_name', '!=', null)->orderBy('order', 'asc');
+		// } else {
+		// 	return null;
+		// }
 		   
 	}
 

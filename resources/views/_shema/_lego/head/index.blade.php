@@ -3,7 +3,7 @@
     
 	<meta name="description" content="@yield('description')">
 	<meta name="keywords" content="@yield('keywords')">
-	<title>@yield('title', 'Заголовок по умолчанию')</title>
+	<title>@yield('title', 'Заголовок по умолчанию 555')</title>
 
 @stack('meta')
 	@include('_.src._head.link')

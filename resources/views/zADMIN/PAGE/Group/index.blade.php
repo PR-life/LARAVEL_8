@@ -11,7 +11,7 @@
 @endpush
 
 
-@push('topAfter')
+@push('bee')
     @include('zADMIN.PAGE._lego.filter.btnVol')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Группы', 'add' => route('admin.group.create'), 'ico' => 'barMenu_relations'])
     {{-- @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'group']) --}}

@@ -3,7 +3,7 @@
 @section('title')Oogway @endsection
 
  
-@push('topAfter')
+@push('bee')
 
 @component('zADMIN.mod.Name.oogway')@endcomponent
 

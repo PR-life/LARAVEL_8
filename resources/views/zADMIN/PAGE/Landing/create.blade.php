@@ -5,7 +5,7 @@
 
 
 
-@push('topAfter')
+@push('bee')
     {{-- @include('zADMIN.PAGE._lego.filter.btnVol') --}}
     {{-- @include('zADMIN._lego.Bee.nameIndex',['name' => 'Теги. Создать', 'ico' => 'barMenu_relations']) --}}
 @endpush

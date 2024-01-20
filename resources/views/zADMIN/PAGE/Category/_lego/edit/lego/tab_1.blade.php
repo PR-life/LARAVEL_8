@@ -19,3 +19,8 @@
     <label class="Abs" for="inputName_seo_en">@svg('plus')en_name_seo</label>
 </div>
 @endcomponent
+
+<div class="_shell x-hr Form -S / vol-Abs">
+    <input id="inputString_1" type="text" name="string_1" value="{{$category->string_1 ?? old('string_1')}}" placeholder=".">
+    <label class="Abs" for="inputString_1">@svg('plus')string_1</label>
+</div>

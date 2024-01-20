@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+
+html {
+    --family-Charter: Charter, "Times New Roman", sans-serif;
+}
+
+.familyCharter,
+.Family-Charter * {
+	font-family: var(--family-Charter) !important;
+}
+
+@font-face {
+    font-family: 'Charter';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Charter'), url(/font/Charter/400.woff2) format('woff2');
+    font-display: swap;
+}
+

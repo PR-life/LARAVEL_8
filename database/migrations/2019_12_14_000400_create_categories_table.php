@@ -24,8 +24,9 @@ class CreateCategoriesTable extends Migration
 			$table->string('name_seo')->nullable();
             $table->string('h1')->nullable();
 
-		
 			$table->unsignedBigInteger('menu')->nullable();
+
+            $table->string('bread_name')->nullable();
 
             $table->string('prev_h1')->nullable();
 			$table->string('prev_h2')->nullable();
@@ -34,6 +35,7 @@ class CreateCategoriesTable extends Migration
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
 			
+            $table->string('string_1')->nullable();
             $table->text('knot_1')->nullable();
   			
 			$table->unsignedInteger('order')->default('50');

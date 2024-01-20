@@ -31,11 +31,13 @@ class CreateItemsTable extends Migration
 
             $table->string('h1')->nullable();
             $table->string('h2')->nullable();
-            $table->string('intro')->nullable();
+            $table->text('intro')->nullable();
             $table->text('article')->nullable();
 			$table->text('details_1')->nullable();
 			$table->text('details_2')->nullable();
 
+            $table->string('bread_name')->nullable();
+            
             $table->string('prev_h1')->nullable();
             $table->string('prev_h2')->nullable();
             $table->string('prev_p')->nullable();

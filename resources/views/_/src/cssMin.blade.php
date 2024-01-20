@@ -32,6 +32,9 @@ input,button,ul,ol{
 hr{
 	border-width:0
 }
+a {
+	color:inherit;
+}
 .contentBox{
 	box-sizing:content-box
 }
@@ -426,6 +429,9 @@ hr,.ghost,.visible,.Op,.opVersa{
 }
 @media screen and (max-width:799px){
 
+	.float_mbl {
+		float:left;
+	}
 	.ghostMbl{
 		opacity:0;
 	}

@@ -43,6 +43,8 @@ class StoreRequest extends FormRequest
 			'shema_teaser' => 'nullable|string',
 
 			//
+			'bread_name' => 'nullable',
+			
 			'prev_h1' => 'nullable|string',
 			'prev_h2' => 'nullable|string',
 			'prev_p' => 'nullable|string',

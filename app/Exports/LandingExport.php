@@ -23,6 +23,8 @@ class LandingExport implements FromCollection, WithHeadings, WithStrictNullCompa
 			"intro",
 			"text",
 
+			"bread_name",
+
 			"prev_h1",
 			"prev_h2",
 			"prev_p",

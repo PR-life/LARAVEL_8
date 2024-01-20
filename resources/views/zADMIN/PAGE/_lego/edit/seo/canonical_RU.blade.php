@@ -27,6 +27,11 @@
     </div>
 </div>
 
+<div class="_shell x-hr Form -S / vol-Abs">
+    <input id="inputBreadName" type="text" name="bread_name" value="{{$Var->bread_name ?? old('bread_name')}}" placeholder=".">
+    <label class="Abs" for="inputBreadName">@svg('plus')bread_name</label>
+</div>
+
 <div class="_shell x-hr Form -S / vol-Abs / net">
     <input id="inputCanonical" type="text" name="canonical" value="{{$Var->canonical ?? old('canonical')}}" placeholder=".">
     <label class="Abs" for="inputCanonical">@svg('plus')canonical</label>

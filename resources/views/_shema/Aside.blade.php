@@ -29,9 +29,10 @@ $arrCSS = [
 	<div class="index relative">
 		@stack('topBefore')
 		@yield('top')
+		@stack('topAfter')
 
 		<div class="Bee">
-			@stack('topAfter')
+			@stack('bee')
 		</div>
 	
 		@stack('contentBefore')

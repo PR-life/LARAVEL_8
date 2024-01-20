@@ -31,12 +31,15 @@ class CategoryExport implements FromCollection, WithHeadings, WithStrictNullComp
 			
 			"menu",
 
+			"bread_name",
+
 			"prev_h1",
 			"prev_h2",
 			"link_landing",
 
 			"category_id",
 
+			"string_1",
 			"knot_1",
 
 			"order",

@@ -26,6 +26,8 @@ class CreatePostsTable extends Migration
             $table->text('text')->nullable();
 			
 			//Prev
+			$table->string('bread_name')->nullable();
+			
 			$table->string('prev_h1')->nullable();
 			$table->string('prev_h2')->nullable();
 			$table->string('prev_p')->nullable();

@@ -30,6 +30,8 @@ class PaperExport implements FromCollection, WithHeadings, WithStrictNullCompari
 			"answer",
 			"answer_user_name",
 
+			"bread_name",
+
 			"prev_h1",
 			"prev_h2",
 			"prev_p",

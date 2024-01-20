@@ -37,6 +37,8 @@ class StoreRequest extends FormRequest
             'menu' => 'nullable',
 
             //
+            'bread_name' => 'nullable',
+
             'prev_h1' => 'nullable',
             'prev_h2' => 'nullable',
             'link_landing' => 'nullable',
@@ -48,6 +50,7 @@ class StoreRequest extends FormRequest
 
             
 			//
+            'string_1' => 'nullable',
             'knot_1' => 'nullable',
 
 			//

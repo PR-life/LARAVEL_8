@@ -36,6 +36,8 @@ class StoreRequest extends FormRequest
             'details_2' => 'nullable|string',
 
             //
+			'bread_name' => 'nullable',
+			
 			'prev_h1' => 'nullable|string',
 			'prev_h2' => 'nullable|string',
 			'prev_p' => 'nullable|string',

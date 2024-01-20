@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+
+}
+
+@media screen and (max-width:@w-menu-2) {
+}
+
+
+
+.Bread.vol-oblique > *::before {
+    content: '/';
+	left: calc(0px - var(--font)*.25);
+    font-size: 70%;
+	// top: calc(50% - 1px);
+	// background-color: #bcc3d2;
+	// border-radius: 50%;
+	// height: var(--Bread-h-sep);
+	// width: 4px;
+}
+
+.Bread.vol-dot > *::before {
+	left: -2px;
+	top: calc(50% - 1px);
+	background-color: #bcc3d2;
+	border-radius: 50%;
+	height: var(--Bread-h-sep);
+	width: 4px;
+}
+
+
+
+
+//
+
+.Bread > * {
+	position: relative;
+}
+
+.Bread > *:first-child::before {
+	display: none;
+}
+
+.Bread> *::before {
+    content: '';
+	position: absolute;
+}

@@ -5,12 +5,14 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\Traits\Filterable;
 use Carbon\Carbon;
 
 class Category extends Model
 {
     use HasFactory;
     use SoftDeletes;
+    use Filterable;
 
     protected $table = 'categories';
     protected $guarded = false;
@@ -24,6 +26,17 @@ class Category extends Model
         'description',
         'keywords',
     ];
+
+    public function items() {
+        // return $this->hasMany(
+        //     Item::class,
+        //     'category_id',
+        //     'id',
+        // )->orderBy('created_at', 'desc');
+        return $this->hasMany(Item::class)->orderBy('order', 'desc');;
+    }
+
+
 
     public function posts() {
         return $this->hasMany(

@@ -39,6 +39,11 @@
 </div>
 @endcomponent
 
+<div class="_shell x-hr Form -S / vol-Abs">
+    <input id="inputBreadName" type="text" name="bread_name" value="{{$Var->bread_name ?? old('bread_name')}}" placeholder=".">
+    <label class="Abs" for="inputBreadName">@svg('plus')bread_name</label>
+</div>
+
 @component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' =>'canonical'. (class_basename($Var)), 'cssWrap' => 'net'])
 <div class="_shell x-hr Form -S / vol-Abs / net">
     <input id="inputCanonical" type="text" name="canonical" value="{{$Var->canonical ?? old('canonical')}}" placeholder=".">

@@ -10,7 +10,7 @@
 </li>
 @endpush
 
-@push('topAfter')
+@push('bee')
     @include('zADMIN.PAGE._lego.filter.btnVol')
     {{-- <div class="Bee"> --}}
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Landings', 'add' => route('admin.landing.create'), 'ico' => 'barMenu_target'])

@@ -24,6 +24,8 @@ class PostExport implements FromCollection, WithHeadings, WithStrictNullComparis
 			"intro",
 			"text",
 
+			"bread_name",
+
 			"prev_h1",
 			"prev_h2",
 			"prev_p",

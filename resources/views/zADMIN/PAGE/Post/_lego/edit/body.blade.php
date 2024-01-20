@@ -24,7 +24,7 @@
 		@endslot
 		@slot('tab_2')
 			<div class="paragraphX2 / net"></div>
-			@include('zADMIN.PAGE._lego.edit.seo.index', ['Var' => $post, 'nameModel' => 'Post'])
+			@include('zADMIN.PAGE._lego.edit.seo.canonical', ['Var' => $post, 'nameModel' => 'Post'])
 		@endslot
 	@endcomponent
 

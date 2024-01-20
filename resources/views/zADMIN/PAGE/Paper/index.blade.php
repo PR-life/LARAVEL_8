@@ -10,7 +10,7 @@
 </li>
 @endpush
 
-@push('topAfter')
+@push('bee')
     @include('zADMIN.PAGE._lego.filter.btnVol')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Статьи', 'add' => route('admin.paper.create'), 'ico' => 'barMenu_relations'])
     @include('zADMIN.PAGE._lego.filter.SHEMA.index.papers')

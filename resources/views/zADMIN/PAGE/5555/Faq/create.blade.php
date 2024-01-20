@@ -3,7 +3,7 @@
 @section('title')новый Faq @endsection
 
 
-@push('topAfter')
+@push('bee')
     <div class="Bee / -Grey">
         <div class="space-left / hill-m / flex cI">
             <div class="flex cI">
