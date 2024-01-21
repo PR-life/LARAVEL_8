@@ -42,10 +42,9 @@ class CreateItemsTable extends Migration
             $table->string('prev_h2')->nullable();
             $table->string('prev_p')->nullable();
             $table->string('prev_image')->nullable();
-
+            $table->string('prev_url')->nullable();
 
 			$table->text('menu_kite')->nullable();
-
 
 			// vars
 			$table->string('param_report')->nullable();
@@ -56,7 +55,6 @@ class CreateItemsTable extends Migration
 			//
 			$table->text('knot_1')->nullable();
 
-
 			$table->unsignedInteger('order')->default('50');
             $table->unsignedInteger('status')->default('1');
             $table->unsignedInteger('views')->default('1');
@@ -66,7 +64,6 @@ class CreateItemsTable extends Migration
 			//
             $table->unsignedInteger('mafia')->default('0');
 
-
 			//
 			$table->unsignedInteger('tag_id')->nullable();
 			
@@ -74,6 +71,10 @@ class CreateItemsTable extends Migration
             $table->index('category_id', 'item_category_idx');
             $table->foreign('category_id', 'item_category_fk')->on('categories')->references('id');
         
+            $table->unsignedBigInteger('group_id')->nullable();          
+            $table->index('group_id', 'item_group_idx');
+            $table->foreign('group_id', 'item_group_fk')->on('groups')->references('id');
+           
 			//
 			$table->string('title')->nullable();
 			$table->string('description')->nullable();

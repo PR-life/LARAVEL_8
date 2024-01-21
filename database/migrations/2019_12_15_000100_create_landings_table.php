@@ -30,6 +30,7 @@ class CreateLandingsTable extends Migration
 			$table->string('prev_h2')->nullable();
 			$table->string('prev_p')->nullable();
 			$table->string('prev_image')->nullable();
+            $table->string('prev_url')->nullable();
 
 
             //
@@ -50,6 +51,8 @@ class CreateLandingsTable extends Migration
 			$table->string('title')->nullable();
 			$table->string('description')->nullable();
 			$table->string('keywords')->nullable();
+            
+            $table->string('canonical')->nullable();
 
 
 			//

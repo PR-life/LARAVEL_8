@@ -24,6 +24,12 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
+
+            // //
+			// 'css' => 'nullable|string',
+			// 'shema' => 'nullable|string',
+			// 'shema_teaser' => 'nullable|string',
+
 			'sku' => 'nullable|string',
             'name' => 'nullable|string',
 			'slug' => 'string',
@@ -37,24 +43,21 @@ class StoreRequest extends FormRequest
 			'answer' => 'nullable|string',
 			'answer_user_name' => 'nullable|string',
 
-            //
-			'css' => 'nullable|string',
-			'shema' => 'nullable|string',
-			'shema_teaser' => 'nullable|string',
-
 			//
 			'bread_name' => 'nullable',
-			
+
+			//
 			'prev_h1' => 'nullable|string',
 			'prev_h2' => 'nullable|string',
 			'prev_p' => 'nullable|string',
+            'prev_image' => 'nullable|file',
+			'prev_url' => 'nullable|string',
 
             //
 			'foto_count_teaser' => 'nullable|integer',
 			'foto_count_full' => 'nullable|integer',
 
 			//
-            'prev_image' => 'nullable|file',
             'url_foto' => 'nullable|string',
             'url_video' => 'nullable|string',
 			
@@ -68,18 +71,15 @@ class StoreRequest extends FormRequest
 			'demon_par_2' => 'nullable|string',
 			'demon_par_3' => 'nullable|string',
 
-
 			//
 			'knot_1' => 'nullable|string',
 	
-
 			//
 			'order' => 'nullable|integer',	
 			'status' => 'nullable|integer',		
 			'featured' => 'nullable|integer',		
 			'published' => 'nullable|integer',
-            
-            
+                        
 			//
 			'mafia' => 'nullable|integer',	
             
@@ -89,12 +89,12 @@ class StoreRequest extends FormRequest
             'tag_ids' => 'nullable|array',
             'tag_ids.*' => 'nullable|integer|exists:tags,id', // .* - выбираем все что в array "tag_ids"
 
-
 			//
             'title' => 'nullable|string',
             'description' => 'nullable|string',
             'keywords' => 'nullable|string',
             'canonical' => 'nullable|string',
+
 
         ];
     }

@@ -9,8 +9,11 @@
 </div>
 
 <div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputLink_landing" type="text" name="link_landing" value="{{$category->link_landing ?? old('link_landing')}}" placeholder=".">
-    <label class="Abs" for="inputLink_landing">@svg('plus')link_landing</label>
+    <input id="inputPrev_p" type="text" name="prev_p" value="{{$category->prev_p ?? old('prev_p')}}" placeholder=".">
+    <label class="Abs" for="inputPrev_p">@svg('plus')prev_p</label>
 </div>
 
-
+<div class="_shell x-hr Form -S / vol-Abs">
+    <input id="inputPrev_url" type="text" name="prev_url" value="{{$category->prev_url ?? old('prev_url')}}" placeholder=".">
+    <label class="Abs" for="inputPrev_url">@svg('plus')prev_url</label>
+</div>

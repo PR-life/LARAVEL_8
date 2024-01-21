@@ -49,7 +49,6 @@ class PostImport implements ToCollection, WithHeadingRow
                     'prev_h2' => $item['prev_h2'],
                     'prev_p' => $item['prev_p'],
 
-
                     'en_name' => $item['en_name'],
                     'en_h1' => $item['en_h1'],
                     'en_intro' => $item['en_intro'],
@@ -59,6 +58,7 @@ class PostImport implements ToCollection, WithHeadingRow
                     'en_prev_p' => $item['en_prev_p'],
 
                     'prev_image' => $item['prev_image'],
+                    'prev_url' => $item['prev_url'],
 
                     'knot_1' => $item['knot_1'],
 

@@ -27,6 +27,8 @@ class StoreRequest extends FormRequest
 
             'sku' => 'nullable|string',
 
+            'filter_par_1' => 'nullable',
+
 			//
 			'name' => 'nullable|string',
             'h1' => 'nullable|string',
@@ -38,15 +40,7 @@ class StoreRequest extends FormRequest
             'en_text' => 'nullable|string',
 
             //
-            'category_id' => 'nullable|integer|exists:categories,id',
-            'tag_ids' => 'nullable|array',
-            'tag_ids.*' => 'nullable|integer|exists:tags,id',
-            'group_id' => 'nullable|integer|exists:groups,id',
-            'faq_id' => 'nullable|integer|exists:faqs,id',
-            'faq_ids' => 'nullable|array',
-            'faq_ids.*' => 'nullable|integer|exists:faqs,id',
-
-            'filter_par_1' => 'nullable',
+            'route_name' => 'nullable|string',
 
 			//
             'knot_1' => 'nullable',
@@ -59,6 +53,16 @@ class StoreRequest extends FormRequest
 
             //
             'mafia' => 'nullable|integer',
+
+            //
+            'faq_id' => 'nullable|integer|exists:faqs,id',
+            'faq_ids' => 'nullable|array',
+            'faq_ids.*' => 'nullable|integer|exists:faqs,id',
+            'category_id' => 'nullable|integer|exists:categories,id',
+            'group_id' => 'nullable|integer|exists:groups,id',
+
+            'tag_ids' => 'nullable|array',
+            'tag_ids.*' => 'nullable|integer|exists:tags,id',
 
 
 			//

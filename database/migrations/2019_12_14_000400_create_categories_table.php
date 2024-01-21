@@ -30,7 +30,8 @@ class CreateCategoriesTable extends Migration
 
             $table->string('prev_h1')->nullable();
 			$table->string('prev_h2')->nullable();
-            $table->string('link_landing')->nullable();
+			$table->string('prev_p')->nullable();
+            $table->string('prev_url')->nullable();
 
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
@@ -45,9 +46,9 @@ class CreateCategoriesTable extends Migration
 			$table->string('title')->nullable();
 			$table->string('description')->nullable();
 			$table->string('keywords')->nullable();
+
 			$table->string('canonical')->nullable();
-
-
+             
             $table->timestamps();
             $table->softDeletes();
         });

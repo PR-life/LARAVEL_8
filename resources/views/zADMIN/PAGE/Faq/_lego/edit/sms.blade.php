@@ -22,7 +22,7 @@
         @slot('name', 'Теги')
         @component('zADMIN.PAGE._wrap.select.tags.index')
             @component('zADMIN._wrap.select.tags')
-                @include('_._brick.select.tag.edit.index',['Tags' => $tags,'Var' => $faq])
+                @include('_._brick.select.tags.edit.index',['Tags' => $tags,'Var' => $faq])
             @endcomponent
         @endcomponent
     @endcomponent
@@ -31,7 +31,7 @@
         @slot('id', 'group')
         @slot('name', 'Группа')
         @component('zADMIN.PAGE._wrap.select.groups.index')
-            @include('_._brick.select.groups.index',['Categories' => $groups, 'Var' => $faq->group_id])
+            @include('_._brick.select.groups.edit.index',['Categories' => $groups, 'Var' => $faq->group_id])
         @endcomponent
     @endcomponent
  

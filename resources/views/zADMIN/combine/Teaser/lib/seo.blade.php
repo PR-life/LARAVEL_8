@@ -38,7 +38,7 @@ if ($Var->name) {
 
                 <div class="flex cI">
 
-                    <h1></h1>
+                    {{-- <h1></h1> --}}
                     <a class="content-m b600 / Article" 
                         href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', [
                                 mb_strtolower(class_basename($Var)) => $Var->id,
@@ -50,7 +50,6 @@ if ($Var->name) {
                         }}"
                     >
 
-    
 
                         {{-- <a class="content-m b600" href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', [mb_strtolower(class_basename($Var)) => $Var->id, 'page' => $page ?? null, 'tag_id' => $tag_id ?? null, 'category_id' => $category_id ?? null]) }}"> --}}
     
@@ -166,7 +165,7 @@ if ($Var->name) {
 
         <div class="flex cI / cross-s">
             
-            <div class="Min Max -w7 / v-Seo -on">
+            <div class="manager-21011524 / Min Max -w7 / v-Seo -on">
                 <div class="flex dC / -Grey / v-Meta_category -off"> 
                     @isset($Var->category)
                         @if($Var->category->id != 1)

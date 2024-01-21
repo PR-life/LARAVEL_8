@@ -16,7 +16,12 @@
 @isset($Var->canonical)
 <div class="paragraph"></div>
 <span class="content-s / space-xs"> 
-    <span class="content-xxs mr-1 / Grey -c50">canonical:</span>
+    {{-- <span class="content-xxs mr-1 / Grey -c50">canonical:</span> --}}
+    <span class="inline">
+        <span class="Badge -solo -green -S / mr-1">
+            <span class="ced">canonical:</span>
+        </span>
+    </span>
     <span class="Grey -c30">{{$Var->canonical}}</span>
 </span>
 @endisset

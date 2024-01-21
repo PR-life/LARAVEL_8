@@ -36,6 +36,7 @@ class PaperExport implements FromCollection, WithHeadings, WithStrictNullCompari
 			"prev_h2",
 			"prev_p",
 			"prev_image",
+			"prev_url",
 
 			"foto_count_teaser",
 			"foto_count_full",

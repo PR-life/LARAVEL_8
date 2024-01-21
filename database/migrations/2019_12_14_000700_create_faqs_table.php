@@ -23,6 +23,8 @@ class CreateFaqsTable extends Migration
             $table->string('h1')->nullable();
 			$table->text('text')->nullable();
 
+            $table->string('route_name')->nullable();
+
 			$table->text('knot_1')->nullable();
 
 

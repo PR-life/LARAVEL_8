@@ -28,6 +28,8 @@ class FaqExport implements FromCollection, WithHeadings, WithStrictNullCompariso
 			"en_h1",
 			"en_text",
 
+			"route_name",
+
 			"knot_1",
 
 			"order",

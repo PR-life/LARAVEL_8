@@ -24,27 +24,39 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
+
+            // 'main_image' => 'file',
+            // 'tags' => 'nullable',
+            // 'tags.*.name' => 'nullable', // зайдий в массив и проверб формат указанных данных
+
+
 			'sku' => 'nullable|string',
             'name' => 'required|string',
 			'slug' => 'string',
 
-			//
-            'category_id' => 'nullable|integer|exists:categories,id', // exists:существует в тбл categories в колонке id
-            'tag_ids' => 'nullable|array',
-            'tag_ids.*' => 'nullable|integer|exists:tags,id', // .* - выбираем все что в array "tag_ids"
-
-			//
+    		//
             'h1' => 'nullable|string',
             'intro' => 'nullable|string',
             'text' => 'nullable|string',
-
+            
 			//
             'bread_name' => 'nullable',
             
 			'prev_h1' => 'nullable|string',
 			'prev_h2' => 'nullable|string',
 			'prev_p' => 'nullable|string',
+            
+            'en_name' => 'required|string',
+            'en_h1' => 'nullable|string',
+            'en_intro' => 'nullable|string',
+            'en_text' => 'nullable|string',
+			'en_prev_h1' => 'nullable|string',
+			'en_prev_h2' => 'nullable|string',
+			'en_prev_p' => 'nullable|string',
+
+            //
             'prev_image' => 'nullable|file',
+            'prev_url' => 'nullable|file',
 
 			//
 			'knot_1' => 'nullable|string',
@@ -59,6 +71,12 @@ class StoreRequest extends FormRequest
 			//
 			'mafia' => 'nullable|integer',
 
+			//
+            'category_id' => 'nullable|integer|exists:categories,id', // exists:существует в тбл categories в колонке id
+            
+            'tag_ids' => 'nullable|array',
+            'tag_ids.*' => 'nullable|integer|exists:tags,id', // .* - выбираем все что в array "tag_ids"
+
             //
             'user_id' => 'nullable|integer',
 
@@ -67,12 +85,9 @@ class StoreRequest extends FormRequest
             'description' => 'nullable|string',
             'keywords' => 'nullable|string',
 
-
-            // 'main_image' => 'file',
-            // 'tags' => 'nullable',
-            // 'tags.*.name' => 'nullable', // зайдий в массив и проверб формат указанных данных
-            // 'tag_ids' => 'nullable|array',
-            // 'tag_ids.*' => 'nullable|integer|exists:tags,id', // exists должен существовать tag_ids в БД
+            'en_title' => 'nullable|string',
+            'en_description' => 'nullable|string',
+            'en_keywords' => 'nullable|string',
         ];
     }
 

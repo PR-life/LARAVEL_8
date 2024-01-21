@@ -46,6 +46,7 @@ class StoreRequest extends FormRequest
             'prev_image' => 'nullable|file',
 
 			//
+            'prev_url' => 'nullable|string',
 			'knot_1' => 'nullable|string',
 	
 			//

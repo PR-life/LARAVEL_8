@@ -56,6 +56,16 @@
 			@include('zADMIN.PAGE.Category._lego.edit.sms')	
 		@endslot
 
+		@slot('date')
+			<div class="pl-edgeS"> 
+				<dl class="-dot -rightS Void">
+					<dt class="content-xs Grey">дата</dt>
+					<dd><span class="content-xs">{{$category->created_at}}</span></dd>
+				</dl>
+			</div>
+		@endslot
+
+
 			<div class="paragraphX2"></div>
 			@include('zADMIN.PAGE.Category._lego.edit.body')
 

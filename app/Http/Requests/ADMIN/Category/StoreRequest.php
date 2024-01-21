@@ -41,7 +41,8 @@ class StoreRequest extends FormRequest
 
             'prev_h1' => 'nullable',
             'prev_h2' => 'nullable',
-            'link_landing' => 'nullable',
+            'prev_p' => 'nullable',
+            'prev_url' => 'nullable',
 
 			//
             'category_id' => 'nullable|integer|exists:categories,id', // exists:существует в тбл categories в колонке id

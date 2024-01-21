@@ -36,7 +36,7 @@
 
         @component('zADMIN.PAGE._wrap.select.tags.index')
             @component('zADMIN._wrap.select.tags')
-                @include('_._brick.select.tag.edit.index',['Tags' => $tags,'Var' => $category])
+                @include('_._brick.select.tags.edit.index',['Tags' => $tags,'Var' => $category])
             @endcomponent
         @endcomponent
 
@@ -47,10 +47,13 @@
 
     <div class="paragraph / net"></div>
 
-    <div class="pl-edgeS"> 
+
+    <div class="space"> 
         <dl class="-dot -rightS Void">
-            <dt class="content-xs Grey">дата</dt>
-            <dd><span class="content-xs">{{$category->created_at}}</span></dd>
+            <dt class="content-xs Grey"><label for="param_string_1">string_1</label></dt>
+            <dd>
+                <input id="param_string_1" type="text" name="string_1" value="{{$category->string_1}}" placeholder="...">
+            </dd>
         </dl>
     </div>
 

@@ -32,6 +32,7 @@ class CreatePostsTable extends Migration
 			$table->string('prev_h2')->nullable();
 			$table->string('prev_p')->nullable();
 			$table->string('prev_image')->nullable();
+			$table->string('prev_url')->nullable();
 
 
 			//Media

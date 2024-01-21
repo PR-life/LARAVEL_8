@@ -37,8 +37,8 @@ class LandingExport implements FromCollection, WithHeadings, WithStrictNullCompa
 			"en_prev_h2",
 			"en_prev_p",
 
-
 			"prev_image",
+			"prev_url",
 
 			"knot_1",
 

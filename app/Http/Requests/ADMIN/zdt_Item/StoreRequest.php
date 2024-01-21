@@ -41,12 +41,9 @@ class StoreRequest extends FormRequest
 			'prev_h1' => 'nullable|string',
 			'prev_h2' => 'nullable|string',
 			'prev_p' => 'nullable|string',
-
-
-			//
             'prev_image' => 'nullable|file',
+			'prev_url' => 'nullable|string',
 
-			
 			//
             'menu_kite' => 'nullable|string',
 
@@ -56,11 +53,9 @@ class StoreRequest extends FormRequest
 			'param_geo' => 'nullable|string',
 			'param_price' => 'nullable|string',
 
-
 			//
 			'knot_1' => 'nullable|string',
 	
-
 			//
 			'order' => 'nullable|integer',	
 			'status' => 'nullable|integer',	
@@ -71,14 +66,13 @@ class StoreRequest extends FormRequest
 			//
 			'mafia' => 'nullable|integer',	
             
-
             //
             'tag_id' => 'nullable|integer|exists:tags,id',
             'category_id' => 'nullable|integer|exists:categories,id',
+            'group_id' => 'nullable|integer|exists:groups,id',
 
             'tag_ids' => 'nullable|array',
             'tag_ids.*' => 'nullable|integer|exists:tags,id',
-
 
 			//
             'title' => 'nullable|string',
@@ -86,7 +80,6 @@ class StoreRequest extends FormRequest
             'keywords' => 'nullable|string',
 
             'canonical' => 'nullable|string',
-
         ];
     }
 

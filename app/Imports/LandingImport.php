@@ -54,6 +54,7 @@ class LandingImport implements ToCollection, WithHeadingRow
                     'en_prev_p' => $item['en_prev_p'],
 
                     'prev_image' => $item['prev_image'],
+                    'prev_url' => $item['prev_url'],
 
                     'knot_1' => $item['knot_1'],
 

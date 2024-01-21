@@ -39,6 +39,8 @@ class FaqImport implements ToCollection, WithHeadingRow
                     'en_h1' => $item['en_h1'],
                     'en_text' => $item['en_text'],
 
+                    'route_name' => $item['route_name'],
+
                     'knot_1' => $item['knot_1'],
 
                     'order' => $item['order'],

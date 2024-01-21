@@ -17,16 +17,6 @@
     @include('zADMIN._brick.media.emoji.index')
 </div>
 
-<div class="void-m">
-    <div class="net">
-        <label class="content-xs pl-2" style="color: #677788">keyword</label>
-        <div class="paragraph-s"></div>
-    </div>
-    <div class="_shell / net">
-        <textarea name="keywords" placeholder='текст...'>{{$Var->keywords ?? old('keywords')}}</textarea>
-    </div>
-</div>
-
 <div class="_shell x-hr Form -S / vol-Abs">
     <input id="inputBreadName" type="text" name="bread_name" value="{{$Var->bread_name ?? old('bread_name')}}" placeholder=".">
     <label class="Abs" for="inputBreadName">@svg('plus')bread_name</label>
@@ -35,4 +25,15 @@
 <div class="_shell x-hr Form -S / vol-Abs / net">
     <input id="inputCanonical" type="text" name="canonical" value="{{$Var->canonical ?? old('canonical')}}" placeholder=".">
     <label class="Abs" for="inputCanonical">@svg('plus')canonical</label>
+</div>
+
+
+<div class="void-m">
+    <div class="net">
+        <label class="content-xs pl-2" style="color: #677788">keyword</label>
+        <div class="paragraph-s"></div>
+    </div>
+    <div class="_shell / net">
+        <textarea name="keywords" placeholder='текст...'>{{$Var->keywords ?? old('keywords')}}</textarea>
+    </div>
 </div>

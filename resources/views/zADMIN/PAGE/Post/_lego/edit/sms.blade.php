@@ -40,7 +40,7 @@
 
         @component('zADMIN.PAGE._wrap.select.tags.index')
             @component('zADMIN._wrap.select.tags')
-                @include('_._brick.select.tag.edit.index',['Tags' => $tags,'Var' => $post])
+                @include('_._brick.select.tags.edit.index',['Tags' => $tags,'Var' => $post])
             @endcomponent
         @endcomponent
 
