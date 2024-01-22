@@ -30,7 +30,7 @@ if ($Var->name) {
 
         <div class="flex cI / cross-s">
 
-            <div class="_1 / flex cC dC / Max -w11">
+            <div class="_1 / flex cC dC / Max -w8">
 
                 @if($Var->slug)
                     @include('zADMIN.combine.Teaser.lib.brick.slug')
