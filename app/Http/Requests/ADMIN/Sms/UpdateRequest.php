@@ -18,15 +18,30 @@ class UpdateRequest extends StoreRequest
 
         return array_merge(parent::rules(), [
 
+            'sku'=>'nullable|string',
+
+            'country'=>'nullable|string',
+            'city'=>'nullable|string',
+            'area'=>'nullable|string',
+
             'answer'=>'nullable|string',
-
             'answer_user_name'=>'nullable|string',
-            'go_mod_talk'=>'nullable|integer',
 
+			//
+            'go_mod_talk'=>'nullable|integer',
+	
+			//
+            'category_id' => 'nullable|integer|exists:categories,id', // exists:существует в тбл categories в колонке id
+            
+            'tag_ids' => 'nullable|array',
+            'tag_ids.*' => 'nullable|integer|exists:tags,id', // .* - выбираем все что в array "tag_ids"
+
+			//
 			'order' => 'nullable|integer',
 			'status' => 'nullable|integer',
 			'featured' => 'nullable|integer',
 			'published' => 'nullable|integer',
+
 			//
 			'mafia' => 'nullable|integer',
         ]);

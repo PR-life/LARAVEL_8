@@ -13,7 +13,7 @@ class UpdateController extends BaseController
     // public function __invoke(Sms $sms){
     public function __invoke(UpdateRequest $request, Sms $sms){
 
-		$data = [];
+		// $data = [];
     // dd(11);
         // $data['h1'] = 'Категория';
 

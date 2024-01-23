@@ -13,12 +13,6 @@
 		<input class="Max -w -w1 / content-xxs" type="text" value="{{$Var->status}}">
 	</div>
 </div>
-<div class="flex dC / cross-xs / _sku">
-	<label class="content-xxs / pl-1" for="sku">sku</label>
-	<div class="flex cI / Form -XS">
-		<input id="sku" class="Max -w -w1 / content-xxs" type="text" name="sku" value="{{$Var->sku}}" placeholder="-">
-	</div>
-</div>
 <div class="flex dC / cross-xs / _id">
 	<label class="content-xxs / pl-1" for="idItem">id</label>
 	<div class="flex cI / Form -XS">

@@ -58,6 +58,7 @@ class CreateSmsEnTable extends Migration
             $table->unsignedInteger('published')->default('0');
 			
             $table->unsignedInteger('mafia')->default('0');
+            $table->string('lang')->nullable();
 
             $table->timestamps();
 			$table->softDeletes();

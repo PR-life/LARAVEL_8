@@ -4,15 +4,32 @@ namespace App\Http\Controllers\ADMIN\Sms;
 
 //
 use App\Models\Sms;
-
+use App\Models\Paper;
+use App\Models\Category;
+use App\Models\Tag;
+use App\Models\Group;
 
 class EditController extends BaseController
 {
     public function __invoke(Sms $sms){
 		
-		$data = [];
-		 
+        $categories = Category::whereNull('category_id')
+        ->with('childrenCategories')
+        ->orderBy('name', 'asc')->paginate(25);
 
-        return view('zADMIN.PAGE.Sms.edit', compact('sms','data'));
+        $categories_lvl_2 = collect();
+
+        foreach($categories as $item_1) {
+            if($item_1->childrenCategories) {
+                foreach ($item_1->childrenCategories as $childCategory) {
+                    $categories_lvl_2->push($childCategory);
+                }
+            }
+        }
+
+		$tags = Tag::all();
+        $groups = Group::all();
+
+        return view('zADMIN.PAGE.Sms.edit', compact('sms','categories','categories_lvl_2','tags','groups'));
     }
 }

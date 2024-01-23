@@ -20,8 +20,8 @@ class Service {
 		try {
 			DB::beginTransaction();
 
-			// isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
-			// unset($param['tag_ids']);
+			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
+			unset($param['tag_ids']);
 			
 			// //
 			isset($param['featured']) ? '' : $param['featured'] = '0';
@@ -32,10 +32,10 @@ class Service {
 
 			// //
 			$sms->update($param);
-			// $sms->tags()->sync($tagIds); // изменили attach на sync*, 
+			$sms->tags()->sync($tagIds); // изменили attach на sync*, 
 			// 	// и поместили ниже строки '$sms->update($param);'
 			// 	// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
-			// $tagIds = [];
+			$tagIds = [];
 
 			DB::commit();
 		} catch (Exception $exception) {

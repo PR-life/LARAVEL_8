@@ -23,6 +23,11 @@
     <div class="Plot Bg -gif55"></div>
 @endpush
 
+{{-- @push('svg')
+    @include('_.src.svg.admin')
+@endpush --}}
+
+
 
 
 @section('top')

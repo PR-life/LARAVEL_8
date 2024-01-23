@@ -34,8 +34,6 @@ class CreateSmsTable extends Migration
             $table->text('answer')->nullable();
             $table->text('answer_user_name')->nullable();
             
-            $table->unsignedInteger('go_mod_talk')->default('0');
-
             $table->string('param_1')->nullable();
             $table->string('param_2')->nullable();
             $table->string('param_3')->nullable();
@@ -45,11 +43,22 @@ class CreateSmsTable extends Migration
             $table->text('question_3')->nullable();
             $table->text('question_4')->nullable();
             
+            //
             $table->string('type')->default('conversion');
             $table->string('label')->default('email');
+
+            //
             $table->string('id_item')->nullable();
             $table->string('from_page')->nullable();
 
+            //
+            $table->unsignedInteger('go_mod_talk')->default('0');
+
+			$table->unsignedBigInteger('category_id')->nullable();          
+            $table->index('category_id', 'sms_category_idx'); 
+            $table->foreign('category_id', 'sms_category_fk')->on('categories')->references('id');
+
+            //
 			$table->integer('views')->default('1');
 			$table->unsignedInteger('order')->default('50');
             $table->unsignedInteger('status')->default('1');

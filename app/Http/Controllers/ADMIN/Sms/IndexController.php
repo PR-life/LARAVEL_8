@@ -10,12 +10,12 @@ class IndexController extends BaseController
 {
     // public function index(){
     public function __invoke(){
-		$data = [];
+		// $data = [];
         // $data['h1'] = 'Категории';
 		// $data['slug'] = 'categories';
 
-		$sms = Sms::orderBy('created_at', 'desc')->paginate(25);
+		$sms = Sms::orderBy('created_at', 'desc')->paginate(50);
 
-        return view('zADMIN.PAGE.Sms.index', compact('sms','data'));
+        return view('zADMIN.PAGE.Sms.index', compact('sms'));
     }
 }

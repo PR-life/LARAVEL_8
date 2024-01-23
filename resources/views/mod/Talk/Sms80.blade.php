@@ -1,10 +1,10 @@
 <div class="Sms Talk -W80 {{$css ?? ''}} / Bone / index relative">
     <div class="padding top / stop_80"></div>
     <div class="I Edge -PC / stop_80">
-        <h4>{{__('zImago/mod/Talk.nameRoll')}}</h4>
+        <div class="h">{{$name_Roll ?? $name}}</div>
     </div>
     <div class="_head space content / none_80">
-        <em>{{__('zImago/mod/Talk.nameSms')}}</em>
+        <em>{{$name}}</em>
     </div>
     <div class="Scroll_80">
         <div class="_scr">

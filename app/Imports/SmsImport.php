@@ -51,9 +51,6 @@ class SmsImport implements ToCollection, WithHeadingRow
                     'answer' => $item['answer'],
                     'answer_user_name' => $item['answer_user_name'],
 
-
-                    'go_mod_talk' => $item['go_mod_talk'],
-
                     'param_1' => $item['param_1'],
                     'param_2' => $item['param_2'],
                     'param_3' => $item['param_3'],
@@ -68,6 +65,10 @@ class SmsImport implements ToCollection, WithHeadingRow
                     'label' => $item['label'],
                     'id_item' => $item['id_item'],
                     'from_page' => $item['from_page'],
+
+                    'go_mod_talk' => $item['go_mod_talk'],
+
+                    'category_id' => $item['category_id'],
 
                     'views' => $item['views'],
                     'order' => $item['order'],

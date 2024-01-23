@@ -1,15 +1,56 @@
-<form class="Form -L -transparent vol-2" method="POST" action="{{route('sms.ask')}}" enctype="multipart/form-data">
+{{-- <form id="{{$id}}" class="{{$css}}" method="POST" action="{{$route}}" enctype="multipart/form-data">
 	@csrf
+	<input id="inputTitle_{{$id}}" class="none" type="text" name="title" value="." placeholder='.'>
+	<input id="inputFromPage_{{$id}}" class="none" type="text" name="from_page" value="{{url()->current()}}" placeholder='.'>
+	<input id="inputType_{{$id}}" class="none" type="text" name="type" value="{{$type ?? 'conversion'}}">
+	<input id="inputLabel_{{$id}}" class="none" type="text" name="label" value="{{$label ?? 'email'}}">
+    {!!$slot!!}
+</form> --}}
+
+@component('component.Form._wrap.index',['css' => 'Form -space bg round'])
+
+	@slot('id', 'formContact')
+	@slot('route', route('sms.ask'))
+	{{-- <input type="hidden" name="lang" value="{{app()->getLocale()}}"> --}}
+
+
+	<div class="space">
+		{!!$slot!!}
+		{{-- <div class="content Grey pl-1">Вопрос</div> --}}
+		{{-- <div class="paragraph-s"></div> --}}
+		<div class="_shell">
+			<textarea id="textareaSms_Contact" class="round" name="ask" maxlength="850" rows="12" placeholder="{{__('/_const/form.text')}}...">{{old('message')}}</textarea>
+			<div class="x-Error"></div>
+		</div>
+	</div>
+
+	<div class="_footer / space round-s">
+		<button class="Btn cC -S slim / round-s">
+			<span class="_x / content-s">{{__('/_const/form.send')}}</span>
+			<span class="none">{{__('/_const/form.errorSend')}}</span>
+		</button>
+	</div>
+@endcomponent
+
+
+
+{{-- <form class="Form -space -L {{$css ?? 'bg round'}}" method="POST" action="{{route('sms.ask')}}" enctype="multipart/form-data"> --}}
+	{{-- @csrf
 	<input class="none" type="text" name="from_page" value="{{url()->current()}}" placeholder='.'>
 
-
-
-	<textarea id="sms" name="sms" maxlength="850" rows="5" placeholder="Текст...">{{old('message')}}</textarea>
-	<div class="content center-text">
-		<input id="inputTitle" type="text" name="title">
+	<div class="space">
+		{!!$slot!!}
+		<textarea id="ask" class="round-s" name="ask" maxlength="850" rows="5" placeholder="Текст...">{{old('message')}}</textarea>
 	</div>
 	<div class="hill"></div>
-	<button class="Btn cC">отправить</button>
+
+	<div class="_footer / space round-s">
+		<button class="Btn cC -S slim / round-s">
+			<span class="_x / content-s">отправить</span>
+			<span class="none">Ошибка! Проверьте данные</span>
+		</button>
+	</div> --}}
+
 
 
 	{{-- <div class="_shell -label">
@@ -59,11 +100,11 @@
 		@endslot
 		Даю согласие на обработку персональных данных на условиях <a href="/privacy/" class="Grey" target="_blank">Политики конфиденциальности</a>
 	@endcomponent --}}
-</form>
+{{-- </form> --}}
 
 
 
-@if ($errors->newAsk->any())
+{{-- @if ($errors->newAsk->any()) --}}
 	{{-- <script>
 		const element = document.getElementById('scrolSmsError')
 		const topPos = element.getBoundingClientRect().top + window.pageYOffset
@@ -73,7 +114,7 @@
 			behavior: 'smooth'
 		})
 	</script> --}}
-@endif
+{{-- @endif --}}
 
 
 

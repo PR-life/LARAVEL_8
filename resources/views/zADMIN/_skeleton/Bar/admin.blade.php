@@ -64,7 +64,7 @@
             @include('zADMIN.menu.Bar.slot_target')
             @include('zADMIN.menu.Bar.slot_content')
             @include('zADMIN.menu.Bar.slot_relations')
-            {{-- @include('zADMIN.menu.Bar.slot_editorial') --}}
+            @include('zADMIN.menu.Bar.slot_editorial')
             {{-- @include('zADMIN.menu.Bar.slot_customer') --}}
             {{-- @include('zADMIN.menu.Bar.slot_office') --}}
             <div class="gstrm"></div>
