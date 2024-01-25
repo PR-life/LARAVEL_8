@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+@media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
+
+	.Tile.-PC {
+		--Tile-h: var(--h-plitka);
+	}
+
+	
+}
+
+
+@media screen and (max-width: @w-menu-2) {
+	.Tile.-mbl {
+		--Tile-h: var(--h-plitka);
+	}
+}
+
+.Tile {
+	--Tile-h: auto;
+
+	min-height: var(--Tile-h);
+}
+
+

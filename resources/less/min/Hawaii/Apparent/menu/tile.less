@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .MENUTILE {
-	// > div,
+	> a,
     > div > label,
     > li > * {
 		min-width: var(--x-tile-h);
@@ -67,6 +67,11 @@
 
 
 @media screen and (max-width:@w-menu-2) {
+
+	.menu-tileMbl {
+		.MENUTILE;
+	}
+
 
 	.menu.-tileMbl {
 

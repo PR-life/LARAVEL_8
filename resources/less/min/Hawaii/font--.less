@@ -175,7 +175,7 @@ h4,.h4,h5,h6 {
 
 ul.-M,
 ol.-M {
-    --ulol-font: var(--rem-li);
+    --ulol-font: calc(var(--rem-li) + 2px);
 }
 
 ul, ol {
@@ -247,6 +247,10 @@ summary {
 
 .p {
 	line-height: var(--rem-p);
+}
+
+.p.wide {
+	line-height: calc(var(--rem-p) + 8px);
 }
 
 .p.-text,

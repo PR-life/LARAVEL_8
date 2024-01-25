@@ -16,6 +16,12 @@ class Tag extends Model
     protected $guarded = false;
 
 
+	public function items(){
+		return $this->belongsToMany(Item::class, 'item_tags', 'tag_id', 'item_id');
+	}
+
+
+
 	public function papers(){
 		return $this->belongsToMany(Paper::class, 'paper_tags', 'tag_id', 'paper_id');
 	}

@@ -27,6 +27,7 @@
 			padding: 2rem 0;
 		}
 	}
+ 
 }
 
 .space-xs {
@@ -65,8 +66,12 @@
 }
 
 @media screen and (max-width: @w-menu-2) {
-	.spacePC {
-		padding:0;
+	// .spacePC {
+	// 	padding:0;
+	// }
+
+	.space-m_mbl {
+		padding: calc(var(--void)*1.5);
 	}
 }
 
@@ -162,5 +167,9 @@
 
 	.space-leftM_PC {
 		padding-left: calc(var(--void)*1.5);
+	}
+
+	.space-leftL_PC {
+		padding-left: calc(var(--void)*2);
 	}
 }

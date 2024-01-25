@@ -325,6 +325,9 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.nowrap_PC{
 		white-space:nowrap;
 	}
+	.hidden_PC{
+		overflow:hidden;
+	}
 	.nowrap-max{
 		max-width:160px;
 	}
@@ -415,6 +418,9 @@ hr,.ghost,.visible,.Op,.opVersa{
 @media (min-width:799px) and (max-width:1080px){
 	.flex-beyond,
 	.Beyond {display:flex !important}
+	.hidden_beyond{
+		overflow:hidden;
+	}
 }
 
 @media screen and (max-width:1080px){
@@ -441,6 +447,11 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.none_mbl{
 		display:none !important
 	}
+
+	.hidden_mbl {
+		overflow: hidden;
+	}
+	
 	.block_mbl{
 		display:block
 	}

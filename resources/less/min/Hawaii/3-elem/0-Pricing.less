@@ -2,15 +2,20 @@
 
 
 @media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
-    .Pricing {
+
+    .Pricing.-PC {
         --Pricing-h: 100px;
+    }
+
+    .Pricing.-PC.-void {
+        margin-bottom: 4px;
     }
 }
 
 
-.Pricing.-void {
-    margin-bottom: 4px;
-}
+
 .Pricing {
+    --Pricing-h: auto;
+    
     height: var(--Pricing-h);
 }
