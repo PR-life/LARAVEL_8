@@ -1,6 +1,10 @@
 @charset "UTF-8";
 
 
+ol, ul {
+	--x-padding-left-precise: 0px;
+}
+
 ol,
 .ul,
 .content>ul,
@@ -26,7 +30,8 @@ ul.ul,
     li::before {
         content: '';
         position:absolute;
-        left: ~"calc(var(--ulol-padding-left) - var(--ulol-padding-left)*2)";
+        // left: ~"calc(var(--ulol-padding-left) - var(--ulol-padding-left)*2)";
+		left: calc(var(--ulol-padding-left) - var(--ulol-padding-left)*2 + var(--x-padding-left-precise));
     }
 }
 
@@ -43,7 +48,7 @@ ul.ul,
 
 	
     li::before {
-        top: ~"calc(var(--ulol-line)*.5 + 1px)";
+        top: ~"calc(var(--ulol-line)*.5 - 1px)";
         //
         width: ~"calc(var(--ulol-padding-left)*.5)";
         min-height: 1px;
@@ -54,16 +59,17 @@ ul.ul,
 .ul.vol-dot,
 ul.vol-dot {
 	--x-w-dot:5px;
-	--x-padding-left-precise: 0px;
+	// --x-padding-left-precise: 0px;
 
 	//
     > li::before {
         width: var(--x-w-dot);
         height: var(--x-w-dot);
 		top:calc(var(--ulol-line)*.5 - var(--x-w-dot)*.5);
-        left: calc(var(--ulol-padding-left) - var(--ulol-padding-left)*2 + var(--x-padding-left-precise));
     }
 }
+
+
 
 ul.-dot {
     > li {
@@ -88,15 +94,18 @@ ol {
 
 @media screen and (max-width:@w-menu-2) {
 
+	ul{
+		--x-padding-left-precise: 3px;
+	}
+	
 	.ul.-out,
 	ul.-out {
 		li::before {
 			left: ~"calc(var(--ulol-padding-left) - var(--ulol-padding-left)*2)";
 		}
 	}
-	
+
 
 }
 
-
-/***********************************************/
+ 

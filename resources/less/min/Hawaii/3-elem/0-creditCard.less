@@ -1,5 +1,18 @@
 @charset "UTF-8";
 
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+    .CreditCard {
+
+        min-width: 320px;
+    }
+}
+
+@media screen and (max-width:@w-menu-2) {
+    .CreditCard {
+
+        max-width: 380px;
+    }
+}
 
 .CreditCard.-S {
     --CreditCard-w:448px;
@@ -10,6 +23,6 @@
 
 
     width: var(--CreditCard-w);
-    min-width: var(--CreditCard-w);
+    // min-width: var(--CreditCard-w);
     // max-width: 36rem;
 }

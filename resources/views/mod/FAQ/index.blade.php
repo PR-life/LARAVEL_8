@@ -15,7 +15,7 @@
 <div class="{!!$css_wrap_menu ?? ''!!}">
     <div class="paragraph / none_PC"></div>
     <div>
-        <ul class="menu -tag {{$css_menu ?? '-roundS'}} / flex -wrap cloud / Pointer / edge-left" data-click data-switch data-package="{{$id_package}}" data-stop>
+        <ul class="menu -tag {{$css_menu ?? '-roundS edge-left'}} / flex -wrap cloud / Pointer" data-click data-switch data-package="{{$id_package}}" data-stop>
            {!!$menu_li!!}
            <li class="gstrm"></li>
        </ul>

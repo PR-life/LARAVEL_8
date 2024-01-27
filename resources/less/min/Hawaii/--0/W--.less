@@ -155,42 +155,6 @@
 //     max-width: calc(var(--Pente) + var(--Pente-paint)*2);
 // }
 
-.Pente-paint {
-	max-width: var(--Pente-paint);
-}
-
-.Pente-cross {
-	max-width: var(--Pente-cross);
-}
-
-.Pente-separator {
-	max-width: calc(var(--Pente-cross) + var(--Pente-paint));
-}
-
-.Pente-1 {
-	--x-Pente-w: calc(var(--Pente-1) + var(--Pente-paint)*2);
-	max-width: var(--x-Pente-w);
-}
-
-.Pente-1_plus {
-	--x-Pente-w: calc(var(--Pente-1) + var(--Pente-paint)*2 + var(--Pente-cross));
-	max-width: var(--x-Pente-w);
-}
-
-.Pente-2 {
-	--x-Pente-w: calc(var(--Pente-1)*2 + var(--Pente-paint)*2*2 + var(--Pente-cross));
-	max-width: var(--x-Pente-w);
-}
-
-.Pente-3 {
-	--x-Pente-w: calc(var(--Pente-1)*3 + var(--Pente-paint)*2*3 + var(--Pente-cross)*2);
-	max-width: var(--x-Pente-w);
-}
-
-.Pente-4 {
-	--x-Pente-w: calc(var(--Pente-1)*4 + var(--Pente-paint)*2*4 + var(--Pente-cross)*3);
-	max-width: var(--x-Pente-w);
-}
 
 .Rail {
 	--x-Rail:var(--Rail);
@@ -228,7 +192,51 @@
 		max-width: var(--Paper);
 	}
 
+	.Pente-paint {
+		max-width: var(--Pente-paint);
+	}
+	
+	.Pente-cross {
+		max-width: var(--Pente-cross);
+	}
+	
+	.Pente-separator {
+		max-width: calc(var(--Pente-cross) + var(--Pente-paint));
+	}
+	
+	.Pente-1 {
+		--x-Pente-w: calc(var(--Pente-1) + var(--Pente-paint)*2);
+		max-width: var(--x-Pente-w);
+	}
+	
+	.Pente-1_plus {
+		--x-Pente-w: calc(var(--Pente-1) + var(--Pente-paint)*2 + var(--Pente-cross));
+		max-width: var(--x-Pente-w);
+	}
+	
+	.Pente-2 {
+		--x-Pente-w: calc(var(--Pente-1)*2 + var(--Pente-paint)*2*2 + var(--Pente-cross));
+		max-width: var(--x-Pente-w);
+	}
+	
+	.Pente-3 {
+		--x-Pente-w: calc(var(--Pente-1)*3 + var(--Pente-paint)*2*3 + var(--Pente-cross)*2);
+		max-width: var(--x-Pente-w);
+	}
+	
+	.Pente-4 {
+		--x-Pente-w: calc(var(--Pente-1)*4 + var(--Pente-paint)*2*4 + var(--Pente-cross)*3);
+		max-width: var(--x-Pente-w);
+	}
+
 }
+
+@media (min-width: @w-menu-2-plus) and (max-width:@metrika-100) {
+	.Dev.Edge {
+		max-width: 100%;
+	}
+}
+
 
 @media (min-width: @w-menu-2-plus) and (max-width:@metrika-80) {
 	.I.-m80 {

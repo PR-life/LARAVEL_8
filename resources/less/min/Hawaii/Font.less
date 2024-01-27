@@ -1,12 +1,127 @@
 @charset "UTF-8";
 
-.Font {
-	--Font-h1:48px;
-	--Font-h2: 28px;
-	--Font-min:18px;
-	--Font-min-line:calc(var(--Font-min) + 4px);
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+
+	.Font {
+		--Font-h1-max:48px;
+		--Font-h1:4vw;
+
+		//
+		--Font-h2: 28px;
+	
+		//
+		--Font-min:18px;
+		--Font-min-line:calc(var(--Font-min) + 4px);
+
+	}
+
+	.Font.-S {
+		--Font-h1-max: calc(48px - 1rem);
+
+		//
+		--Font-h2: calc(28px - .25rem);
+	}
+
 }
 
+@media screen and (max-width: @w-menu-2) {
+	.Font {
+		--Font-h1-max:var(--rem-h1);
+		--Font-h1:7vw;
+
+		// --Font-h2: var(--rem-h2);
+		--Font-min: calc(var(--rem-h) + 4px);
+	}
+
+ 
+
+}
+
+
+///
+
+.Font {
+
+	--Font-lineHeight: 8px;
+
+
+	.-lineHeight {
+		--Font-lineHeight: 4px;
+	}
+	//
+
+    ._h {
+		--Font-h1-CALC: clamp(var(--Font-min), var(--Font-h1), var(--Font-h1-max));
+		--Font-h1-height-CALC: clamp(calc(var(--Font-min) + var(--Font-lineHeight)), calc(var(--Font-h1) + var(--Font-lineHeight)), calc(var(--Font-h1-max) + var(--Font-lineHeight)));
+
+		//
+		font-size: var(--Font-h1-max);
+        line-height: calc(var(--Font-h1-max) + var(--Font-lineHeight));
+    }
+
+	._h.-vw {
+		font-size: var(--Font-h1-CALC);
+		line-height: var(--Font-h1-height-CALC);
+	}
+
+	//
+    ._h2 {
+		--Font-h2-CALC: clamp(var(--Font-min), var(--Font-h2), var(--Font-h2-max));
+		--Font-h2-height-CALC: clamp(calc(var(--Font-min) + var(--Font-lineHeight)), calc(var(--Font-h2) + var(--Font-lineHeight)), calc(var(--Font-h2-max) + var(--Font-lineHeight)));
+
+
+		//
+		font-size: var(--Font-h2-max);
+        line-height: calc(var(--Font-h2) + var(--Font-lineHeight));
+    }
+
+	._h2.-vw {
+		font-size: var(--Font-h2-CALC);
+		line-height: var(--Font-h2-height-CALC);
+	}
+
+
+
+	//
+	 ._p {
+        font-size:var(--rem-p);
+        line-height: ~"calc(var(--rem-p) * 1.4)";
+	 }
+
+
+
+
+    // ._h2.-lineHeight {
+    //     line-height: calc(var(--Font-h2) * 1.1);
+    // }
+
+
+	
+
+	// ._h4 {
+    //     font-size:var(--rem-h);
+    //     line-height: ~"calc(var(--rem-h) * 1.2)";
+	//  }
+
+ 
+
+	//  ._p.wide {
+	// 	line-height: clamp(calc(var(--font-min) * 2), calc(1.4vw * 1.6), calc(var(--rem-p) * 1.6));
+	// }
+}
+
+
+
+
+
+
+
+
+
+
+
+/*
+ 
 
 @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
 	.Font.-L {
@@ -26,20 +141,10 @@
 			--rem-p:20px;
 		}
 	}
-	.Font.-S {
-		--Font-h1: calc(48px - .5rem);
-		--Font-h2: calc(28px - .25rem);
-		// --Font-min: 18px;
-		// --Font-min-line: calc(var(--Font-min) + 4px);
-	}
+ 
 }
 
 @media screen and (max-width: @w-menu-2) {
-	.Font {
-		--Font-h1:var(--rem-h1);
-		--Font-h2: var(--rem-h2);
-		--Font-min: var(--rem-h);
-	}
 	.Font.-M {
 		--Font-h1:calc(var(--rem-h1)*1.2);
 		// --Font-h2: var(--rem-h2);
@@ -56,214 +161,50 @@
 
 @media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
 	.Font {
+
 		._h.-index {
 			font-size: clamp(calc(var(--rem-h) + 2px),calc(var(--indexW)*4),var(--Font-h1));
 		}
-	}
-}
 
 
-
-.Font {
-
-    ._h {
-		font-size: var(--Font-h1);
-        line-height: calc(var(--Font-h1) * 1.1);
-		// font-size: clamp(var(--Font-min), var(--Font-h1), 3.5vw);
-        // line-height: clamp(var(--Font-min-line), calc(var(--Font-h1) * 1.2), 4.2vw);
-    }
-
-
-
-	._h.-vw {
-		font-size: clamp(var(--Font-min), 4.0vw, var(--Font-h1));
-		line-height: clamp(calc(var(--Font-min) * 1.2), calc(3.5vw * 1.2), calc(var(--Font-h1) * 1.2));
-	}
-
-    ._h.-vw.-lineHeight {
-        line-height: clamp(calc(var(--Font-min) * 1.1), calc(3.5vw * 1.1), calc(var(--Font-h1) * 1.1));
-    }
-
-    ._h2 {
-		font-size: var(--Font-h2);
-        line-height: calc(var(--Font-h2) * 1.2);
-    }
-
-    ._h2.-lineHeight {
-        line-height: calc(var(--Font-h2) * 1.1);
-    }
-	// ._h.-vw {
-	// 	font-size: clamp(var(--rem-h1), 4vw, var(--Font-h1));
-	// 	line-height: clamp(calc(var(--rem-h1) * 1.1), calc(4vw * 1.1), calc(var(--Font-h1) * 1.1));
-	// 	// line-height: clamp(var(--Font-min-line), 4.2vw, calc(var(--rem-h2)*1.2));
-	// }
-
-
-	// ._h.-vw {
-	// 	font-size: clamp(var(--Font-min), 3.5vw, var(--Font-h1));
-	// 	line-height: clamp(calc(var(--Font-min) * 1.2), calc(3.5vw * 1.2), calc(var(--Font-h1) * 1.2));
-	// 	// line-height: clamp(var(--Font-min-line), 4.2vw, calc(var(--rem-h2)*1.2));
-	// }
-	// ._h.-vw {
-	// 	font-size: clamp(var(--Font-min), 3.5vw, var(--Font-h1));
-	// 	line-height: clamp(calc(var(--Font-min) * 1.2), calc(3.5vw * 1.2), calc(var(--Font-h1) * 1.2));
-	// 	// line-height: clamp(var(--Font-min-line), 4.2vw, calc(var(--rem-h2)*1.2));
-	// }
-
-	._h2.-vw {
-		font-size: clamp(var(--Font-min), 2.5vw, var(--Font-h2));
-		line-height: clamp(calc(var(--Font-min) * 1.2), calc(2.5vw * 1.2), calc(var(--Font-h2) * 1.2));
-	}
-
-
-
-
-    // ._h2.-vw.-lineHeight {
-    //     line-height: clamp(calc(var(--Font-min) * 1.1), calc(2.5vw * 1.1), calc(var(--Font-h2) * 1.1));
-    // }
-	// ._hMin.-vw {
-		// font-size: clamp(var(--Font-min), 1.5vw, var(--rem-h-min));
-		// line-height: clamp(var(--Font-min-line), 2.2vw, calc(var(--rem-h-min)*1.2));
-	// }
-
-
-	._h4 {
-        font-size:var(--rem-h);
-        line-height: ~"calc(var(--rem-h) * 1.2)";
-	 }
-
-	 ._p {
-        font-size:var(--rem-p);
-        line-height: ~"calc(var(--rem-p) * 1.4)";
-	 }
-	 ._p.-vw {
-		font-size: clamp(var(--font-min), 1.4vw, var(--rem-p));
-		line-height: clamp(calc(var(--font-min) * 1.4), calc(1.4vw * 1.4), calc(var(--rem-p) * 1.4));
-	}
-
-	 ._p.wide {
-		line-height: clamp(calc(var(--font-min) * 2), calc(1.4vw * 1.6), calc(var(--rem-p) * 1.6));
-	}
-	// ._p.-M {
-	// 	font-size:var(--rem-h);
-	// 	// line-height: ~"calc(var(--rem-h) * 1.4)";
-	// }
-
-
-	//  ._text.lvl-font-up {
-    //     font-size:var(--rem-p);
-    //     line-height: ~"calc(var(--rem-p) * 1.4)";
-	//  }
-
-	//  ._text.lvl-font-up2 {
-    //     font-size:~"calc(var(--rem-p) + 1px)";
-    //     line-height: ~"calc((var(--rem-p) + 1px) * 1.4)";
-	//  }
-	//  .lite {
-	// 	 font-weight: 300;
-	//  }
-}
-
-
-@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
-
-	.Font {
-		._h.-vw_PC {
-			font-size: clamp(var(--Font-min), 4vw, var(--Font-h1));
-			line-height: clamp(calc(var(--Font-min) * 1.1), calc(4vw * 1.1), calc(var(--Font-h1) * 1.1));
-			// line-height: clamp(var(--Font-min-line), 4.2vw, calc(var(--rem-h2)*1.2));
+		
+	
+		._h.-vw.-lineHeight {
+			line-height: clamp(calc(var(--Font-min) * 1.1), calc(3.5vw * 1.1), calc(var(--Font-h1) * 1.1));
 		}
-		._p.-vw_PC {
+
+		._p.-vw {
 			font-size: clamp(var(--font-min), 1.4vw, var(--rem-p));
 			line-height: clamp(calc(var(--font-min) * 1.4), calc(1.4vw * 1.4), calc(var(--rem-p) * 1.4));
 		}
 	}
 
-}
 
-@media screen and (max-width: @w-menu-2) {
-	.Font {
-		._h2.-vw {
-			line-height: clamp(calc(var(--Font-min) * 1.2), calc(7vw * 1.2), calc(var(--Font-h2) * 1.1));
-		}
-	}
-
-}
-
-
-/*
-
-
-
-
-
-@media (min-width:@metrika-80-plus) and (max-width:@w-max) {
-
-
-    .Font.-XL {
-        h1, h2, ._h {
-            font-size: 4.7vw;
-            line-height: 5vw;
-        }
-    }
-
-    .Font.-L {
-        h1, h2, ._h {
-            font-size: 3.5vw;
-            line-height: 3.8vw;
-        }
-    }
-
-    .Font.-M {
-        h1, h2, ._h {
-            font-size: 3.0vw;
-            line-height: 3.3vw;
-        }
-    }
-
-    .Font {
-        h1, h2, ._h {
-            font-size: 2.5vw;
-            line-height: 2.8vw;
-        }
-    }
-
-    .Font.-S {
-        h1, h2, ._h {
-            font-size: 2.0vw;
-            line-height: 2.3vw;
-        }
-    }
-
-}
-
-@media (min-width: @w-menu-2) and (max-width:@metrika-80) {
-
-    .Font.-S {
-        h1, h2, ._h {
-            font-size: var(--rem-h);
-            line-height: ~"calc(var(--rem-h)*1.2)";
-        }
-    }
-
+	// .Font {
+	// 	._h.-vw_PC {
+	// 		font-size: clamp(var(--Font-min), 4vw, var(--Font-h1));
+	// 		line-height: clamp(calc(var(--Font-min) * 1.1), calc(4vw * 1.1), calc(var(--Font-h1) * 1.1));
+	// 		// line-height: clamp(var(--Font-min-line), 4.2vw, calc(var(--rem-h2)*1.2));
+	// 	}
+	// 	._p.-vw_PC {
+	// 		font-size: clamp(var(--font-min), 1.4vw, var(--rem-p));
+	// 		line-height: clamp(calc(var(--font-min) * 1.4), calc(1.4vw * 1.4), calc(var(--rem-p) * 1.4));
+	// 	}
+	// }
 }
 
 
 @media screen and (max-width: @w-menu-2) {
-
-    .Font.-M-mbl {
-        h1, h2, ._h {
-            font-size: 8.0vw;
-            line-height: 8.2vw;
-        }
-    }
-
-    .Font {
-        h1, h2, ._h {
-            font-size:~"calc(var(--rem-h1) * 1.0)";
-            line-height: ~"calc(var(--rem-h1) * 1.2)";
-        }
-    }
+	// .Font {
+	// 	._h2.-vw {
+	// 		line-height: clamp(calc(var(--Font-min) * 1.2), calc(7vw * 1.2), calc(var(--Font-h2) * 1.1));
+	// 	}
+	// }
 }
+
+
+
+
+
 
 /**/

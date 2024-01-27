@@ -22,13 +22,13 @@
 	}
 }
 
-.Edge-right {
-	padding-right: var(--edge);
-}
+// .Edge-right {
+// 	padding-right: var(--edge);
+// }
 
-.Edge-rightS {
-	padding-right: calc(var(--edge)*.5);
-}
+// .Edge-rightS {
+// 	padding-right: calc(var(--edge)*.5);
+// }
 
 
 
@@ -281,18 +281,18 @@
 
 
 
-@media (min-width:@w-menu-2-plus) and (max-width:1440px + 80px) {
+@media (min-width:@w-menu-2-plus) and (max-width:1540px + 80px) {
 
-	.Dev.Edge.-PC {
+	.Dev.Edge {
 		.EDGE;
 		padding-left: var(--Edge);
-		padding-right: var(--Edge);
+		padding-right: var(--edge);
+
+		background-color: red;
 	}
 
 	.Dev.Edge.-SPC {
-		.EDGE;
-		padding-left: calc(var(--Edge)*.5);
-		padding-right: calc(var(--Edge)*.5);
+		padding-left: var(--bar);
 	}
 }
 
@@ -314,14 +314,19 @@
 
 	.Pente.Edge.-SPC {
 		.EDGE;
-		padding-left: calc(var(--Edge)*0.5);
-		padding-right: calc(var(--Edge)*0.5);
+		padding-left: calc(var(--Edge)*.5);
+		padding-right: calc(var(--Edge)*.5);
+	}
+	
+	.Pente.Edge.-SPC {
+		.EDGE;
+		padding-left: calc(var(--Edge)*.5);
+		padding-right: calc(var(--Edge)*.5);
 	}
 
 
-	.Pente.Edge-left {
-		padding-left: var(--Edge);
-		margin-left: 0;
+	.Pente.Edge-rightS {
+		padding-right: calc(var(--Edge)*.5);
 	}
 
 }
@@ -497,6 +502,12 @@
 
 	.text ul.-edge_mbl {
 		padding-left: var(--ulol-padding-left);
+	}
+
+	table.Edge {
+		tr > :first-child {
+			padding-left: 1rem;
+		}
 	}
 
 

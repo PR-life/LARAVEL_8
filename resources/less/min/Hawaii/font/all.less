@@ -1,0 +1,28 @@
+@charset "UTF-8";
+
+.Badge.text-m {
+	--font-min: var(--font);
+}
+
+.Badge,
+.Badge > :first-child,
+.Nameplate {
+    font-size: var(--font-min);
+}
+
+.Badge.-S > :first-child {
+	font-size: calc(var(--font-min) - 2px);
+}
+.Badge.-XS> :first-child {
+	font-size: calc(var(--font-min) - 4px);
+}
+
+.Badge,
+.Nameplate {
+    line-height: ~"calc(var(--font-min) * 1)";
+}
+
+.Badge> :first-child {
+	height: ~"calc(var(--font-min) * 1.4)";
+	line-height: 0;
+}

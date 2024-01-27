@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+@import "../../blank/@w.less"; 
+
+@media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
+
+    .Plot.x-main {
+
+        ._cell > * {
+            z-index: 5;
+            position: relative;
+        }
+
+        ._cell::before,
+        ._cell::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+
+            border-radius: 1rem 1rem 0 0;
+        } 
+
+
+        ._cell::before {
+            left: -1px;
+            top: -1px;
+            right: -1px;
+            z-index: 0;
+
+
+            background: linear-gradient(to bottom, rgba(255,255,255,.8), transparent);
+        }
+
+
+        ._cell::after {
+            left: 0px;
+            top: 0px;
+            right: 0;
+            z-index: 1;
+
+            background-color: #242424;
+        }
+
+    }
+
+}
+
+
+
+@media screen and (max-width:@w-menu-2) {
+    // ul.x-table > li,
+    // ol.x-table > li {
+    //     margin-bottom: 11px;
+    // }
+}
+
+
+ 
+
+
+html {
+    --family: var(--family-Inter);
+    --bg-selection: pink;
+ 
+    background:#d4d4d7;
+}
+
+
+
+.-Black {
+    .c-h {color: #fff;}
+}
+
+
+
+.bg-white {
+    --c-text:#000;
+
+    background:#fff;
+}
+
+.bg-blueFon,
+.bg-blue {
+    --c-text:#fff;
+}
+
+.bg-blue {
+    background:#5fbeff;
+
+    .Info.-ico::before {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' width='24px' height='24px' viewBox='0 0 48 48'%3e%3cpath d='M2 42h44L24 4 2 42zm24-6h-4v-4h4v4zm0-8h-4v-8h4v8z' fill='%23ffffff'/%3e%3c/svg%3e");
+      }
+
+}
+
+.bg-blueFon {
+    background:#42b2fe;
+}
+
+
+ul, ol,
+._p,
+._h {
+    font-family: var(--family-DinPro);
+}
+ 

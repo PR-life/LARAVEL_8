@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+
+
+
+@media screen and (max-width:@w-menu-2) {
+	.ul.-out,
+	ul.-out {
+		--ulol-padding-left:1.5rem;
+	}
+}
+
+
+ul.-M,
+ol.-M {
+    --ulol-font: calc(var(--rem-li) + 2px);
+}
+
+ul, ol {
+    --ulol-font: var(--rem-p);
+    --ulol-line:calc(var(--ulol-font)*1.6);
+    //
+    --ulol-padding-left:2rem;
+}
+
+ul.-pl-up--1,
+ol.-pl-up--1 {
+	--ulol-padding-left:3rem;
+}
+
+ul.-pl-down--1,
+ol.-pl-down--1 {
+	--ulol-padding-left:1.5rem;
+}
+
+ul.-S,
+ol.-S {
+    --ulol-font: var(--font);
+}
+
+ul.-XS,
+ol.-XS {
+    --ulol-font: var(--font-min);
+}
+
+
+//
+
+ul, ol{
+	li {
+		font-size:var(--ulol-font);
+		line-height:var(--ulol-line);
+	}
+	li.-lineHeight {
+		line-height:calc(var(--ulol-font)*1.4);
+	}
+}
+
+ul > li {
+	> ._span {
+		padding: .5rem .75rem;
+	}
+}

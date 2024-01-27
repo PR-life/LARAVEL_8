@@ -85,49 +85,79 @@
 }
 
 //
+
+  
+
 @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
 
-    .Plot.-M {
-        --x-Plot:150px;
-    }
-    .Plot.-S {
-        --x-Plot:260px;
-    }
-    // .Plot.-XS {
-    //     --x-Plot:260px;
+    // .Plot.-M {
+    //     --x-Plot:150px;
     // }
 
-
-    .Plot {
-        --x-Plot:0px;
-        //
-        height:calc(var(--h) - var(--h-Top) - var(--h-Header) - var(--x-Plot));
-        max-height:1260px;
-        min-height: 560px;
+    .Plot.-S {
+        --Plot-precise:calc(0px - var(--h-Top) - var(--h-Header) );
     }
+    // // .Plot.-XS {
+    // //     --x-Plot:260px;
+    // // }
 
+
+    // .Plot {
+    //     --x-Plot:0px;
+    //     //
+    //     height:calc(var(--h) - var(--h-Top) - var(--h-Header) - var(--x-Plot));
+    //     max-height:1260px;
+    //     min-height: 560px;
+    // }
+
+    .Plot.-h {
+        --Plot:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
+    }
+    .Plot.-hMin {
+        --PlotMin:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
+    }
 }
 
 @media (min-width: @w-menu-2-plus) and (max-width:@metrika-80) {
-    .Plot {
-        max-height:700px;
-    }
+    // .Plot {
+    //     max-height:700px;
+    // }
 }
 
 @media (min-width: @w-menu-2-plus) and (max-width:1080px) {
-    .Plot {
-        max-height:600px;
-    }
+    // .Plot {
+    //     max-height:600px;
+    // }
 }
 
 
 @media screen and (max-width:@w-menu-2) {
-    .Plot.-mbl {
-        --x-Plot:0px;
-        //
-        height:~"calc(var(--h) - var(--h-Top) - var(--h-Header) - var(--x-Plot))";
-        max-height:740px;
-        min-height: 360px;
-    }
+    // .Plot.-mbl {
+    //     --x-Plot:0px;
+    //     //
+    //     height:~"calc(var(--h) - var(--h-Top) - var(--h-Header) - var(--x-Plot))";
+    //     max-height:740px;
+    //     min-height: 360px;
+    // }
 }
  
+
+
+.Plot {
+    --Plot:auto;
+    --PlotMin:auto;
+    --Plot-precise: 0px;
+    // calc(var(--h) - var(--h-Top) - var(--h-Header) - var(--x-Plot));
+    //  //
+    height:var(--Plot);
+    min-height:var(--PlotMin);
+    // max-height:740px;
+    // min-height: 360px;
+}
+
+
+
+.Plot.on {
+    height:auto;
+    min-height: auto;
+}

@@ -15,9 +15,15 @@
         max-width: calc(10 * var(--index));
     }
 
+
     .dimension-foto {
         min-width: calc(20 * var(--index));
-        max-width: calc(20 * var(--index));
+        max-width: 500px;
+    }
+
+    .dimension-fotoM {
+        width: calc(22 * var(--index));
+        max-width: 580px;
     }
 
 }
@@ -42,6 +48,11 @@
     }
     .Wagon.Dimension-30 {
         --x-Wagon-w:calc(25 * var(--index)) !important;
+    }
+
+    .dimension-CreditCard {
+        min-width: clamp(280px, calc(25 * var(--index)), 380px);
+        // max-width: calc(20 * var(--index));
     }
 }
 

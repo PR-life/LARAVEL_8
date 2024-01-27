@@ -421,6 +421,10 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.hidden_beyond{
 		overflow:hidden;
 	}
+
+	.none_Beyond {
+		display:none;
+	}
 }
 
 @media screen and (max-width:1080px){
@@ -442,8 +446,11 @@ hr,.ghost,.visible,.Op,.opVersa{
 		opacity:0;
 	}
 
-	.Beyond {display:none !Important}
-	
+	#body .morda-display {
+		display:none;
+	}
+
+	.Beyond,
 	.none_mbl{
 		display:none !important
 	}
@@ -452,9 +459,16 @@ hr,.ghost,.visible,.Op,.opVersa{
 		overflow: hidden;
 	}
 	
-	.block_mbl{
+
+	.block_mbl {
 		display:block
 	}
+
+	#body.-morda .morda-display,
+	.flex_mbl{
+		display:flex;
+	}
+
 	.op_mbl{
 		opacity:0
 	}

@@ -1,4 +1,4 @@
-@component('UTIN._wrap.A4', ['css' => $css ?? null])
+@component('UTIN._wrap.A4.start', ['css' => $css ?? null, 'loop' => '1'])
 
 @slot('head')
 @component('UTIN._wrap.Font')
@@ -11,10 +11,10 @@
 <div class="paragraphX2"></div>
 
 <div class="text">
-    <ul class="vol-dot -dot -M">
+    <ul class="vol-dot -dot -M / x-table">
         <li>
             Этап 1: Подбор ресурсов
-            <span class="paragraph"></span>
+            <span class="paragraph mome_mbl"></span>
         </li>
         <li class="Grey">
             <span class="Wings">
@@ -32,6 +32,8 @@
         {{-- <li class="Grey">Менеджер</li> --}}
         {{-- <li class="Grey">Имидж & Платформа</li> --}}
     </ul>
+
+    <div class="paragraphX2"></div>
 </div>
 
 
