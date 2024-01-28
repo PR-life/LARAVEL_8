@@ -8,17 +8,21 @@
         {!!$slot!!}
         <div class="paragraph"></div>
         <div class="paragraph"></div>
+        <div class="hill none_PC"></div>
     </div>
 
     <div class="H-100 _off / Grid x3 -gap">
-        <div class="_cell _1 / flex dC bC / space void / relative">
+        <div class="_cell _1 / flex dC bC_PC / space void / relative">
             {!!$cell_1 ?? ''!!}
+            <div class="paragraph net none_PC"></div>
         </div>
-        <div class="_cell _2 / flex dC bC / space void / relative">
+        <div class="_cell _2 / flex dC bC_PC / space void / relative">
             {!!$cell_2 ?? ''!!}
+            <div class="paragraph net none_PC"></div>
         </div>
-        <div class="_cell _3 / flex dC bC / space void / relative">
+        <div class="_cell _3 / flex dC bC_PC / space void / relative">
             {!!$cell_3 ?? ''!!}
+            <div class="paragraph net none_PC"></div>
         </div>
     </div>
 

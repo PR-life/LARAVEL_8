@@ -1,5 +1,15 @@
 @extends('zUtin')
 
+@push('js-bottom-link')
+
+<script async src="{{ mix('/js/skill/Scroll.js') }}"></script>
+
+@endpush
+
+
+
+
+
 @push('style')
 
  

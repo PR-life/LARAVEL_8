@@ -1,4 +1,7 @@
-@component('UTIN._wrap.A4.index', ['css' => $css ?? null,'cssPlot' => '-h', 'loop' => 'tools'])
+@component('UTIN._wrap.A4.index', ['css' => $css ?? null,'cssPlot' => '-h -mbl', 'loop' => 'tools'])
+
+    @slot('cssHead','space-m')
+    @slot('cssBody','space-s')
 
     @slot('head')
         @component('UTIN._wrap.Font')
@@ -12,9 +15,9 @@
 
  
 
- <div class="Abs -all / flex / bg-blueFon space-s round">
+ <div class="Abs_PC -all / flex / bg-blueFon space-s round">
 
-    <div class="Grid x4 -gapS">
+    <div class="Grid x4 -gapS / Void void">
         @component('UTIN._lego.wrap.bone')
         @slot('name', 'Медиа и СМИ')
             <ul>

@@ -1,10 +1,12 @@
 <div class="Pente aura">
-<div class="space-m / flex dC_mbl cross">
+
+<div class="space-m / flex bC_PC dC_mbl cross">
     <div>
         @include('UTIN._lego.intro.Preamble')
+        <div class="paragraph none_PC"></div>
     </div>
 
-    <div class="Min -w1 / paragraph"></div>
+    {{-- <div class="Min -w1 / paragraph"></div> --}}
 
     <div class="Pente-2">
         @include('UTIN._lego.intro.link')

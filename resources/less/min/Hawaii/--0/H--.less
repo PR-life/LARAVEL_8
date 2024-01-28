@@ -132,13 +132,11 @@
 
 
 @media screen and (max-width:@w-menu-2) {
-    // .Plot.-mbl {
-    //     --x-Plot:0px;
-    //     //
-    //     height:~"calc(var(--h) - var(--h-Top) - var(--h-Header) - var(--x-Plot))";
-    //     max-height:740px;
-    //     min-height: 360px;
-    // }
+    .Plot.-h.-mbl {
+        --Plot:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
+
+        height:auto;
+    }
 }
  
 

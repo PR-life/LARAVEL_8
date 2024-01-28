@@ -11,9 +11,9 @@
 <div class="paragraphX2"></div>
 
 <div class="text">
-    <ul class="vol-dot -dot -M / x-table">
+    <ul class="vol-dot -dot -M / x-table / JsScroll">
         <li>
-            Этап 1: Подбор ресурсов
+            <a href="#page_tools">Этап 1: Подбор ресурсов</a>            
             <span class="paragraph mome_mbl"></span>
         </li>
         <li class="Grey">
@@ -26,7 +26,7 @@
                     </span>
                 </div>
             </span>
-            Этап 1: оценка стоимости и доступности этих ресурсов
+            <span class="content">Этап 1: оценка стоимости и доступности этих ресурсов</span>
         </li>
 
         {{-- <li class="Grey">Менеджер</li> --}}

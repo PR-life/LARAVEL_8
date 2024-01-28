@@ -1,5 +1,6 @@
 @component('UTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'Blogger'])
  
+@slot('cssHead','space-m')
 @slot('head')
 @component('UTIN._wrap.Font')
     @slot('name',' Блоггеры и просветительская деятельность')
@@ -8,7 +9,7 @@
 @endslot
 
  
- <div class="Golden cross-xs_PC">
+ <div class="Golden cross-xs_PC / Void void">
     <div class="_l Plot -h -S / Bone / space bg-white round-m">
 
         <div>
@@ -36,17 +37,19 @@
         
 
     </div>
-    <div class="_r round-m space void-m bg-blue">
+    <div class="_r round-m space bg-blue">
 
-        <div>
-            <div class="paragraph-s"></div>
-            <div class="h">Что нужно</div>
+        <div class="void-m">
+            <div>
+                <div class="paragraph-s"></div>
+                <div class="h">Что нужно</div>
+            </div>
+     
+            <div class="content">Аналитическая статья</div>
+            <div class="content">колумнист</div>
+     
+            <div class="p wide Blog">Veniam pariatur laboris exercitation magna exercitation duis exercitation laboris fugiat consequat cillum velit veniam eiusmod.</div>
         </div>
- 
-        <div class="content">Аналитическая статья</div>
-        <div class="content">колумнист</div>
- 
-        <div class="p wide Blog">Veniam pariatur laboris exercitation magna exercitation duis exercitation laboris fugiat consequat cillum velit veniam eiusmod.</div>
     </div>
  </div>
 

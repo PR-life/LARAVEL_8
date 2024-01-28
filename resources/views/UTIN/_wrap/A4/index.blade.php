@@ -3,12 +3,12 @@
 
      
 
-    <div class="_head">
+    <div class="_head {{$cssHead ?? ''}}">
         @include('UTIN._wrap.A4.brick.close')
         {!!$head!!}
         <div class="paragraphX2"></div>
     </div>
-    <div class="_body _off H-100 / relative">
+    <div class="_body _off H-100 {{$cssBody ?? ''}} / relative">
         {!!$slot!!}
     </div>
 
