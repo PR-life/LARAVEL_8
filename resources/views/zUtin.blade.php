@@ -14,8 +14,8 @@
 <div id="Fon" class="Abs -lt -r @stack('css-fon')">@stack('fon')</div>
 
 
-{{-- @include('_._skeleton.Top') --}}
-{{-- @include('_._skeleton.header') --}}
+@include('_._skeleton.Top')
+@include('UTIN._skeleton.header')
 {{-- @include('_._skeleton.menuMain') --}}
 
 @yield('breadBack')
