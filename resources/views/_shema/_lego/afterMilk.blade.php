@@ -3,10 +3,12 @@
 <script async src="{{ mix('/js/Observer/visible.js') }}"></script>
 @stack('js-bottom-link')
 
+
 <script>
 	@stack('js-bottom')
 </script>
 @stack('js-bottom-solo')
+
 
 <!-- <pre id="Rearguard" class="Fix space noEvents Grey / _indexMax" style="top: 0; right:0">Rearguard</pre>
 <script src="/js/Rearguard.js"></script> -->

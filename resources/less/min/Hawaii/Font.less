@@ -7,7 +7,8 @@
 		--Font-h1:4vw;
 
 		//
-		--Font-h2: 28px;
+		--Font-h2-max: 28px;
+		--Font-h2:3vw;
 	
 		//
 		--Font-min:18px;
@@ -19,7 +20,30 @@
 		--Font-h1-max: calc(48px - 1rem);
 
 		//
-		--Font-h2: calc(28px - .25rem);
+		--Font-h2-max: calc(28px - .25rem);
+	}
+
+	.Font.-M {
+		--Font-h1-max: calc(48px + 1rem);
+		--Font-h2-max: calc(28px + 1rem);
+		// --Font-min: 18px;
+		// --Font-min-line: calc(var(--Font-min) + 4px);
+		--font-min:16px;
+		._p {
+			--rem-p:20px;
+		}
+	}
+
+	.Font.-L {
+		--Font-h1-max: calc(48px + 2rem);
+
+		//
+		--Font-h2-max: calc(28px + 2rem);
+
+		//
+		--rem-p:22px;
+		// --Font-min: 18px;
+		// --Font-min-line: calc(var(--Font-min) + 4px);
 	}
 
 }
@@ -124,23 +148,9 @@
  
 
 @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
-	.Font.-L {
-		--Font-h1: calc(48px + 2rem);
-		--Font-h2: calc(28px + 2rem);
-		--rem-p:22px;
-		// --Font-min: 18px;
-		// --Font-min-line: calc(var(--Font-min) + 4px);
-	}
-	.Font.-M {
-		--Font-h1: calc(48px + 1rem);
-		--Font-h2: calc(28px + 1rem);
-		// --Font-min: 18px;
-		// --Font-min-line: calc(var(--Font-min) + 4px);
-		--font-min:16px;
-		._p {
-			--rem-p:20px;
-		}
-	}
+ 
+
+	
  
 }
 

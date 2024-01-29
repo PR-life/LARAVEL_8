@@ -72,6 +72,12 @@
 	min-height: var(--hill-l);
 }
 
+.hill-xl {
+	min-height: calc(var(--hill-l) + 2rem);
+}
+
+
+
 @media screen and (max-width:@w-menu-2) {
 	.hill_mbl {
 		min-height: var(--hill);
@@ -97,9 +103,10 @@
     .Plot.-S {
         --Plot-precise:calc(0px - var(--h-Top) - var(--h-Header) );
     }
-    // // .Plot.-XS {
-    // //     --x-Plot:260px;
-    // // }
+
+    .Plot.-XS {
+        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 );
+    }
 
 
     // .Plot {
@@ -113,6 +120,11 @@
     .Plot.-h {
         --Plot:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
     }
+
+    .Plot.-XXS.-h {
+        --Plot:calc(var(--h) *.5);
+    }
+
     .Plot.-hMin {
         --PlotMin:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
     }
