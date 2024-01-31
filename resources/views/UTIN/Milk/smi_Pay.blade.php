@@ -14,6 +14,8 @@
                 </div>
                  
 
+                @include('UTIN.Milk.brick.closeBottom')
+
  
             </div>
         </div>

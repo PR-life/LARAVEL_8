@@ -16,13 +16,7 @@
 
 
 
-@push('style')
-
- 
-
- 
- 
-@endpush
+@push('style')@endpush
 
 
 
@@ -48,13 +42,8 @@
     <div class="Top -h"></div>
     <div class="Header -h"></div>
 
-    <div class="Bee"></div>
-    <div class="paragraphX2"></div>
-    <div class="ghost noEvents">
-    @component('zVl._brick.lego.fon_Flipclock')
-        @slot('cssRolling', false)
-    @endcomponent
-    </div>
+    <div class="Plot -h -S -mbl"></div>
+ 
 
     <div class="Abs -all x-wave"></div>
 

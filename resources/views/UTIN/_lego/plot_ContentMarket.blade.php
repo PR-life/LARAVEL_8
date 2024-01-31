@@ -61,3 +61,7 @@
  </div>
 
 @endcomponent
+
+{{-- https://journal.tinkoff.ru/list/cholesterol-and-atherosclerosis/ --}}
+{{-- https://vc.ru/?ysclid=ls0i49lken639372634 --}}
+{{-- https://journal.sovcombank.ru/umnii-potrebitel/mozhet-li-vrach-bit-samozanyatim --}}

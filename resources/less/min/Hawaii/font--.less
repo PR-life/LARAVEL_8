@@ -119,42 +119,6 @@ p {
 	font-size: inherit;
 }
 
-
-.content-l {
-	font-size: calc(var(--font) + 2px);
-    line-height: ~"calc(var(--rem-p) * 1.5)";
-}
-
-.content-m {
-	font-size: calc(var(--font) + 1px);
-    line-height: ~"calc(var(--rem-p) * 1.5)";
-}
-
-
-
-
-summary.-XS,
-.content-s {
-    font-size: calc(var(--font) - 1px);
-    line-height: var(--font);
-}
-
-
-select,
-select option.default,
-.content-xs {
-    font-size: calc(var(--font-min)) !important;
-}
-
-.content-xxs {
-	font-size: calc(var(--font-min) - 1px) !important;
-}
-
-.content-xxxs {
-	font-size: calc(var(--font-min) - 2px) !important;
-}
-
-
 .content-xxxs,
 .content-xxs,
 .content-xs {
@@ -179,6 +143,37 @@ figcaption,
 dl dt, dl dd,
 input, textarea {
     font-size: var(--font);
+}
+
+summary.-XS,
+.content-s {
+    font-size: calc(var(--font) - 1px);
+    line-height: var(--font);
+}
+
+
+select,
+select option.default,
+.content-xs {
+    font-size: calc(var(--font-min)) !important;
+}
+
+.content-xxs {
+	font-size: calc(var(--font-min) - 1px) !important;
+}
+
+.content-xxxs {
+	font-size: calc(var(--font-min) - 2px) !important;
+}
+
+.content-l {
+	font-size: calc(var(--font) + 2px);
+    line-height: ~"calc(var(--rem-p) * 1.5)";
+}
+
+.content-m {
+	font-size: calc(var(--font) + 1px);
+    line-height: ~"calc(var(--rem-p) * 1.5)";
 }
 
 

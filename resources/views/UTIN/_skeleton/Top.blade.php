@@ -15,7 +15,7 @@
 			</ul>
 
 			<ul class="menu -S / lie cross-xs">
-				<li><a href="{{route('admin.morda')}}">admin</a></li>
+				{{-- <li><a href="{{route('admin.morda')}}">admin</a></li> --}}
 			</ul>
 
 		</div>

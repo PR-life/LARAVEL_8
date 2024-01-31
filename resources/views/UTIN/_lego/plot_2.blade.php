@@ -2,8 +2,8 @@
  
 @slot('head')
 @component('UTIN._wrap.Font')
-    @slot('name','Детальное содержание <br class="none_PC">"Этап 1"')
-    <div class="_p Grey">Планирование ресурсов для продвижения</div>
+    @slot('name','Комментарии')
+    <div class="_p Grey">по указанным площадкам</div>
 @endcomponent
 @endslot
 
@@ -11,13 +11,13 @@
 
 <div class="text">
     <ol class="-chek -dot -M / x-table / JsScroll">
-        <li><a href="#page_tools">Инструменты и методы</a></li>
+        {{-- <li><a href="#page_tools">Инструменты и методы</a></li> --}}
         <li><a href="#page_TV">ТВ-каналы</a></li>
         <li><a href="#page_SMI">Медиа и СМИ</a></li>
         <li><a href="#page_Radio">Радио</a></li>
         <li><a href="#page_ContentMarket">Контент-маркетинг</a></li>
-        <li><a href="#page_Blogger">Блоггеры и просветительская деятельность</a></li>
-        <li><a href="#page_Conferences">Конференции</a></li>
+        <li><a href="#page_Blogger">Просветительская деятельность</a></li>
+        <li><a href="#page_Conferences"> Образовательные мероприятия</a></li>
         {{-- <li><a href="#page_tools">Образовательные мероприятия</a></li> --}}
     </ol>
 </div>

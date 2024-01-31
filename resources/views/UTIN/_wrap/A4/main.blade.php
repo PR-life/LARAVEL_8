@@ -8,7 +8,7 @@
         {!!$slot!!}
         <div class="paragraph"></div>
         <div class="paragraph"></div>
-        <div class="hill none_PC"></div>
+        <div class="hill-s none_PC"></div>
     </div>
 
     <div class="H-100 _off / Grid x3 -gap">

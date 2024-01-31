@@ -14,7 +14,7 @@
 <div id="Fon" class="Abs -lt -r @stack('css-fon')">@stack('fon')</div>
 
 
-@include('_._skeleton.Top')
+@include('UTIN._skeleton.Top')
 @include('UTIN._skeleton.header')
 {{-- @include('_._skeleton.menuMain') --}}
 
@@ -49,7 +49,7 @@
 </div> --}}
 {{-- @include('zImago._skeleton.menuBeyond') --}}
 
-{{-- @include('_._skeleton.Slump') --}}
+@include('UTIN._skeleton.Slump')
 {{-- @include('_._skeleton.Geek') --}}
 
 <div id="Milk" class="Abs Milk / index owlFIX">

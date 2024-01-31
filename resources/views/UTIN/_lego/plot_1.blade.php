@@ -26,7 +26,7 @@
                     </span>
                 </div>
             </span>
-            <span class="content">Этап 1: оценка стоимости и доступности этих ресурсов</span>
+            <span class="content">Этап 1: оценка стоимости и доступности</span>
         </li>
 
         {{-- <li class="Grey">Менеджер</li> --}}

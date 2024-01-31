@@ -5,8 +5,10 @@
 
     @slot('head')
         @component('UTIN._wrap.Font')
-            @slot('name','Инструменты и методы')
-            <div class="_p Grey / Blog">Задейстоввать нужные для достижения поставленных целей</div>
+            @slot('name','Какие направления мы рассмотрели')
+            {{-- @slot('name','Планирование ресурсов') --}}
+            {{-- @slot('name','Инструменты и методы') --}}
+            <div class="_p Grey">Планирование ресурсов. Задействовать целевые для достижения <a href="#page_0">текущей задачи</a></div>
         @endcomponent
     @endslot
 
@@ -30,15 +32,17 @@
  
         @component('UTIN._lego.wrap.bone')
         @slot('name', 'Контент-маркетинг')
-            
+            <ul class="slim -lineHeight">
+                <li>Рекомендации</li>
+            </ul>
         @endcomponent
 
 
         @component('UTIN._lego.wrap.bone')
-        @slot('name', 'Блоггеры <br>и просветительская деятельность')
+        @slot('name', 'Просветительская деятельность')
             
         <ul>
-            <li>Блоггеры</li>
+            <li>Блогеры</li>
             <li>Инфлюенсеры</li>
         </ul>
  

@@ -1,22 +1,3 @@
-<div class="Pente aura">
-
-<div class="space-m / flex bC_PC dC_mbl cross">
-    <div>
-        @include('UTIN._lego.intro.Preamble')
-        <div class="paragraph none_PC"></div>
-    </div>
-
-    {{-- <div class="Min -w1 / paragraph"></div> --}}
-
-    <div class="Pente-2">
-        @include('UTIN._lego.intro.link')
-    </div>
-</div> 
-</div> 
-
-
-
-
 @component('UTIN._wrap.A4.main', ['css' => $css ?? null, 'loop' => '0'])
 
     @slot('cell_1')
@@ -54,6 +35,14 @@
 
     <div class="h2 -vw Article / c-h center-text">Планирование ресурсов для повышение видимости и авторитетности по вопросам здоровья <br class="none_beyond">и медицины</div>
     <div class="content"></div>
+
+    <div class="paragraphX2"></div>
+    <div class="Info / -ico ico-center vol-2 / center-text">
+        <div class="content-s">Для ответа использовали материалы в соц. сетях
+        <br>и подкаст <a href="https://www.youtube.com/watch?v=hwXkoQvRoHE&t=244s" target="_blank">сердечный подкаст | диалог с кардиохирургом-аритмологом</a></div>
+    </div>
+    <div class="paragraphX2 none_mbl"></div>
+
 
 @endcomponent
 

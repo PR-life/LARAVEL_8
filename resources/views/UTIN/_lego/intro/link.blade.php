@@ -1,4 +1,4 @@
-  <div class="flex dC">
+  {{-- <div class="flex dC"> --}}
 
     @component('UTIN._lego.intro.wrap.index')
         @slot('name','/dr_aritmolog')
@@ -44,4 +44,4 @@
     
 
     
-</div>
+{{-- </div> --}}

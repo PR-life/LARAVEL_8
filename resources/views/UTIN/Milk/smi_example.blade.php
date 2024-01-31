@@ -11,9 +11,12 @@
 
                     <div class="h">Запросы журналистов</div>
 
+                    на поиск экспертного мнения
                 </div>
                  
 
+
+                @include('UTIN.Milk.brick.closeBottom')
  
             </div>
         </div>
