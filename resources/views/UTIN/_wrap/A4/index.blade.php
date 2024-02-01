@@ -1,4 +1,4 @@
-<div id="page_{{$loop ?? '999'}}" class="I aura / Plot {{$cssPlot ?? '-hMin'}} Bone / OnOff / / {{$css ?? 'space-m bg-white'}} / round / JsScroll" localstorage-id>
+<div id="page_{{$loop ?? '999'}}" class="I aura / Plot {{$cssPlot ?? '-hMin'}} Bone / OnOff / / {{$css ?? 'space-m bg-white'}} / round" localstorage-id>
 {{-- <div id="page_{{$loop ?? '999'}}" class="I aura Plot -mbl -auto / OnOff / Bone / {{$css ?? 'space-m bg-white'}} / round" localstorage-id> --}}
 
      

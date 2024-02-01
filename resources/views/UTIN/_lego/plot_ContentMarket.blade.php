@@ -3,7 +3,7 @@
 @slot('cssHead','space-m')
 @slot('head')
 @component('UTIN._wrap.Font')
-    @slot('name',' Контент-маркетинг')
+    @slot('name','Контент-маркетинг')
     <div class="_p Grey">Создание экспертного контента на сторонних площадках.</div>
 @endcomponent
 @endslot
@@ -51,11 +51,14 @@
                 <div class="paragraph-s"></div>
                 <div class="h">Что нужно</div>
             </div>
+
+            <p>В то же время никто не запрещает собственникам бизнеса выступать на личные темы. Владелец бизнеса может быть автогонщиком — и давать комментарий с историей, как хобби спасает его от выгорания. Такие упоминания раскрывают первое лицо бренда как личность — а это тоже влияет на доверие со стороны потенциальных клиентов.</p>
      
             <div class="content">Аналитическая статья</div>
             <div class="content">колумнист</div>
      
-            <div class="p wide Blog">Veniam pariatur laboris exercitation magna exercitation duis exercitation laboris fugiat consequat cillum velit veniam eiusmod.</div>
+
+            
         </div>
     </div>
  </div>

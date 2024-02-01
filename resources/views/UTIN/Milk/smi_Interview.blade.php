@@ -1,4 +1,4 @@
-@component('_wrap.FIX.milk.win',['css' => '','cssFix' => 'cI_PC space-s', 'css_fix' => 'Pente aura / Plot -S -h / fix-H_mbl'])
+@component('_wrap.FIX.milk.win',['css' => '','cssFix' => 'cI_PC44 space-s', 'css_fix' => 'Pente aura / fix-H_mbl'])
 @slot('id', 'milk_smiInterview')
 @slot('cssAbsAll', 'White -bg / round / Jolt -t / hidden')
 <div class="Abs -all / Scroll_mbl"> 

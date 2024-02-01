@@ -42,7 +42,7 @@
     <div class="Top -h"></div>
     <div class="Header -h"></div>
 
-    <div class="Plot -h -S -mbl"></div>
+    <div class="Plot -h -mbl -fixMbl -S"></div>
  
 
     <div class="Abs -all x-wave"></div>

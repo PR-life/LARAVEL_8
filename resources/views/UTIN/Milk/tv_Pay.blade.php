@@ -1,4 +1,4 @@
-@component('_wrap.FIX.milk.win',['css' => '','cssFix' => 'cI_PC space-s', 'css_fix' => 'Pente aura / Plot -S -h / fix-H_mbl'])
+@component('_wrap.FIX.milk.win',['css' => '','cssFix' => 'cI_PC55 space-s', 'css_fix' => 'Pente aura / Plot55 -S55 -h55 / fix-H_mbl'])
 @slot('id', 'milk_tvPay')
 @slot('cssAbsAll', 'White -bg / round / Jolt -t / hidden')
 <div class="Abs -all / Scroll_mbl"> 
@@ -7,25 +7,50 @@
             <div class="_scr">
                 <div class="hill-s"></div>
 
-                <div class="text Edge edgeSPC">
+                <div class="text void / Edge edgeSPC">
 
-                    , интервью, интеграцию в эфир проектов телеканала. 
+ 
+                    <h2>Заказать персональный теле-сюжет на канале во втором мультиплексе</h2>
 
-                    <p>
-               
-                        первому вот понимаете за деньги туда попадают те кто один раз заплатил если
-        
-                        вы один раз заплатили за то чтобы попасть на телеге вы так и будете за это платить хотя по факту давайте рассматривать раз</p>
-                    
-                    <div class="inline">
-                        https://mirtv.ru/video/64383/    
-                        https://doc-tv.ru
+                    <ul class="-S slim">
+                        <li>производство отдельного сюжета или программы целиком</li>
+                        <li>интервью</li>
+                        <li>интеграцию в эфир проектов телеканалов</li>
+                    </ul>
+
+                    <div class="h">Пример</div>
+
+                    <div class="Details -edge">
+                        <details open>
+                            <summary class="-S">телерадиокомпания Мир<i></i></summary>
+                            <div class="_edge text void">
+                                <img class="Max -w1" src="/Utin/mir.png" alt="">
+                                <dl class="-dot Max">
+                                    <dt class="Grey">передача</dt>
+                                    <dd>Евразия. История успеха</dd>
+                                    <dt class="Grey">сюжет про</dt>
+                                    <dd>Главный кардиохирург Казахстана</dd>
+                                    <dt class="Grey">длительность</dt>
+                                    <dd>4:55</dd>
+                                    <dt class="Grey">ссылка на ролик</dt>
+                                    <dd><a href="https://mirtv.ru/video/64383/" target="_blank">смотреть</a></dd>
+                                </dl>
+                            </div>
+                        </details>
                     </div>
 
 
-                    <h1>вы один раз заплатили за то чтобы попасть на эфир, вы так и будете за это платить</h1>
 
+                    <p class="b600">Как это работает:</p>
+                    <ol class="-S">
+                        <li>Выбор телевизионной студии</li>
+                        <li>Обсуждение идеи, цели, бюджет и другие параметры проекта</li>
+                        <li>Разработка концепции и сценария</li>
+                        <li>Оплата и Производство</li>
+                    </ol>
 
+   
+                
 
                     @include('UTIN.Milk.brick.closeBottom')
                 </div>

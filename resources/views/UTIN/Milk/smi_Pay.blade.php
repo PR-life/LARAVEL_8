@@ -7,9 +7,30 @@
             <div class="_scr">
                 <div class="hill-s"></div>
 
-                <div class="text Edge edgeSPC">
+                <div class="text void Edge edgeSPC">
 
-                    <div class="h">Платные публикации</div>
+
+                    <h2>Гарантированные публикации в СМИ</h2>
+
+                    <dl class="-leftS -dot Max">
+                        <dt class="Grey">1 статья</dt>
+                        <dd>48 500 ₽</dd>
+                        <dt class="Grey">2 статьи</dt>
+                        <dd>80 000 ₽</dd>
+                    </dl>
+
+                    <p>Формат</p>
+
+                    <ul class="-S">
+                        <li>Статья или колонка</li>
+                        <li>Интервью с экспертом</li>
+                        <li>Комментарий эксперта</li>
+                    </ul>
+
+                     
+
+
+
 
                 </div>
                  

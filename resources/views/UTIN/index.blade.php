@@ -12,7 +12,10 @@
 
 
 
-{{-- https://pr.help/medicinskij-pr-dlja-vrachej-hirurgov-medi/ --}}
+{{-- примеры
+https://ya.ru/search/?text=+%D0%BA%D0%BE%D0%BC%D0%BF%D0%B0%D0%BD%D0%B8%D0%B8+%C2%AB%D0%93%D1%80%D1%83%D0%B7%D0%BE%D0%B2%D0%B0%D1%8F+%D0%BC%D0%B5%D1%85%D0%B0%D0%BD%D0%B8%D0%BA%D0%B0%C2%BB&lr=213&search_source=yaru_desktop_common&search_domain=yaru --}}
+
+
 
 {{-- цены
 https://9writer.ru/ceny --}}
@@ -70,6 +73,7 @@ https://9writer.ru/ceny --}}
     @include('UTIN.Milk.tv_Pay')
     @include('UTIN.Milk.smi_Answer')
     @include('UTIN.Milk.smi_Interview')
+    @include('UTIN.Milk.smi_PressReleases')
     @include('UTIN.Milk.smi_Pay')
     @include('UTIN.Milk.smi_example')
     @include('UTIN.Milk.smi_exampleLite')

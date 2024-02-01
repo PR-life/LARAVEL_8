@@ -1,4 +1,4 @@
-@component('_wrap.FIX.milk.win',['css' => '','cssFix' => 'cI_PC space-s', 'css_fix' => 'Pente aura / Plot -S -h / fix-H_mbl'])
+@component('_wrap.FIX.milk.win',['css' => '','cssFix' => 'cI_PC555 space-s', 'css_fix' => 'Pente aura / fix-H_mbl'])
 @slot('id', 'milk_smiExampleLite')
 @slot('cssAbsAll', 'White -bg / round / Jolt -t / hidden')
 <div class="Abs -all / Scroll_mbl"> 
@@ -9,15 +9,16 @@
 
                 <div class="text Edge edgeSPC">
 
-                    <div class="h">Запросы журналистов</div>
+                    <h2>Запросы журналистов на поиск экспертного мнения</h2>
 
-                    <ul class="ul -S">
-                        <li class="a content">Южный федеральный | Общественно-политический информационный портал</li>
-                        https://pressfeed.ru/query/139151
-                        <li class="a content">Питерские заметки</li>
-                        https://deadline.media/feed/?query=12959
-                    </ul>
+                    <div class="paragraphX2"></div>
                     
+                    <div class="Details -edge -M / space_PC">
+                        @include('UTIN.Milk._lego.smi_Answer_second',['close' => true])
+                    </div>
+    
+
+                    {{-- 555555 --}}
                     {{-- <p>https://lifehacker.ru/kak-zamedlit-serdcebienie/</p> --}}
                     {{-- <p>https://interviewage.ru/</p> --}}
                     {{-- ultra Lite --}}
