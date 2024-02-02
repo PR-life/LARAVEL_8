@@ -56,10 +56,14 @@ ul, ol{
 		font-size:var(--ulol-font);
 		line-height:var(--ulol-line);
 	}
-	li.-lineHeight {
-		line-height:calc(var(--ulol-font)*1.4);
-	}
+
 }
+
+li.-lineHeight,
+ul.-lineHeight > li, ol.-lineHeight > li{
+	line-height:calc(var(--ulol-font) * 1.2);
+}
+
 
 ul > li {
 	> ._span {

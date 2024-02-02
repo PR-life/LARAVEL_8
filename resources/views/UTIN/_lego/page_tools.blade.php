@@ -24,7 +24,7 @@
     <div class="Grid x4 -gapS / Void void">
         @component('UTIN._lego.wrap.bone')
         @slot('name', 'Медиа и СМИ')
-            <ul>
+            <ul class="-lineHeight void">
                 <li>ТВ-каналы</li>
                 <li>СМИ</li>
                 <li>Радио</li>
@@ -34,7 +34,7 @@
  
         @component('UTIN._lego.wrap.bone')
         @slot('name', 'Контент-маркетинг')
-            <ul class="slim -lineHeight">
+            <ul class="-lineHeight void">
                 <li>Рекомендации</li>
             </ul>
         @endcomponent
@@ -43,7 +43,7 @@
         @component('UTIN._lego.wrap.bone')
         @slot('name', 'Просветительская деятельность')
             
-        <ul>
+        <ul class="-lineHeight void">
             <li>Блогеры</li>
             <li>Инфлюенсеры</li>
         </ul>
@@ -53,9 +53,10 @@
 
 
         @component('UTIN._lego.wrap.bone')
-        @slot('name', 'Образовательные мероприятия')
-            <ul>
-                <li>спикер на медицинских конференциях, семинарах</li>
+        @slot('name', 'Образовательные и деловое мероприятия')
+            <ul class="-lineHeight void">
+                <li>Семинары</li>
+                <li>Спикер на медицинских конференциях</li>
             </ul>
         @endcomponent
 

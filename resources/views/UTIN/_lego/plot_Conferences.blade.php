@@ -3,7 +3,7 @@
 @slot('cssHead','space-m')
 @slot('head')
 @component('UTIN._wrap.Font')
-    @slot('name','Конференции')
+    @slot('name','Образовательные и деловое мероприятия')
     {{-- <div class="_p Grey">Создание экспертного контента на сторонних площадках. Устанавливание и поддержание контактов с журналистами, редакторами и другими представителями СМИ для обеспечения видимости медицинских инициатив и экспертного мнения.</div> --}}
 @endcomponent
 @endslot
@@ -16,25 +16,45 @@
 
         <div>
             <div class="paragraph-s"></div>
-            <div class="h">Ресурсы</div>
+            <div class="h">Площадки</div>
         </div>
         
  
         <div class="_body">
-            <div class="content-s b600">Федеральные каналы</div>
-            <div class="paragraph"></div>
-
+ 
+            <div class="flex dC cC cI">
+                <h2>
+                    ответ еще формируется
+                </h2>
+                <div class="paragraph"></div>
+                <div class="content Grey">ожидаем отчет от специалиста</div>
+                <div class="hill / relative">
+                    <div class="Preloader / Flex"></div>
+                </div>
+            </div>
  
         </div>
         
 
     </div>
     <div class="_r round-m space bg-blue">
+        <div>
+            <div class="paragraph-s"></div>
+            <div class="h">Формат сотрудничества</div>
+        </div>
+
 
         <div class="void-m">
-            <div>
-                <div class="paragraph-s"></div>
-                <div class="h">Что нужно</div>
+            <div class="paragraph"></div>    
+            <div class="flex dC cC cI">
+                <h2>
+                    ответ еще формируется
+                </h2>
+                <div class="paragraph"></div>
+                <div class="content">ожидаем отчет от специалиста</div>
+                <div class="hill / relative">
+                    <div class="Preloader / Flex"></div>
+                </div>
             </div>
             https://cardio-eur.asia/conferences
             https://scardio.ru/events/rossiyskiy_nacionalnyy_kongress_kardiologov/rossiyskiy_nacionalnyy_kongress_kardiologov_2024/?ysclid=lruthsci4e68227928
@@ -47,7 +67,6 @@
             LITE
             https://lab-conf.ru/
     
-            <div class="p wide Blog">Veniam pariatur laboris exercitation magna exercitation duis exercitation laboris fugiat consequat cillum velit veniam eiusmod.</div>
         </div>
     </div>
  </div>

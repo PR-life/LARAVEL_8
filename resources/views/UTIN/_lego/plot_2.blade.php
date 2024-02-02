@@ -16,8 +16,9 @@
         <li><a href="#page_SMI">Медиа и СМИ</a></li>
         <li><a href="#page_Radio">Радио</a></li>
         <li><a href="#page_ContentMarket">Контент-маркетинг</a></li>
+        <li><a href="#page_PS">Прочие</a></li>
         <li><a href="#page_Blogger">Просветительская деятельность</a></li>
-        <li><a href="#page_Conferences">Прочие</a></li>
+        <li><a href="#page_Conferences">Образовательные и деловое мероприятия</a></li>
         {{-- <li><a href="#page_tools">Образовательные мероприятия</a></li> --}}
     </ol>
 </div>
