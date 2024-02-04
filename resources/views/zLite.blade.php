@@ -14,18 +14,19 @@
 <div id="Fon" class="Abs -all @stack('css-fon')">@stack('fon')</div>
 
 
-@stack('10111703')
+{{-- @stack('10111703') --}}
 {{-- @include('_._skeleton.Top') --}}
 {{-- @include('_._skeleton.header') --}}
 {{-- @include('_._skeleton.menuMain') --}}
+@stack('Top')
 @stack('menu')
 
 @yield('breadBack')
 @yield('head')
 
 @component('_wrap.index', ['id' => 'Lite', 'css' => 'Hero-padding HWin'])
-	<!-- slot('bar') -->
-	<!-- yield('bread') -->
+
+	@yield('bee')
 
 	@stack('topBefore')
 	@yield('top')
@@ -41,6 +42,10 @@
 	@stack('bottomAfter')
 
 @endcomponent
+
+@stack('basementBefore')
+@stack('basement')
+@stack('basementAfter')
 
 
 

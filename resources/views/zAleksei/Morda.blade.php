@@ -1,4 +1,4 @@
-@extends('z')
+@extends('zLite')
 @push('css-body', '-morda ')
 
 

@@ -1,0 +1,26 @@
+const mix = require('laravel-mix');
+
+mix.version();
+
+mix.less('resources/min.less', 'public/css/min.css')
+	.less('resources/minAdmin.less', 'public/css/minAdmin.css')
+	//
+	.less('resources/app.less', 'public/css/app.css')
+	.less('resources/appAdmin.less', 'public/css/appAdmin.css')
+	//
+	.less('resources/font.less', 'public/css/font.css')
+	.less('resources/lead.less', 'public/css/lead.css')
+	//
+	.less('resources/less/lib/Design/LITE.less', 'public/css/Design/lite.css')
+	//
+	.less('resources/less/lib/zSolo/Start.less', 'public/css/solo/Start.css')
+	.less('resources/less/lib/zSolo/Utin.less', 'public/css/solo/Utin.css')
+	//
+	.less('resources/UTIN.less', 'public/css/UTIN.css')
+
+mix.js('resources/__JS/app.js', 'public/js')
+	.js('resources/__JS/Observer/_observer.js', 'public/js/Observer/_observer.js')
+	.js('resources/__JS/Observer/visible.js', 'public/js/Observer/visible.js')
+	//
+	.js('resources/__JS/_skill/Scroll/index.js', 'public/js/skill/Scroll.js')
+	.js('resources/__JS/_skill/OXOY.js', 'public/js/skill/OXOY.js')

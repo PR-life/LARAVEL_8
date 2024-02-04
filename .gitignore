@@ -1,0 +1,22 @@
+# .gitignore
+
+/node_modules
+/storage/*.key
+/vendor
+
+#
+/public/images*
+/public/media*
+/public/storage
+/public/video*
+
+#
+public_html
+
+#
+#
+/resources/views/THIS/*
+
+webpack.mix.js
+.env
+app/Providers/RouteServiceProvider.php.example
