@@ -1,8 +1,8 @@
-@component('UTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'ContentMarket'])
+@component('zUTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'ContentMarket'])
  
 @slot('cssHead','space-m')
 @slot('head')
-@component('UTIN._wrap.Font')
+@component('zUTIN._wrap.Font')
     @slot('name','Контент-маркетинг')
     <div class="_p Grey">Создание экспертного контента на сторонних площадках</div>
 @endcomponent

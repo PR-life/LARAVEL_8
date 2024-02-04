@@ -1,8 +1,8 @@
-@component('UTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'Radio'])
+@component('zUTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'Radio'])
  
 @slot('cssHead','space-m')
 @slot('head')
-@component('UTIN._wrap.Font')
+@component('zUTIN._wrap.Font')
     @slot('name','Эфир на радио')
     {{-- <div class="_p Grey">Участие в эфире радио в качестве эксперта или гостя</div> --}}
 @endcomponent

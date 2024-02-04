@@ -1,6 +1,6 @@
   {{-- <div class="flex dC"> --}}
 
-    @component('UTIN._lego.intro.wrap.index')
+    @component('zUTIN._lego.intro.wrap.index')
         @slot('name','/dr_aritmolog')
         @slot('nameSvg','telegram')
         @slot('link','https://t.me/dr_aritmolog')
@@ -11,7 +11,7 @@
     <div class="paragraph-s"></div>
 
     
-    @component('UTIN._lego.intro.wrap.index')
+    @component('zUTIN._lego.intro.wrap.index')
         @slot('name','/dr_aritmolog')
         @slot('nameSvg','vk')
         @slot('link','https://vk.com/dr_aritmolog')
@@ -21,7 +21,7 @@
 
     <div class="paragraph-s"></div>
  
-    @component('UTIN._lego.intro.wrap.index')
+    @component('zUTIN._lego.intro.wrap.index')
         @slot('name','/LihachOFF1')
         @slot('nameSvg','youtube')
  
@@ -32,7 +32,7 @@
 
     <div class="paragraph-s"></div>
     
-    @component('UTIN._lego.intro.wrap.index')
+    @component('zUTIN._lego.intro.wrap.index')
         @slot('name','dr-lihachev-aritmolog.ru/')
         @slot('nameSvg','web')
  

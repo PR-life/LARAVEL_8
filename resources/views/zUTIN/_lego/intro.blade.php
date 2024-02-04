@@ -1,4 +1,4 @@
-@component('UTIN._wrap.A4.main', ['css' => $css ?? null, 'loop' => '0'])
+@component('zUTIN._wrap.A4.main', ['css' => $css ?? null, 'loop' => '0'])
 
     @slot('cell_1')
         <div class="content">Стек 1</div>

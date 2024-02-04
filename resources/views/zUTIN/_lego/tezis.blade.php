@@ -1,4 +1,4 @@
-@component('UTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'Tezis'])
+@component('zUTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'Tezis'])
     @slot('cssPlot', '-h')
     @slot('cssHead','space-m')
 
@@ -10,7 +10,7 @@
     <div class="paragraph"></div>
 
 
-    {{-- @component('UTIN._wrap.Font')
+    {{-- @component('zUTIN._wrap.Font')
         @slot('css','-S Grey')
         @slot('cssName','Grey')
         @slot('name','Медиа и СМИ')

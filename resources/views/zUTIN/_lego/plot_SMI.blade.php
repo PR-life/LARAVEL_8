@@ -1,8 +1,8 @@
-@component('UTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'SMI'])
+@component('zUTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'SMI'])
 
 @slot('cssHead','space-m')
 @slot('head')
-@component('UTIN._wrap.Font')
+@component('zUTIN._wrap.Font')
     @slot('name','СМИ')
     {{-- <div class="_p Grey">Создание экспертного контента на сторонних площадках.</div> --}}
 @endcomponent
@@ -33,7 +33,7 @@
 
                     {{-- <div class="content">Комментарий в СМИ - это мощное средство привлечения внимания. Мы помогаем вам стать медийной личностью, вставляя ваше экспертное мнение в статьи печатных и интернет-изданий. Мы гарантируем, что ваша цитата соответствует теме материала и сопровождается всей необходимой информацией о вас и вашей компании.</div> --}}
 
-                    @include('UTIN._brick.ico_smi')
+                    @include('zUTIN._brick.ico_smi')
                     <div class="paragraph net"></div>
                     <div class="content b600 / net">Цель</div>
                     <div class="paragraph-s net"></div>

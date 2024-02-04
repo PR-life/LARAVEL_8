@@ -12,9 +12,9 @@
                 </div>
                 <div class="paragraphX2"></div>
                 <div class="Details -edge -M / space_PC">
-                    @include('UTIN.Milk._lego.smi_Answer_first',['close' => true])
+                    @include('zUTIN.Milk._lego.smi_Answer_first',['close' => true])
                 </div>
-                @include('UTIN.Milk.brick.closeBottom')
+                @include('zUTIN.Milk.brick.closeBottom')
             </div>
         </div>
     </div>

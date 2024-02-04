@@ -1,8 +1,8 @@
-@component('UTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'Conferences'])
+@component('zUTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'Conferences'])
  
 @slot('cssHead','space-m')
 @slot('head')
-@component('UTIN._wrap.Font')
+@component('zUTIN._wrap.Font')
     @slot('name','Образовательные и деловое мероприятия')
     {{-- <div class="_p Grey">Создание экспертного контента на сторонних площадках. Устанавливание и поддержание контактов с журналистами, редакторами и другими представителями СМИ для обеспечения видимости медицинских инициатив и экспертного мнения.</div> --}}
 @endcomponent

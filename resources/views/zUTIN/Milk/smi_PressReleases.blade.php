@@ -81,7 +81,7 @@
                 </div>
                  
 
-                @include('UTIN.Milk.brick.closeBottom')
+                @include('zUTIN.Milk.brick.closeBottom')
 
  
             </div>

@@ -28,25 +28,25 @@ https://9writer.ru/ceny --}}
     <div class="Bee"></div>
  
 
-    @include('UTIN._lego.intro',['css' => '-Black Black -bg / space-m'])
+    @include('zUTIN._lego.intro',['css' => '-Black Black -bg / space-m'])
 
-    @include('UTIN._lego.HB')
+    @include('zUTIN._lego.HB')
  
-    @include('UTIN._lego.plot_1')
+    @include('zUTIN._lego.plot_1')
  
-    @include('UTIN._lego.page_tools',['css' => '-Black Black -bg / space-m_PC'])
-    @include('UTIN._lego.plot_2')
+    @include('zUTIN._lego.page_tools',['css' => '-Black Black -bg / space-m_PC'])
+    @include('zUTIN._lego.plot_2')
     
-    @include('UTIN._lego.tezis',['css' => '-Black Black -bg / space-m_PC'])
+    @include('zUTIN._lego.tezis',['css' => '-Black Black -bg / space-m_PC'])
 
-    @include('UTIN._lego.plot_TV',['css' => '-Black Black -bg / space-m_PC'])
-    @include('UTIN._lego.plot_SMI',['css' => '-Black Black -bg / space-m_PC'])
-    @include('UTIN._lego.plot_Radio',['css' => '-Black Black -bg / space-m_PC'])
+    @include('zUTIN._lego.plot_TV',['css' => '-Black Black -bg / space-m_PC'])
+    @include('zUTIN._lego.plot_SMI',['css' => '-Black Black -bg / space-m_PC'])
+    @include('zUTIN._lego.plot_Radio',['css' => '-Black Black -bg / space-m_PC'])
 
 
-    @include('UTIN._lego.plot_ContentMarket',['css' => '-Black Black -bg / space-m_PC'])
-    @include('UTIN._lego.plot_Blogger',['css' => '-Black Black -bg / space-m_PC'])
-    @include('UTIN._lego.plot_Conferences',['css' => '-Black Black -bg / space-m_PC'])
+    @include('zUTIN._lego.plot_ContentMarket',['css' => '-Black Black -bg / space-m_PC'])
+    @include('zUTIN._lego.plot_Blogger',['css' => '-Black Black -bg / space-m_PC'])
+    @include('zUTIN._lego.plot_Conferences',['css' => '-Black Black -bg / space-m_PC'])
     
  
  
@@ -69,14 +69,14 @@ https://9writer.ru/ceny --}}
 
 @push('milk')
 
-    @include('UTIN.Milk.tv_expert')
-    @include('UTIN.Milk.tv_Pay')
-    @include('UTIN.Milk.smi_Answer')
-    @include('UTIN.Milk.smi_Interview')
-    @include('UTIN.Milk.smi_PressReleases')
-    @include('UTIN.Milk.smi_Pay')
-    @include('UTIN.Milk.smi_example')
-    @include('UTIN.Milk.smi_exampleLite')
+    @include('zUTIN.Milk.tv_expert')
+    @include('zUTIN.Milk.tv_Pay')
+    @include('zUTIN.Milk.smi_Answer')
+    @include('zUTIN.Milk.smi_Interview')
+    @include('zUTIN.Milk.smi_PressReleases')
+    @include('zUTIN.Milk.smi_Pay')
+    @include('zUTIN.Milk.smi_example')
+    @include('zUTIN.Milk.smi_exampleLite')
 
 
 
@@ -123,7 +123,7 @@ https://9writer.ru/ceny --}}
 
             {{-- <div class="Article / space-m round-s / yesEvents">
                 <div class="paragraph"></div>
-                @include('UTIN.Milk.tv_expert')
+                @include('zUTIN.Milk.tv_expert')
             </div> --}}
         </div>
     </div>

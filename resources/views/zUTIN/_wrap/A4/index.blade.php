@@ -4,7 +4,7 @@
      
 
     <div class="_head {{$cssHead ?? ''}}">
-        @include('UTIN._wrap.A4.brick.close')
+        @include('zUTIN._wrap.A4.brick.close')
         {!!$head!!}
         <div class="paragraphX2"></div>
     </div>

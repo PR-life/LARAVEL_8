@@ -1,7 +1,7 @@
-@component('UTIN._wrap.A4.start', ['css' => $css ?? null, 'loop' => '1'])
+@component('zUTIN._wrap.A4.start', ['css' => $css ?? null, 'loop' => '1'])
 
 @slot('head')
-@component('UTIN._wrap.Font')
+@component('zUTIN._wrap.Font')
     @slot('css','-M')
     @slot('name','Содержание')
     <div class="_p Grey">Определить бюджет</div>

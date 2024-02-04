@@ -24,7 +24,7 @@
 @yield('breadBack')
 @yield('head')
 
-@component('_wrap.index', ['id' => 'Lite', 'css' => 'Hero-padding HWin'])
+@component('_wrap.index', ['id' => 'Lite', 'css' => $css ?? ''])
 
 	@yield('bee')
 

@@ -1,8 +1,8 @@
-@component('UTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'Blogger'])
+@component('zUTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'Blogger'])
  
 @slot('cssHead','space-m')
 @slot('head')
-@component('UTIN._wrap.Font')
+@component('zUTIN._wrap.Font')
     @slot('name',' Просветительская деятельность')
     <div class="_p Grey">Установление связей с блоггерами и инфлюенсерами в сфере здравоохранения для сотрудничества и расширения аудитории.</div>
 @endcomponent

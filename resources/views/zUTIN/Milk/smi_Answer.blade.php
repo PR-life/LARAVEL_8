@@ -29,13 +29,13 @@
                 <div class="Details -edge -M / space_PC">
 
 
-                    @include('UTIN.Milk._lego.smi_Answer_first')
-                    @include('UTIN.Milk._lego.smi_Answer_first_OLD')
+                    @include('zUTIN.Milk._lego.smi_Answer_first')
+                    @include('zUTIN.Milk._lego.smi_Answer_first_OLD')
 
                 </div>
                  
 
-                @include('UTIN.Milk.brick.closeBottom')
+                @include('zUTIN.Milk.brick.closeBottom')
 
  
             </div>

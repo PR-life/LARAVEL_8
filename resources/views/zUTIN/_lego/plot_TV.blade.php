@@ -1,9 +1,9 @@
-@component('UTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'TV'])
+@component('zUTIN._wrap.A4.index', ['css' => $css ?? null, 'loop' => 'TV'])
  
 @slot('cssHead','space-m')
 
 @slot('head')
-@component('UTIN._wrap.Font')
+@component('zUTIN._wrap.Font')
     @slot('name','ТВ-каналы')
     <div class="_p Grey">Как стать экспертом на федеральном телевидении</div>
 @endcomponent

@@ -7,7 +7,7 @@
             <div class="_scr">
                 <div class="hill-s"></div>
 
-                @include('UTIN._brick.interview')
+                @include('zUTIN._brick.interview')
 
 
                 <div class="text Edge edgeSPC">
@@ -19,7 +19,7 @@
                  
 
 
-                @include('UTIN.Milk.brick.closeBottom')
+                @include('zUTIN.Milk.brick.closeBottom')
  
             </div>
         </div>

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+
+
+@media (min-width: @metrika-100-plus) and (max-width: @w-max) {
+	#body {
+		--Logo:@w-Logo;
+	}
+}
+
+@media (min-width: @metrika-70-plus) and (max-width: @metrika-100) {
+	#body {
+		--Logo:calc(17*var(--indexW));
+	}
+}
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @metrika-100) {
+
+	#Header .Logo {
+		--font: calc(var(--indexW) * .8);
+		--font-min: calc(var(--indexW) * .8);
+	}
+
+}
+
+@media (min-width: @w-beyond-plus) and (max-width: @metrika-70) {
+	#body {
+		--Logo:220px;
+	}
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-beyond) {
+	#body {
+		--Logo:190px;
+	}
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	#body {
+		--Header-rem:25px;
+	}
+}

@@ -1,7 +1,7 @@
 <div id="page_{{$loop ?? '999'}}" class="I aura / Plot -h x-main / OnOff / Bone / {{$css ?? 'space-m bg-white'}} / round" localstorage-id>
 
     
-    @include('UTIN._wrap.A4.brick.close')
+    @include('zUTIN._wrap.A4.brick.close')
     <div class="flex dC cI cC">
         <div class="hill-s"></div>
  

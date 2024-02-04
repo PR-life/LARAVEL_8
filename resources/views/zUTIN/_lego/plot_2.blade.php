@@ -1,7 +1,7 @@
-@component('UTIN._wrap.A4.start', ['css' => $css ?? null, 'loop' => '2'])
+@component('zUTIN._wrap.A4.start', ['css' => $css ?? null, 'loop' => '2'])
  
 @slot('head')
-@component('UTIN._wrap.Font')
+@component('zUTIN._wrap.Font')
     @slot('name','Комментарии')
     <div class="_p Grey">по указанным площадкам</div>
 @endcomponent

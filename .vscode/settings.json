@@ -1,7 +1,15 @@
 {
     "favorites.resources": [
         {
-            "filePath": "resources/views/zAleksei/Morda.blade.php",
+            "filePath": "resources/views/xAleksei/Morda.blade.php",
+            "group": "Default"
+        },
+        {
+            "filePath": "resources/xAleksei/Lite.less",
+            "group": "Default"
+        },
+        {
+            "filePath": "routes/This.php",
             "group": "Default"
         }
     ]
