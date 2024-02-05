@@ -11,6 +11,14 @@
         {
             "filePath": "routes/This.php",
             "group": "Default"
+        },
+        {
+            "filePath": "resources/views/xAleksei/Utin/velkom/index.blade.php",
+            "group": "Default"
+        },
+        {
+            "filePath": "resources/less/lib/zSolo/Utin.less",
+            "group": "Default"
         }
     ]
 }

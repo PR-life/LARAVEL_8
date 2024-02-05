@@ -1,73 +1,69 @@
 @charset "UTF-8";
 
 @import "../../blank/@w.less"; 
-
-@h-Top: 34px;
-@h-Header: 91px;
+@import "../../lib/@/@c.less";
 //
-@w-Logo: 140px;
-//
-@fontMenuMain: 16px;
 
-
+ 
+@import "./Utin/_ol.less"; 
 
 @media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
 
 
-	#body,
-	.body {
-		--h-Top:@h-Top;
-		--h-Header: @h-Header;
-		// --h-logo:61px;
-		--h-menuMain:@h-Header;
-		// --h-plitka:140px;
-		// --h-th:42px;
-		// --h-td:42px;
-		// //
-		// --space:6rem;
-	}
+	// #body,
+	// .body {
+	// 	--h-Top:@h-Top;
+	// 	--h-Header: @h-Header;
+	// 	// --h-logo:61px;
+	// 	--h-menuMain:@h-Header;
+	// 	// --h-plitka:140px;
+	// 	// --h-th:42px;
+	// 	// --h-td:42px;
+	// 	// //
+	// 	// --space:6rem;
+	// }
 
 
 
 
-    .Plot.x-main {
+    // .Plot.x-main {
 
-        ._cell > * {
-            z-index: 5;
-            position: relative;
-        }
+    //     ._cell > * {
+    //         z-index: 5;
+    //         position: relative;
+    //     }
 
-        ._cell::before,
-        ._cell::after {
-            content: '';
-            position: absolute;
-            bottom: 0;
+    //     ._cell::before,
+    //     ._cell::after {
+    //         content: '';
+    //         position: absolute;
+    //         bottom: 0;
 
-            border-radius: 1rem 1rem 0 0;
-        } 
-
-
-        ._cell::before {
-            left: -1px;
-            top: -1px;
-            right: -1px;
-            z-index: 0;
+    //         border-radius: 1rem 1rem 0 0;
+    //     } 
 
 
-            background: linear-gradient(to bottom, rgba(255,255,255,.8), transparent);
-        }
+    //     ._cell::before {
+    //         left: -1px;
+    //         top: -1px;
+    //         right: -1px;
+    //         z-index: 0;
 
 
-        ._cell::after {
-            left: 0px;
-            top: 0px;
-            right: 0;
-            z-index: 1;
+    //         background: linear-gradient(to bottom, rgba(255,255,255,.8), transparent);
+    //     }
 
-            background-color: #242424;
-        }
 
-    }
+    //     ._cell::after {
+    //         left: 0px;
+    //         top: 0px;
+    //         right: 0;
+    //         z-index: 1;
+
+    //         background-color: #242424;
+    //     }
+
+    // }
 
 }
 
@@ -78,7 +74,13 @@
 }
 
 
- 
+
+
+.Utin {
+    --Utin-c-border: @c-border;
+}
+
+ /*
 
 
 html {
@@ -205,3 +207,5 @@ ul, ol,
     font-family: var(--family-DinPro);
 }
  
+
+/**/

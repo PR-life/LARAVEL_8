@@ -3,7 +3,7 @@
 <head>
 	@include('_shema._lego.head.index')
 </head>
-<body id="body" class="@yield('css-body') @stack('css-body')">
+<body id="body" class="MXAT @yield('css-body') @stack('css-body') {{ str_replace('_', '-', app()->getLocale()) }}">
 <script>
 	@include('_.js.bodyStart')
 	@stack('script-bodyStart')
@@ -14,10 +14,6 @@
 <div id="Fon" class="Abs -all @stack('css-fon')">@stack('fon')</div>
 
 
-{{-- @stack('10111703') --}}
-{{-- @include('_._skeleton.Top') --}}
-{{-- @include('_._skeleton.header') --}}
-{{-- @include('_._skeleton.menuMain') --}}
 @stack('Top')
 @stack('menu')
 

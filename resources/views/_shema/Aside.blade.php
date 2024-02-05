@@ -2,7 +2,6 @@
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
 	@include('_shema._lego.head.index')
-	{{-- @include('_shema._lego.head.index', ['linkCssMin' => $linkCssMin ?? null, 'linkCssApp' => $linkCssApp ?? null]) --}}
 </head>
 <body id="body" class="shema-aside MXAT @yield('css-body') @stack('css-body') {{ str_replace('_', '-', app()->getLocale()) }}">
 <script>
@@ -15,13 +14,13 @@
 <div id="Fon" class="Abs -all @stack('css-fon')">@stack('fon')</div>
 
 <?
-$arrCSS = [
-	'id' => 'Wrap',
-	'cssOiBar' => 'skimp-size_Aside x-asideClose',
-	'cssOi' => 'HWin skimp-size_Aside',
-	'cssASIDE' => 'ASIDE',
-	'cssKIRA' => 'KIRA -aside'
-]
+// $arrCSS = [
+// 	'id' => 'Wrap',
+// 	'cssOiBar' => 'skimp-size_Aside x-asideClose',
+// 	'cssOi' => 'HWin skimp-size_Aside',
+// 	'cssASIDE' => 'ASIDE',
+// 	'cssKIRA' => 'KIRA -aside'
+// ]
 ?>
 
 @component('_wrap.oiBar', $arrCSS)
