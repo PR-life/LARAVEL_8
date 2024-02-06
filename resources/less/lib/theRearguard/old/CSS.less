@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+#CSS {
+	position: fixed;
+	z-index: 999;
+	top:50px;
+	left: 50px;
+	background-color: rgba(255, 255, 255, .5);
+	padding: 1rem;
+
+	._scale {
+		width: 10px;
+		height: 10px;
+		background-color: #000;
+		transform: scale(var(--scale));
+		.transition(transform,linear,.05s);
+	}
+}
+
+/***/

@@ -1,0 +1,57 @@
+@charset "UTF-8";
+
+
+.Call > label,
+#Call > label{
+          background-color:rgba(255,0,0,0.05);
+}
+
+.text {
+    h2::before,
+    h3::before {
+        background-color: red;
+    }
+}
+
+
+blockquote p::before {
+    background-color: red;
+}
+
+
+/**********/
+
+
+
+/*******************************/
+
+hr {
+    position:relative;
+}
+
+hr::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 2px;
+    height: 2px;
+    background-color:red;
+}
+
+hr ~ hr::before {
+    left: 2rem;
+}
+
+/****************************************/
+
+
+@media screen and (max-width:@w-menu-2) {
+
+
+    .text ol a::before {
+        background-color:red;
+    }
+
+
+}
