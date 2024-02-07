@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+html::before {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 20px;
+    z-index: 99999;
+}
+
+
+
+@media (min-width:@metrika-90-plus + 1) and (max-width:@metrika-100) {
+
+    html::before{
+        content: 'metrika-100';
+        background: red;
+    }
+
+}
+
+@media (min-width:@w-menu-2-plus) and (max-width:@metrika-90) {
+
+    html::before{
+        content: 'metrika-90';
+        background: blue;
+    }
+
+}
