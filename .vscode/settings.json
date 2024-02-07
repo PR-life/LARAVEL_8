@@ -17,7 +17,15 @@
             "group": "Default"
         },
         {
-            "filePath": "resources/less/lib/zSolo/Utin.less",
+            "filePath": "routes/Vl.php",
+            "group": "Default"
+        },
+        {
+            "filePath": "resources/views/xVelkom/Morda.blade.php",
+            "group": "Default"
+        },
+        {
+            "filePath": "resources/xVelkom/Lite.less",
             "group": "Default"
         }
     ]
