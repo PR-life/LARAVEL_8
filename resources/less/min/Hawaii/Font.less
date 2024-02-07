@@ -56,9 +56,6 @@
 		// --Font-h2: var(--rem-h2);
 		--Font-min: calc(var(--rem-h) + 4px);
 	}
-
- 
-
 }
 
 
@@ -75,8 +72,18 @@
 	//
 
     ._h {
-		--Font-h1-CALC: clamp(var(--Font-min), var(--Font-h1), var(--Font-h1-max));
-		--Font-h1-height-CALC: clamp(calc(var(--Font-min) + var(--Font-lineHeight)), calc(var(--Font-h1) + var(--Font-lineHeight)), calc(var(--Font-h1-max) + var(--Font-lineHeight)));
+		--Font-h1-CALC: clamp(
+			var(--Font-min),
+			var(--Font-h1),
+			var(--Font-h1-max)
+		);
+
+
+		--Font-h1-height-CALC: clamp(
+			calc(var(--Font-min) + var(--Font-lineHeight)),
+			calc(var(--Font-h1) + var(--Font-lineHeight)),
+			calc(var(--Font-h1-max) + var(--Font-lineHeight))
+		);
 
 		//
 		font-size: var(--Font-h1-max);
