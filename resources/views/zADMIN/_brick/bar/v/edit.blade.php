@@ -13,7 +13,7 @@ $link = route($routeName, [
 	<a class="flex cI cC / orb" href="{{$link}}" title="назад">
 		<span class="Ico -S">@svg('arrow-2')</span>
 	</a>
-	<button class="flex cI cC / orb pointer" type="submit" title="обновить">
+	<button class="flex cI cC / orb pointer / transparent" type="submit" title="обновить">
 		<span class="Ico">@svg('change')</span>
 	</button>
 @endcomponent

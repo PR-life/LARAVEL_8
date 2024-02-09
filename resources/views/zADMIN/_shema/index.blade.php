@@ -1,4 +1,16 @@
+<?
+$arrCSS = [
+	'id' => 'Wrap',
+	'cssOiBar' => 'skimp-size_Aside x-asideClose',
+	'cssOi' => 'HWin skimp-size_Aside',
+	'cssASIDE' => 'ASIDE',
+	'cssKIRA' => 'KIRA -aside'
+]
+?>
+
+
 @extends('_shema.Aside', [
+    '$arrCSS' => $arrCSS,
     'linkCssMin' => '/css/minAdmin.css',
     'linkCssApp' => '/css/appAdmin.css',
     'cssMilk' => 'skimp-size_Aside'

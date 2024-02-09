@@ -9,7 +9,7 @@
         
         <div class="HWin / sms-off" data-stopClick></div>
     
-        <div class="Plot sms-plot / flex dC cI / sms-hidden" data-stopClick>
+        <div class="Plot -h sms-plot / flex dC cI / sms-hidden" data-stopClick>
             <div class="Bee"></div>
             <div class="Ico / pointer" data-click data-goto={{$id}} data-foo='click'>
                 @svg('info')
