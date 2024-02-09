@@ -1,10 +1,10 @@
 @include('_.src._head.metaMin')
-@include('_.src._head.meta')
-    
+@include('_.src._head.meta.color')
+
 	<meta name="description" content="@yield('description')">
 	<meta name="keywords" content="@yield('keywords')">
 	<title>@yield('title', 'Заголовок по умолчанию 555')</title>
-
+@include('_.src._head.meta.ogp')
 @stack('meta')
 	@include('_.src._head.link')
 <? echo "<style>"?>

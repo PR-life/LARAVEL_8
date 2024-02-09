@@ -1,18 +1,29 @@
 @charset "UTF-8";
 
 
+
+.Utin.Black {
+    ._cell::before {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent);
+    }
+    ._cell::after {
+        background-color: #242424;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
 .Utin.bg-white.vol-def {
     ._bg {
-        // --x-w:200px;
         --x-w:calc(var(--w) *1.0);
-    }
-
-    ._cell::before,
-    ._cell::after,
-    ._bg::before,
-    ._bg::after {
-        content:'';
-        position: absolute;
     }
 
 
@@ -34,6 +45,20 @@
         background: radial-gradient(closest-corner, rgba(189, 189, 189, .5), rgba(217, 217, 217, 0), transparent);
     }
 
+}
+
+
+.Utin{
+
+
+    ._cell::before,
+    ._cell::after,
+    ._bg::before,
+    ._bg::after {
+        content:'';
+        position: absolute;
+    }
+
     .bg-cell {
 
         ._cell::before,
@@ -47,7 +72,6 @@
             top: -1px;
             right: -1px;
             z-index: 0;
-            background: linear-gradient(to bottom, rgba(255, 255, 255, .8), rgba(255, 255, 255, .1));
         }
 
         ._cell::after {
@@ -55,19 +79,8 @@
             top: 0px;
             right: 0;
             z-index: 1;
-            //   background-color: #fff;
         }
-        
     }
 
  
-
-
-
-
-
-
-
-
-
 }

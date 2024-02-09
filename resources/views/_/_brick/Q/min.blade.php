@@ -1,4 +1,6 @@
-
+<div class="content">
+	{{strip_tags($Var->sms)}}
+</div>
 {{-- <div class="paragraph-s"></div> --}}
 {{-- <div class="paragraph-s / stop_80"></div> --}}
 {{-- <div class="hMin b600 / stop_80"> --}}

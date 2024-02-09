@@ -1,5 +1,5 @@
-<div class="Wagon {{$css ?? ''}} / item">
-<div class="relative pointer OnOff Off" data-click data-css data-toggle='Off On'>
+<div class="Wagon -w {{$css ?? ''}} / item">
+<div class="W-100 relative pointer OnOff Off" data-click data-css data-toggle='Off On'>
 
 	<div class="Preamble dC / space-left space-topX2">
 		<div class="Ava"></div>

@@ -539,6 +539,11 @@ hr,.ghost,.visible,.Op,.opVersa{
 	animation: Preloader_rotate 1000ms cubic-bezier(.4,0,.22,1) infinite;
 }
 
+.Preloader.vol-white::after {
+	border-top-color: #fff;
+	border-right-color: #fff;
+}
+
   
 @keyframes Preloader_rotate {
 	0% { -webkit-transform: rotate(0) }

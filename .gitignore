@@ -17,6 +17,7 @@ public_html
 #
 *_old/
 /resources/views/THIS/*
+.vscode
 
 webpack.mix.js
 .env
