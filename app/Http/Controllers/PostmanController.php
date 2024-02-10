@@ -25,20 +25,9 @@ use Illuminate\Support\Facades\Session;
 
 
 
-
-
-
-
-
-
-
-
-
 class PostmanController extends Controller
 {
     public function store(StoreRequest $request) {
-    // public function store(StoreRequest $request) {
-
 
         $validator = Validator::make($request->all(), [
             'text' =>  'required|max:255',
@@ -50,20 +39,14 @@ class PostmanController extends Controller
             Session::flash('error', $validator->messages()->first());
             return redirect()->back()->withInput();
         }
-
-
-
 		// dd($request);
-
 		// $errors = $validator->errors();
 		// echo $errors->first('email');
-
 
 		$newItem;
 		$param = $request->validated();
 
 		// dd($param);
-
 
 		if($param['title'] != '.') {
 			return view('_.lol');
@@ -76,8 +59,6 @@ class PostmanController extends Controller
 
 
 		// dd($param);
-
-
 
 		// 
 		// $param['text'] = $param['sms'];
