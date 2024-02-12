@@ -4,7 +4,7 @@
 	@include('_shema._lego.head.index')
 	<link href="{{ mix($linkCssMin ?? '/css/lead.css') }}" rel="stylesheet" type="text/css">
 
-    @include('THIS.style.Lead')
+    @include('zTHIS.style.Lead')
 </head>
 <body id="body" class="MXAT @yield('css-body') @stack('css-body')">
 <script>

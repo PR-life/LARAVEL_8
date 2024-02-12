@@ -1,6 +1,21 @@
 @charset "UTF-8";
 
 
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+	.Hook.-bg.-mbl::before {opacity: 0;}
+}
+
+
+@media screen and (max-width: @w-menu-2) {
+	.Hook.Abs.-all {
+		bottom: -6rem;
+	}
+}
+
+
+//
+
 .Geek {
 	.Hook {
 		position: absolute;
@@ -84,10 +99,7 @@ input.Sherpa:checked ~ .Sherpa > .Hook.-op,
 .On .Hook.-op {
 	opacity: 1;
 }
-
-@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
-	.Hook.-bg.-mbl::before {opacity: 0;}
-}
+ 
 
 
 

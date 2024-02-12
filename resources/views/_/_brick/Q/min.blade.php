@@ -1,5 +1,5 @@
 <div class="content">
-	{{strip_tags($Var->sms)}}
+	{{strip_tags($var)}}
 </div>
 {{-- <div class="paragraph-s"></div> --}}
 {{-- <div class="paragraph-s / stop_80"></div> --}}

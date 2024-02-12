@@ -3,25 +3,35 @@
 @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
 
 	.Font {
-		--Font-h1-max:48px;
 		--Font-h1:4vw;
+		--Font-h1-max:48px;
 
 		//
 		--Font-h2-max: 28px;
 		--Font-h2:3vw;
 	
 		//
-		--Font-min:18px;
-		--Font-min-line:calc(var(--Font-min) + 4px);
+		--Font-min:var(--rem-h);
+		--Font-min-lineHeight:calc(var(--Font-min) + 4px);
 
 	}
 
 	.Font.-S {
+		--Font-h1:3vw;
+		// --Font-h1-max: calc(48px - 2rem);
+
+		// //
+		// --Font-h2-max: calc(28px - 1rem);
+	}
+
+	.Font.-XS {
+		--Font-h1:2.5vw;
 		--Font-h1-max: calc(48px - 1rem);
 
-		//
-		--Font-h2-max: calc(28px - .25rem);
+		// //
+		// --Font-h2-max: calc(28px - 1rem);
 	}
+
 
 	.Font.-M {
 		--Font-h1-max: calc(48px + 1rem);
@@ -53,13 +63,33 @@
 		--Font-h1-max:var(--rem-h1);
 		--Font-h1:7vw;
 
-		// --Font-h2: var(--rem-h2);
-		--Font-min: calc(var(--rem-h) + 4px);
+		//
+		--Font-h2-max: var(--rem-h2);
+		--Font-h2: 3vw;
+	
+		//
+		--Font-min:var(--rem-h);
+		--Font-min-lineHeight:calc(var(--Font-min) + 4px);
+
+
 	}
+
+	.Font.-XS {
+		--Font-h1-max:calc(var(--rem-h1) - 1rem);
+		// --Font-h1-max: calc(48px - 2rem);
+
+		// //
+		// --Font-h2-max: calc(28px - 1rem);
+	}
+
+
 }
 
 
-///
+
+
+
+//
 
 .Font {
 
@@ -77,13 +107,8 @@
 			var(--Font-h1),
 			var(--Font-h1-max)
 		);
+		--Font-h1-height-CALC: calc(var(--Font-h1-CALC) + var(--Font-lineHeight));
 
-
-		--Font-h1-height-CALC: clamp(
-			calc(var(--Font-min) + var(--Font-lineHeight)),
-			calc(var(--Font-h1) + var(--Font-lineHeight)),
-			calc(var(--Font-h1-max) + var(--Font-lineHeight))
-		);
 
 		//
 		font-size: var(--Font-h1-max);
@@ -98,6 +123,7 @@
 	//
     ._h2 {
 		--Font-h2-CALC: clamp(var(--Font-min), var(--Font-h2), var(--Font-h2-max));
+
 		--Font-h2-height-CALC: clamp(calc(var(--Font-min) + var(--Font-lineHeight)), calc(var(--Font-h2) + var(--Font-lineHeight)), calc(var(--Font-h2-max) + var(--Font-lineHeight)));
 
 
@@ -126,20 +152,25 @@
     //     line-height: calc(var(--Font-h2) * 1.1);
     // }
 
-
-	
-
-	// ._h4 {
-    //     font-size:var(--rem-h);
-    //     line-height: ~"calc(var(--rem-h) * 1.2)";
-	//  }
-
  
-
 	//  ._p.wide {
 	// 	line-height: clamp(calc(var(--font-min) * 2), calc(1.4vw * 1.6), calc(var(--rem-p) * 1.6));
 	// }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

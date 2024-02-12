@@ -114,7 +114,7 @@ class SmsController extends Controller
 
         $param = $request->validated();
 
-        dd($param);
+        // dd($param);
 
         if(strlen($param['title']) > 1) {
             return view('_.Lol', compact('param'));
@@ -132,6 +132,42 @@ class SmsController extends Controller
             // dd(222);
             $sms = Sms::create($param);
             
+
+
+            $token = env('TG_TOKEN', '6440933163:AAE2U2nF_5IXnC3GC1l8kd8n8iljL6JyN1Y');
+            $chat_id = env('TG_CHAT_ID', '6020403524');
+            $sitename = "velkomsochi.ru";
+            $Gotelegram = '';       
+ 
+            
+            $arrTelegram = array(
+
+                '<b>Имя:</b> ' => $sms->name,
+                '<b>Телефон:</b> ' => $sms->phone,
+                '' => '',
+                '-----' => '',
+                '~ ' => 'АКЦИЯ | бесплатный аудит ваше системы видеонаблюдения'
+              );
+
+
+
+              foreach ($arrTelegram as $key => $value) {
+                    $Gotelegram .= $key.$value."%0A";
+                    // $Gotelegram .= "<b>".$key."</b>".$value."%0A";
+                }
+
+            $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$Gotelegram}","r");
+
+
+            // if (isset($sms)) {
+
+                
+
+            //   $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$Gotelegram}","r");
+            
+            // }
+
+
             // dd(11);
 
 

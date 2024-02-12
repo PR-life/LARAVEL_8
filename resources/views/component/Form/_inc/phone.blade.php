@@ -7,7 +7,7 @@
 		'placeholder' => 'phone...',
 		// 'jsvalidate' => 'email',
 		// 'css' => 'x-js',
-		// 'required' => true,
+		'required' => $required ?? false,
 		])
 
 	@if(isset($label))

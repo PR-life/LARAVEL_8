@@ -53,27 +53,31 @@
 
 //
 .hill {
-	min-height: var(--hill);
+	height: var(--hill);
 }
 
 .hill-xs {
-	min-height: var(--hill-xs);
+	height: var(--hill-xs);
 }
 
 .hill-s {
-	min-height: var(--hill-s);
+	height: var(--hill-s);
 }
 
 .hill-m {
-	min-height: var(--hill-m);
+	height: var(--hill-m);
 }
 
 .hill-l {
-	min-height: var(--hill-l);
+	height: var(--hill-l);
 }
 
 .hill-xl {
-	min-height: calc(var(--hill-l) + 2rem);
+	height: calc(var(--hill-l) + 2rem);
+}
+
+.hill-xl.-index {
+	max-height: calc(var(--index) * 5);
 }
 
 
@@ -121,12 +125,17 @@
         --Plot:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
     }
 
+    .Plot.-hMin {
+        --PlotMin:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
+    }
+
+
     .Plot.-XXS.-h {
         --Plot:calc(var(--h) *.5);
     }
 
-    .Plot.-hMin {
-        --PlotMin:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
+    .Plot.-XXS.-hMin {
+        --PlotMin:calc(var(--h)*.5 - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
     }
 }
 

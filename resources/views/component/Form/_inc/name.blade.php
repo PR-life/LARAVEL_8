@@ -3,7 +3,7 @@
 		'Form' => $Form ?? 'Demo',
 		'Var' => 'name',
 		'jsvalidate' => 'name',
-		'css' => 'x-js',
+		'css' => $cssInput ?? '',
 		'type' => 'text',
 		'value' => old('name'),
 		'placeholder' => 'name',

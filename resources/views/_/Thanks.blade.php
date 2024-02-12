@@ -3,7 +3,7 @@
 <head>
 	@include('_shema._lego.head.index')
 	<link href="{{ mix($linkCssMin ?? '/css/lead.css') }}" rel="stylesheet" type="text/css">
-    @include('THIS.style.Lead')
+    @include('zTHIS.style.Lead')
 </head>
 <body id="body" class="MXAT @yield('css-body') @stack('css-body')">
 <script>
@@ -64,7 +64,7 @@
         <div class="center-text">
             <div class="content / Grey"><span class="Sup"><span class="_sup -left">*</span></span>Отвечаем ежедневно, будни с 10:00 до 19:00, <br class="none_PC">выходные и праздники с 10:00 до 18:00</div>
         </div>
-        @include('THIS._lego.thanksFooter')
+        @include('zTHIS._lego.thanksFooter')
     </div>
 
 

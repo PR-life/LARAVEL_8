@@ -8,7 +8,7 @@
 
 
 .Flipclock {
-    --Flipclock-w:clamp(20px, calc(var(--index)*1.5), 40px); // 60
+    --Flipclock-w:clamp(30px, calc(var(--index)*1.5), 40px); // 60
     --Flipclock-h:calc(var(--Flipclock-w) + 20px); // 90
 
 
@@ -31,9 +31,7 @@
         perspective: 200px;
         cursor: default !important;
 
-
         div {
-            // z-index: 1;
             left: 0;
             width: 100%;
             height: 50%;
@@ -48,7 +46,6 @@
     }
 
     ._shadow {
-        // z-index: 2;
         height: 100%;
     }
 
@@ -56,15 +53,6 @@
         height: 200%;
         text-align: center;
     }
-    // ._up,
-    // ._down {
-        // left: 0;
-        // width: 100%;
-        // height: 50%;
-        // outline: 1px solid transparent;
-    // }
-
-
     ._up {
         top: 0px;
         transform-origin: 50% 100%;
@@ -85,24 +73,33 @@
 
     //
 
-    .item {
-        // z-index: 1;
-    }
+    // ._up,
+    // ._down {
+        // left: 0;
+        // width: 100%;
+        // height: 50%;
+        // outline: 1px solid transparent;
+    // }
 
-    .item:first-child {
-        // z-index: 2;
 
-        // background-color: blue;
-        // opacity: 0;
-    }
+    // .item {
+    //     // z-index: 1;
+    // }
+
+    // .item:first-child {
+    //     // z-index: 2;
+
+    //     // background-color: blue;
+    //     // opacity: 0;
+    // }
 
  
 
-    .item._active {
-        // z-index: 3;
+    // .item._active {
+    //     // z-index: 3;
 
-        // background-color: red;
-    }
+    //     // background-color: red;
+    // }
 
 
     
