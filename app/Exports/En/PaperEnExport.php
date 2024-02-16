@@ -34,6 +34,7 @@ class PaperEnExport implements FromCollection, WithHeadings, WithStrictNullCompa
 			"prev_h2",
 			"prev_p",
 			"prev_image",
+			"prev_veil",			
 
 			"foto_count_teaser",
 			"foto_count_full",

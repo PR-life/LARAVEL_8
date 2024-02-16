@@ -19,7 +19,7 @@ class Paper extends Model
     protected $guarded = false;
 
 	// protected $withCount = ['likedUsers','comments'];
-	protected $withCount = ['comments'];
+	// protected $withCount = ['comments'];
 
 
 

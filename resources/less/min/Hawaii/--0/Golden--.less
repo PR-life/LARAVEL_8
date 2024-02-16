@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-.golden-paddingTop.areaB {
+.golden-areaB {
     --Golden-padding-top: clamp(3rem, calc(var(--areaB) - var(--x-h-head)), 100px);
     // --Golden-padding-top: calc(var(--h-Top) + var(--h-Header));
 }
@@ -20,6 +20,11 @@
 .-Golden {
     --x-h-head:calc(var(--h-Top) + var(--h-Header));
     --areaB: clamp(var(--x-h-head), 14vw, 220px);
+}
+
+.-Golden.-S {
+    // --x-h-head:calc(var(--h-Top) + var(--h-Header));
+    --areaB: clamp(var(--x-h-head), 13vw, 220px);
 }
 
 // .x569888 {

@@ -6,6 +6,10 @@
 	<path d="M11 4 6 8 1 4" stroke="currentColor" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round" fill="none"></path>		
 </symbol>
 
+<symbol id="svg-arrow_slim" fill="none" viewBox="0 0 16 16">
+	<path clip-rule="evenodd" d="M11.566 7.926L6.241 13.25l-1.06-1.06 4.257-4.258-4.254-4.2 1.054-1.067 5.328 5.26z" fill="currentColor" fill-rule="evenodd"></path>
+</symbol>
+
 <symbol id="svg-arrow-2" fill="currentColor" viewBox="0 0 16 16">
 	<path d="M16 7H3.8l5.6-5.6L8 0 0 8l8 8 1.4-1.4L3.8 9H16z"></path>
 </symbol>
@@ -13,7 +17,7 @@
 <symbol id="svg-arrow-3" viewBox="0 0 57 8">
 	<path d="M56.354 4.354a.5.5 0 000-.708L53.172.464a.5.5 0 10-.707.708L55.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM56 3.5H0v1h56v-1z" fill="currentColor"></path>	
 </symbol>
-<symbol id="svg-arrow-3-left" viewBox="0 0 57 8">
+<symbol id="svg-arrow-3_Zleft" viewBox="0 0 57 8">
 	<path d="m56.554,4.354a0.5,0.5 0 0 0 0,-0.708l-3.182,-3.182a0.5,0.5 0 1 0 -0.707,0.708l2.828,2.828l-2.828,2.828a0.5,0.5 0 1 0 0.707,0.708l3.182,-3.182zm-0.354,-0.854l-56,0l0,1l56,0l0,-1z" fill="currentColor" id="svg_1" transform="rotate(-180, 28.4504, 4)"/>	
 </symbol>
 

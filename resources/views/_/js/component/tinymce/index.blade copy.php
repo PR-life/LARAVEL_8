@@ -5,11 +5,7 @@
 	#tinymce_lite_3 ~ .tox {max-height:300px !important}
 @endpush
 
-
-{{-- https://www.tiny.cloud/docs/configure/content-formatting/ --}}
-{{-- https://www.tiny.cloud/docs/tinymce/latest/customize-ui/ --}}
-
-
+ 
 @push('js-bottom') 
 	tinymce.init({
 		selector: '#tinymce_lite_1, #tinymce_lite_2, #tinymce_lite_3',

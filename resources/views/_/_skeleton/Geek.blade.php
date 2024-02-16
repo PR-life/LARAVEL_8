@@ -1,3 +1,3 @@
-@component('_pattern.Geek', ['class' => '-noJS Family-OpenSans'])
+@component('_wrap.Geek', ['class' => '-noJS Family-OpenSans'])
 	{{ $slot ?? ''}}
 @endcomponent

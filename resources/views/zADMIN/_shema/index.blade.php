@@ -63,7 +63,7 @@ $arrCSS = [
 
 @push('milk')
 
-<div id="milkSherpa" class="Aside_2 -menu x-asideClose / Fix HWin / index relative" data-click data-css data-toggle='On'>
+<div id="milkSherpa" class="Aside_2 -menu x-asideClose / HWin / index relative" data-click data-css data-toggle='On Fix'>
     <div class="Abs -rt / Close -white / _indexMax" data-close></div>
     <div class="_wrap / Abs -all" data-stopClick>
         
@@ -86,4 +86,18 @@ $arrCSS = [
         </div>
     </div>
 </div>
+
+
+@if ($errors->any())
+    @component('_.component.Message', ['css' => 'eC -error'])
+        @slot('heading')
+        ой!
+        @endslot
+        <ol class="-S">
+            @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+            @endforeach 
+        </ol>
+    @endcomponent
+@endif
 @endpush

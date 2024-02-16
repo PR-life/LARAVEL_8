@@ -1,5 +1,5 @@
 <div class="I aura / relative">
-	@component('_pattern.Header.index', ['css' => 'I / Edge -SPC relative'])
+	@component('_wrap.Header.index', ['css' => 'I / Edge -SPC relative'])
 		@slot('meta_H', '555')
 		@slot('meta_D', '555')
 		@slot('meta_K', '555')

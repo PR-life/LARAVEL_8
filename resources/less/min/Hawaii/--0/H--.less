@@ -137,6 +137,13 @@
     .Plot.-XXS.-hMin {
         --PlotMin:calc(var(--h)*.5 - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
     }
+
+    //
+
+    .Tape.-h {
+        --Tape:320px;
+        // --TapeMin:auto;
+    }
 }
 
 @media (min-width: @w-menu-2-plus) and (max-width:@metrika-80) {
@@ -183,4 +190,16 @@
 .Plot.on {
     height:auto;
     min-height: auto;
+}
+
+
+//
+
+.Tape {
+    --Tape:auto;
+    --TapeMin:auto;
+    --Tape-precise: 0px;
+
+    height:var(--Tape);
+    min-height:var(--TapeMin);
 }

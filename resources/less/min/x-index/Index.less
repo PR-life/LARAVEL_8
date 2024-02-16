@@ -9,6 +9,7 @@
 		// .menuOpen {
 		// 	z-index: 190 !important;	
 		// }
+
 		#menuMain {
 			z-index: 190;
 		}
@@ -16,10 +17,12 @@
 		// .menuOpen .menu::after {
 		// 	z-index:-1;
 		// }
-		.FixMenu {
-			z-index: 200 !important;
-		}
 	}
+
+	.FixMenu {
+		z-index: 200 !important;
+	}
+
 }
 
 
@@ -193,8 +196,9 @@ body {
  
 
 
-#menuFix,
-body>.FixMenu {
+// #inputMenuMain:checked ~ .FixMenu 
+#menuFix
+{
 	z-index: 165;
 }
 
@@ -216,6 +220,17 @@ body>.Aside {
 body {
 	> #Geek {
 		z-index: 111;
+	}
+
+}
+
+#body.fix.-geek {
+	>#menuMain {
+		z-index: 21;
+	}
+
+	> #preWrap {
+		z-index: 21;
 	}
 }
 

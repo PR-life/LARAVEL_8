@@ -33,6 +33,7 @@
 		<div class="Bee">
 			@stack('bee')
 		</div>
+		@stack('beeAfter')
 	
 		@stack('contentBefore')
 		@yield('content')

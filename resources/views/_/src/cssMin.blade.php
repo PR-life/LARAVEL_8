@@ -27,7 +27,7 @@ h1,h2,h3,h4,p,input,figure,blockquote,dl,dd, ul, ol{
 	text-rendering:optimizeSpeed
 }
 input,button,ul,ol{
-	padding:0
+	padding:0px;
 }
 hr{
 	border-width:0
@@ -171,8 +171,9 @@ body,img,video,input,.block{
 	position:absolute
 }
 .Milk{
-	top:-10000px;
-	right:200%
+	bottom:100%;
+	{{-- height:1px !important; --}}
+	{{-- right:200% --}}
 }
 .Abs.-t{
 	top:0;

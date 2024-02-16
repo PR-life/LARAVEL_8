@@ -11,10 +11,12 @@ class StoreController extends BaseController
     public function __invoke(StoreRequest $request){	
     // public function __invoke(){	
 
-		// dd(111);
+		// dd($request);
 		$param = $request->validated(); // не убираем в Service, т.к. это обработка HTTP
+		// dd($param);
 
 		$post = $this->service->store($param);
+		// $post = Post::firstOrCreate($param);
 
 		
 

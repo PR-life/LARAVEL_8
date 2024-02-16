@@ -1,4 +1,4 @@
-<div class="Bee / Goo55 -manager555 / _indexMax">
+<div class="Bee55 -S55 / Goo55 -manager555 / _indexMax">
     <div class="space / flex">
         {{-- @dd($_GET) --}}
         <div id="Filter" class="-paper / none _indexMax" check-localstorage='Filter' data-check="active" param='Block'>

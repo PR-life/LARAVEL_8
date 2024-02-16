@@ -52,6 +52,7 @@ class StoreRequest extends FormRequest
 			'prev_p' => 'nullable|string',
             'prev_image' => 'nullable|file',
 			'prev_url' => 'nullable|string',
+			'prev_veil' => 'nullable|string',
 
             //
 			'foto_count_teaser' => 'nullable|integer',

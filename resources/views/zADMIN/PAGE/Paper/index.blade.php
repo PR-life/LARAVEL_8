@@ -10,10 +10,21 @@
 </li>
 @endpush
 
-@push('bee')
+@push('topAfter')
     @include('zADMIN.PAGE._lego.filter.btnVol')
+@endpush
+
+@push('bee')
+
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Статьи', 'add' => route('admin.paper.create'), 'ico' => 'barMenu_relations'])
     @include('zADMIN.PAGE._lego.filter.SHEMA.index.papers')
+    
+
+    {{-- @include('zADMIN.PAGE._lego.filter.btnVol') --}}
+    {{-- @include('zADMIN._lego.Bee.nameIndex',['name' => 'Статьи', 'add' => route('admin.paper.create'), 'ico' => 'barMenu_relations']) --}}
+    {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.papers') --}}
+
+
     {{-- <div class="Wings _indexMax">
         <div class="_win -t / space-leftM">
             @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'landing', 'css' => '-paper'])
@@ -24,7 +35,9 @@
     @include('zADMIN.PAGE._lego.filter.table-indexSeo') --}}
 @endpush
 
- 
+@push('beeAfter')
+    @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'paper'])
+@endpush
 
 @section('content')
 

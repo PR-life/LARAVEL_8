@@ -57,6 +57,7 @@ class PaperImport implements ToCollection, WithHeadingRow
                     'prev_p' => $item['prev_p'],
                     'prev_image' => $item['prev_image'],
                     'prev_url' => $item['prev_url'],
+                    'prev_veil' => $item['prev_veil'],
                     
                     'foto_count_teaser' => $item['foto_count_teaser'],
                     'foto_count_full' => $item['foto_count_full'],

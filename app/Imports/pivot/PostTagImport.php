@@ -14,14 +14,11 @@ class PostTagImport implements ToCollection, WithHeadingRow
     public function collection(Collection $collection)
     {
 
-		
         foreach ($collection as $item) {
-			
             PostTag::create([
                 'post_id' => $item['post_id'],
                 'tag_id' => $item['tag_id'],
             ]);
-
         }
     }
 }

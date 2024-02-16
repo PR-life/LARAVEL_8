@@ -77,7 +77,6 @@ class CreatePostsTable extends Migration
 		    $table->timestamps();
             $table->softDeletes();
 		
-		
 		});
     }
 

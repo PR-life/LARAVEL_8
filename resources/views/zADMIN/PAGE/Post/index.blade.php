@@ -17,10 +17,11 @@
 @push('bee')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Материалы', 'add' => route('admin.post.create'), 'ico' => 'barMenu_editorial'])
     @include('zADMIN.PAGE._lego.filter.SHEMA.index.posts')
-    @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'post'])
 @endpush
 
- 
+@push('beeAfter')
+    @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'post'])
+@endpush
 
 @section('content')
 

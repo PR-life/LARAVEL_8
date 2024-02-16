@@ -15,12 +15,10 @@ class FaqTagImport implements ToCollection, WithHeadingRow
     {
 
         foreach ($collection as $item) {
-			
             FaqTag::create([
                 'faq_id' => $item['faq_id'],
                 'tag_id' => $item['tag_id'],
             ]);
-
         }
     }
 }

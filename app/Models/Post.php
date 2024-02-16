@@ -21,7 +21,7 @@ class Post extends Model
 
     // protected $withCount = ['likedUsers','comments'];
     // protected $with = ['category','author'];
-    protected $withCount = ['comments'];
+    // protected $withCount = ['comments'];
     
     protected $lang_fields = [
         'name',

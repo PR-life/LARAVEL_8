@@ -9,7 +9,7 @@ use App\Models\Tag;
 class CreateController extends BaseController
 {
     public function __invoke(){
-		$data = [];
+		// $data = [];
         // $data['h1'] = 'Новый контент: пост';
 		// $data['wrap_h1'] = 'edit';
 		// $data['bread'] = ['back' => '/admin/posts',];
@@ -17,6 +17,6 @@ class CreateController extends BaseController
         // $categories = Category::all();
 		// $tags = Tag::all();
 		
-        return view('zADMIN.PAGE.Post.create', compact('data'));
+        return view('zADMIN.PAGE.Post.create');
     }
 }

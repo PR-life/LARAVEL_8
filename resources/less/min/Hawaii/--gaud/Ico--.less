@@ -60,6 +60,8 @@ body .Ico {
 	min-height: var(--x-Ico);
 }
 
+ 
+
 .Ico.-long {
     width: 4rem;
 }
@@ -87,6 +89,16 @@ body .Ico {
 
 
 
+
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max){
+
+	.Ico.-index {
+		--Ico: clamp(20px, 26px, calc(var(--index)));
+	}
+
+}
 @media screen and (max-width:@w-menu-2){
 
     .Ico.long {
@@ -103,11 +115,3 @@ body .Ico {
 }
 
  
-
-@media screen and (max-width:@w-menu-2) {
-
-}
-
-
-
-/******/

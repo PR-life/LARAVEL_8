@@ -1,4 +1,4 @@
-<div id="filter_tags_1" class="{{$css ?? 'Bee space-m'}} / none / _indexMax" check-localstorage='filter_tags_1' data-check='active' param='Block'>
+<div id="filter_tags_1" class="{{$css ?? 'Goo -manager space'}} / none / _indexMax" check-localstorage='filter_tags_1' data-check='active' param='Block'>
     <div class="flex bC cI">
 
         <div class="flex / cross-xxs / x-23101338">

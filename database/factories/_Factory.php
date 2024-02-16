@@ -49,6 +49,7 @@ class _Factory extends Factory
         // 'email_verified_at' => now(),
 		
 		// 'country' => $this->faker->country(),
+        // $this->faker->randomElement(['Cat1','Cat2','Cat3'])
         // 'profession' => $this->faker->randomElement($array = array (
         //        'медицинский работник в центре снижения веса',
         //        'врач акушер-гинеколог',

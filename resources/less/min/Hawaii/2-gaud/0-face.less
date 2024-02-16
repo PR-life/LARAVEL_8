@@ -95,7 +95,7 @@
 	padding-right: calc(var(--x-face-rem));
 }
 
-.Preamble.face-out a::before,
+// .Preamble.face-out a::before,
 .face::before {
 	content:'';
     position:absolute;
@@ -119,12 +119,12 @@
 	right: calc(100% + var(--x-face-rem));
 }
 
-.Preamble.face-out a::before {
-	top: 0;
-	bottom: 0;
-	right: 100%;
-	width: calc(var(--x-face-rem) + var(--x-face));
-}
+// .Preamble.face-out a::before {
+// 	top: 0;
+// 	bottom: 0;
+// 	right: 100%;
+// 	width: calc(var(--x-face-rem) + var(--x-face));
+// }
 
 .face-none::before {
 	opacity: 0;
@@ -170,6 +170,10 @@
  
 
 
+
+
+
+.face.-ghost::before {opacity: 0;}
 
 
 /////

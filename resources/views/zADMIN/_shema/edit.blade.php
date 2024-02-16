@@ -27,6 +27,7 @@
 @endif 
 
 
+
 @section('manager')
     <div class="hill-s"></div>
 @endsection
