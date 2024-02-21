@@ -5,6 +5,7 @@ namespace App\Http\Controllers\ADMIN\Paper;
 use App\Models\Paper;
 use App\Models\Category;
 use App\Models\Tag;
+use App\Models\Item;
 use App\Models\User;
 
 
@@ -37,10 +38,11 @@ class EditController extends BaseController
         }
 
 		$tags = Tag::all();
+		$items = Item::all();
 		$roles = User::getRoles();
 		// $post = Paper::withTrashed()->where('id', $id)->get();
 		// dd($categories);
 
-	    return view('zADMIN.PAGE.Paper.edit', compact('paper','categories','categories_lvl_2','tags','roles'));
+	    return view('zADMIN.PAGE.Paper.edit', compact('paper','items','categories','categories_lvl_2','tags','roles'));
     }
 }

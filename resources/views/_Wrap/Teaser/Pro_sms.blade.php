@@ -6,7 +6,7 @@
 
 	<div class="paragraph-s"></div>
 
-	<div class="content-l -lineHeight">
+	<div class="Q -max content-l -lineHeight">
 		{!!\Illuminate\Support\Str::words(strip_tags($Var->sms), 100, $end="...")!!}
 	</div>
 

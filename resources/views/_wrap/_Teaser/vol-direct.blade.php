@@ -33,7 +33,7 @@
 		<div class="hill-s"></div>
 		<div class="W-100 center-text">
 			<div class="inline">
-				<a class="Btn cC" href="{{$link}}">Подробнее</a>
+				<a class="Btn cC" href="{{$link}}">подробнее</a>
 			</div>
 		</div>
 	</div>
@@ -74,7 +74,7 @@
 		<div class="W-100 center-text">
 			<div class="inline">
 				@isset($link)
-				<a class="Btn cC" href="{{$link}}">Подробнее</a>
+				<a class="Btn cC" href="{{$link}}">подробнее</a>
 				@endisset
 			</div>
 		</div>

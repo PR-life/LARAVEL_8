@@ -6,3 +6,112 @@ select {
 	outline: none;
 	appearance: none;
 }
+
+.Select.-multiple {
+	._item.selected {
+		display: none;
+	} 
+}
+
+
+
+.Select.-js {
+
+	// .select_checkbox:checked~select {
+	// 	display: block;
+	// }
+
+	// input.x-ico:checked~ label.x-ico,
+	input.x-ico {
+		width: var(--Ico);
+		height: var(--Ico);
+
+		left: auto;
+	}
+
+	label.x-ico {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='%23eee' %3e%3ccircle cx='8' cy='2' r='2'%3e%3c/circle%3e%3ccircle cx='8' cy='8' r='2'%3e%3c/circle%3e%3ccircle cx='8' cy='14' r='2'%3e%3c/circle%3e%3c/g%3e%3c/svg%3e");
+		
+		background-position: right top;
+		background-repeat: no-repeat;
+		background-size: 12px;
+	}
+
+	input.x-ico:checked~ label.x-ico {
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3e%3cpath fill='%23eee' stroke='none' d='M6.586 8L.793 2.207A1 1 0 1 1 2.207.793L8 6.586 13.793.793a1 1 0 1 1 1.414 1.414L9.414 8l5.793 5.793a1 1 0 1 1-1.414 1.414L8 9.414l-5.793 5.793a1 1 0 1 1-1.414-1.414z'%3e%3c/path%3e%3c/svg%3e");
+	}
+
+
+
+
+
+	
+	input.x-ico:checked~ ._dropdown {
+		display: block;
+	}
+
+	// input.x-ico:checked~ ._field {
+
+	// }
+
+	._field {
+		// box-shadow: 4px 4px 8px 0px rgba(0, 0, 0, 0.05) inset;
+		background: linear-gradient(to top, rgba(0, 0, 0, .1), transparent);
+	}
+
+
+
+	input.x-ico {
+		opacity: 0;
+	}
+
+	// label.x-ico {
+	// 	background-color: blue;
+	// }
+ 
+
+
+
+	.wrap_dropdown {
+		transition: all 300ms;
+		max-height: 0;
+		overflow: hidden;
+	}
+
+
+	._checkbox:checked~ .wrap_dropdown,
+	.opened ._dropdown {
+		max-height: 35rem;
+		overflow-y: auto;
+	}
+
+	._dropdown {
+		padding-top: 7px;
+	}
+
+	._search {
+		// background-color: rgba(255,255,255,.8);
+		padding: 1rem 1rem 1.5rem 1rem;
+		background:linear-gradient(to top,rgba(255,255,255,1) 0,rgba(255,255,255,1) 25%,rgba(255,255,255,.8));
+	}
+
+
+	._item {
+		cursor: pointer;
+		padding: 0.5rem 1rem;
+
+		border:1px solid @c-border
+	}
+
+	._item:hover {
+		--c-text:#111;
+
+		background-color: pink;
+		// color: white;
+	}
+
+	._ul {
+		padding-bottom: 4rem;
+	}
+
+}

@@ -62,7 +62,7 @@
 
 
 
-    @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms')
+    {{-- @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms')
         @slot('id', 'category')
         @slot('name', 'Категория')
 
@@ -87,11 +87,11 @@
 
 
 
-    @endcomponent
+    @endcomponent --}}
 
 
     
-    @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms', ['css' => 'round-s x-24051434 / void-s'])
+    {{-- @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms', ['css' => 'round-s x-24051434 / void-s'])
         @slot('id', 'tags')
         @slot('name', 'Теги')
 
@@ -103,7 +103,7 @@
         @endcomponent
 
 
-    @endcomponent
+    @endcomponent --}}
 
  
 

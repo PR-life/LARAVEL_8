@@ -38,7 +38,7 @@
                 @foreach($thisItemFaq as $thisFaq)
                     <div class="_ef -an thisItem / Details {{$css_Details ?? ''}}">
                         <details>
-                            <summary><span>{!!$thisFaq->name!!}</span><i></i></summary>
+                            <summary class="-M"><span>{!!$thisFaq->name!!}</span><i></i></summary>
                             <div class="_edge text void net">
                                 @include('mod.FAQ._lego.content')
                             </div>

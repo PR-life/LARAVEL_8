@@ -86,9 +86,11 @@ class StoreRequest extends FormRequest
             
             //
 			'user_id' => 'required|integer',
-            'category_id' => 'nullable|integer|exists:categories,id', // exists:существует в тбл categories в колонке id
+            'category_id' => 'nullable|integer|exists:categories,id',
             'tag_ids' => 'nullable|array',
-            'tag_ids.*' => 'nullable|integer|exists:tags,id', // .* - выбираем все что в array "tag_ids"
+            'tag_ids.*' => 'nullable|integer|exists:tags,id',
+            'item_ids' => 'nullable|array',
+            'item_ids.*' => 'nullable|integer|exists:items,id',
 
 			//
             'title' => 'nullable|string',

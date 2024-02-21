@@ -13,7 +13,11 @@ class UpdateController extends BaseController
 
 		// dd($request);
         $data = $request->validated();
+	
+		isset($data['category_id']) ? '' : $data['category_id'] = null;
+		// $data['category_id'] < 1 ? '' : $data['category_id'] = null;
 		// dd($data);
+
 		
 		$paper = $this->service->update($paper,$data);
 

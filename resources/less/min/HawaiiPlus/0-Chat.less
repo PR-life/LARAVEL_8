@@ -31,6 +31,7 @@
 			--x-QA-padding-top: .75rem;
 		}
 	} 
+
 }
 
 @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
@@ -40,6 +41,9 @@
     .Talk .Chat {
         --x-chat-edge:20px;
     }
+	.Q {
+		--x-Q-w-max: 580px;
+	}
 }
 
 @media screen and (max-width:@w-menu-2) {
@@ -65,6 +69,10 @@
 			left: .5rem;
 		}
     }
+
+	.Q {
+		--x-Q-w-max: auto;
+	}
 }
 
 ////
@@ -152,7 +160,9 @@
 //
 
 
-
+.Q.-max {
+	max-width: var(--x-Q-w-max);
+}
 
 
 .Q, .A {
@@ -175,6 +185,7 @@
 		padding-left: 1rem;
 	}
 }
+
 .Q.On {
 	._wrap {
 		padding-right: .5rem;

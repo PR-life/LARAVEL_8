@@ -40,6 +40,17 @@ class Paper extends Model
         )->orderBy('created_at', 'desc');
     }
 
+
+    public function items() {
+        return $this->belongsToMany(
+            Item::class,
+            'paper_items',
+            'paper_id',
+            'item_id'
+        );
+    }
+
+
     public function tags() {
         return $this->belongsToMany(
             Tag::class,

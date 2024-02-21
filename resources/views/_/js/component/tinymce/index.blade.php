@@ -30,15 +30,31 @@ tinymce.init({
 	content_css: "/css/env/tinymce.css?4",
 	// content_css: "/css/env/tinymce.css",
 	language: 'ru',
-	height: parseInt(document.documentElement.clientHeight) * .65,
+	height: parseInt(document.documentElement.clientHeight) * .8,
 	
-	plugins: 'image lists link anchor charmap visualblocks code',
-	toolbar: 'blocks styles | bold italic bullist numlist | link anchor image charmap | removeformat visualblocks | code',
 
-	
+	menubar: 'format',
+	menu: {
+		custom: { title: 'Custom Menu', items: 'undo redo myCustomMenuItem' }
+	},
+
+
+
+	plugins: 'image lists link anchor charmap visualblocks code',
+	toolbar: 'blocks styles | bold italic bullist numlist | link anchor | visualblocks | removeformat code',
+	// image charmap
+
+
+	block_formats: 'paragraph=p; div=div; h1=h1; h2=h2; h3=h3; h4=h4',
 
 	style_formats: [
-		{title: 'Info -space', selector: 'p, span', classes: 'Info -space'},
+		{title: 'content', selector: 'p, span, div', classes: 'content'},
+		{title: 'content-s', selector: 'p, span, div', classes: 'content-s'},
+		{title: 'content-m', selector: 'p, span, div', classes: 'content-m'},
+		{title: 'Info', selector: 'p, span, div', classes: 'Info'},
+		{title: '-space', selector: 'p, span, div', classes: '-space'},
+		{title: '-bg', selector: 'p, span, div', classes: '-bg'},
+		{title: 'b600', selector: 'p, span, div', classes: 'b600'},
 		// {title: 'Bold text', inline: 'b'},
 		// {title: 'Red text', inline: 'span', styles: {color: '#ff0000'}},
 		// {title: 'Red header', block: 'h1', styles: {color: '#ff0000'}},

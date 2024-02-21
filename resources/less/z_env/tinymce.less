@@ -1,6 +1,66 @@
 @charset "UTF-8";
 
+@import "../lib/theFont/font-OpenSans.less";
+
+
+html {
+	--family: var(--family-OpenSans);
+	// --family-2: var(--family-Gilroy);
+}
+
+
+
+//
 body { 
+    --rem-p: 14.6px;
+    --rem-h1: 20px;
+
+
+    padding-left: 3rem;
+    padding-right: 2rem;
+
+    * {
+        font-family: var(--family);
+    }
+
+    p {
+        font-size: var(--rem-p);
+        line-height: calc(var(--rem-p)*1.6);
+    }
+
+    h2, h1 {
+        font-size: var(--rem-h1);
+        line-height: calc(var(--rem-h1)*1.2);
+    }
+
+    ul, ol {
+    --ulol-font: var(--rem-p);
+    --ulol-line: calc(var(--ulol-font)*1.6);
+    --ulol-padding-left: 2rem;
+
+        li {
+            font-size: var(--ulol-font);
+            line-height: var(--ulol-line);
+            margin-bottom: 7px;
+        }
+
+        margin-bottom: calc(var(--rem-h1)*2);
+    }
+
+
+    .-bg {
+        --x-bg:6px;
+        --x-bg-color-1: white;
+        --x-bg-color-2: #eee;
+
+        background: repeating-linear-gradient(-45deg, var(--x-bg-color-1), var(--x-bg-color-1) 25%, var(--x-bg-color-2) 25%, var(--x-bg-color-2) 50%, var(--x-bg-color-1) 50%) top left fixed;
+        background-size: var(--x-bg) var(--x-bg);
+    }
+
+    .-space {
+        padding: 1rem;
+    }
+
 
 }
 

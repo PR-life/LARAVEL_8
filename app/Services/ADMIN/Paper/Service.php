@@ -7,23 +7,25 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 //
 
-
-// !!!!!!!!!!!!!!!!
 use App\Models\Paper;
-// use App\Models\Category;
-// use App\Models\Tag;
 
 
 class Service {
 
 
-	public function update($post,$param) {
+	public function update($paper,$param) {
 
 		try {
 			DB::beginTransaction();
 
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);
+
+			isset($param['item_ids']) ? $itemIds = $param['item_ids'] : $itemIds = [];
+			unset($param['item_ids']);
+
+
+			// dd($itemIds);
 			
 			//
 			isset($param['featured']) ? '' : $param['featured'] = '0';
@@ -40,11 +42,14 @@ class Service {
 
 
 			//
-			$post->update($param);
-			$post->tags()->sync($tagIds); // изменили attach на sync*, 
-				// и поместили ниже строки '$post->update($param);'
+			$paper->update($param);
+			$paper->tags()->sync($tagIds); // изменили attach на sync*, 
+				// и поместили ниже строки '$paper->update($param);'
 				// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
 			$tagIds = [];
+
+			$paper->items()->sync($itemIds); 
+			$itemIds = [];
 
 			DB::commit();
 		} catch (Exception $exception) {
@@ -53,7 +58,7 @@ class Service {
             abort(500);
 		}
 
-		return $post;
+		return $paper;
 	}
 
 
@@ -65,9 +70,9 @@ class Service {
 			// isset($param['tag_ids']) ? $tagIds=$param['tag_ids'] : $tagIds=[];
 			// unset($param['tag_ids']);
 
-        	$post = Paper::firstOrCreate($param);
+        	$paper = Paper::firstOrCreate($param);
 			
-			// $post->tags()->attach($tagIds);
+			// $paper->tags()->attach($tagIds);
 				// attach: Присоединение / Отсоединение отношений Многие ко многим
 			// $tagIds = [];
 			
@@ -78,7 +83,7 @@ class Service {
             abort(500);
 		}
 
-		return $post;
+		return $paper;
 
     }
 }
