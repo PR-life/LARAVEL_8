@@ -14,7 +14,9 @@ class UpdateController extends BaseController
     // public function __invoke(Request $request, Faq $faq){
     public function __invoke(UpdateRequest $request, Faq $faq){
 
-		$data = [];
+        // dd($request);
+
+		// $data = [];
         // $data['h1'] = 'Категория';
 
         $data = $request->validated();

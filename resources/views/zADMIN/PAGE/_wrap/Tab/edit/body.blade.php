@@ -23,10 +23,7 @@
 
 		<div class="_off / Abs -all / _indexMax / x-06051532 / pointer"></div>
 
-		<div class="Abs -rt / _indexMax pointer net">
-			<div class="_OffLvl_2 / Ico -XS / noEvents / orb-s contentBox">@svg('three')</div>
-			<div class="_OpenLvl_2 / Ico -XS / noEvents / orb-s contentBox">@svg('close')</div>
-		</div>
+		@include('zADMIN/_brick/manager/close/abs_lvl_2')
 
 		<div class="paragraph"></div>
 		

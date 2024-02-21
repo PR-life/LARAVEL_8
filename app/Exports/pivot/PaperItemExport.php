@@ -8,10 +8,9 @@ use Maatwebsite\Excel\Concerns\FromCollection;
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
 
-class PaperItemtExport implements FromCollection, WithHeadings
+class PaperItemExport implements FromCollection, WithHeadings
 {
 
-	
 	public function headings(): array {
 		return [
 			"paper_id",
@@ -20,11 +19,6 @@ class PaperItemtExport implements FromCollection, WithHeadings
 			"updated_at",
 		];
 	}
-
-
-
-
-
 
     public function collection()
     {

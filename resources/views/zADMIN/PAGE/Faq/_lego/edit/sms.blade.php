@@ -1,6 +1,6 @@
 <div class="void / Form -S">
 
-    @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms')
+    {{-- @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms')
         @slot('id', 'category')
         @slot('name', 'Категория')
         <dl class="-dot Void / Form -XS / net">
@@ -13,11 +13,11 @@
         @component('zADMIN.PAGE._wrap.select.categories.lvl_2')
             @include('_._brick.select.category.lvl_2.index',['Categories' => $categories, 'Var' => $faq->category_id])
         @endcomponent
-    @endcomponent
+    @endcomponent --}}
 
 
     
-    @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms', ['css' => 'round-s x-24051434 / void-s'])
+    {{-- @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms', ['css' => 'round-s x-24051434 / void-s'])
         @slot('id', 'tags')
         @slot('name', 'Теги')
         @component('zADMIN.PAGE._wrap.select.tags.index')
@@ -25,7 +25,7 @@
                 @include('_._brick.select.tags.edit.index',['Tags' => $tags,'Var' => $faq])
             @endcomponent
         @endcomponent
-    @endcomponent
+    @endcomponent --}}
 
     @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms')
         @slot('id', 'group')

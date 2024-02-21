@@ -12,10 +12,11 @@ x09081525.forEach( item => {
 	let arr = JSON.parse(localStorage.getItem(item.getAttribute("check-localStorage")))
 		check = item.getAttribute('data-check'),
 		param = item.getAttribute('param');
-	// console.log(item)
-	// console.log(arr)
-	// console.log(check)
-	// console.log(param)
+
+	console.log(item)
+	console.log(arr)
+	console.log(check)
+	console.log(param)
  
 
 	if(arr != null && arr.includes(check)) {

@@ -24,7 +24,7 @@ function select_1902(Options,field,select,text = 'выбрать') {
 
         let elem = document.createElement("span");
 
-        elem.className = "_item content-xs space-s round-s yesEvents";
+        elem.className = "_item block content-xs space-s round-s yesEvents";
         elem.textContent = option.text;
         elem.dataset.var = option.className
 

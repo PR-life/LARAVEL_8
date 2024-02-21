@@ -2,7 +2,7 @@
 	$arr = $Var->items->pluck('id')->toArray();
 ?>
 
-{{-- <option disabled {{!$arr ? 'selected' : '' }}>--не выбрано--</option> --}}
+
 {{-- <option {{!$arr ? 'selected' : '' }}>пусто</option> --}}
 {{-- <option class="disabled noEvents content-xs" disabled {{!$arr ? 'selected' : '' }}>связать с Услугой</option> --}}
 @foreach($Items as $item)

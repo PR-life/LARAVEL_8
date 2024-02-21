@@ -2,10 +2,11 @@
 
 .Gardener {
 	--x-Gardener-w:calc(var(--Ico)*1.25);
+	--x-Gardener-h:calc(var(--Ico)*1.0);
 	//
 
 
-	max-height: 800px;
+	// max-height: 800px;
 
 	.Field {
 		--x-Field-color-1:#eee;
@@ -55,11 +56,23 @@
 	width: var(--x-Gardener-w);
 }
 
+.Field.-h::before {
+	height: var(--x-Gardener-h);
+}
+
 .Field.-l::before {
 	top: 0;
 	bottom: 0;
 	left: 0;
 }
+
+.Field.-b::before {
+	right: 0;
+	bottom: 0;
+	left: 0;
+}
+
+
 
 .Field.-l.-w {
 	padding-left: calc(var(--x-Gardener-w) + 5px);
@@ -67,5 +80,9 @@
 
 .Field.-r.-w {
 	padding-right: calc(var(--x-Gardener-w) + 5px);
+}
+
+.Field.-h {
+	padding-bottom: calc(var(--x-Gardener-w) + 5px);
 }
  

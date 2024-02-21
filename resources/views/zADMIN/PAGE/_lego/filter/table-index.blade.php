@@ -5,6 +5,7 @@
 
             @component('zADMIN/PAGE._lego.filter._wrap.btnLocalStorage_toggle',['css' => 'Btn -S -auto -edgeS x-active / slim round-s'])
                 @slot('localstorageName','filter_btn_table_empty')
+                @slot('dataCheck','x-empty')
                 @slot('nodeName','Table_index')
                 @slot('toggleCss','x-empty')
                 @slot('name','заполнить')
@@ -12,6 +13,7 @@
 
             @component('zADMIN/PAGE._lego.filter._wrap.btnLocalStorage_toggle',['css' => 'Btn -S -auto -edgeS x-active / slim round-s'])
                 @slot('localstorageName','filter_btn_table_full')
+                @slot('dataCheck','x-full')
                 @slot('nodeName','Table_index')
                 @slot('toggleCss','x-full')
                 @slot('name','full')
@@ -19,6 +21,7 @@
 
             @component('zADMIN/PAGE._lego.filter._wrap.btnLocalStorage_toggle',['css' => 'Btn -S -auto -edgeS x-exclude / slim round-s'])
                 @slot('localstorageName','filter_btn_table_statusActive')
+                @slot('dataCheck','x-active')
                 @slot('nodeName','Table_index')
                 @slot('toggleCss','x-active')
                 @slot('name','active')
@@ -26,6 +29,7 @@
 
             @component('zADMIN/PAGE._lego.filter._wrap.btnLocalStorage_toggle',['css' => 'Btn -S -auto -edgeS x-exclude / slim round-s'])
                 @slot('localstorageName','filter_btn_table_statusPause')
+                @slot('dataCheck','x-pause')
                 @slot('nodeName','Table_index')
                 @slot('toggleCss','x-pause')
                 @slot('name','pause')

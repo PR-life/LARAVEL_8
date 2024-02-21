@@ -13,9 +13,9 @@
         </dl>
 
 
-        @component('zADMIN.PAGE._wrap.select.categories.lvl_1')
+        {{-- @component('zADMIN.PAGE._wrap.select.categories.lvl_1')
             @include('_._brick.select.category.lvl_1.index',['Categories' => $categories, 'Var' => $category->category_id])
-        @endcomponent
+        @endcomponent --}}
 
         {{-- @component('zADMIN.PAGE._wrap.select.categories.lvl_2')
             @include('_._brick.select.category.lvl_2.index',['Categories' => $categories, 'Var' => $category->category_id])
@@ -29,7 +29,7 @@
 
 
     
-    @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms', ['css' => 'round-s x-24051434 / void-s'])
+    {{-- @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms', ['css' => 'round-s x-24051434 / void-s'])
         @slot('id', 'tags')
         @slot('name', 'Теги')
 
@@ -41,7 +41,7 @@
         @endcomponent
 
 
-    @endcomponent
+    @endcomponent --}}
 
  
 

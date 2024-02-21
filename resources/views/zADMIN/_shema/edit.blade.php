@@ -5,8 +5,8 @@
 
 
 @push('linkJs')
-	@include('_.src.link.js.jquery')
-	@include('_.src.link.js.bootstrap')
+	{{-- @include('_.src.link.js.jquery') --}}
+	{{-- @include('_.src.link.js.bootstrap') --}}
 	@include('_.src.link.js.text.tinymce')
 @endpush
 

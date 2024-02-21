@@ -1,6 +1,41 @@
 @charset "UTF-8";
 
 
+
+.bg-relationships {
+	--x-size:10px;
+	--x-size-shift:0px;
+
+	background-image: 
+	radial-gradient(#000 1px, transparent 1px),
+	radial-gradient(#000 1px, transparent 1px);
+
+	background-size: var(--x-size) var(--x-size);
+	background-position: 0 calc(var(--x-size-shift)), calc(var(--x-size)*.5) calc(var(--x-size)*.5 + var(--x-size-shift));
+
+	transition: background-position linear .2s;
+
+
+	._close {
+		background-color: var(--bg);
+		// background-color: red;
+	}
+}
+
+
+.bg-relationships.On {
+	--x-size:12px;
+	--x-size-shift:10px;
+
+	._field {
+		background: linear-gradient(to top, rgba(45, 44, 51,1) 0,rgba(45, 44, 51,.8) 80%,transparent);
+	}
+}
+
+
+
+
+
 .Pivot {
 	
 	ul {

@@ -1,6 +1,6 @@
 
 
-{{-- <option>--не выбрано--</option> --}}
+<option value=''>--не выбрано--</option>
 
 @foreach($Categories as $category)
 

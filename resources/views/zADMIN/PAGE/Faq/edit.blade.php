@@ -3,20 +3,20 @@
 @section('title')edit. Faq - {{$faq->name}} @endsection
 
 
-
 @push('linkCss')
 	@include('_.src.link.css.text.select')
 @endpush
 
 @push('linkJsAfter')
-	@include('_.src.link.js.text.select')
+	{{-- @include('_.src.link.js.text.select') --}}
 @endpush
 
 @push('js-bottom-solo')
-	<script>
+	{{-- <script>
 		$('#js_tags').select2()
 		$('#js_faqs').select2()
-	</script>
+	</script> --}}
+	@include('_/js/manager/select/index')
 @endpush
 
 
@@ -41,22 +41,13 @@
 
 
 	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.faq.update', $faq->id), 'css' => '-faq'])
-
-
-		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.faq.index', [
-			'shema' => request()->get('shema'),
-			'tag_id' => request()->get('tag_id'),
-			'page' => request()->get('page'),
-			'category_id' => request()->get('category_id'),
-			'tag_id' => request()->get('tag_id')
-			])]) --}}
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.faq.index'])
-
-
 
 		<div class="_shell">
 			@include('zADMIN._bd.edit.min',['Var'=> $faq])
 		</div>
+
+		@include('zADMIN/PAGE/Faq/_lego/edit/lego/Relationships')
 
 		
 		@component('zADMIN.PAGE._wrap.Flaber.edit')
