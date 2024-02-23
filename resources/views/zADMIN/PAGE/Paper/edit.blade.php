@@ -2,22 +2,7 @@
 
 @section('title')edit. Paper - {{$paper->name}} @endsection
 
-
-@push('linkCss')
-	@include('_.src.link.css.text.select')
-@endpush
-
-@push('linkJsAfter')
-	{{-- @include('_.src.link.js.text.select') --}}
-@endpush
-
-@push('js-bottom-solo')
-	{{-- <script>
-		$('#js_tags').select2()
-	</script> --}}
-
-    @include('_/js/manager/select/index')
-@endpush
+@include('zADMIN._bd._src.edit.min')
 
 
 @push('addBread')
@@ -39,8 +24,6 @@
 @section('content')
 
 <div class="I aura">
-
-
 	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.paper.update', $paper->id), 'css' => '-paper'])
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.paper.index'])
 
@@ -49,22 +32,14 @@
 		</div>
  
 		@include('zADMIN/PAGE/Paper/_lego/edit/lego/Relationships')
-
- 
-
 		<div class="paragraph"></div>
  
-
-
 		@component('zADMIN.PAGE._wrap.Flaber.edit')
-
 			@slot('flaber')
 				@include('zADMIN.PAGE.Paper._lego.edit.sms')	
 			@endslot
-
 			<div class="paragraphX2"></div>
 			@include('zADMIN.PAGE.Paper._lego.edit.body')
-
 		@endcomponent
 
 

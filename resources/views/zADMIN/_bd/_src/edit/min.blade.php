@@ -3,11 +3,12 @@
 @endpush
 
 @push('linkJsAfter')
-	@include('_.src.link.js.text.select')
+	{{-- @include('_.src.link.js.text.select') --}}
 @endpush
 
 @push('js-bottom-solo')
-	<script>
+	{{-- <script>
 		$('#js_tags').select2()
-	</script>
+	</script> --}}
+	@include('_/js/manager/select/index')
 @endpush

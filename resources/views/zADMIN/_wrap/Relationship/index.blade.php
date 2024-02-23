@@ -6,8 +6,8 @@
         <div class="x-three / Ico -XS">@svg('three')</div>
     </label>
     <div class="flex -wrap / space-xs round-s Grey / noEvents relative">
-        <div class="_field W-100 / {{isset($solo) ? 'x-solo' : 'flex -wrap / cloud cloud-s'}}">
-            <span class="content-xs space-s net">{{$placeholder ?? 'выбрать...'}}<span class="ghost">..</span></span>
+        <div class="_field W-100 content-xs / {{isset($solo) ? 'x-solo' : 'flex -wrap / cloud cloud-s'}}">
+            <span class="block space-s net">{{$placeholder ?? 'выбрать...'}}<span class="ghost">..</span></span>
         </div>
     </div>
     <label for="id_checkbox_{{$id ?? '5555'}}" class="_label {{isset($solo) ? '' : '-border round-s'}} Abs -all / _indexMin / js-close"></label>

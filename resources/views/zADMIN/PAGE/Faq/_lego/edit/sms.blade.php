@@ -36,7 +36,7 @@
     @endcomponent
  
 
-    @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms')
+    {{-- @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms')
         @slot('id', 'faq')
         @slot('name', 'Faq')
         <dl class="-dot Void / Form -XS / net">
@@ -53,7 +53,7 @@
                 @include('_._brick.select.faq.edit.index',['Faqs' => $faqs,'Var' => $faq])
             @endcomponent
         @endcomponent
-    @endcomponent
+    @endcomponent --}}
 
 
 </div>

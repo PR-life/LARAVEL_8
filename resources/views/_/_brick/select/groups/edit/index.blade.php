@@ -1,8 +1,8 @@
-<select class="Min -w3" name="group_id">
-	<option selected value> -- без группы -- </option>
-	@foreach($groups as $group)
-	<option value="{{$group->id}}" {{$group->id == $Var ? ' selected' : ''}}>
-		{{$group->name}}
-	</option>
-	@endforeach
-</select>
+<?php
+	// $arr = $Var->tags->pluck('id')->toArray();
+?>
+
+<option selected value> -- без группы -- </option>
+@foreach($Groups as $_group)
+	<option class="x-{{$_group->id}}" value="{{$_group->id}}"{{ $Var == $_group->id ? ' selected' : ''}}{{$_group->id == old('group_id') ? ' selected' : ''}}>{{$_group->name}}</option>
+@endforeach

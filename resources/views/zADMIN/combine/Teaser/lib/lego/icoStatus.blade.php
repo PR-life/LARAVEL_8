@@ -10,7 +10,7 @@
 @endif
 
 @if($Var->group_id)
-<div class="Ico -XS">
+<div class="Ico -XS" title="{{$Var->group->name}}">
 
     <svg viewBox="0 0 48 48">
         <rect fill="none"/>
