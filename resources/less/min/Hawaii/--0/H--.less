@@ -122,7 +122,7 @@
     // }
 
     .Plot.-h {
-        --Plot:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
+        --Plot:clamp(700px,calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise)),940px);
     }
 
     .Plot.-hMin {
