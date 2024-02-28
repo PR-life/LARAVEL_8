@@ -23,9 +23,16 @@ class Group extends Model
             Faq::class,
             'group_id',
             'id', //
-        )->where('published', 1)->orderBy('order', 'asc');
+        )->orderBy('order', 'asc');
     }
 
+    public function items() {
+        return $this->hasMany(
+            Item::class,
+            'group_id',
+            'id', //
+        )->orderBy('order', 'asc');
+    }
 
     // public function posts() {
     //     return $this->hasMany(

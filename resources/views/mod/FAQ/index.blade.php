@@ -1,6 +1,6 @@
 @push('style')
 	.about > .Ef.-Details > ._ef.slug-detektivnoe-agentstvo,
-	.price > .Ef.-Details > ._ef.tag-ceny,
+	.price > .Ef.-Details > ._ef.tag-price,
 	.profession > .Ef.-Details > ._ef.slug-detektiv  {
 		height: auto;
 		min-height: var(--x-Ef-hMin);
@@ -34,7 +34,7 @@
                 @include('mod.FAQ.lego.item',['css' => 'x-'.$loop->iteration])
              @endforeach
 
-            @isset($thisItemFaq)
+            {{-- @isset($thisItemFaq)
                 @foreach($thisItemFaq as $thisFaq)
                     <div class="_ef -an thisItem / Details {{$css_Details ?? ''}}">
                         <details>
@@ -45,7 +45,7 @@
                         </details>
                     </div>
                 @endforeach
-            @endisset
+            @endisset --}}
 		</div>
 	</div>
 </div>

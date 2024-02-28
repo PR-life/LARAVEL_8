@@ -28,6 +28,7 @@ class FilterRequest extends FormRequest
             'name' => 'nullable',
             'status' => 'nullable',
             'category_id' => 'nullable',
+            'group_id' => 'nullable',
             'user_id' => 'nullable',
             // 'category_sku' => 'nullable',
             // 'mafia' => 'nullable',

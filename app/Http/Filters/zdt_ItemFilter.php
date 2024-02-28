@@ -11,6 +11,7 @@ class zdt_ItemFilter extends AbstractFilter {
     public const NAME = 'name';
     public const STATUS = 'status';
     public const CATEGORY_ID = 'category_id';
+    public const GROUP_ID = 'group_id';
     public const USER_ID = 'user_id';
     // public const CATEGORY_SKU = 'category_sku';
     // public const MAFIA = 'mafia';
@@ -22,6 +23,7 @@ class zdt_ItemFilter extends AbstractFilter {
             self::NAME => [$this, 'name'],
             self::STATUS => [$this, 'status'],
             self::CATEGORY_ID => [$this, 'category_id'],
+            self::GROUP_ID => [$this, 'group_id'],
             self::USER_ID => [$this, 'user_id'],
             // self::CATEGORY_SKU => [$this, 'category_sku'],
             // self::MAFIA => [$this, 'mafia'],
@@ -41,6 +43,11 @@ class zdt_ItemFilter extends AbstractFilter {
     public function category_id(Builder $builder, $value)
     {
         $builder->where('category_id', $value);
+    }
+    
+    public function group_id(Builder $builder, $value)
+    {
+        $builder->where('group_id', $value);
     }
 
     public function user_id(Builder $builder, $value)

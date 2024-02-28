@@ -51,12 +51,6 @@
 	}
 }
 
-@media screen and (max-width:@w-beyond) {
-	.flexBeyond {
-		display: flex;
-	}
-}
-
 @media screen and (max-width:@w-menu-2) {
 	.flex_mbl {
 		display: flex;
@@ -236,6 +230,12 @@
 
 }
 
+@media (min-width:@w-menu-2-plus) and (max-width:@w-beyond) {
+	.flexBeyond {
+		display: flex;
+	}
+
+}
 @media screen and (max-width:@metrika-80-plus) {
 // @media screen and (max-width:@metrika-80 + 100px + 16px) {
 	.Reg.-m80 {
@@ -255,12 +255,17 @@
 	// .Reg.-beyond {
 	// 	flex-direction: column;
 	// }
+	
+	.sC_beyond {
+		justify-content: flex-start;
+	}
 
 	.dC_beyond  {
 		flex-direction: column;
 	}
 }
 
+ 
 @media screen and (max-width:@w-menu-2) {
 
 	// .Chunk,
