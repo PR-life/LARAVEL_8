@@ -20,6 +20,9 @@ class FaqExport implements FromCollection, WithHeadings, WithStrictNullCompariso
 			"name",
 
 			"filter_par_1",
+			"css",
+			"css_summary",
+			"cssContent",
 
 			"h1",
 			"text",

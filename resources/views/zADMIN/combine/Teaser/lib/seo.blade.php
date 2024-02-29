@@ -38,7 +38,6 @@ if ($Var->name) {
 
                 <div class="flex cI">
 
-                    {{-- <h1></h1> --}}
                     <a class="content-m b600 / Article" 
                         href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', [
                                 mb_strtolower(class_basename($Var)) => $Var->id,
@@ -60,8 +59,13 @@ if ($Var->name) {
                             @include('zADMIN.combine.Teaser.lib.lego.icoStatus')
                         </div>
     
+
                         <span class="flex / cross">
+                        @if($Var->shema_teaser == 'shema-link')
+                            @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->slug, 'h2' => $Var->name ?? null, 'css' => 'x-name'])
+                        @else
                             @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $NAME, 'h2' => $Var->h2 ?? null, 'css' => 'x-name'])
+                        @endif
                             <span class="EN / content-m b300 / block oneLine nowrap Ellipsis x-name / Grey">{!!$Var->en_name ?? '<em>en_name</em>'!!}</span>
                         </span>
     

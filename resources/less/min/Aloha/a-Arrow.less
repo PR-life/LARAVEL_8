@@ -12,9 +12,18 @@ summary {
 .Arrow.ok,
 details[open] > summary {
     i::before {
-          transform: translate(~"calc(var(--x-Arrow-w) - var(--x-Arrow-w)*2)", 0) rotate(45deg);
+        transform: translate(~"calc(var(--x-Arrow-w) - var(--x-Arrow-w)*2)", 0) rotate(45deg);
     }
     i::after {
-          transform: translate(var(--x-Arrow-w), 0) rotate(-45deg);
+        transform: translate(var(--x-Arrow-w), 0) rotate(-45deg);
+    }
+
+    i.vol-close::before {
+        transform: translate(0, 0) rotate(-45deg);
+    }
+
+    i.vol-close::after {
+        transform: translate(0, 0) rotate(45deg);
     }
 }
+

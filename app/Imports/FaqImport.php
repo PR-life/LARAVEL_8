@@ -32,6 +32,10 @@ class FaqImport implements ToCollection, WithHeadingRow
                     
                     
                     'filter_par_1' => $item['filter_par_1'],
+                    'css' => $item['css'],
+                    'css_summary' => $item['css_summary'],
+                    'css_content' => $item['css_content'],
+
                     'h1' => $item['h1'],
                     'text' => $item['text'],
 

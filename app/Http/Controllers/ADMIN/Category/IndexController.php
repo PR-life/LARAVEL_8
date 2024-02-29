@@ -15,6 +15,7 @@ class IndexController extends BaseController
         $name = request()->get('name');
         $tag_id = request()->get('tag_id');
         $category_id = request()->get('category_id');
+        
 
         $page = request()->get('page');
 
@@ -45,7 +46,7 @@ class IndexController extends BaseController
         }
 
 
- 
+        
 
 
         return view('zADMIN.PAGE.Category.index', compact('Categories','categories','name','page','tag_id','category_id'));

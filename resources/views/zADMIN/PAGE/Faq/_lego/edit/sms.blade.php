@@ -27,14 +27,14 @@
         @endcomponent
     @endcomponent --}}
 
-    @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms')
+    {{-- @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms')
         @slot('id', 'group')
         @slot('name', 'Группа')
         @component('zADMIN.PAGE._wrap.select.groups.index')
             @include('_._brick.select.groups.edit.index',['Categories' => $groups, 'Var' => $faq->group_id])
         @endcomponent
     @endcomponent
- 
+  --}}
 
     {{-- @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms')
         @slot('id', 'faq')

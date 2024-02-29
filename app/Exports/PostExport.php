@@ -20,6 +20,10 @@ class PostExport implements FromCollection, WithHeadings, WithStrictNullComparis
 			"name",
 			"slug",
 
+			"shema",
+			"shema_teaser",
+			"css",
+
 			"h1",
 			"intro",
 			"text",

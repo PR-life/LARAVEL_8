@@ -28,6 +28,9 @@ class StoreRequest extends FormRequest
             'sku' => 'nullable|string',
 
             'filter_par_1' => 'nullable',
+            'css' => 'nullable',
+            'css_summary' => 'nullable',
+            'cssContent' => 'nullable',
 
 			//
 			'name' => 'nullable|string',

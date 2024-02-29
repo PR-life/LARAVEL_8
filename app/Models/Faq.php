@@ -81,6 +81,19 @@ class Faq extends Model
         );
     }
 
+
+    public function group() {
+        // return 1;
+        return $this->belongsTo(
+            Group::class,
+            'group_id', // foreignKey
+			'id', // ownerKey
+        );
+    }
+
+
+
+
     public function childrenFaqs()
     {
         return $this->hasMany(Faq::class)->with('parentFaq')->orderBy('order','desc');

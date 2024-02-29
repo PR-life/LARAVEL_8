@@ -34,6 +34,11 @@ class StoreRequest extends FormRequest
             'name' => 'required|string',
 			'slug' => 'string',
 
+            //
+            'shema' => 'nullable|string',
+			'shema_teaser' => 'nullable|string',
+			'css' => 'nullable|string',
+
     		//
             'h1' => 'nullable|string',
             'intro' => 'nullable|string',

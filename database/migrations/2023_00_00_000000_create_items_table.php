@@ -20,6 +20,8 @@ class CreateItemsTable extends Migration
             $table->string('name');
 			$table->string('slug')->unique();
 
+            $table->string('shema')->default('default');
+            $table->string('shema_teaser')->default('default');
             $table->string('css')->nullable();
 
             $table->string('type')->nullable();
