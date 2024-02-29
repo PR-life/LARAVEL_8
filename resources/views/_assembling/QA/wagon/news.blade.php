@@ -14,7 +14,7 @@
 
 <div class="_close / space-left">
 	<div class="paragraph-s"></div>
-	@include('_._brick.Q.min',['Var' => $Var])
+	@include('_._brick.Q.min',['Var' => $Var->sms])
 	<div class="paragraph"></div>
 </div>
 

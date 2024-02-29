@@ -8,7 +8,7 @@
     </div>
     <div class="_body _off H-100 {{$cssBody ?? ''}} x-25021811 / relative">
         {!!$slot!!}
-        <div class="_off H-100 / Grid x3 -gap / bg-cell">        
+        <div class="H-100 / Grid x3 -gap / bg-cell">        
             <div class="_cell _1 / flex dC bC_PC / space void / relative index">
                 {!!$cell_1 ?? ''!!}
                 <div class="paragraph net none_PC"></div>
