@@ -483,6 +483,10 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.Abs_mbl{
 		position: absolute;
 	}
+	.Abs_mbl.-lt{
+		left:0;
+		top:0;
+	}
 }
 @media (min-width:481px) and (max-width:799px){
 	.gstrm.var-480{

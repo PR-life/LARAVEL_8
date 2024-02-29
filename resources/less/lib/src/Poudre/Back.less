@@ -5,36 +5,50 @@
 }
 
 @media screen and (max-width:@w-menu-2) {
+	#Back {
 
+		.Bread {
+			--Bread-margin: 0;
+		}
+
+		._prev,
+		._prev a {
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			top: 0;
+		}
+	}
 }
 
 
 //
 
-.Back {
-	display: flex;
-}
+// .Back {
+// 	display: flex;
+// }
 
-.Back.-bar {
-	width: var(--bar);
-	border-right: 1px solid #e6e6e6;
-	opacity: .5;
-}
+// .Back.-bar {
+// 	width: var(--bar);
+// 	border-right: 1px solid #e6e6e6;
+// 	opacity: .5;
+// }
 
-.Back.-bar.-v:hover {
-	// opacity: .25;
-	background-color: rgba(0, 0, 0, .1);
-	.transition(background-color);
-}
+// .Back.-bar.-v:hover {
+// 	// opacity: .25;
+// 	background-color: rgba(0, 0, 0, .1);
+// 	.transition(background-color);
+// }
 
-.Back.-v {
-	left: 0;
-	top: 0;
-	height: var(--h);
-}
+// .Back.-v {
+// 	left: 0;
+// 	top: 0;
+// 	height: var(--h);
+// }
 
-.Abs.Back.-v {
-	left: 0;
-	top: 0;
-}
+// .Abs.Back.-v {
+// 	left: 0;
+// 	top: 0;
+// }
 

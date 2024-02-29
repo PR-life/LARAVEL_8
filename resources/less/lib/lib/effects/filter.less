@@ -109,9 +109,16 @@
 	pointer-events: all;
 }
 
-.all>.Ef>._first{
-	display: block;
+.all>.Ef {
+	>._all{
+		display: block;
+	}
+	._param_1 {
+		height: auto;
+	}
 }
+
+
 
 .thisItem > .Ef.-list > ._ef.thisItem,
 .featured > .Ef.-list > ._ef.featured,
@@ -132,9 +139,13 @@
 		height: var(--x-Ef-hMin);
 	}
 
-	._first {
+	._all {
 		display: none;
 	}
+	._param_1 {
+		height: 0;
+	}
+
 }
 
 
