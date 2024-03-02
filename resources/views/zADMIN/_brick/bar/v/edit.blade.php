@@ -5,6 +5,7 @@ $link = route($routeName, [
 	'tag_id' => request()->get('tag_id'),
 	'page' => request()->get('page'),
 	'category_id' => request()->get('category_id'),
+	'group_id' => request()->get('group_id'),
 	'tag_id' => request()->get('tag_id')
 ]);
 ?>

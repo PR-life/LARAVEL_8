@@ -7,8 +7,13 @@
 @media screen and (max-width:@w-menu-2) {
 	#Back {
 
+		--Back-edge: 7px;
+
 		.Bread {
 			--Bread-margin: 0;
+
+			position: relative;
+			z-index: 5;
 		}
 
 		._prev,
@@ -19,7 +24,37 @@
 			bottom: 0;
 			top: 0;
 		}
+
+
 	}
+
+	#Back::before,
+	#Back::after {
+		content: '';
+		position: absolute;
+		z-index: 0;
+		left: var(--Back-edge);
+		right: var(--Back-edge);
+		top: var(--Back-edge);
+		bottom: var(--Back-edge);
+	}
+
+	#Back::before {
+		background-color: #fff;
+		border-radius: 5px;
+	}
+
+	#Back::after {
+		background-size: 80%;
+		background-position: center;
+		background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6 12H18M6 12L11 7M6 12L11 17' stroke='%23000000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3e%3c/svg%3e");
+	}
+
+	#Back:active::after {
+		opacity: .5;
+	}
+
+
 }
 
 

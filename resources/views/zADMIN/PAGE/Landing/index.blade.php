@@ -10,14 +10,24 @@
 </li>
 @endpush
 
-@push('bee')
+
+@push('topAfter')
     @include('zADMIN.PAGE._lego.filter.btnVol')
-    {{-- <div class="Bee"> --}}
+@endpush
+
+
+@push('bee')
+    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Landing', 'add' => route('admin.landing.create'), 'ico' => 'barMenu_target'])
+    {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.items') --}}
+    {{-- @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'item']) --}}
+
+    {{-- @include('zADMIN.PAGE._lego.filter.btnVol')
+ 
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Landings', 'add' => route('admin.landing.create'), 'ico' => 'barMenu_target'])
-    {{-- </div> --}}
-    {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.categories') --}}
+ 
+    @include('zADMIN.PAGE._lego.filter.SHEMA.index.categories')
     @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'landing'])
-    @include('zADMIN.PAGE._lego.filter.table-indexSeo')
+    @include('zADMIN.PAGE._lego.filter.table-indexSeo') --}}
 @endpush
 
  

@@ -44,7 +44,8 @@ if ($Var->name) {
                                 'name' => $name ?? null,
                                 'page' => $page ?? null,
                                 'tag_id' => $tag_id ?? null,
-                                'category_id' => $category_id ?? null
+                                'category_id' => $category_id ?? null,
+                                'group_id' => $group_id ?? null
                             ])
                         }}"
                     >
