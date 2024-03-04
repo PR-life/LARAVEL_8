@@ -4,8 +4,11 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
 ////
-// use App\Models\User;
-// use App\Models\Post;
+use App\Models\User;
+use App\Models\Category;
+use App\Models\Tag;
+use App\Models\Group;
+use App\Models\Post;
 use App\Models\Faq;
 use App\Models\Sms;
 use App\Models\Face;
@@ -27,14 +30,29 @@ class DatabaseSeeder extends Seeder
 
 		$this->call([
 			UserSeeder::class,
-			// CategorySeeder::class,
+			CategorySeeder::class,
+			TagSeeder::class,
+			// GroupSeeder::class,
 			// PostSeeder::class
 		]);
 
+		$tags = Tag::all();
+		$categories = Category::all();
+		$groups = Group::all();
+
 		// Faq::factory()->count(15)->create();
 		// Sms::factory()->count(100)->create();
-		// Face::factory()->count(20)->create();
+		$faces = Face::factory()->count(20)->create();
 		// Paper::factory()->count(140)->create();
+		// Face::factory()->count(238)->create();
+
+
+        foreach($faces as $_face) {
+            $i = random_int(0,1);
+            $tags_id = $tags->random($i)->pluck('id'); // метод pluck вернет массив из id таблицы Tag
+            $_face->tags()->attach($tags_id);
+        }
+
 
     }
 }

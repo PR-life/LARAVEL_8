@@ -34,7 +34,7 @@
         </div> --}}
 
 
-        @include('zADMIN.combine.Teaser._brick.data',['Var' => $Var, 'css' => '_5'])
+        @include('zADMIN.combine.Teaser._brick.data.index',['Var' => $Var, 'css' => '_5'])
 
 {{-- 
         <div class="_6 / Min Max -w3 / none_200">

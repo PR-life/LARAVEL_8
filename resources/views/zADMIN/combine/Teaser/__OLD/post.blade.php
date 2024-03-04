@@ -45,7 +45,7 @@
             </span>
         </div>
 
-        @include('zADMIN.combine.Teaser._brick.data',['Var' => $Var, 'css' => '_4'])
+        @include('zADMIN.combine.Teaser._brick.data.index',['Var' => $Var, 'css' => '_4'])
 
 
         <div class="_5">

@@ -10,7 +10,7 @@
 <div class="-Chunk / diminish -icoDown">
     <div class="paragraph-s"></div>
     @component('_wrap.Chunk.Aside.index')
-        @slot('routeName', 'admin.morda')
+        @slot('routeName', 'admin.user.index')
         @slot('icoCss', '-XS')
         @slot('name', 'Пользователи')
         @svg('plus')

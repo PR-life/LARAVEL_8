@@ -28,7 +28,7 @@ if(($tag->category && $tag->categories && $tag->name_2) || $tag->status == '200'
                 @endif
 
  
-                @include('zADMIN.combine.Teaser.lib.tag.lego.nameSeo')
+                @include('zADMIN.combine.Teaser.lib.Tag.lego.nameSeo')
 
 
                 @if($tag->categories)
@@ -61,7 +61,7 @@ if(($tag->category && $tag->categories && $tag->name_2) || $tag->status == '200'
             </div>
 
 
-            @include('zADMIN.combine.Teaser._brick.dataMin',['Var' => $tag, 'css' => '_5'])
+            @include('zADMIN.combine.Teaser._brick.data.min',['Var' => $tag, 'css' => '_5'])
             
             <div class="_7 / flex cI cross">
                 @include('zADMIN._brick.manager.basket', ['class' => class_basename($tag), 'id' => $tag->id])

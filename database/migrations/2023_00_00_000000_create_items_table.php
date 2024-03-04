@@ -57,26 +57,27 @@ class CreateItemsTable extends Migration
 			//
 			$table->text('knot_1')->nullable();
 
+
+			//		
+			$table->unsignedBigInteger('category_id')->nullable();
+            $table->index('category_id', 'item_category_idx');
+            $table->foreign('category_id', 'item_category_fk')->on('categories')->references('id');
+        
+			$table->unsignedInteger('tag_id')->nullable();
+            
+            $table->unsignedBigInteger('group_id')->nullable();          
+            $table->index('group_id', 'item_group_idx');
+            $table->foreign('group_id', 'item_group_fk')->on('groups')->references('id');
+           
+            //
 			$table->unsignedInteger('order')->default('50');
             $table->unsignedInteger('status')->default('1');
             $table->unsignedInteger('views')->default('1');
             $table->unsignedInteger('featured')->default('0');
             $table->unsignedInteger('published')->default('1');
 			
-			//
             $table->unsignedInteger('mafia')->default('0');
-
-			//
-			$table->unsignedInteger('tag_id')->nullable();
-			
-			$table->unsignedBigInteger('category_id')->nullable();
-            $table->index('category_id', 'item_category_idx');
-            $table->foreign('category_id', 'item_category_fk')->on('categories')->references('id');
-        
-            $table->unsignedBigInteger('group_id')->nullable();          
-            $table->index('group_id', 'item_group_idx');
-            $table->foreign('group_id', 'item_group_fk')->on('groups')->references('id');
-           
+	
 			//
 			$table->string('title')->nullable();
 			$table->string('description')->nullable();

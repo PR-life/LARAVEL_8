@@ -3,26 +3,18 @@
 namespace App\Http\Controllers\ADMIN\Customer;
 
 //
-use App\Http\Requests\ADMIN\Faq\UpdateRequest;
+use App\Http\Requests\ADMIN\Face\UpdateRequest;
 //
-use App\Models\Faq;
+use App\Models\Face;
 
 
 class UpdateController extends BaseController
 {
-    public function __invoke(UpdateRequest $request, Faq $faq){
-
-		$data = [];
-        // $data['h1'] = 'Категория';
-
+    public function __invoke(UpdateRequest $request, Face $face){
 
         $data = $request->validated();
-
-        $faq = $this->service->update($faq,$data);
-
-        // dd($data);
+        $face = $this->service->update($face,$data);
 
 		return back()->with('UpdateController', true);
- 		// return redirect()->route('admin.category.edit', $category->id);
     }
 }

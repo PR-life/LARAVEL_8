@@ -6,21 +6,11 @@ use Illuminate\Foundation\Http\FormRequest;
 
 class StoreRequest extends FormRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
     public function authorize()
     {
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
     public function rules()
     {
         return [
@@ -29,27 +19,58 @@ class StoreRequest extends FormRequest
 
 			//
 			'name' => 'required|string',
-            'h1' => 'nullable|string',
-            'text' => 'nullable|string',
+            'surname' => 'nullable|string',
+            'patronymic' => 'nullable|string',
+            'birthday' => 'nullable',
 
-            'category_id' => 'nullable|integer|exists:categories,id', // exists:существует в тбл categories в колонке id
-            'tag_ids' => 'nullable|array',
-            'tag_ids.*' => 'nullable|integer|exists:tags,id', // .* - выбираем все что в array "tag_ids"
-            
-            'filter_par_1' => 'nullable',
+            //
+            'email' => 'nullable|email',
+            // 'phone' => 'nullable|regex:/^([0-9\s\-\+\(\)]*)$/|min:9',
+            'phone' => 'nullable',
+			'whatsapp' => 'nullable',
+			// 'whatsapp' => 'nullable|regex:/^([0-9\s\-\+\(\)]*)$/|min:9',
+			'telegram' => 'nullable|string',
+			'viber' => 'nullable',
+			// 'viber' => 'nullable|regex:/^([0-9\s\-\+\(\)]*)$/|min:9',
+
+            'public_contact' => 'nullable|string',
+
+            //
+            'country' => 'nullable|string',
+            'city' => 'nullable|string',
+            'area' => 'nullable|string',
+
+            //
+            'nickname' => 'nullable|string',
+            'avatar' => 'nullable|string',
+
+            //
+            'estimation' => 'nullable|string',
+            'reviews' => 'nullable|string',
+            'posts' => 'nullable|string',
 
 			//
-            'knot_1' => 'nullable',
+            'face_par_1' => 'nullable|string',
+            'face_par_2' => 'nullable|string',
+            'face_par_3' => 'nullable|string',
+
+            'knot_1' => 'nullable|string',
+            'note' => 'nullable|string',
+
+            //
+            'category_id' => 'nullable|integer|exists:categories,id',
+            'tag_id' => 'nullable|integer|exists:tags,id',
+            'group_id' => 'nullable|integer|exists:groups,id',
+            'tag_ids' => 'nullable|array',
+            'tag_ids.*' => 'nullable|integer|exists:tags,id',    
+
 
 			//
             'order' => 'nullable|integer',
             'status' => 'nullable|integer',
-            'featured' => 'nullable|integer',
             'published' => 'nullable|integer',
 
-            //
             'mafia' => 'nullable|integer',
-
 
 			//
             'created_at' => 'nullable',

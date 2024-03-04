@@ -1,11 +1,11 @@
 <?
-$arrCSS = [
-	'id' => 'Wrap',
-	'cssOiBar' => 'skimp-size_Aside x-asideClose',
-	'cssOi' => 'HWin skimp-size_Aside',
-	'cssASIDE' => 'ASIDE',
-	'cssKIRA' => 'KIRA -aside'
-]
+    $arrCSS = [
+        'id' => 'Wrap',
+        'cssOiBar' => 'skimp-size_Aside x-asideClose',
+        'cssOi' => 'HWin skimp-size_Aside',
+        'cssASIDE' => 'ASIDE',
+        'cssKIRA' => 'KIRA -aside'
+    ]
 ?>
 
 
@@ -15,6 +15,12 @@ $arrCSS = [
     'linkCssApp' => '/css/appAdmin.css',
     'cssMilk' => 'skimp-size_Aside'
 ])
+
+@push('linkCss')
+<link href="{{ mix('/css/FSAdmin.css') }}" rel="stylesheet" type="text/css">
+@endpush
+
+
 
 @include('zADMIN._shema._brick.src')
 @include('zADMIN._shema._brick.style')
@@ -31,8 +37,8 @@ $arrCSS = [
 @endpush
 
 @push('bottomAfter')
-    <div class="Plot Bg -gif55"></div>
-    <div class="Plot Bg -gif55"></div>
+    <div class="Plot -h"></div>
+    <div class="Plot -h"></div>
 @endpush
 
 {{-- @push('svg')

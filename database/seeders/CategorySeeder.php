@@ -13,26 +13,25 @@ class CategorySeeder extends Seeder
     {
 
         DB::table('categories')->insert([
-            'name' => 'Про диагностику',
-            'slug' => 'imago',
+            'name' => 'Клиеты',
+            'slug' => 'customers',
         ]);
 
         DB::table('categories')->insert([
-            'name' => 'Оборудование',
-            'slug' => 'equipment',
+            'name' => 'В архиве',
+            'slug' => 'archive',
         ]);
-
 
         DB::table('categories')->insert([
-            'name' => 'Про обучение',
-            'slug' => 'courses',
+            'name' => 'Дети',
+            'slug' => 'children',
         ]);
 
 
-        DB::table('categories')->insert([
-            'name' => 'Новости',
-            'slug' => 'news',
-        ]);
+        // DB::table('categories')->insert([
+        //     'name' => 'Категория 3',
+        //     'slug' => 'cat3',
+        // ]);
 
 		// можно задать в цикле FOR
     }

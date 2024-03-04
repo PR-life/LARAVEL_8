@@ -10,18 +10,11 @@ use App\Models\Tag;
 
 class EditController extends BaseController
 {
-    public function __invoke(Face $customer){
+    public function __invoke(Face $face){
 		
-		$data = [];
-		 
 		$categories = Category::all();
 		$tags = Tag::all();
 
-        // $faces = Face::all();
-        // dd($face);
-
-        
- 
-        return view('zADMIN.PAGE.Customer.edit', compact('customer','categories','tags','data'));
+        return view('zADMIN.PAGE.Customer.edit', compact('face','categories','tags'));
     }
 }

@@ -1,19 +1,11 @@
 <div class="paragraph"></div>
  
-
-
 <div class="Wings / Goo / _indexMax">
     <div class="_win x-preamble"> 
-        <div class="paragraph x-11011809"></div>
-        @component('_lego.ADMIN.bar.preamble')
-            @slot('ava', auth()->user()->avatar)
-            {{auth()->user()->name}}
-        @endcomponent
-
+        @include('zADMIN/_skeleton/Bar/lego/preamble')
     </div>
 </div>
 
- 
 <div class="Abs -all / flex dC bC" style="padding-top: 280px;">
 
     <div class="Wings / Goo -header">
@@ -23,73 +15,39 @@
                 @include('zADMIN.menu.Bar.user')
             </div>
 
-            <div class="ASIDEclose">
+            <div class="show-asideClose">
                 <div class="Ico"></div>
                 <div class="Ico"></div>
                 <div class="Ico"></div>
             </div>
-
 
             <div class="paragraphX2"></div>
             <div class="paragraphX2"></div>
             <div class="paragraphX2"></div>
             <div class="paragraph x-border-top">
-
-
                 <div class="Wings">
                     <div class="_win -t">
-                        <div class="flex cI x-footer / orb cross-xs">
-                            <form id="logout-form" class="ASIDEopen" action="{{ route('logout') }}" method="POST">
-                                @csrf
-                                <button class="Ico -S / pointer transparent">
-                                    <svg><use xlink:href="#svg-exit"></use></svg>
-                                </button>
-                            </form>
-                            <a class="Ico -S" href="/" target="_blank">
-                                <svg><use xlink:href="#svg-web"></use></svg>
-                            </a>
-                        </div>
+                        @include('zADMIN/_skeleton/Bar/lego/logout')
                     </div>
                 </div>
-
             </div>
         </div>
     </div>
 
     <div class="_menu / Goo -b / flex dC bC" style="min-height: calc(var(--h) - var(--h-Header) - 1rem);">
-        
         <div class="void / flex dC / OnionAll">
             <div class="paragraph net / _first / x-asideClose-20102011"></div>
-
+            @include('zADMIN.menu.Bar.slot_customer')
             @include('zADMIN.menu.Bar.slot_target')
             @include('zADMIN.menu.Bar.slot_content')
             @include('zADMIN.menu.Bar.slot_relations')
             @include('zADMIN.menu.Bar.slot_editorial')
-            {{-- @include('zADMIN.menu.Bar.slot_customer') --}}
-            {{-- @include('zADMIN.menu.Bar.slot_office') --}}
+            @include('zADMIN.menu.Bar.slot_office')
             <div class="gstrm"></div>
         </div>
-
         <div class="Goo -b">
-            <div class="flex">
-                <div class="ASIDEclose" data-click data-node='body' data-css data-remove='asideClose' data-loop>
-                    <div class="d" data-click data-localstorage localstorage-name='body' data-remove='asideClose'>
-                        <div class="Ico -S rotate-r orb contentBox pointer">
-                            @svg('arrow')
-                        </div>
-                    </div>
-                </div>
-                <div class="ASIDEopen" data-click data-node='body' data-css data-add='asideClose' data-loop>
-                    <div class="d" data-click data-localstorage localstorage-name='body' data-add='asideClose'>
-                        <div class="Ico -S rotate-l orb contentBox pointer">
-                            @svg('arrow')
-                        </div>
-                    </div>
-                </div>
-            </div>
+            @include('zADMIN/_skeleton/Bar/lego/manager')
         </div>
-
-
     </div>
 </div>
 

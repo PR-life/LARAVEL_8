@@ -12,7 +12,7 @@
 
 
 @push('topAfter')
-    @include('zADMIN.PAGE._lego.filter.btnVol')
+    @include('zADMIN.PAGE._lego.filter.btn.content')
 @endpush
 
 
@@ -21,7 +21,7 @@
     {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.items') --}}
     {{-- @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'item']) --}}
 
-    {{-- @include('zADMIN.PAGE._lego.filter.btnVol')
+    {{-- @include('zADMIN.PAGE._lego.filter.btn.content')
  
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Landings', 'add' => route('admin.landing.create'), 'ico' => 'barMenu_target'])
  

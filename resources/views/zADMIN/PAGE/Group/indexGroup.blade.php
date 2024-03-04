@@ -11,7 +11,7 @@
 @endpush
 
 @push('bee')
-    @include('zADMIN.PAGE._lego.filter.btnVol')
+    @include('zADMIN.PAGE._lego.filter.btn.content')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Теги', 'add' => route('admin.tag.create'), 'ico' => 'barMenu_relations'])
     @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'tag'])
 @endpush
@@ -31,7 +31,7 @@
                             <div class="content-s center-text Grey -c50">{{$category->name}}</div>
                             @foreach($tags as $tag)
                                 @if($category->id == $tag->category_id)
-                                    @include('zADMIN.combine.Teaser.lib.tag.seo')
+                                    @include('zADMIN.combine.Teaser.lib.Tag.seo')
                                 @endif
                             @endforeach
                         </div>

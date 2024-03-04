@@ -10,6 +10,18 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin']], function
 
 
 
+
+    Route::group(['namespace' => 'User', 'prefix' => 'users'], function(){
+		Route::get('/', 'IndexController')->name('user.index');
+		Route::get('/create', 'CreateController')->name('user.create');
+		Route::post('/', 'StoreController' )->name('user.store');
+		// // Route::get('/{user}', 'ShowController')->name('user.show');
+		Route::get('/{user}/edit', 'EditController')->name('user.edit');
+		Route::patch('/{user}', 'UpdateController')->name('user.update');
+		// Route::delete('/{user}', 'DeleteController')->name('user.delete');
+	});
+
+
     
     Route::group(['namespace' => 'Landing', 'prefix' => 'landing'], function(){
         Route::get('/', 'IndexController')->name('landing.index');
@@ -60,7 +72,7 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin']], function
     });
 
 
-    Route::group(['namespace' => 'Item', 'prefix' => 'items'], function(){
+    Route::group(['namespace' => 'zItem', 'prefix' => 'items'], function(){
         Route::get('/', 'IndexController')->name('item.index');
         Route::get('/trash', 'IndexTrashedController')->name('item.trash');
         Route::get('/create', 'CreateController')->name('item.create');
@@ -135,12 +147,12 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin']], function
     Route::group(['namespace' => 'Customer', 'prefix' => 'customers'], function(){
         Route::get('/', 'IndexController')->name('customer.index');
         // // Route::get('/trash', 'IndexTrashedController')->name('customer.trash');
-        // Route::get('/create', 'CreateController')->name('customer.create');
+        Route::get('/create', 'CreateController')->name('customer.create');
         // Route::post('/', 'StoreController')->name('customer.store');
-        // // // // // Route::get('/{customer}', 'ShowController')->name('customer.show');
-        Route::get('/{customer}/edit', 'EditController')->name('customer.edit');
-        Route::patch('/{customer}', 'UpdateController')->name('customer.update');
-        // Route::delete('/{customer}', 'DeleteController')->name('customer.delete');
+        // // // // // Route::get('/{face}', 'ShowController')->name('customer.show');
+        Route::get('/{face}/edit', 'EditController')->name('customer.edit');
+        Route::patch('/{face}', 'UpdateController')->name('customer.update');
+        // Route::delete('/{face}', 'DeleteController')->name('customer.delete');
 
         Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function(){
             Route::get('/', function() {return view('zADMIN.PAGE.Customer.CATEGORY');})->name('customer.category.index');
@@ -251,26 +263,6 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin']], function
 
 
 // });
-
-	// Route::group(['namespace' => 'User', 'prefix' => 'users'], function(){
-	// 	Route::get('/', 'IndexController')->name('admin.user.index');
-	// 	Route::get('/create', 'CreateController')->name('admin.user.create');
-	// 	Route::post('/', 'StoreController' )->name('admin.user.store');
-	// 	// // Route::get('/{user}', 'ShowController')->name('admin.user.show');
-	// 	Route::get('/{user}/edit', 'EditController')->name('admin.user.edit');
-	// 	Route::patch('/{user}', 'UpdateController')->name('admin.user.update');
-	// 	Route::delete('/{user}', 'DeleteController')->name('admin.user.delete');
-	// });
-
-
-
-    
-
-
-
- 
-
-    
 
 
  

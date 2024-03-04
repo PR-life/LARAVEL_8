@@ -148,8 +148,8 @@ body,img,video,input,.block{
 }
 
 #body.Z2 .noneZ2,
-#body:not(.asideClose) .ASIDEclose,
-#body.asideClose .ASIDEopen,
+#body:not(.asideClose) .show-asideClose,
+#body.asideClose .show-asideOpen,
 .none,.Rano,body meta{
 	display:none
 }

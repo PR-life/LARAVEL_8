@@ -24,7 +24,7 @@
     
         </div>
         <div class="flex cI / cross-s">
-            @include('zADMIN.combine.Teaser._brick.dataMin',['Var' => $group, 'css' => '_5'])
+            @include('zADMIN.combine.Teaser._brick.data.min',['Var' => $group, 'css' => '_5'])
             
             <div class="_7">
                 @include('zADMIN._brick.manager.basket', ['class' => class_basename($group), 'id' => $group->id])

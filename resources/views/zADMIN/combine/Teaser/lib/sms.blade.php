@@ -21,7 +21,7 @@
                     </div> --}}
 
 
-            @include('zADMIN.combine.Teaser._brick.dataSms',['Var' => $Var, 'css' => '_5'])
+            @include('zADMIN.combine.Teaser._brick.data.sms',['Var' => $Var, 'css' => '_5'])
             <div class="_7">
                 @include('zADMIN._brick.manager.basket', ['class' => class_basename($Var), 'id' => $Var->id])
             </div>

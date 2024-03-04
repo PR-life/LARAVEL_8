@@ -38,7 +38,7 @@
     
         </div>
         <div class="flex cI / cross-s">
-            @include('zADMIN.combine.Teaser._brick.data',['Var' => $tag, 'css' => '_5'])
+            @include('zADMIN.combine.Teaser._brick.data.index',['Var' => $tag, 'css' => '_5'])
             
             <div class="_7">
                 @include('zADMIN._brick.manager.basket', ['class' => class_basename($tag), 'id' => $tag->id])
