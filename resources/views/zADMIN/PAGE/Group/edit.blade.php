@@ -50,11 +50,11 @@
 		@component('zADMIN.PAGE._wrap.Flaber.edit')
 
 			@slot('flaber')
-				{{-- @include('zADMIN.PAGE.Group._lego.edit.sms')	 --}}
+				{{-- @include('zADMIN.PAGE.Group.lego.edit.sms')	 --}}
 			@endslot
 
 			<div class="paragraphX2"></div>
-			@include('zADMIN.PAGE.Group._lego.edit.body')
+			@include('zADMIN.PAGE.Group.lego.edit.body')
 
 		@endcomponent
 

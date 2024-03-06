@@ -6,7 +6,7 @@
 
 
 {{-- @section('manager-left')
-	@include('zADMIN.PAGE.Post._lego.managerLeft')
+	@include('zADMIN.PAGE.Post.lego.managerLeft')
 @endsection --}}
 
 {{-- @section('manager-right')

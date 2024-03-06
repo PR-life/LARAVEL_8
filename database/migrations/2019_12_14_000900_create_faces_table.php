@@ -51,23 +51,31 @@ class CreateFacesTable extends Migration
             $table->text('note')->nullable();
 
             //
-			$table->foreignId('user_id')
-				->default('1')
+            $table->foreignId('face_id')
+                ->nullable()
 				->references('id')
-				->on('users')
+				->on('faces')
 				->cascadeOnDelete();
+
+            // $table->unsignedInteger('tag_id')->nullable();
+            $table->foreignId('tag_id')
+                ->nullable()
+				->references('id')
+				->on('tags');
 
             $table->unsignedBigInteger('category_id')->nullable();		
             $table->index('category_id', 'face_category_idx');
             $table->foreign('category_id', 'face_category_fk')->on('categories')->references('id');
         
-            $table->unsignedInteger('tag_id')->nullable();
-
             $table->unsignedBigInteger('group_id')->nullable();          
             $table->index('group_id', 'face_group_idx');
             $table->foreign('group_id', 'face_group_fk')->on('groups')->references('id');
            
-
+			$table->foreignId('user_id')
+				->default('1')
+				->references('id')
+				->on('users')
+				->cascadeOnDelete();
 
             //
             $table->unsignedInteger('order')->default('50');

@@ -14,7 +14,10 @@ class EditController extends BaseController
 		
 		$categories = Category::all();
 		$tags = Tag::all();
+		$faces = Face::where('category_id', '!=', '3')
+            ->orWhereNull('category_id')
+            ->get();
 
-        return view('zADMIN.PAGE.Customer.edit', compact('face','categories','tags'));
+        return view('zADMIN.PAGE.Customer.edit', compact('face','faces','categories','tags'));
     }
 }

@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\Factory;
 //
 use App\Models\Category;
 use App\Models\Tag;
+use App\Models\Face;
 
 class FaceFactory extends Factory
 {
@@ -21,7 +22,7 @@ class FaceFactory extends Factory
             'surname' => $this->faker->firstName(),
             'patronymic' => $this->faker->lastName(),
             
-            'birthday' => $this->faker->dateTimeBetween('-80 years', '-18 years'),
+            'birthday' => $this->faker->dateTimeBetween('-65 years', '-18 years'),
 
             'email' => $this->faker->randomElement($array = array (
                 $this->faker->unique()->safeEmail(),
@@ -78,7 +79,7 @@ class FaceFactory extends Factory
                 'Россия',
                 'Россия',
                 'Армения',
-                'Белорусь',
+                'Беларусь',
                 $this->faker->country(),
             )),
 
@@ -134,11 +135,27 @@ class FaceFactory extends Factory
                 '3',
             )),
 
+            'tag_id' => $this->faker->randomElement($array = array (
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                Tag::get()->random()->id,
+            )),
 
+            'category_id' => $this->faker->randomElement($array = array (
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                Category::get()->random()->id,
+            )),
 
             'user_id' => '1',
-            'category_id' => Category::get()->random()->id,
-            'tag_id' => Tag::get()->random()->id,
         ];
     }
 

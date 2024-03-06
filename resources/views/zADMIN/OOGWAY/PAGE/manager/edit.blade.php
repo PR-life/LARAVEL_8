@@ -51,7 +51,7 @@
 
 
 
-			{{-- @include('zADMIN.PAGE.Sms._lego.edit.body')	 --}}
+			{{-- @include('zADMIN.PAGE.Sms.lego.edit.body')	 --}}
 
 		@endcomponent
 
@@ -59,7 +59,7 @@
 
 		{{-- @component('zADMIN.PAGE._wrap.Reg.edit')
 			@slot('Sms')
-				@include('zADMIN.PAGE.Sms._lego.edit.sms')	
+				@include('zADMIN.PAGE.Sms.lego.edit.sms')	
 			@endslot
 
 

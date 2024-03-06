@@ -22,16 +22,16 @@
 		@component('zADMIN.PAGE._wrap.Flaber.edit')
 
 			@slot('flaber')
-				@include('zADMIN.PAGE.Customer._lego.edit.sms')
+				@include('zADMIN.PAGE.Customer.lego.edit.sms')
 			@endslot
 
 			<div class="paragraphX2"></div>
-			@include('zADMIN.PAGE.Customer._lego.edit.body')	
+			@include('zADMIN.PAGE.Customer.lego.edit.body')	
 
 
 
 			<div class="Blog">
-				@include('zADMIN.PAGE.Customer._lego.Chat')
+				@include('zADMIN.PAGE.Customer.lego.Chat')
 			</div>
 
  

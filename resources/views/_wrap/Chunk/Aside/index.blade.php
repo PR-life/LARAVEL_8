@@ -1,7 +1,8 @@
 <div class="Chunk cI pr-2 {{$css ?? ''}}">
     <div class="_ico / flex eC / Pr -x4">
         @isset($linkAdd)
-        <a class="Ico x-btn-plus {{$icoCss ?? '-S'}} / space-xs contentBox" href="{{$linkAdd}}">{!!$slot ?? ''!!}</a>
+        <a class="flex cI cC / Ico {{$icoCss ?? '-S'}} / btn-plus round-50" href="{{$linkAdd}}">{!!$slot ?? ''!!}</a>
+        {{-- <a class="flex cI cC / Ico btn-plus round-50 {{$icoCss ?? '-S'}} / space-xs contentBox" href="{{$linkAdd}}">{!!$slot ?? ''!!}</a> --}}
         @else
         <div class="Ico {{$icoCss ?? '-S'}} / space-xs contentBox">{!!$slot ?? ''!!}</div>
         @endisset   

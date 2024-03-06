@@ -53,11 +53,11 @@
 		@component('zADMIN.PAGE._wrap.Flaber.edit')
 
 			@slot('flaber')
-				@include('zADMIN.PAGE.Faq._lego.edit.sms')	
+				@include('zADMIN.PAGE.Faq.lego.edit.sms')	
 			@endslot
 
 			@slot('date')
-				@include('zADMIN.PAGE.Faq._lego.edit.date')	
+				@include('zADMIN.PAGE.Faq.lego.edit.date')	
 			@endslot
 
 			
@@ -65,7 +65,7 @@
 			<div class="paragraphX2"></div>
 
 
-			@include('zADMIN.PAGE.Faq._lego.edit.body')
+			@include('zADMIN.PAGE.Faq.lego.edit.body')
 
 		@endcomponent
 

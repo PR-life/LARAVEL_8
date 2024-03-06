@@ -35,12 +35,24 @@ class Face extends Model
         );
     }
 
+	public function face(){
+		return $this->hasOne(Face::class);
+	}
+
+	public function parentFace(){
+		return $this->belongsTo(Face::class);
+	}
 
 
-	public function getDateAgeAttribute(){
+
+	public function getAgeAttribute(){
 		return Carbon::parse($this->birthday)->age;
 		// return Carbon::parse($this->birthday)->diff(now())->format('%y years, %m months and %d days');
 		// return Carbon::parse($this->birthday)->diffInYears();
+	}
+
+	public function getBirthdayAsCarbonAttribute(){
+		return Carbon::parse($this->birthday);
 	}
 
 	public function getDateAsCarbonAttribute(){

@@ -1,4 +1,3 @@
-<div class="paragraphX2"></div>
 <div class="flex bC / space-left">
     <div class="flex cI / cross-s">
         <div class="_1 center-text / Max Min -w5"><span class="content-xxs b600 Grey -c30">ФИО</span></div>

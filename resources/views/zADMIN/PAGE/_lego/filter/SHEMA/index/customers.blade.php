@@ -1,10 +1,12 @@
 @component('zADMIN.PAGE._lego.filter.SHEMA.index.wrap.index')
     @slot('cssModel', '-face')
 
-    <div class="{{ ($_GET != [] || request()->routeIs('admin.customer.trash')) ? '' : 'notActive noEvents' }}">
-        <a href="{{route('admin.customer.index')}}">
-            <span class="flex / Ico -XS / orb-s contentBox">@svg('close')</span>
-        </a>
+    <div class="Abs -left">
+        <div class="{{ ($_GET != [] || request()->routeIs('admin.customer.trash')) ? '' : 'notActive noEvents' }}">
+            <a href="{{route('admin.customer.index')}}">
+                <span class="flex / Ico -XS / orb-s contentBox">@svg('close')</span>
+            </a>
+        </div>
     </div>
 
     @include('zADMIN.PAGE._lego.filter.lego.patronymic')

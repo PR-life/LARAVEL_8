@@ -12,23 +12,26 @@
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.category.index')
         @slot('linkAdd', route('admin.category.create'))
-        @slot('icoCss', '-XS')
         @slot('name', 'Категории')
-        @svg('plus')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
     @endcomponent
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.tag.index')
         @slot('linkAdd', route('admin.tag.create'))
-        @slot('icoCss', '-XS')
         @slot('name', 'Теги')
-        @svg('plus')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
     @endcomponent 
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.group.index')
         @slot('linkAdd', route('admin.group.create'))
-        @slot('icoCss', '-XS')
         @slot('name', 'Группы')
-        @svg('plus')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
     @endcomponent 
 </div>
 @endcomponent

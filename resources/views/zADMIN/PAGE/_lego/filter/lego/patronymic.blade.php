@@ -1,1 +1,1 @@
-<input type="text" name="patronymic" placeholder="{{$placeholder ?? 'фамилия'}}..." value="{{isset($_GET["patronymic"]) ? $_GET["patronymic"] : ''}}">
+<input class="round-s" type="text" name="patronymic" placeholder="{{$placeholder ?? 'фамилия'}}..." value="{{isset($_GET["patronymic"]) ? $_GET["patronymic"] : ''}}">
