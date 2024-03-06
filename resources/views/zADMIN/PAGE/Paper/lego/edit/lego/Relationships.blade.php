@@ -1,13 +1,13 @@
-@component('zADMIN/PAGE/_wrap/Relationships/index')
+@component('zADMIN.PAGE._wrap.Relationships.index')
 <div class="flex cross / space">
     <div class="Min -w5">
-        @include('zADMIN/PAGE/_wrap/select/name',['Var' => 'Категория'])
+        @include('zADMIN.PAGE._wrap.select.name',['Var' => 'Категория'])
         @component('zADMIN.PAGE._wrap.select.categories.main', ['id' => 'categories'])
             @include('_._brick.select.categories.edit.main',['Categories' => $categories, 'Var' => $paper])
         @endcomponent
     </div>
     <div class="Min -w5">
-        @include('zADMIN/PAGE/_wrap/select/name',['Var' => 'Теги'])
+        @include('zADMIN.PAGE._wrap.select.name',['Var' => 'Теги'])
         @component('zADMIN.PAGE._wrap.select.tags.all')
             @include('_._brick.select.tags.edit.index',['Tags' => $tags,'Var' => $paper])
         @endcomponent
@@ -15,7 +15,7 @@
 </div>
 
 <div class="space-s">
-    @include('zADMIN/PAGE/_wrap/select/name',['Var' => 'Услуги'])
+    @include('zADMIN.PAGE._wrap.select.name',['Var' => 'Услуги'])
     @component('zADMIN.PAGE._wrap.select.items.index', ['id' => 'items'])
         @include('_._brick.select.items.edit.index',['Items' => $items, 'Var' => $paper])
     @endcomponent

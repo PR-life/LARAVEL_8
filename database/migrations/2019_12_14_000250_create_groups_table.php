@@ -15,10 +15,10 @@ class CreateGroupsTable extends Migration
     {
         Schema::create('groups', function (Blueprint $table) {
             $table->id();
-            $table->string('sku')->nullable();
+            $table->string('sku')->unique()->nullable();
 
             $table->string('name');
-            $table->string('slug')->unique();
+            $table->string('slug')->unique()->nullable();
 			
 			$table->unsignedInteger('order')->default('50');
             $table->unsignedInteger('status')->default('1');

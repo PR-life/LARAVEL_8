@@ -47,7 +47,7 @@
 			@include('zADMIN._bd.edit.min',['Var'=> $faq])
 		</div>
 
-		@include('zADMIN/PAGE/Faq/_lego/edit/lego/Relationships')
+		@include('zADMIN.PAGE.Faq.lego.edit.lego.Relationships')
 
 		
 		@component('zADMIN.PAGE._wrap.Flaber.edit')

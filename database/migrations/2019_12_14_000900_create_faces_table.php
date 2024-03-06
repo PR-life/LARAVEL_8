@@ -11,11 +11,11 @@ class CreateFacesTable extends Migration
     {
         Schema::create('faces', function (Blueprint $table) {
             $table->id();
-            $table->string('sku')->nullable();
+            $table->string('sku')->unique()->nullable();
 
-            $table->string('name');
-            $table->string('surname');
-            $table->string('patronymic');
+            $table->string('name')->nullable();
+            $table->string('surname')->nullable();
+            $table->string('patronymic')->nullable();
             $table->date('birthday')->nullable();
             // date
             // timestamp

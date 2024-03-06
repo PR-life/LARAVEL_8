@@ -51,7 +51,7 @@
 
 				{{-- https://rubashkin.su/muzhskie-rubashki/ --}}
 				{{-- https://ecco.ru/catalog/500164/02178/ --}}
-				@include('zADMIN.PAGE.Customer.lego.edit.right')
+				{{-- @include('zADMIN.PAGE.Customer.lego.edit.right') --}}
 			</div>
 		</div>
 
@@ -59,10 +59,9 @@
 		{{-- @component('zADMIN.PAGE._wrap.Flaber.edit')
 			@slot('flaber')
 				@include('zADMIN.PAGE.Paper.lego.edit.sms')	
-			@endslot --}}
-			{{-- <div class="paragraphX2"></div> --}}
-			{{-- @include('zADMIN.PAGE.Customer.lego.edit.body') --}}
-		{{-- @endcomponent --}}
+			@endslot
+
+		@endcomponent --}}
 
 
 		<div class="hill"></div>

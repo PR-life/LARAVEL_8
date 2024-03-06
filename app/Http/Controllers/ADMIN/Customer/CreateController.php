@@ -2,13 +2,17 @@
 
 namespace App\Http\Controllers\ADMIN\Customer;
 
-use App\Http\Controllers\Controller;
-
+//
+use App\Models\Group;
+use App\Models\Category;
 
 class CreateController extends BaseController
 {
     public function __invoke(){
 
-        return view('zADMIN.PAGE.Paper.create');
+        $group = Group::whereSku('customers')->firstOrFail();
+        $categories = Category::where('group_id', '=', $group->id)->get();
+
+        return view('zADMIN.PAGE.Customer.create',compact('categories'));
     }
 }

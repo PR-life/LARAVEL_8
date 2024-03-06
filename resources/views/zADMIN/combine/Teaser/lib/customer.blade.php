@@ -14,11 +14,16 @@
                 </div>
             </div>
 
-            <div class="_4">
-                <ul class="menu -tag -S / flex">
+            <div class="_4 / flex cI cross-s">
+                @isset($Var->category->name)
+                <div class="Tag -border / space-s round-s">
+                    <a class="content-xxxs / letterUp Grey" href="{{route('admin.category.edit', $Var->category->id)}}">{{$Var->category->name}}</a>
+                </div>
+                @endisset
+                <ul class="menu -tag -XS vol-tail / flex">
                     @foreach($Var->tags as $_tag)
                     <li class="x-{{$_tag->slug}}">
-                        <a class="content-xs / nowrap round-s" href="{{route('admin.tag.edit', $_tag->id)}}">{{$_tag->name}}</a>                        
+                        <a class="a content-xxs / nowrap" href="{{route('admin.tag.edit', $_tag->id)}}">{{$_tag->name}}</a>                        
                     </li>
                     @endforeach
                 </ul>

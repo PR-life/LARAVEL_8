@@ -18,7 +18,7 @@ class StoreRequest extends FormRequest
             'sku' => 'nullable|string',
 
 			//
-			'name' => 'required|string',
+			'name' => 'nullable|string',
             'surname' => 'nullable|string',
             'patronymic' => 'nullable|string',
             'birthday' => 'nullable',

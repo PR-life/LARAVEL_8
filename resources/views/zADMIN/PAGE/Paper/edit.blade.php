@@ -31,7 +31,7 @@
 			@include('zADMIN._bd.edit.min',['Var'=> $paper])
 		</div>
  
-		@include('zADMIN/PAGE/Paper/_lego/edit/lego/Relationships')
+		@include('zADMIN.PAGE.Paper.lego.edit.lego.Relationships')
 		<div class="paragraph"></div>
  
 		@component('zADMIN.PAGE._wrap.Flaber.edit')

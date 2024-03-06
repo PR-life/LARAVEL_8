@@ -35,7 +35,7 @@ class DatabaseSeeder extends Seeder
 			UserSeeder::class,
 			CategorySeeder::class,
 			TagSeeder::class,
-			// GroupSeeder::class,
+			GroupSeeder::class,
 			// PostSeeder::class
 		]);
 
@@ -45,8 +45,8 @@ class DatabaseSeeder extends Seeder
 
 		// Faq::factory()->count(15)->create();
 		// Sms::factory()->count(100)->create();
-		$faces = Face::factory()->count(10)->create();
-		// Paper::factory()->count(140)->create();
+		$faces = Face::factory()->count(25)->create();
+		Paper::factory()->count(140)->create();
 		// Face::factory()->count(238)->create();
 
 		// Create a sample input array.
@@ -72,6 +72,14 @@ class DatabaseSeeder extends Seeder
 			$_face->save();
 
         }
+
+
+		$group_customer = Group::whereSku('customers')->firstOrFail();
+
+		foreach($categories as $_category) {
+			$_category->slug == 'children' ? $_category->group_id = $group_customer->id : '';
+			$_category->save();
+		};
 
 
 

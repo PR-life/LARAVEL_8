@@ -14,19 +14,19 @@ class GroupSeeder extends Seeder
 
         DB::table('groups')->insert([
             'name' => 'Главная',
-            'slug' => 'main',
+            'sku' => 'main',
         ]);
         DB::table('groups')->insert([
             'name' => 'Цены',
-            'slug' => 'price',
+            'sku' => 'price',
         ]);
         DB::table('groups')->insert([
             'name' => 'Каталог',
-            'slug' => 'catalog',
+            'sku' => 'catalog',
         ]);
         DB::table('groups')->insert([
             'name' => 'Клиенты',
-            'slug' => 'customers',
+            'sku' => 'customers',
         ]);
 		// можно задать в цикле FOR
     }

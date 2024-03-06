@@ -26,6 +26,16 @@ class Face extends Model
 
 
 
+    public function faces() {
+        return $this->belongsToMany(
+            Face::class,
+            'face_faces',
+            'face_id',
+            'faces_id'
+        );
+    }
+
+
     public function tags() {
         return $this->belongsToMany(
             Tag::class,
@@ -35,14 +45,21 @@ class Face extends Model
         );
     }
 
-	public function face(){
-		return $this->hasOne(Face::class);
-	}
+    public function category() {
+        return $this->belongsTo(
+            Category::class,
+            'category_id',
+			'id',
+        );
+    }
 
 	public function parentFace(){
 		return $this->belongsTo(Face::class);
 	}
 
+	public function face(){
+		return $this->hasOne(Face::class);
+	}
 
 
 	public function getAgeAttribute(){

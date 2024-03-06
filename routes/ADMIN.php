@@ -148,7 +148,7 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin']], function
         Route::get('/', 'IndexController')->name('customer.index');
         // // Route::get('/trash', 'IndexTrashedController')->name('customer.trash');
         Route::get('/create', 'CreateController')->name('customer.create');
-        // Route::post('/', 'StoreController')->name('customer.store');
+        Route::post('/', 'StoreController')->name('customer.store');
         // // // // // Route::get('/{face}', 'ShowController')->name('customer.show');
         Route::get('/{face}/edit', 'EditController')->name('customer.edit');
         Route::patch('/{face}', 'UpdateController')->name('customer.update');
