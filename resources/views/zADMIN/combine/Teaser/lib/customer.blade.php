@@ -10,7 +10,7 @@
             </div>
             <div class="_3 / Max Min -w2">
                 <div class="content-xs / center-text">
-                    {{$Var->dateAge}}
+                    {{$Var->age}}
                 </div>
             </div>
 

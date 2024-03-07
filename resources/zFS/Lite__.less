@@ -1,8 +1,11 @@
 @charset "UTF-8";
 
-// @import "./__/_ol.less";
+@c-border:hsla(0, 0%, 100%, 0.15);
 
- 
+@import "./Ruler.less";
+@import "./Sizes.less";
+
+
 @media (min-width: @w-menu-2-plus) and (max-width: @metrika-100) {
  
 }
@@ -11,19 +14,56 @@
     // --c-text: #70c9e2;
     // --c-text: #ffdb98;
     // --c-text: #5bcea3;
-    --tag-border-color: hsla(0, 0%, 100%, 0.15);
+    --tag-border-color: @c-border;
 
     border:1px solid var(--tag-border-color);
+}
+
+
+.space-07031144 {
+    padding: 2rem 0 0 2rem;
+}
+
+.space-07031346 {
+    > .Soma {
+        ._name {
+            padding-bottom: .5rem;
+            border-bottom: 1px solid @c-border;
+        }
+    }
+}
+
+
+#Wrap_edit_customerFS {
+    --bg-23111028: 20px;
+
+    #Wrap_edit_right_customerFS {
+        ._content {
+            // background-color: #000;
+            background-size: 80px 80px;
+            background-position: center;
+            background-image: url("/images-0/bg/0603.svg");
+
+
+            dt {
+                // background: none;
+                // border-bottom: 1px dashed #fff;
+                > label {
+                    background: linear-gradient(to top, transparent, rgba(0,0,0,.1),transparent);
+                }
+            }
+        }
+    }
 }
 
 
 
 
 
+// .x-07081718,
 #barMenu_editorial,
-// #barMenu_content,
-#barMenu_target,
-.x-07081718 {
+#barMenu_content,
+#barMenu_target {
     display: none;
 }
 
@@ -35,19 +75,25 @@
 	left: 0;
     right: 0;
     bottom: 0;
-    height: 2rem;
+    height: 1.75rem;
 
     cursor: pointer;
     opacity: .5;
     background-repeat: no-repeat;
     background-position: center;
-    background-size: 14px;
+    background-size: 24px;
     // background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 -0.5 20 20' xmlns='http://www.w3.org/2000/svg'%3e%3cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg transform='translate(-260.000000, -2759.000000)' fill='%23fff'%3e%3cg transform='translate(56.000000, 160.000000)'%3e%3cpath d='M222,2612.40709 C222,2612.84565 221.729,2613.23594 221.324,2613.3787 L215,2615.60539 L215,2603.71501 L215,2603.53322 L220.676,2601.53454 C221.325,2601.3055 222,2601.80055 222,2602.50615 L222,2612.40709 Z M213,2603.71501 L213,2615.60539 L206.676,2613.3787 C206.271,2613.23594 206,2612.84565 206,2612.40709 L206,2602.50615 C206,2601.80055 206.675,2601.3055 207.324,2601.53454 L213,2603.53322 L213,2603.71501 Z M221.337,2599.11785 L214.331,2601.64444 C214.117,2601.72147 213.883,2601.72147 213.669,2601.64444 L206.663,2599.11785 C205.362,2598.64847 204,2599.6396 204,2601.05592 L204,2613.11577 C204,2613.997 204.547,2614.78065 205.36,2615.06207 L213.68,2617.94608 C213.888,2618.01797 214.112,2618.01797 214.32,2617.94608 L222.64,2615.06207 C223.453,2614.78065 224,2613.997 224,2613.11577 L224,2601.05592 C224,2599.6396 222.638,2598.64847 221.337,2599.11785 L221.337,2599.11785 Z'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
     // background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 20 20' xmlns='http://www.w3.org/2000/svg'%3e%3cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg transform='translate(-340.000000, -6519.000000)' fill='%23fff'%3e%3cg transform='translate(56.000000, 160.000000)'%3e%3cpath d='M292,6377 L287.414,6377 L292,6372.414 L290.586,6371 L286,6375.586 L286,6371 L284,6371 L284,6379 L292,6379 L292,6377 Z M304,6359 L296,6359 L296,6361 L300.586,6361 L296.037,6365.549 L297.451,6366.963 L302,6362.414 L302,6367 L304,6367 L304,6359 Z'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 -0.5 21 21' xmlns='http://www.w3.org/2000/svg'%3e%3cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg transform='translate(-99.000000, -560.000000)' fill='%23fff'%3e%3cg transform='translate(56.000000, 160.000000)'%3e%3cpath d='M61.9,412 C61.9,412.552 61.4296,413 60.85,413 L58.75,413 L58.75,407 L60.85,407 C61.4296,407 61.9,407.448 61.9,408 L61.9,412 Z M56.65,405 L50.35,405 L50.35,403 C50.35,402.448 50.8204,402 51.4,402 L55.6,402 C56.1796,402 56.65,402.448 56.65,403 L56.65,405 Z M50.35,413 L56.65,413 L56.65,407 L50.35,407 L50.35,413 Z M56.65,417 C56.65,417.552 56.1796,418 55.6,418 L51.4,418 C50.8204,418 50.35,417.552 50.35,417 L50.35,415 L56.65,415 L56.65,417 Z M48.25,413 L46.15,413 C45.5704,413 45.1,412.552 45.1,412 L45.1,408 C45.1,407.448 45.5704,407 46.15,407 L48.25,407 L48.25,413 Z M61.9,405 L59.8,405 C59.2204,405 58.75,404.552 58.75,404 L58.75,402 C58.75,400.895 57.81025,400 56.65,400 L50.35,400 C49.18975,400 48.25,400.895 48.25,402 L48.25,404 C48.25,404.552 47.7796,405 47.2,405 L45.1,405 C43.93975,405 43,405.895 43,407 L43,413 C43,414.105 43.93975,415 45.1,415 L47.2,415 C47.7796,415 48.25,415.448 48.25,416 L48.25,418 C48.25,419.105 49.18975,420 50.35,420 L56.65,420 C57.81025,420 58.75,419.105 58.75,418 L58.75,416 C58.75,415.448 59.2204,415 59.8,415 L61.9,415 C63.06025,415 64,414.105 64,413 L64,407 C64,405.895 63.06025,405 61.9,405 L61.9,405 Z'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+    // background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 -0.5 21 21' xmlns='http://www.w3.org/2000/svg'%3e%3cg stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3e%3cg transform='translate(-99.000000, -560.000000)' fill='%23fff'%3e%3cg transform='translate(56.000000, 160.000000)'%3e%3cpath d='M61.9,412 C61.9,412.552 61.4296,413 60.85,413 L58.75,413 L58.75,407 L60.85,407 C61.4296,407 61.9,407.448 61.9,408 L61.9,412 Z M56.65,405 L50.35,405 L50.35,403 C50.35,402.448 50.8204,402 51.4,402 L55.6,402 C56.1796,402 56.65,402.448 56.65,403 L56.65,405 Z M50.35,413 L56.65,413 L56.65,407 L50.35,407 L50.35,413 Z M56.65,417 C56.65,417.552 56.1796,418 55.6,418 L51.4,418 C50.8204,418 50.35,417.552 50.35,417 L50.35,415 L56.65,415 L56.65,417 Z M48.25,413 L46.15,413 C45.5704,413 45.1,412.552 45.1,412 L45.1,408 C45.1,407.448 45.5704,407 46.15,407 L48.25,407 L48.25,413 Z M61.9,405 L59.8,405 C59.2204,405 58.75,404.552 58.75,404 L58.75,402 C58.75,400.895 57.81025,400 56.65,400 L50.35,400 C49.18975,400 48.25,400.895 48.25,402 L48.25,404 C48.25,404.552 47.7796,405 47.2,405 L45.1,405 C43.93975,405 43,405.895 43,407 L43,413 C43,414.105 43.93975,415 45.1,415 L47.2,415 C47.7796,415 48.25,415.448 48.25,416 L48.25,418 C48.25,419.105 49.18975,420 50.35,420 L56.65,420 C57.81025,420 58.75,419.105 58.75,418 L58.75,416 C58.75,415.448 59.2204,415 59.8,415 L61.9,415 C63.06025,415 64,414.105 64,413 L64,407 C64,405.895 63.06025,405 61.9,405 L61.9,405 Z'%3e%3c/path%3e%3c/g%3e%3c/g%3e%3c/g%3e%3c/svg%3e");
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewbox='0 0 24 24' xmlns='http://www.w3.org/2000/svg' fill='%23fff' class='w-4 fill-action-sec'%3e%3cpath fill-rule='evenodd' d='M4.065 9.274a.75.75 0 0 1 .913.54 7.219 7.219 0 0 0 1.217 2.53A7.24 7.24 0 0 0 12 15.25a7.24 7.24 0 0 0 5.83-2.94 7.218 7.218 0 0 0 1.192-2.497.75.75 0 0 1 1.452.374 8.707 8.707 0 0 1-1.132 2.575l1.122 1.521a.75.75 0 1 1-1.207.89l-.876-1.186a8.79 8.79 0 0 1-1.923 1.544l.866 2.035a.75.75 0 0 1-1.38.587l-.839-1.97a8.7 8.7 0 0 1-2.355.535V19a.75.75 0 0 1-1.5 0v-2.282a8.7 8.7 0 0 1-2.355-.535l-.839 1.97a.75.75 0 1 1-1.38-.587l.866-2.035a8.788 8.788 0 0 1-1.923-1.544l-.876 1.187a.75.75 0 1 1-1.207-.89l1.122-1.522a8.706 8.706 0 0 1-1.132-2.575.75.75 0 0 1 .54-.913z' clip-rule='evenodd'%3e%3c/path%3e%3c/svg%3e");
 
 
-    border-bottom: 1px dashed hsla(0, 0%, 100%, 0.15);
+    border-bottom: 1px dashed @c-border;
+}
+
+.Fog:hover::after {
+    background-size: 16px;
+    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='%23fff'%3e%3cpath d='M9.5 8a1.5 1.5 0 11-3 0 1.5 1.5 0 013 0z'%3e%3c/path%3e%3cpath clip-rule='evenodd' d='M15.5 8c0-1-3-5-7.5-5S.5 7 .5 8s3 5 7.5 5 7.5-4 7.5-5zm-4 0a3.5 3.5 0 11-7 0 3.5 3.5 0 017 0z' fill-rule='evenodd'%3e%3c/path%3e%3c/g%3e%3c/svg%3e");
 }
 
 // https://www.svgrepo.com/collection/minimal-ui-icons/6
@@ -69,10 +115,22 @@
 }
  
 
+
+.Fog {
+    ._close {opacity: 0;}
+}
+.On.Fog {
+    ._close {opacity: 1;}
+}
+
  
 
+#Wrap_edit_customerFS.On #Wrap_edit_right_customerFS {width: 100%;}
 
-.wrap-customer {
+
+
+
+#Wrap_edit_customerFS {
 
     --x-bg-fon: var(--bg);
     --x-bg-dot: rgba(133, 168, 255, .35);

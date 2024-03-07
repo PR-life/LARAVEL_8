@@ -13,13 +13,13 @@
 @component('zADMIN.PAGE._wrap.Tab.edit.body')
 	@slot('nameTab1', 'Контакты')
 	@slot('nameTab2', 'Семья')
-		@slot('tab_1')
-			<div class="paragraphX2 / net"></div>
-			@include('zADMIN.PAGE.Customer.lego.edit.lego.tab_data')
-		@endslot
-		@slot('tab_2')
-			@include('zADMIN.PAGE.Customer.lego.edit.lego.tab_family')
-		@endslot
+	@slot('tab_1')
+		<div class="paragraphX2 / net"></div>
+		@include('zADMIN.PAGE.Customer.lego.edit.lego.tab_data')
+	@endslot
+	@slot('tab_2')
+		@include('zADMIN.PAGE.Customer.lego.edit.lego.tab_family')
+	@endslot
 @endcomponent
 
 <div class="hill"></div>

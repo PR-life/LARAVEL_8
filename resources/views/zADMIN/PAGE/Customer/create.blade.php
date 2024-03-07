@@ -1,7 +1,20 @@
-@extends('zADMIN._shema.edit')
+@extends('zADMIN._shema.create')
 
 @section('title')New. Персона @endsection
-@section('css-body', '-create ')
+
+
+@push('addBread')
+<li>
+    <a href="{{route('admin.customer.index')}}">
+        <span class="content-xs">Клиенты</span>
+	</a>
+</li>
+<li>
+    <span>
+        <span class="content-xs">Создать</span>
+    </span>
+</li>
+@endpush
 
 
 @section('content')
@@ -14,32 +27,55 @@
 		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.customer.index')])
 
 
-		<div class="_shell">
-			<div class="menu -tile -XS / cloud / net">
+		{{-- <div class="Wings"> --}}
+			{{-- <div class="_win -t"> --}}
+				{{-- <div class="content">шаг 1</div>				 --}}
 
-				@component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
-					@slot('name', 'category_id')
-					@slot('id', 'save_null')
-					@slot('param', 'checked')
-					@slot('value', null)
-					
-					не выбран
-				@endcomponent
+				<div class="Font">
+					<div class="_h -vw / familyTochka b500">Добавить <br>новый профиль <br>для раздела Клиенты</div>
+				</div>
+				<div class="hill-s"></div>	
 
-				@foreach($categories as $_category)
+			{{-- </div> --}}
+		{{-- </div> --}}
 
 
-					@component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
-						@slot('name', 'category_id')
-						@slot('id', $_category->id)
-						@slot('param', 'checked')
-						@slot('value', $_category->id)
-						
-						{{$_category->name}}
-					@endcomponent
-				@endforeach
+
+
+		<div class="wrap-tochka / flex">
+			<div class="Bar -w"></div>
+			<div>
+				<div class="_shell">
+					<div class="menu -tile -XS / cloud / net">
+		
+						@component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+							@slot('name', 'category_id')
+							@slot('id', 'save_null')
+							@slot('param', null)
+							@slot('value', null)
+							
+							определить <br>позже
+						@endcomponent
+		
+						@foreach($categories as $_category)
+		
+		
+							@component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+								@slot('name', 'category_id')
+								@slot('id', $_category->id)
+								@slot('param', 'checked')
+								@slot('value', $_category->id)
+								
+								{{$_category->name}}
+							@endcomponent
+						@endforeach
+					</div>
+				</div>
 			</div>
 		</div>
+
+
+ 
 
 		
 		{{-- <div class="_shell _name / vol-Abs">

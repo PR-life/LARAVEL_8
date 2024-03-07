@@ -1,0 +1,82 @@
+@charset "UTF-8";
+
+
+#Wrap_edit_customerFS.On {
+  .Ruler {
+    --Ruler-bg:#333;
+
+    .major,
+    .milestone {
+      --Ruler-bg:#222;
+    }
+
+    .label {opacity: .1;}
+
+  }
+}
+
+.Ruler {
+    --Ruler-w:9px;
+    --Ruler-h:1px;
+    --Ruler-font:9px;
+
+    --Ruler-bg:#666;
+
+
+    // background-color: #ccc;
+
+
+    > div {
+        // display: block;
+        // margin-left: auto;
+        // margin-right: 0;
+        width: var(--Ruler-w);
+        height: var(--Ruler-h);
+        box-sizing: content-box;
+        
+        border-top: solid 1px var( --Ruler-bg);
+    }
+
+
+    .major {
+      --Ruler-bg:#777;
+      --Ruler-w:13px;
+    }
+
+    .milestone {
+      --Ruler-bg:#888;
+      --Ruler-w:17px;
+    }
+
+    .milestone {
+        position: relative;
+    }
+
+    .label {
+      font-size: var(--Ruler-font);
+      line-height: var(--Ruler-font);
+      //
+      opacity: .5;
+      .transition();
+    }
+
+
+}
+
+
+
+
+
+.Ruler.-v.vol-left {
+    top: -1px;
+
+    .l10{}
+    .l100{}
+    .l100{}
+
+    .label {
+        left: calc(100% + 7px);
+        top: calc(var(--Ruler-font) - var(--Ruler-font)*1.5)
+    }
+}
+

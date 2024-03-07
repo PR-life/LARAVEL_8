@@ -1,10 +1,22 @@
 @component('zADMIN._wrap.Teaser.index', ['Var' => $Var, 'css' => 'space-left'])
     <div class="flex bC">
         <div class="flex cI / cross-s">
-            <div class="_1 flex cC dC / Max -w11">
-                <a class="content" href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', $Var->id) }}">
-                    @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->name ?? $Var->created_at])
+            <div class="_1 flex / Min -w4">
+                <a class="flex cI / cross-xs" href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', $Var->id) }}">
+                    @isset($Var->avatar)
+                    <span class="Ava round-50 hidden">
+                        <img src="{{$Var->avatar}}" alt="">
+                    </span>
+                    @endisset
+                    <span class="content">
+                        @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->name ?? $Var->created_at])
+                    </span>
                 </a>
+            </div>
+            <div class="_2">
+                <div class="content Grey">
+                    {{$roles[$Var->role]}}
+                </div>
             </div>
         </div>
 

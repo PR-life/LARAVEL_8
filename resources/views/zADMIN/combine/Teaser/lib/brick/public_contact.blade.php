@@ -5,7 +5,7 @@
     <span>{{$Var->email ?? $Var->phone}}</span>
     @break
 @case('whatsapp')
-    <span class="Ico -XS">@svg('whatsapp')</span>
+    <span class="Ico -XS">@svg('whatsappBg')</span>
     <span>{{$Var->whatsapp ?? $Var->phone}}</span>
     @break
 @case('telegram')
@@ -13,7 +13,7 @@
     <span>{{$Var->telegram ?? $Var->phone}}</span>
     @break
 @case('viber')
-    <span class="Ico -XS">@svg('viber')</span>
+    <span class="Ico -XS">@svg('viberBg')</span>
     <span>{{$Var->viber ?? $Var->phone}}</span>
     @break
 @default

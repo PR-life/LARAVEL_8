@@ -1,0 +1,25 @@
+@charset "UTF-8";
+
+.Sizes {
+    display: grid;
+    grid-gap: 5px;
+    grid-template-columns: repeat(4, 1fr);
+
+    > li {
+        --c-text:#999;
+
+        display: flex;
+        justify-content: center;
+	    align-items: center;
+        padding: .5rem;
+        border:1px solid @c-border;
+        border-radius: .5rem;
+    }
+
+    > .active {
+        --c-text:#111;
+
+        background-color: #efd1a5;
+    }
+
+}

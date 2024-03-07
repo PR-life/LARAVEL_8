@@ -72,13 +72,58 @@
 	min-width: var(--Aside-2);
 }
 
-.KIRA.-aside {
-	min-width: calc(var(--bar)*1.5);
+
+.On .ARIK.-On,
+.KIRA {
+	--ARIK:calc(var(--bar)*1.5);
+	--KIRA:calc(var(--bar)*1.5);
 }
 
-.KIRA.-sms {
-	min-width: calc(var(--bar)*1.5);
+.ARIK {
+	--ARIK:1rem;
+	--KIRA:1rem;
 }
+
+.ARIK.-M {
+	--ARIK:2rem;
+	--KIRA:2rem;
+}
+
+.ARIK.-L {
+	--ARIK:3rem;
+	--KIRA:3rem;
+}
+.ARIK.-XL {
+	--ARIK:4rem;
+	--KIRA:4rem;
+}
+
+
+.KIRA {
+	min-width: var(--KIRA);
+}
+
+.ARIK {
+	min-width: var(--ARIK);
+}
+
+
+
+// .KIRA.-M {
+// 	min-width: 3rem;
+// }
+
+
+ 
+
+
+// .on > .KIRA.-on,
+// .KIRA.-sms,
+// .KIRA.-aside {
+// 	min-width: var(--KIRA);
+// }
+
+
 
 
 .-Sms.off {
@@ -88,6 +133,10 @@
 }
 
 
+
+
+
+
 #body.x-aside.asideClose {
 
 	.oiBar {
@@ -95,7 +144,8 @@
 	}
 
 	.KIRA.-aside {
-		min-width: 1rem;
+		--KIRA:1rem;
+		// min-width: 1rem;
 	}
 	
 	.Aside {

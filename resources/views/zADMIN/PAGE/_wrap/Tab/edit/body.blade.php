@@ -16,14 +16,14 @@
 
 <div id="tab_EditTabBody" class="Tabs" localstorage-controlCss addcss='-x' param-id='active_menuEditTabBody'>
 
-	<div id="x_06051448" class="Fog / Gardener / OnOff / relative index" 
+	<div id="x_06051448" class="Fog / Gardener / OnOff Soma / relative index" 
 		data-click data-css data-toggle='On'
 		data-localstorage localstorage-id
 	>
 
-		<div class="_off / Abs -all / _indexMax / x-06051532 / pointer"></div>
+		<div class="_close / Abs -all / _indexMax / x-06051532 / pointer"></div>
 
-		@include('zADMIN/_brick/manager/close/abs_lvl_2')
+		@include('_brick.Close.abs.Axon')
 
 		<div class="paragraph"></div>
 		
