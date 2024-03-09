@@ -12,7 +12,7 @@
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.landing.index')
         @slot('linkAdd', route('admin.landing.create'))
-        @slot('icoCss', '-XS')
+        @slot('cssIco', '-XS')
         @slot('name', 'Landing')
         @svg('plus')
     @endcomponent

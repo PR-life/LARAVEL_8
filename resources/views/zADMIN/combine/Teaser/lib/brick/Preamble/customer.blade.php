@@ -1,4 +1,4 @@
-<a class="Preamble -row" href="{{ route('admin.customer.edit', $Var->id) }}">
+<a class="Preamble -row" href="{{ route('admin.crm.customer.edit', $Var->id) }}">
     <span class="Ava {{$Var->avatar ? '' : '-def'}}"></span>
     <span class="block">
         <span class="block author b600">

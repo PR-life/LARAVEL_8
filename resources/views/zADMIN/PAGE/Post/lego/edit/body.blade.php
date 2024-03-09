@@ -43,8 +43,6 @@
 	@endcomponent
 </div>
 
- 
-
 
 
 <div class="paragraph"></div>
@@ -62,4 +60,3 @@
 	{{-- @include('zADMIN._brick.cleanHTML') --}}
 </div>
 <div class="hill-s"></div>
- 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ADMIN\Customer;
+namespace App\Http\Controllers\ADMIN\CRM\Face;
 // use App\Http\Controllers\Controller;
 ////
 use App\Http\Requests\ADMIN\Face\FilterRequest;
@@ -29,7 +29,7 @@ class IndexController extends BaseController
         $categories = Category::all();
 		$tags = Tag::all();
 
-        return view('zADMIN.PAGE.Customer.index', compact('faces','categories','tags'));
+        return view('zADMIN.PAGE.Face.index', compact('faces','categories','tags'));
 
     }
 }

@@ -4,7 +4,7 @@ namespace App\Http\Controllers\ADMIN\User;
 
 use App\Http\Controllers\Controller;
 //
-use App\Services\ADMIN\Paper\Service;
+use App\Services\ADMIN\User\Service;
 
 
 class BaseController extends Controller {

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ADMIN\Customer;
+namespace App\Http\Controllers\ADMIN\CRM\Face;
 
 //
 use App\Models\Group;
@@ -13,6 +13,6 @@ class CreateController extends BaseController
         $group = Group::whereSku('customers')->firstOrFail();
         $categories = Category::where('group_id', '=', $group->id)->get();
 
-        return view('zADMIN.PAGE.Customer.create',compact('categories'));
+        return view('zADMIN.PAGE.Face.create',compact('categories'));
     }
 }

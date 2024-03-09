@@ -2,21 +2,14 @@
 
 namespace App\Http\Controllers\ADMIN\User;
 
-use App\Models\Category;
-use App\Models\Tag;
-
+use App\Models\User;
 
 class CreateController extends BaseController
 {
     public function __invoke(){
-		$data = [];
-        // $data['h1'] = 'Новый контент: пост';
-		// $data['wrap_h1'] = 'edit';
-		// $data['bread'] = ['back' => '/admin/posts',];
 
-        // $categories = Category::all();
-		// $tags = Tag::all();
+		$roles = User::getRoles();
 		
-        return view('zADMIN.PAGE.Paper.create', compact('data'));
+        return view('zADMIN.PAGE.User.create', compact('roles'));
     }
 }

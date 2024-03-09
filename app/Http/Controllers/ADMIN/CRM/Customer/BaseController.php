@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ADMIN\Face;
+namespace App\Http\Controllers\ADMIN\CRM\Customer;
 
 use App\Http\Controllers\Controller;
 //

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ADMIN\Customer;
+namespace App\Http\Controllers\ADMIN\CRM\Customer;
 
 ////
 use App\Http\Requests\ADMIN\Face\StoreRequest;
@@ -14,6 +14,6 @@ class StoreController extends BaseController
         $data = $request->validated();
         $face = Face::create($data);
 
-		return redirect()->route('admin.customer.edit', $face->id);
+		return redirect()->route('admin.crm.customer.edit', $face->id);
     }
 }

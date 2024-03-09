@@ -3,27 +3,28 @@
 @section('title')Admin @endsection
 
 @push('addBread')
-<li>
-    <span>
-        <span class="content-xs">Пользователи</span>
-    </span>
-</li>
+    <li>
+        <span>
+            <span class="content-xs">Офис</span>
+        </span>
+    </li>
+@endpush
+
+@push('topAfter')
+    {{-- @include('zADMIN.PAGE._lego.filter.btnVol') --}}
 @endpush
 
 @push('bee')
-    <div class="paragraph"></div>
-    {{-- @include('zADMIN.PAGE._lego.filter.btn.content') --}}
-    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Пользователи', 'add' => route('admin.user.create'), 'ico' => 'barMenu_office'])
+    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Пользователи', 'add' => route('admin.user.create')])
     {{-- @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'tag']) --}}
 @endpush
 
  
-
 @section('content')
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-tags'])
+            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-users'])
 
             @foreach($users as $_user)
                 @include('zADMIN.combine.Teaser.lib.user', ['Var' => $_user])

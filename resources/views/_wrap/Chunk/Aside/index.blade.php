@@ -4,7 +4,7 @@
         <a class="flex cI cC / Ico {{$icoCss ?? '-S'}} / btn-plus round-50" href="{{$linkAdd}}">{!!$slot ?? ''!!}</a>
         {{-- <a class="flex cI cC / Ico btn-plus round-50 {{$icoCss ?? '-S'}} / space-xs contentBox" href="{{$linkAdd}}">{!!$slot ?? ''!!}</a> --}}
         @else
-        <div class="Ico {{$icoCss ?? '-S'}} / space-xs contentBox">{!!$slot ?? ''!!}</div>
+        <div class="Ico {{$cssIco ?? '-S  space-xs contentBox'}}">{!!$slot ?? ''!!}</div>
         @endisset   
     </div>
     <div class="_item chunk-100_Ico round-s {!! (isset($routeName) &&  request()->routeIs($routeName)) ? 'active' : '' !!}">

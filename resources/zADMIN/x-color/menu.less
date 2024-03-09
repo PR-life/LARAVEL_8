@@ -17,7 +17,7 @@
 	._menu {
 		.Ico {
 			--c-text: #8ea2b4;
-			color: var(--c-text);
+			// color: var(--c-text);
 		}
 
 		.pointer {
@@ -26,6 +26,10 @@
 		.on .Ico,
 		.on .pointer {
 			--c-text: @c-text-2;
+		}
+
+		.on ._open .Ico {
+			--c-text: #8ea2b4;
 		}
 	}
 

@@ -28,7 +28,7 @@ class StoreRequest extends FormRequest
             'role' => 'required|integer',
             'name' => 'required|string',
             'email' => 'required|string|email|unique:users',
-			// убрали, т.к. настроили создание Пароля на автомате
+			// убрали, на старте настроили создание Пароля на автомате
             // 'password' => 'required|string|min:6',
             // 'password' => 'string|min:6',
 			//

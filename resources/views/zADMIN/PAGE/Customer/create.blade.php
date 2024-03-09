@@ -4,16 +4,16 @@
 
 
 @push('addBread')
-<li>
-    <a href="{{route('admin.customer.index')}}">
-        <span class="content-xs">Клиенты</span>
-	</a>
-</li>
-<li>
-    <span>
-        <span class="content-xs">Создать</span>
-    </span>
-</li>
+	<li>
+		<a href="{{route('admin.crm.customer.index')}}">
+			<span class="content-xs">Клиенты</span>
+		</a>
+	</li>
+	<li>
+		<span>
+			<span class="content-xs">Создать</span>
+		</span>
+	</li>
 @endpush
 
 
@@ -22,57 +22,60 @@
 <div class="I aura">
 
 
-	@component('zADMIN.PAGE._wrap.form.create', ['route' => route('admin.customer.store'), 'css' => '-customer'])
+	@component('zADMIN.PAGE._wrap.form.create', ['route' => route('admin.crm.customer.store'), 'css' => '-customer'])
 
-		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.customer.index')])
-
-
-		{{-- <div class="Wings"> --}}
-			{{-- <div class="_win -t"> --}}
-				{{-- <div class="content">шаг 1</div>				 --}}
-
-				<div class="Font">
-					<div class="_h -vw / familyTochka b500">Добавить <br>новый профиль <br>для раздела Клиенты</div>
-				</div>
-				<div class="hill-s"></div>	
-
-			{{-- </div> --}}
-		{{-- </div> --}}
+		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.crm.customer.index')])
 
 
+		<div class="Font">
+			<div class="_h -vw / familyTochka b500">Добавить <br>новый профиль <br>для раздела Клиенты</div>
+		</div>
+		<div class="hill-s"></div>	
 
 
-		<div class="wrap-tochka / flex">
-			<div class="Bar -w"></div>
-			<div>
-				<div class="_shell">
-					<div class="menu -tile -XS / cloud / net">
+		@component('_wrap.step.Tochka.index')
+			@component('_wrap.step.Tochka.line')
+				@slot('step', '1')
+				<div class="content b600">шаг 1</div>
+				<div class="paragraph"></div>
+				<div class="content">Для какой группы</div>
+				<div class="paragraph"></div>
+
+				<div class="menu -tile -XS / cloud / net">
 		
+					@component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+						@slot('name', 'category_id')
+						@slot('id', 'save_null')
+						@slot('param', null)
+						@slot('value', null)
+						
+						определить <br>позже
+					@endcomponent
+	
+					@foreach($categories as $_category)
+	
+	
 						@component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
 							@slot('name', 'category_id')
-							@slot('id', 'save_null')
-							@slot('param', null)
-							@slot('value', null)
+							@slot('id', $_category->id)
+							@slot('param', 'checked')
+							@slot('value', $_category->id)
 							
-							определить <br>позже
+							{{$_category->name}}
 						@endcomponent
-		
-						@foreach($categories as $_category)
-		
-		
-							@component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
-								@slot('name', 'category_id')
-								@slot('id', $_category->id)
-								@slot('param', 'checked')
-								@slot('value', $_category->id)
-								
-								{{$_category->name}}
-							@endcomponent
-						@endforeach
-					</div>
+					@endforeach
 				</div>
-			</div>
-		</div>
+				<div class="paragraphX2"></div>
+			@endcomponent
+			@component('_wrap.step.Tochka.line')
+				@slot('step', '2')
+				<div class="content b600">шаг 2</div>
+				<div class="paragraph"></div>
+				<div class="content">Сохранить и продолжить</div>
+				<div class="paragraph"></div>
+			@endcomponent
+		@endcomponent
+
 
 
  
@@ -87,7 +90,7 @@
 		</div> --}}
 		
 
-		<div class="hill"></div>
+		<div class="paragraph"></div>
 		@include('zADMIN._lego.form.btn.create.footer')
 
 	@endcomponent 

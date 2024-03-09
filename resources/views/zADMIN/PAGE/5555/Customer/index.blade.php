@@ -22,7 +22,7 @@
         @component('zADMIN._wrap.max', ['css' => 'index'])
             @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-face'])
                 @foreach($faces as $face)     
-                    @include('zADMIN.combine.Teaser.lib.customer.index', ['route' => route('admin.customer.edit',$face->id)])
+                    @include('zADMIN.combine.Teaser.lib.customer.index', ['route' => route('admin.crm.customer.edit',$face->id)])
                 @endforeach
             @endcomponent
             @include('zADMIN.mod.paginator', ['Var' => $faces])

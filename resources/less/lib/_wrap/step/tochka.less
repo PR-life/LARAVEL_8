@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.wrap-stepTochka {
+    // --bar: 8rem;
+
+    .Bar::before {
+        content: '';
+        position: absolute;
+        left: calc(50% - 1px);
+        top: 0;
+        bottom: 0;
+
+        width: 1px;
+        background: @c-border;
+
+        z-index: 1;
+
+    }
+
+    ._shell {
+        padding-left: .5rem;
+    }
+
+    ._step {
+        padding-right: calc((var(--bar) - calc(var(--Ava)))*.5);
+        .Ava {
+            border:1px solid @c-border;
+            background-color: var(--bg);
+
+            transform: translateY(calc(var(--Ava) - var(--Ava)*1.25));
+        }
+    }
+}

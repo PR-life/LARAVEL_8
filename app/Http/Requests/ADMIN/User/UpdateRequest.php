@@ -25,13 +25,13 @@ class UpdateRequest extends StoreRequest
     public function rules()
     {
         return array_merge(parent::rules(), [
-			// 'password' => 'nullable',
             'email' => [
                 'required',
 				'string',
 				'email',
                 Rule::unique('users')->ignore($this->route('user'))
             ],
+            'password' => 'required|string|min:6',
         ]);
     }
 }

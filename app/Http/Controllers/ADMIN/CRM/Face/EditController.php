@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ADMIN\Customer;
+namespace App\Http\Controllers\ADMIN\CRM\Face;
 
 //
 use App\Models\Face;
@@ -18,6 +18,6 @@ class EditController extends BaseController
             ->orWhereNull('category_id')
             ->get();
 
-        return view('zADMIN.PAGE.Customer.edit', compact('face','faces','categories','tags'));
+        return view('zADMIN.PAGE.Face.edit', compact('face','faces','categories','tags'));
     }
 }

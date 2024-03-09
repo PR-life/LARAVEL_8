@@ -8,10 +8,10 @@
 <div class="I aura">
 
 
-	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.customer.update', $customer->id), 'css' => '-customer'])
+	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.crm.customer.update', $customer->id), 'css' => '-customer'])
 
-		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.customer.index')]) --}}
-		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.customer.index'])
+		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.crm.customer.index')]) --}}
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.crm.customer.index'])
 
 
 		<div class="_shell">
