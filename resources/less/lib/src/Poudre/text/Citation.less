@@ -1,10 +1,12 @@
 @charset "UTF-8";
 
 .Citation {
+    ._wrap,
     > .content {
         position: relative;
     }
 
+    ._wrap::after,
     > .content::after {
         content: '';
         position: absolute;
@@ -31,6 +33,7 @@
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
 	.Citation.-mblPC {
+        ._wrap::after,
 		> .content::after {display: none;}
 	}
 }
@@ -38,6 +41,7 @@
 
 @media screen and (max-width: @w-menu-2) {
 	.Citation.-mbl {
+        ._wrap::after,
 		> .content::after {display: none;}
 	} 
 }

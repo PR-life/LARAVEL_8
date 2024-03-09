@@ -30,7 +30,7 @@ class StoreRequest extends FormRequest
             'filter_par_1' => 'nullable',
             'css' => 'nullable',
             'css_summary' => 'nullable',
-            'cssContent' => 'nullable',
+            'css_content' => 'nullable',
 
 			//
 			'name' => 'nullable|string',

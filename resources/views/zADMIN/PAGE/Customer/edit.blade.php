@@ -40,7 +40,7 @@
 				<div id="Ruler" class="Abs -lt / noEvents Selection _indexMin">
 					<div class="hill-s"></div>
 				</div>
-				@include('zFS/ruler')
+				{{-- @include('zFS.ruler') --}}
 			@endslot
 			@slot('_r')
 				{{-- https://rubashkin.su/muzhskie-rubashki/ --}}

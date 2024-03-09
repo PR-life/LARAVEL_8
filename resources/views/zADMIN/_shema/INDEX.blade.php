@@ -16,9 +16,9 @@
     'cssMilk' => 'skimp-size_Aside'
 ])
 
-@push('linkCss')
+{{-- @push('linkCss')
 <link href="{{ mix('/css/FSAdmin.css') }}" rel="stylesheet" type="text/css">
-@endpush
+@endpush --}}
 
 
 
@@ -95,7 +95,7 @@
 </div>
 
 
-@if ($errors->any())
+@if($errors->any())
     @component('_.component.Message', ['css' => 'eC -error'])
         @slot('heading')
         ой!
@@ -107,4 +107,6 @@
         </ol>
     @endcomponent
 @endif
+
+
 @endpush

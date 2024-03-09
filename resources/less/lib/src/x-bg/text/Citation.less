@@ -1,6 +1,7 @@
 @charset "UTF-8";
 
 .Citation {
+	._wrap::after,
 	.content {
 		background-color: var(--bg-Citation);
 	}
@@ -14,11 +15,14 @@
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
 	.Citation.-mblPC {
+		._wrap::after,
 		.content {
 			background-color: var(--bg-Citation-mbl);
 		}
 
+		._wrap,
 		.content,
+		._wrap::after,
 		.content::after {
 			background-color: var(--bg-Citation-mbl);
 		}
@@ -28,10 +32,13 @@
 
 @media screen and (max-width: @w-menu-2) {
 	.Citation.-mbl {
+		._wrap,
 		.content {
 			background-color: var(--bg-Citation-mbl);
 		}
+		._wrap,
 		.content,
+		._wrap::after,
 		.content::after {
 			background-color: var(--bg-Citation-mbl);
 		}

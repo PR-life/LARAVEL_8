@@ -44,18 +44,18 @@ class UpdateRequest extends StoreRequest
 
 			//
 			'mafia' => 'nullable|integer',
+
+			'created_at' => 'required|date',
         ]);
 
     }
 
-	// public function messages() {
-	// 	// return parent::messages(); // по умолчаиню
-	// 	return [
-	// 		'name.required' => 'ваше имя',
-	// 		'email.required' => 'куда прислать ответ',
-	// 		'email.email' => 'некорректный e-mail',
-	// 	];
-	// }
+	public function messages() {
+		// return parent::messages(); // по умолчаиню
+		return [
+			'created_at.date' => 'не дата',
+		];
+	}
 }
 
  

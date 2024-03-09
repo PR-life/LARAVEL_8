@@ -582,9 +582,9 @@ function cssFix(param, target){
 			
 			// console.log(1);
 
-			if(param.hasAttribute('css-off')) {
-				param.classList.add('off');
-			}
+			// if(param.hasAttribute('css-off')) {
+			// 	param.classList.add('off');
+			// }
 
 			if(target.getAttribute('data-close') != 'this') {
 				document.getElementById("body").classList.remove('fix')
@@ -610,9 +610,9 @@ function cssFix(param, target){
 			
 			// console.log(1);
 
-			if(param.hasAttribute('css-off')) {
-				param.classList.add('off');
-			}
+			// if(param.hasAttribute('css-off')) {
+			// 	param.classList.add('off');
+			// }
 
 			if(param.hasAttribute('data-add')) {
 				param.setAttribute('data-add', 'on')
