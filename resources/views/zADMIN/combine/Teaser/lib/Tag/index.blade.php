@@ -32,7 +32,7 @@
                     @endif
  
 
-                    {{-- @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $tag->name ?? $tag->created_at]) --}}
+                    {{-- @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $tag->name ?? $tag->created_at]) --}}
                 </a>
             </div>
     

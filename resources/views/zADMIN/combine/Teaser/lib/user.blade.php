@@ -9,7 +9,7 @@
                     </span>
                     @endisset
                     <span class="content">
-                        @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->name ?? $Var->created_at])
+                        @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->name ?? $Var->created_at])
                     </span>
                 </a>
             </div>

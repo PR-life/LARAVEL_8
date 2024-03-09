@@ -54,6 +54,7 @@ class CategoryImport implements ToCollection, WithHeadingRow
                     'prev_url' => $item['prev_url'],
 
                     'category_id' => $item['category_id'],
+                    'group_id' => $item['group_id'],
 
                     'string_1' => $item['string_1'],
                     'knot_1' => $item['knot_1'],

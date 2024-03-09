@@ -5,7 +5,7 @@
 <div class="EN">
     <div class="paragraph"></div>
     <span class="content-m b600 / v-Meta_title -off">
-        @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->en_title ?? '<em>en_title</em>'])
+        @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->en_title ?? '<em>en_title</em>'])
     </span>
     <div class="paragraph-s"></div>
     <span class="content-s / Grey / v-Meta_description -off">

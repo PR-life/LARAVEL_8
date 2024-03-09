@@ -27,5 +27,5 @@ route('admin.'.mb_strtolower(class_basename($tag)).'.edit', ['tag' => $tag->id, 
     @if($tag->name_8)
         <span class="content-xxs / space-s round-s / Grey replica">{!!$tag->name_8!!} <span class="EN Grey -c30">{!!$tag->en_name_8!!}</span></span>
     @endif
-    {{-- @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $tag->name ?? $tag->created_at]) --}}
+    {{-- @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $tag->name ?? $tag->created_at]) --}}
 </a>

@@ -1,1 +1,1 @@
-<div class="content-xxs center-text / Grey / noEvents slctn">{{$name}}</div>
+<div class="Article / content-xxs center-text / Grey / noEvents slctn">{{$name}}</div>

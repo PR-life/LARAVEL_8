@@ -3,12 +3,17 @@
     <div class="space-left / -Grey">
         <div class="flex cI / cross-xs">
             @isset($add)
-                <a class="flex cI cC / Ico -L btn-plus / round-m" href="{{$add}}">
-                    <span class="block Ico -XS">
-                        @svg('plus')
-                        {{-- @svg({{$ico}}) --}}
-                    </span>
-                </a>
+            <a class="flex cI cC / Ico -L btn-plus / round-m" href="{{$add}}">
+                <span class="block Ico -XS">
+                    @svg('plus')
+                </span>
+            </a>
+            @else
+            <span class="flex cI cC / Ico -L">
+                <span class="Ico -M">
+                    @svg({{$ico}})
+                </span>
+            </span>
             @endisset
             <div class="h2 -lineHeight / b100 noEvents">{{$name}}</div>
         </div>

@@ -2,7 +2,7 @@
     {{-- <div class="flex cross"> --}}
         <div class="{{$css}} center-text / Min Max -w2 / none_80">
             <b class="content-s / Grey -c30" title="{{$Var->created_at}}">
-                @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->dateAsCarbon->diffForHumans(), 'css' => 'noEvents'])
+                @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->dateAsCarbon->diffForHumans(), 'css' => 'noEvents'])
             </b>
         </div>
     {{-- </div> --}}

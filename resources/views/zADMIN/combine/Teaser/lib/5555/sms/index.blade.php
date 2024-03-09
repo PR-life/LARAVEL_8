@@ -16,7 +16,7 @@
                 </div>
 
                 <a class="content b600" href="{{$route}}">
-                    @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->name])
+                    @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->name])
                 </a>
 
                 <div class="Wings noEvents">
@@ -38,13 +38,13 @@
     
             {{-- <div class="_2 / Min Max -w2 / center-text / none_90">      
                 <b class="content-s">
-                    @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->country])
+                    @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->country])
                 </b>
             </div> --}}
     
             {{-- <div class="_3 / Min Max -w2 / none_100">      
                 <b class="content-s">
-                    @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->city])
+                    @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->city])
                 </b>
             </div> --}}
     
@@ -65,7 +65,7 @@
                     @endif
                 </div>
                 {{-- <b class="content-s"> --}}
-                    {{-- @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->email]) --}}
+                    {{-- @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->email]) --}}
                 {{-- </b>   --}}
             </div>
     

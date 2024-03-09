@@ -6,7 +6,7 @@
                     @include('zADMIN.combine.Teaser.lib.brick.slug')
                 @endif
                 <a class="content" href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', $Var->id) }}">
-                    @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->name ?? $Var->created_at])
+                    @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->name ?? $Var->created_at])
                 </a>
             </div>
         </div>

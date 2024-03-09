@@ -63,15 +63,15 @@ if ($Var->name) {
 
                         <span class="flex / cross">
                         @if($Var->shema_teaser == 'shema-link')
-                            @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->slug, 'h2' => $Var->name ?? null, 'css' => 'x-name'])
+                            @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->slug, 'h2' => $Var->name ?? null, 'css' => 'x-name'])
                         @else
-                            @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $NAME, 'h2' => $Var->h2 ?? null, 'css' => 'x-name'])
+                            @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $NAME, 'h2' => $Var->h2 ?? null, 'css' => 'x-name'])
                         @endif
                             <span class="EN / content-m b300 / block oneLine nowrap Ellipsis x-name / Grey">{!!$Var->en_name ?? '<em>en_name</em>'!!}</span>
                         </span>
     
                         <span class="v-Meta_title -off">
-                            @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->title ?? '<em>title</em>', 'css' => 'v-Seo -on'])
+                            @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->title ?? '<em>title</em>', 'css' => 'v-Seo -on'])
                         </span>
                         
                     </a>

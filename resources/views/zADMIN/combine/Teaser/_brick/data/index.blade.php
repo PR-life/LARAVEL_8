@@ -36,14 +36,14 @@
         </div>
         {{-- <div class="{{$css}} / Min Max -w2 / v-DB -on / none_80">
             <b class="content-s / Grey -c30" title="{{$Var->created_at}}">
-                @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->dateAsCarbon->diffForHumans(), 'css' => 'noEvents'])
+                @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->dateAsCarbon->diffForHumans(), 'css' => 'noEvents'])
             </b>
         </div> --}}
     </div>
     <div class="flex cI / v-DB -on">
         <div class="Min Max -w2 / none_80">
             <b class="content-s / Grey -c30" title="{{$Var->created_at}}">
-                @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->dateAsCarbon->diffForHumans(), 'css' => 'noEvents'])
+                @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->dateAsCarbon->diffForHumans(), 'css' => 'noEvents'])
             </b>
         </div>
         <div class="Min Max -w2 center-text">      

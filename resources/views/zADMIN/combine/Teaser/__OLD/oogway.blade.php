@@ -10,7 +10,7 @@
         <div class="_2 flex cC dC / Min Max -w10">
             {{-- @include('zADMIN.combine.Teaser._brick.Badge.new',['Var' => $Var->mafia]) --}}
             <a class="content b600" href="{{$route}}">
-                @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => strip_tags($Var->name)])
+                @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => strip_tags($Var->name)])
             </a>
         </div>
 
@@ -22,13 +22,13 @@
 
         {{-- <div class="_2 / Min Max -w2 / center-text / none_90">      
             <b class="content-s">
-                @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->country])
+                @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->country])
             </b>
         </div> --}}
 
         {{-- <div class="_3 / Min Max -w2 / none_100">      
             <b class="content-s">
-                @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->city])
+                @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->city])
             </b>
         </div> --}}
 
@@ -38,7 +38,7 @@
 {{-- 
         <div class="_6 / Min Max -w3 / none_200">
             <b class="content-s">
-                @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->email])     
+                @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->email])     
             </b>  
         </div> --}}
 

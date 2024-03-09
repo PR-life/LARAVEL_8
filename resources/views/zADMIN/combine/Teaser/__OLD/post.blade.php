@@ -31,7 +31,7 @@
     <div class="flex cI / cross-s">
         <div class="_1 flex cI / Min Max -w5">
             <a class="content b600 / W-100" href="{{$route}}">
-                @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->name])
+                @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->name])
             </a>
         </div>
 
