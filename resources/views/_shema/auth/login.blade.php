@@ -1,12 +1,15 @@
-@extends('_shema.auth.index')
-
+@extends('_shema.auth.INDEX')
 
 
 @section('content')
-
+<div class="Space -v">
 <div class="Blog aura">
-	<div class="h1">{{ __('Login') }}</div>
-	<div class="padding top S"></div>
+	<div class="Wings">
+		<div class="_win -t / Font">
+			<div class="_h -vw">{{ __('Login') }}</div>
+		</div>
+	</div>
+	<div class="paragraph"></div>
 	<form class="Form" method="POST" action="{{ route('login') }}">
 	    @csrf
 	    <div class="_shell">
@@ -14,7 +17,7 @@
 			<div class="paragraph-s"></div>
 	        <input id="email" type="email" class="@error('email') Error @enderror" name="email" value="{{ old('email') }}" required autocomplete="email" autofocus>
 	        @error('email')
-	            <div class="content Error" role="alert">
+				<div class="content-s / Error -text">
 	                {{ $message }}
 	            </div>
 	         @enderror
@@ -24,36 +27,31 @@
 			<div class="paragraph-s"></div>
 	        <input id="password" type="password" class="@error('password') Error @enderror" name="password" required autocomplete="current-password">
 	        @error('password')
-	            <div class="content Error" role="alert">
+	            <div class="content-s / Error -text">
 	                {{ $message }}
 	            </div>
 	         @enderror
 	    </div>
-		<div class="_shell">
-	        <label for="remember">{{ __('Remember Me') }}</label>
-			<div class="paragraph-s"></div>
+		{{-- <div class="_shell">
+	    
 			<div class="flex cI">
-				<div class="Checkbox Vol-1">
-					<div class="check button r">
-						<input id="remember" class="checkbox" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
-						<div class="knob"></div>
-						<div class="bg"></div>
-					</div>
-				</div>
+				<input id="remember" class="checkbox" type="checkbox" name="remember" {{ old('remember') ? 'checked' : '' }}>
+				<label for="remember">{{ __('Remember Me') }}</label>
 			</div>
-		</div>
+		</div> --}}
 	    <div class="_shell">
 	        <button type="submit" class="Btn cC">
 	            {{ __('login') }}
 	        </button>
-			<div class="paragraph-s"></div>
+			{{-- <div class="paragraph-s"></div>
 	        @if (Route::has('password.request'))
 	            <a class="content" href="{{ route('password.request') }}">
 	                 {{ __('Forgot Your Password?') }}
 	            </a>
-	        @endif
+	        @endif --}}
 	    </div>
 	</form>
+</div>
 </div>
 
  <div class="margin top L"></div>

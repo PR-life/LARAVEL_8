@@ -18,6 +18,7 @@ mix.less('resources/min.less', 'public/css/min.css')
 	//
 	.less('resources/less/z_env/tinymce.less', 'public/css/env/tinymce.css')
 	//
+	.less('resources/Lite.less', 'public/css/Lite.css')
 	.less('resources/UTIN.less', 'public/css/UTIN.css')
 
 mix.js('resources/__JS/app.js', 'public/js')

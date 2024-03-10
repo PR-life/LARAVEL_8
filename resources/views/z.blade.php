@@ -68,7 +68,5 @@
 
 @include('_._skeleton.bodyEnd')
 @include('_shema._lego.afterMilk')
-
-
 </body>
 </html>

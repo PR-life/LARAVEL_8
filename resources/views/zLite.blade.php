@@ -3,7 +3,7 @@
 <head>
 	@include('_shema._lego.head.index')
 </head>
-<body id="body" class="MXAT @yield('css-body') @stack('css-body') {{ str_replace('_', '-', app()->getLocale()) }}">
+<body id="body" class="MXAT @yield('css-body') @stack('css-body')">
 <script>
 	@include('_.js.bodyStart')
 	@stack('script-bodyStart')
@@ -11,8 +11,7 @@
 
 @include('_shema._lego.input')
 
-<div id="Fon" class="Abs -all @stack('css-fon')">@stack('fon')</div>
-
+<div id="Fon" class="Abs -lt -r @stack('css-fon')">@stack('fon')</div>
 
 @stack('Top')
 @stack('menu')
@@ -44,7 +43,6 @@
 @stack('basementAfter')
 
 
-
 <div id="Milk" class="Abs Milk / index owlFIX">
 	@stack('milk')
 	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -59,6 +57,5 @@
 
 @include('_._skeleton.bodyEnd')
 @include('_shema._lego.afterMilk')
-
 </body>
 </html>
