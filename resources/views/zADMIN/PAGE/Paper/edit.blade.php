@@ -1,7 +1,6 @@
 @extends('zADMIN._shema.edit')
 
 @section('title')edit. Paper - {{$paper->name}} @endsection
-
 @include('zADMIN._bd._src.edit.min')
 
 

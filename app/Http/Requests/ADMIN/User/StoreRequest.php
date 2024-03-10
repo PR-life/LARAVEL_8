@@ -31,7 +31,6 @@ class StoreRequest extends FormRequest
 			// убрали, на старте настроили создание Пароля на автомате
             // 'password' => 'required|string|min:6',
             // 'password' => 'string|min:6',
-			//
 			'nickname' => 'nullable|string',
 			'avatar' => 'nullable|file',
 			'user_par_1' => 'nullable|string',

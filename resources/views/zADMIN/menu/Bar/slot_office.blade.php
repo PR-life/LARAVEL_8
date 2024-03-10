@@ -11,9 +11,13 @@
     <div class="paragraph-s"></div>
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.user.index')
-        @slot('cssIco', '-XS')
+        @slot('linkAdd', route('admin.user.create'))
         @slot('name', 'Пользователи')
-        @svg('plus')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
     @endcomponent
+
+
 </div>
 @endcomponent

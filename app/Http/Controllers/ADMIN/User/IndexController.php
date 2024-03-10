@@ -17,7 +17,7 @@ class IndexController extends BaseController
 
 
 
-		$users = User::orderBy('created_at', 'DESC')->paginate(25);
+		$users = User::orderBy('order', 'DESC')->orderBy('created_at', 'DESC')->paginate(25);
 		$roles = User::getRoles();
 
         return view('zADMIN.PAGE.User.index', compact('users','roles'));

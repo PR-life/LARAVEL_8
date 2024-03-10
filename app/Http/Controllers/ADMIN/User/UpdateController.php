@@ -3,23 +3,18 @@
 namespace App\Http\Controllers\ADMIN\User;
 
 //
-use App\Http\Requests\ADMIN\Paper\UpdateRequest;
-use App\Models\Paper;
+use App\Http\Requests\ADMIN\User\UpdateRequest;
+use App\Models\User;
 
 
 class UpdateController extends BaseController
 {
-    public function __invoke(UpdateRequest $request, Paper $paper){
+    public function __invoke(UpdateRequest $request, User $user){
 
 		// dd($request);
         $data = $request->validated();
-	
-		isset($data['category_id']) ? '' : $data['category_id'] = null;
-		// $data['category_id'] < 1 ? '' : $data['category_id'] = null;
 		// dd($data);
-
-		
-		$paper = $this->service->update($paper,$data);
+		$user = $this->service->update($user,$data);
 
 		// dd($data);
 

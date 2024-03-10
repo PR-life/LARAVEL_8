@@ -31,7 +31,7 @@ class UpdateRequest extends StoreRequest
 				'email',
                 Rule::unique('users')->ignore($this->route('user'))
             ],
-            'password' => 'required|string|min:6',
+            'new_password' => 'nullable|string|min:6',
         ]);
     }
 }

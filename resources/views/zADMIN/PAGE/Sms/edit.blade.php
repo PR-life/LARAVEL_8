@@ -1,6 +1,7 @@
 @extends('zADMIN._shema.edit')
 
 @section('title')edit. Sms - {{$sms->name}} @endsection
+@include('zADMIN._bd._src.edit.min')
 
 @push('addBread')
 	<li>
@@ -29,6 +30,10 @@
 		<div class="_shell">
 			@include('zADMIN._bd.edit.sms',['Var'=> $sms])
 		</div>
+
+		@include('zADMIN.PAGE.Sms.lego.edit.lego.Relationships')
+		<div class="paragraph"></div>
+
 
 		
 		@component('zADMIN.PAGE._wrap.Flaber.edit')

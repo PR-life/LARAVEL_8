@@ -13,44 +13,28 @@ use App\Models\User;
 
 class Service {
 
-	// public function update($post,$param) {
+	public function update($user,$param) {
 
-	// 	try {
-	// 		DB::beginTransaction();
+		try {
+			DB::beginTransaction();
 
-	// 		isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
-	// 		unset($param['tag_ids']);
+			if($param['new_password']) {
+				$param['password'] = Hash::make($param['new_password']);
+			}
+ 
 			
-	// 		//
-	// 		isset($param['featured']) ? '' : $param['featured'] = '0';
-	// 		isset($param['published']) ? '' : $param['published'] = '0';
-	// 		isset($param['mafia']) ? '' : $param['mafia'] = '0';
-	// 			// isset($param['css_type']) ? $param['css_type'] = implode(" ", $param['css_type']) : $param['css_type'] = null;
-			
+			$user->update($param);
+			// dd($user);
+ 
+			DB::commit();
+		} catch (Exception $exception) {
+			DB::rollBack();
+			dd($exception);
+            abort(500);
+		}
 
-	// 		//
-	// 		if(isset($param['prev_image']) && !is_string($param['prev_image'])) {
-	// 			$param['prev_image'] = Storage::disk('public')->put('/images', $param['prev_image']);
-	// 			// $data['prev_image'] = str_replace('public','',Storage::put('/public/images', $data['prev_image']));
-	// 		}
-
-
-	// 		//
-	// 		$post->update($param);
-	// 		$post->tags()->sync($tagIds); // изменили attach на sync*, 
-	// 			// и поместили ниже строки '$post->update($param);'
-	// 			// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
-	// 		$tagIds = [];
-
-	// 		DB::commit();
-	// 	} catch (Exception $exception) {
-	// 		DB::rollBack();
-	// 		dd($exception);
-    //         abort(500);
-	// 	}
-
-	// 	return $post;
-	// }
+		return $user;
+	}
 
     public function store($param) {
 		try {

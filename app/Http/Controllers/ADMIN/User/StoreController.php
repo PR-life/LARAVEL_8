@@ -2,22 +2,19 @@
 
 namespace App\Http\Controllers\ADMIN\User;
 
-use App\Http\Requests\ADMIN\Paper\StoreRequest;
-use App\Models\Paper;
+use App\Http\Requests\ADMIN\User\StoreRequest;
+// use App\Models\Paper;
 
 
 class StoreController extends BaseController
 {
     public function __invoke(StoreRequest $request){	
-    // public function __invoke(){	
-
 		// dd(111);
-		$param = $request->validated(); // не убираем в Service, т.к. это обработка HTTP
 
-		$paper = $this->service->store($param);
+		$param = $request->validated();
+		// dd($param);
+		$user = $this->service->store($param);
 
-		
-
-		return redirect()->route('admin.paper.edit', $paper->id);
+		return redirect()->route('admin.user.edit', $user->id);
     }
 }

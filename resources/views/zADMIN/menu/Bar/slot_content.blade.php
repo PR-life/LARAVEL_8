@@ -14,28 +14,36 @@
         @slot('linkAdd', route('admin.post.create'))
         @slot('cssIco', '-XS')
         @slot('name', 'Материалы')
-        @svg('plus')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
     @endcomponent
     @component('_wrap.Chunk.Aside.index')
         @slot('linkAdd', route('admin.faq.create'))
         @slot('routeName', 'admin.faq.index')
         @slot('cssIco', '-XS')
         @slot('name', 'Faq')
-        @svg('plus')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
     @endcomponent 
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.paper.index')
         @slot('linkAdd', route('admin.paper.create'))
         @slot('cssIco', '-XS')
         @slot('name', 'Статьи')
-        @svg('plus')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
     @endcomponent 
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.item.index')
         @slot('linkAdd', route('admin.item.create'))
         @slot('cssIco', '-XS')
         @slot('name', 'item')
-        @svg('plus')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
     @endcomponent 
 </div>
 @endcomponent

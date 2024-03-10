@@ -31,7 +31,6 @@
 		</div>
 		<div class="hill-s"></div>	
  
-
 		@component('_wrap.step.Tochka.index')
 			@component('_wrap.step.Tochka.line')
 				@slot('step', '1')

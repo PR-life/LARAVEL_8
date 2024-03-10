@@ -3,11 +3,13 @@
         <div class="flex cI / cross-s">
             <div class="_1 flex / Min -w4">
                 <a class="flex cI / cross-xs" href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', $Var->id) }}">
-                    @isset($Var->avatar)
                     <span class="Ava round-50 hidden">
+                        @isset($Var->avatar)
                         <img src="{{$Var->avatar}}" alt="">
+                        @else
+                        <img src="/images-0/ava_face.png" alt="">
+                        @endisset
                     </span>
-                    @endisset
                     <span class="content">
                         @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->name ?? $Var->created_at])
                     </span>

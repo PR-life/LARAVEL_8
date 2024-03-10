@@ -15,11 +15,13 @@
 				<div class="Abs / Nameplate -rt">{{ $errors->first('nickname') }}</div>
 			@enderror
 		</div>
-		<div class="Info -ico ico-left ico-s vol-2">
+		<div class="Info -ico ico-left ico-xs vol-2">
 			<div class="content-s / Grey -c30">Это имя отображается в ваших отзывах и комментариях</div>
 		</div>
 	</div>
 </div>
+
+
 
 
 <div class="hill-s"></div>

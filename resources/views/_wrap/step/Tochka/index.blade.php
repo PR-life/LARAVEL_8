@@ -1,7 +1,7 @@
 {{-- https://tochka.com/call-check/ --}}
 <div class="wrap-stepTochka / flex / index">
     <div class="Bar -w / relative / _indexMin"></div>
-    <div class="relative">
+    <div class="relative W-100">
         {!!$slot!!}
     </div>
 </div>
