@@ -1,7 +1,7 @@
 <div class="void">
 	<div class="_shell _name @error('name') Error @enderror / vol-Abs label-insideInput">
 		<input id="inputName" type="text" name="name" value="{{$user->name ?? old('name')}}" placeholder=".">
-		<label class="Abs" for="inputName">@svg('plus')Name</label>
+		<label class="Abs" for="inputName">@svg('plus')Имя</label>
 		@error('name')
 			<div class="Abs / Nameplate -rt">{{ $errors->first('name') }}</div>
 		@enderror
@@ -10,13 +10,13 @@
 	<div>
 		<div class="_shell _name @error('nickname') Error @enderror / vol-Abs label-insideInput">
 			<input id="inputNickname" type="text" name="nickname" value="{{$user->nickname ?? old('nickname')}}" placeholder=".">
-			<label class="Abs" for="inputNickname">@svg('plus')Как к вам обращаться?</label>
+			<label class="Abs" for="inputNickname">@svg('plus')nickname</label>
 			@error('nickname')
 				<div class="Abs / Nameplate -rt">{{ $errors->first('nickname') }}</div>
 			@enderror
 		</div>
 		<div class="Info -ico ico-left ico-xs vol-2">
-			<div class="content-s / Grey -c30">Это имя отображается в ваших отзывах и комментариях</div>
+			<div class="content-s / Grey -c30">Это имя отображается в ваших отзывах и комментариях по умолчанию</div>
 		</div>
 	</div>
 </div>

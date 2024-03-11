@@ -18,14 +18,8 @@ class FilterRequest extends FormRequest
 		// dd(11);
         return [
             'name' => 'nullable',
-            'patronymic' => 'nullable',
+            'surname' => 'nullable',
             'category_id' => 'nullable',
-            // 'user_id' => 'nullable',
-            // 'category_sku' => 'nullable',
-            // 'mafia' => 'nullable',
-            // // для фильтра
-			// 'page' => '',
-			// 'per_page' => '',
         ];
     }
 }

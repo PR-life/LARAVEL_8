@@ -8,7 +8,6 @@
     ]
 ?>
 
-
 @extends('_shema.Aside', [
     '$arrCSS' => $arrCSS,
     'linkCssMin' => '/css/minAdmin.css',
@@ -16,14 +15,11 @@
     'cssMilk' => 'skimp-size_Aside'
 ])
 
-{{-- @push('linkCss')
-<link href="{{ mix('/css/FSAdmin.css') }}" rel="stylesheet" type="text/css">
-@endpush --}}
-
-
+@push('css-body', 'role-'.auth()->user()->role.' ')
 
 @include('zADMIN._shema._brick.src')
 @include('zADMIN._shema._brick.style')
+@include('zADMIN.THIS.index')
 
 
 @push('css-body', 'x-aside Design x-Admin ')

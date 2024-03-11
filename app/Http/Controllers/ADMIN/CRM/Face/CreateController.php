@@ -3,16 +3,19 @@
 namespace App\Http\Controllers\ADMIN\CRM\Face;
 
 //
+use App\Models\Crm;
 use App\Models\Group;
-use App\Models\Category;
+
 
 class CreateController extends BaseController
 {
     public function __invoke(){
 
-        $group = Group::whereSku('customers')->firstOrFail();
-        $categories = Category::where('group_id', '=', $group->id)->get();
+        // dd(111);
+        $Crm = Crm::all();
+        $groups = Group::all();
 
-        return view('zADMIN.PAGE.Face.create',compact('categories'));
+
+        return view('zADMIN.PAGE.Face.create',compact('Crm','groups'));
     }
 }

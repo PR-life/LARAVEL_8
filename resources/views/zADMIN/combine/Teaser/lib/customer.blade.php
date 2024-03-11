@@ -14,7 +14,7 @@
                 </div>
             </div>
 
-            <div class="_4 / flex cI cross-s">
+            <div class="_4 none_80 / flex cI cross-s">
                 @isset($Var->category->name)
                 <div class="Tag -border / space-s round-s">
                     <a class="content-xxxs / letterUp Grey" href="{{route('admin.category.edit', $Var->category->id)}}">{{$Var->category->name}}</a>

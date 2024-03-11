@@ -32,12 +32,7 @@
 		<div class="hill-s"></div>	
  
 		@component('_wrap.step.Tochka.index')
-			@component('_wrap.step.Tochka.line')
-				@slot('step', '1')
-				<div class="content b600">шаг 1</div>
-				<div class="paragraph"></div>
-				<div class="content">content</div>
-			@endcomponent
+			@include('zADMIN.PAGE.Face.lego.create.steps')
 		@endcomponent
 
 		<div class="hill"></div>

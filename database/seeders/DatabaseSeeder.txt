@@ -6,6 +6,9 @@ use Illuminate\Database\Seeder;
 
 ////
 use Illuminate\Support\Arr;
+//
+use Database\Seeders\zDT\dt_UserSeeder;
+
 
 use App\Models\User;
 use App\Models\Category;

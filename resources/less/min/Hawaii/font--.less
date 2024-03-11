@@ -286,31 +286,3 @@ dt.-lineHeight,
 dl.-lineHeight dt, dl.-lineHeight dd {
     line-height: calc(var(--font)*1.15);
 }
-
- 
-
-
-/*
-
-ol {
-	padding-left:var(--x-padding-left);
-	> li {
-    counter-increment: list;
-    list-style-type: none;
-	}
-
-	> li::before,
-	> li::after {
-		color: inherit;
-		position: absolute;
-		top: 0;
-		left: ~"calc(var(--x-padding-left) - var(--x-padding-left)*2)";
-	}
-	> li::before {
-		content: counter(list) ".";
-		counter-increment: heading;
-		font-size: 90%;
-	}
-}
-
-/***/

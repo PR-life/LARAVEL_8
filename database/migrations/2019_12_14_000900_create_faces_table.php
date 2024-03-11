@@ -20,7 +20,7 @@ class CreateFacesTable extends Migration
             // date
             // timestamp
 
-            $table->string('email')->nullable()->unique();
+            $table->string('email')->nullable();
             $table->string('phone')->nullable();
             $table->string('whatsapp')->nullable();
             $table->string('telegram')->nullable();
@@ -56,6 +56,14 @@ class CreateFacesTable extends Migration
 				->references('id')
 				->on('faces')
 				->cascadeOnDelete();
+
+
+            $table->foreignId('crm_id')
+                ->nullable()
+				->references('id')
+				->on('crm')
+				->cascadeOnDelete();
+
 
             // $table->unsignedInteger('tag_id')->nullable();
             $table->foreignId('tag_id')

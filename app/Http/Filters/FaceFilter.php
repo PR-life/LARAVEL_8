@@ -9,7 +9,7 @@ class FaceFilter extends AbstractFilter {
 
 	// 1 пишем констакты, берем из нужных App\Http\Requests\ADMIN\Post
     public const NAME = 'name';
-    public const PATRONYMIC = 'patronymic';
+    public const SURNAME = 'surname';
     public const CATEGORY_ID = 'category_id';
     // public const GROUP_ID = 'group_id';
     // public const STATUS = 'status';
@@ -18,7 +18,7 @@ class FaceFilter extends AbstractFilter {
     {
         return [
             self::NAME => [$this, 'name'],
-            self::PATRONYMIC => [$this, 'patronymic'],
+            self::SURNAME => [$this, 'surname'],
             self::CATEGORY_ID => [$this, 'category_id'],
             // self::SHEMA => [$this, 'shema'],
             // self::STATUS => [$this, 'status'],
@@ -29,9 +29,9 @@ class FaceFilter extends AbstractFilter {
     {
         $builder->where('name', 'like', "%{$value}%");
     }
-    public function patronymic(Builder $builder, $value)
+    public function surname(Builder $builder, $value)
     {
-        $builder->where('patronymic', 'like', "%{$value}%");
+        $builder->where('surname', 'like', "%{$value}%");
     }
 
     public function category_id(Builder $builder, $value)

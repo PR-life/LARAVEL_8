@@ -1,3 +1,46 @@
+<div class="_shell x-hr Form -S / vol-Abs">
+    <input id="inputPhone" type="text" name="phone" value="{{$face->phone ?? old('phone')}}" placeholder=".">
+    <label class="Abs" for="inputPhone">@svg('plus')Телефон</label>
+</div>
+
+<div class="_shell x-hr Form -S / vol-Abs">
+    <input id="inputEmail" type="text" name="email" value="{{$face->email ?? old('email')}}" placeholder=".">
+    <label class="Abs" for="inputEmail">@svg('plus')email</label>
+</div>
+
+<div class="_shell x-hr Form -S / vol-Abs">
+    <input id="inputWhatsapp" type="text" name="whatsapp" value="{{$face->whatsapp ?? old('whatsapp')}}" placeholder=".">
+    <label class="Abs" for="inputWhatsapp">@svg('plus')whatsapp</label>
+</div>
+
+<div class="_shell x-hr Form -S / vol-Abs">
+    <input id="inputTelegram" type="text" name="telegram" value="{{$face->telegram ?? old('telegram')}}" placeholder=".">
+    <label class="Abs" for="inputTelegram">@svg('plus')telegram</label>
+</div>
+
+<div class="_shell x-hr Form -S / vol-Abs">
+    <input id="inputViber" type="text" name="viber" value="{{$face->viber ?? old('viber')}}" placeholder=".">
+    <label class="Abs" for="inputViber">@svg('plus')viber</label>
+</div>
+
+<div class="paragraph net"></div>
+<div class="content-xs center-text / Grey -c50 / higlight slctn noEvents net">Откуда</div>
+<div class="_shell x-hr Form -S / vol-Abs">
+    <input id="inputCountry" type="text" name="country" value="{{$face->country ?? old('country')}}" placeholder=".">
+    <label class="Abs" for="inputCountry">@svg('plus')Страна</label>
+</div>
+<div class="_shell x-hr Form -S / vol-Abs">
+    <input id="inputCity" type="text" name="city" value="{{$face->city ?? old('city')}}" placeholder=".">
+    <label class="Abs" for="inputCity">@svg('plus')Город</label>
+</div>
+<div class="_shell x-hr Form -S / vol-Abs">
+    <input id="inputArea" type="text" name="area" value="{{$face->area ?? old('area')}}" placeholder=".">
+    <label class="Abs" for="inputArea">@svg('plus')Адрес</label>
+</div>
+
+
+
+
 <div class="content-xs / Grey -c50 / higlight slctn noEvents net">Основной контакт</div>
 <div class="paragraph net"></div>
 <div class="menu -tile -XS / cloud / net">
@@ -51,44 +94,3 @@
     @endcomponent
 </div>
 <div class="paragraph net"></div>
-
-
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputPhone" type="text" name="phone" value="{{$face->phone ?? old('phone')}}" placeholder=".">
-    <label class="Abs" for="inputPhone">@svg('plus')Телефон</label>
-</div>
-
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputEmail" type="text" name="email" value="{{$face->email ?? old('email')}}" placeholder=".">
-    <label class="Abs" for="inputEmail">@svg('plus')email</label>
-</div>
-
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputWhatsapp" type="text" name="whatsapp" value="{{$face->whatsapp ?? old('whatsapp')}}" placeholder=".">
-    <label class="Abs" for="inputWhatsapp">@svg('plus')whatsapp</label>
-</div>
-
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputTelegram" type="text" name="telegram" value="{{$face->telegram ?? old('telegram')}}" placeholder=".">
-    <label class="Abs" for="inputTelegram">@svg('plus')telegram</label>
-</div>
-
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputViber" type="text" name="viber" value="{{$face->viber ?? old('viber')}}" placeholder=".">
-    <label class="Abs" for="inputViber">@svg('plus')viber</label>
-</div>
-
-<div class="paragraph net"></div>
-<div class="content-xs center-text / Grey -c50 / higlight slctn noEvents net">Откуда</div>
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputCountry" type="text" name="country" value="{{$face->country ?? old('country')}}" placeholder=".">
-    <label class="Abs" for="inputCountry">@svg('plus')Страна</label>
-</div>
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputCity" type="text" name="city" value="{{$face->city ?? old('city')}}" placeholder=".">
-    <label class="Abs" for="inputCity">@svg('plus')Город</label>
-</div>
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputArea" type="text" name="area" value="{{$face->area ?? old('area')}}" placeholder=".">
-    <label class="Abs" for="inputArea">@svg('plus')Адрес</label>
-</div>

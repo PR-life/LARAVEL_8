@@ -155,6 +155,11 @@ class FaceFactory extends Factory
                 Category::get()->random()->id,
             )),
 
+
+
+
+            
+
             'user_id' => '1',
         ];
     }

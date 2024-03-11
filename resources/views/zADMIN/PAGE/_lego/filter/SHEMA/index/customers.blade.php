@@ -9,9 +9,9 @@
         </div>
     </div>
 
-    @include('zADMIN.PAGE._lego.filter.lego.patronymic')
+    @include('zADMIN.PAGE._lego.filter.lego.surname')
     @include('zADMIN.PAGE._lego.filter.lego.name', ['placeholder' => 'имя'])
-    @include('zADMIN.PAGE._lego.filter.lego.categories', ['Var' => $categories])
+    {{-- @include('zADMIN.PAGE._lego.filter.lego.categories', ['Var' => $categories]) --}}
 
     <div class="OnOff {{$_GET != [] ? 'on' : 'off'}}">
         <button class="_close / Ico / transparent pointer" type="submit" id="sendForm">@svg('search')</button>

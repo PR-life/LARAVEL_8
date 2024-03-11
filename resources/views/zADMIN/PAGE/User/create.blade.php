@@ -38,24 +38,9 @@
 				@slot('step', '1')
 				<div class="content b600">шаг 1</div>
 				<div class="paragraph"></div>
-				<div class="content">Для какой группы</div>
+				<div class="content">Статус пользователя</div>
 				<div class="paragraph"></div>
-
-				<div class="menu -tile -XS / cloud / net">
-					@foreach($roles as $id => $_role)
-						@component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
-							@slot('name', 'role')
-							@slot('id', 'role_'.$id)
-							@slot('param', old('role'))
-							@slot('value', $id)
-							
-							{{$_role}}
-						@endcomponent
-					@endforeach
-				</div>
-				@error('role')
-					<div class="content-s / Error -text">{{ $errors->first('role')}}</div>
-				@enderror
+				@include('zADMIN.PAGE.User.lego.create.check_role')
 				<div class="paragraphX2"></div>
 			@endcomponent
 			@component('_wrap.step.Tochka.line')

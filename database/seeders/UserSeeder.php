@@ -20,17 +20,5 @@ class UserSeeder extends Seeder
 			'remember_token' => Str::random(10),
             'email_verified_at' => '2022-06-29 06:12:25',
         ]);
-    	// DB::table('users')->insert([
-		// 	'role' => '10',
-        //     'name' => 'Аркадий',
-        //     'avatar' => '/images/ava/admin/hotin.jpg',
-        //     'email' => 'arkadiihotin@mail.ru',
-        //     'password' => '$2y$10$Khu5yqcYIAMRR2HC0uK1TebmjVNkKcIPeECszvxaeQTAttT.LtGbu', // imago2023
-        //     // 'password' => '$2y$10$nYKUGPx7MkH3oRB60U5l3OIadUhC9nI4zDOveInd5i1H.KveiHIbG',
-		// 	'remember_token' => Str::random(10),
-        //     'email_verified_at' => '2022-06-29 06:12:25',
-		// 	//
-		// 	'nickname' => 'ООО «ФРАТЕЛЛИ САРТИ»',
-        // ]);
     }
 }

@@ -2,11 +2,16 @@
 
 
 .Bar {
-	--x-BarShift:0px;
+	--Bar-w:var(--bar);
 }
 
+.Bar.-M {
+	--Bar-w: calc(var(--bar) + 2rem);
+}
+
+
 .Bar.bar-left {
-	--x-BarShift:calc(var(--bar) - var(--bar)*2);
+	--Bar-shift:calc(var(--Bar-w) - var(--Bar-w)*2);
 }
 
 
@@ -25,7 +30,7 @@
 
 
 .Bar.-shift {
-	transform: translateX(var(--x-BarShift));
+	transform: translateX(var(--Bar-shift));
 }
 
 

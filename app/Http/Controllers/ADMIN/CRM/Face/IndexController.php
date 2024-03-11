@@ -7,6 +7,7 @@ use App\Http\Requests\ADMIN\Face\FilterRequest;
 use App\Http\Filters\FaceFilter;
 //
 use App\Models\Face;
+use App\Models\Crm;
 use App\Models\Category;
 use App\Models\Tag;
 
@@ -26,10 +27,11 @@ class IndexController extends BaseController
 			// $posts = Post::paginate(10);
         // $faces = Face::paginate(50);
 
-        $categories = Category::all();
-		$tags = Tag::all();
+        // $categories = Category::all();
+		// $tags = Tag::all();
+		$Crm = Crm::all();
 
-        return view('zADMIN.PAGE.Face.index', compact('faces','categories','tags'));
+        return view('zADMIN.PAGE.Face.index', compact('faces','Crm'));
 
     }
 }

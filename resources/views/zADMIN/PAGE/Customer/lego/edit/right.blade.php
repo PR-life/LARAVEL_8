@@ -1,5 +1,5 @@
 @component('_wrap.__.summary',['icoCloseName' => 'closeRoll'])
-    @slot('css', '')
+    {{-- @slot('css', '-border') --}}
     @slot('cssName', 'content-m pl-4')
     @slot('cssContent', 'space-07031144')
     @slot('id', 'wrapSize_shirt')
@@ -21,7 +21,7 @@
 
 
 @component('_wrap.__.summary')
-    @slot('css', '')
+    {{-- @slot('css', '') --}}
     @slot('cssName', 'content-m pl-4')
     @slot('cssContent', 'space')
     @slot('id', 'wrapSize_shoes')
