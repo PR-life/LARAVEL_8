@@ -12,7 +12,7 @@
 
 <div class="_close / space-leftM">
 	<div class="paragraph-s"></div>
-	@include('_._brick.Q.min',['var' => $Var->Q])
+	@include('_._brick.Q.min',['Var' => $Var->Q])
 	<div class="paragraph"></div>
 </div>
 

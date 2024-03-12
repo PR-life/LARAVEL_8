@@ -1,7 +1,7 @@
 @extends('zADMIN._shema.edit')
 
 @section('title')edit. Sms - {{$sms->name}} @endsection
-@include('zADMIN._bd._src.edit.min')
+
 
 @push('addBread')
 	<li>

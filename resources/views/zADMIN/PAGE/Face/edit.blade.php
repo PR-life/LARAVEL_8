@@ -2,8 +2,6 @@
 
 @section('title')edit. Customer - {{$face->name}} @endsection
 
-@include('zADMIN._bd._src.edit.min')
-
 
 @push('addBread')
 <li>

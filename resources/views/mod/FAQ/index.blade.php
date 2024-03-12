@@ -9,9 +9,6 @@
 	}
 @endpush
 
- 
-
-
 <div class="{!!$css_wrap_menu ?? ''!!}">
     <div class="paragraph / none_PC"></div>
     <div>
@@ -31,7 +28,7 @@
                 @if($loop->first)
                     @include('mod.FAQ.lego.item',['css' => '-first'])
                 @endif
-                @include('mod.FAQ.lego.item',['css' => 'x-'.$loop->iteration])
+                @include('mod.FAQ.lego.item',['css' => $cssSummary ?? '' . ' x-'.$loop->iteration])
              @endforeach
 
             {{-- @isset($thisItemFaq)

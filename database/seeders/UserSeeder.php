@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
         DB::table('users')->insert([
 			'role' => '1',
             'name' => 'Алексей',
-            'avatar' => '/images/ava/admin/hello.jpg',
+            'avatar' => '/images-0/hello.jpg',
             'email' => 'stepanov-mt12@yandex.ru',
             'password' => '$2y$10$hDq6XTwH4cNyDq4BQW8KY.r9M/sbCNXwh3VcMkwX6eVin9QZT4yKS',
 			'remember_token' => Str::random(10),

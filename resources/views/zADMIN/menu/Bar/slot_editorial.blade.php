@@ -1,4 +1,4 @@
-@component('_wrap.ADMIN.bar.menu')
+@component('zADMIN._wrap.bar.menu')
     @slot('id', 'barMenu_editorial')
     @slot('name')
         @component('_wrap.Chunk.Aside.index')
