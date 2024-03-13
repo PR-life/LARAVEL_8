@@ -17,9 +17,9 @@
 
 
 @push('milk')
-<div id="asideBranch" class="Fix HWin / Aside_2 / Branch" data-localStorage localStorage-id>
+{{-- <div id="asideBranch" class="Fix HWin / Aside_2 / Branch" data-localStorage localStorage-id>
     <div class="_wrap / Abs -all"></div>
-</div>
+</div> --}}
 @if ($errors->any())
     @component('_.component.Message', ['css' => 'eC -error'])
         @slot('heading')
