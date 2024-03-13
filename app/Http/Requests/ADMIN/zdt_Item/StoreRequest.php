@@ -20,7 +20,11 @@ class StoreRequest extends FormRequest
 			'slug' => 'string',
 
 			//
-            'css' => 'nullable|string',
+			'shema' => 'nullable|string',
+			'shema_teaser' => 'nullable|string',
+			'css' => 'nullable|string',
+
+			//
             'type' => 'nullable|string',
             'action' => 'nullable|string',
             'face' => 'nullable|string',

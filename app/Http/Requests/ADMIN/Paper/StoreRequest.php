@@ -24,15 +24,14 @@ class StoreRequest extends FormRequest
     public function rules()
     {
         return [
-
-            // //
-			// 'css' => 'nullable|string',
-			// 'shema' => 'nullable|string',
-			// 'shema_teaser' => 'nullable|string',
-
+			
 			'sku' => 'nullable|string',
             'name' => 'nullable|string',
 			'slug' => 'string',
+
+			'shema' => 'nullable|string',
+			'shema_teaser' => 'nullable|string',
+			'css' => 'nullable|string',
 
 			//
             'h1' => 'nullable|string',

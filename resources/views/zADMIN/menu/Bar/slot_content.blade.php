@@ -1,4 +1,4 @@
-@component('_wrap.ADMIN.bar.menu')
+@component('zADMIN._wrap.bar.menu')
 @slot('id', 'barMenu_content')
 @slot('name')
     @component('_wrap.Chunk.Aside.index')
@@ -12,30 +12,38 @@
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.post.index')
         @slot('linkAdd', route('admin.post.create'))
-        @slot('icoCss', '-XS')
+        @slot('cssIco', '-XS')
         @slot('name', 'Материалы')
-        @svg('plus')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
     @endcomponent
     @component('_wrap.Chunk.Aside.index')
         @slot('linkAdd', route('admin.faq.create'))
         @slot('routeName', 'admin.faq.index')
-        @slot('icoCss', '-XS')
+        @slot('cssIco', '-XS')
         @slot('name', 'Faq')
-        @svg('plus')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
     @endcomponent 
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.paper.index')
         @slot('linkAdd', route('admin.paper.create'))
-        @slot('icoCss', '-XS')
+        @slot('cssIco', '-XS')
         @slot('name', 'Статьи')
-        @svg('plus')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
     @endcomponent 
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.item.index')
         @slot('linkAdd', route('admin.item.create'))
-        @slot('icoCss', '-XS')
+        @slot('cssIco', '-XS')
         @slot('name', 'item')
-        @svg('plus')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
     @endcomponent 
 </div>
 @endcomponent

@@ -7,8 +7,9 @@
                     <span class="flex / Ico -XS / orb-s contentBox">@svg('close')</span>
                 </a>
             </div>
-            @include('zADMIN.PAGE._lego.filter._lego.name')
-            @include('zADMIN.PAGE._lego.filter._lego.categories', ['Var' => $categories])
+            @include('zADMIN.PAGE._lego.filter.lego.name')
+            @include('zADMIN.PAGE._lego.filter.lego.categories', ['Var' => $categories])
+            @include('zADMIN.PAGE._lego.filter.lego.groups', ['Var' => $groups])
 
             <div class="OnOff {{$_GET != [] ? 'on' : 'off'}}">
                 <button class="_close / Ico -S / transparent pointer" type="submit" id="sendForm">@svg('search')</button>

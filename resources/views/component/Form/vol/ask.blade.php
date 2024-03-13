@@ -1,13 +1,4 @@
-{{-- <form id="{{$id}}" class="{{$css}}" method="POST" action="{{$route}}" enctype="multipart/form-data">
-	@csrf
-	<input id="inputTitle_{{$id}}" class="none" type="text" name="title" value="." placeholder='.'>
-	<input id="inputFromPage_{{$id}}" class="none" type="text" name="from_page" value="{{url()->current()}}" placeholder='.'>
-	<input id="inputType_{{$id}}" class="none" type="text" name="type" value="{{$type ?? 'conversion'}}">
-	<input id="inputLabel_{{$id}}" class="none" type="text" name="label" value="{{$label ?? 'email'}}">
-    {!!$slot!!}
-</form> --}}
-
-@component('component.Form._wrap.index',['css' => 'Form -space bg round'])
+@component('component.Form._wrap.index',['css' => 'Form -space bg round ' . $css ?? ''])
 
 	@slot('id', 'formContact')
 	@slot('route', route('sms.ask'))
@@ -16,8 +7,6 @@
 
 	<div class="space">
 		{!!$slot!!}
-		{{-- <div class="content Grey pl-1">Вопрос</div> --}}
-		{{-- <div class="paragraph-s"></div> --}}
 		<div class="_shell">
 			<textarea id="textareaSms_Contact" class="round" name="ask" maxlength="850" rows="12" placeholder="{{__('/_const/form.text')}}...">{{old('message')}}</textarea>
 			<div class="x-Error"></div>
@@ -25,8 +14,13 @@
 	</div>
 
 	<div class="_footer / space round-s">
-		<button class="Btn cC -S slim / round-s">
-			<span class="_x / content-s">{{__('/_const/form.send')}}</span>
+		<button class="Btn {{$cssBtn ?? 'cC -S slim vol-white / round-s'}}">
+			<span class="_x flex">
+				<svg class="Ico -S / mr-2" viewBox="0 0 24 24" fill="currentColor"><path d="M5.57 20.292a.87.87 0 001.295.757l14.741-8.292a.87.87 0 000-1.515L6.866 2.95a.87.87 0 00-1.296.758v2.464l5.157 1.516a.65.65 0 11-.367 1.248L3.85 7.02a.76.76 0 00-.91 1.028l1.403 3.301h8.832a.65.65 0 110 1.3H4.343L2.94 15.951a.76.76 0 00.89 1.034l6.53-1.92a.65.65 0 01.367 1.247L5.57 17.828v2.464z"></path></svg>
+				<span class="content-s">
+					{{__('/_const/form.send')}}
+				</span>
+			</span>
 			<span class="none">{{__('/_const/form.errorSend')}}</span>
 		</button>
 	</div>

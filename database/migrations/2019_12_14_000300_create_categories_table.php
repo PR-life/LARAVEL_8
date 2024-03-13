@@ -15,7 +15,7 @@ class CreateCategoriesTable extends Migration
     {
         Schema::create('categories', function (Blueprint $table) {
             $table->id();
-            $table->string('sku')->nullable();
+            $table->string('sku')->unique()->nullable();
 
             $table->string('name');
             $table->string('slug');
@@ -35,6 +35,9 @@ class CreateCategoriesTable extends Migration
 
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
+			
+            $table->unsignedBigInteger('group_id')->nullable();
+            $table->foreign('group_id')->references('id')->on('groups');
 			
             $table->string('string_1')->nullable();
             $table->text('knot_1')->nullable();

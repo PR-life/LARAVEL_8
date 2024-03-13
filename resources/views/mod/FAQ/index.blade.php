@@ -1,6 +1,6 @@
 @push('style')
 	.about > .Ef.-Details > ._ef.slug-detektivnoe-agentstvo,
-	.price > .Ef.-Details > ._ef.tag-ceny,
+	.price > .Ef.-Details > ._ef.tag-price,
 	.profession > .Ef.-Details > ._ef.slug-detektiv  {
 		height: auto;
 		min-height: var(--x-Ef-hMin);
@@ -8,9 +8,6 @@
 		pointer-events: all;
 	}
 @endpush
-
- 
-
 
 <div class="{!!$css_wrap_menu ?? ''!!}">
     <div class="paragraph / none_PC"></div>
@@ -31,10 +28,10 @@
                 @if($loop->first)
                     @include('mod.FAQ.lego.item',['css' => '-first'])
                 @endif
-                @include('mod.FAQ.lego.item',['css' => 'x-'.$loop->iteration])
+                @include('mod.FAQ.lego.item',['css' => $cssSummary ?? '' . ' x-'.$loop->iteration])
              @endforeach
 
-            @isset($thisItemFaq)
+            {{-- @isset($thisItemFaq)
                 @foreach($thisItemFaq as $thisFaq)
                     <div class="_ef -an thisItem / Details {{$css_Details ?? ''}}">
                         <details>
@@ -45,7 +42,7 @@
                         </details>
                     </div>
                 @endforeach
-            @endisset
+            @endisset --}}
 		</div>
 	</div>
 </div>

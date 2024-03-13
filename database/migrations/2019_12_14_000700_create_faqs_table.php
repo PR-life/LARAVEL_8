@@ -15,10 +15,14 @@ class CreateFaqsTable extends Migration
     {
         Schema::create('faqs', function (Blueprint $table) {
             $table->id();
-			$table->string('sku')->nullable();
+			$table->string('sku')->unique()->nullable();
+            
             $table->string('name')->nullable();
 
 			$table->string('filter_par_1')->nullable();
+			$table->string('css')->nullable();
+			$table->string('css_summary')->nullable();
+			$table->string('css_content')->nullable();
 
             $table->string('h1')->nullable();
 			$table->text('text')->nullable();

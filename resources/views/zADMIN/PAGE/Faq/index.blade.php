@@ -11,7 +11,7 @@
 @endpush
 
 @push('bee')
-    @include('zADMIN.PAGE._lego.filter.btnVol')
+    @include('zADMIN.PAGE._lego.filter.btn.content')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'FAQ', 'add' => route('admin.faq.create'), 'ico' => 'barMenu_relations'])
     @include('zADMIN.PAGE._lego.filter.SHEMA.index.faqs')
     @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'faq'])

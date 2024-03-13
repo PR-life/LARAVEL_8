@@ -4,18 +4,8 @@
 @section('css-body', '-create ')
 
 
-
-@push('bee')
-    {{-- @include('zADMIN.PAGE._lego.filter.btnVol') --}}
-    {{-- @include('zADMIN._lego.Bee.nameIndex',['name' => 'Теги. Создать', 'ico' => 'barMenu_relations']) --}}
-@endpush
-
-
 @section('content')
-
 <div class="I aura">
-
-
 	@component('zADMIN.PAGE._wrap.form.create', ['route' => route('admin.category.store'), 'css' => '-category'])
 
 		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.category.index')])
@@ -28,11 +18,9 @@
 				<div class="Abs / Nameplate -rt">{{$message}}</div>
 			@enderror
 		</div>
-		
 		<div class="_shell">
 			@include('zADMIN._lego.form.slug.create')
 		</div>
-
 
 
 		<div class="hill"></div>

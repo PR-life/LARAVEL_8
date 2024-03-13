@@ -9,8 +9,8 @@
                     <span class="flex / Ico -XS / orb-s contentBox">@svg('close')</span>
                 </a>
             </div>
-            @include('zADMIN.PAGE._lego.filter._lego.name')
-            @include('zADMIN.PAGE._lego.filter._lego.categories', ['Var' => $categories])
+            @include('zADMIN.PAGE._lego.filter.lego.name')
+            @include('zADMIN.PAGE._lego.filter.lego.categories', ['Var' => $categories])
 
 
             <div class="Select">

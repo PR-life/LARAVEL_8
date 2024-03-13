@@ -21,6 +21,10 @@ class CreatePostsTable extends Migration
             $table->string('name');
 			$table->string('slug')->unique();
 
+            $table->string('shema')->default('default');
+            $table->string('shema_teaser')->default('default');
+            $table->string('css')->nullable();
+
 			$table->string('h1')->nullable();
 			$table->text('intro')->nullable();
             $table->text('text')->nullable();

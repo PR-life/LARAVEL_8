@@ -39,6 +39,7 @@ class CategoryExport implements FromCollection, WithHeadings, WithStrictNullComp
 			"prev_url",
 
 			"category_id",
+			"group_id",
 
 			"string_1",
 			"knot_1",

@@ -6,7 +6,7 @@ use App\Http\Controllers\Controller;
 ////
 use Maatwebsite\Excel\Facades\Excel;
 //
-
+use App\Exports\CrmExport;
 use App\Exports\CategoryExport;
 use App\Exports\TagExport;
 use App\Exports\PostExport;
@@ -107,6 +107,10 @@ class ExportController extends Controller
 		// Excel::store(new TaskExport, 'Excel/Tasks.xlsx');
 
 		// dd(111);
+
+		$nameCrm = 'Crm' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new CrmExport, 'Excel/old/'.$nameCrm);
+		Excel::store(new CrmExport, 'Excel/Crm.xlsx');
 
 		$nameCategory = 'Categories' . '_' . date('dm_Gi'). '.xlsx';
 		Excel::store(new CategoryExport, 'Excel/old/'.$nameCategory);

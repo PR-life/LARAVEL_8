@@ -39,6 +39,10 @@ class PostImport implements ToCollection, WithHeadingRow
                     'name' => $item['name'],
                     'slug' => $x,
 
+                    'shema' => $item['shema'],
+                    'shema_teaser' => $item['shema_teaser'],
+                    'css' => $item['css'],
+
                     'h1' => $item['h1'],
                     'intro' => $item['intro'],
                     'text' => $item['text'],

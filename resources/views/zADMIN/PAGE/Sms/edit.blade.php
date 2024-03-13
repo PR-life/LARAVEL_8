@@ -3,26 +3,11 @@
 @section('title')edit. Sms - {{$sms->name}} @endsection
 
 
-@push('linkCss')
-	@include('_.src.link.css.text.select')
-@endpush
-
-@push('linkJsAfter')
-	@include('_.src.link.js.text.select')
-@endpush
-
-@push('js-bottom-solo')
-	<script>
-		$('#js_tags').select2()
-	</script>
-@endpush
-
-
 @push('addBread')
 	<li>
-		<span>
+		<a href="{{route('admin.sms.index')}}">
 			<span class="content-xs">Контент</span>
-		</span>
+		</a>
 	</li>
 	<li>
 		<span>
@@ -34,7 +19,6 @@
 
 
 @section('content')
-
 <div class="I aura">
 
 
@@ -47,25 +31,30 @@
 			@include('zADMIN._bd.edit.sms',['Var'=> $sms])
 		</div>
 
+		@include('zADMIN.PAGE.Sms.lego.edit.lego.Relationships')
+		<div class="paragraph"></div>
+
+
 		
 		@component('zADMIN.PAGE._wrap.Flaber.edit')
 
-		@slot('flaber')
-			@include('zADMIN.PAGE.Sms._lego.edit.sms')	
-		@endslot
+			@slot('flaber')
+				@include('zADMIN.PAGE.Sms.lego.edit.sms')	
+			@endslot
 
-		@slot('date')
-			<div class="pl-edgeS"> 
-				<dl class="-dot -rightS Void">
-					<dt class="content-xs Grey">дата</dt>
-					<dd><span class="content-xs">{{$sms->created_at}}</span></dd>
-				</dl>
-			</div>
-		@endslot
-
+			@slot('date')
+				<div class="pl-edgeS / Form -S"> 
+					<dl class="-dot -rightS Void">
+						<dt class="content-xs Grey">дата</dt>
+						<dd>
+							<input type="text" name="created_at" value="{{$sms->created_at}}">
+						</dd>
+					</dl>
+				</div>
+			@endslot
 
 			<div class="paragraphX2"></div>
-			@include('zADMIN.PAGE.Sms._lego.edit.body')
+			@include('zADMIN.PAGE.Sms.lego.edit.body')
 
 		@endcomponent
 

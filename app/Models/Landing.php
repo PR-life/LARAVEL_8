@@ -52,6 +52,14 @@ class Landing extends Model
         );
     }
 
+    public function tag() {
+        // return 1;
+        return $this->belongsTo(
+            Tag::class,
+            'tag_id', // foreignKey
+			'id', // ownerKey
+        );
+    }
 
     public function category() {
         return $this->belongsTo(

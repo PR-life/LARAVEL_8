@@ -30,9 +30,7 @@
 		@yield('top')
 		@stack('topAfter')
 
-		<div class="Bee">
-			@stack('bee')
-		</div>
+		@yield('Bee')
 		@stack('beeAfter')
 	
 		@stack('contentBefore')

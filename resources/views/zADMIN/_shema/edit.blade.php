@@ -1,8 +1,8 @@
-@extends('zADMIN._shema.index')
+@extends('zADMIN._shema.INDEX')
 @push('css-body', '-edit ')
 
 @include('_.js.component.tinymce.index')
-
+@include('zADMIN._bd._src.edit.min')
 
 @push('linkJs')
 	{{-- @include('_.src.link.js.jquery') --}}
@@ -10,9 +10,11 @@
 	@include('_.src.link.js.text.tinymce')
 @endpush
 
-{{-- @push('bee')
-	<div class="Bee"></div>
-@endpush --}}
+@section('Bee')
+<div class="Bee">
+	@stack('bee')
+</div>
+@endsection
 
 
 

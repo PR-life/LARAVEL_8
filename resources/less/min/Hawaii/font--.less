@@ -137,7 +137,8 @@ p {
 .content-xxxs,
 .content-xxs,
 .content-xs {
-	line-height: calc(var(--font-min) + 1px) !important;
+	line-height: calc(var(--font-min) + 1px);
+	// background-color: red;
 }
 
 .content-xxs.wide,
@@ -242,11 +243,10 @@ input, textarea {
  	line-height: ~"calc(var(--font) * 1.8)";
 }
 
-
+// .Citation.slim .content,
 legend,
 .Bread *,
-.content-s.slim,
-.Citation.slim .content {
+.content-s.slim {
  	line-height: ~"calc(var(--font) * 1.2)";
  }
 
@@ -286,31 +286,3 @@ dt.-lineHeight,
 dl.-lineHeight dt, dl.-lineHeight dd {
     line-height: calc(var(--font)*1.15);
 }
-
- 
-
-
-/*
-
-ol {
-	padding-left:var(--x-padding-left);
-	> li {
-    counter-increment: list;
-    list-style-type: none;
-	}
-
-	> li::before,
-	> li::after {
-		color: inherit;
-		position: absolute;
-		top: 0;
-		left: ~"calc(var(--x-padding-left) - var(--x-padding-left)*2)";
-	}
-	> li::before {
-		content: counter(list) ".";
-		counter-increment: heading;
-		font-size: 90%;
-	}
-}
-
-/***/

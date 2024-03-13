@@ -1,10 +1,10 @@
 <?php
-	$Form = 'Manager';
+	// $Form = 'Manager';
 ?>
 
 <style>
  
-	#form_manager {
+	/* #form_manager {
 		--bg-input:#fff;
 
 		--c-btn: #ccc;
@@ -13,7 +13,7 @@
 		--bg-btn: #2d2c33;
 		--bg-button: #2d2c33;
 		--bg-btn-hover: #f7f7f7;
-	}
+	} */
  
 </style>
 

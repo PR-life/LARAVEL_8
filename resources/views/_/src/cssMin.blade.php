@@ -148,8 +148,8 @@ body,img,video,input,.block{
 }
 
 #body.Z2 .noneZ2,
-#body:not(.asideClose) .ASIDEclose,
-#body.asideClose .ASIDEopen,
+#body:not(.asideClose) .show-asideClose,
+#body.asideClose .show-asideOpen,
 .none,.Rano,body meta{
 	display:none
 }
@@ -482,6 +482,10 @@ hr,.ghost,.visible,.Op,.opVersa{
 
 	.Abs_mbl{
 		position: absolute;
+	}
+	.Abs_mbl.-lt{
+		left:0;
+		top:0;
 	}
 }
 @media (min-width:481px) and (max-width:799px){

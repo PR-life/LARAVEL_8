@@ -1,4 +1,4 @@
-@component('_wrap.ADMIN.bar.menu')
+@component('zADMIN._wrap.bar.menu')
 @slot('id', 'barMenu_target')
 @slot('name')
     @component('_wrap.Chunk.Aside.index')
@@ -12,9 +12,10 @@
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.landing.index')
         @slot('linkAdd', route('admin.landing.create'))
-        @slot('icoCss', '-XS')
         @slot('name', 'Landing')
-        @svg('plus')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
     @endcomponent
 </div>
 @endcomponent

@@ -5,19 +5,20 @@
 @push('addBread')
 <li>
     <span>
-        <span class="content-xs">Контент</span>
+        <span class="content-xs">Редакция</span>
     </span>
 </li>
 @endpush
 
 @push('topAfter')
-    @include('zADMIN.PAGE._lego.filter.btnVol')
+    @include('zADMIN.PAGE._lego.filter.btn.content')
 @endpush
 
 @push('bee')
-    {{-- @include('zADMIN._lego.Bee.nameIndex',['name' => 'Категории', 'add' => route('admin.category.create'), 'ico' => 'barMenu_relations']) --}}
-    {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.categories') --}}
-    {{-- @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'category']) --}}
+
+    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Формы обратной связи', 'ico' => 'barMenu_editorial'])
+    {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.papers') --}}
+    @include('zADMIN.PAGE._lego.filter.table-index')
 @endpush
 
  
@@ -26,7 +27,7 @@
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-posts'])
+            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-sms'])
                 @foreach($sms as $_sms)       
                     @include('zADMIN.combine.Teaser.lib.sms', ['Var' => $_sms])
                 @endforeach

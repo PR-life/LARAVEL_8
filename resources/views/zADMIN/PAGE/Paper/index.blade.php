@@ -11,7 +11,7 @@
 @endpush
 
 @push('topAfter')
-    @include('zADMIN.PAGE._lego.filter.btnVol')
+    @include('zADMIN.PAGE._lego.filter.btn.content')
 @endpush
 
 @push('bee')
@@ -20,7 +20,7 @@
     @include('zADMIN.PAGE._lego.filter.SHEMA.index.papers')
     
 
-    {{-- @include('zADMIN.PAGE._lego.filter.btnVol') --}}
+    {{-- @include('zADMIN.PAGE._lego.filter.btn.content') --}}
     {{-- @include('zADMIN._lego.Bee.nameIndex',['name' => 'Статьи', 'add' => route('admin.paper.create'), 'ico' => 'barMenu_relations']) --}}
     {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.papers') --}}
 

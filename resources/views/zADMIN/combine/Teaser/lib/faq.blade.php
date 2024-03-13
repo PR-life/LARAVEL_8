@@ -38,7 +38,7 @@ if ($Var->name) {
                             @include('zADMIN.combine.Teaser.lib.lego.icoStatus')
                         </div>
                         <span class="flex / cross">
-                            @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $NAME, 'css' => 'x-name'])
+                            @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $NAME, 'css' => 'x-name'])
                             <span class="EN / content-m b300 / block oneLine nowrap Ellipsis x-name / Grey">{!!$Var->en_name ?? '<em>en_name</em>'!!}</span>
                         </span>                        
                     </a>
@@ -157,7 +157,7 @@ if ($Var->name) {
             </div>
 
 
-            @include('zADMIN.combine.Teaser._brick.data',['Var' => $Var, 'css' => '_5'])
+            @include('zADMIN.combine.Teaser._brick.data.index',['Var' => $Var, 'css' => '_5'])
             
             <div class="_7">
                 @include('zADMIN._brick.manager.basket', ['class' => class_basename($Var), 'id' => $Var->id])

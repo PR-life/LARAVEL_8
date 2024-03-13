@@ -9,6 +9,8 @@
 </div>
 @endif
 
+
+
 @if($Var->group_id)
 <div class="Ico -XS" title="{{$Var->group->name}}">
 

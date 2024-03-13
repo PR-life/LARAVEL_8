@@ -2,7 +2,6 @@
 
 @section('title')edit. Paper - {{$paper->name}} @endsection
 
-@include('zADMIN._bd._src.edit.min')
 
 
 @push('addBread')
@@ -31,15 +30,15 @@
 			@include('zADMIN._bd.edit.min',['Var'=> $paper])
 		</div>
  
-		@include('zADMIN/PAGE/Paper/_lego/edit/lego/Relationships')
+		@include('zADMIN.PAGE.Paper.lego.edit.lego.Relationships')
 		<div class="paragraph"></div>
  
 		@component('zADMIN.PAGE._wrap.Flaber.edit')
 			@slot('flaber')
-				@include('zADMIN.PAGE.Paper._lego.edit.sms')	
+				@include('zADMIN.PAGE.Paper.lego.edit.sms')	
 			@endslot
 			<div class="paragraphX2"></div>
-			@include('zADMIN.PAGE.Paper._lego.edit.body')
+			@include('zADMIN.PAGE.Paper.lego.edit.body')
 		@endcomponent
 
 

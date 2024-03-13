@@ -31,7 +31,7 @@
 
         <div class="_1 flex cI / Min Max -w5">
             <a class="W-100 / content b600" href="{{$route}}">
-                @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->name])
+                @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->name])
             </a>
         </div>
 
@@ -44,7 +44,7 @@
         </div>
 
 
-        @include('zADMIN.combine.Teaser._brick.data',['Var' => $Var, 'css' => '_4'])
+        @include('zADMIN.combine.Teaser._brick.data.index',['Var' => $Var, 'css' => '_4'])
 
         <div class="_5">
             @include('zADMIN._brick.manager.basket', ['class' => class_basename($Var), 'id' => $Var->id])

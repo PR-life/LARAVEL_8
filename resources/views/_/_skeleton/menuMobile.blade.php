@@ -1,7 +1,7 @@
 
 <div class="menu -fix flex bC index">
 
-    <div class="_ico -home / OnOff {!! request()->routeIs('sinnergems.morda') ? 'on' : 'off' !!}">
+    <div class="_ico -home / OnOff {!! request()->routeIs('sinnergems.morda') ? 'On' : 'Off' !!}">
 		<a href="{-{route('sinnergems.morda')}}" class="W-100 H-100 / flex dC cC cI">
 			<span class="flex dC cI">
 				<span class="Ico -S flex / _Close">@svg('home')</span>				
@@ -11,7 +11,7 @@
 		</a>
 	</div>
 	
-    <div class="_ico -catalog / OnOff {!! request()->routeIs('sinnergems.catalog.index') ? 'on' : 'off' !!}">
+    <div class="_ico -catalog / OnOff {!! request()->routeIs('sinnergems.catalog.index') ? 'On' : 'Off' !!}">
 		<a href="{-{route('sinnergems.catalog.index')}}" class="W-100 H-100 / flex dC cC cI">
 			<span class="flex dC cI">
 				<span class="Ico -S flex / _Close">@svg('catalog')</span>				
@@ -37,7 +37,7 @@
 		</label>
 	</div> --}}
 
-    <div class="_ico -favorite / OnOff {!! request()->routeIs('sinnergems.favorite.index') ? 'on' : 'off' !!}">
+    <div class="_ico -favorite / OnOff {!! request()->routeIs('sinnergems.favorite.index') ? 'On' : 'Off' !!}">
 		<a href="{-{route('sinnergems.favorite.index')}}" class="W-100 H-100 / flex dC cC cI">
 			<span class="flex dC cI">
 				<span class="Ico -S flex / _Close">@svg('favorite')</span>				
@@ -47,7 +47,7 @@
 		</a>
 	</div>
 
-	<div class="_ico -room / OnOff {!! request()->routeIs('sinnergems.room.index') ? 'on' : 'off' !!}">
+	<div class="_ico -room / OnOff {!! request()->routeIs('sinnergems.room.index') ? 'On' : 'Off' !!}">
 		<a href="{-{route('sinnergems.room.index')}}" class="W-100 H-100 / flex dC cC cI">
 			<span class="flex dC cI">
 				<span class="Ico -S flex / _Close">@svg('room')</span>				

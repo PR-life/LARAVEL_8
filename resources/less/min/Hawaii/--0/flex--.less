@@ -9,7 +9,6 @@
 
 .Bone > * {order:5}
 
-// .Bread > *,
 .Video,
 .Wagon,
 .Track,
@@ -51,12 +50,6 @@
 	}
 }
 
-@media screen and (max-width:@w-beyond) {
-	.flexBeyond {
-		display: flex;
-	}
-}
-
 @media screen and (max-width:@w-menu-2) {
 	.flex_mbl {
 		display: flex;
@@ -71,44 +64,23 @@
 .flex.none {display: none;}
 
 
-// .flex.-column {
-// 	flex-direction: column;
-// }
-
-// .flex.-row {
-// 	flex-direction: row;
-// }
-
-
-// .Bread,
 .flex.-wrap {
 	flex-wrap: wrap;
 }
 
-// .flex.-wrap.cloud-l > *,
-// .flex.-wrap.cloud-m > *,
-// .flex.-wrap.cloud-s > *,
 .flex.-wrap.cloud > *{
 	margin-right: var(--x-cloud);
 	margin-bottom: var(--x-cloud);
 }
  
 
-// .flex.cI,
-// .centerItems,
 .cI {
 	align-items: center;
 }
 
-// .flex.eI,
-// .centerItems,
 .eI {
 	align-items: flex-end;
 }
-
-
-// .flex.cC,
-// .centerContent,
 
 
 
@@ -116,8 +88,6 @@
     justify-content: center;
 }
 
-// .flex.sI,
-// .Bread > *,
 .sI {
     align-items: flex-start;
 }
@@ -150,20 +120,6 @@
 .dRR {
 	flex-direction: row-reverse;
 }
- 
-// .spaceBetweenJustifyContent,
-// .flex.sbJC {
-// 	justify-content: space-between;
-// }
-
-// .directionColumn-r,
-// .flex.dC-r {
-// 	flex-direction: column-reverse;
-// }
-
-
-
-
 
 @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
 
@@ -236,8 +192,13 @@
 
 }
 
+@media (min-width:@w-menu-2-plus) and (max-width:@w-beyond) {
+	.flexBeyond {
+		display: flex;
+	}
+
+}
 @media screen and (max-width:@metrika-80-plus) {
-// @media screen and (max-width:@metrika-80 + 100px + 16px) {
 	.Reg.-m80 {
 		flex-direction: column;
 	}
@@ -252,29 +213,25 @@
 
 
 @media screen and (max-width:@w-beyond ) {
-	// .Reg.-beyond {
-	// 	flex-direction: column;
-	// }
+
+	.sC_beyond {
+		justify-content: flex-start;
+	}
 
 	.dC_beyond  {
 		flex-direction: column;
 	}
 }
 
+ 
 @media screen and (max-width:@w-menu-2) {
 
-	// .Chunk,
+
 	.Onion {
         display: flex;
     }
 
-	//  .Golden,
-	//  .Chunk,
-    .Onion {
-        flex-direction: column;
-    }
-
-
+	.Onion,
 	.dC_mbl {
 		flex-direction: column;
 	}
@@ -303,10 +260,6 @@
 		justify-content: center;
 	}
 
-	
-	//  .flex-mbl {
-	// 	flex-direction:row;
-	//  }
 
 }
 

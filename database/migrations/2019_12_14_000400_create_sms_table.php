@@ -44,7 +44,7 @@ class CreateSmsTable extends Migration
             $table->text('question_4')->nullable();
             
             //
-            $table->string('type')->default('conversion');
+            $table->string('type')->default('lead'); // callback ask
             $table->string('label')->default('email');
 
             //

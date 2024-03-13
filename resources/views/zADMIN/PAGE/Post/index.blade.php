@@ -11,7 +11,7 @@
 @endpush
 
 @push('topAfter')
-    @include('zADMIN.PAGE._lego.filter.btnVol')
+    @include('zADMIN.PAGE._lego.filter.btn.content')
 @endpush
 
 @push('bee')

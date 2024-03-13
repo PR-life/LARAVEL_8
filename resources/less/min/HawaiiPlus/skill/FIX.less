@@ -39,7 +39,17 @@
 	// 	}
 	// }
 
+
+	// #28021050  перекрываем фон дополнительный, который видно при изменение высоты на мобильных когда исчезаеи шапка браузера
+	#body.fix {
+		.FIX.on ._fix {
+			z-index: 5;
+		}
+	}
+
 	.FIX.on {
+
+ 
 		._fix {
 			> ._sticky {
 				position: sticky;
@@ -50,14 +60,18 @@
 		._fix.-hScreen_mbl {
 			height: var(--FIX-height);
 		}
-		// .fix::after {
-		// 	content: '';
-		// 	position: absolute;
-		// 	left: 0;
-		// 	right: 0;
-		// 	top: 90%;
-		// 	height: 8rem;
-		// 	background-color: #fff;
-		// }
+		
+
+		// #28021050
+		.fix::after {
+			z-index: 2;
+			content: '';
+			position: absolute;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			height: 100px;
+			background-color: #fff;
+		}
 	}
 }

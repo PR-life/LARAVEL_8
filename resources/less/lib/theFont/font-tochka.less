@@ -1,0 +1,34 @@
+@charset "UTF-8";
+
+
+html {
+    --family-Tochka: tochka;
+}
+
+.familyTochka,
+.Family-Tochka * {
+	font-family: var(--family-Tochka) !important;
+	// font-family: var(--family-DT) !important;
+}
+
+@font-face {
+    font-family: 'tochka';
+    font-style: normal;
+    font-weight: 400;
+    src: local('tochka'), url(/font/tochka/400.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'tochka';
+    font-style: normal;
+    font-weight: 500;
+    src: local('tochka'), url(/font/tochka/500.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'tochka';
+    font-style: normal;
+    font-weight: 700;
+    src: local('tochka'), url(/font/tochka/700.woff2) format('woff2');
+    font-display: swap;
+}

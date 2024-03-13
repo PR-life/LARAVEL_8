@@ -26,7 +26,7 @@
 		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.faq.index')])
 
  
-		@include('zADMIN.PAGE.Faq._lego.create.body')	
+		@include('zADMIN.PAGE.Faq.lego.create.body')	
  
 
 

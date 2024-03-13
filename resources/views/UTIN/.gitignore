@@ -1,0 +1,7 @@
+# .gitignore
+# public, public_html, node_*, vendor
+
+lego/
+milk/
+shema/
+skeleton/

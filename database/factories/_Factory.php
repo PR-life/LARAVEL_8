@@ -7,7 +7,11 @@ use Illuminate\Support\Str;
 
 class _Factory extends Factory
 {
- 
+
+
+    // https://fakerphp.github.io/formatters/date-and-time/
+
+
     //  php artisan make:factory PostFactory
 
     public function definition()

@@ -53,11 +53,11 @@
 		@component('zADMIN.PAGE._wrap.Flaber.edit')
 
 		@slot('flaber')
-			@include('zADMIN.PAGE.Landing._lego.edit.sms')	
+			{{-- @include('zADMIN.PAGE.Landing.lego.edit.sms')	 --}}
 		@endslot
 
 			<div class="paragraphX2"></div>
-			@include('zADMIN.PAGE.Landing._lego.edit.body')
+			@include('zADMIN.PAGE.Landing.lego.edit.body')
 
 		@endcomponent
 

@@ -3,8 +3,9 @@
 namespace Database\Factories;
 
 use Illuminate\Database\Eloquent\Factories\Factory;
-use Illuminate\Support\Str;
 //
+use App\Models\Category;
+use App\Models\Tag;
 use App\Models\Face;
 
 class FaceFactory extends Factory
@@ -17,12 +18,86 @@ class FaceFactory extends Factory
     public function definition()
     {
         return [
-            'name' => $this->faker->name(),
-            'email' => $this->faker->unique()->safeEmail(),
-            'public_contact' => $this->faker->randomElement($array = array (
+            'name' => $this->faker->firstName(),
+            'surname' => $this->faker->firstName(),
+            'patronymic' => $this->faker->lastName(),
+            
+            'birthday' => $this->faker->dateTimeBetween('-65 years', '-18 years'),
+
+            'email' => $this->faker->randomElement($array = array (
                 $this->faker->unique()->safeEmail(),
-                $this->faker->unique()->phoneNumber(),
+                // $this->faker->unique()->safeEmail(),
+                // $this->faker->unique()->safeEmail(),
+                // $this->faker->unique()->safeEmail(),
+                // null,
             )),
+
+            'phone' => $this->faker->randomElement($array = array (
+                $this->faker->tollFreePhoneNumber(),
+                // $this->faker->phoneNumber(),
+                // $this->faker->phoneNumber(),
+                // null,
+            )),
+
+            'whatsapp' => $this->faker->randomElement($array = array (
+                $this->faker->tollFreePhoneNumber(),
+                // null,
+                // null,
+                // null,
+            )),
+
+
+            'telegram' => $this->faker->randomElement($array = array (
+                $this->faker->word(),
+                // null,
+                // null,
+                // null,
+            )),
+
+            'viber' => $this->faker->randomElement($array = array (
+                $this->faker->tollFreePhoneNumber(),
+                // null,
+                // null,
+                // null,
+            )),
+
+            'public_contact' => $this->faker->randomElement($array = array (
+                'email',
+                'email',
+                'phone',
+                'phone',
+                'phone',
+                'phone',
+                'whatsapp',
+                'telegram',
+                'viber',
+            )),
+
+            'country' => $this->faker->randomElement($array = array (
+                'Россия',
+                'Россия',
+                'Россия',
+                'Россия',
+                'Армения',
+                'Беларусь',
+                $this->faker->country(),
+            )),
+
+            'city' => $this->faker->randomElement($array = array (
+                'Mосква',
+                'СПБ',
+                'Самара',
+                'Mосква',
+                'Mосква',
+                'Сочи',
+                'Mосква',
+                'Mосква',
+                $this->faker->city()
+            )),
+
+            'area' => $this->faker->address(),
+
+
             'estimation' => $this->faker->randomElement($array = array (
                 '4.5',
                 '4.4',
@@ -59,34 +134,32 @@ class FaceFactory extends Factory
                 '2',
                 '3',
             )),
-            'country' => $this->faker->country(),
-            'city' => $this->faker->city(),
-            'location' => $this->faker->text(20),
-            'achievement' => $this->faker->text(150),
-            'text' => $this->faker->text(1400),
-            'year_using_device' => $this->faker->randomElement($array = array (
-                '2009',
-                '2010',
-                '2011',
-                '2012',
-                '2012',
-                '2013',
-                '2014',
-                '2015',
-                '2016',
-                '2016',
-                '2017',
-                '2018',
-                '2019',
-                '2020',
-                '2021',
-                '2022',
-                '2023',
+
+            'tag_id' => $this->faker->randomElement($array = array (
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                Tag::get()->random()->id,
             )),
-            'apk' => $this->faker->randomElement($array = array (
-                'imago',
-                'audit',
+
+            'category_id' => $this->faker->randomElement($array = array (
+                null,
+                null,
+                null,
+                null,
+                null,
+                null,
+                Category::get()->random()->id,
             )),
+
+
+
+
+            
+
             'user_id' => '1',
         ];
     }

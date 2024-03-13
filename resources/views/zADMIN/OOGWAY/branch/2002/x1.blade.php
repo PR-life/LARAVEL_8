@@ -1,7 +1,7 @@
 @component('zADMIN.PAGE._wrap.Flaber.edit')
 
 @slot('flaber')
-    {{-- @include('zADMIN.PAGE.Sms._lego.edit.sms')	 --}}
+    {{-- @include('zADMIN.PAGE.Sms.lego.edit.sms')	 --}}
 @endslot
 
  
@@ -24,7 +24,7 @@
     </details>
 </div>
 
-{{-- @include('zADMIN.PAGE.Sms._lego.edit.body')	 --}}
+{{-- @include('zADMIN.PAGE.Sms.lego.edit.body')	 --}}
 
 @endcomponent
 

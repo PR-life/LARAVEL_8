@@ -8,6 +8,6 @@
 		<div class="Abs tail">@svg('tail')</div>
 	</div>
 	<div class="Preamble -row -S / right">
-		<div class="content-s Grey">{{$Var_user_name ?? 'по умолчанию'}}</div>
+		<div class="content-s Grey">{{$Var_user_name ?? 'Николай Николаевич'}}</div>
 	</div>
 </div>

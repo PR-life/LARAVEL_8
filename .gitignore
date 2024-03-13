@@ -23,5 +23,5 @@ public_html
 webpack.mix.js
 .env
 /app/Providers/RouteServiceProvider.php
-/app/Http/Controllers/ADMIN/_sherpa/Excel/ExportController.php
-/app/Http/Controllers/ADMIN/Item
+# /app/Http/Controllers/ADMIN/_sherpa/Excel/ExportController.php
+/app/Http/Controllers/ADMIN/zItem

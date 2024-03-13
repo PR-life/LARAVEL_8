@@ -20,13 +20,19 @@ class User extends Authenticatable
 	const ROLE_READER = 50;
 
     protected $fillable = [
+        'role',
         'name',
         'email',
         'password',
+        'nickname',
+        'avatar',
+        'user_par_1',
+        'user_par_2',
+        'user_par_3',
         'order',
         'status',
         'published',
-		'role',
+        'mafia',
     ];
 
     protected $hidden = [

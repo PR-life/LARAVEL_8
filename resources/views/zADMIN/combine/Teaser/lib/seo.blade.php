@@ -38,14 +38,14 @@ if ($Var->name) {
 
                 <div class="flex cI">
 
-                    {{-- <h1></h1> --}}
                     <a class="content-m b600 / Article" 
                         href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', [
                                 mb_strtolower(class_basename($Var)) => $Var->id,
                                 'name' => $name ?? null,
                                 'page' => $page ?? null,
                                 'tag_id' => $tag_id ?? null,
-                                'category_id' => $category_id ?? null
+                                'category_id' => $category_id ?? null,
+                                'group_id' => $group_id ?? null
                             ])
                         }}"
                     >
@@ -60,13 +60,18 @@ if ($Var->name) {
                             @include('zADMIN.combine.Teaser.lib.lego.icoStatus')
                         </div>
     
+
                         <span class="flex / cross">
-                            @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $NAME, 'h2' => $Var->h2 ?? null, 'css' => 'x-name'])
+                        @if($Var->shema_teaser == 'shema-link')
+                            @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->slug, 'h2' => $Var->name ?? null, 'css' => 'x-name'])
+                        @else
+                            @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $NAME, 'h2' => $Var->h2 ?? null, 'css' => 'x-name'])
+                        @endif
                             <span class="EN / content-m b300 / block oneLine nowrap Ellipsis x-name / Grey">{!!$Var->en_name ?? '<em>en_name</em>'!!}</span>
                         </span>
     
                         <span class="v-Meta_title -off">
-                            @include('zADMIN.combine.Teaser._wrap.ellipsis',['Var' => $Var->title ?? '<em>title</em>', 'css' => 'v-Seo -on'])
+                            @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->title ?? '<em>title</em>', 'css' => 'v-Seo -on'])
                         </span>
                         
                     </a>
@@ -188,7 +193,7 @@ if ($Var->name) {
             </div>
 
 
-            @include('zADMIN.combine.Teaser._brick.data',['Var' => $Var, 'css' => '_5'])
+            @include('zADMIN.combine.Teaser._brick.data.index',['Var' => $Var, 'css' => '_5'])
             
             <div class="_7">
                 @include('zADMIN._brick.manager.basket', ['class' => class_basename($Var), 'id' => $Var->id])

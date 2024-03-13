@@ -26,7 +26,7 @@
 			@endslot
 
 			<div class="paragraphX2"></div>
-			{{-- @include('zADMIN.PAGE.Faq._lego.edit.body')	 --}}
+			{{-- @include('zADMIN.PAGE.Faq.lego.edit.body')	 --}}
 
 		@endcomponent
 

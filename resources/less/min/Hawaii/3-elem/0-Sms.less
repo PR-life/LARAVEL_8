@@ -2,10 +2,10 @@
 
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
-	.SMS,
-	.Sms {
-		min-width: var(--Sms);
-	}
+	// .SMS,
+	// .Sms {
+	// 	min-width: var(--Sms);
+	// }
 
 	.Sms.-w {
 		width: var(--Sms);
@@ -20,11 +20,10 @@
 // }
 
 
-
 // min-width: var(--bar);
 
 
-.-Sms.-bar.off {
+.-Sms.sms-bar.off {
 	--Sms:var(--bar);
 	// width: 0;
 	// min-width: 0;
@@ -39,7 +38,13 @@
 
 
 .-Sms,
-.SMS,
+// .SMS,
 .Sms {
 	.sms-hidden {display: none;}
+}
+
+
+// хуйне, меняй на другое название
+.SMS {
+	background-color: red;
 }

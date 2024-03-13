@@ -13,10 +13,10 @@ x09081525.forEach( item => {
 		check = item.getAttribute('data-check'),
 		param = item.getAttribute('param');
 
-	console.log(item)
-	console.log(arr)
-	console.log(check)
-	console.log(param)
+		// console.log(item)
+		// console.log(arr)
+		// console.log(check)
+		// console.log(param)
  
 
 	if(arr != null && arr.includes(check)) {

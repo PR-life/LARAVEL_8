@@ -27,6 +27,7 @@
 		padding-left: 3px;
 	}
 
+	._wrap,
 	.content {
 		padding: var(--x-Citation-edge-top) 20px var(--x-Citation-edge-top) calc(var(--x-Citation-space) * .5);
 	}
@@ -63,104 +64,3 @@
 		}
 	}
 }
-
-/*
-
-
-
-.Citation.Fog {
-	--x-Citation-var-w: 1rem;
-}
-
-.Citation.Fog.On {
-	--x-Citation-var-w: 0rem;
-}
-
-@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
-
-	.Citation {
-		--x-Citation:var(--Paper);
-	}
-
-	.Citation.-M {
-		--x-Citation: var(--Blog);
-	}
-	.Citation.-S {
-		--x-Citation: 28rem;
-	}
-	
-	.Citation.-l {
-		margin-left: 0;
-	}
-
-	.Citation.-face.faceBottom,
-	.Citation.-face.-mblPC {
-		padding-left: 0;
-
-		.author {
-			margin-top: calc(var(--x-face)*.4);
-			padding-left: calc(var(--x-face) + 3px);
-		}
-	}
-
-	.Citation.-face.faceBottom::before,
-	.Citation.-face.-mblPC::before {
-		top: auto;
-		left: calc(var(--x-face) - var(--x-face) - 2px);;
-		bottom: calc(var(--x-face) - var(--x-face)*1.25);
-	}
-	
-}
-
-@media screen and (max-width: @w-menu-2) {
-	.Citation {
-		--x-Citation:calc(var(--w) - 3rem);
-	}
-
-	.Citation.-face {
-		padding-left: 0;
-
-		.author {
-			margin-top: calc(var(--x-face)*.4);
-			padding-left: calc(var(--x-face) + 1px);
-		}
-	}
-
-	.Citation.-face::before {
-		top: auto;
-		left: calc(var(--x-face) - var(--x-face) - 3px);
-		bottom: calc(var(--x-face) - var(--x-face)*1.25);
-	}
-}
-
-
-//
-
-
- 
-.Citation.Fog .content {
-	padding-bottom: 0;
-}
-
-.Citation.Fog.On .content {
-	padding-bottom: 11px;
-}
-
-
-@media screen and (max-width: @w-menu-2) {
-
-	.Citation.Fog.On,
-    .Citation {
-        width:100%;
-        max-width: var(--x-Citation);
-    }
-
-	.Citation.Fog {
-		max-width:calc(var(--x-Citation) - 2rem);
-	}
-
-}
-
-
-/**/
- 

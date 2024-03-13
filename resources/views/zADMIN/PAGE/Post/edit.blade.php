@@ -54,11 +54,11 @@
 		@component('zADMIN.PAGE._wrap.Flaber.edit')
 
 			@slot('flaber')
-				@include('zADMIN.PAGE.Post._lego.edit.sms')	
+				@include('zADMIN.PAGE.Post.lego.edit.sms')	
 			@endslot
 
 			<div class="paragraphX2"></div>
-			@include('zADMIN.PAGE.Post._lego.edit.body')
+			@include('zADMIN.PAGE.Post.lego.edit.body')
 
 		@endcomponent
 
@@ -66,7 +66,7 @@
 
 		{{-- @component('zADMIN.PAGE._wrap.Reg.edit')
 			@slot('Sms')
-				@include('zADMIN.PAGE.Category._lego.edit.sms')	
+				@include('zADMIN.PAGE.Category.lego.edit.sms')	
 			@endslot
 		@endcomponent --}}
 

@@ -1,7 +1,7 @@
 @component('_wrap.Chunk.Aside.a')
     @slot('routeRegexp', 'admin/oogway*')
     @slot('routeName', 'admin.oogway.morda')
-    @slot('icoCss', '-S')
+    @slot('cssIco', '-S')
     @slot('sizeName', 'content-xs')
     @slot('name', 'Управление проектом')
     @svg('oogway')
@@ -9,7 +9,7 @@
 @component('_wrap.Chunk.Aside.js_data')
     @slot('routeRegexp', 'admin/sherpa*')
     @slot('data', "data-click data-goto='milkSherpa' data-foo='click' data-css data-toggle='on'")
-    @slot('icoCss', '-S')
+    @slot('cssIco', '-S')
     @slot('sizeName', 'content-xs')
     @slot('name', 'Шерпы')
     <svg viewBox="0 0 36 36" fill="none">

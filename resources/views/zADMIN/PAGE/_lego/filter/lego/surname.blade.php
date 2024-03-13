@@ -1,0 +1,1 @@
+<input class="round-s" type="text" name="surname" placeholder="{{$placeholder ?? 'фамилия'}}..." value="{{isset($_GET["surname"]) ? $_GET["surname"] : ''}}">

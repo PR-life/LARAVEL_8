@@ -1,0 +1,1 @@
+<input type="text" name="name" placeholder="{{$placeholder ?? 'в названии'}}..." value="{{isset($_GET["name"]) ? $_GET["name"] : ''}}">

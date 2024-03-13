@@ -1,4 +1,4 @@
-@component('_wrap.ADMIN.bar.menu')
+@component('zADMIN._wrap.bar.menu')
 @slot('id', 'barMenu_office')
 @slot('name')
     @component('_wrap.Chunk.Aside.index')
@@ -10,10 +10,14 @@
 <div class="-Chunk / diminish -icoDown">
     <div class="paragraph-s"></div>
     @component('_wrap.Chunk.Aside.index')
-        @slot('routeName', 'admin.morda')
-        @slot('icoCss', '-XS')
+        @slot('routeName', 'admin.user.index')
+        @slot('linkAdd', route('admin.user.create'))
         @slot('name', 'Пользователи')
-        @svg('plus')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
     @endcomponent
+
+
 </div>
 @endcomponent
