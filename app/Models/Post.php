@@ -19,9 +19,8 @@ class Post extends Model
     protected $table = 'posts';
     protected $guarded = false;
 
-    // protected $withCount = ['likedUsers','comments'];
+    // protected $withCount = ['likedUsers','comments']; // названия по Функциям ниже
     // protected $with = ['category','author'];
-    // protected $withCount = ['comments'];
     
     protected $lang_fields = [
         'name',

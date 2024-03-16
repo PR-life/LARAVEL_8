@@ -51,6 +51,8 @@
     min-height:var(--Smart-h);
 }
 
+
+
 //
 .hill {
 	height: var(--hill);
@@ -112,15 +114,6 @@
         --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 );
     }
 
-
-    // .Plot {
-    //     --x-Plot:0px;
-    //     //
-    //     height:calc(var(--h) - var(--h-Top) - var(--h-Header) - var(--x-Plot));
-    //     max-height:1260px;
-    //     min-height: 560px;
-    // }
-
     .Plot.-h {
         --Plot:clamp(700px,calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise)),940px);
     }
@@ -138,37 +131,24 @@
         --PlotMin:calc(var(--h)*.5 - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
     }
 
-    //
 
+    //
     .Tape.-h {
         --Tape:320px;
         // --TapeMin:auto;
     }
 }
 
-@media (min-width: @w-menu-2-plus) and (max-width:@metrika-80) {
-    // .Plot {
-    //     max-height:700px;
-    // }
-}
-
-@media (min-width: @w-menu-2-plus) and (max-width:1080px) {
-    // .Plot {
-    //     max-height:600px;
-    // }
-}
-
 
 @media screen and (max-width:@w-menu-2) {
     .Plot.-h.-mbl {
         --Plot:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
-
-        height:auto;
+        // height:auto;
     }
 
-    .Plot.-h.-fixMbl {
-        height:var(--Plot);
-    }
+    // .Plot.-h.-fixMbl {
+    //     height:var(--Plot);
+    // }
 }
  
 

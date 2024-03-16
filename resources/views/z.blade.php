@@ -41,7 +41,7 @@
 @endcomponent
 
 @stack('basementBefore')
-@stack('basement')
+@yield('basement')
 @stack('basementAfter')
 
 <div id="FixMenu" class="FixMenu -mbl / none_PC">
@@ -57,7 +57,7 @@
 	<!-- include('_.module.Kontur.index') -->
 	@stack('milk')
 	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		@include('_.src.svg.index')
+		@include('_.src.svg._def')
 		@stack('svg')
 	</svg>
 </div>

@@ -11,8 +11,6 @@ mix.less('resources/min.less', 'public/css/min.css')
 	.less('resources/font.less', 'public/css/font.css')
 	.less('resources/lead.less', 'public/css/lead.css')
 	//
-	.less('resources/less/lib/Design/LITE.less', 'public/css/Design/lite.css')
-	//
 	.less('resources/less/lib/zSolo/Start.less', 'public/css/solo/Start.css')
 	.less('resources/less/lib/zSolo/Utin.less', 'public/css/solo/Utin.css')
 	//

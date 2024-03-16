@@ -2,10 +2,11 @@
 
 use Illuminate\Support\Facades\Route;
 
-// use App\Http\Livewire\Admin\Dashboard;
 
 //
-Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin']], function () {
+//  !!!!!middleware verified не сработал + есть еще в коде этот момент
+// ищи по 15031049
+Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']], function () {
     Route::get('/', function() {return view('zADMIN.Morda');})->name('morda');
 
 

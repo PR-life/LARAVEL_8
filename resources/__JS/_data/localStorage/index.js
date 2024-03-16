@@ -1,5 +1,9 @@
 import { isSet } from "lodash";
 
+// про lodash
+// https://habr.com/ru/companies/ruvds/articles/502424/
+// https://youmightnotneed.com/lodash/
+
 export class LocalStorageCss {
 	constructor(dbPrefix = 'net'){
 		this.body = 'body';

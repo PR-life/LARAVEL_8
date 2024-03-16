@@ -28,7 +28,7 @@
 
 
 
-@push('Bar')
+@push('oiBar')
     @include('zADMIN._skeleton.Bar.admin')
 @endpush
 

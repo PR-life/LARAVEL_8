@@ -1,5 +1,5 @@
 let threshold = window.innerHeight / 2;
-let activeItems = document.querySelectorAll(".JsScrollActive a");
+let activeItems = document.querySelectorAll(".JsScroll.js_param-active a");
 //
 let scrollDelay = 50;
 let scrollTimeout;
@@ -8,7 +8,6 @@ window.addEventListener('scroll', function(){
 	clearTimeout(scrollTimeout)
 	scrollTimeout = setTimeout(onScroll, scrollDelay)
 });
-
 
 function onScroll(){
 
@@ -25,9 +24,5 @@ function onScroll(){
 	function setActiveCSS(activeItems,a) {
 		activeItems.forEach(item => item.classList.remove('active'))
 		a.classList.add('active')
-		// console.log(a)
 	}
 }
-
-
- 

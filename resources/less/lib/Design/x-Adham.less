@@ -1,6 +1,9 @@
 @charset "UTF-8";
 
-.D-Adham {
+@c-avisited:red;
+
+// .D-Adham {
+.Design.x-Adham {
     --bg:#485ccc;
     --bg-Aside_2:#485ccc;
     --bg-oiBar:rgba(33, 33, 33,1);
@@ -11,6 +14,7 @@
     --x-Adham-grid-color: rgba(255,255,255,.05);
     --x-Adham-bg:rgba(72,92,204,1);
     --x-Adham-bg-9:rgba(72,92,204,.9);
+    --x-Adham-bg-8:rgba(72,92,204,.8);
     --x-Adham-bg-7:rgba(72,92,204,.7);
     // --x-Adham-bg:rgba(60,84,204,1);
     // --x-Adham-bg-9:rgba(60,84,204,.9);
@@ -28,12 +32,22 @@
         --x-Adham-28071423-w: 20px;
     }
 
-    .oiBar,
-    .oi {      
+    .oiBar{
         background-size: var(--x-Adham-28071423-w) var(--x-Adham-28071423-w);
         background-image: linear-gradient(90deg, var(--x-Adham-grid-color) 1px,transparent 0),linear-gradient(180deg,var(--x-Adham-grid-color) 1px,transparent 0);
-    
     }
+
+    .oi {     
+        // background-size: var(--x-Adham-28071423-w) var(--x-Adham-28071423-w);
+        // background-image: linear-gradient(90deg, var(--x-Adham-grid-color) 1px,transparent 0),linear-gradient(180deg,var(--x-Adham-grid-color) 1px,transparent 0);
+        
+        background-attachment: fixed;
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3e%3cdefs%3e%3cpattern id='grid' width='40' height='40' patternUnits='userSpaceOnUse'%3e%3cpath d='M 0 10 L 40 10 M 10 0 L 10 40 M 0 20 L 40 20 M 20 0 L 20 40 M 0 30 L 40 30 M 30 0 L 30 40' fill='none' stroke='%235d76cb' opacity='0.2' stroke-width='1'/%3e%3cpath d='M 40 0 L 0 0 0 40' fill='none' stroke='%235a6bcf' stroke-width='1'/%3e%3c/pattern%3e%3c/defs%3e%3crect width='100%25' height='100%25' fill='url(%23grid)'/%3e%3c/svg%3e");
+    }
+
+
+    // <svg width="40" height="40" xmlns="http://www.w3.org/2000/svg"><defs><pattern id="grid" width="40" height="40" patternUnits="userSpaceOnUse"><path d="M 0 10 L 40 10 M 10 0 L 10 40 M 0 20 L 40 20 M 20 0 L 20 40 M 0 30 L 40 30 M 30 0 L 30 40" fill="none" stroke="#cccccc" opacity="0.2" stroke-width="1"/><path d="M 40 0 L 0 0 0 40" fill="none" stroke="#cccccc" stroke-width="1"/></pattern></defs><rect width="100%" height="100%" fill="url(#grid)"/></svg>
+
 
     #oiBar {
         --c-text:rgba(255,255,255,.5);
@@ -99,19 +113,20 @@
     }
 
     .oi::before {
-        content: '';
-        left: 4rem;
-        right: 4rem;
-        top: 0;
-        bottom: 0;
-        background: linear-gradient(to bottom, 
-            var(--x-Adham-bg) 0%, 
-            var( --x-Adham-bg-9) 150px, 
-            var( --x-Adham-bg-7) 150px, 
-            var( --x-Adham-bg-7) 80%, 
-            transparent 95%);
+        // content: '';
+        // left: 0;
+        // right: 0;
+        // top: 0;
+        // bottom: 0;
+        // background: linear-gradient(to bottom, 
+        //     var(--x-Adham-bg) 0%, 
+        //     var( --x-Adham-bg-9) 150px, 
+        //     var( --x-Adham-bg-8) 150px, 
+        //     var( --x-Adham-bg-8) 400px, 
+        //     var( --x-Adham-bg-7) 80%, 
+        //     transparent 95%);
 
-            box-shadow: 0px 5px 30px 2px var(--x-Adham-bg);
+            // box-shadow: -20px 5px 30px 2px var(--x-Adham-bg);
     }
 
 
@@ -129,4 +144,4 @@
 
 }
 
-@import "./Adham/_ol.less";
+@import "./x-adham/_ol.less";
