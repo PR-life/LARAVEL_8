@@ -3,11 +3,8 @@ const options = {
 	rootMargin: '-100px',
 	threshold: 0.0,
 }
-
 //
-
 // document.addEventListener('DOMContentLoaded', function(){
-
 let arr = document.querySelectorAll('.Visible');
 let observer = new IntersectionObserver(callback, options)
 
@@ -16,6 +13,12 @@ arr.forEach( arr => observer.observe(arr))
 
 function callback(entries,observer) {
 	entries.forEach(entry => {
+
+
+		// isIntersecting — булево значение. true если есть пересечение элемента и наблюдаемой области.
+		// intersectionRatio — доля пересечения от 0 до 1. Если элемент полностью в наблюдаемой области, то значение будет 1, а если наполовину, то — 0.5.
+		// target — сам наблюдаемый элемент для дальнейших манипуляций. Например, для добавления классов.
+	
 		if (entry.isIntersecting){
 			if(entry.target.classList.contains('Visible')) {
 				entry.target.classList.remove('visibleOff')
@@ -27,6 +30,15 @@ function callback(entries,observer) {
 					entry.target.classList.remove('Visible')
 				}
 			}
+
+			if(entry.target.hasAttribute('visible-add')) {
+				// console.log(111)
+				entry.target.classList.add(entry.target.getAttribute('visible-param'))
+				entry.target.removeAttribute('visible-add')
+			}
+
+ 
+ 
 		} else {
 			if(entry.target.classList.contains('Visible')) {
 				entry.target.classList.remove('visibleOn')

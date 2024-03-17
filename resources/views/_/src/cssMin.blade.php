@@ -432,6 +432,9 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.none_beyond{
 		display:none !important
 	}
+	.block_beyond{
+		display:block !important
+	}
 }
 @media screen and (max-width:920px){
 	.none_pad{
