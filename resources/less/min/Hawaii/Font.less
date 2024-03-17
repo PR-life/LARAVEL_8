@@ -14,6 +14,10 @@
 		--Font-min:var(--rem-h);
 		--Font-min-lineHeight:calc(var(--Font-min) + 4px);
 
+		//
+		--Font-p: var(--font);
+		--Font-p-max: var(--rem-p);
+
 	}
 
 	.Font.-S {
@@ -39,9 +43,10 @@
 		// --Font-min: 18px;
 		// --Font-min-line: calc(var(--Font-min) + 4px);
 		--font-min:16px;
-		._p {
-			--rem-p:20px;
-		}
+
+		//
+		--Font-p: var(--rem-p);
+		--Font-p-max: calc(var(--rem-p) + .25rem);
 	}
 
 	.Font.-L {
@@ -71,7 +76,9 @@
 		--Font-min:var(--rem-h);
 		--Font-min-lineHeight:calc(var(--Font-min) + 4px);
 
-
+		//
+		--Font-p: var(--font);
+		--Font-p-max: var(--rem-p);
 	}
 
 	.Font.-XS {
@@ -115,9 +122,18 @@
         line-height: calc(var(--Font-h1-max) + var(--Font-lineHeight));
     }
 
+
+
 	._h.-vw {
 		font-size: var(--Font-h1-CALC);
 		line-height: var(--Font-h1-height-CALC);
+	}
+
+	._p.-vw {
+		--Font-p: 2vw;
+
+		font-size: var(--Font-p-CALC);
+		line-height: var(--Font-p-height-CALC);
 	}
 
 	//
@@ -140,11 +156,25 @@
 
 
 	//
-	 ._p {
-        font-size:var(--rem-p);
-        line-height: ~"calc(var(--rem-p) * 1.4)";
-	 }
+	//  ._p {
+    //     font-size:var(--rem-p);
+    //     line-height: ~"calc(var(--rem-p) * 1.4)";
+	//  }
 
+
+	 ._p {
+		--Font-p-CALC: clamp(
+			var(--font),
+			var(--Font-p),
+			var(--Font-p-max)
+		);
+		--Font-p-height-CALC: calc(var(--Font-p-CALC) + var(--Font-lineHeight));
+
+
+		//
+		font-size: var(--Font-p);
+        line-height: calc(var(--Font-p-max) + var(--Font-lineHeight));
+    }
 
 
 
