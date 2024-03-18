@@ -33,7 +33,18 @@ function callback(entries,observer) {
 
 			if(entry.target.hasAttribute('visible-add')) {
 				// console.log(111)
-				entry.target.classList.add(entry.target.getAttribute('visible-param'))
+				let div;
+
+				if(entry.target.getAttribute('visible-add')) {
+					div = document.getElementById(entry.target.getAttribute('visible-add'))
+				} else {
+					div = entry.target;
+				}
+
+				console.log(div)
+
+
+				div.classList.add(entry.target.getAttribute('visible-param'))
 				entry.target.removeAttribute('visible-add')
 			}
 
