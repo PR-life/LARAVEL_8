@@ -58,10 +58,19 @@ html {
     }
 
 
-    fieldset {
-        border-width: 1px;
-        border-color: @c-border;
-      }
+
+    textarea::-webkit-input-placeholder {
+        font-style: italic;
+     }
+     textarea:-moz-placeholder {
+        font-style: italic;
+     }
+     textarea::-moz-placeholder {
+        font-style: italic;
+     }
+     textarea:-ms-input-placeholder {
+        font-style: italic;
+     }
 
 }
 
@@ -87,6 +96,20 @@ html {
 
     summary:hover {
         background-color: #f0f7f9;
+    }
+}
+
+@media screen and (max-width:@w-menu-2) {
+    .Details.-edge details[open] {
+
+        > summary {
+            padding-left: 2rem;
+
+        }
+    }
+
+    .details-arrow-left > details[open] > summary > i {
+        left: 10px;
     }
 }
 
