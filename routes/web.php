@@ -18,7 +18,7 @@ Route::post('/asnone/sms/update', [App\Http\Controllers\SmsController::class, 'u
 
 
 Route::get('/fz-152', function () {
-    return view('z.Fz');
+    return view('zPAGE.Doc.Fz');
 })->name('fz');
 
 

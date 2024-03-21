@@ -14,7 +14,6 @@ class StoreController extends Controller
     public function __invoke(StoreRequest $request){
 
         $data = $request->validated();
-
         $landing = Landing::create($data);
 
 		return redirect()->route('admin.landing.edit', $landing->id);

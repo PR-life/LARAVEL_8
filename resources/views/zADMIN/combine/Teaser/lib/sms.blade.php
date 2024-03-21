@@ -6,14 +6,17 @@
                     @include('zADMIN.combine.Teaser.lib.brick.slug', ['incoming_param' => $Var->sku])
                 @endif
                 <a class="content" href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', $Var->id) }}">
-                    @include('zADMIN.combine.Teaser._wrap.ellipsis.name',['Var' => $Var->param_1 ?? $Var->sms])
+                    @include('zADMIN.combine.Teaser._wrap.ellipsis.name',['Var' => $Var->sms ?? $Var->from_page])
                 </a>
             </div>
-            <div class="_2 / Min Max -w2 / center-text">
+            <div class="_2 / Min Max -w1 / center-text">
                 <div class="content-xs / Grey -c30">{{$Var->type}}</div>
             </div>
-            <div class="_3">
-                <div class="content-xs / Grey -c30">{{$Var->name}}</div>
+            <div class="_3 / Min Max -w1 / center-text">
+                <div class="content-xs / Grey -c30">{{$Var->label}}</div>
+            </div>
+            <div class="_4">
+                <div class="content-xs nowrap / Grey -c30">{{$Var->name}}</div>
             </div>
         </div>
 

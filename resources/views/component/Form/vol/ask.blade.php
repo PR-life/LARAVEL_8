@@ -1,15 +1,15 @@
-@component('component.Form._wrap.index',['css' => 'Form -space bg round ' . $css ?? ''])
+@component('component.Form._wrap.index',['css' => $css])
 
-	@slot('id', 'formContact')
+	@slot('id', $id ?? 'Ask')
 	@slot('route', route('sms.ask'))
 	{{-- <input type="hidden" name="lang" value="{{app()->getLocale()}}"> --}}
+	{!!$hidden ?? ''!!}
 
 
-	<div class="space">
-		{!!$slot!!}
+	<div class="{{$css_wrap ?? 'space'}}">
+		{!!$slot ?? ''!!}
 		<div class="_shell">
-			<textarea id="textareaSms_Contact" class="round" name="ask" maxlength="850" rows="12" placeholder="{{__('/_const/form.text')}}...">{{old('message')}}</textarea>
-			<div class="x-Error"></div>
+			<textarea id="textarea_{{$id ?? 'Ask'}}" class="{{$textarea_css ?? 'round space'}}" name="ask" maxlength="850" rows="12" placeholder="{{$placeholder ?? __('/_const/form.text')}}...">{{old('ask')}}</textarea>
 		</div>
 	</div>
 

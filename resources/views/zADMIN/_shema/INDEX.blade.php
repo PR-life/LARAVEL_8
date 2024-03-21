@@ -19,7 +19,7 @@
 
 @include('zADMIN._shema._brick.src')
 @include('zADMIN._shema._brick.style')
-@include('zADMIN.THIS.index')
+@include('zADMIN.zTHIS.index')
 
 
 @push('css-body', 'x-aside Design x-Admin ')

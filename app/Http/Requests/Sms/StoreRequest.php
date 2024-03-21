@@ -18,8 +18,10 @@ class StoreRequest extends FormRequest
     {
         return [
 
-            'name' => 'nullable|min:2',
+            'tech_idFormError' => 'nullable',
 
+            //
+            'name' => 'nullable|min:2',
             'contact' => 'nullable|min:2',
 
             'email' => 'nullable|email',
@@ -27,7 +29,6 @@ class StoreRequest extends FormRequest
 			'whatsapp' => 'nullable|string',
 			'telegram' => 'nullable|string',
 			'viber' => 'nullable|string',
-
 
             'country'=>'nullable|string',
             'city'=>'nullable|string',
@@ -48,7 +49,6 @@ class StoreRequest extends FormRequest
             'type'=>'nullable|string',
             'label'=>'nullable|string',
 
-            
             'id_item'=>'nullable|string',
             'from_page'=>'nullable|string',
 
@@ -67,7 +67,7 @@ class StoreRequest extends FormRequest
 			'email.email' => 'некорректный e-mail',
             //
 			'phone.regex' => 'Неверный формат телефона',
-			'phone.min' => 'Номер телефона должен содержать не менее 9 символов',
+			'phone.min' => 'Номер телефона короче 9 символов',
 		];
 	}
 }

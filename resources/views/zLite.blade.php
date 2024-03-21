@@ -1,17 +1,18 @@
-<? $Arr = [
-	'title' => 'Бриф для клиента',
-	'description' => 'Стратегия продвижения личного бренда | Агентство Life',
-	'site_name' => 'pr-life.com',
-	'image' => 'https://dariamushta.pr-life.com/images/ogp.jpg',
-];
+<? 
+// $Arr = [
+// 	'title' => 'Бриф для клиента',
+// 	'description' => 'Стратегия продвижения личного бренда | Агентство Life',
+// 	'site_name' => 'pr-life.com',
+// 	'image' => 'https://dariamushta.pr-life.com/images/ogp.jpg',
+// ];
 
-$ogp = (object) $Arr;
+// $ogp = (object) $Arr;
 ?>
 <!DOCTYPE html>
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-	{{-- @include('_shema._lego.head.index') --}}
-	@include('_shema._lego.head.index', ['ogp' => $ogp])
+	@include('_shema._lego.head.index')
+	{{-- @include('_shema._lego.head.index', ['ogp' => $ogp]) --}}
 </head>
 <body id="body" class="MXAT @yield('css-body') @stack('css-body')">
 <script>

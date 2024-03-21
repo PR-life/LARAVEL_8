@@ -23,6 +23,16 @@ class StoreRequest extends FormRequest
             'name' => 'nullable|string',
             'from_page'=>'nullable|string',
             'title'=>'nullable|string',
+            
+            'email' => 'nullable|email',
+            'phone' => 'nullable|regex:/^([0-9\s\-\+\(\)]*)$/|min:9',
+			'whatsapp' => 'nullable|string',
+			'telegram' => 'nullable|string',
+			'viber' => 'nullable|string',
+
+            'country'=>'nullable|string',
+            'city'=>'nullable|string',
+            'area'=>'nullable|string',
 
             'q1_name'=>'nullable|string',
             'q1'=>'nullable|string',
@@ -65,6 +75,13 @@ class StoreRequest extends FormRequest
             'v5_name'=>'nullable|string',
             'v5'=>'nullable|array',
             'v5.*' => 'nullable|integer',
+            'v6_name'=>'nullable|string',
+            'v6'=>'nullable|array',
+            'v6.*' => 'nullable|integer',
+
+            'type'=>'nullable|string',
+            'label'=>'nullable|string',
+
         ];
     }
 

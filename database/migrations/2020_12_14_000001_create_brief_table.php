@@ -19,6 +19,7 @@ class CreateBriefTable extends Migration
 			// $table->string('sku')->unique()->nullable();			
 
             $table->string('name')->nullable();
+            $table->string('from_page')->nullable();
             
             $table->string('email')->nullable();
             $table->string('phone')->nullable();
@@ -73,19 +74,11 @@ class CreateBriefTable extends Migration
             $table->string('type')->default('lead'); // callback ask
             $table->string('label')->default('email');
 
-            //
-            $table->string('id_item')->nullable();
-            $table->string('from_page')->nullable();
-
-            //
-            $table->unsignedInteger('go_mod_talk')->default('0');
-
 			$table->unsignedBigInteger('category_id')->nullable();          
             $table->index('category_id', 'brief_category_idx'); 
             $table->foreign('category_id', 'brief_category_fk')->on('categories')->references('id');
 
             //
-			$table->integer('views')->default('1');
 			$table->unsignedInteger('order')->default('50');
             $table->unsignedInteger('status')->default('1');
 

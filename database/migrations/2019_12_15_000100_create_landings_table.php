@@ -51,9 +51,12 @@ class CreateLandingsTable extends Migration
 			$table->string('title')->nullable();
 			$table->string('description')->nullable();
 			$table->string('keywords')->nullable();
+			$table->string('canonical')->nullable();
             
-            $table->string('canonical')->nullable();
-
+            $table->string('ogp_type')->nullable();
+            $table->string('ogp_image')->nullable();
+            $table->string('ogp_title')->nullable();
+            $table->string('ogp_description')->nullable();
 
 			//
 		    $table->timestamps();

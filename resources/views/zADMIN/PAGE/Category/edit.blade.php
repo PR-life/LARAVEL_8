@@ -36,18 +36,17 @@
 		@component('zADMIN.PAGE._wrap.Flaber.edit')
 
 			@slot('flaber')
-				@include('zADMIN.PAGE.Category.lego.edit.sms')	
+				{{-- @include('zADMIN.PAGE.Category.lego.edit.sms')	 --}}
 			@endslot
 
 			@slot('date')
-				<div class="pl-edgeS"> 
+				{{-- <div class="pl-edgeS"> 
 					<dl class="-dot -rightS Void">
 						<dt class="content-xs Grey">дата</dt>
 						<dd><span class="content-xs">{{$category->created_at}}</span></dd>
 					</dl>
-				</div>
+				</div> --}}
 			@endslot
-
 
 			<div class="paragraphX2"></div>
 			@include('zADMIN.PAGE.Category.lego.edit.body')

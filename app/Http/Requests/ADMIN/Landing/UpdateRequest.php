@@ -28,6 +28,9 @@ class UpdateRequest extends StoreRequest
             'en_title' => 'nullable|string',
             'en_description' => 'nullable|string',
             'en_keywords' => 'nullable|string',
+
+            'en_ogp_title' => 'nullable|string',
+            'en_ogp_description' => 'nullable|string',
         ]);
 
     }

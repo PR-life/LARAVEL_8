@@ -3,22 +3,6 @@
 @section('title')edit. Landing - {{$landing->name}} @endsection
 
 
-
-@push('linkCss')
-	@include('_.src.link.css.text.select')
-@endpush
-
-@push('linkJsAfter')
-	@include('_.src.link.js.text.select')
-@endpush
-
-@push('js-bottom-solo')
-	<script>
-		$('#js_tags').select2()
-	</script>
-@endpush
-
-
 @push('addBread')
 	<li>
 		<span>
@@ -26,9 +10,9 @@
 		</span>
 	</li>
 	<li>
-		<span>
-			<span class="content-xs">Landing</span>
-		</span>
+		<a href="{{route('admin.landing.index')}}">
+			<span class="content-xs">Landings</span>
+		</a>
 	</li>
 @endpush
 
@@ -41,20 +25,19 @@
 
 	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.landing.update', $landing->id), 'css' => '-landing'])
 
-		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.landing.index', ['shema' => request()->get('shema')])]) --}}
+
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.landing.index'])
 
-
-		<div class="_shell">
+		<div class="_shell / net">
 			@include('zADMIN._bd.edit.min',['Var'=> $landing])
 		</div>
 
 		
 		@component('zADMIN.PAGE._wrap.Flaber.edit')
 
-		@slot('flaber')
-			{{-- @include('zADMIN.PAGE.Landing.lego.edit.sms')	 --}}
-		@endslot
+			@slot('flaber')
+				{{-- @include('zADMIN.PAGE.Landing.lego.edit.sms')	 --}}
+			@endslot
 
 			<div class="paragraphX2"></div>
 			@include('zADMIN.PAGE.Landing.lego.edit.body')
@@ -63,13 +46,13 @@
 
 
 
-		<div class="paragraph"></div>
+		{{-- <div class="paragraph"></div>
 		@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'Блокнот'])
 		<div class="paragraph"></div>
 		<div class="_shell Article aura / Note -lite">
 			<textarea id="tinymce_lite_2" name="knot_1" placeholder='текст...'>{{$landing->knot_1}}</textarea>
-			{{-- @include('zADMIN._brick.cleanHTML') --}}
-		</div>
+			@include('zADMIN._brick.cleanHTML')
+		</div> --}}
 
 
 		<div class="hill"></div>

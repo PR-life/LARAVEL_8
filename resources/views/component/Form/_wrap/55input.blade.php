@@ -6,5 +6,5 @@
     @error($Var, $requestName ?? 'newSms')
         <div class="Abs / Nameplate -rt">{{ $errors->newSms->first($Var) }}</div>
     @enderror
-    <div class="x-Error"></div>
+    {{-- <div class="x-Error"></div> --}}
 </div>

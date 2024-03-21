@@ -17,6 +17,14 @@ ul.-out {
 	padding-left: 0;
 }
 
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.ul.-out_PC,
+	ul.-out_PC {
+		padding-left: 0;
+	}
+}
+
+
 ul.ul,
 ol  {
 	> li {position: relative;}
@@ -104,6 +112,7 @@ ol {
 		--x-padding-left-precise: 3px;
 	}
 	
+
 	.ul.-out,
 	ul.-out {
 		li::before {

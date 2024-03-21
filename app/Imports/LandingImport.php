@@ -70,10 +70,18 @@ class LandingImport implements ToCollection, WithHeadingRow
                     'title' => $item['title'],
                     'description' => $item['description'],
                     'keywords' => $item['keywords'],
+                    'canonical' => $item['canonical'],
 
                     'en_title' => $item['en_title'],
                     'en_description' => $item['en_description'],
                     'en_keywords' => $item['en_keywords'],
+                    
+                    'ogp_type' => $item['ogp_type'],
+                    'ogp_image' => $item['ogp_image'],
+                    'ogp_title' => $item['ogp_title'],
+                    'ogp_description' => $item['ogp_description'],
+                    'en_ogp_title' => $item['en_ogp_title'],
+                    'en_ogp_description' => $item['en_ogp_description'],
 
 					'created_at' => $created_at,
                     'updated_at' => $updated_at,

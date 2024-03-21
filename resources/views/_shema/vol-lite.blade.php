@@ -6,7 +6,7 @@
         <link href="{{ mix('/css/app.css') }}" rel="stylesheet" type="text/css">
     </noscript> --}}
     <link href="{{ mix('/css/Lite.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ mix('/css/solo/Brief.css') }}" rel="stylesheet" type="text/css">
-    <link href="{{ mix('/css/solo/Start.css') }}" rel="stylesheet" type="text/css">
+    {{-- <link href="{{ mix('/css/solo/Brief.css') }}" rel="stylesheet" type="text/css"> --}}
+    {{-- <link href="{{ mix('/css/solo/Start.css') }}" rel="stylesheet" type="text/css"> --}}
 @endsection
 @push('css-body', 'vol-lite ')
