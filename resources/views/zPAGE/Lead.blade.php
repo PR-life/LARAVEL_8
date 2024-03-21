@@ -19,14 +19,8 @@
 @component('_wrap.index', ['id' => 'Wrap', 'css' => 'HWin'])
 
 
-    <div id="wrap_manager" class="Space -v / Bg -gif">
-        <div class="Article aura / -Black / edge">
-            <div class="Font -void / center-text">
-				<div class="_h -vw / center-text b700">Куда прислать ответ?</div>
-				<div class="paragraph"></div>
-				@include('component.Form.manager')
-            </div>
-        </div>
+    <div id="wrap_manager" class="Space -v / Bg -gif / relative">
+        @include('zTHIS.PAGE.Lead.head')
     </div>
 
     <div class="space-m">

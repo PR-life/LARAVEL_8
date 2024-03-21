@@ -21,11 +21,14 @@ class BriefController extends Controller
     }
 
     
+    // public function store(Request $request) {
     public function store(StoreRequest $request) {
 
-        // dd(11);
+        // dd($request);
 
         $param = $request->validated();
+
+        // dd($param);
 
         if(strlen($param['title']) > 1) {
             return view('_.Lol', compact('param'));

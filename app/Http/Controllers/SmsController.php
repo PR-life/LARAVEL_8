@@ -73,6 +73,7 @@ class SmsController extends Controller
         // dd(app()->getLocale());
 
         $param = $request->validated();
+        unset($param['tech_idFormError']);
 
 
  

@@ -1,5 +1,5 @@
 <?php
-	// $Form = 'Manager';
+	isset($Form) ? '' : $Form = 'Manager';
 ?>
 
 <style>
@@ -18,7 +18,7 @@
 </style>
 
 
-<form id="formManager" class="Form -L -shadow" method="POST" action="{{route('sms.update')}}" enctype="multipart/form-data">
+<form id="form_Manager" class="Form -L -shadow" method="POST" action="{{route('sms.update')}}" enctype="multipart/form-data">
 	@csrf
 	<input id="title" class="none" type="text" name="title" value="." placeholder='.'>
 	<input id="id_sms" class="none" type="text" name="id_sms" value="{{session('id_sms') ?? ''}}" placeholder='.'>
