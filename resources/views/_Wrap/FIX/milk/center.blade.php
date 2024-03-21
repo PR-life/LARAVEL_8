@@ -1,4 +1,4 @@
-<div id="{{$id}}" class="FIX" data-click data-fix data-css data-add='on'>
+<div id="{{$id}}" class="FIX" data-click data-fix data-css data-add='on' {{$data ?? ''}}>
     <div class="fix" data-close>
         <div class="Scroll -scroll / noEvents">
             <div class="_scr flex cI cC / space-s">

@@ -1,5 +1,54 @@
 @charset "UTF-8";
 
+.Ripple {
+    --Ripple-w: 2rem;
+    --Ripple-h: 2rem;
+    --Ripple-size-anime: 140px;
+
+    --Ripple-bg: rgba(244, 68, 56, 0);
+
+    --Ripple-name: Ripple_def;
+}
+
+.Ripple::before,
+.Ripple::after {
+    content: "";
+    opacity: .3;
+    position: absolute;
+    left: calc(50% - var(--Ripple-h)*.5);
+    top: calc(50% - var(--Ripple-w)*.5);
+    right: 0;
+    bottom: 0;
+    //
+    width: var(--Ripple-w);
+    height: var(--Ripple-h);
+    border-radius: 50%;
+    box-shadow: 0 0 0 0 rgba(255, 255, 255, .5);
+
+    //
+    animation: var(--Ripple-name) 3s infinite;
+}
+
+.Ripple::before {
+    animation-delay: 0.9s;
+}
+
+.Ripple::after {
+    animation-delay: 0.6s;
+}
+
+
+@keyframes Ripple_def {
+    70% {
+      box-shadow: 0 0 0 var(--Ripple-size-anime) var(--Ripple-bg);
+    }
+    100% {
+      box-shadow: 0 0 0 0 var(--Ripple-bg);
+    }
+}
+
+
+
 
 // .Ripple, .Ripple::before, .Ripple::after {
 // 	position: absolute;

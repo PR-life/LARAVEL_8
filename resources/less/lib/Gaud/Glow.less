@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.Glow {
+    --Glow-w: 1rem;
+    position: relative;
+}
+
+.Glow > * {
+    z-index: 5;
+    position: relative;
+}
+
+.Glow::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    width: var(--Glow-w);
+    height: var(--Glow-w);
+    z-index: 0;
+    box-shadow: 0 0 50px 30px rgba(72, 170, 72, 0.3);
+    animation: glowGreen 2s cubic-bezier(0.25, 0.1, 0.2, 1) infinite;
+    transition: opacity 0.5s ease;
+}
+
+@keyframes glowGreen {
+    0% {
+      box-shadow: 0 0 30px 5px #48aa48;
+    }
+    70% {
+      box-shadow: 0 0 70px 50px rgba(72, 170, 72, 0);
+    }
+    100% {
+      box-shadow: 0 0 0 50px rgba(72, 170, 72, 0);
+    }
+}

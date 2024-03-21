@@ -1,4 +1,4 @@
-<a class="wrap-tildaVideo / flex / index relative" href="{{$link}}">
+<a class="wrap-videoTilda / flex / index relative" href="{{$link}}">
         
     <span class="Abs -all / flex cI">
         <span class="_text / flex dC / space-s">
