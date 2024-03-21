@@ -1,3 +1,6 @@
+
+<h1>55555</h1>
+
 @component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' =>'title'. (class_basename($Var)), 'cssWrap' => 'net'])
 <div class="_shell x-hr Form -S / vol-Abs / net">
     <input id="inputTitle" type="text" name="title" value="{{$Var->title ?? old('title')}}" placeholder=".">

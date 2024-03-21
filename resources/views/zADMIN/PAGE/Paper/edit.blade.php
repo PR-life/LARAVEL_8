@@ -2,22 +2,18 @@
 
 @section('title')edit. Paper - {{$paper->name}} @endsection
 
-
-
 @push('addBread')
-<li>
-    <span>
-        <span class="content-xs">Контент</span>
-    </span>
-</li>
-<li>
-    <span>
-        <span class="content-xs">Статьи</span>
-    </span>
-</li>
+	<li>
+		<span>
+			<span class="content-xs">Контент</span>
+		</span>
+	</li>
+	<li>
+		<span>
+			<span class="content-xs">Статьи</span>
+		</span>
+	</li>
 @endpush
-
-
 
 
 @section('content')

@@ -1,7 +1,7 @@
 <div class="Article aura">
 
 
-	@component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'nameLanding'])
+	{{-- @component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'nameLanding'])
 	<div class="_shell _name @error('name') Error @enderror / vol-Abs / net">
 		<input id="inputName" type="text" name="name" value="{{$landing->name ?? old('name')}}" placeholder=".">
 		<label class="Abs" for="inputName">@svg('plus')Name</label>
@@ -13,13 +13,18 @@
 		<input id="inputName_en" type="text" name="en_name" value="{{$landing->en_name ?? old('en_name')}}" placeholder=".">
 		<label class="Abs" for="inputName_en">@svg('plus')en_Name</label>
 	</div>
-	@endcomponent
+	@endcomponent --}}
 
+	<div class="_shell _name @error('name') Error @enderror / vol-Abs / net">
+		<input id="inputName" type="text" name="name" value="{{$landing->name ?? old('name')}}" placeholder=".">
+		<label class="Abs" for="inputName">@svg('plus')Name</label>
+		@error('name')
+			<div class="Abs / Nameplate -rt">{{$errors->first('name')}}</div>
+		@enderror
+	</div>
 
 	<div class="hill-s"></div>
 
-
- 
 
 	@component('zADMIN.PAGE._wrap.Tab.edit.body')
 		@slot('nameTab1', 'Заголовки')
@@ -29,7 +34,10 @@
 		@endslot
 		@slot('tab_2')
 			<div class="paragraphX2 / net"></div>
-			@include('zADMIN.PAGE._lego.edit.seo.index', ['Var' => $landing])
+			{{-- @include('zADMIN.PAGE._lego.edit.seo.index', ['Var' => $landing]) --}}
+			@include('zADMIN.PAGE._lego.edit.seo.canonical_ru', ['Var' => $landing])
+			<div class="paragraph"></div>
+			@include('zADMIN.PAGE._lego.edit.seo.ogp_ru', ['Var' => $landing])
 		@endslot
 	@endcomponent
 

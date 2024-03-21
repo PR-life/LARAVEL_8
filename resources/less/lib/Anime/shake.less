@@ -1,28 +1,50 @@
 @charset "UTF-8";
 
+// https://codepen.io/JoeHastings/pen/bNOppj
 
-.Shake.animeGo ._animeShake,
-.Shake.animeHover ._animeShake{
-    transform-origin: 50% 100%;
+ 
+.Anime.vol-shake {
+    --Anime-name:Anime-shake_def;
+    // --Anime-duration:.35s;
+    // --Anime-function:linear;
 }
 
-.Shake.animeGo ._animeShake,
-.Shake.animeHover:hover ._animeShake {
-    animation: Shake_def .8s linear;
+.Anime.vol-shake_hor {
+    --Anime-name:Anime-shake_hor;
+    --Anime-duration:.35s;
+    // --Anime-duration:.8s;
+    // --Anime-function:linear;
+}
+.Anime.vol-shake_hor.Error {
+    --Anime-iteration:2;
 }
 
 
-.animeGo .infinite {
-    animation-iteration-count: infinite !important;
+
+ 
+.Anime.anime-go.vol-shake,
+.Anime.anime-hover.vol-shake:hover {
+    ._anime {
+        transform-origin: 50% 100%;
+    }
 }
 
+ 
 
 // .Shake.-anime.-hover:hover {
 //     animation-play-state: paused;
 // }
 
+@keyframes Anime-shake_hor {
+    0% { transform: translateX(0) }
+    25% { transform: translateX(5px) }
+    50% { transform: translateX(-5px) }
+    75% { transform: translateX(5px) }
+    100% { transform: translateX(0) }
+}
 
-@keyframes Shake_def {
+
+@keyframes Anime-shake_def {
     0%  { transform: translate(2px, 1px) rotate(0deg); }
     10% { transform: translate(-1px, -2px) rotate(-2deg); }
     20% { transform: translate(-3px, 0px) rotate(3deg); }
@@ -35,3 +57,7 @@
     90% { transform: translate(2px, 2px) rotate(0deg); }
     100%{ transform: translate(1px, -2px) rotate(-1deg); }
 }
+
+
+
+ 

@@ -18,6 +18,9 @@ class AskRequest extends FormRequest
     {
         return [
 
+            'tech_idFormError' => 'nullable',
+
+            //
             'name' => 'nullable|min:2',
             'ask'=>'min:6',
 

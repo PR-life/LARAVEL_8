@@ -16,7 +16,7 @@ class IndexController extends BaseController
     public function __invoke(FilterRequest $request){
 
 		// Популярные посты
-		$likedPosts = Post::withCount('likedUsers')->orderBy('liked_users_count', 'DESC')->get()->take(4);
+		// $likedPosts = Post::withCount('likedUsers')->orderBy('liked_users_count', 'DESC')->get()->take(4);
 
 
 		// *вывод кол-ва во View

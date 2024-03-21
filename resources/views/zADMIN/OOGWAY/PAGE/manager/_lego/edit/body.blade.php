@@ -3,7 +3,7 @@
 	<label class="Abs" for="name">@svg('plus')Name</label>
 	@error('name')
 		<div class="Abs / Nameplate -rt">{{$message}}</div>
-		<div class="Abs Valid help / none" title="обязательное поле"></div>
+		{{-- <div class="Abs Valid help / none" title="обязательное поле"></div> --}}
 	@enderror
 </div>
 

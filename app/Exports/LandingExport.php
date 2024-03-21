@@ -52,11 +52,20 @@ class LandingExport implements FromCollection, WithHeadings, WithStrictNullCompa
 
 			"title",
 			"description",
-			"keywords",
+			"keywords",			
 
 			"en_title",
 			"en_description",
 			"en_keywords",
+
+			"canonical",
+
+			"ogp_type",
+			"ogp_image",
+			"ogp_title",
+			"ogp_description",
+			"en_ogp_title",
+			"en_ogp_description",
 
 			"created_at",
 			"updated_at",

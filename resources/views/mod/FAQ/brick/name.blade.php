@@ -1,4 +1,3 @@
 @isset($item->h1)
-<div class="h b500">{!!$item->h1!!}</div>
+<div class="h x-name">{!!$item->h1!!}</div>
 @endisset
-{!!$item->text ?? ''!!}

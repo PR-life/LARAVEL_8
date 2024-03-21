@@ -60,7 +60,7 @@ class SmsController extends Controller
 
     public function manager() {
         $sandbox = [];
-        return view('_.Lead', compact('sandbox'));
+        return view('zPAGE.Lead', compact('sandbox'));
     }
 
 
@@ -73,6 +73,7 @@ class SmsController extends Controller
         // dd(app()->getLocale());
 
         $param = $request->validated();
+        unset($param['tech_idFormError']);
 
 
  
@@ -112,11 +113,13 @@ class SmsController extends Controller
         // dd($request);
 
         $param = $request->validated();
+        unset($param['tech_idFormError']);
 
+        
         // dd($param);
 
         if(strlen($param['title']) > 1) {
-            return view('_.Lol', compact('param'));
+            return view('zPAGE.Lol', compact('param'));
         } else {
             unset($param['title']);
             isset($param['name']) == null ? $param['name'] = "Аноним" : '';
@@ -133,29 +136,29 @@ class SmsController extends Controller
             
 
 
-            $token = env('TG_TOKEN', '6440933163:AAE2U2nF_5IXnC3GC1l8kd8n8iljL6JyN1Y');
-            $chat_id = env('TG_CHAT_ID', '6020403524');
-            $sitename = "velkomsochi.ru";
-            $Gotelegram = '';       
+            // $token = env('TG_TOKEN', '6440933163:AAE2U2nF_5IXnC3GC1l8kd8n8iljL6JyN1Y');
+            // $chat_id = env('TG_CHAT_ID', '6020403524');
+            // $sitename = "velkomsochi.ru";
+            // $Gotelegram = '';       
  
             
-            $arrTelegram = array(
+            // $arrTelegram = array(
 
-                '<b>Имя:</b> ' => $sms->name,
-                '<b>Телефон:</b> ' => $sms->phone,
-                '' => '',
-                '-----' => '',
-                '~ ' => 'АКЦИЯ | бесплатный аудит ваше системы видеонаблюдения'
-              );
+            //     '<b>Имя:</b> ' => $sms->name,
+            //     '<b>Телефон:</b> ' => $sms->phone,
+            //     '' => '',
+            //     '-----' => '',
+            //     '~ ' => 'АКЦИЯ | бесплатный аудит ваше системы видеонаблюдения'
+            //   );
 
 
 
-              foreach ($arrTelegram as $key => $value) {
-                    $Gotelegram .= $key.$value."%0A";
-                    // $Gotelegram .= "<b>".$key."</b>".$value."%0A";
-                }
+            //   foreach ($arrTelegram as $key => $value) {
+            //         $Gotelegram .= $key.$value."%0A";
+            //         // $Gotelegram .= "<b>".$key."</b>".$value."%0A";
+            //     }
 
-            $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$Gotelegram}","r");
+            // $sendToTelegram = fopen("https://api.telegram.org/bot{$token}/sendMessage?chat_id={$chat_id}&parse_mode=html&text={$Gotelegram}","r");
 
 
             // if (isset($sms)) {
@@ -170,7 +173,7 @@ class SmsController extends Controller
             // dd(11);
 
 
-            return view('_.Thanks', compact('sms'));
+            return view('zPAGE.Thanks', compact('sms'));
 
 
 

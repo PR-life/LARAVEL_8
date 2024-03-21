@@ -1,6 +1,6 @@
 @component('_Wrap.FIX.milk.win',['css' => '','cssFix' => 'cI_PC55 space-s', 'css_fix' => 'Pente aura / fix-H_mbl'])
 @slot('id', 'milk_archetypes')
-@slot('cssAbsAll', 'White -bg / round / Jolt -t / hidden')
+@slot('css', 'White -bg / round / Jolt -t / hidden')
 <div class="Abs -all / Scroll_mbl"> 
     <div class="_scr / flex dC">
         <div class="Scroll_PC">

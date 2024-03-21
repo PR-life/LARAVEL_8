@@ -28,16 +28,15 @@
 		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.tag.index', ['shema' => request()->get('shema')])]) --}}
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.tag.index'])
 
-
-		<div class="_shell">
+		<div class="_shell / net">
 			@include('zADMIN._bd.edit.published',['Var'=> $tag])
 		</div>
 
-		
+	
 		@component('zADMIN.PAGE._wrap.Flaber.edit')
 
 			@slot('flaber')
-				@include('zADMIN.PAGE.Tag.lego.edit.sms')	
+				{{-- @include('zADMIN.PAGE.Tag.lego.edit.sms') --}}
 			@endslot
 
 			<div class="paragraphX2"></div>

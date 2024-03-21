@@ -16,8 +16,8 @@
 		<label class="Abs Grey" for="name">{!!$label!!}</label>
 	@endif
 
-	<div class="Abs Valid help / none" title="минимум 2 символа [обязательное поле]"></div>
-	@if ($errors->has('name'))
+	{{-- <div class="Abs Valid help / none" title="минимум 2 символа [обязательное поле]"></div> --}}
+	@if($errors->has('name'))
 		<div class="Abs / Nameplate -rt">{{ $errors->first('name') }}</div>
 	@endif
 </div>

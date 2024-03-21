@@ -19,8 +19,17 @@ function callback(entries,observer) {
 		// intersectionRatio — доля пересечения от 0 до 1. Если элемент полностью в наблюдаемой области, то значение будет 1, а если наполовину, то — 0.5.
 		// target — сам наблюдаемый элемент для дальнейших манипуляций. Например, для добавления классов.
 	
+		console.log(arr);
+
+		// if (intersectionRatio === 1) {
+		// 	console.log('Элемент полностью в области наблюдения')
+		//   }
+
+
 		if (entry.isIntersecting){
-			if(entry.target.classList.contains('Visible')) {
+
+			if(entry.target.classList.contains('Visible') ) {
+
 				entry.target.classList.remove('visibleOff')
 				entry.target.classList.add('visibleOn')
 				if(entry.target.hasAttribute('visible-click')) {
@@ -29,16 +38,25 @@ function callback(entries,observer) {
 				if(!entry.target.hasAttribute('visible-loop')) {
 					entry.target.classList.remove('Visible')
 				}
+
 			}
 
 			if(entry.target.hasAttribute('visible-add')) {
 				// console.log(111)
-				entry.target.classList.add(entry.target.getAttribute('visible-param'))
+				let div;
+
+				if(entry.target.getAttribute('visible-add')) {
+					div = document.getElementById(entry.target.getAttribute('visible-add'))
+				} else {
+					div = entry.target;
+				}
+
+				console.log(div)
+
+
+				div.classList.add(entry.target.getAttribute('visible-param'))
 				entry.target.removeAttribute('visible-add')
 			}
-
- 
- 
 		} else {
 			if(entry.target.classList.contains('Visible')) {
 				entry.target.classList.remove('visibleOn')

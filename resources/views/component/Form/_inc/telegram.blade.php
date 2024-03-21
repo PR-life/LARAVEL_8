@@ -12,7 +12,7 @@
 		<label class="Abs Grey" for="telegram">{!!$label!!}</label>
 	@endif
 
-	<div class="Abs Valid help / none" title="обязательное поле"></div>
+	{{-- <div class="Abs Valid help / none" title="обязательное поле"></div> --}}
 	@error('telegram')
 		<div class="Abs / Nameplate -rt">{{ $errors->first('telegram') }}</div>
 	@enderror
