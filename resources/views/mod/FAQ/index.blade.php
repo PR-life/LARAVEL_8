@@ -28,21 +28,8 @@
                 @if($loop->first)
                     @include('mod.FAQ.lego.item',['css' => '-first'])
                 @endif
-                @include('mod.FAQ.lego.item',['css' => $cssSummary ?? '' . ' x-'.$loop->iteration])
+                @include('mod.FAQ.lego.item',['css' => 'x-'.$loop->iteration])
              @endforeach
-
-            {{-- @isset($thisItemFaq)
-                @foreach($thisItemFaq as $thisFaq)
-                    <div class="_ef -an thisItem / Details {{$css_Details ?? ''}}">
-                        <details>
-                            <summary class="-M"><span>{!!$thisFaq->name!!}</span><i></i></summary>
-                            <div class="_edge text void net">
-                                @include('mod.FAQ._lego.content')
-                            </div>
-                        </details>
-                    </div>
-                @endforeach
-            @endisset --}}
 		</div>
 	</div>
 </div>

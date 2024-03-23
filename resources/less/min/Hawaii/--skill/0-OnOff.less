@@ -6,12 +6,6 @@
 // _open _Open
 // _onoff _Onoff
 
-._openLvl_2,
-._openLvl_3,
-._closeLvl_2,
-._closeLvl_3 {
-	background-color: purple;
-}
 .SOMA.on,
 .SOMA.On,
 .Soma.-on,
@@ -27,15 +21,16 @@
 
 
 .OnOff {
-	// ._openLvl_2,
-	// ._openLvl_3,
+
 	._Onoff,
-	._Open,
-	._Close,
 	> ._onoff,
+	._Open,
 	> ._open,
+	._Close,
 	> ._close {display: none}
 
+	// ._openLvl_2,
+	// ._openLvl_3,
 	// ._closeLVL2,
 	// ._openLVL2 {display: none}
 }
@@ -77,6 +72,8 @@
 
 
 .on {
+
+	> ._on,
 	> ._open {
 		display: block;
 	}
@@ -84,14 +81,14 @@
 	> ._open.-inlineBlock {display: inline-block}
 	> ._open.-flex {display: flex}
 
+
+	> ._close,
 	> ._off {
 		display: none;
 	}
 }
 
 .On {
-	._Off {display: none;}
-	
 	> ._open,
 	._Open {
 		display: block;
@@ -99,4 +96,18 @@
 	._Open.-inline{display: inline}
 	._Open.-inlineBlock{display: inline-block}
 	._Open.-flex{display: flex}
+
+	._Close,
+	._Off {display: none;}
+}
+
+
+
+
+
+._openLvl_2,
+._openLvl_3,
+._closeLvl_2,
+._closeLvl_3 {
+	background-color: purple;
 }

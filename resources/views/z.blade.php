@@ -11,8 +11,13 @@
 
 @include('_shema._lego.input')
 
-<div id="Fon" class="Abs -lt -r @stack('css-fon')">@stack('fon')</div>
-
+<div id="Fon" class="Abs -lt -r @stack('css-fon')">
+	<!--googleoff: all-->
+	<!--noindex-->
+	@stack('fon')
+	<!--/noindex-->
+	<!--googleon: all-->
+</div>
 
 @include('_._skeleton.Top')
 @include('_._skeleton.header')
@@ -44,17 +49,16 @@
 @yield('basement')
 @stack('basementAfter')
 
+{{-- footer --}}
+
 <div id="FixMenu" class="FixMenu -mbl / none_PC">
 	@include('_._skeleton.menuMobile')
 </div>
-{{-- @include('zImago._skeleton.menuBeyond') --}}
 
 @include('_._skeleton.Slump')
 @include('_._skeleton.Geek')
 
 <div id="Milk" class="Abs Milk / index owlFIX">
-	<!-- include('_.gaud.Error.index') -->
-	<!-- include('_.module.Kontur.index') -->
 	@stack('milk')
 	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		@include('_.src.svg._def')

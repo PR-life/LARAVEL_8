@@ -7,12 +7,10 @@
 		</div>
 		<div class="Preamble dC eI / {{$cssPreamble ?? ''}}">
 			<div class="author / flex">
-				<span class="Grey">{{$User->name ?? $Var->answer_user_name}}</span>
-				{{-- <span class="Grey">{{$User->name}}ООО Альфа-Мед,</span> --}}
+				<span class="Grey">{{$Var->answer_user_name ?? __('_const/zTHIS.answer_user_name')}}</span>
 			</div>
 			<div class="author / flex">
 				<span class="content-xs / Grey">{{$User->user_par_1 ?? ''}}</span>
-				{{-- <span class="content-xs / Grey">{{$Var->city}}представитель компании</span> --}}
 			</div>
 		</div>
 	</div>

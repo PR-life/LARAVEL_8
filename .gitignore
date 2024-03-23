@@ -1,5 +1,5 @@
 # .gitignore
-# public, public_html, node_*, vendor
+# public, public_html, node_*, vendor, storage
 
 /node_modules
 /storage/*.key

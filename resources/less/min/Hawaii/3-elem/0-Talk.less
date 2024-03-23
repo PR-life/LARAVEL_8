@@ -10,12 +10,15 @@
 	}
 
 
-	.Talk.-W80 {
-
-
+	.Talk.-w80 {
 
 		height: calc(var(--h) - 4rem - var(--h-head));
 		max-height: 680px;
+
+		.SOMA.On > .Axon > .off {
+			display: block;
+			// background-color: green;
+		}
 
 		._body {
 			padding-top: 6rem;
@@ -41,12 +44,13 @@
 			// 		padding-right: 0;
 			// 	}
 			// }
-			.OnOff {
-				._open,
-				._close {
-					display: block;
-				}
-			}
+			// .OnOff {
+			// 	._open,
+			// 	._close {
+			// 		background-color: orange;
+			// 		// display: block;
+			// 	}
+			// }
 		}
 
 		// .Preamble {
@@ -62,15 +66,27 @@
 
 		// .paragraph.x-Talk {display: block;}
 
-		.Preamble.x-Talk,
-		._ico.x-Talk {display: none;}
+		.x-Talk_none {
+			display: none;
+		}
+
+		.x-Talk_block {
+			display: block;
+		}
  
 		
 	}
 }
 
+@media screen and (max-width:@metrika-80) {
+	.Talk.-w80 {
+		.x-Talk_minH {
+			min-height: 160px;
+		}
+	}
+ 
 
-
+}
 
 
 

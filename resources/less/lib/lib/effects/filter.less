@@ -82,8 +82,6 @@
 	// margin-bottom: 0 !important;
 	//
 	pointer-events: none !important;
-
-	
 }
 
 
@@ -108,6 +106,7 @@
 	//
 	pointer-events: all;
 }
+
 
 .all>.Ef {
 	>._all{
@@ -135,10 +134,42 @@
 
 
 .Ef {
+
 	.Ef-height {
 		height: var(--x-Ef-hMin);
 	}
 
+	
+
+	.Scroll_PC,
+	.Scroll_mbl {
+		> ._scr {
+			overflow-y: hidden;
+			// background-color: red;
+		}
+	}
+
+
+	._ef.On,
+	._ef.on {
+
+		.pointer,
+		.pointer * {
+			cursor: auto;
+		}
+
+		.Scroll_PC,
+		.Scroll_mbl {
+			> ._scr {
+				overflow-y: scroll;
+				// background-color: blue;
+			}
+		}
+	}
+
+
+
+	// Для показа допю блоков 
 	._all {
 		display: none;
 	}

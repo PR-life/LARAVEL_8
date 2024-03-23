@@ -1,4 +1,4 @@
-<div id="Responses" class="Responses {{$cssH ? '' : 'HMinVar_PC'}} [ padding top bottom ]">
+<div id="Responses" class="Responses {{$cssH ? '' : 'Plot -hMin -XS'}} [ padding top bottom ]">
 
     @if(isset($answer))
         <div class="hMin b500 center-text">Ответ представителя компании</div>

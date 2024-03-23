@@ -1,6 +1,5 @@
-@include('_.head.meta.min')
-@include('_.head.meta.color')
-
+@include($linkMetaMin ?? '_.head.meta.min')
+@include($linkMetaColor ?? '_.head.meta.color')
 	<meta name="description" content="@yield('description')">
 	<meta name="keywords" content="@yield('keywords')">
 	<title>@yield('title', 'Заголовок по умолчанию 555')</title>
