@@ -2,11 +2,17 @@
 
 // .Op {opacity: .0;} // в cssMin
 
-body.Z2 .op,
-body.Z2 .opVersa {
-	pointer-events: none
+body.Z2 .op {
+	pointer-events: none;
 }
 
+body.Z1 .opVersa {
+	pointer-events: none;
+
+	.yesEvents {
+		pointer-events: none !important;
+	}
+}
 
 body.Z2 .opVersa {
 	opacity: 1;
