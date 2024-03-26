@@ -44,6 +44,7 @@ class FaqExport implements FromCollection, WithHeadings, WithStrictNullCompariso
 
 			"faq_id",
 			"category_id",
+			"tag_id",
 			"group_id",
 
 			"created_at",

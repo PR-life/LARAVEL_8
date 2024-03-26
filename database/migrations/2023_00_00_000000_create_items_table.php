@@ -63,8 +63,14 @@ class CreateItemsTable extends Migration
             $table->index('category_id', 'item_category_idx');
             $table->foreign('category_id', 'item_category_fk')->on('categories')->references('id');
         
-			$table->unsignedInteger('tag_id')->nullable();
-            
+			// $table->unsignedInteger('tag_id')->nullable();
+            $table->foreignId('tag_id')
+                ->nullable()
+                ->references('id')
+                ->on('tags');
+
+
+
             $table->unsignedBigInteger('group_id')->nullable();          
             $table->index('group_id', 'item_group_idx');
             $table->foreign('group_id', 'item_group_fk')->on('groups')->references('id');

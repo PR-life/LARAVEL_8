@@ -71,9 +71,9 @@ class StoreRequest extends FormRequest
 			'mafia' => 'nullable|integer',	
             
             //
+            'group_id' => 'nullable|integer|exists:groups,id',
             'tag_id' => 'nullable|integer|exists:tags,id',
             'category_id' => 'nullable|integer|exists:categories,id',
-            'group_id' => 'nullable|integer|exists:groups,id',
 
             'tag_ids' => 'nullable|array',
             'tag_ids.*' => 'nullable|integer|exists:tags,id',

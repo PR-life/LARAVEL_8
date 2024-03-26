@@ -18,6 +18,16 @@ class Sms extends Model
 
 
 
+    public function categories() {
+        return $this->belongsToMany(
+            Category::class,
+            'sms_categories', // через какую тбл свзяь
+            'sms_id', // id этой модели в указанной таблице
+            'category_id' // id модели Category в указанной таблице
+        );
+    }
+
+
     public function tags() {
 
         return $this->belongsToMany(
@@ -37,7 +47,13 @@ class Sms extends Model
         );
     }
 
-
+    public function tag() {
+        return $this->belongsTo(
+            Tag::class,
+            'tag_id', // foreignKey
+			'id', // ownerKey
+        );
+    }
 
 
 	public function getDateAsCarbonAttribute(){

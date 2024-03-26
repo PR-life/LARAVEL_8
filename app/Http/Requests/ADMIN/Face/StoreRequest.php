@@ -58,9 +58,10 @@ class StoreRequest extends FormRequest
             'note' => 'nullable|string',
 
             //
-            'category_id' => 'nullable|integer|exists:categories,id',
-            'tag_id' => 'nullable|integer|exists:tags,id',
             'group_id' => 'nullable|integer|exists:groups,id',
+            'tag_id' => 'nullable|integer|exists:tags,id',
+            'category_id' => 'nullable|integer|exists:categories,id',
+
             'tag_ids' => 'nullable|array',
             'tag_ids.*' => 'nullable|integer|exists:tags,id',    
 

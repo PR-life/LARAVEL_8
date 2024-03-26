@@ -33,12 +33,14 @@ class CreateCategoriesTable extends Migration
 			$table->string('prev_p')->nullable();
             $table->string('prev_url')->nullable();
 
+			//
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories');
 			
             $table->unsignedBigInteger('group_id')->nullable();
             $table->foreign('group_id')->references('id')->on('groups');
 			
+            //
             $table->string('string_1')->nullable();
             $table->text('knot_1')->nullable();
   			

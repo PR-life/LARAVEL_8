@@ -33,7 +33,7 @@ class Category extends Model
         //     'category_id',
         //     'id',
         // )->orderBy('created_at', 'desc');
-        return $this->hasMany(Item::class)->orderBy('order', 'desc');;
+        return $this->hasMany(Item::class)->orderBy('order', 'asc');
     }
 
 

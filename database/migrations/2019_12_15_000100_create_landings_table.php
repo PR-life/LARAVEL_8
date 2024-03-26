@@ -47,6 +47,16 @@ class CreateLandingsTable extends Migration
             $table->index('category_id', 'landing_category_idx'); 
             $table->foreign('category_id', 'landing_category_fk')->on('categories')->references('id')->onDelete('cascade');
 
+            $table->foreignId('tag_id')
+                ->nullable()
+                ->references('id')
+                ->on('tags');
+
+            $table->foreignId('group_id')
+                ->nullable()
+                ->references('id')
+                ->on('groups');
+
 			//
 			$table->string('title')->nullable();
 			$table->string('description')->nullable();

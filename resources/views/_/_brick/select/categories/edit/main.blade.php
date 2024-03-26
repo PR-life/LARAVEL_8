@@ -4,11 +4,11 @@
 
 @foreach($Categories as $category)
 
-
-
+ 
+@if($category->childrenCategories->count() > 0)
 	<option
 		value="{{$category->id}}"
-		{{ $Var->category_id == $category->id ? ' selected' : ''}}
+		{{ $Var == $category->id ? ' selected' : ''}}
 		{{-- {{ is_array($arr) && in_array($category->id, $arr) ? ' selected' : ''}} --}}
 		{{$category->id == old('category_id') ? ' selected' : ''}}>
 
@@ -19,13 +19,13 @@
 
 	<option
 		value="{{$childCategory->id}}"
-		{{ $Var->category_id == $childCategory->id ? ' selected' : ''}}
+		{{ $Var == $childCategory->id ? ' selected' : ''}}
 		{{-- {{ is_array($arr) && in_array($category->id, $arr) ? ' selected' : ''}} --}}
 		{{$childCategory->id == old('category_id') ? ' selected' : ''}}>
 		–- {{$childCategory->name}} [{{$category->id}}]
 	</option>
 	@endforeach
-
+@endif
  
  
 

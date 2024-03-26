@@ -69,6 +69,8 @@ class SmsImport implements ToCollection, WithHeadingRow
                     'go_mod_talk' => $item['go_mod_talk'],
 
                     'category_id' => $item['category_id'],
+                    'tag_id' => $item['tag_id'],
+                    'group_id' => $item['group_id'],
 
                     'views' => $item['views'],
                     'order' => $item['order'],

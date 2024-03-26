@@ -16,7 +16,7 @@
 
 @push('bee')
 
-    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Формы обратной связи', 'ico' => 'barMenu_editorial'])
+    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Форма обратной связи', 'ico' => 'barMenu_editorial'])
     {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.papers') --}}
     @include('zADMIN.PAGE._lego.filter.table-index')
 @endpush

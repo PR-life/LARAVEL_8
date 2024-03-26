@@ -54,6 +54,13 @@ class CreateFaqsTable extends Migration
             $table->index('category_id', 'faq_category_idx'); // ИМЯ ед. ч. -- эта тбл. и тбл. на какую ссылаемся + суффикс 
             $table->foreign('category_id', 'faq_category_fk')->on('categories')->references('id'); // ->onDelete('cascade')
 
+			//
+            $table->foreignId('tag_id')
+                ->nullable()
+                ->references('id')
+                ->on('tags');
+
+
             //
             $table->unsignedBigInteger('group_id')->nullable();          
 

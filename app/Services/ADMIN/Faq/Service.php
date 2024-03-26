@@ -28,6 +28,11 @@ class Service {
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);
 
+
+			//
+			isset($param['category_ids']) ? $categoryIds = $param['category_ids'] : $categoryIds = [];
+			unset($param['category_ids']);
+
 			//
 			isset($param['faq_ids']) ? $faqIds = $param['faq_ids'] : $faqIds = [];
 			unset($param['faq_ids']);
@@ -45,6 +50,10 @@ class Service {
 				// и поместили ниже строки '$faq->update($param);'
 				// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
 			$tagIds = [];
+			
+			$faq->categories()->sync($categoryIds);
+			$categoryIds = [];
+
 			$faq->pivotItem()->sync($faqIds); // изменили attach на sync*, 
 				// и поместили ниже строки '$faq->update($param);'
 				// *sync - удаляет все привязки которые есть у поста и добавляет те что указали

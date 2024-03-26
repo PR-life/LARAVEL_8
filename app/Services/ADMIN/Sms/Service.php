@@ -23,6 +23,11 @@ class Service {
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);
 			
+			//
+			isset($param['category_ids']) ? $categoryIds = $param['category_ids'] : $categoryIds = [];
+			unset($param['category_ids']);
+
+
 			// //
 			isset($param['featured']) ? '' : $param['featured'] = '0';
 			isset($param['published']) ? '' : $param['published'] = '0';
@@ -36,6 +41,9 @@ class Service {
 			// 	// и поместили ниже строки '$sms->update($param);'
 			// 	// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
 			$tagIds = [];
+
+			$sms->categories()->sync($categoryIds);
+			$categoryIds = [];
 
 			DB::commit();
 		} catch (Exception $exception) {

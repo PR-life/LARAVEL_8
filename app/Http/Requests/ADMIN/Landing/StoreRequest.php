@@ -52,7 +52,10 @@ class StoreRequest extends FormRequest
 			'published' => 'nullable|integer',
 
 			//
+            'tag_id' => 'nullable|integer|exists:tags,id',
+            'group_id' => 'nullable|integer|exists:groups,id',
             'category_id' => 'nullable|integer|exists:categories,id',
+
             'tag_ids' => 'nullable|array',
             'tag_ids.*' => 'nullable|integer|exists:tags,id',
 

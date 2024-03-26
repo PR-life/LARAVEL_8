@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\ADMIN\Faq;
-use Illuminate\Http\Request;
+// use Illuminate\Http\Request;
 //
 use App\Http\Requests\ADMIN\Faq\UpdateRequest;
 //

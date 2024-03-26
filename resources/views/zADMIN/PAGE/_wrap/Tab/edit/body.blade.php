@@ -27,9 +27,9 @@
 
 		<div class="paragraph"></div>
 		
-		<div class="relative space-right_manager">
+		<div class="relative">
 			<div class="Field -l -w / void-m">
-				<div class="Max_H_19101420" data-stopClick>
+				<div class="Max_H_19101420 / space-right_manager" data-stopclick>
 					<div class="_shell / _tab x1 / void-m">{!!$tab_1 ?? '<h1>EMPTY</h1>'!!}</div>
 					<div class="_shell / _tab x2 / void-m">{!!$tab_2 ?? '<h1>EMPTY</h1>'!!}</div>
 					@isset($tab_3)

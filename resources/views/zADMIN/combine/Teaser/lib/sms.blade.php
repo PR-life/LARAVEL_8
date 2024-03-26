@@ -5,10 +5,29 @@
                 @if($Var->sku)
                     @include('zADMIN.combine.Teaser.lib.brick.slug', ['incoming_param' => $Var->sku])
                 @endif
-                <a class="content" href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', $Var->id) }}">
+                <a class="content" href="{{ route('admin.'.mb_strtolower(class_basename($Var)).'.edit', [
+                        mb_strtolower(class_basename($Var)) => $Var->id,
+                        'name' => $name ?? null,
+                        'page' => $page ?? null,
+                        'tag_id' => $tag_id ?? null,
+                        'category_id' => $category_id ?? null,
+                        'group_id' => $group_id ?? null
+                    ])
+                    }}"
+                >
+
+
+
+
                     @include('zADMIN.combine.Teaser._wrap.ellipsis.name',['Var' => $Var->sms ?? $Var->from_page])
                 </a>
             </div>
+
+
+ 
+
+
+
             <div class="_2 / Min Max -w1 / center-text">
                 <div class="content-xs / Grey -c30">{{$Var->type}}</div>
             </div>

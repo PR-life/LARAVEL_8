@@ -25,20 +25,7 @@ class Faq extends Model
         'text',
     ];
 
-
-
-
-    public function getAttribute($key) {
-        $default = parent::getAttribute($key);
-        if ((app()->getLocale() !== 'ru') && isset($this->lang_fields) && in_array($key, $this->lang_fields)) {
-            return $this->{$key.'_'.app()->getLocale()} ?? $this->{'en_'.$key};
-            // return $this->{$key.'_'.app()->getLocale()} ?? $this->{$key.'_en'};
-        }
-        return $default;
-    }
-
-
-
+ 
     public function parentFaq()
     {
         return $this->hasMany(Faq::class);
@@ -72,11 +59,29 @@ class Faq extends Model
         );
     }
 
+    public function categories() {
+        return $this->belongsToMany(
+            Category::class,
+            'faq_categories', // через какую тбл свзяь
+            'faq_id', // id этой модели в указанной таблице
+            'category_id' // id модели Category в указанной таблице
+        );
+    }
+
 
     public function category() {
         return $this->belongsTo(
             Category::class,
             'category_id', // foreignKey
+			'id', // ownerKey
+        );
+    }
+
+    public function tag() {
+        // return 1;
+        return $this->belongsTo(
+            Tag::class,
+            'tag_id', // foreignKey
 			'id', // ownerKey
         );
     }
@@ -116,6 +121,17 @@ class Faq extends Model
         return $col;
     }
 
+
+
+
+    public function getAttribute($key) {
+        $default = parent::getAttribute($key);
+        if ((app()->getLocale() !== 'ru') && isset($this->lang_fields) && in_array($key, $this->lang_fields)) {
+            return $this->{$key.'_'.app()->getLocale()} ?? $this->{'en_'.$key};
+            // return $this->{$key.'_'.app()->getLocale()} ?? $this->{$key.'_en'};
+        }
+        return $default;
+    }
 
 
 	public function getDateAsCarbonAttribute(){

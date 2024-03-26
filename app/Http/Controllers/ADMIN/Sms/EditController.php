@@ -13,23 +13,24 @@ class EditController extends BaseController
 {
     public function __invoke(Sms $sms){
 		
-        $categories = Category::whereNull('category_id')
-        ->with('childrenCategories')
-        ->orderBy('name', 'asc')->paginate(25);
+        // $categories = Category::whereNull('category_id')
+        // ->with('childrenCategories')
+        // ->orderBy('name', 'asc')->paginate(25);
 
-        $categories_lvl_2 = collect();
+        // $categories_lvl_2 = collect();
 
-        foreach($categories as $item_1) {
-            if($item_1->childrenCategories) {
-                foreach ($item_1->childrenCategories as $childCategory) {
-                    $categories_lvl_2->push($childCategory);
-                }
-            }
-        }
+        // foreach($categories as $item_1) {
+        //     if($item_1->childrenCategories) {
+        //         foreach ($item_1->childrenCategories as $childCategory) {
+        //             $categories_lvl_2->push($childCategory);
+        //         }
+        //     }
+        // }
 
 		$tags = Tag::all();
-        $groups = Group::all();
+		$groups = Group::all();
+		$categories = Category::all();
 
-        return view('zADMIN.PAGE.Sms.edit', compact('sms','categories','categories_lvl_2','tags','groups'));
+        return view('zADMIN.PAGE.Sms.edit', compact('sms','categories','tags','groups'));
     }
 }

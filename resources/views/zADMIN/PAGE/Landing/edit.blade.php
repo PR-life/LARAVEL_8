@@ -32,6 +32,7 @@
 			@include('zADMIN._bd.edit.min',['Var'=> $landing])
 		</div>
 
+		@include('zADMIN.PAGE.Landing.lego.edit.lego.Relationships')
 		
 		@component('zADMIN.PAGE._wrap.Flaber.edit')
 

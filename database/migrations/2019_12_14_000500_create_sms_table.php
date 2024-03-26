@@ -58,6 +58,18 @@ class CreateSmsTable extends Migration
             $table->index('category_id', 'sms_category_idx'); 
             $table->foreign('category_id', 'sms_category_fk')->on('categories')->references('id');
 
+			//
+            $table->foreignId('tag_id')
+                ->nullable()
+                ->references('id')
+                ->on('tags');
+
+            //
+            $table->foreignId('group_id')
+                ->nullable()
+                ->references('id')
+                ->on('groups');
+
             //
 			$table->integer('views')->default('1');
 			$table->unsignedInteger('order')->default('50');

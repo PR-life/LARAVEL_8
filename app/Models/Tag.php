@@ -41,6 +41,24 @@ class Tag extends Model
 		   
 	}
 
+
+	public function faqTag(){
+		return $this->hasMany(
+			Faq::class,
+			'tag_id',
+			'id',
+		)->orderBy('created_at', 'desc');   
+	}
+
+	public function smsTag(){
+		return $this->hasMany(
+			Sms::class,
+			'tag_id',
+			'id',
+		)->where('published', 1)->orderBy('created_at', 'desc');   
+	}
+	
+
 	public function posts(){
 		return $this->belongsToMany(Post::class, 'post_tags', 'tag_id', 'post_id');
 	}

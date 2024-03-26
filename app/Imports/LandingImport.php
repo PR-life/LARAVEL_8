@@ -66,6 +66,8 @@ class LandingImport implements ToCollection, WithHeadingRow
                     'published' => $published,
 
                     'category_id' => $item['category_id'],
+                    'tag_id' => $item['tag_id'],
+                    'group_id' => $item['group_id'],
 
                     'title' => $item['title'],
                     'description' => $item['description'],

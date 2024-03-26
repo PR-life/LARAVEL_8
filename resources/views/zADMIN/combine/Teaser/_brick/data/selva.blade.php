@@ -1,14 +1,18 @@
 <div class="v-Selva -on">
-    <div class="space-rightM">
+    <div class="space-rightM / W-100">
 
         <div class="right-text">                
             @isset($Var->tag_id)
-            <div class="content-xxs / flex cI / Grey -c30">
-                <span class="Ico -S / mr-2">@svg('magnet')</span>
-                {{$Var->tag->name}}
+            <div class="Wings">
+                <div class="_win -t">
+                    <div class="content-xxs / flex cI / Grey -c30">
+                        <span class="Ico -S / mr-2">@svg('magnet')</span>
+                        {{$Var->tag->name}}
+                    </div>
+                </div>
             </div>
             <div class="paragraph-s"></div>
-            {{-- <a class="content-s b600 / Grey -c30" href="{{route('admin.category.edit',$Var->category->id)}}">{{$Var->category->name}}</a> --}}
+
             @endisset
 
             @isset($Var->category)

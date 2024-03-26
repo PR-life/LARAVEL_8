@@ -52,6 +52,8 @@ class SmsExport implements FromCollection, WithHeadings, WithStrictNullCompariso
 			"go_mod_talk",
 
 			"category_id",
+			"tag_id",
+			"group_id",
 
 			"views",
 			"order",

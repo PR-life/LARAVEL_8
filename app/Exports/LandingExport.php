@@ -49,6 +49,8 @@ class LandingExport implements FromCollection, WithHeadings, WithStrictNullCompa
 			"published",
 			
 			"category_id",
+			"tag_id",
+			"group_id",
 
 			"title",
 			"description",
