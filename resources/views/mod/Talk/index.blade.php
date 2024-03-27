@@ -2,13 +2,13 @@
 
     <div class="I aura / Edge -SPC edge">
         <div class="flex cI bC_mbl / cross">
-            <span class="h b600">
-                <span class="ghostMbl">
+            <span class="h b500">
+                <span class="ghostMbl c-h">
                     Новые вопросы <br class="none_PC">от клиентов
                 </span>
                 <div class="Wings Wings-mbl none_PC">
                     <div class="_win -t">
-                        <span class="h b600">Новые вопросы <br class="none_PC">от клиентов</span>
+                        <span class="h b500 c-h">Новые вопросы <br class="none_PC">от клиентов</span>
                         <div class="paragraph"></div>
                     </div>
                 </div>
@@ -33,10 +33,11 @@
 
 
 
-
-    @foreach($Var as $item)
-        @include('_assembling.wagon_TalkQA',['Var' => $item, 'cssPreamble' => 'flex cI cross-xxs / block_80'])
-    @endforeach
+    <div class="Roll_mbl Roll_PC -edge -space -scrollBar cross">
+        @foreach($Var as $item)
+            @include('_assembling.wagon_TalkQA',['Var' => $item, 'cssPreamble' => 'flex cI cross-xxs / block_80'])
+        @endforeach
+    </div>
 </div>
 
  

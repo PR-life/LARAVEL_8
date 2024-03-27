@@ -21,8 +21,13 @@ use App\Exports\LandingExport;
 use App\Exports\pivot\CategoryTagExport;
 use App\Exports\pivot\PostTagExport;
 use App\Exports\pivot\FaqTagExport;
+use App\Exports\pivot\FaqFaqExport;
 use App\Exports\pivot\PaperTagExport;
+use App\Exports\pivot\PaperItemExport;
 use App\Exports\pivot\LandingTagExport;
+use App\Exports\pivot\ItemTagExport;
+use App\Exports\pivot\SmsTagExport;
+use App\Exports\pivot\SmsCategoryExport;
 //
 use App\Exports\En\SmsEnExport;
 use App\Exports\En\PaperEnExport;

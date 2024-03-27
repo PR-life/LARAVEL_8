@@ -82,6 +82,18 @@ class CreatePapersTable extends Migration
             $table->foreign('category_id', 'paper_category_fk')->on('categories')->references('id');
        
 
+            $table->foreignId('tag_id')
+                ->nullable()
+                ->references('id')
+                ->on('tags');
+
+
+            $table->foreignId('group_id')
+                ->nullable()
+                ->references('id')
+                ->on('groups');
+
+
 			//
 			$table->string('title')->nullable();
 			$table->string('description')->nullable();

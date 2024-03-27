@@ -1,4 +1,4 @@
-<a class="flex -wrap / h / cloud cross-xs" href="{{ 
+<a class="flex -wrap / h / cross-xs" href="{{ 
 
 route('admin.'.mb_strtolower(class_basename($tag)).'.edit', ['tag' => $tag->id, 'shema' => $shema ?? null])
 

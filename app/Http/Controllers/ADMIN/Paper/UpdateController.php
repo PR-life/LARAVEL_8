@@ -13,8 +13,10 @@ class UpdateController extends BaseController
 
 		// dd($request);
         $data = $request->validated();
+		// dd($data);
 	
 		isset($data['category_id']) ? '' : $data['category_id'] = null;
+		isset($data['tag_id']) ? '' : $data['tag_id'] = null;
 		// $data['category_id'] < 1 ? '' : $data['category_id'] = null;
 		// dd($data);
 

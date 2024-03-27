@@ -24,11 +24,11 @@
 <div class="{{$css_wrap_content ?? 'I aura / Edge -SPC'}}">
 	<div id="{{$id_package}}" class="{{$id_package_css ?? 'all first'}}">
 		<div class="Ef -list -first / -Details">
-            @foreach($Var as $item)
+            @foreach($Var as $_faq)
                 @if($loop->first)
-                    @include('mod.FAQ.lego.item',['css' => '-first'])
+                    @include('mod.FAQ.lego.item.ef',['css' => '-first'])
                 @endif
-                @include('mod.FAQ.lego.item',['css' => 'x-'.$loop->iteration])
+                @include('mod.FAQ.lego.item.ef',['css' => 'x-'.$loop->iteration])
              @endforeach
 		</div>
 	</div>

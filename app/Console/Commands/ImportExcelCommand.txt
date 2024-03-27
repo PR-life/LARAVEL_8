@@ -18,10 +18,15 @@ use App\Imports\LandingImport;
 // use App\Imports\CommentsPaperImport;
 //
 use App\Imports\pivot\CategoryTagImport;
-use App\Imports\pivot\PostTagImport;
+use App\Imports\pivot\FaqFaqsImport;
 use App\Imports\pivot\FaqTagImport;
-use App\Imports\pivot\PaperTagImport;
+use App\Imports\pivot\ItemTagImport;
 use App\Imports\pivot\LandingTagImport;
+use App\Imports\pivot\PaperItemImport;
+use App\Imports\pivot\PaperTagImport;
+use App\Imports\pivot\PostTagImport;
+use App\Imports\pivot\SmsCategoryImport;
+use App\Imports\pivot\SmsTagImport;
 //
 use App\Imports\En\SmsEnImport;
 use App\Imports\En\PaperEnImport;

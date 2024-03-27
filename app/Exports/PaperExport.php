@@ -63,6 +63,8 @@ class PaperExport implements FromCollection, WithHeadings, WithStrictNullCompari
 			
 			"user_id",
 			"category_id",
+			'tag_id',
+			'group_id',
 
 			"title",
 			"description",

@@ -84,6 +84,8 @@ class PaperImport implements ToCollection, WithHeadingRow
 
                     'user_id' => $item['user_id'],
                     'category_id' => $item['category_id'],
+                    'tag_id' => $item['tag_id'],
+                    'group_id' => $item['group_id'],
 
                     'title' => $item['title'],
                     'description' => $item['description'],
