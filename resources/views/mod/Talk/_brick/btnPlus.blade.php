@@ -1,4 +1,5 @@
-<span class="orbit / pointer" data-click data-goto='Postman' data-foo='click' data-form='Form_Lite' form-param='Talk'>
+<a class="orbit / pointer" href="/contact">
+{{-- <span class="orbit / pointer" data-click data-goto='Postman' data-foo='click' data-form='Form_Lite' form-param='Talk'> --}}
     <svg class="Ico / noEvents" viewBox="0 0 86 86">
         <defs>
             <linearGradient id="x_13051452" x1="50%" y1="0%" x2="50%" y2="100%">
@@ -12,4 +13,5 @@
             <rect fill="#FFF" x="17" y="38" width="50" height="8" rx="4"></rect>
         </g>
     </svg>
-</span>  
+{{-- </span>   --}}
+</a>

@@ -15,6 +15,10 @@
     'cssMilk' => 'skimp-size_Aside'
 ])
 
+@push('head',)
+<base href="http://detectives.su/" />
+@endpush
+
 @push('css-body', 'role-'.auth()->user()->role.' ')
 
 @include('zADMIN._shema._brick.src')
@@ -25,6 +29,8 @@
 @push('css-body', 'x-aside Design x-Admin ')
 @push('css-fon', 'skimp-size_Aside ')
 @push('css-milk', 'skimp-size_Aside ')
+
+
 
 
 

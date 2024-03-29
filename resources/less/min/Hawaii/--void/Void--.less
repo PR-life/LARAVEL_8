@@ -2,7 +2,7 @@
 
 
 // dl.Void.-lineHeight {
-// 	--x-Void: 7px;
+// 	--void: 7px;
 // }
 
 //
@@ -29,73 +29,79 @@ ul.slim-s, ol.slim-s {
 
 .Void,
 .void {
-	--x-Void:1rem;
+	--void:1rem;
 }
 
 
 .Q .Void {
-	--x-Void:.5rem;
+	--void:.5rem;
 }
 
  
 .Message.void,
 .Void.-slim {
-	--x-Void:7px;
+	--void:7px;
 }
 
 
 // .Void > ._group > *{
-// 	--x-Void:.25rem;
+// 	--void:.25rem;
 // }
 
 
 // ._shell.Void {
-// 	--x-Void: .4rem;
+// 	--void: .4rem;
 // }
 
 
 // .Void.text,
 // .void.text {
-// 	--x-Void: 17px;
+// 	--void: 17px;
 // }
 
 @media (min-width:@metrika-80-plus) and (max-width: @w-max) {
 	#body {
-		// --Void-r:~"calc(var(--w)*.08)";
+		// --void-r:~"calc(var(--w)*.08)";
 	}
 }
 
 
 @media (min-width: @w-menu-2-plus) and (max-width: @metrika-80) {
 	#body {
-		// --Void-r:~"calc(var(--w)*.04)";
+		// --void-r:~"calc(var(--w)*.04)";
 	}
 }
 
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
 
+
+	.void.menu.-footer {
+		--void:1rem;
+	}
+
+
 	.Golden.Void,
 	.Grid.Void {
-		--x-Void: 0;
+		--void: 0;
 	}
 
 	.Void.-M,
 	.void-m{
-		--x-Void:2rem;
+		--void:2rem;
 	}
 
 	.Void.-L,
 	.void-l {
-		--x-Void: 4rem;
+		--void: 4rem;
 	}
 
 	.void-xl {
-		--x-Void: 6rem;
+		--void: 6rem;
 	}
 
 	.void-s {
-		--x-Void:7px;
+		--void:7px;
 	}
 
 
@@ -107,23 +113,38 @@ ul.slim-s, ol.slim-s {
 
 @media screen and (max-width: @w-menu-2) {
 
+
+	.void-mbl {
+		--void:1rem;
+	}
+
+	//
+
+
+
+	.void.menu.-footer {
+		--void:1.5rem;
+	}
+
+
+
 	.void-l,
 	.void-m{
-		--x-Void:2rem;
+		--void:2rem;
 	}
 
 	.void-xl {
-		--x-Void:4rem;
+		--void:4rem;
 	}
 
 	.void-s {
-		--x-Void:7px;
+		--void:7px;
 	}
 
 	.void-mbl > {
 		> * {
-			margin-bottom: var(--x-Void);
-			margin-top: var(--x-Void);
+			margin-bottom: var(--void);
+			margin-top: var(--void);
 		  }
 	}
 
@@ -139,8 +160,8 @@ ul.slim-s, ol.slim-s {
 .void-l,
 .void-xl {
     > * {
-      margin-bottom: var(--x-Void);
-      margin-top: var(--x-Void);
+      margin-bottom: var(--void);
+      margin-top: var(--void);
     }
     > ul, ol {
         li {
@@ -182,7 +203,7 @@ ul.slim-s, ol.slim-s {
 	> .Q, .A,
 	> label,
 	> p br {
-	 	margin-bottom: var(--x-Void);
+	 	margin-bottom: var(--void);
 	}
 
 	
@@ -200,9 +221,6 @@ ul.slim-s, ol.slim-s {
 
 //
 
-.Void.menu.-footer {
-	--x-Void:.75rem;
-}
 
 //
 
@@ -240,8 +258,8 @@ ul.slim-s, ol.slim-s {
 
 }
 
-// .void-l {padding-left: var(--Void-l);}
-// .void-r {padding-right: var(--Void-r);}
+// .void-l {padding-left: var(--void-l);}
+// .void-r {padding-right: var(--void-r);}
 // .void-none {
 // 	padding-left:0;
 // 	padding-right: 0;

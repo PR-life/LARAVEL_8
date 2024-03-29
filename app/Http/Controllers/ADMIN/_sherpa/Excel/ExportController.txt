@@ -26,6 +26,7 @@ use App\Exports\pivot\PaperTagExport;
 use App\Exports\pivot\PaperItemExport;
 use App\Exports\pivot\LandingTagExport;
 use App\Exports\pivot\ItemTagExport;
+use App\Exports\pivot\ItemCategoryExport;
 use App\Exports\pivot\SmsTagExport;
 use App\Exports\pivot\SmsCategoryExport;
 //

@@ -1,4 +1,4 @@
-<div class="Preamble / Edge / face -ghost face-edge / user-{{$Var->user->id}} {{$Var->css}}">
+<div class="Preamble / face face-out face-ghost face-edge / user-{{$Var->user->id}} {{$Var->css}}">
 
 	<a class="author / flex / relative" href="{{$link}}">
 		<span class="Abs -left -t / face-paddingImg">

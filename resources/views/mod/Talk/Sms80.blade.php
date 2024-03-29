@@ -10,7 +10,7 @@
         <div class="_scr">
             <div class="_body / Chat -entropy / Entropy / Roll_80 -edge -space -scrollBar / cross void-m">
                 @foreach($Var as $item)
-                    @include('_assembling.wagon_TalkQA',['Var' => $item, 'cssPreamble' => 'flex cI cross-xxs / block_80'])
+                    @include('_assembling.wagon_TalkQA',['Var' => $item, 'cssPreamble' => 'flex cI cross-xxs / block_80', 'css' => $cssWagon ?? null])
                 @endforeach
                 <div class="Gstrm"></div>
             </div>

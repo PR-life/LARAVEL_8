@@ -27,6 +27,26 @@ class Category extends Model
         'keywords',
     ];
 
+
+
+
+    public function itemsPivot() {
+
+        return $this->belongsToMany(
+            Item::class,
+            'item_categories', // через какую тбл свзяь
+            'category_id', // foreignKey этой модели в указанной таблице
+            'item_id' // relatedPivotKey, с кем foreignKey имеет взаимоотношение
+        );
+
+		// return $this->belongsToMany(Tag::class,'post_tags');
+			// !!! не сошлось с видео
+			// запись по конвенции Laravel, тут важно соблюдать имена в атрибутах
+			// https://www.youtube.com/watch?v=c0yuY_Ugacg
+    }
+
+
+
     public function items() {
         // return $this->hasMany(
         //     Item::class,
@@ -56,7 +76,7 @@ class Category extends Model
             Paper::class,
             'category_id',
             'id', //
-        )->orderBy('created_at', 'desc');
+        )->where('published','1')->orderBy('created_at', 'desc');
     }
 
 

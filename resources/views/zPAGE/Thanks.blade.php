@@ -19,7 +19,7 @@
 @component('_wrap.index', ['id' => 'Wrap', 'css' => 'HWin'])
 
 
-    <div id="wrap_manager" class="Space -v / Bg -gif / relative index">
+    <div id="wrap_manager" class="Space -v / relative index">
         @include('zTHIS.PAGE.Thanks.head')
     </div>
 

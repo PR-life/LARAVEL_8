@@ -1,4 +1,4 @@
-<div class="_edge / Edge">
+<div class="edge-leftS / Edge">
 	@include('_Wrap.Preamble.Teaser.blog.face_out', ['Var' => $Var, 'link' => $routeName])
 </div>
 @if ($Var->shema_teaser == 'poster')

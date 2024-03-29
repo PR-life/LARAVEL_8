@@ -23,7 +23,7 @@ class UpdateController extends BaseController
 		
 		$paper = $this->service->update($paper,$data);
 
-		// dd($data);
+		// dd($paper);
 
 		return back()->with('UpdateController', true);
 		// return redirect()->route('admin.post.edit',$post->id);

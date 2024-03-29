@@ -1,4 +1,4 @@
-<div class="Teaser {{$Var->shema_teaser}} / Void -slim / space-hL Edge">
+<div class="Teaser vol-{{$Var->shema_teaser}} / Void / space-hL Edge">
 	@include('_Wrap.Teaser._lego.content',['Var' => $Var, 'routeName' => route($routeName, $Var->slug)])
 	<div class="paragraph"></div>
 	@include('_lego.computed.Paper.index')

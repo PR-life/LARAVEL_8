@@ -4,4 +4,4 @@
 <meta name="robots" content="noyaca, noarchive">
 <meta name="format-detection" content="telephone=no">
 <meta name="format-detection" content="address=no">
-<base href="{{Request::root()}}/">
+{{-- <base href="{{Request::root()}}/"> --}}

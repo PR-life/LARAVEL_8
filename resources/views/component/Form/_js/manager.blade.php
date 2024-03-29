@@ -1,13 +1,13 @@
 <script>
 
 
-    const FORM = document.getElementById('form{{$Form}}');
-    const EMAIL = document.getElementById('input{{$inputEmail}}_Manager');
-    const WHATSAPP = document.getElementById('input{{$inputWhatsapp}}_Manager');
-    const TELEGRAM = document.getElementById('input{{$inputTelegram}}_Manager');
-    const VIBER = document.getElementById('input{{$inputViber}}_Manager');
+    const FORM = document.getElementById('{{$Form}}');
+    const EMAIL = document.getElementById('{{$inputEmail}}') ?? document.getElementById('js_input_hidden');
+    const WHATSAPP = document.getElementById('{{$inputWhatsapp}}') ?? document.getElementById('js_input_hidden');
+    const TELEGRAM = document.getElementById('{{$inputTelegram}}') ?? document.getElementById('js_input_hidden');
+    const VIBER = document.getElementById('{{$inputViber}}') ?? document.getElementById('js_input_hidden');
       
-
+    
     FORM.addEventListener("submit", function (event) {
     
       if (
@@ -34,7 +34,7 @@
         
     }
     
-    </script>
+</script>
     
     
     

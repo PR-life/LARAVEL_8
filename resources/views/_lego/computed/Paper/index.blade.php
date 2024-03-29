@@ -9,7 +9,7 @@
         <div class="Ico mr-1">
             @svg('vote')
         </div>
-        <span class="content -lineHeight">{{$Var->liked_users_count ?? '!!!'}}</span>
+        <span class="content -lineHeight">{{$Var->liked_users_count ?? ''}}</span>
     </div>
     {{-- <a class="Abs -all" href="{{$routeName}}"></a> --}}
 </div>

@@ -10,24 +10,6 @@
 <div class="-Chunk / diminish -icoDown">
     <div class="paragraph-s"></div>
     @component('_wrap.Chunk.Aside.index')
-        @slot('routeName', 'admin.post.index')
-        @slot('linkAdd', route('admin.post.create'))
-        @slot('cssIco', '-XS')
-        @slot('name', 'Материалы')
-        <span class="block / Ico -XS">
-            @svg('plus')
-        </span>
-    @endcomponent
-    @component('_wrap.Chunk.Aside.index')
-        @slot('linkAdd', route('admin.faq.create'))
-        @slot('routeName', 'admin.faq.index')
-        @slot('cssIco', '-XS')
-        @slot('name', 'Faq')
-        <span class="block / Ico -XS">
-            @svg('plus')
-        </span>
-    @endcomponent 
-    @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.paper.index')
         @slot('linkAdd', route('admin.paper.create'))
         @slot('cssIco', '-XS')
@@ -45,5 +27,23 @@
             @svg('plus')
         </span>
     @endcomponent 
+    @component('_wrap.Chunk.Aside.index')
+        @slot('linkAdd', route('admin.faq.create'))
+        @slot('routeName', 'admin.faq.index')
+        @slot('cssIco', '-XS')
+        @slot('name', 'Faq')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
+    @endcomponent 
+    @component('_wrap.Chunk.Aside.index')
+        @slot('routeName', 'admin.post.index')
+        @slot('linkAdd', route('admin.post.create'))
+        @slot('cssIco', '-XS')
+        @slot('name', 'Материалы')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
+    @endcomponent
 </div>
 @endcomponent

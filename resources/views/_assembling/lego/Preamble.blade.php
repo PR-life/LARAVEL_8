@@ -1,4 +1,4 @@
-<div class="Preamble / space-left space-topX2">
+<div class="Preamble / {{$css ?? 'space-left space-top'}}">
     <div class="{{$cssPreamble ?? ''}}">
         <div class="Ava -def"></div>
         <div class="author / flex">

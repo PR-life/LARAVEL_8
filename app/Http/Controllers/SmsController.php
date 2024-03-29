@@ -52,9 +52,13 @@ class SmsController extends Controller
         
 
         // dd($idSms);
+
+
+
         $sms->update($data);
 
-        return view('_.Thanks', compact('sms'));
+        return view('zPAGE.Thanks', compact('sms'));
+        // return view('_.Thanks', compact('sms'));
     }
 
 

@@ -1,5 +1,5 @@
 @isset($link)
-<a class="Edge block highlight" href="{{$link}}">
+<a class="edge-s block highlight" href="{{$link}}">
 @endisset
 <div class="inline index relative {{$cssWrapPoster ?? ''}}">
 

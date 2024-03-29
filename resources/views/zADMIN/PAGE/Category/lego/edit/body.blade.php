@@ -39,7 +39,7 @@
 		@slot('tab_3')
 			@slot('nameTab3', 'SEO')
 			<div class="paragraphX2 / net"></div>
-			@include('zADMIN.PAGE._lego.edit.seo.canonical_ru')
+			@include('zADMIN.PAGE._lego.edit.seo.canonical_ru', ['Var' => $category])
 			{{-- @include('zADMIN.PAGE._lego.edit.seo.canonical', ['Var' => $category]) --}}
 		@endslot
 	@endcomponent

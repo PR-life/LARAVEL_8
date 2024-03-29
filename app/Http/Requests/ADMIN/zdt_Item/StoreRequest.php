@@ -78,6 +78,9 @@ class StoreRequest extends FormRequest
             'tag_ids' => 'nullable|array',
             'tag_ids.*' => 'nullable|integer|exists:tags,id',
 
+            'category_ids' => 'nullable|array',
+            'category_ids.*' => 'nullable|integer|exists:categories,id',
+			
 			//
             'title' => 'nullable|string',
             'description' => 'nullable|string',

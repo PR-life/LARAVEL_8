@@ -39,6 +39,10 @@
 	.Grid.-gapS {
 		grid-gap: .5rem;;
 	}
+
+	.Grid.-gapM {
+		grid-gap: 1.5rem;;
+	}
 	
 	.Grid.-gapSVW {
 		grid-gap: clamp(1rem, 1vw, 24px);
@@ -66,10 +70,21 @@
 }
 
 @media screen and (max-width:@w-menu-2) {
-	// .Grid.x2_Mbl {
-	// 	grid-template-columns: repeat(2, 1fr);
-	// }
-	// .Grid.x4_Mbl {
-	// 	grid-template-columns: repeat(4, 1fr);
-	// }	
+	.Grid_mbl {
+	    display: grid;
+	}
+
+	.Grid_mbl.x2_mbl {
+		grid-template-columns: repeat(2, 1fr);
+	}
+	.Grid_mbl.-border_mbl {
+		grid-gap: 1px;
+	}
+	
+	.Grid_mbl.-gap_mbl {
+		grid-gap: 1rem;
+	}
+	.Grid_mbl.-gapM_mbl {
+		grid-gap: 1.5rem;
+	}
 }

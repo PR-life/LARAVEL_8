@@ -31,6 +31,10 @@ tinymce.init({
 	// content_css: "/css/env/tinymce.css",
 	language: 'ru',
 	height: parseInt(document.documentElement.clientHeight) * .8,
+
+	relative_urls : false,
+	// remove_script_host : true,
+	document_base_url : '/',
 	
 
 	menubar: 'format',
@@ -90,7 +94,7 @@ tinymce.init({
 <script>
 	tinymce.init({
 		selector: '#tinymce_lite_1, #tinymce_lite_2, #tinymce_lite_3',
-		// content_css: "document",
+		content_css: "/css/env/tinymce.css?4",
 
 		language: 'ru',
 		height: parseInt(document.documentElement.clientHeight) * .25,

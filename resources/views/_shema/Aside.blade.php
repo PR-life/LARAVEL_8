@@ -2,6 +2,7 @@
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
 	@include('_shema._lego.head.index')
+	@stack('head')
 </head>
 <body id="body" class="shema-aside MXAT @yield('css-body') @stack('css-body') {{ str_replace('_', '-', app()->getLocale()) }}">
 <script>

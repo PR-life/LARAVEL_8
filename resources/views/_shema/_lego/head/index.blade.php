@@ -2,7 +2,8 @@
 @include($linkMetaColor ?? '_.head.meta.color')
 	<meta name="description" content="@yield('description')">
 	<meta name="keywords" content="@yield('keywords')">
-	<title>@yield('title', 'Заголовок по умолчанию 555')</title>
+	<title>@yield('title', $_ENV['APP_NAME'])</title>
+	@yield('canonical')
 	
 @include('_.head.meta.ogp')
 

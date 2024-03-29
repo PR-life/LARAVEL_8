@@ -1,5 +1,3 @@
-
-
 {{-- https://dtornado.ru/fz-152/gdpr --}}
 
 

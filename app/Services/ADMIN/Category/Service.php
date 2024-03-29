@@ -22,9 +22,15 @@ class Service {
 		try {
 			DB::beginTransaction();
 
+			
+			if($param['canonical'] == "/") unset($param['canonical']);
+			// dd($param);
+
 
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);
+
+ 
 			
 			//
 			isset($param['published']) ? '' : $param['published'] = '0';
