@@ -1,6 +1,12 @@
 @charset "UTF-8";
 
+.p,
+.Citation p,
+.text > p {
+	font-size: var(--rem-p);
+}
 
+.Citation p,
 .p.-lineHeight,
 .text > p {
     line-height: calc(var(--rem-p)*1.6);
@@ -9,10 +15,4 @@
 .p.slim,
 .text > p.slim {
     line-height: calc(var(--rem-p)*1.4);
-}
-
-
-
-.text>p {
-	font-size: var(--rem-p);
 }

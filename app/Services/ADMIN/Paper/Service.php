@@ -24,10 +24,14 @@ class Service {
 			isset($param['item_ids']) ? $itemIds = $param['item_ids'] : $itemIds = [];
 			unset($param['item_ids']);
 
-
-			// dd($itemIds);
 			
 			//
+
+			if($param['canonical'] == "/") unset($param['canonical']);
+			
+			isset($param['category_id']) ? '' : $param['category_id'] = null;
+			isset($param['tag_id']) ? '' : $param['tag_id'] = null;
+
 			isset($param['featured']) ? '' : $param['featured'] = '0';
 			isset($param['published']) ? '' : $param['published'] = '0';
 			isset($param['mafia']) ? '' : $param['mafia'] = '0';

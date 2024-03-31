@@ -1,7 +1,7 @@
 <div class="Teaser / Void -slim / space-hL Edge">
 
 	<div class="_edge / Edge">
-		@include('_Wrap.Preamble.Teaser.sms', ['Var' => $Var, 'link' => route($routeName, $Var->slug ?? $Var->id)])
+		@include('_Wrap.Preamble.Teaser.sms', ['Var' => $Var, 'link' => route($routeName, $Var->sku ?? $Var->id)])
 	</div>
 
 	<div class="paragraph-s"></div>
