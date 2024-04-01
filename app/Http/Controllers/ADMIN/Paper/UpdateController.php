@@ -12,15 +12,7 @@ class UpdateController extends BaseController
     public function __invoke(UpdateRequest $request, Paper $paper){
 
 		// dd($request);
-        $data = $request->validated();
-		// dd($data);
-	
-		isset($data['category_id']) ? '' : $data['category_id'] = null;
-		isset($data['tag_id']) ? '' : $data['tag_id'] = null;
-		// $data['category_id'] < 1 ? '' : $data['category_id'] = null;
-		// dd($data);
-
-		
+        $data = $request->validated();	
 		$paper = $this->service->update($paper,$data);
 
 		// dd($paper);

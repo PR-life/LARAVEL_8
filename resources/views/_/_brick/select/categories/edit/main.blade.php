@@ -1,45 +1,22 @@
-
-
 <option value=''>--не выбрано--</option>
-{{-- @dd($Categories) --}}
-@foreach($Categories as $category)
-
- 
-{{-- @if($category->childrenCategories->count() > 0)
-	<option
-		value="{{$category->id}}"
-		{{ $Var == $category->id ? ' selected' : ''}}
-		{{$category->id == old('category_id') ? ' selected' : ''}}>
-
-		{{$category->name}} [{{$category->id}}]
-	</option>
-
-	@foreach($category->childrenCategories as $childCategory)
-
-	<option
-		value="{{$childCategory->id}}"
-		{{ $Var == $childCategory->id ? ' selected' : ''}}
-		{{$childCategory->id == old('category_id') ? ' selected' : ''}}>
-		–- {{$childCategory->name}} [{{$category->id}}]
-	</option>
-	@endforeach
-
-	
-@else --}}
-
+@foreach($Categories as $_category)
+@if(!$_category->category_id)
 <option
-value="{{$category->id}}"
-{{ $Var == $category->id ? ' selected' : ''}}
-{{-- {{ is_array($arr) && in_array($category->id, $arr) ? ' selected' : ''}} --}}
-{{$category->id == old('category_id') ? ' selected' : ''}}>
+value="{{$_category->id}}"
+{{ $Var == $_category->id ? ' selected' : ''}}
+{{$_category->id == old('category_id') ? ' selected' : ''}}>
 
-{{$category->name}} [{{$category->id}}]
+{{$_category->name}}
 </option>
-
-{{-- @endif --}}
- 
- 
-
-
-
+@if($_category->childrenCategories->count() > 0)
+@foreach($_category->childrenCategories as $_childCategory)
+<option
+	value="{{$_childCategory->id}}"
+	{{ $Var == $_childCategory->id ? ' selected' : ''}}
+	{{$_childCategory->id == old('category_id') ? ' selected' : ''}}>
+	–- {{$_childCategory->name}}
+</option>
+@endforeach
+@endif 
+@endif
 @endforeach

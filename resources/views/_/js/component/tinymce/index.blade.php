@@ -1,17 +1,12 @@
 @push('style')
+.tox-tinymce svg {
+	width:auto;
+	height:auto;
+}
 
-	.tox-tinymce svg {
-		width:auto;
-		height:auto;
-	}
-
-	.tox-collection__group svg {
-		color:#000 !important;
-	}
-	{{-- #tinymce_lite_1 ~ .tox {max-height:300px !important}
-	#tinymce_lite_2 ~ .tox {max-height:300px !important}
-	#tinymce_lite_3 ~ .tox {max-height:300px !important}
-	tox-tbtn__select-chevron --}}
+.tox-collection__group svg {
+	color:#000 !important;
+}
 @endpush
 
 
@@ -48,6 +43,8 @@ tinymce.init({
 	toolbar: 'blocks styles | bold italic bullist numlist | link anchor | visualblocks | removeformat code',
 	// image charmap
 
+
+  link_context_toolbar: true,
 
 	block_formats: 'paragraph=p; div=div; h1=h1; h2=h2; h3=h3; h4=h4',
 

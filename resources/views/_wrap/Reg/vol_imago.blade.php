@@ -10,6 +10,7 @@
 	</div>
 	<div class="Min Max -w1"></div>
 	<div class="_r _L / relative [ padding bottom L ]">
+		<div class="paragraphX2"></div>
 		{!! $slot !!}
 	</div>
 </div>
