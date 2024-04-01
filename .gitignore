@@ -6,12 +6,6 @@
 /vendor
 
 #
-/public/images*
-/public/media*
-/public/storage
-/public/video*
-
-#
 public_html
 
 #

@@ -2,7 +2,7 @@
 
 # 
 /brand
-/images*
+/images
 /media*
 /storage
 /video*
@@ -16,3 +16,4 @@
 favicon.ico
 robots.txt
 mix-manifest.json
+# .htaccess

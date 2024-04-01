@@ -51,7 +51,7 @@ class StoreRequest extends FormRequest
 			'prev_h2' => 'nullable|string',
 			'prev_p' => 'nullable|string',
             
-            'en_name' => 'required|string',
+            'en_name' => 'nullable|string',
             'en_h1' => 'nullable|string',
             'en_intro' => 'nullable|string',
             'en_text' => 'nullable|string',
