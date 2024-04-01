@@ -18,10 +18,8 @@ class AskRequest extends FormRequest
     {
         return [
 
-            'phone' => 'nullable',
-
             'name' => 'nullable|min:2',
-            'sms'=>'min:6',
+            'sms'=>'required|min:6',
 
             //
             'param_1'=>'nullable|string',
@@ -49,6 +47,7 @@ class AskRequest extends FormRequest
 		return [
 			'name.min' => 'Имя короче 2 символов',
             //
+			'sms.required' => 'Ваш вопрос',
 			'sms.min' => 'Ваш вопрос слишком короткий, минимум 6 символов',
 		];
 	}

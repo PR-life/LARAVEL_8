@@ -21,20 +21,39 @@ class BaseController extends Controller {
     public function telega($sms) {
 
         if($sms['status'] < 10) {
+
+
             $token = env('TG_TOKEN', '6440933163:AAE2U2nF_5IXnC3GC1l8kd8n8iljL6JyN1Y');
             $chat_id = env('TG_CHAT_ID', '6020403524');
             $sitename = env('APP_NAME');
             $Gotelegram = '';       
      
-            $arrTelegram = array(
-    
-                '<b>Имя:</b> ' => $sms->name,
-                '<b>Телефон:</b> ' => $sms->phone,
-                '---описание---' => '',
-                '' =>  $sms->param_1,
-                '<b>откуда:</b> ' => $sms->from_page,
-              );
+
+            if($sms['label'] == 'ask') {
+                $arrTelegram = array(
+                    '---вопрос---' => '',
+                    '' =>  $sms->sms."%0A",
+                    '---контакты---' => '',
+                    '<b>email:</b> ' => $sms->email,
+                    '<b>Телефон:</b> ' => $sms->phone,
+                    '<b>Whatsapp:</b> ' => $sms->whatsapp,
+                    '<b>Телеграм:</b> ' => $sms->telegram,
+                    '%0A---описание---' => '',
+                    '~ ' =>  'форма: Задать вопрос',
+                    '<b>откуда:</b> ' => $sms->from_page,
+                  );
+            } else {
+                $arrTelegram = array(
+                    '<b>Имя:</b> ' => $sms->name,
+                    '<b>Телефон:</b> ' => $sms->phone,
+                    '%0A---описание---' => '',
+                    '~ ' =>  $sms->param_1,
+                    '<b>откуда:</b> ' => $sms->from_page,
+                  );
+            }
              
+
+
     
             foreach ($arrTelegram as $key => $value) {
     

@@ -23,16 +23,6 @@ class SmsManagerController extends BaseController
         $param = $request->validated();
         // dd($param);
 
-        // $data = [
-        //     'email' => $request->input('email'),
-        //     'phone' => $request->input('phone'),
-        //     'whatsapp' => $request->input('whatsapp'),
-        //     'telegram' => $request->input('telegram'),
-        //     'viber' => $request->input('viber'),
-        //     'lang' => $request->input('lang_sms'),
-        // ];
-        
-
         if($param['lang'] == 'ru') {
             $sms = Sms::find($param['id']);
         };
@@ -43,6 +33,7 @@ class SmsManagerController extends BaseController
         // dd($sms);
         $param = $this->service->update($param);
         $sms->update($param);
+        $this->telega($sms);
 
         return view('zPAGE.Thanks', compact('sms'));
         // return view('_.Thanks', compact('sms'));
