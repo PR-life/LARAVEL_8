@@ -9,15 +9,22 @@ use Illuminate\Support\Facades\Route;
 // App::setLocale($locale);
 // App::isLocale('en');
 
-
 Route::group(['prefix' => 'asnone'], function(){
 
     Route::group(['prefix' => 'sms'], function(){
-        Route::post('/store', [App\Http\Controllers\SmsController::class, 'store'])->name('sms.store');
-        Route::post('/ask', [App\Http\Controllers\SmsController::class, 'ask'])->name('sms.ask');
-        Route::get('/manager', [App\Http\Controllers\SmsController::class, 'manager'])->name('sms.manager');
-        // Route::patch('/asnone/sms/update', [App\Http\Controllers\SmsController::class, 'update'])->name('sms.update');
-        Route::post('/update', [App\Http\Controllers\SmsController::class, 'update'])->name('sms.update');
+        Route::post('/store', [App\Http\Controllers\sms\SmsController::class, 'store'])->name('sms.store');
+
+        Route::post('/storephone', [App\Http\Controllers\sms\SmsController::class, 'storePhone'])->name('sms.storephone');
+        Route::post('/storephonename', [App\Http\Controllers\sms\SmsController::class, 'storephonename'])->name('sms.storephonename');
+
+        Route::post('/storeask', [App\Http\Controllers\sms\SmsController::class, 'storeAsk'])->name('sms.storeask');
+
+
+
+        
+        Route::get('/manager', [App\Http\Controllers\sms\SmsManagerController::class, 'manager'])->name('sms.manager');
+        Route::post('/update', [App\Http\Controllers\sms\SmsManagerController::class, 'update'])->name('sms.update');
+        // Route::patch('/asnone/sms/update', [App\Http\Controllers\sms\SmsController::class, 'update'])->name('sms.update');
     });
 
     Route::group(['prefix' => 'brief'], function(){

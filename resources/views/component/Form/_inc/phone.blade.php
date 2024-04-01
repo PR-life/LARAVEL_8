@@ -8,10 +8,10 @@ $errorBag ?? $errorBag = 'newSms';
 		'Var' => 'phone',
 		'type' => 'tel',
 		'value' => old('phone'),
-		'placeholder' => 'phone...',
+		'placeholder' => $placeholder ?? 'телефон...',
 		// 'jsvalidate' => 'email',
 		'css' => $cssInput ?? null,
-		'required' => $required ?? false,
+		'required' => $required ?? null,
 		])
 
 	@if(isset($label))

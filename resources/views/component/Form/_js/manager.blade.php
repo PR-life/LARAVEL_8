@@ -3,6 +3,7 @@
 
     const FORM = document.getElementById('{{$Form}}');
     const EMAIL = document.getElementById('{{$inputEmail}}') ?? document.getElementById('js_input_hidden');
+    // const PHONE = document.getElementById('{{$inputPhone}}') ?? document.getElementById('js_input_hidden');
     const WHATSAPP = document.getElementById('{{$inputWhatsapp}}') ?? document.getElementById('js_input_hidden');
     const TELEGRAM = document.getElementById('{{$inputTelegram}}') ?? document.getElementById('js_input_hidden');
     const VIBER = document.getElementById('{{$inputViber}}') ?? document.getElementById('js_input_hidden');

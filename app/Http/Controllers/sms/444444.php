@@ -1,8 +1,11 @@
 <?php
 
-namespace App\Http\Controllers;
+namespace App\Http\Controllers\sms;
+
 use Illuminate\Http\Request;
 
+
+ 
 //
 // use Illuminate\Support\Facades\Mail;
 
@@ -23,7 +26,7 @@ use App\Http\Requests\Sms\AskRequest;
 // use Illuminate\Support\Facades\Hash;
 use App\Inspections\Spam;
 
-class SmsController extends Controller
+class Sms33333Controller extends BaseController
 {
  
 
@@ -77,7 +80,7 @@ class SmsController extends Controller
         // dd(app()->getLocale());
 
         $param = $request->validated();
-        unset($param['tech_idFormError']);
+        // unset($param['tech_idFormError']);
 
 
  
@@ -112,12 +115,16 @@ class SmsController extends Controller
     }
 
 
+
+
+
+
     public function store(StoreRequest $request) {
 
         // dd($request);
 
         $param = $request->validated();
-        unset($param['tech_idFormError']);
+        // unset($param['tech_idFormError']);
 
         
         // dd($param);
@@ -214,6 +221,23 @@ class SmsController extends Controller
 
  
  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

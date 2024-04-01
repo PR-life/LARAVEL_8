@@ -15,8 +15,7 @@ class Sms extends Model
     protected $table = 'sms';
     protected $guarded = false;
 	
-
-
+    
 
     public function categories() {
         return $this->belongsToMany(

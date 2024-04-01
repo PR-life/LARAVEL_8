@@ -19,7 +19,7 @@ function callback(entries,observer) {
 		// intersectionRatio — доля пересечения от 0 до 1. Если элемент полностью в наблюдаемой области, то значение будет 1, а если наполовину, то — 0.5.
 		// target — сам наблюдаемый элемент для дальнейших манипуляций. Например, для добавления классов.
 	
-		console.log(arr);
+		// console.log(arr);
 
 		// if (intersectionRatio === 1) {
 		// 	console.log('Элемент полностью в области наблюдения')
@@ -51,7 +51,7 @@ function callback(entries,observer) {
 					div = entry.target;
 				}
 
-				console.log(div)
+				// console.log(div)
 
 
 				div.classList.add(entry.target.getAttribute('visible-param'))

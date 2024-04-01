@@ -4,10 +4,10 @@ namespace App\Http\Requests\Sms;
 
 use Illuminate\Foundation\Http\FormRequest;
 
-class StoreRequest extends FormRequest
+class PhoneRequest extends FormRequest
 {
 
-    protected $errorBag = 'newSms';
+    protected $errorBag = 'newPhone';
 
     public function authorize()
     {
@@ -18,25 +18,9 @@ class StoreRequest extends FormRequest
     {
         return [
 
-            // 'tech_idFormError' => 'nullable',
+            'phone' => 'nullable|regex:/^([0-9\s\-\+\(\)]*)$/|min:9',
 
             //
-            'name' => 'nullable|min:2',
-            'contact' => 'nullable|min:2',
-
-            'email' => 'nullable|email',
-            'phone' => 'nullable|regex:/^([0-9\s\-\+\(\)]*)$/|min:9',
-			'whatsapp' => 'nullable|string',
-			'telegram' => 'nullable|string',
-			'viber' => 'nullable|string',
-
-            'country'=>'nullable|string',
-            'city'=>'nullable|string',
-            'area'=>'nullable|string',
-
-            'sms'=>'nullable|string',
-            'answer'=>'nullable|string',
-
             'param_1'=>'nullable|string',
             'param_2'=>'nullable|string',
             'param_3'=>'nullable|string',
@@ -61,11 +45,6 @@ class StoreRequest extends FormRequest
 	public function messages() {
 		// return parent::messages(); // по умолчаиню
 		return [
-			'name.required' => 'ваше имя',
-            //
-			'email.required' => 'куда прислать ответ',
-			'email.email' => 'некорректный e-mail',
-            //
 			'phone.regex' => 'Неверный формат телефона',
 			'phone.min' => 'Номер телефона короче 9 символов',
 		];

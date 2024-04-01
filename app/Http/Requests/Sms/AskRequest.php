@@ -18,17 +18,24 @@ class AskRequest extends FormRequest
     {
         return [
 
-            'tech_idFormError' => 'nullable',
+            'phone' => 'nullable',
 
-            //
             'name' => 'nullable|min:2',
-            'ask'=>'min:6',
+            'sms'=>'min:6',
 
             //
+            'param_1'=>'nullable|string',
+            'param_2'=>'nullable|string',
+            'param_3'=>'nullable|string',
+
+            'question_1'=>'nullable|string',
+            'question_2'=>'nullable|string',
+            'question_3'=>'nullable|string',
+            'question_4'=>'nullable|string',
+
             'type'=>'nullable|string',
             'label'=>'nullable|string',
 
-            //
             'id_item'=>'nullable|string',
             'from_page'=>'nullable|string',
 
@@ -40,9 +47,9 @@ class AskRequest extends FormRequest
 
 	public function messages() {
 		return [
-			'name.min' => 'ваше имя',
+			'name.min' => 'Имя короче 2 символов',
             //
-			'ask.min' => 'Ваш вопрос слишком короткий, минимум 6 символов',
+			'sms.min' => 'Ваш вопрос слишком короткий, минимум 6 символов',
 		];
 	}
 }

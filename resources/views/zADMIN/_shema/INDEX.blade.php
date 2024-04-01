@@ -15,9 +15,9 @@
     'cssMilk' => 'skimp-size_Aside'
 ])
 
-@push('head',)
+{{-- @push('head',)
 <base href="http://detectives.su/" />
-@endpush
+@endpush --}}
 
 @push('css-body', 'role-'.auth()->user()->role.' ')
 
