@@ -1,3 +1,21 @@
+@component('zADMIN.PAGE._lego.filter.SHEMA.index.wrap.Filter')
+    @slot('cssModel','-post')
+
+    <div class="{{ ($_GET != [] || request()->routeIs('admin.post.trash')) ? '' : 'notActive noEvents' }}">
+        <a href="{{route('admin.post.index')}}">
+            <span class="flex / Ico -XS / orb-s contentBox">@svg('close')</span>
+        </a>
+    </div>
+    @include('zADMIN.PAGE._lego.filter.lego.name')
+    @include('zADMIN.PAGE._lego.filter.lego.categories', ['Var' => $categories])
+    
+    @include('zADMIN.PAGE._lego.filter.lego.icoEnd')
+
+    <a class="{{request()->routeIs('admin.post.trash') ? '' : 'notActive'}}" href="{{route('admin.post.trash')}}">@svg('basket-2')</a>
+@endcomponent
+
+
+{{-- 
 <div class="Bee55 -S55 / Goo55 -manager555 / _indexMax">
     <div class="space / flex">
         <form id="form_managerDiv" class="Form -S / flex cI / cross-xxs">
@@ -17,4 +35,4 @@
             <a class="{{request()->routeIs('admin.post.trash') ? '' : 'notActive'}}" href="{{route('admin.post.trash')}}">@svg('basket-2')</a>
         </form>
     </div>
-</div>
+</div> --}}

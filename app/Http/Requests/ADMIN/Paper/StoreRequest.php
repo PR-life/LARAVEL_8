@@ -2,28 +2,19 @@
 
 namespace App\Http\Requests\ADMIN\Paper;
 
-use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Requests\ADMIN\BaseRelationsRequest;
 
-class StoreRequest extends FormRequest
+class StoreRequest extends BaseRelationsRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
+
     public function authorize()
     {
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
     public function rules()
     {
-        return [
+        return array_merge(parent::rules(), [
 			
 			'sku' => 'nullable|string',
             'name' => 'nullable|string',
@@ -70,50 +61,19 @@ class StoreRequest extends FormRequest
 			'demon_par_1' => 'nullable|string',
 			'demon_par_2' => 'nullable|string',
 			'demon_par_3' => 'nullable|string',
-
-			//
-			'knot_1' => 'nullable|string',
-	
-			//
-			'order' => 'nullable|integer',	
-			'status' => 'nullable|integer',		
-			'featured' => 'nullable|integer',		
-			'published' => 'nullable|integer',
-                        
+     
 			//
 			'mafia' => 'nullable|integer',	
             
             //
 			'user_id' => 'required|integer',
 			
-            'category_id' => 'nullable|integer|exists:categories,id',
-            'tag_id' => 'nullable|integer|exists:tags,id',
-            'group_id' => 'nullable|integer|exists:groups,id',
-
-            'tag_ids' => 'nullable|array',
-            'tag_ids.*' => 'nullable|integer|exists:tags,id',
-			
-            'item_ids' => 'nullable|array',
-            'item_ids.*' => 'nullable|integer|exists:items,id',
-
-			//
-            'title' => 'nullable|string',
-            'description' => 'nullable|string',
-            'keywords' => 'nullable|string',
-            'canonical' => 'nullable|string',
-
-
-        ];
+        ]);
     }
 
-	//написали сами
-	// зарезервированный метод класса Request
 	public function messages() {
-		// return parent::messages(); // по умолчаиню
 		return [
 			'name.required' => 'Название поста',
-			'category_id.integer' => 'category_id должен быть integer',
-			'category_id.exists' => 'такого category_id в таблице categories нет',
 			'prev_image.file' => 'необходимо выбрать файл',
 		];
 	}

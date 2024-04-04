@@ -10,7 +10,7 @@
 </div>
 <div class="hill-s"></div>
 
-@component('zADMIN.PAGE._wrap.Tab.edit.body')
+@component('zADMIN._wrap.Tab.edit.body')
 	@slot('nameTab1', 'Контакты')
 	@slot('nameTab2', 'Семья')
 	@slot('tab_1')
@@ -24,7 +24,7 @@
 
 <div class="hill"></div>
 
-@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'Блокнот'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Блокнот'])
 <div class="paragraph"></div>
 <div class="_shell Article aura / Note -lite">
 	<textarea id="tinymce_lite_1" name="text" placeholder='текст...'>{{$face->note}}</textarea>

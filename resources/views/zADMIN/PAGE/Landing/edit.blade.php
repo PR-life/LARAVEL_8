@@ -23,7 +23,7 @@
 <div class="I aura">
 
 
-	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.landing.update', $landing->id), 'css' => '-landing'])
+	@component('zADMIN._wrap.form.edit', ['route' => route('admin.landing.update', $landing->id), 'css' => '-landing'])
 
 
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.landing.index'])
@@ -34,7 +34,7 @@
 
 		@include('zADMIN.PAGE.Landing.lego.edit.lego.Relationships')
 		
-		@component('zADMIN.PAGE._wrap.Flaber.edit')
+		@component('zADMIN._wrap.Flaber.edit')
 
 			@slot('flaber')
 				{{-- @include('zADMIN.PAGE.Landing.lego.edit.sms')	 --}}
@@ -48,7 +48,7 @@
 
 
 		{{-- <div class="paragraph"></div>
-		@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'Блокнот'])
+		@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Блокнот'])
 		<div class="paragraph"></div>
 		<div class="_shell Article aura / Note -lite">
 			<textarea id="tinymce_lite_2" name="knot_1" placeholder='текст...'>{{$landing->knot_1}}</textarea>

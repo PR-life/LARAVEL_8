@@ -44,7 +44,7 @@
 <div class="content-xs / Grey -c50 / higlight slctn noEvents net">Основной контакт</div>
 <div class="paragraph net"></div>
 <div class="menu -tile -XS / cloud / net">
-    @component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
         @slot('name', 'public_contact')
         @slot('id', 'public_contact_def')
         @slot('param', 'checked')
@@ -52,7 +52,7 @@
         
         не выбран
     @endcomponent
-    @component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
         @slot('name', 'public_contact')
         @slot('id', 'public_contact_phone')
         @slot('param', 'phone')
@@ -60,7 +60,7 @@
         
         Телефон
     @endcomponent
-    @component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
         @slot('name', 'public_contact')
         @slot('id', 'public_contact_email')
         @slot('param', 'email')
@@ -68,7 +68,7 @@
         
         email
     @endcomponent
-    @component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
         @slot('name', 'public_contact')
         @slot('id', 'public_contact_whatsapp')
         @slot('param', 'whatsapp')
@@ -76,7 +76,7 @@
         
         whatsapp
     @endcomponent
-    @component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
         @slot('name', 'public_contact')
         @slot('id', 'public_contact_telegram')
         @slot('param', 'telegram')
@@ -84,7 +84,7 @@
         
         telegram
     @endcomponent
-    @component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
         @slot('name', 'public_contact')
         @slot('id', 'public_contact_viber')
         @slot('param', 'viber')

@@ -17,21 +17,21 @@
             @svg('plus')
         </span>
     @endcomponent
-    @component('_wrap.Chunk.Aside.index')
+    {{-- @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.tag.index')
         @slot('linkAdd', route('admin.tag.create'))
         @slot('name', 'Теги')
         <span class="block / Ico -XS">
             @svg('plus')
         </span>
-    @endcomponent 
-    @component('_wrap.Chunk.Aside.index')
+    @endcomponent  --}}
+    {{-- @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.group.index')
         @slot('linkAdd', route('admin.group.create'))
         @slot('name', 'Группы')
         <span class="block / Ico -XS">
             @svg('plus')
         </span>
-    @endcomponent 
+    @endcomponent  --}}
 </div>
 @endcomponent

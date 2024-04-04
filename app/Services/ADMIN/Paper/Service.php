@@ -8,9 +8,10 @@ use Illuminate\Support\Facades\Storage;
 //
 
 use App\Models\Paper;
+use App\Services\ADMIN\BaseService;
 
 
-class Service {
+class Service extends BaseService {
 
 
 	public function update($paper,$param) {

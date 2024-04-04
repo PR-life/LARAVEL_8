@@ -1,3 +1,3 @@
-<div class="Box aura {{$css ?? ''}}">
+<div class="Box aura / {{$css ?? ''}}">
 	{{ $slot }}	
 </div>

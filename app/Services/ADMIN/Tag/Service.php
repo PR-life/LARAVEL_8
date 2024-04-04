@@ -4,17 +4,13 @@ namespace App\Services\ADMIN\Tag;
 
 use Exception;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
 //
 
-
-// !!!!!!!!!!!!!!!!
-// use App\Models\Category;
-// use App\Models\Category;
+use App\Services\ADMIN\BaseService;
 use App\Models\Tag;
 
 
-class Service {
+class Service extends BaseService {
 
 
 	public function update($tag,$param) {

@@ -39,7 +39,7 @@
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-sms'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-sms'])
 
             <div class="inline">
                 <ul class="menu -tag -XS / Kite kite-spaceS kite-round / pointer" data-click="" data-switch="" data-package="tabPost_1" data-stop="">

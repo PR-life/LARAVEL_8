@@ -16,7 +16,7 @@
 <div class="I aura">
 
 
-	@component('zADMIN.PAGE._wrap.form.create', ['route' => route('admin.faq.store'), 'css' => '-faq'])
+	@component('zADMIN._wrap.form.create', ['route' => route('admin.faq.store'), 'css' => '-faq'])
 
 		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.faq.index')])
 

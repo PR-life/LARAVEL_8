@@ -1,21 +1,20 @@
 @extends('zADMIN._shema.INDEX')
 @push('css-body', '-edit ')
 
-@include('_.js.component.tinymce.index')
 @include('zADMIN._bd._src.edit.min')
+@include('_.js.component.tinymce.index')
+
 
 @push('linkJs')
-	{{-- @include('_.src.link.js.jquery') --}}
-	{{-- @include('_.src.link.js.bootstrap') --}}
 	@include('_.src.link.js.text.tinymce')
 @endpush
+
 
 @section('Bee')
 <div class="Bee">
 	@stack('bee')
 </div>
 @endsection
-
 
 
 @if (session('UpdateController'))
@@ -32,5 +31,6 @@
 
 @section('manager')
     <div class="hill-s"></div>
+	<h1>gregregre</h1>
 @endsection
 

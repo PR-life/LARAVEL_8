@@ -1,20 +1,20 @@
-@component('zADMIN.PAGE._wrap.Relationships.index')
+@component('zADMIN._wrap.Relationships.index')
 <div class="flex -wrap / cloud space">
     <div class="Min -w5">
-        @include('zADMIN.PAGE._wrap.select.name',['Var' => 'Категория'])
-        @component('zADMIN.PAGE._wrap.select.categories.main', ['id' => 'category'])
+        @include('zADMIN._wrap.select.name',['Var' => 'Категория'])
+        @component('zADMIN._wrap.select.categories.main', ['id' => 'category'])
             @include('_._brick.select.categories.edit.main',['Categories' => $categories, 'Var' => $faq->category_id])
         @endcomponent
     </div>
     <div class="Min -w5">
-        @include('zADMIN.PAGE._wrap.select.name',['Var' => 'Тег'])
-        @component('zADMIN.PAGE._wrap.select.tag.index')
+        @include('zADMIN._wrap.select.name',['Var' => 'Тег'])
+        @component('zADMIN._wrap.select.tag.index')
             @include('_._brick.select.tag.edit.index',['Tags' => $tags ?? [], 'Var' => $faq->tag_id])
         @endcomponent
     </div>
     <div class="Min -w5">
-        @include('zADMIN.PAGE._wrap.select.name',['Var' => 'Группа'])
-        @component('zADMIN.PAGE._wrap.select.group.main')
+        @include('zADMIN._wrap.select.name',['Var' => 'Группа'])
+        @component('zADMIN._wrap.select.group.main')
             @include('_._brick.select.groups.edit.index',['Groups' => $groups, 'Var' => $faq->group_id])
         @endcomponent
     </div>
@@ -23,16 +23,16 @@
 <div class="flex cross / space">
 
     <div class="Min -w5">
-        @include('zADMIN.PAGE._wrap.select.name',['Var' => 'Теги'])
-        @component('zADMIN.PAGE._wrap.select.tags.all')
+        @include('zADMIN._wrap.select.name',['Var' => 'Теги'])
+        @component('zADMIN._wrap.select.tags.all')
             @include('_._brick.select.tags.edit.index',['Tags' => $tags ?? [],'Var' => $faq])
         @endcomponent
     </div>
 
 
     <div class="Min -w5">
-        @include('zADMIN.PAGE._wrap.select.name',['Var' => 'Категории'])
-        {{-- @component('zADMIN.PAGE._wrap.select.categories.all')
+        @include('zADMIN._wrap.select.name',['Var' => 'Категории'])
+        {{-- @component('zADMIN._wrap.select.categories.all')
             @include('_._brick.select.categories.edit.index',['Categories' => $categories,'Var' => $faq])
         @endcomponent --}}
 

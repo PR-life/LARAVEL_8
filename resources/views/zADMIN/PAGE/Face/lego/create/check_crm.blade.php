@@ -1,6 +1,6 @@
 <div class="menu -tile -XS / cloud / net">
 		
-    @component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
         @slot('name', 'crm_id')
         @slot('id', 'save_null')
         @slot('param', null)
@@ -12,7 +12,7 @@
     @foreach($Crm as $_crm)
 
 
-        @component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+        @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
             @slot('name', 'crm_id')
             @slot('id', $_crm->id)
             @slot('param', 'checked')

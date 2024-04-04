@@ -6,16 +6,23 @@ use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 //
-
-
-// !!!!!!!!!!!!!!!!
+//
 use App\Models\Post;
+use App\Services\ADMIN\BaseService;
+use App\Http\Filters\PostFilter;
 // use App\Models\Category;
-// use App\Models\Tag;
 
 
-class Service {
-
+class Service extends BaseService {
+ 
+	public function posts($x) {
+		$filter = app()->make(PostFilter::class, ['queryParams' => array_filter($x)]);
+		// dd($filter);
+	
+		return Post::filter($filter)->orderBy('order', 'asc')->orderBy('created_at', 'DESC')->paginate(25);
+			// $posts = Post::filter($filter)->orderBy('created_at', 'desc')->get();
+			// $posts = Post::paginate(10);
+	}
 
 	public function update($post,$param) {
 
@@ -30,6 +37,9 @@ class Service {
 			isset($param['published']) ? '' : $param['published'] = '0';
 			isset($param['mafia']) ? '' : $param['mafia'] = '0';
 				// isset($param['css_type']) ? $param['css_type'] = implode(" ", $param['css_type']) : $param['css_type'] = null;
+
+			if($param['canonical'] == "/") unset($param['canonical']);
+			if($param['en_canonical'] == "/") unset($param['en_canonical']);
 			
 
 			//

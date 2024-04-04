@@ -1,3 +1,12 @@
+<?
+// $arrCSS = [
+// 	'id' => 'Wrap',
+// 	'cssOiBar' => 'skimp-size_Aside x-asideClose',
+// 	'cssOi' => 'HWin skimp-size_Aside',
+// 	'cssASIDE' => 'ASIDE',
+// 	'cssKIRA' => 'KIRA -aside'
+// ]
+?>
 <!DOCTYPE html>
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
@@ -13,16 +22,6 @@
 @include('_shema._lego.input')
 
 <div id="Fon" class="Abs -all @stack('css-fon')">@stack('fon')</div>
-
-<?
-// $arrCSS = [
-// 	'id' => 'Wrap',
-// 	'cssOiBar' => 'skimp-size_Aside x-asideClose',
-// 	'cssOi' => 'HWin skimp-size_Aside',
-// 	'cssASIDE' => 'ASIDE',
-// 	'cssKIRA' => 'KIRA -aside'
-// ]
-?>
 
 @component('_wrap.oiBar', $arrCSS)
 

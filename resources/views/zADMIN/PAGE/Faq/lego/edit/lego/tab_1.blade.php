@@ -1,4 +1,4 @@
-@component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'prev_nameTagCategory', 'cssWrap' => 'net'])
+@component('zADMIN._wrap.form._shell.Lang', ['id' => 'prev_nameTagCategory', 'cssWrap' => 'net'])
 <div class="_shell x-hr Form -S / vol-Abs / net">
     <input id="inputName_tag" type="text" name="name_tag" value="{{$category->name_tag ?? old('name_tag')}}" placeholder=".">
     <label class="Abs" for="inputName_tag">@svg('plus')name_tag</label>
@@ -9,7 +9,7 @@
 </div>
 @endcomponent
 
-@component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'prev_nameSeoCategory'])
+@component('zADMIN._wrap.form._shell.Lang', ['id' => 'prev_nameSeoCategory'])
 <div class="_shell x-hr Form -S / vol-Abs / net">
     <input id="inputName_seo" type="text" name="name_seo" value="{{$category->name_seo ?? old('name_seo')}}" placeholder=".">
     <label class="Abs" for="inputName_seo">@svg('plus')name_seo</label>

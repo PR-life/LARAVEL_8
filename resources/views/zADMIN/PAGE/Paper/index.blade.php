@@ -1,6 +1,6 @@
 @extends('zADMIN._shema.index')
 
-@section('title')Admin @endsection
+@section('title')Статьи @endsection
 
 @push('addBread')
 <li>
@@ -10,40 +10,18 @@
 </li>
 @endpush
 
-@push('topAfter')
-    @include('zADMIN.PAGE._lego.filter.btn.content')
-@endpush
-
 @push('bee')
-
-    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Статьи', 'add' => route('admin.paper.create'), 'ico' => 'barMenu_relations'])
+    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Статьи', 'add' => route('admin.paper.create')])
     @include('zADMIN.PAGE._lego.filter.SHEMA.index.papers')
-    
-
-    {{-- @include('zADMIN.PAGE._lego.filter.btn.content') --}}
-    {{-- @include('zADMIN._lego.Bee.nameIndex',['name' => 'Статьи', 'add' => route('admin.paper.create'), 'ico' => 'barMenu_relations']) --}}
-    {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.papers') --}}
-
-
-    {{-- <div class="Wings _indexMax">
-        <div class="_win -t / space-leftM">
-            @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'landing', 'css' => '-paper'])
-        </div>
-    </div>
-    <div class="paragraph"></div>
-    <div class="paragraphX2"></div>
-    @include('zADMIN.PAGE._lego.filter.table-indexSeo') --}}
 @endpush
 
-@push('beeAfter')
-    @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'paper'])
-@endpush
+@include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index')
 
 @section('content')
 
     @component('zADMIN._wrap.index')
-        @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-papers'])
+        @component('zADMIN._wrap.max', ['css' => null])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-papers'])
                 @foreach($papers as $paper)     
                     @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $paper])
                 @endforeach

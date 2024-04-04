@@ -2,33 +2,24 @@
 
 namespace App\Http\Requests\ADMIN\Category;
 
-use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Requests\ADMIN\BaseRelationsRequest;
 
-class StoreRequest extends FormRequest
+class StoreRequest extends BaseRelationsRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
+
     public function authorize()
     {
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
     public function rules()
     {
-        return [
-            'sku' => 'nullable|string',			
+        return array_merge(parent::rules(), [
 
-			//
+            'sku' => 'nullable|string',
 			'name' => 'required|string',
             'slug' => 'required',
+            
             'name_tag' => 'nullable|string',
             'name_seo' => 'nullable|string',
             'h1' => 'nullable|string',
@@ -43,33 +34,21 @@ class StoreRequest extends FormRequest
             'prev_h2' => 'nullable',
             'prev_p' => 'nullable',
             'prev_url' => 'nullable',
-
-			//
-            'category_id' => 'nullable|integer|exists:categories,id', // exists:существует в тбл categories в колонке id
-            'tag_ids' => 'nullable|array',
-            'tag_ids.*' => 'nullable|integer|exists:tags,id', // .* - выбираем все что в array "tag_ids"
-
-            
+ 
 			//
             'string_1' => 'nullable',
-            'knot_1' => 'nullable',
 
-			//
-            'order' => 'nullable|integer',
-            'status' => 'nullable|integer',
-            'published' => 'nullable|integer',
+            //
+			'en_name' => 'nullable|string',
+            'en_name_tag' => 'nullable|string',
+            'en_name_seo' => 'nullable|string',
+            'en_h1' => 'nullable|string',
 
-			//
-            'title' => 'nullable|string',
-            'description' => 'nullable|string',
-            'keywords' => 'nullable|string',
-            'canonical' => 'nullable|string',
+            'en_title' => 'nullable|string',
+            'en_description' => 'nullable|string',
+            'en_keywords' => 'nullable|string',
+            'en_canonical' => 'nullable|string',
 
-
-			//
-            'created_at' => 'nullable',
-            'updated_at' => 'nullable',
-            'deleted_at' => 'nullable',
-        ];
+        ]);
     }
 }

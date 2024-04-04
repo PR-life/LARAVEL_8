@@ -10,7 +10,7 @@
 	<div class="Bee"></div>
 
 
-	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.oogway.pivot.task.store')])
+	@component('zADMIN._wrap.form.edit', ['route' => route('admin.oogway.pivot.task.store')])
 
 		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.sms.index')]) --}}
 

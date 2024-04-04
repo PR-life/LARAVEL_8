@@ -1,6 +1,6 @@
 <div class="Article aura">
 
-	{{-- @component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'nameCategory'])
+	{{-- @component('zADMIN._wrap.form._shell.Lang', ['id' => 'nameCategory'])
 	<div class="_shell _name @error('name') Error @enderror / vol-Abs / net">
 		<input id="inputName" type="text" name="name" value="{{$category->name ?? old('name')}}" placeholder=".">
 		<label class="Abs" for="inputName">@svg('plus')Name</label>
@@ -25,7 +25,7 @@
 
 	<div class="hill-s"></div>
 
-	@component('zADMIN.PAGE._wrap.Tab.edit.body')
+	@component('zADMIN._wrap.Tab.edit.body')
 		@slot('nameTab1', 'Заголовки')
 		@slot('tab_1')
 			<div class="paragraphX2 / net"></div>
@@ -51,7 +51,7 @@
 		<label class="Abs" for="inputH1">@svg('plus')Заголовок h1</label>
 	</div>
 
-	@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'Блокнот'])
+	@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Блокнот'])
 	<div class="paragraph"></div>
 	<div class="_shell / Note -lite">
 		<textarea id="tinymce_lite_1" name="knot_1" placeholder='текст...'>{{$category->knot_1}}</textarea>

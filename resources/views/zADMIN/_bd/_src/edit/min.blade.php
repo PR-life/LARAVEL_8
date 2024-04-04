@@ -1,6 +1,6 @@
-@push('linkCss')
+{{-- @push('linkCss')
 	@include('_.src.link.css.text.select')
-@endpush
+@endpush --}}
 
 @push('linkJsAfter')
 	{{-- @include('_.src.link.js.text.select') --}}

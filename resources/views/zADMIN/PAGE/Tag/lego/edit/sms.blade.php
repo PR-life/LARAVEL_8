@@ -12,11 +12,11 @@
             <dd><span class="content-xs"><input id="inputCategory_id" type="text" name="category_id" value="{{$tag->category_id}}" placeholder="..."></span></dd>
         </dl>
 
-        {{-- @component('zADMIN.PAGE._wrap.select.categories.lvl_1')
+        {{-- @component('zADMIN._wrap.select.categories.lvl_1')
             @include('_._brick.select.category.lvl_1.index',['Categories' => $categories, 'Var' => $tag->category_id])
         @endcomponent 
 
-        @component('zADMIN.PAGE._wrap.select.categories.lvl_2')
+        @component('zADMIN._wrap.select.categories.lvl_2')
             @include('_._brick.select.category.lvl_2.index',['Categories' => $categories, 'Var' => $tag->category_id])
         @endcomponent --}}
         
@@ -30,7 +30,7 @@
         @slot('name', 'Категории')
 
 {{-- 
-        @component('zADMIN.PAGE._wrap.select.tags.index')
+        @component('zADMIN._wrap.select.tags.index')
             @component('zADMIN._wrap.select.categories')
                 @include('_._brick.select.categories.edit.index',['Categories' => $categories,'Var' => $tag])
             @endcomponent

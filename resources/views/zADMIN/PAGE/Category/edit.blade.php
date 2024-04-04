@@ -23,7 +23,7 @@
 <div class="I aura">
 
 
-	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.category.update', $category->id), 'css' => '-category'])
+	@component('zADMIN._wrap.form.edit', ['route' => route('admin.category.update', $category->id), 'css' => '-category'])
 
 
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.category.index'])
@@ -33,7 +33,7 @@
 		</div>
 
 		
-		@component('zADMIN.PAGE._wrap.Flaber.edit')
+		@component('zADMIN._wrap.Flaber.edit')
 
 			@slot('flaber')
 				{{-- @include('zADMIN.PAGE.Category.lego.edit.sms')	 --}}

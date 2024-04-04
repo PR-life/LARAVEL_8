@@ -20,7 +20,7 @@
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-paper'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-paper'])
                 @foreach($papers as $paper)     
                     @include('zADMIN.combine.Teaser.lib.index', ['Var' => $paper, 'route' => route('admin.paper.edit',$paper->id)])
                 @endforeach

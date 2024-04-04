@@ -24,7 +24,7 @@
     </div>
  
 
-    @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-sms'])
+    @component('zADMIN._wrap.Table.index', ['css'=> '-sms'])
         @foreach($tasks as $task)
             @include('zADMIN.combine.Teaser.task', ['Var' => $task, 'route' => route('admin.oogway.task.edit',$task->id)])
             {{-- <li><a href="{{route('admin.oogway.task.edit', $task->id)}}">{{strip_tags($task->name)}}</a></li> --}}

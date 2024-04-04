@@ -18,7 +18,7 @@
             @svg('plus')
         </span>
     @endcomponent 
-    @component('_wrap.Chunk.Aside.index')
+    {{-- @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.item.index')
         @slot('linkAdd', route('admin.item.create'))
         @slot('cssIco', '-XS')
@@ -26,8 +26,8 @@
         <span class="block / Ico -XS">
             @svg('plus')
         </span>
-    @endcomponent 
-    @component('_wrap.Chunk.Aside.index')
+    @endcomponent  --}}
+    {{-- @component('_wrap.Chunk.Aside.index')
         @slot('linkAdd', route('admin.faq.create'))
         @slot('routeName', 'admin.faq.index')
         @slot('cssIco', '-XS')
@@ -35,7 +35,7 @@
         <span class="block / Ico -XS">
             @svg('plus')
         </span>
-    @endcomponent 
+    @endcomponent  --}}
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.post.index')
         @slot('linkAdd', route('admin.post.create'))

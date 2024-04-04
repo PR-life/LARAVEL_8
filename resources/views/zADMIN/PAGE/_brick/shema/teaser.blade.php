@@ -1,4 +1,4 @@
-@component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+@component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
 @slot('name', 'shema_teaser')
 @slot('id', 'shema_teaser_def')
 @slot('param', $item->shema_teaser)
@@ -7,7 +7,7 @@
 пусто
 @endcomponent
 
-@component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+@component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
 @slot('name', 'shema_teaser')
 @slot('id', 'shema_teaser_link')
 @slot('param', $item->shema_teaser)

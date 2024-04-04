@@ -22,7 +22,7 @@
 
 tinymce.init({
 	selector: '#tinymce_1, #tinymce_2, #tinymce_3',
-	content_css: "/css/env/tinymce.css?4",
+	content_css: "{{Request::root() . "/css/env/tinymce.css?4"}}",
 	// content_css: "/css/env/tinymce.css",
 	language: 'ru',
 	height: parseInt(document.documentElement.clientHeight) * .8,
@@ -91,7 +91,7 @@ tinymce.init({
 <script>
 	tinymce.init({
 		selector: '#tinymce_lite_1, #tinymce_lite_2, #tinymce_lite_3',
-		content_css: "/css/env/tinymce.css?4",
+		content_css: "{{Request::root() . "/css/env/tinymce.css?4"}}",
 
 		language: 'ru',
 		height: parseInt(document.documentElement.clientHeight) * .25,

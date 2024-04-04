@@ -19,7 +19,7 @@
 @section('content')
 
 <div class="I aura">
-	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.paper.update', $paper->id), 'css' => '-paper'])
+	@component('zADMIN._wrap.form.edit', ['route' => route('admin.paper.update', $paper->id), 'css' => '-paper'])
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.paper.index'])
 
 		<div class="_shell / net">
@@ -29,7 +29,7 @@
 		@include('zADMIN.PAGE.Paper.lego.edit.lego.Relationships')
 		<div class="paragraph"></div>
  
-		@component('zADMIN.PAGE._wrap.Flaber.edit')
+		@component('zADMIN._wrap.Flaber.edit')
 			@slot('flaber')
 				@include('zADMIN.PAGE.Paper.lego.edit.sms')	
 			@endslot

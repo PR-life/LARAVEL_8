@@ -22,7 +22,7 @@
 	<ul>
 		<li><a href="{{route('admin.sherpa.excel.export')}}">admin.sherpa.excel.export</a></li>
 	</ul>
-		{{-- @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-post'])
+		{{-- @component('zADMIN._wrap.Table.index', ['css'=> '-post'])
 			@foreach($posts as $post)
 				@include('zADMIN.combine.Teaser.post', ['Var' => $post, 'route' => route('admin.post.edit',$post->id), 'slug' => $data['slug']])
 			@endforeach

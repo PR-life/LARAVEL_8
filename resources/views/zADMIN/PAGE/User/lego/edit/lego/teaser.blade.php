@@ -1,4 +1,4 @@
-@component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'prev_h1Post', 'cssWrap' => 'net'])
+@component('zADMIN._wrap.form._shell.Lang', ['id' => 'prev_h1Post', 'cssWrap' => 'net'])
 <div class="_shell x-hr Form -S / vol-Abs / net">
     <input id="inputPrev_h1" type="text" name="prev_h1" value="{{$post->prev_h1 ?? old('prev_h1')}}" placeholder=".">
     <label class="Abs" for="inputPrev_h1">@svg('plus')prev_h1</label>
@@ -9,7 +9,7 @@
 </div>
 @endcomponent
 
-@component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'prev_h2Post'])
+@component('zADMIN._wrap.form._shell.Lang', ['id' => 'prev_h2Post'])
 <div class="_shell x-hr Form -S / vol-Abs / net">
     <input id="inputPrev_h2" type="text" name="prev_h2" value="{{$post->prev_h2 ?? old('prev_h2')}}" placeholder=".">
     <label class="Abs" for="inputPrev_h2">@svg('plus')prev_h2</label>

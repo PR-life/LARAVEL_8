@@ -1,32 +1,27 @@
 @extends('zADMIN._shema.index')
 
-@section('title')Admin @endsection
+@section('title')Категории @endsection
 
 @push('addBread')
 <li>
     <span>
-        <span class="content-xs">Контент</span>
+        <span class="content-xs">Связи</span>
     </span>
 </li>
 @endpush
 
-@push('topAfter')
-    @include('zADMIN.PAGE._lego.filter.btn.content')
-@endpush
-
 @push('bee')
-    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Категории', 'add' => route('admin.category.create'), 'ico' => 'barMenu_relations'])
+    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Категории', 'add' => route('admin.category.create')])
     @include('zADMIN.PAGE._lego.filter.SHEMA.index.categories')
-    @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'category'])
 @endpush
-
+    
+@include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index')
  
-
 @section('content')
 
     @component('zADMIN._wrap.index')
-        @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-posts'])
+        @component('zADMIN._wrap.max', ['css' => null])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-categories'])
                 @foreach($Categories as $_category)     
                     @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $_category])
                     @if($_category->childrenCategories)

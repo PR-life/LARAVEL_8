@@ -13,12 +13,6 @@ class UpdateController extends BaseController
     public function __invoke(UpdateRequest $request, Post $post){
 
 		// dd($request);
-        // $data = [
-        //     'email' => $request->input('email'),
-        // ];
-
-
-		// dd($request);
         $data = $request->validated();
 		// dd($data);
 		

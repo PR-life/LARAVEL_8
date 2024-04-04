@@ -1,4 +1,6 @@
+// самостоятельный тег [check-localstorage='filter_tags_1' data-check='active' param='Block']
 let x09081525 = document.querySelectorAll("[check-localstorage]")
+
 // let x09081525 = document.querySelectorAll("[localstorage-check]")
 let x02051653 = document.querySelectorAll("[localstorage-id]")
 let x10051101 = document.querySelectorAll("[localstorage-picking]")
@@ -83,21 +85,6 @@ x09081525.forEach( item => {
 // 	}
 
 //  })
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

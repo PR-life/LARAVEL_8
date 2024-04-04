@@ -23,7 +23,7 @@
 <div class="I aura">
 
 
-	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.faq.update', $faq->id), 'css' => '-faq'])
+	@component('zADMIN._wrap.form.edit', ['route' => route('admin.faq.update', $faq->id), 'css' => '-faq'])
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.faq.index'])
 
 		<div class="_shell">
@@ -33,7 +33,7 @@
 		@include('zADMIN.PAGE.Faq.lego.edit.lego.Relationships')
 
 		
-		@component('zADMIN.PAGE._wrap.Flaber.edit')
+		@component('zADMIN._wrap.Flaber.edit')
 
 			@slot('flaber')
 				@include('zADMIN.PAGE.Faq.lego.edit.sms')	

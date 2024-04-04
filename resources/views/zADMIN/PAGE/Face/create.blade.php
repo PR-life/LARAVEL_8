@@ -22,7 +22,7 @@
 <div class="I aura">
 
 
-	@component('zADMIN.PAGE._wrap.form.create', ['route' => route('admin.crm.face.store'), 'css' => '-face'])
+	@component('zADMIN._wrap.form.create', ['route' => route('admin.crm.face.store'), 'css' => '-face'])
 
 		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.crm.face.index')])
 

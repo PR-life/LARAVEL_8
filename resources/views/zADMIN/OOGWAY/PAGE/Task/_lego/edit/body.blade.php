@@ -41,7 +41,7 @@
 
 		@slot('tab_1')
 		<div class="Article">
-			@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'text_prev'])
+			@include('zADMIN._wrap.text.nameTextarea', ['name' => 'text_prev'])
 			<div class="paragraph"></div>
 			<div class="_shell / Note -lite">
 				<textarea id="tinymce_lite_1" name="text_prev" placeholder='text_prev'>{{$task->text_prev}}</textarea>
@@ -52,7 +52,7 @@
 
 		@slot('tab_2')
 		<div class="Article">
-			@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'text_fix'])
+			@include('zADMIN._wrap.text.nameTextarea', ['name' => 'text_fix'])
 			<div class="paragraph"></div>
 			<div class="_shell / Note -lite">
 				<textarea id="tinymce_1" name="text_fix" placeholder='text_fix'>{{$task->text_fix}}</textarea>

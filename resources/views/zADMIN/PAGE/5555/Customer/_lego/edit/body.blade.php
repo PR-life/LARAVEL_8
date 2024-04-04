@@ -85,7 +85,7 @@
 
 
 
-		@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'Запланированные'])
+		@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Запланированные'])
 		<div class="paragraphX2"></div>
 		@component('zADMIN.PAGE.Customer._wrap.table_2')
 			@slot('status', 'tel')
@@ -100,7 +100,7 @@
 
 
 
-		@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'Прошедшие'])
+		@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Прошедшие'])
 		<div class="paragraphX2"></div>
 
 		<div class="Archive" style="opacity: .5">
@@ -190,13 +190,13 @@
 
 {{-- 
 <div class="paragraph"></div>
-@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'Краткое описание'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Краткое описание'])
 <div class="paragraph"></div>
 <div class="_shell Article aura / Note -lite">
 	<textarea id="tinymce_lite_1" name="intro" placeholder='текст...'>{{$post->intro}}</textarea>
 </div>
 <div class="paragraph"></div>
-@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'Текст'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Текст'])
 <div class="paragraph"></div>
 <div class="_shell Article aura / Note -lite">
 	<textarea id="tinymce_1" name="text" placeholder='текст...'>{{$post->text}}</textarea>

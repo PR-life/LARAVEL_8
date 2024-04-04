@@ -24,7 +24,7 @@
     </div>
  
 
-    @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-sms'])
+    @component('zADMIN._wrap.Table.index', ['css'=> '-sms'])
         @foreach($pivots as $task)
             @include('zADMIN.combine.Teaser.PIVOT', ['Var' => $task])
             {{-- <li><a href="{{route('admin.oogway.task.edit', $task->id)}}">{{strip_tags($task->name)}}</a></li> --}}

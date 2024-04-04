@@ -22,7 +22,7 @@
 <div class="I aura">
 
 
-	@component('zADMIN.PAGE._wrap.form.create', ['route' => route('admin.crm.customer.store'), 'css' => '-customer'])
+	@component('zADMIN._wrap.form.create', ['route' => route('admin.crm.customer.store'), 'css' => '-customer'])
 
 		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.crm.customer.index')])
 
@@ -43,7 +43,7 @@
 
 				<div class="menu -tile -XS / cloud / net">
 		
-					@component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+					@component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
 						@slot('name', 'category_id')
 						@slot('id', 'save_null')
 						@slot('param', null)
@@ -55,7 +55,7 @@
 					@foreach($categories as $_category)
 	
 	
-						@component('zADMIN.PAGE._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+						@component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
 							@slot('name', 'category_id')
 							@slot('id', $_category->id)
 							@slot('param', 'checked')

@@ -20,7 +20,7 @@
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-face'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-face'])
                 @foreach($faces as $face)     
                     @include('zADMIN.combine.Teaser.lib.customer.index', ['route' => route('admin.crm.customer.edit',$face->id)])
                 @endforeach

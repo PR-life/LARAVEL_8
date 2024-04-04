@@ -4,17 +4,13 @@ namespace App\Services\ADMIN\Group;
 
 use Exception;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
+use App\Services\ADMIN\BaseService;
 //
 
-
-// !!!!!!!!!!!!!!!!
-// use App\Models\Category;
-// use App\Models\Category;
 use App\Models\Group;
 
 
-class Service {
+class Service extends BaseService{
 
 
 	public function update($group,$param) {

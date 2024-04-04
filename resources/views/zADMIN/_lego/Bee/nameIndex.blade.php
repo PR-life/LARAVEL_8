@@ -1,25 +1,27 @@
-<div class="paragraph"></div>
-<div class="flex sC / x-name-index / {{$css ?? ''}}">
-    <div class="space-left / -Grey">
-        <div class="flex cI / cross-xs">
-            @isset($add)
-            <a class="flex cI cC / Ico -L btn-plus / round-m" href="{{$add}}">
-                <span class="block Ico -XS">
-                    @svg('plus')
+<div>
+    <div class="paragraph"></div>
+    <div class="flex sC / x-name-index / {{$css ?? ''}}">
+        <div class="space-left / -Grey">
+            <div class="flex cI / cross-xs">
+                @isset($add)
+                <a class="flex cI cC / Ico -L btn-plus / round-m" href="{{$add}}">
+                    <span class="block Ico -XS">
+                        @svg('plus')
+                    </span>
+                </a>
+                @else
+                <span class="flex cI cC / Ico -L">
+                    <span class="Ico -M">
+                        @svg({{$ico}})
+                    </span>
                 </span>
-            </a>
-            @else
-            <span class="flex cI cC / Ico -L">
-                <span class="Ico -M">
-                    @svg({{$ico}})
-                </span>
-            </span>
-            @endisset
-            <div class="h2 -lineHeight / b100 noEvents">{{$name}}</div>
+                @endisset
+                <div class="h2 -lineHeight / b100 noEvents">{{$name}}</div>
+            </div>
         </div>
     </div>
+    <div class="paragraph"></div>
 </div>
-<div class="paragraphX2"></div>
 {{-- <div class="flex sC / x-name-index / {{$css ?? ''}}">
     <div class="space-left / -Grey">
         <div class="flex cI">

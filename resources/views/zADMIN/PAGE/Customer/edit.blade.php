@@ -22,7 +22,7 @@
 @section('content')
  
 <div class="I aura / relative">
-	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.crm.customer.update', $face->id), 'css' => '-customer'])
+	@component('zADMIN._wrap.form.edit', ['route' => route('admin.crm.customer.update', $face->id), 'css' => '-customer'])
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.crm.customer.index'])
 
 		<div class="_shell / net">

@@ -1,5 +1,5 @@
 <div class="Article aura">
-	@component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'nameFAQ'])
+	@component('zADMIN._wrap.form._shell.Lang', ['id' => 'nameFAQ'])
 	<div class="_shell _name @error('name') Error @enderror / vol-Abs / net">
 		<input id="inputName" type="text" name="name" value="{{$faq->name ?? old('name')}}" placeholder=".">
 		<label class="Abs" for="inputName">@svg('plus')Вопрос</label>
@@ -15,7 +15,7 @@
 
 
 	<div class="hill-s"></div>
-	@component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'h1FAQ'])
+	@component('zADMIN._wrap.form._shell.Lang', ['id' => 'h1FAQ'])
 	<div class="_shell / vol-Abs / net">
 		<input id="inputH1" type="text" name="h1" value="{{$faq->h1 ?? old('h1')}}" placeholder=".">
 		<label class="Abs" for="inputH1">@svg('plus')Заголовок в ответе</label>
@@ -32,11 +32,11 @@
 
 
 <div class="paragraph"></div>
-@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'текст в ответе'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'текст в ответе'])
 <div class="paragraph"></div>
 
 
-@component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'textFAQ'])
+@component('zADMIN._wrap.form._shell.Lang', ['id' => 'textFAQ'])
 
 
 	<div class="_shell Article aura / Note -lite">

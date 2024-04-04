@@ -1,4 +1,4 @@
-@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'Вопрос'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Вопрос'])
 <div class="paragraph"></div>
 <div class="_shell Article aura / Note -lite">
 	<textarea id="tinymce_lite_1" name="sms" placeholder='текст'>{{$sms->sms}}</textarea>
@@ -8,7 +8,7 @@
 <div class="hill-s"></div>
  
 @if($sms->label != 'callback')
-@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'Ответ'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Ответ'])
 <div class="paragraph"></div>
 
 <div class="Article aura / face face-none face-padding">

@@ -1,4 +1,4 @@
-@component('zADMIN.PAGE._wrap.form._shell.x_hr')
+@component('zADMIN._wrap.form._shell.x_hr')
     @slot('cssNet', true)
     @slot('nameId','Title')
     @slot('name','title')
@@ -20,7 +20,7 @@
     <div class="paragraph"></div>
 </div>
 
-@component('zADMIN.PAGE._wrap.form._shell.x_hr')
+@component('zADMIN._wrap.form._shell.x_hr')
     {{-- @slot('cssNet', true) --}}
     @slot('nameId','Canonical')
     @slot('name','canonical')

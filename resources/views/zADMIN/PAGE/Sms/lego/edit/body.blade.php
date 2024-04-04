@@ -1,4 +1,4 @@
-@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'вопрос'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'вопрос'])
 <div class="paragraph"></div>
 <div class="_shell Article / Note -lite">
 	<textarea id="tinymce_lite_1" name="sms" placeholder='текст...'>{{$sms->sms}}</textarea>
@@ -15,7 +15,7 @@
 	@enderror
 </div>
 
-@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'ответ'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'ответ'])
 <div class="paragraph"></div>
 <div class="_shell Article / Note -lite">
 	<textarea id="tinymce_lite_2" name="answer" placeholder='текст...'>{{$sms->answer}}</textarea>

@@ -40,17 +40,17 @@
         <div class="paragraph"></div>
     
         <div class="flex -wrap cross cloud">
-            @component('zADMIN.PAGE._wrap.form.btn', ['route' => route('admin.oogway.manager.btn', $oogway->id)])
+            @component('zADMIN._wrap.form.btn', ['route' => route('admin.oogway.manager.btn', $oogway->id)])
                 <input type="hidden" name="id" value="{{$oogway->id}}">
                 <input type="hidden" name="status" value="200">
                 <button class="Btn cC -green / round-s b600">Да, в работу</button>
             @endcomponent
-            @component('zADMIN.PAGE._wrap.form.btn', ['route' => route('admin.oogway.manager.btn', $oogway->id)])
+            @component('zADMIN._wrap.form.btn', ['route' => route('admin.oogway.manager.btn', $oogway->id)])
                 <input type="hidden" name="id" value="{{$oogway->id}}">
                 <input type="hidden" name="status" value="404">
                 <button class="Btn cC -red / round-s b600">отменить</button>
             @endcomponent
-            @component('zADMIN.PAGE._wrap.form.btn', ['route' => route('admin.oogway.manager.btn', $oogway->id)])
+            @component('zADMIN._wrap.form.btn', ['route' => route('admin.oogway.manager.btn', $oogway->id)])
                 <input type="hidden" name="id" value="{{$oogway->id}}">
                 <input type="hidden" name="status" value="302">
                 <button class="Btn cC -yellow / round-s b600">затрудняюсь с ответом, нужно больше данных, подготовь ТЗ</button>

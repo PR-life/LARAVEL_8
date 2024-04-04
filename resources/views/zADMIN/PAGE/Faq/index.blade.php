@@ -23,7 +23,7 @@
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-faqs'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-faqs'])
                 {{-- @foreach($faqs as $faq)     
                     @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $faq])
                 @endforeach --}}

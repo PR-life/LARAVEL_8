@@ -24,7 +24,7 @@
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-users'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-users'])
 
             @foreach($users as $_user)
                 @include('zADMIN.combine.Teaser.lib.user', ['Var' => $_user])

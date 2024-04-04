@@ -24,7 +24,7 @@
 <div class="I aura">
 
 
-	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.user.update', $user->id), 'css' => '-user'])
+	@component('zADMIN._wrap.form.edit', ['route' => route('admin.user.update', $user->id), 'css' => '-user'])
 
 
 		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.post.index', ['shema' => request()->get('shema')])]) --}}
@@ -57,7 +57,7 @@
 		</div>
 
 
-		@component('zADMIN.PAGE._wrap.Flaber.edit')
+		@component('zADMIN._wrap.Flaber.edit')
 
 			@slot('flaber')
 				@include('zADMIN.PAGE.User.lego.edit.sms')	

@@ -22,7 +22,7 @@
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-tags'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-tags'])
 
             @foreach($tags as $tag)
                 @include('zADMIN.combine.Teaser.lib.Tag.seo')

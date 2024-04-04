@@ -72,7 +72,7 @@ $arr = array(
 @section('content')
 
 
-@component('zADMIN._wrap.tabOogway.index')
+@component('zADMIN.PAGE._wrap.tabOogway.index')
 
 
     @slot('tab_1')

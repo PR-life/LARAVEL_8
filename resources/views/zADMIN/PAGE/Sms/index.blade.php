@@ -27,7 +27,7 @@
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-sms'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-sms'])
                 @foreach($sms as $_sms)       
                     @include('zADMIN.combine.Teaser.lib.sms', ['Var' => $_sms])
                 @endforeach

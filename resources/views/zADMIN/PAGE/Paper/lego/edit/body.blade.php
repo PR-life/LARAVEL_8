@@ -13,7 +13,7 @@
 
 	<div class="hill-s"></div>
 
-	@component('zADMIN.PAGE._wrap.Tab.edit.body')
+	@component('zADMIN._wrap.Tab.edit.body')
 		@slot('tab_1')
 			<div class="paragraphX2 / net"></div>
 			@include('zADMIN.PAGE.Paper.lego.edit.lego.teaser')
@@ -40,13 +40,13 @@
 
 
 <div class="paragraph"></div>
-@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'Текст'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Текст'])
 <div class="paragraph"></div>
 <div class="_shell Article aura / Note -lite">
 	<textarea id="tinymce_lite_1" name="text" placeholder='текст...'>{{$paper->text}}</textarea>
 </div>
 <div class="paragraph"></div>
-@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'Статья'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Статья'])
 <div class="paragraph"></div>
 <div class="_shell Article aura / Note -lite">
 	<textarea id="tinymce_1" name="article" placeholder='текст...'>{{$paper->article}}</textarea>

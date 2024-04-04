@@ -23,7 +23,7 @@
 <div class="I aura">
 
 
-	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.tag.update', $tag->id), 'css' => '-tag'])
+	@component('zADMIN._wrap.form.edit', ['route' => route('admin.tag.update', $tag->id), 'css' => '-tag'])
 
 		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.tag.index', ['shema' => request()->get('shema')])]) --}}
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.tag.index'])
@@ -33,7 +33,7 @@
 		</div>
 
 	
-		@component('zADMIN.PAGE._wrap.Flaber.edit')
+		@component('zADMIN._wrap.Flaber.edit')
 
 			@slot('flaber')
 				{{-- @include('zADMIN.PAGE.Tag.lego.edit.sms') --}}

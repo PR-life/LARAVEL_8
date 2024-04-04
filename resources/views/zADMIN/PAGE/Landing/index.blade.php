@@ -36,7 +36,7 @@
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-landings'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-landings'])
                 @foreach($landings as $landing)     
                     @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $landing])
                 @endforeach

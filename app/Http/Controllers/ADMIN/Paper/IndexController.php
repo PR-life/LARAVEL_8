@@ -15,7 +15,7 @@ class IndexController extends BaseController
 {
     public function __invoke(FilterRequest $request){
 
-		/* */
+ 
 		$param1 = $request->input('type');
 		$uri = $request->path();
 		// $tret->fullUrlWithQuery(['type' => 'phone']);
@@ -44,10 +44,8 @@ class IndexController extends BaseController
 		$roles = User::getRoles();
 
 
-        $page = request()->get('page');
-        $tag_id = request()->get('tag_id');
-        $category_id = request()->get('category_id');
+        $_request = $this->service->_request($request);
 
-        return view('zADMIN.PAGE.Paper.index', compact('papers','roles','categories','tags','page','tag_id','category_id'));
+        return view('zADMIN.PAGE.Paper.index', compact('papers','roles','categories','tags','_request'));
     }
 }

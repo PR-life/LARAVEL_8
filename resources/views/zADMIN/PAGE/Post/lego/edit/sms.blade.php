@@ -11,11 +11,11 @@
             <dt class="content-xs Grey"><label for="inputCategory_id">id родителя</label></dt>
             <dd><span class="content-xs"><input id="inputCategory_id" type="text" name="category_id" value="{{$post->category_id}}" placeholder="..."></span></dd>
         </dl>
-        @component('zADMIN.PAGE._wrap.select.categories.lvl_1')
+        @component('zADMIN._wrap.select.categories.lvl_1')
             @include('_._brick.select.category.lvl_1.index',['Categories' => $categories, 'Var' => $post->category_id])
         @endcomponent
 
-        @component('zADMIN.PAGE._wrap.select.categories.lvl_2')
+        @component('zADMIN._wrap.select.categories.lvl_2')
             @include('_._brick.select.category.lvl_2.index',['Categories' => $categories, 'Var' => $post->category_id])
         @endcomponent
     @endcomponent --}}
@@ -25,7 +25,7 @@
     {{-- @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms', ['css' => 'round-s x-24051434 / void-s'])
         @slot('id', 'tags')
         @slot('name', 'Теги')
-        @component('zADMIN.PAGE._wrap.select.tags.index')
+        @component('zADMIN._wrap.select.tags.index')
             @component('zADMIN._wrap.select.tags')
                 @include('_._brick.select.tags.edit.index',['Tags' => $tags,'Var' => $post])
             @endcomponent

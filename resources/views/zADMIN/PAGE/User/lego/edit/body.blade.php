@@ -26,7 +26,7 @@
 
 <div class="hill-s"></div>
 
-	{{-- @component('zADMIN.PAGE._wrap.Tab.edit.body')
+	{{-- @component('zADMIN._wrap.Tab.edit.body')
 		@slot('tab_1')
 			<div class="paragraphX2 / net"></div>
 			@include('zADMIN.PAGE.Post.lego.edit.lego.teaser')

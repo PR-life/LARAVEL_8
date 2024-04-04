@@ -6,7 +6,7 @@
 
 @section('content')
 <div class="I aura">
-	@component('zADMIN.PAGE._wrap.form.create', ['route' => route('admin.category.store'), 'css' => '-category'])
+	@component('zADMIN._wrap.form.create', ['route' => route('admin.category.store'), 'css' => '-category'])
 
 		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.category.index')])
 

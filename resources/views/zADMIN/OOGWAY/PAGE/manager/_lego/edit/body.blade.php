@@ -35,7 +35,7 @@
 
 		@slot('tab_1')
 		<div class="Article">
-			@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'text'])
+			@include('zADMIN._wrap.text.nameTextarea', ['name' => 'text'])
 			<div class="paragraph"></div>
 			<div class="_shell / Note -lite">
 				<textarea id="tinymce_1" name="text" placeholder='text'>{{$oogway->text}}</textarea>
@@ -46,7 +46,7 @@
 
 		@slot('tab_2')
 		<div class="Article">
-			@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'text_tz'])
+			@include('zADMIN._wrap.text.nameTextarea', ['name' => 'text_tz'])
 			<div class="paragraph"></div>
 			<div class="_shell / Note -lite">
 				<textarea id="tinymce_2" name="text_tz" placeholder='text_result'>{{$oogway->text_tz}}</textarea>
@@ -58,7 +58,7 @@
 
 		@slot('tab_3')
 		<div class="Article">
-			@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'text_result'])
+			@include('zADMIN._wrap.text.nameTextarea', ['name' => 'text_result'])
 			<div class="paragraph"></div>
 			<div class="_shell / Note -lite">
 				<textarea id="tinymce_3" name="text_result" placeholder='text_result'>{{$oogway->text_result}}</textarea>

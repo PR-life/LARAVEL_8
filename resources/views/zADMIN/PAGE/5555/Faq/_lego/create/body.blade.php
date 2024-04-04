@@ -1,5 +1,5 @@
 <div class="Article">
-	@component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'nameFAQ'])
+	@component('zADMIN._wrap.form._shell.Lang', ['id' => 'nameFAQ'])
 	<div class="_shell _name @error('name') Error @enderror / vol-Abs / net">
 		<input id="inputName" type="text" name="name" value="{{old('name') ?? ''}}" placeholder=".">
 		<label class="Abs" for="inputName">@svg('plus')Вопрос</label>

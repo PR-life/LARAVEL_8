@@ -20,7 +20,7 @@
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-faq'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-faq'])
                 @foreach($faqs as $faq)     
                     @include('zADMIN.combine.Teaser.lib.index', ['Var' => $faq, 'route' => route('admin.faq.edit',$faq->id)])
                 @endforeach

@@ -1,4 +1,4 @@
-@component('zADMIN.PAGE._wrap.Flaber.edit')
+@component('zADMIN._wrap.Flaber.edit')
 
 @slot('flaber')
     {{-- @include('zADMIN.PAGE.Sms.lego.edit.sms')	 --}}

@@ -4,29 +4,22 @@ namespace App\Http\Controllers\ADMIN\Post;
 // use App\Http\Controllers\Controller;
 ////
 use App\Http\Requests\ADMIN\Post\FilterRequest;
-use App\Http\Filters\PostFilter;
 //
 use App\Models\Post;
-use App\Models\Category;
-use App\Models\Tag;
+use App\Models\{User,Category,Tag};
 
+class IndexController extends BaseController {
 
-class IndexController extends BaseController
-{
     public function __invoke(FilterRequest $request){
 
 		// Популярные посты
 		// $likedPosts = Post::withCount('likedUsers')->orderBy('liked_users_count', 'DESC')->get()->take(4);
-
-
 		// *вывод кол-ва во View
 		// *где comments_count считает в Модели [protected $withCount = ['likedUsers','comments'];]
 		// <span class="content">{{$postForeach->comments_count}}</span>
 
 		//* тоже кол-во, но Like
 		// <span class="content">{{$postForeach->liked_users_count}}</span>
-
-
 
 		// !!!!!
 		// не разобрался как сохранять свои Лайки 
@@ -39,45 +32,28 @@ class IndexController extends BaseController
 		// Route::group(['namespace' => 'Like', 'prefix' => '{post}/likes'], function(){
 		// 	Route::post('/', 'StoreController')->name('post.like.store');
 		// });
-
-
-
-
-
-
-
-
-
-
-
-
-
-		// $param1 = $request->input('type');
-		// $uri = $request->path();
-		// $tret->fullUrlWithQuery(['type' => 'phone']);
-
-		// dd($uri);
-		// dd($request->fullUrlWithQuery(['type' => 'phone']));
 		/***/
-
-		// $data = [
-		// 	'slug' => 'posts',
-		// ];
 
         $categories = Category::all();
 		$tags = Tag::all();
 
-		$x = $request->validated();
-		$filter = app()->make(PostFilter::class, ['queryParams' => array_filter($x)]);
-
-        // dd($filter);
+		$posts = $this->service->posts($request->validated());
+		$_request = $this->service->_request($request);
 
 
-        $posts = Post::filter($filter)->orderBy('order', 'asc')->orderBy('created_at', 'DESC')->paginate(25);
-			// $posts = Post::filter($filter)->orderBy('created_at', 'desc')->get();
-			// $posts = Post::paginate(10);
+		// $_request = [
+		// 	'page' => request()->get('page'),
+		// 	'tag_id' => request()->get('tag_id'),
+		// 	'category_id' => request()->get('category_id'),
+		// ];
+		// $page = request()->get('page');
+		// $tag_id = request()->get('tag_id');
+		// $category_id = request()->get('category_id');
 
-        return view('zADMIN.PAGE.Post.index', compact('posts','categories','tags'));
+		$roles = User::getRoles();
+
+
+        return view('zADMIN.PAGE.Post.index', compact('posts','categories','tags','_request'));
 
     }
 }

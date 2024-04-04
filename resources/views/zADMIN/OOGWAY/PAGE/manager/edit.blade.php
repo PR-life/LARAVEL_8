@@ -19,7 +19,7 @@
 <div class="I aura">
 
 
-	@component('zADMIN.PAGE._wrap.form.edit', ['route' => route('admin.oogway.manager.update', $oogway->id), 'css' => '-oogway'])
+	@component('zADMIN._wrap.form.edit', ['route' => route('admin.oogway.manager.update', $oogway->id), 'css' => '-oogway'])
 
 		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.oogway.manager.index')]) --}}
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.oogway.manager.index'])
@@ -31,7 +31,7 @@
 
 
 		
-		@component('zADMIN.PAGE._wrap.Flaber.edit')
+		@component('zADMIN._wrap.Flaber.edit')
 
 			@slot('flaber')
 				@include('zADMIN.OOGWAY.PAGE.manager._lego.edit.sms')

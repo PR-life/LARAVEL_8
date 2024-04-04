@@ -22,7 +22,7 @@
 <div class="I aura">
 
 
-	@component('zADMIN.PAGE._wrap.form.create', ['route' => route('admin.user.store'), 'css' => '-user'])
+	@component('zADMIN._wrap.form.create', ['route' => route('admin.user.store'), 'css' => '-user'])
 
 		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.user.index')])
 

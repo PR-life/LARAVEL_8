@@ -2,38 +2,20 @@
 
 namespace App\Http\Requests\ADMIN\Paper;
 
-use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Requests\ADMIN\BaseFilterRequest; 
 
-class FilterRequest extends FormRequest
+class FilterRequest extends BaseFilterRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
+
     public function authorize()
     {
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
     public function rules()
     {		
-		// dd(11);
-        return [
-            'name' => 'nullable',
-            'status' => 'nullable',
-            'category_id' => 'nullable',
-            'user_id' => 'nullable',
-            // 'category_sku' => 'nullable',
-            // 'mafia' => 'nullable',
-            // // для фильтра
-			// 'page' => '',
-			// 'per_page' => '',
-        ];
+        return array_merge(parent::rules(), [
+
+        ]);
     }
 }

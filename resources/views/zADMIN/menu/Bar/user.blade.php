@@ -1,11 +1,11 @@
-@component('_wrap.Chunk.Aside.a')
+{{-- @component('_wrap.Chunk.Aside.a')
     @slot('routeRegexp', 'admin/oogway*')
     @slot('routeName', 'admin.oogway.morda')
     @slot('cssIco', '-S')
     @slot('sizeName', 'content-xs')
     @slot('name', 'Управление проектом')
     @svg('oogway')
-@endcomponent
+@endcomponent --}}
 @component('_wrap.Chunk.Aside.js_data')
     @slot('routeRegexp', 'admin/sherpa*')
     @slot('data', "data-click data-goto='milkSherpa' data-foo='click' data-css data-toggle='on'")

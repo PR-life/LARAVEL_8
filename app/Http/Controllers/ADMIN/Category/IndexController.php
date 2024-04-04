@@ -12,43 +12,49 @@ class IndexController extends BaseController
 {
     public function __invoke(FilterRequest $request){
 
-        $name = request()->get('name');
-        $tag_id = request()->get('tag_id');
-        $category_id = request()->get('category_id');
+  
+        $categories = Category::whereNull('category_id')
+        ->with('childrenCategories')
+        ->orderBy('order', 'asc')
+        ->orderBy('name', 'asc')->get();
+
+
         
-
-        $page = request()->get('page');
-
-		// $categories = Category::all()->get()->paginate(25);
-        $categories = Category::all();
-
-        // $categories = Category::whereNull('category_id')
-        // ->with('childrenCategories')
-        // ->orderBy('order', 'asc')
-        // ->orderBy('name', 'asc')->paginate(25);
-
-        // dd($categories);
-
 
 		$x = $request->validated();
 		$filter = app()->make(CategoryFilter::class, ['queryParams' => array_filter($x)]);
 
         // dd($filter);
-
-
-
-        // $Categories = Category::filter($filter)->orderBy('order', 'asc')->orderBy('created_at', 'DESC')->paginate(25);
-
-        if($name || $tag_id || $category_id) {
-            $Categories = Category::filter($filter)->orderBy('order', 'asc')->orderBy('name', 'asc')->paginate(100);
-        } else {
-            $Categories = Category::filter($filter)->whereNull('category_id')->orderBy('order', 'asc')->orderBy('name', 'asc')->paginate(25);
+        $Categories = Category::filter($filter)
+            ->whereNull('category_id')
+            ->with('childrenCategories')
+            ->orderBy('order', 'asc')
+            ->orderBy('created_at', 'DESC')
+            ->paginate(100);
+ 
+        if(!$Categories->total()) {
+ 
+            $Categories = Category::filter($filter)
+                ->orderBy('order', 'asc')
+                ->orderBy('created_at', 'DESC')
+                ->paginate(100);
         }
 
 
+
+
+        // if($name || $tag_id || $category_id) {
+        //     $Categories = Category::filter($filter)->orderBy('order', 'asc')->orderBy('name', 'asc')->paginate(100);
+        // } else {
+        //     $Categories = Category::filter($filter)->whereNull('category_id')->orderBy('order', 'asc')->orderBy('name', 'asc')->paginate(25);
+        // }
+
+
+        $_request = $this->service->_request($request);
         
 
 
-        return view('zADMIN.PAGE.Category.index', compact('Categories','categories','name','page','tag_id','category_id'));
+        return view('zADMIN.PAGE.Category.index', compact('Categories','categories','_request'));
+        // return view('zADMIN.PAGE.Category.index', compact('Categories','categories','name','page','tag_id','category_id'));
     }
 }

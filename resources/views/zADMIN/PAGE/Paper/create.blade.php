@@ -22,7 +22,7 @@
 <div class="I aura">
 
 
-	@component('zADMIN.PAGE._wrap.form.create', ['route' => route('admin.paper.store'), 'css' => '-paper'])
+	@component('zADMIN._wrap.form.create', ['route' => route('admin.paper.store'), 'css' => '-paper'])
 
 		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.paper.index')])
 

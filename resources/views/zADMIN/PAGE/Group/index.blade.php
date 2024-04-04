@@ -23,7 +23,7 @@
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-group'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-group'])
                 @foreach($groups as $group)
                     @include('zADMIN.combine.Teaser.lib.group.index')
                 @endforeach

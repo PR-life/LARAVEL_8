@@ -16,7 +16,7 @@
 <div class="I aura">
 
 
-	@component('zADMIN.PAGE._wrap.form.create', ['route' => route('admin.landing.store'), 'css' => '-landing'])
+	@component('zADMIN._wrap.form.create', ['route' => route('admin.landing.store'), 'css' => '-landing'])
 
 		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.landing.index')])
 

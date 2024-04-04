@@ -1,7 +1,7 @@
 <div class="Article aura">
 
 
-	{{-- @component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'nameLanding'])
+	{{-- @component('zADMIN._wrap.form._shell.Lang', ['id' => 'nameLanding'])
 	<div class="_shell _name @error('name') Error @enderror / vol-Abs / net">
 		<input id="inputName" type="text" name="name" value="{{$landing->name ?? old('name')}}" placeholder=".">
 		<label class="Abs" for="inputName">@svg('plus')Name</label>
@@ -26,7 +26,7 @@
 	<div class="hill-s"></div>
 
 
-	@component('zADMIN.PAGE._wrap.Tab.edit.body')
+	@component('zADMIN._wrap.Tab.edit.body')
 		@slot('nameTab1', 'Заголовки')
 		@slot('tab_1')
 			<div class="paragraphX2 / net"></div>
@@ -43,7 +43,7 @@
 
 	<div class="hill"></div>
 
-	@component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'h1Landing'])
+	@component('zADMIN._wrap.form._shell.Lang', ['id' => 'h1Landing'])
 	<div class="_shell _h1 / vol-Abs / net">
 		<input id="inputH1" type="text" name="h1" value="{{$landing->h1 ?? old('h1')}}" placeholder=".">
 		<label class="Abs" for="inputH1">@svg('plus')Заголовок h1</label>
@@ -59,14 +59,14 @@
 
 
 <div class="paragraph"></div>
-@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'Краткое описание'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Краткое описание'])
 <div class="paragraph"></div>
 <div class="_shell Article aura / Note -lite">
 	<textarea id="tinymce_lite_1" name="intro" placeholder='текст...'>{{$landing->intro}}</textarea>
 	{{-- @include('zADMIN._brick.cleanHTML') --}}
 </div>
 <div class="paragraph"></div>
-@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'Текст'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Текст'])
 <div class="paragraph"></div>
 <div class="_shell Article aura / Note -lite">
 	<textarea id="tinymce_1" name="text" placeholder='текст...'>{{$landing->text}}</textarea>

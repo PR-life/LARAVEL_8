@@ -1,5 +1,5 @@
 <div class="Article aura">
-	@component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'nameCategory'])
+	@component('zADMIN._wrap.form._shell.Lang', ['id' => 'nameCategory'])
 	<div class="_shell _name @error('name') Error @enderror / vol-Abs / net">
 		<input id="inputName" type="text" name="name" value="{{$faq->name ?? old('name')}}" placeholder=".">
 		<label class="Abs" for="inputName">@svg('plus')Name</label>
@@ -17,7 +17,7 @@
 	<div class="hill-s"></div>
 
 
-	@component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'h1Faq'])
+	@component('zADMIN._wrap.form._shell.Lang', ['id' => 'h1Faq'])
 	<div class="_shell _h1 / vol-Abs / net">
 		<input id="inputH1" type="text" name="h1" value="{{$faq->h1 ?? old('h1')}}" placeholder=".">
 		<label class="Abs" for="inputH1">@svg('plus')Заголовок h1</label>
@@ -33,7 +33,7 @@
 
 
 <div class="paragraph"></div>
-@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'текст'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'текст'])
 <div class="paragraph"></div>
 <div class="_shell Article aura / Note -lite">
 	<textarea id="tinymce_1" name="text" placeholder='текст...'>{{$faq->text}}</textarea>
@@ -45,7 +45,7 @@
 
 <div class="v-EN -on">
 	<div>		
-		@include('zADMIN.PAGE._wrap.text.nameTextarea', ['name' => 'текст En'])
+		@include('zADMIN._wrap.text.nameTextarea', ['name' => 'текст En'])
 		<div class="paragraph"></div>
 		<div class="_shell Article aura / Note -lite">
 			<textarea id="tinymce_2" name="en_text" placeholder='текст...'>{{$faq->en_text}}</textarea>

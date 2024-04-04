@@ -24,7 +24,7 @@
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN.PAGE._wrap.Table.index', ['css'=> '-face'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-face'])
 
                 @include('zADMIN.combine.Teaser.lib.gaud.heade_customer')
                 @foreach($faces as $_face)     

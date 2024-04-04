@@ -1,5 +1,5 @@
 <div class="Article aura">
-	@component('zADMIN.PAGE._wrap.form._shell.Lang', ['id' => 'nameTag'])
+	@component('zADMIN._wrap.form._shell.Lang', ['id' => 'nameTag'])
 	<div class="_shell _name @error('name') Error @enderror / vol-Abs / net">
 		<input id="inputName" type="text" name="name" value="{{$group->name ?? old('name')}}" placeholder=".">
 		<label class="Abs" for="inputName">@svg('plus')Name</label>
