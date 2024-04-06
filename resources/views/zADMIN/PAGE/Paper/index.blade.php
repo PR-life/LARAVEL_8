@@ -20,10 +20,9 @@
 @section('content')
 
     @component('zADMIN._wrap.index')
-        @component('zADMIN._wrap.max', ['css' => null])
+        @component('zADMIN._wrap.max', ['css' => 'index'])
             @component('zADMIN._wrap.Table.index', ['css'=> '-papers'])
                 @foreach($papers as $paper)     
-                    {{-- @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $paper]) --}}
                     @include('zADMIN._repo.teaser.seo', ['Var' => $paper])
                 @endforeach
             @endcomponent

@@ -8,15 +8,15 @@ use Maatwebsite\Excel\Concerns\ToCollection;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 //
 use Illuminate\Support\Facades\Schema;
-use App\Models\Tag;
+use App\Models\Item;
 
-class TagImport implements ToCollection, WithHeadingRow 
+class ItemImport implements ToCollection, WithHeadingRow 
 {
+
     public function collection(Collection $collection)
     {
-
         $params = [];
-        $arr = Schema::getColumnListing('tags');
+        $arr = Schema::getColumnListing('items');
 
         foreach($arr as $_count => $_value) {
             $params[$_value] = null;
@@ -27,7 +27,7 @@ class TagImport implements ToCollection, WithHeadingRow
                 $params[$_name] = $item[$_name] ?? null;
             };
 
-            Tag::firstOrCreate([
+            Item::firstOrCreate([
                 'id' => $params['id'],
                 ],$params);
         }

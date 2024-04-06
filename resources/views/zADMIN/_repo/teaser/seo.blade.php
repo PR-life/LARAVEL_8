@@ -1,8 +1,3 @@
-
-{{-- @include('zADMIN/combine/Teaser/lib/666seo') --}}
-
-
-
 @component('zADMIN._wrap.Teaser.index', ['Var' => $Var, 'css' => 'space-left '])
 
     <div class="flex bC">
@@ -45,7 +40,7 @@
         <div class="_r / flex sI / cross-s">
             
 
-            @include('zADMIN._repo.teaser.lego.cell.relation')
+            @include('zADMIN._repo.teaser.lego.cell.relation', ['param_seo' => true])
  
 
             <div class="x-HMin flex cI">

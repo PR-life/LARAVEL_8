@@ -20,7 +20,7 @@
 @section('content')
 
     @component('zADMIN._wrap.index', ['css' => 'relative'])
-        @component('zADMIN._wrap.max', ['css' => null])
+        @component('zADMIN._wrap.max', ['css' => 'index'])
             @component('zADMIN._wrap.Table.index', ['css'=> '-posts'])
                 @foreach($posts as $_post)     
                     @include('zADMIN._repo.teaser.seo', ['Var' => $_post])

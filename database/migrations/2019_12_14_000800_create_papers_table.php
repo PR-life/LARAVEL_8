@@ -57,18 +57,10 @@ class CreatePapersTable extends Migration
             $table->string('demon_par_2')->nullable();
             $table->string('demon_par_3')->nullable();
 
+            //
             $table->string('knot_1')->nullable();
 
-			$table->unsignedInteger('order')->default('50');
-            $table->unsignedInteger('status')->default('1');
-            $table->unsignedInteger('views')->default('1');
-            $table->unsignedInteger('featured')->default('0');
-            $table->unsignedInteger('published')->default('0');
-
-            $table->unsignedInteger('mafia')->default('0');
-
-			//
-
+            //
 			$table->foreignId('user_id')
 				->default('1')
 				->references('id')
@@ -85,18 +77,25 @@ class CreatePapersTable extends Migration
                 ->references('id')
                 ->on('tags');
 
-			$table->unsignedBigInteger('category_id')->nullable();          
-            $table->index('category_id', 'paper_category_idx');
-            $table->foreign('category_id', 'paper_category_fk')->on('categories')->references('id');
-       
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories');
 
+
+            //
+            $table->unsignedInteger('mafia')->default('0');
+
+            //
+			$table->unsignedInteger('order')->default('50');
+            $table->unsignedInteger('status')->default('1');
+            $table->unsignedInteger('views')->default('1');
+            $table->unsignedInteger('featured')->default('0');
+            $table->unsignedInteger('published')->default('0');
 
 			//
+			$table->string('canonical')->nullable();
 			$table->string('title')->nullable();
 			$table->string('description')->nullable();
 			$table->string('keywords')->nullable();
-			$table->string('canonical')->nullable();
-
 
 			//
             $table->timestamps();

@@ -48,21 +48,11 @@ class CreateSmsTable extends Migration
             $table->string('label')->default('email');
 
             //
-            $table->string('id_item')->nullable();
             $table->string('from_page')->nullable();
+            $table->string('lang')->nullable();
 
             //
             $table->unsignedInteger('go_mod_talk')->default('0');
-
-			$table->unsignedBigInteger('category_id')->nullable();          
-            $table->index('category_id', 'sms_category_idx'); 
-            $table->foreign('category_id', 'sms_category_fk')->on('categories')->references('id');
-
-			//
-            $table->foreignId('tag_id')
-                ->nullable()
-                ->references('id')
-                ->on('tags');
 
             //
             $table->foreignId('group_id')
@@ -70,7 +60,20 @@ class CreateSmsTable extends Migration
                 ->references('id')
                 ->on('groups');
 
+            $table->foreignId('tag_id')
+                ->nullable()
+                ->references('id')
+                ->on('tags');
+
+            $table->unsignedBigInteger('category_id')->nullable();          
+            $table->foreign('category_id', 'sms_category_fk')->on('categories')->references('id');
+
+			$table->unsignedBigInteger('landing_id')->nullable();          
+            $table->foreign('landing_id')->references('id')->on('landings');
+
             //
+            $table->unsignedInteger('mafia')->default('0');
+
 			$table->integer('views')->default('1');
 			$table->unsignedInteger('order')->default('50');
             $table->unsignedInteger('status')->default('1');
@@ -78,8 +81,6 @@ class CreateSmsTable extends Migration
             $table->unsignedInteger('featured')->default('0');
             $table->unsignedInteger('published')->default('0');
 			
-            $table->unsignedInteger('mafia')->default('0');
-
             $table->timestamps();
 			$table->softDeletes();
         });

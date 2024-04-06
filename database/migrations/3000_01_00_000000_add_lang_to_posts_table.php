@@ -11,19 +11,19 @@ class AddLangToPostsTable extends Migration
      {
          Schema::table('posts', function (Blueprint $table) {
              $table->after('prev_p', function ($table) {
-                 $table->string('en_name')->nullable();
-                 $table->string('en_h1')->nullable();
-                 $table->text('en_intro')->nullable();
-                 $table->text('en_text')->nullable();
-                 $table->text('en_prev_h1')->nullable();
-                 $table->text('en_prev_h2')->nullable();
-                 $table->text('en_prev_p')->nullable();
+                $table->string('en_name')->nullable();
+                $table->string('en_h1')->nullable();
+                $table->text('en_intro')->nullable();
+                $table->text('en_text')->nullable();
+                $table->text('en_prev_h1')->nullable();
+                $table->text('en_prev_h2')->nullable();
+                $table->text('en_prev_p')->nullable();
              });
-             $table->after('canonical', function ($table) {
+             $table->after('keywords', function ($table) {
+                $table->text('en_canonical')->nullable();
                 $table->string('en_title')->nullable();
                 $table->string('en_description')->nullable();
                 $table->text('en_keywords')->nullable();
-                $table->text('en_canonical')->nullable();
             });
          });
      }

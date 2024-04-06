@@ -32,42 +32,32 @@ class CreateFaqsTable extends Migration
 			$table->text('knot_1')->nullable();
 
 
+            //
+            $table->foreignId('group_id')
+                ->nullable()
+                ->references('id')
+                ->on('groups');
+
+            $table->foreignId('tag_id')
+                ->nullable()
+                ->references('id')
+                ->on('tags');
+
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories');
+			
+			$table->unsignedBigInteger('faq_id')->nullable();          
+            $table->foreign('faq_id')->references('id')->on('faqs')->onDelete('cascade');
+
+            //
+            $table->unsignedInteger('mafia')->default('0');
+
 			$table->unsignedInteger('order')->default('50');
             $table->unsignedInteger('status')->default('1');
 
             $table->unsignedInteger('featured')->default('0');
             $table->unsignedInteger('published')->default('1');
 			
-            $table->unsignedInteger('mafia')->default('0');
-
-
-			//
-			$table->unsignedBigInteger('faq_id')->nullable();          
-
-            // $table->index('faq_id', 'faq_faq_idx');
-            // $table->foreign('faq_id', 'faq_faq_fk')->on('faqs')->references('id')->onDelete('cascade');
-            $table->foreign('faq_id')->references('id')->on('faqs')->onDelete('cascade');
-
-			//
-			$table->unsignedBigInteger('category_id')->nullable();          
-
-            $table->index('category_id', 'faq_category_idx'); // ИМЯ ед. ч. -- эта тбл. и тбл. на какую ссылаемся + суффикс 
-            $table->foreign('category_id', 'faq_category_fk')->on('categories')->references('id'); // ->onDelete('cascade')
-
-			//
-            $table->foreignId('tag_id')
-                ->nullable()
-                ->references('id')
-                ->on('tags');
-
-
-            //
-            $table->unsignedBigInteger('group_id')->nullable();          
-
-            $table->index('group_id', 'faq_group_idx'); // ИМЯ ед. ч. -- эта тбл. и тбл. на какую ссылаемся + суффикс 
-            $table->foreign('group_id', 'faq_group_fk')->on('groups')->references('id'); // ->onDelete('cascade')
-           
-
 
             $table->timestamps();
             $table->softDeletes();

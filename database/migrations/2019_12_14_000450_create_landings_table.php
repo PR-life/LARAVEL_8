@@ -36,32 +36,33 @@ class CreateLandingsTable extends Migration
             //
 			$table->text('knot_1')->nullable();
 
-			$table->unsignedInteger('order')->default('50');
-            $table->unsignedInteger('status')->default('1');
-            $table->unsignedInteger('views')->default('1');
-            $table->unsignedInteger('featured')->default('0');
-            $table->unsignedInteger('published')->default('1');
-			
-			//
-			$table->unsignedBigInteger('category_id')->nullable();          
-            $table->index('category_id', 'landing_category_idx'); 
-            $table->foreign('category_id', 'landing_category_fk')->on('categories')->references('id')->onDelete('cascade');
+            //
+            $table->foreignId('group_id')
+                ->nullable()
+                ->references('id')
+                ->on('groups');
 
             $table->foreignId('tag_id')
                 ->nullable()
                 ->references('id')
                 ->on('tags');
 
-            $table->foreignId('group_id')
-                ->nullable()
-                ->references('id')
-                ->on('groups');
+            $table->unsignedBigInteger('category_id')->nullable();
+            $table->foreign('category_id')->references('id')->on('categories');
+
+
+            //
+			$table->unsignedInteger('order')->default('50');
+            $table->unsignedInteger('status')->default('1');
+            $table->unsignedInteger('views')->default('1');
+            $table->unsignedInteger('featured')->default('0');
+            $table->unsignedInteger('published')->default('1');
 
 			//
+			$table->string('canonical')->nullable();
 			$table->string('title')->nullable();
 			$table->string('description')->nullable();
 			$table->string('keywords')->nullable();
-			$table->string('canonical')->nullable();
             
             $table->string('ogp_type')->nullable();
             $table->string('ogp_image')->nullable();

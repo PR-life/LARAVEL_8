@@ -47,17 +47,7 @@ class CreatePostsTable extends Migration
 			$table->text('knot_1')->nullable();
 
 
-			$table->unsignedInteger('order')->default('50');
-            $table->unsignedInteger('status')->default('1');
-            $table->unsignedInteger('views')->default('1');
-            $table->unsignedInteger('featured')->default('0');
-            $table->unsignedInteger('published')->default('1');
-			
-            $table->unsignedInteger('mafia')->default('0');
-
-
-			//
-
+            //
 			$table->foreignId('user_id')
 				->default('1')
 				->references('id')
@@ -75,14 +65,26 @@ class CreatePostsTable extends Migration
                 ->on('tags');
 
 			$table->unsignedBigInteger('category_id')->nullable(); // ИМЯ ед. ч. -- эта тбл. и тбл. на какую ссылаемся + суффикс 
-            $table->index('category_id', 'post_category_idx'); //какой параметр берем ...  задаем ему имя для оращения, по правилу "ИМЯ ед. ч. -- эта тбл. и тбл. на какую ссылаемся + суффикс" 
-            $table->foreign('category_id', 'post_category_fk')->on('categories')->references('id')->onDelete('cascade');
+            $table->foreign('category_id')->references('id')->on('categories');
+            // $table->index('category_id', 'post_category_idx'); //какой параметр берем ...  задаем ему имя для оращения, по правилу "ИМЯ ед. ч. -- эта тбл. и тбл. на какую ссылаемся + суффикс" 
+            // $table->foreign('category_id', 'post_category_fk')->on('categories')->references('id')->onDelete('cascade');
+
+
+            //
+            $table->unsignedInteger('mafia')->default('0');
+
+			$table->unsignedInteger('order')->default('50');
+            $table->unsignedInteger('status')->default('1');
+            $table->unsignedInteger('views')->default('1');
+            $table->unsignedInteger('featured')->default('0');
+            $table->unsignedInteger('published')->default('1');
+			
 
 			//
+			$table->string('canonical')->nullable();
 			$table->string('title')->nullable();
 			$table->string('description')->nullable();
 			$table->string('keywords')->nullable();
-			$table->string('canonical')->nullable();
 
 
 			//

@@ -20,7 +20,7 @@
 @section('content')
 
     @component('zADMIN._wrap.index')
-        @component('zADMIN._wrap.max', ['css' => null])
+        @component('zADMIN._wrap.max', ['css' => 'index'])
             @component('zADMIN._wrap.Table.index', ['css'=> '-categories'])
                 @foreach($Categories as $_category)     
                     {{-- @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $_category]) --}}

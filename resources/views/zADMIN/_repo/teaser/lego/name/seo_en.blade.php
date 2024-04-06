@@ -16,7 +16,9 @@
     @include('zADMIN._repo.teaser.brick.a_openTag')
         <span class="_name / flex cI cross-xxs">
             @include('_wrap._text.ellipsis.name',['Var' => $NAME])
-            @include('_wrap._text.ellipsis.name',['Var' => $Var->en_name ?? '<em>en_name</em>', 'css' => 'En none / content-m b400 / Min -w3'])
+            <span class="En none">
+                @include('_wrap._text.ellipsis.name',['Var' => $Var->en_name ?? '<em>en_name</em>', 'css' => 'content-m b400 / Min -w3'])
+            </span>
         </span>
         <span class="_title / flex dC / none D-Seo -on"> 
             {!!$Var->title ?? '<em>title</em>'!!}

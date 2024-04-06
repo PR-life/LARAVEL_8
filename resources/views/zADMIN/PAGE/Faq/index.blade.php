@@ -12,22 +12,23 @@
 
 @push('bee')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Faq', 'add' => route('admin.faq.create')])
+    @include('zADMIN.PAGE._lego.filter.SHEMA.index.faqs')
 @endpush
+
+@include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'faq'])
 
  
 @section('content')
 
-    @component('zADMIN._wrap.index')
+    @component('zADMIN._wrap.index', ['css' => 'relative'])
         @component('zADMIN._wrap.max', ['css' => 'index'])
             @component('zADMIN._wrap.Table.index', ['css'=> '-faqs'])
-                {{-- @foreach($faqs as $faq)     
-                    @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $faq])
-                @endforeach --}}
+
                 @foreach($faqs as $faq)    
                  
-                    @include('zADMIN.combine.Teaser.lib.faq', ['Var' => $faq])
+                    @include('zADMIN._repo.teaser.faq', ['Var' => $faq])
 
-                    @if(count($faq->childrenFaqs))
+                    {{-- @if(count($faq->childrenFaqs))
                         <div class="children -lvl_1 / round">
                             @foreach ($faq->childrenFaqs as $childFaq)
                                 @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $childFaq])
@@ -44,9 +45,9 @@
                                 @endif
                             @endforeach
                         </div>
-                    @endif
+                    @endif --}}
                     
-                    @if(count($faq->friendFaqs))
+                    {{-- @if(count($faq->friendFaqs))
                         <div class="Pivot -bg / published pause v-DB -on / space round">
                             <ul class="-S ul">
                             @foreach ($faq->friendFaqs as $friendFaq)
@@ -56,23 +57,18 @@
                             @endforeach
                             </ul>
                         </div>
-                    @endif
+                    @endif --}}
          
 
-                    {{-- <div class="belongs / round">
-                        @foreach ($faq->belongTo as $belongFaq)
-                            <h4>{{$belongFaq->name}}</h4>
-                        @endforeach
-                    </div> --}}
+
 
 
                 @endforeach
             @endcomponent
 
-            {{-- @if($paginator) --}}
-                @include('zADMIN.mod.paginator', ['Var' => $faqs])
-            {{-- @endif --}}
-            
+
+            @include('zADMIN.mod.paginator', ['Var' => $faqs])
+
         @endcomponent
     @endcomponent
 
