@@ -1,6 +1,6 @@
 @extends('zADMIN._shema.index')
 
-@section('title')Admin @endsection
+@section('title')Faq @endsection
 
 @push('addBread')
 <li>
@@ -11,14 +11,10 @@
 @endpush
 
 @push('bee')
-    @include('zADMIN.PAGE._lego.filter.btn.content')
-    @include('zADMIN._lego.Bee.nameIndex',['name' => 'FAQ', 'add' => route('admin.faq.create'), 'ico' => 'barMenu_relations'])
-    @include('zADMIN.PAGE._lego.filter.SHEMA.index.faqs')
-    @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'faq'])
+    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Faq', 'add' => route('admin.faq.create')])
 @endpush
 
  
-
 @section('content')
 
     @component('zADMIN._wrap.index')
@@ -73,9 +69,9 @@
                 @endforeach
             @endcomponent
 
-            @if($paginator)
+            {{-- @if($paginator) --}}
                 @include('zADMIN.mod.paginator', ['Var' => $faqs])
-            @endif
+            {{-- @endif --}}
             
         @endcomponent
     @endcomponent

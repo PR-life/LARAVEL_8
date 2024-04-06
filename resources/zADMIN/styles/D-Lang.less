@@ -1,0 +1,40 @@
+@charset "UTF-8";
+
+.Lang.on {
+    // --c-input-border:var(--bg);
+    --c-input-border-focus:var(--bg);
+
+    //
+    padding: 2rem .5rem 0rem;
+    background-color: #424248;
+
+    // > ._shell {
+    //     border-bottom:1px solid #666;
+    // }
+
+    input {
+        border-bottom: 1px solid var(--c-input-border-focus);
+    }
+
+}
+
+
+#body.EN {
+    .Table .item {
+        --c-text:hsla(0, 0%, 100%, .25);
+
+        ._description {
+            --c-text:hsla(0, 0%, 100%, .25);
+            --x-color-1:hsla(0, 0%, 100%, .25);
+        }
+        .En {
+            --c-text:hsla(0, 0%, 100%, .75);
+
+            ._description {
+                --c-text:hsla(0, 0%, 100%, .5);
+                --x-color-1:hsla(0, 0%, 100%, .5);
+            }
+        }
+    }
+}
+ 

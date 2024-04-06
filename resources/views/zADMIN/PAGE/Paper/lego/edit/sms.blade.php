@@ -25,7 +25,7 @@
     </div>
 
 
-    @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms')
+    {{-- @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms')
         @slot('id', 'demonUser')
         @slot('name', 'данные автора')
 
@@ -54,7 +54,7 @@
             <dd><span class="content-xs"><input id="inputDemon_par_2" type="text" name="demon_par_2" value="{{$paper->demon_par_2}}" placeholder="USER: {{$paper->user->user_par_2}}"></span></dd> 
         </dl>
 
-    @endcomponent
+    @endcomponent --}}
 
 
 

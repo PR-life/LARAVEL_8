@@ -41,6 +41,7 @@ class Faq extends Model
         );
     }
 
+    //REVERS ????
     public function friendFaqs() {
         return $this->belongsToMany(
             Faq::class,

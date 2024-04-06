@@ -37,9 +37,9 @@ $arrCSS = [
     <div class="Plot -h"></div>
 @endpush
 
-{{-- @push('svg')
+@push('svg')
     @include('_.src.svg.admin')
-@endpush --}}
+@endpush
 
 @section('top')
 <div id="Top" class="Top -h / flex bC cI space-left / Goo -t / bg _indexMax">

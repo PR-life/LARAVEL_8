@@ -39,7 +39,7 @@ if ($Var->name) {
                         </div>
                         <span class="flex / cross">
                             @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $NAME, 'css' => 'x-name'])
-                            <span class="EN / content-m b300 / block oneLine nowrap Ellipsis x-name / Grey">{!!$Var->en_name ?? '<em>en_name</em>'!!}</span>
+                            <span class="EN / content-m b300 / block oneLine555 nowrap Ellipsis x-name / Grey">{!!$Var->en_name ?? '<em>en_name</em>'!!}</span>
                         </span>                        
                     </a>
                     @if(isset($Var->pivotItem) && count($Var->pivotItem))

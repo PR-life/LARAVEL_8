@@ -1,6 +1,6 @@
 @extends('zADMIN._shema.index')
 
-@section('title')Admin @endsection
+@section('title')Теги @endsection
 
 @push('addBread')
 <li>
@@ -11,9 +11,8 @@
 @endpush
 
 @push('bee')
-    @include('zADMIN.PAGE._lego.filter.btn.content')
-    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Теги', 'add' => route('admin.tag.create'), 'ico' => 'barMenu_relations'])
-    @include('zADMIN.PAGE._lego.filter.table-index', ['Var' => 'tag'])
+    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Теги', 'add' => route('admin.tag.create')])
+    {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.tags') --}}
 @endpush
 
  
@@ -24,8 +23,8 @@
         @component('zADMIN._wrap.max', ['css' => 'index'])
             @component('zADMIN._wrap.Table.index', ['css'=> '-tags'])
 
-            @foreach($tags as $tag)
-                @include('zADMIN.combine.Teaser.lib.Tag.seo')
+            @foreach($tags as $_tag)
+                @include('zADMIN._repo.teaser.tag', ['Var' => $_tag])
             @endforeach
 
             @endcomponent

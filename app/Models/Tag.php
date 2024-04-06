@@ -75,6 +75,8 @@ class Tag extends Model
         );
     }
 
+ 
+
 	public function getDateAsCarbonAttribute(){
 		return Carbon::parse($this->created_at);
 	}

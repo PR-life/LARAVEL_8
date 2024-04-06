@@ -1,6 +1,7 @@
 <div class="flex cI">
     @component('zADMIN._wrap.manager.btn.Top')
         @slot('id_node','filter_tags_1')
+        @slot('cssIco','-S')
         @slot('ico','tags')
     @endcomponent
     @component('zADMIN._wrap.manager.btn.Top')
@@ -19,12 +20,12 @@
         @component('zADMIN._wrap.manager.btn.addBody')
             @slot('class_contol','D-En')
             @slot('param','EN')
-            @slot('name','En')
+            @slot('name','en')
         @endcomponent
         @component('zADMIN._wrap.manager.btn.removeBody')
             @slot('class_contol','D-En')
             @slot('param','EN')
-            @slot('name','En')
+            @slot('name','en')
         @endcomponent
     </div>
  

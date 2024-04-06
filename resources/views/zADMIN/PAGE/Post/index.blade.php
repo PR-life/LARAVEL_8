@@ -22,8 +22,8 @@
     @component('zADMIN._wrap.index', ['css' => 'relative'])
         @component('zADMIN._wrap.max', ['css' => null])
             @component('zADMIN._wrap.Table.index', ['css'=> '-posts'])
-                @foreach($posts as $post)     
-                    @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $post])
+                @foreach($posts as $_post)     
+                    @include('zADMIN._repo.teaser.seo', ['Var' => $_post])
                 @endforeach
             @endcomponent
             @include('zADMIN.mod.paginator', ['Var' => $posts])

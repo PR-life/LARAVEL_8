@@ -7,6 +7,8 @@
 @section('content')
     <div class="I aura [ margin top ]">
 
+
+        
  
     </div>
 @endsection

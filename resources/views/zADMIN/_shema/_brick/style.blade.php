@@ -1,5 +1,5 @@
 @push('style')
-.oneLine br{
+.oneLine555 br{
 	display:none;
 }
 @endpush

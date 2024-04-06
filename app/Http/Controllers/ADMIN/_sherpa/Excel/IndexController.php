@@ -9,9 +9,6 @@ class IndexController extends Controller
 {
     public function __invoke(){
 
-		$data = [];
-
-        return view('zADMIN.PAGE.sherpa.Excel.Morda', compact('data'));
+        return view('zADMIN.PAGE.SHERPA.Excel.Morda');
     }
 }
-

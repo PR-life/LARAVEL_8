@@ -1,6 +1,6 @@
 <div>
     <div class="paragraph"></div>
-    <div class="flex sC / x-name-index / {{$css ?? ''}}">
+    <div class="flex sC / padding-04041659 / {{$css ?? ''}}">
         <div class="space-left / -Grey">
             <div class="flex cI / cross-xs">
                 @isset($add)

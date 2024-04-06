@@ -1,16 +1,17 @@
 <?php
 
 namespace App\Http\Controllers\ADMIN\Post;
-// use App\Http\Controllers\Controller;
 ////
 use App\Http\Requests\ADMIN\Post\FilterRequest;
 //
 use App\Models\Post;
 use App\Models\{User,Category,Tag};
 
+ 
 class IndexController extends BaseController {
 
     public function __invoke(FilterRequest $request){
+ 
 
 		// Популярные посты
 		// $likedPosts = Post::withCount('likedUsers')->orderBy('liked_users_count', 'DESC')->get()->take(4);
@@ -34,25 +35,15 @@ class IndexController extends BaseController {
 		// });
 		/***/
 
+		$posts = $this->service->posts($request->validated());
+
         $categories = Category::all();
 		$tags = Tag::all();
-
-		$posts = $this->service->posts($request->validated());
-		$_request = $this->service->_request($request);
-
-
-		// $_request = [
-		// 	'page' => request()->get('page'),
-		// 	'tag_id' => request()->get('tag_id'),
-		// 	'category_id' => request()->get('category_id'),
-		// ];
-		// $page = request()->get('page');
-		// $tag_id = request()->get('tag_id');
-		// $category_id = request()->get('category_id');
-
 		$roles = User::getRoles();
 
 
+		$_request = $this->service->_request($request);
+ 
         return view('zADMIN.PAGE.Post.index', compact('posts','categories','tags','_request'));
 
     }

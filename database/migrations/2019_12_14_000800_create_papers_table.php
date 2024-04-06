@@ -69,29 +69,26 @@ class CreatePapersTable extends Migration
 
 			//
 
-
 			$table->foreignId('user_id')
 				->default('1')
 				->references('id')
 				->on('users')
 				->cascadeOnDelete();
 
-			// $table->unsignedBigInteger('category_sku')->nullable();
-			$table->unsignedBigInteger('category_id')->nullable();          
-            $table->index('category_id', 'paper_category_idx');
-            $table->foreign('category_id', 'paper_category_fk')->on('categories')->references('id');
-       
+            $table->foreignId('group_id')
+                ->nullable()
+                ->references('id')
+                ->on('groups');
 
             $table->foreignId('tag_id')
                 ->nullable()
                 ->references('id')
                 ->on('tags');
 
-
-            $table->foreignId('group_id')
-                ->nullable()
-                ->references('id')
-                ->on('groups');
+			$table->unsignedBigInteger('category_id')->nullable();          
+            $table->index('category_id', 'paper_category_idx');
+            $table->foreign('category_id', 'paper_category_fk')->on('categories')->references('id');
+       
 
 
 			//

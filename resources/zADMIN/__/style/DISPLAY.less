@@ -1,11 +1,13 @@
 @charset "UTF-8";
 
+
 .v-EN,
 .v-Lite {
     background-color: red !important;
 }
 
 #body .EN {
+    // display: none;
     background-color: purple;
 }
 #body.EN .EN {
@@ -24,26 +26,56 @@
 }
 
 #body.EN {
+    .vol-seo .D-Seo .En,
+    .En,
     .D-En.-on  {
-        display: flex;
+        display: block;
     }
+    
+
+    .D-Seo .En,
     .D-En.-off {
         display: none;
     }
 }
 
+//
+.item .D-Db {
+    height: 1rem;
+    overflow: hidden;
+}
+
+
 
 //
 
+.vol-relation .D-Relation.-on,
+.vol-db .D-Db.-on,
+.vol-status .D-Status.-on,
+.vol-seo .D-Seo.-on,
 .vol-lite .D-Lite.-on {display: flex;}
 
+.vol-relation .D-Relation.-off,
+.vol-db .D-Db.-off,
+.vol-status .D-Status.-off,
+.vol-seo .D-Seo.-off,
 .vol-lite .D-Lite.-off {display: none;}
 
 
 
 
 
+//
 
+.item.manager-showParam {
+    div[class*="D-"]{
+        display: flex;
+    }
+
+    .manager-showParamNone {
+        display: none !important;
+    }
+}
 
 
 
@@ -268,21 +300,4 @@
 
 
 // //
-
-// .x-ON-on {
-//     --c-text:#d54041;
-
-//     display: none;
-// }
-
-// .x-ON-off {
-//     --c-text:#666;
-// }
-
-// .ON {
-     
-//     .x-ON-off {display: none;}
-//     .x-ON-on,
-//     .v-Seo.-on {display: flex;}
-// }
-
+ 

@@ -3,6 +3,6 @@
         <div class="Ico -S">@svg({{$ico}})</div>
     @endisset
     @isset($name)
-        <span class="content-xs / noEvents">{{$name}}</span>
+        <span class="content-xxs / noEvents">{{$name}}</span>
     @endisset
 </div>

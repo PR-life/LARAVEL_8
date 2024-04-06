@@ -23,11 +23,13 @@
         @component('zADMIN._wrap.max', ['css' => null])
             @component('zADMIN._wrap.Table.index', ['css'=> '-categories'])
                 @foreach($Categories as $_category)     
-                    @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $_category])
+                    {{-- @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $_category]) --}}
+                    @include('zADMIN._repo.teaser.seo', ['Var' => $_category])
                     @if($_category->childrenCategories)
                         <div class="children -lvl_1 / round">
                             @foreach ($_category->childrenCategories as $childCategory)
-                                @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $childCategory])
+                                {{-- @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $childCategory]) --}}
+                                @include('zADMIN._repo.teaser.seo', ['Var' => $childCategory])
                             @endforeach
                         </div>
                     @endif

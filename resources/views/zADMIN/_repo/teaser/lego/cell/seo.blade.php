@@ -1,0 +1,77 @@
+<div class="none D-Seo -on / flex cC dC"> 
+    <div class="paragraph-s"></div>
+ 
+    <span class="_description content-s / Grey">
+        {!!$Var->description ?? '<em>description</em>'!!}
+    </span>
+    
+    <div class="En none">
+        <div class="paragraph"></div>
+        <span class="content-s / Grey / _description">
+            {!!$Var->en_description ?? '<em>en_description</em>'!!}
+        </span>
+    </div>
+     
+    @if($Var->canonical || $Var->en_canonical)
+        <div class="paragraph"></div>
+        @isset($Var->canonical)
+            @include('zADMIN._repo.teaser.lego.cell.wrap.Badge', ['Var' => $Var->canonical, 'name' => 'canonical:'])
+        @endisset
+        <div class="none En -on">
+            @isset($Var->en_canonical)
+                @include('zADMIN._repo.teaser.lego.cell.wrap.Badge', ['Var' => $Var->en_canonical, 'name' => 'en_canonical:'])
+            @endisset
+        </div>
+    @endif
+
+
+    @if($Var->tags)
+        <div class="paragraphX2"></div>
+        <ul class="menu -tag -XS / lie cloud">
+            @foreach($Var->tags as $tagForeach)
+                <li class="{{$tagForeach->name_2 ? 'original' : ''}}"><a href="{{route('admin.tag.edit', $tagForeach->id)}}" target="_blank">{{$tagForeach->name}}</a></li>
+                @if($tagForeach->name_2)
+                <li class="replica {{$tagForeach->name_3 ? '' : '-last'}}"><span class="a round">{{$tagForeach->name_2}}</span></li>
+                @endif
+                @if($tagForeach->name_3)
+                <li class="replica {{$tagForeach->name_4 ? '' : '-last'}}"><span class="a round">{{$tagForeach->name_3}}</span></li>
+                @endif
+                @if($tagForeach->name_4)
+                <li class="replica {{$tagForeach->name_5 ? '' : '-last'}}"><span class="a round">{{$tagForeach->name_4}}</span></li>
+                @endif
+                @if($tagForeach->name_5)
+                <li class="replica {{$tagForeach->name_6 ? '' : '-last'}}"><span class="a round">{{$tagForeach->name_5}}</span></li>
+                @endif
+                @if($tagForeach->name_6)
+                <li class="replica {{$tagForeach->name_7 ? '' : '-last'}}"><span class="a round">{{$tagForeach->name_6}}</span></li>
+                @endif
+            @endforeach
+        </ul>
+            
+        <div class="none En -on">
+            <div class="EN paragraphX2"></div>
+            <ul class="menu -tag -XS / lie cloud">
+                @foreach($Var->tags as $tagForeach)
+                    <li class="{{$tagForeach->en_name_2 ? 'original' : ''}}"><a href="{{route('admin.tag.edit', $tagForeach->id)}}" target="_blank">{{$tagForeach->en_name}}</a></li>
+                    @if($tagForeach->en_name_2)
+                    <li class="replica {{$tagForeach->en_name_3 ? '' : '-last'}}"><span class="a round">{{$tagForeach->en_name_2}}</span></li>
+                    @endif
+                    @if($tagForeach->en_name_3)
+                    <li class="replica {{$tagForeach->en_name_4 ? '' : '-last'}}"><span class="a round">{{$tagForeach->en_name_3}}</span></li>
+                    @endif
+                    @if($tagForeach->en_name_4)
+                    <li class="replica {{$tagForeach->en_name_5 ? '' : '-last'}}"><span class="a round">{{$tagForeach->en_name_4}}</span></li>
+                    @endif
+                    @if($tagForeach->en_name_5)
+                    <li class="replica {{$tagForeach->en_name_6 ? '' : '-last'}}"><span class="a round">{{$tagForeach->en_name_5}}</span></li>
+                    @endif
+                    @if($tagForeach->en_name_6)
+                    <li class="replica {{$tagForeach->en_name_7 ? '' : '-last'}}"><span class="a round">{{$tagForeach->en_name_6}}</span></li>
+                    @endif
+                @endforeach
+            </ul>
+        </div>
+ 
+    @endif
+
+</div>

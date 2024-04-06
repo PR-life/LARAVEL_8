@@ -57,18 +57,26 @@ class CreatePostsTable extends Migration
 
 
 			//
-			$table->unsignedBigInteger('category_id')->nullable();          
-				// ИМЯ ед. ч. -- эта тбл. и тбл. на какую ссылаемся + суффикс 
-            $table->index('category_id', 'post_category_idx'); 
-				//какой параметр берем ...  задаем ему имя для оращения, по правилу "ИМЯ ед. ч. -- эта тбл. и тбл. на какую ссылаемся + суффикс" 
-            $table->foreign('category_id', 'post_category_fk')->on('categories')->references('id')->onDelete('cascade');
-
 
 			$table->foreignId('user_id')
 				->default('1')
 				->references('id')
 				->on('users')
 				->cascadeOnDelete();
+
+            $table->foreignId('group_id')
+                ->nullable()
+                ->references('id')
+                ->on('groups');
+
+            $table->foreignId('tag_id')
+                ->nullable()
+                ->references('id')
+                ->on('tags');
+
+			$table->unsignedBigInteger('category_id')->nullable(); // ИМЯ ед. ч. -- эта тбл. и тбл. на какую ссылаемся + суффикс 
+            $table->index('category_id', 'post_category_idx'); //какой параметр берем ...  задаем ему имя для оращения, по правилу "ИМЯ ед. ч. -- эта тбл. и тбл. на какую ссылаемся + суффикс" 
+            $table->foreign('category_id', 'post_category_fk')->on('categories')->references('id')->onDelete('cascade');
 
 			//
 			$table->string('title')->nullable();

@@ -118,6 +118,23 @@ class Post extends Model
     //     );
     // }
 
+    public function tag() {
+        return $this->belongsTo(
+            Tag::class,
+            'tag_id',
+			'id',
+        );
+    }
+
+
+    public function group() {
+        return $this->belongsTo(
+            Group::class,
+            'group_id',
+			'id',
+        );
+    }
+
 	public function getDateAsCarbonAttribute(){
 		return Carbon::parse($this->created_at);
 	}
