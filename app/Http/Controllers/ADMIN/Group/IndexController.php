@@ -2,14 +2,16 @@
 
 namespace App\Http\Controllers\ADMIN\Group;
 
-use Illuminate\Http\Request;
-use App\Models\Group;
+//
+use App\Http\Requests\ADMIN\Group\FilterRequest;
+//
+// use App\Models\Group;
 
 class IndexController extends BaseController
 {
-    public function __invoke(Request $request){
+    public function __invoke(FilterRequest $request){
 		
-		$groups = Group::orderBy('order', 'asc')->orderBy('created_at', 'desc')->paginate(25);
+        $groups = $this->service->groups($request->validated());
 
         $_request = $this->service->_request($request);
 

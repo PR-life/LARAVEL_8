@@ -16,11 +16,11 @@ class AddLangToCategoriesTable extends Migration
                  $table->string('en_name_seo')->nullable();
                  $table->text('en_h1')->nullable();
              });
-             $table->after('canonical', function ($table) {
+             $table->after('keywords', function ($table) {
+                 $table->string('en_canonical')->nullable();
                 $table->string('en_title')->nullable();
                 $table->string('en_description')->nullable();
                 $table->text('en_keywords')->nullable();
-                $table->string('en_canonical')->nullable();
             });
          });
      }

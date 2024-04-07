@@ -1,4 +1,4 @@
-function select_1902(Options,field,select,text = 'выбрать') {
+function select_1902(Options,field,select,text = '<span class="block space-s net">выбрать...<span class="ghost">..</span></span>') {
       
     // console.log(555)
     // console.log(Options)
@@ -34,13 +34,6 @@ function select_1902(Options,field,select,text = 'выбрать') {
                 elem.onclick = _ => {
                     option.selected = false;
                     elem.remove();
-
-     
-                    // let x = elem.getAttribute('data-var').replace(/\D/g, "")
-                    // console.log(x)
-                    // field.closest('.Select').querySelector(`[data-value="${x}"]`).classList.remove('selected')
-
-
 
                     if (!select.selectedOptions.length) field.innerHTML = text
                 };

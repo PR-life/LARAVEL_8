@@ -64,17 +64,7 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
  
 
 
-    Route::group(['namespace' => 'zItem', 'prefix' => 'items'], function(){
-        Route::get('/', 'IndexController')->name('item.index');
-        Route::get('/trash', 'IndexTrashedController')->name('item.trash');
-        Route::get('/create', 'CreateController')->name('item.create');
-        Route::post('/', 'StoreController')->name('item.store');
-        // // // // // Route::get('/{item}', 'ShowController')->name('item.show');
-        Route::get('/{item}/edit', 'EditController')->name('item.edit');
-        Route::patch('/{item}', 'UpdateController')->name('item.update');
-        Route::delete('/{item}', 'DeleteController')->name('item.delete');
-    });
-
+ 
  
 
 

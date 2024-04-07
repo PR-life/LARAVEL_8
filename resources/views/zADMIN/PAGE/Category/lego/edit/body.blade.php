@@ -34,13 +34,12 @@
 		@slot('tab_2')
 			@slot('nameTab2', 'Тизер')
 			<div class="paragraphX2 / net"></div>
-			@include('zADMIN.PAGE.Category.lego.edit.lego.tab_2')
+			@include('zADMIN.PAGE.Category.lego.edit.lego.teaser')
 		@endslot
 		@slot('tab_3')
 			@slot('nameTab3', 'SEO')
 			<div class="paragraphX2 / net"></div>
-			@include('zADMIN.PAGE._lego.edit.seo.canonical_ru', ['Var' => $category])
-			{{-- @include('zADMIN.PAGE._lego.edit.seo.canonical', ['Var' => $category]) --}}
+			@include('zADMIN.PAGE._lego.edit.seo.canonical', ['Var' => $category])
 		@endslot
 	@endcomponent
 

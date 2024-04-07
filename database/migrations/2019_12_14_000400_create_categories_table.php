@@ -56,11 +56,11 @@ class CreateCategoriesTable extends Migration
             $table->unsignedInteger('status')->default('1');
             $table->unsignedInteger('published')->default('1');
 			
+			$table->string('canonical')->nullable();
 			$table->string('title')->nullable();
 			$table->string('description')->nullable();
 			$table->string('keywords')->nullable();
 
-			$table->string('canonical')->nullable();
              
             $table->timestamps();
             $table->softDeletes();

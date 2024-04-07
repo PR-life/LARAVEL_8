@@ -79,45 +79,40 @@
 
 
 
+//
+#Table_index.y-pause .triggerGap .pause,
+#Table_index.y-active .triggerGap .published,
+#Table_index.y-empty .triggerGap .x-full,
+#Table_index.y-empty .triggerGap .x-empty {
+    height: 0 !important;
+    overflow: hidden;
+    min-height: 0;
+
+}
+
+#body.SATIRA .Table > .item {
+    transition: min-height linear .1s;
+}
 
 
 
 
-// #Table_index.x-pause .pause,
-// #Table_index.x-active .published  {
-//     display: none;
-// }
+//
 
 
+.blockManager {
+    --x-Field-color-1: var(--bg);
+    --x-Field-color-2: #222;
+    --x-Field: 5px;
 
+    background: repeating-linear-gradient(-45deg, var(--x-Field-color-1), var(--x-Field-color-1) 25%, var(--x-Field-color-2) 25%, var(--x-Field-color-2) 50%, var(--x-Field-color-1) 50%) top left fixed;
+    background-size: var(--x-Field) var(--x-Field);
 
-
-// ////
-
-// .v-Meta.-title {
-//     .v-Meta_title.-off {
-//         display: none;
-//     }
-// }
-
-// .v-Meta.-description {
-//     .v-Meta_description.-off {
-//         display: none;
-//     }
-// }
-
-// .v-Meta.-tags {
-//     .v-Meta_tags.-off {
-//         display: none;
-//     }
-// }
-
-// .v-Meta.-category {
-//     .v-Meta_category.-off {
-//         display: none;
-//     }
-// }
-
+    .yesEvents {
+        pointer-events: none !important;
+        opacity: .5;
+    }
+}
 
 
 
@@ -143,25 +138,8 @@
 //         -webkit-transition: padding-top .1s ease-out;
 //     }
 // }
-
-// #body.EN {
-//     .EN {display: block;}
-    
-//     .EN-flex,
-//     .v-EN.-on {display: flex;}
-
-//     .v-EN.-off {display: none;}
-// }
-
-// //
-// .vol-seo {
-//     .v-Seo.-on  {
-//         display: flex;
-//     }
-//     .v-Seo.-off {
-//         display: none;
-//     }
-
+ 
+ 
 
 //     .Table {
 //         .table-wrap {
@@ -238,33 +216,7 @@
 // }
 
 
-// .x-23101338 {
-//     .active .x-active {
-//         --c-btn-border:#ccc;
-//     }
-//     .active {
-//         .x-exclude {
-//             position: relative;
 
-//             .content-xxs{ opacity: .5;}
-//         }
-    
-//         .x-exclude::before {
-//             content: '';
-//         }
-//     }
-
-//     .x-exclude::before {        
-//         left: -3px;
-//         right: -3px;
-//         top: 50%;
-//         height: 1px;
-//         // transform: rotate(10deg);
-//         position: absolute;
-//         background-color: #d54041;
-//         opacity: .5;
-//     }
-// }
 
 
 

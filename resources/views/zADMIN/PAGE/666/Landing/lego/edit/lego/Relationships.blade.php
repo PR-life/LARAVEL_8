@@ -2,7 +2,7 @@
 <div class="flex -wrap / cloud space">
     <div class="Min -w5">
         @include('zADMIN._wrap.select.name',['Var' => 'Категория'])
-        @component('zADMIN._wrap.select.categories.main', ['id' => 'categories'])
+        @component('zADMIN._wrap.select.category.main', ['id' => 'categories'])
             @include('_._brick.select.categories.edit.main',['Categories' => $categories, 'Var' => $landing->category_id])
         @endcomponent
     </div>
@@ -24,7 +24,7 @@
 
     <div class="Min -w5">
         @include('zADMIN._wrap.select.name',['Var' => 'Теги'])
-        @component('zADMIN._wrap.select.tags.all')
+        @component('zADMIN._wrap.select.tags.index')
             @include('_._brick.select.tags.edit.index',['Tags' => $tags,'Var' => $landing])
         @endcomponent
     </div>

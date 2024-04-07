@@ -10,6 +10,19 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
     Route::get('/', function() {return view('zADMIN.Morda');})->name('morda');
 
 
+    Route::group(['namespace' => 'zItem', 'prefix' => 'items'], function(){
+        Route::get('/', 'IndexController')->name('item.index');
+        Route::get('/trash', 'IndexTrashedController')->name('item.trash');
+        Route::get('/create', 'CreateController')->name('item.create');
+        Route::post('/', 'StoreController')->name('item.store');
+        // // // // // Route::get('/{item}', 'ShowController')->name('item.show');
+        Route::get('/{item}/edit', 'EditController')->name('item.edit');
+        Route::patch('/{item}', 'UpdateController')->name('item.update');
+        Route::delete('/{item}', 'DeleteController')->name('item.delete');
+    });
+
+
+
     Route::group(['namespace' => 'Paper', 'prefix' => 'papers'], function(){
         Route::get('/', 'IndexController')->name('paper.index');
         Route::get('/trash', 'IndexTrashedController')->name('paper.trash');
@@ -40,6 +53,8 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
         Route::get('/{faq}/edit', 'EditController')->name('faq.edit');
         Route::patch('/{faq}', 'UpdateController')->name('faq.update');
         Route::delete('/{faq}', 'DeleteController')->name('faq.delete');
+        //
+        Route::get('/trash', 'IndexTrashedController')->name('faq.trash');
     });
 
     Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function(){
@@ -60,6 +75,8 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
         Route::get('/{tag}/edit', 'EditController')->name('tag.edit');
         Route::patch('/{tag}', 'UpdateController')->name('tag.update');
         Route::delete('/{tag}', 'DeleteController')->name('tag.delete');
+        //
+        Route::get('/trash', 'IndexTrashedController')->name('tag.trash');
     });
 
 
@@ -71,6 +88,8 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
         Route::get('/{group}/edit', 'EditController')->name('group.edit');
         Route::patch('/{group}', 'UpdateController')->name('group.update');
         Route::delete('/{group}', 'DeleteController')->name('group.delete');
+        //
+        Route::get('/trash', 'IndexTrashedController')->name('group.trash');
     });
 
 

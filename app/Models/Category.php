@@ -95,12 +95,15 @@ class Category extends Model
 			// https://www.youtube.com/watch?v=c0yuY_Ugacg
     }
 
+
+
     public function faqs() {
-        return $this->hasMany(
+        return $this->belongsToMany(
             Faq::class,
+            'category_faqs',
             'category_id',
-            'id', //
-        )->where('published', 1)->whereNull('faq_id')->orderBy('order', 'asc');
+            'faq_id'
+        );
     }
 
 

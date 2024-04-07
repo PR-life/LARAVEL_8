@@ -2,7 +2,7 @@
     @component('zADMIN._wrap.Relationships.line')
         <div class="Min -w5">
             @include('zADMIN._wrap.select.name',['Var' => 'Категория'])
-            @component('zADMIN._wrap.select.categories.main', ['id' => 'categories'])
+            @component('zADMIN._wrap.select.category.main', ['id' => 'categories'])
                 @include('_._brick.select.categories.edit.main',['Categories' => $categories, 'Var' => $sms->category_id])
             @endcomponent
         </div>
@@ -28,7 +28,7 @@
     @component('zADMIN._wrap.Relationships.line')
         <div class="Min -w5">
             @include('zADMIN._wrap.select.name',['Var' => 'Теги'])
-            @component('zADMIN._wrap.select.tags.all')
+            @component('zADMIN._wrap.select.tags.index')
                 @include('_._brick.select.tags.edit.index',['Tags' => $tags,'Var' => $sms])
             @endcomponent
         </div>

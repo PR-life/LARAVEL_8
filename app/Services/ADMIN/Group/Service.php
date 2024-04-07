@@ -4,13 +4,26 @@ namespace App\Services\ADMIN\Group;
 
 use Exception;
 use Illuminate\Support\Facades\DB;
-use App\Services\ADMIN\BaseService;
 //
-
+use App\Http\Filters\GroupFilter;
+use App\Services\ADMIN\BaseService;
 use App\Models\Group;
 
 
 class Service extends BaseService{
+
+
+	public function groups($x) {
+		$filter = app()->make(GroupFilter::class, ['queryParams' => array_filter($x)]);
+		// dd($filter);
+	
+		return Group::filter($filter)->orderBy('order', 'asc')->orderBy('created_at', 'DESC')->paginate(25);
+			// $posts = Post::filter($filter)->orderBy('created_at', 'desc')->get();
+			// $posts = Post::paginate(10);
+	}
+
+
+
 
 
 	public function update($group,$param) {

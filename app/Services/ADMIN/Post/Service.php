@@ -6,10 +6,9 @@ use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 //
-//
-use App\Models\Post;
-use App\Services\ADMIN\BaseService;
 use App\Http\Filters\PostFilter;
+use App\Services\ADMIN\BaseService;
+use App\Models\Post;
 
 
 class Service extends BaseService {
@@ -30,6 +29,9 @@ class Service extends BaseService {
 
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);
+
+			isset($param['faq_ids']) ? $faqIds = $param['faq_ids'] : $faqIds = [];
+			unset($param['faq_ids']);
 			
 			//
 			isset($param['featured']) ? '' : $param['featured'] = '0';
@@ -50,10 +52,14 @@ class Service extends BaseService {
 
 			//
 			$post->update($param);
+
 			$post->tags()->sync($tagIds); // изменили attach на sync*, 
 				// и поместили ниже строки '$post->update($param);'
 				// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
 			$tagIds = [];
+
+			$post->faqs()->sync($faqIds);
+			$faqIds = [];
 
 			DB::commit();
 		} catch (Exception $exception) {

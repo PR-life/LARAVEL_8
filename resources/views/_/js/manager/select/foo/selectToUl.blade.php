@@ -18,6 +18,12 @@ function selectToUl(parent) {
     const cssDropDown = ['_dropdown','space-xs'];
     const cssBtn = ['_btn', 'content', 'highlight', 'slctn'];
     
+
+
+    let observerSelect = new MutationObserver(mutationRecords => {
+        console.log(mutationRecords); // console.log(изменения)
+      });
+
  
     
     wrap.classList.add(...csswrap);
@@ -75,6 +81,26 @@ function selectToUl(parent) {
         })
     }
 
+
+    // ul.closest('.Select').querySelector('._field').addEventListener("change", function(element) {
+    //     // let selectedOptions = this.selectedOptions;
+    //     // field.innerHTML = "";
+    //     console.log(999999999)
+    //     // select_1902(select.selectedOptions,field,text,select)
+    // })
+
+
+      // наблюдать за всем, кроме атрибутов
+      observerSelect.observe(ul.closest('.Select').querySelector('._field'), {
+        childList: true, // наблюдать за непосредственными детьми
+        subtree: true, // и более глубокими потомками
+        characterDataOldValue: true // передавать старое значение в колбэк
+      });
+ 
+ 
+      
+ 
+ 
 
     ul.addEventListener('click', function() {
         let ul = event.currentTarget;

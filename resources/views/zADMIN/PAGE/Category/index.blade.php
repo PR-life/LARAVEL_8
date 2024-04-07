@@ -3,32 +3,29 @@
 @section('title')Категории @endsection
 
 @push('addBread')
-<li>
-    <span>
-        <span class="content-xs">Связи</span>
-    </span>
-</li>
+    <li>
+        <span>
+            <span class="content-xs">Связи</span>
+        </span>
+    </li>
 @endpush
 
 @push('bee')
-    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Категории', 'add' => route('admin.category.create')])
+    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Категории', 'add' => route('admin.category.create'), 'Model' => 'Category'])
     @include('zADMIN.PAGE._lego.filter.SHEMA.index.categories')
 @endpush
     
-@include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index')
+@include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Category', 'model' => 'category'])
  
 @section('content')
-
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN._wrap.Table.index', ['css'=> '-categories'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-categories', 'Model' => 'Category'])
                 @foreach($Categories as $_category)     
-                    {{-- @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $_category]) --}}
                     @include('zADMIN._repo.teaser.seo', ['Var' => $_category])
                     @if($_category->childrenCategories)
                         <div class="children -lvl_1 / round">
                             @foreach ($_category->childrenCategories as $childCategory)
-                                {{-- @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $childCategory]) --}}
                                 @include('zADMIN._repo.teaser.seo', ['Var' => $childCategory])
                             @endforeach
                         </div>
@@ -38,5 +35,4 @@
             @include('zADMIN.mod.paginator', ['Var' => $Categories])
         @endcomponent
     @endcomponent
-
 @endsection

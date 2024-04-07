@@ -1,3 +1,6 @@
-<div class="Select / Form -S">
+@component('zADMIN._wrap.Relationship.index', ['id' => 'faqs'])
+@slot('placeholder', 'выбрать faq...')
+<select class="_select / relative" name="faq_ids[]" multiple>
     {{$slot}}
-</div>
+</select>
+@endcomponent

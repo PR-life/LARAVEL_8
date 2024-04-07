@@ -2,32 +2,28 @@
 
 namespace App\Http\Controllers\ADMIN\Tag;
 
-use App\Http\Controllers\Controller;
 //
-use App\Models\Tag;
-use App\Models\Category;
+use App\Http\Requests\ADMIN\Group\FilterRequest;
+//
+// use App\Models\Tag;
 
 
-class IndexController extends Controller
+class IndexController extends BaseController
 {
-    public function __invoke(){
+    public function __invoke(FilterRequest $request){
 		
-		$tags = Tag::orderBy('order', 'asc')->orderBy('created_at', 'desc')->paginate(25);
-		$categories = Category::all();
+		$tags = $this->service->tags($request->validated());
+ 
 
-        $shema = request()->get('shema');
-        $page = request()->get('page');
+        $_request = $this->service->_request($request);
 
 
-        // dd($shema);
-        // dd(request()->all());
-        // dd(request());
-        if($shema == 'group')
+        if($_request['shema'] == 'group')
         {
             return view('zADMIN.PAGE.Tag.indexGroup', compact('tags','categories','shema'));
         }
 
-        return view('zADMIN.PAGE.Tag.index', compact('tags','categories','shema','page'));
+        return view('zADMIN.PAGE.Tag.index', compact('tags','_request'));
 
          
     }

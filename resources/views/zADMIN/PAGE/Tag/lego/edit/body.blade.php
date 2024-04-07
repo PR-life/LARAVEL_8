@@ -1,6 +1,6 @@
 <div class="Article aura">
 
-	{{-- @component('zADMIN._wrap.form._shell.Lang', ['id' => 'nameTag'])
+	@component('zADMIN._wrap.form._shell.Lang', ['id' => 'nameTag'. (class_basename($tag))])
 	<div class="_shell _name @error('name') Error @enderror / vol-Abs / net">
 		<input id="inputName" type="text" name="name" value="{{$tag->name ?? old('name')}}" placeholder=".">
 		<label class="Abs" for="inputName">@svg('plus')Name</label>
@@ -8,19 +8,11 @@
 			<div class="Abs / Nameplate -rt">{{ $errors->first('name') }}</div>
 		@enderror
 	</div>
-	<div class="_shell _name / vol-Abs / _Open">
+	<div class="none on / _shell _name / vol-Abs">
 		<input id="inputName_en" type="text" name="en_name" value="{{$tag->en_name ?? old('en_name')}}" placeholder=".">
 		<label class="Abs" for="inputName_en">@svg('plus')en_Name</label>
 	</div>
-	@endcomponent --}}
-
-	<div class="_shell _name @error('name') Error @enderror / vol-Abs / net">
-		<input id="inputName" type="text" name="name" value="{{$tag->name ?? old('name')}}" placeholder=".">
-		<label class="Abs" for="inputName">@svg('plus')Name</label>
-		@error('name')
-			<div class="Abs / Nameplate -rt">{{ $errors->first('name') }}</div>
-		@enderror
-	</div>
+	@endcomponent
 	@include('zADMIN._lego.form.slug.edit', ['Var' => $tag->slug])
 
 	<div class="hill"></div>
@@ -28,12 +20,25 @@
 
 	<div class="void-m">
 
-		@component('zADMIN._wrap.form._shell.x_hr')
-			@slot('css', 'Form / vol-Abs')
-			@slot('nameId','Name_2')
-			@slot('name','name_2')
-			{{$tag->name_2 ?? old('name_2')}}
+
+		@component('zADMIN._wrap.form._shell.Lang', ['id' => 'nameTag_2'. (class_basename($tag))])
+			@component('zADMIN._wrap.form._shell.x_hr')
+				@slot('css', 'Form / vol-Abs')
+				@slot('nameId','Name_2')
+				@slot('name','name_2')
+				{{$tag->name_2 ?? old('name_2')}}
+			@endcomponent
+			<div class="none on">
+			@component('zADMIN._wrap.form._shell.x_hr')
+				@slot('css', 'Form / vol-Abs')
+				@slot('nameId','en_Name_2')
+				@slot('name','en_name_2')
+				{{$tag->en_name_2 ?? old('en_name_2')}}
+			@endcomponent
+			</div>
 		@endcomponent
+
+
 
 		@component('zADMIN._wrap.form._shell.x_hr')
 			@slot('css', 'Form / vol-Abs')
@@ -63,19 +68,6 @@
 			@slot('name','name_6')
 			{{$tag->name_6 ?? old('name_6')}}
 		@endcomponent
-
-
-		{{-- @component('zADMIN._wrap.form._shell.Lang', ['id' => 'name6Tag'])
-		<div class="_shell / vol-Abs">
-			<input id="inputName6" type="text" name="name_6" value="{{$tag->name_6 ?? old('name_6')}}" placeholder=".">
-			<label class="Abs" for="inputName6">@svg('plus')Name_6</label>
-		</div>
-		<div class="_shell _name / vol-Abs / _Open">
-			<input id="inputName6_en" type="text" name="en_name_6" value="{{$tag->en_name_6 ?? old('en_name_6')}}" placeholder=".">
-			<label class="Abs" for="inputName6_en">@svg('plus')en_Name_6</label>
-		</div>
-		@endcomponent --}}
-
 
 
 	</div>

@@ -40,11 +40,11 @@
 
 <div class="flex -wrap dRR / {{$css ?? 'Grey -c30'}} / none D-Db -on">
 
-    <div class="Min Max -w1 / right-text">      
+    <div class="Min Max -w1 / center-text">      
         <span class="content-xxs">id: {{$Var->id}}</span>
     </div>
-    <div class="Min Max -w2 center-text">      
-        <span class="content-xxs nowrap">status: {{$Var->status}}</span>
+    <div class="Min Max -w1 / none D-Status -on cC">      
+        <span class="content-xxs nowrap">{{$Var->status}}</span>
     </div>
     <div class="Min Max -w2 center-text">      
         <span class="content-xxs nowrap">order: {{$Var->order}}</span>

@@ -6,18 +6,12 @@ use App\Http\Requests\ADMIN\Post\FilterRequest;
 // use App\Http\Filters\PostFilter;
 //
 use App\Models\Post;
-use App\Models\Category;
-use App\Models\Tag;
-
+use App\Models\{Category,Tag};
 
 class IndexTrashedController extends BaseController
 {
     // public function __invoke(FilterRequest $request){
     public function __invoke(){
-
-		$data = [
-			'slug' => 'posts',
-		];
 
         $categories = Category::all();
 		$tags = Tag::all();

@@ -1,6 +1,5 @@
 <div class="Article aura">
 
-
 	@component('zADMIN._wrap.form._shell.Lang', ['id' => 'namePost'])
 	<div class="_shell _name @error('name') Error @enderror / vol-Abs / net">
 		<input id="inputName" type="text" name="name" value="{{$post->name ?? old('name')}}" placeholder=".">

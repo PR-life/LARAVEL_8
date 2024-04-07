@@ -1,5 +1,5 @@
 <?php
-	$arr = $Var->tags->pluck('id')->toArray();
+	// $arr = $Var->tags->pluck('id')->toArray();
 ?>
 
 @foreach($Tags as $tag)

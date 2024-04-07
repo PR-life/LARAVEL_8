@@ -58,12 +58,14 @@
         {{$Var->canonical ?? '/'}}
     @endcomponent
 
-    @component('zADMIN._wrap.form._shell.x_hr')
-        {{-- @slot('cssNet', true) --}}
-        @slot('nameId','Canonical_en')
-        @slot('name','en_canonical')
-        {{$Var->en_canonical ?? '/'}}
-    @endcomponent
+    <div class="none on">
+        @component('zADMIN._wrap.form._shell.x_hr')
+            {{-- @slot('cssNet', true) --}}
+            @slot('nameId','Canonical_en')
+            @slot('name','en_canonical')
+            {{$Var->en_canonical ?? '/'}}
+        @endcomponent
+    </div>
 
 
 @endcomponent

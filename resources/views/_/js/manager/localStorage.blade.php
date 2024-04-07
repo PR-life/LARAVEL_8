@@ -22,13 +22,26 @@ x09081525.forEach( item => {
  
 
 	if(arr != null && arr.includes(check)) {
-		if(param) {
-			// console.log(param)
-			item.classList.add(param);
+
+
+		if(item.hasAttribute('localstorage-reverse')) {
+			if(param) {
+				// console.log(param)
+				item.classList.remove(param);
+			} else {
+				// console.log(check)
+				item.classList.remove(check);
+			}
 		} else {
-			// console.log(check)
-			item.classList.add(check);
+			if(param) {
+				// console.log(param)
+				item.classList.add(param);
+			} else {
+				// console.log(check)
+				item.classList.add(check);
+			}
 		}
+
 	}
 
 
@@ -123,11 +136,12 @@ x02051653.forEach( item => {
 
 x10051101.forEach( item => {
 	let arr = item.getAttribute("localstorage-picking").split(' ');
-	// console.log(item)
-	// console.log(arr)
+	//  console.log(item)
+	//  console.log(arr)
 	for (let i in arr){
-		// console.log(arr[i])
-		let data = JSON.parse(localStorage.getItem(arr[i])) ?? '0'
+		//  console.log(arr[i])
+		let data = JSON.parse(localStorage.getItem(arr[i])) ?? ''
+		// console.log(data)
 		// console.log(data.length > 0)
 		if(data.length > 0) {
 			item.classList.add(data[0])

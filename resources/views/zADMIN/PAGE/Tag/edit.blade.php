@@ -5,16 +5,16 @@
 @include('zADMIN.PAGE.Tag.push.edit')
 
 @push('addBread')
-<li>
-    <span>
-        <span class="content-xs">Контент</span>
-    </span>
-</li>
-<li>
-    <span>
-        <span class="content-xs">Теги</span>
-    </span>
-</li>
+	<li>
+		<span>
+			<span class="content-xs">Контент</span>
+		</span>
+	</li>
+	<li>
+		<span>
+			<span class="content-xs">Теги</span>
+		</span>
+	</li>
 @endpush
 
 
@@ -22,17 +22,13 @@
 
 <div class="I aura">
 
-
 	@component('zADMIN._wrap.form.edit', ['route' => route('admin.tag.update', $tag->id), 'css' => '-tag'])
 
-		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.tag.index', ['shema' => request()->get('shema')])]) --}}
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.tag.index'])
-
 		<div class="_shell / net">
 			@include('zADMIN._bd.edit.published',['Var'=> $tag])
 		</div>
 
-	
 		@component('zADMIN._wrap.Flaber.edit')
 
 			@slot('flaber')

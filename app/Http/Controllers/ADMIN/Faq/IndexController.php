@@ -4,7 +4,7 @@ namespace App\Http\Controllers\ADMIN\Faq;
 ////
 use App\Http\Requests\ADMIN\Faq\FilterRequest;
 //
-use App\Models\Faq;
+// use App\Models\Faq;
 use App\Models\{Category,Tag,Group};
 
 

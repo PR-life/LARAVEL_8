@@ -5,12 +5,20 @@ namespace App\Services\ADMIN\Tag;
 use Exception;
 use Illuminate\Support\Facades\DB;
 //
-
+use App\Http\Filters\TagFilter;
 use App\Services\ADMIN\BaseService;
 use App\Models\Tag;
 
 
 class Service extends BaseService {
+
+
+	public function tags($x) {
+		$filter = app()->make(TagFilter::class, ['queryParams' => array_filter($x)]);
+	
+		return Tag::filter($filter)->orderBy('order', 'asc')->orderBy('created_at', 'DESC')->paginate(25);
+	}
+
 
 
 	public function update($tag,$param) {

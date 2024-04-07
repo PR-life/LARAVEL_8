@@ -6,7 +6,7 @@ use Exception;
 use Illuminate\Support\Facades\DB;
 use App\Services\ADMIN\BaseService;
 
-use App\Models\Category;
+// use App\Models\Category;
 
 class Service extends BaseService{
 
@@ -23,17 +23,21 @@ class Service extends BaseService{
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);
 
- 
+			isset($param['faq_ids']) ? $faqIds = $param['faq_ids'] : $faqIds = [];
+			unset($param['faq_ids']);
 			
 			//
 			isset($param['published']) ? '' : $param['published'] = '0';
 
 			//
 			$category->update($param);
-			$category->tags()->sync($tagIds); // изменили attach на sync*, 
-				// и поместили ниже строки '$category->update($param);'
-				// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
+			$category->tags()->sync($tagIds);
 			$tagIds = [];
+
+			$category->update($param);
+			$category->faqs()->sync($faqIds);
+			$faqIds = [];
+
 
 			DB::commit();
 		} catch (Exception $exception) {

@@ -3,30 +3,30 @@
 @section('title')Faq @endsection
 
 @push('addBread')
-<li>
-    <span>
-        <span class="content-xs">Контент</span>
-    </span>
-</li>
+    <li>
+        <span>
+            <span class="content-xs">Контент</span>
+        </span>
+    </li>
 @endpush
 
 @push('bee')
-    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Faq', 'add' => route('admin.faq.create')])
+    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Faq', 'add' => route('admin.faq.create'), 'Model' => 'Faq'])
     @include('zADMIN.PAGE._lego.filter.SHEMA.index.faqs')
 @endpush
 
-@include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'faq'])
+@include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Faq', 'model' => 'faq'])
 
  
 @section('content')
 
     @component('zADMIN._wrap.index', ['css' => 'relative'])
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN._wrap.Table.index', ['css'=> '-faqs'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-faqs', 'Model' => 'Faq'])
 
                 @foreach($faqs as $faq)    
                  
-                    @include('zADMIN._repo.teaser.faq', ['Var' => $faq])
+                    @include('zADMIN._repo.teaser.index', ['Var' => $faq])
 
                     {{-- @if(count($faq->childrenFaqs))
                         <div class="children -lvl_1 / round">

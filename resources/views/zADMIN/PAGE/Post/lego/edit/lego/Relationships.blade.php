@@ -2,8 +2,8 @@
     @component('zADMIN._wrap.Relationships.line')
         <div class="Min -w5">
             @include('zADMIN._wrap.select.name',['Var' => 'Категория'])
-            @component('zADMIN._wrap.select.categories.main', ['id' => 'categories'])
-                @include('_._brick.select.categories.edit.main',['Categories' => $categories, 'Var' => $post->category_id])
+            @component('zADMIN._wrap.select.category.main', ['id' => 'categories'])
+                @include('_._brick.select.category.edit.main',['Categories' => $categories, 'Var' => $post->category_id])
             @endcomponent
         </div>
         <div class="Min -w5">
@@ -24,16 +24,19 @@
     @component('zADMIN._wrap.Relationships.line')
         <div class="Min -w5">
             @include('zADMIN._wrap.select.name',['Var' => 'Теги'])
-            @component('zADMIN._wrap.select.tags.all')
-                @include('_._brick.select.tags.edit.index',['Tags' => $tags,'Var' => $post])
+            @component('zADMIN._wrap.select.tags.index')
+                @include('_._brick.select.tags.edit.index',['Tags' => $tags,'arr' => $post->tags->pluck('id')->toArray()])
             @endcomponent
         </div>
-        {{-- <div class="space-s">
-            @include('zADMIN._wrap.select.name',['Var' => 'Услуги'])
-            @component('zADMIN._wrap.select.items.index', ['id' => 'items'])
-                @include('_._brick.select.items.edit.index',['Items' => $items, 'Var' => $post])
+    @endcomponent
+
+    @component('zADMIN._wrap.Relationships.line')
+        <div class="W-100">
+            @include('zADMIN._wrap.select.name',['Var' => 'Faq'])
+            @component('zADMIN._wrap.select.faqs.all')
+                @include('_._brick.select.faqs.edit.index',['Faqs' => $faqs,'arr' => $post->faqs->pluck('id')->toArray()])
             @endcomponent
-        </div> --}}
+        </div>
     @endcomponent
 
 

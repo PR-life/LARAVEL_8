@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
@@ -7,7 +6,6 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Traits\Filterable;
 use Carbon\Carbon;
-//
 
 
 class Post extends Model
@@ -51,13 +49,24 @@ class Post extends Model
 			// https://www.youtube.com/watch?v=c0yuY_Ugacg
     }
 
-    public function comments() {
-        return $this->hasMany(
-            CommentPost::class,
-            'item_id', // foreignKey
-			'id', // ownerKey
-        )->where('published','=', 1);
+
+    public function faqs() {
+        return $this->belongsToMany(
+            Faq::class,
+            'post_faqs',
+            'post_id',
+            'faq_id'
+        );
     }
+
+
+    // public function comments() {
+    //     return $this->hasMany(
+    //         CommentPost::class,
+    //         'item_id', // foreignKey
+	// 		'id', // ownerKey
+    //     )->where('published','=', 1);
+    // }
 
 
 

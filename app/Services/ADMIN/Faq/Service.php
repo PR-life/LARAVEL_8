@@ -63,17 +63,15 @@ class Service extends BaseService {
 
 			//
 			$faq->update($param);
-			$faq->tags()->sync($tagIds); // изменили attach на sync*, 
-				// и поместили ниже строки '$faq->update($param);'
-				// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
+
+			//
+			$faq->tags()->sync($tagIds);
 			$tagIds = [];
 			
 			$faq->categories()->sync($categoryIds);
 			$categoryIds = [];
 
-			$faq->pivotItem()->sync($faqIds); // изменили attach на sync*, 
-				// и поместили ниже строки '$faq->update($param);'
-				// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
+			$faq->faqs()->sync($faqIds);
 			$faqIds = [];
 
 			DB::commit();

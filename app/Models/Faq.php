@@ -26,23 +26,25 @@ class Faq extends Model
     ];
 
  
-    public function parentFaq()
-    {
-        return $this->hasMany(Faq::class);
-    }
+    // public function parentFaq()
+    // {
+    //     return $this->hasMany(Faq::class);
+    // }
 
 
-    public function pivotItem() {
-        return $this->belongsToMany(
-            Faq::class,
-            'faq_faqs',
-            'faqs_id',
-            'faq_id'
-        );
-    }
 
     //REVERS ????
     public function friendFaqs() {
+        return $this->belongsToMany(
+            Faq::class,
+            'faq_faqs',
+            'faq_id',
+            'faqs_id'
+        );
+    }
+
+
+    public function faqs() {
         return $this->belongsToMany(
             Faq::class,
             'faq_faqs',
