@@ -1,6 +1,6 @@
 @extends('zADMIN._shema.edit')
 
-@section('title')edit. Paper - {{$paper->name}} @endsection
+@section('title')edit. Item - {{$item->name}} @endsection
 
 @push('addBread')
 	<li>
@@ -19,22 +19,22 @@
 @section('content')
 
 <div class="I aura">
-	@component('zADMIN._wrap.form.edit', ['route' => route('admin.paper.update', $paper->id), 'css' => '-paper'])
-		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.paper.index'])
+	@component('zADMIN._wrap.form.edit', ['route' => route('admin.item.update', $item->id), 'css' => '-item'])
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.item.index'])
 
 		<div class="_shell / net">
-			@include('zADMIN._bd.edit.min',['Var'=> $paper])
+			@include('zADMIN._bd.edit.min',['Var'=> $item])
 		</div>
  
-		@include('zADMIN.PAGE.Paper.lego.edit.lego.Relationships')
+		@include('zADMIN.PAGE.Item.lego.edit.lego.Relationships')
 		<div class="paragraph"></div>
  
 		@component('zADMIN._wrap.Flaber.edit')
 			@slot('flaber')
-				@include('zADMIN.PAGE.Paper.lego.edit.sms')	
+				@include('zADMIN.PAGE.Item.lego.edit.sms')	
 			@endslot
 			<div class="paragraphX2"></div>
-			@include('zADMIN.PAGE.Paper.lego.edit.body')
+			@include('zADMIN.PAGE.Item.lego.edit.body')
 		@endcomponent
 
 

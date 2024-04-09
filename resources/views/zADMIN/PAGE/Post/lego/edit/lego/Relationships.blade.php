@@ -33,7 +33,7 @@
     @component('zADMIN._wrap.Relationships.line')
         <div class="W-100">
             @include('zADMIN._wrap.select.name',['Var' => 'Faq'])
-            @component('zADMIN._wrap.select.faqs.all')
+            @component('zADMIN._wrap.select.faqs.index')
                 @include('_._brick.select.faqs.edit.index',['Faqs' => $faqs,'arr' => $post->faqs->pluck('id')->toArray()])
             @endcomponent
         </div>

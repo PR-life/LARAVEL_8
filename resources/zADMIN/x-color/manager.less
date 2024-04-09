@@ -14,19 +14,12 @@
 //
 .Goo.-manager {
 
-    .-Btn.x-active,
-    .-Btn.-on,
-    .-Btn.-off {
-        --bg-btn-hover: rgba(255,255,255,.2);
-    }
 
-    // .y-empty .-Btn.x-active,
     .active .-Btn.x-active,
     .-Btn.-on {
         --c-btn:#ccc;
         --c-btn-hover:#ccc;
         --c-btn-border:#666;
-        --bg-btn: rgba(255,255,255,.1);
     }
 
 
@@ -34,9 +27,13 @@
     .x-manager.y-empty .wrap_btn_x-full {
         // background-color: blue !important;
         cursor: not-allowed;
-        opacity: .5;
+        
         > * {
             pointer-events: none;
+        }
+
+        .content-xxs {
+            opacity: .5;
         }
     }
 
@@ -46,26 +43,13 @@
         --c-btn:#999;
         --c-btn-hover:#999;
         --c-btn-border:#555;
-        --bg-btn: transparent;
     }
 
     .x-manager.y-full .-Btn.x-active.x-full,
     .x-manager.y-empty .-Btn.x-active.x-empty,
     .active .-Btn.x-active.x-exclude {
-        --bg-btn: rgba(0,0,0,.1);
         --c-btn-border:#333;
         --c-btn-border:#222;
-        --bg-btn-hover: rgba(0,0,0,.2);
-    }
-
-    .Form {
-        background-color: red;
-            // --c-text:red;
-            // --c-text:rgba(255, 255, 255, 0.5);
-            // --c-input:red;
-            // --c-input-placeholder:rgba(255, 255, 255, .5);
-        // --c-input-placeholder:rgba(255, 255, 255, .25);
-        // --c-input-border:var(--c-input-border-focus);
     }
 
 
@@ -93,8 +77,5 @@
         opacity: .5;
     }
 
-    .x-exclude:hover::before {
-        background-color: #666;
-    }
  
 }

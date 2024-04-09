@@ -1,4 +1,4 @@
-<div class="none D-Relation -on / manager-showParamNone / Min -w2 / hidden"> 
+<div class="none D-Relation -on / manager-showParamNone / Min -w2 / hidden Roll_PC -scrollBar"> 
     
     <div class="x-HMin flex cC dC / W-100">
         
@@ -29,10 +29,10 @@
                                         <span class="_nameBadge bg / content-xxxs space-s round-s / Grey">{{$Var->category->slug}}</span>
                                     </div>
                                 </div>
-                                @include('zADMIN.combine.Teaser._brick.info.categoryMain', ['Var' => $Var->category])
+                                @include('zADMIN._repo.teaser.brick.seo.categoryMain', ['Var' => $Var->category])
                                 @if($Var->category->en_name)
                                     <div class="paragraph-s"></div>
-                                    @include('zADMIN.combine.Teaser._brick.info.categoryMain_en', ['Var' => $Var->category])
+                                    @include('zADMIN._repo.teaser.brick.seo.categoryMain_en', ['Var' => $Var->category])
                                 @endif
                             @endif
                         </div>

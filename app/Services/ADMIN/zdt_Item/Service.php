@@ -31,10 +31,14 @@ class Service extends BaseService {
 
 			if($param['canonical'] == "/") unset($param['canonical']);
 			
+			//
+			isset($param['faq_ids']) ? $faqIds = $param['faq_ids'] : $faqIds = [];
+			unset($param['faq_ids']);
+
+
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);
 			
-			//
 			isset($param['category_ids']) ? $categoryIds = $param['category_ids'] : $categoryIds = [];
 			unset($param['category_ids']);
 
@@ -58,6 +62,9 @@ class Service extends BaseService {
 				// и поместили ниже строки '$item->update($param);'
 				// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
 			$tagIds = [];
+
+			$item->faqs()->sync($faqIds);
+			$faqIds = [];
 
 			$item->categories()->sync($categoryIds);
 			$categoryIds = [];

@@ -18,6 +18,7 @@ class BaseFilterRequest extends FormRequest
             'name' => 'nullable',
             'status' => 'nullable',
             'category_id' => 'nullable',
+            'tag_id' => 'nullable',
             // 'user_id' => 'nullable',
             // 'category_sku' => 'nullable',
             // 'mafia' => 'nullable',

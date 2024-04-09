@@ -18,14 +18,7 @@ function selectToUl(parent) {
     const cssDropDown = ['_dropdown','space-xs'];
     const cssBtn = ['_btn', 'content', 'highlight', 'slctn'];
     
-
-
-    let observerSelect = new MutationObserver(mutationRecords => {
-        console.log(mutationRecords); // console.log(изменения)
-      });
-
  
-    
     wrap.classList.add(...csswrap);
     dropdown.classList.add(...cssDropDown);
     ul.classList.add('_ul');
@@ -48,6 +41,71 @@ function selectToUl(parent) {
         dropdown.appendChild(searchInput);
     }
 
+    //
+
+
+
+    let observerSelect = new MutationObserver(mutationRecords => {
+
+        mutationRecords.forEach(element => {
+
+            if(element.removedNodes.length) {
+
+                // console.log(element);
+
+                let node = element.target.closest('.Select').querySelector('.wrap_dropdown');
+
+                // console.log(element.removedNodes);
+                
+                element.removedNodes.forEach(el => {
+                    
+                    // console.log(el);
+                    // console.log(el.nodeName == '#text');
+
+                    
+                    if(!(el.nodeName == '#text')) {
+                        let itemId = el.getAttribute('data-value')
+                        node.querySelector(`[data-value='${itemId}']`).classList.remove('selected')
+                    }
+
+
+                } )
+
+                // let node = element.target.closest('.Select').querySelector('.wrap_dropdown');
+
+                // let idOption = element.z.closest('.Select').querySelector('.wrap_dropdown');
+
+                // console.log(node);
+            }
+   
+            // let dropdown = element.target.closest('.Select').querySelector('.wrap_dropdown');
+            // let arr = dropdown.querySelectorAll('._item');
+            
+            // arr.forEach(element => {
+            //     element.classList.remove('None')
+            // });
+
+            // element.addedNodes.forEach(element => {
+            //     console.log(2222)
+            //     // console.log(element)
+            //     // console.log(element.nodeName == '#text')
+
+            //     if(!(element.nodeName == '#text')) {
+            //         let itemId = element.getAttribute('data-var')
+            //         console.log(3333)
+            //         // console.log(itemId)
+            //         if(itemId) {
+            //             dropdown.querySelector(`[data-value='${itemId}']`).classList.add('None')
+            //         }
+            //     }
+            // });
+
+        });
+      });
+
+
+
+    //
 
     Options.forEach(function(item, index) {
         // if ( index == 0) { return; }
@@ -82,25 +140,6 @@ function selectToUl(parent) {
     }
 
 
-    // ul.closest('.Select').querySelector('._field').addEventListener("change", function(element) {
-    //     // let selectedOptions = this.selectedOptions;
-    //     // field.innerHTML = "";
-    //     console.log(999999999)
-    //     // select_1902(select.selectedOptions,field,text,select)
-    // })
-
-
-      // наблюдать за всем, кроме атрибутов
-      observerSelect.observe(ul.closest('.Select').querySelector('._field'), {
-        childList: true, // наблюдать за непосредственными детьми
-        subtree: true, // и более глубокими потомками
-        characterDataOldValue: true // передавать старое значение в колбэк
-      });
- 
- 
-      
- 
- 
 
     ul.addEventListener('click', function() {
         let ul = event.currentTarget;
@@ -108,33 +147,12 @@ function selectToUl(parent) {
         let select = ul.closest('.Select').querySelector('select')
         let field = ul.closest('.Select').querySelector('._field')
 
-
-        // console.log(li)
-
-        
-        // select.options[1].setAttribute('selected', true)
-
-
-    
-
-        // console.log(Number(li.getAttribute("data-loop")) + 1)
-
-        // console.log(li.getAttribute("data-loop"))
-        // console.log(select.selectedOptions)
-
-        // select_1902(select.selectedOptions,label,text,select)
-
-
-        // select_1902(select.selectedOptions,label,text,select)
-        
-        // multiple
-
-        // console.log(select.hasAttribute('multiple'))
-
         if(select.hasAttribute('multiple')) {
-
             li.classList.toggle('selected')
-            select.options[Number(li.getAttribute("data-loop"))].setAttribute('selected', true);
+            select.options[Number(li.getAttribute("data-loop"))].selected = true;
+                                // !!!!!!!! 
+                                //select.options[Number(li.getAttribute("data-loop"))].setAttribute('selected', true);
+            // console.log('select.selectedOptions: ' + select.selectedOptions)
             select_1902(select.selectedOptions,field,select)
         } else {
             // console.log(select.selectedIndex)
@@ -144,7 +162,12 @@ function selectToUl(parent) {
             parent.querySelector('.js-close').click()
         }
 
+    })
 
-
+    // наблюдать за всем, кроме атрибутов
+    observerSelect.observe(ul.closest('.Select').querySelector('._field'), {
+        childList: true, // наблюдать за непосредственными детьми
+        subtree: true, // и более глубокими потомками
+        characterDataOldValue: true // передавать старое значение в колбэк
     })
 }

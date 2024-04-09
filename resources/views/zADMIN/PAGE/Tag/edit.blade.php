@@ -2,7 +2,6 @@
 
 @section('title')edit. Tag - {{$tag->name}} @endsection
 
-@include('zADMIN.PAGE.Tag.push.edit')
 
 @push('addBread')
 	<li>

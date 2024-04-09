@@ -11,6 +11,7 @@ class ItemFilter extends AbstractFilter {
     public const NAME = 'name';
     public const STATUS = 'status';
     public const CATEGORY_ID = 'category_id';
+    public const TAG_ID = 'tag_id';
     public const USER_ID = 'user_id';
     // public const CATEGORY_SKU = 'category_sku';
     // public const MAFIA = 'mafia';
@@ -22,6 +23,7 @@ class ItemFilter extends AbstractFilter {
             self::NAME => [$this, 'name'],
             self::STATUS => [$this, 'status'],
             self::CATEGORY_ID => [$this, 'category_id'],
+            self::TAG_ID => [$this, 'tag_id'],
             self::USER_ID => [$this, 'user_id'],
             // self::CATEGORY_SKU => [$this, 'category_sku'],
             // self::MAFIA => [$this, 'mafia'],
@@ -42,7 +44,10 @@ class ItemFilter extends AbstractFilter {
     {
         $builder->where('category_id', $value);
     }
-
+    public function tag_id(Builder $builder, $value)
+    {
+        $builder->where('tag_id', $value);
+    }
     public function user_id(Builder $builder, $value)
     {
         $builder->where('user_id', $value);

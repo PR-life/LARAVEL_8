@@ -151,6 +151,50 @@
 
 .Goo.-manager {
 	background: linear-gradient(to bottom, rgba(45, 44, 51, 1) 0%,rgba(45, 44, 51, 1) 25%, rgba(45, 44, 51, .9) 8%, transparent);
+
+
+    .-Btn {
+        --bg-btn: #2d2c33;
+    }
+
+
+    .-Btn.x-active,
+    .-Btn.-on,
+    .-Btn.-off {
+        --bg-btn-hover: rgba(255,255,255,.2);
+    }
+
+    .active .-Btn.x-active,
+    .-Btn.-on {
+        --bg-btn: rgba(255,255,255,.1);
+    }
+
+
+    // .-Btn.x-active,
+    // .-Btn.-off {
+    //     --bg-btn: transparent;
+    // }
+
+    .x-manager.y-full .-Btn.x-active.x-full,
+    .x-manager.y-empty .-Btn.x-active.x-empty,
+    .active .-Btn.x-active.x-exclude {
+        --bg-btn: #28282e;
+        // --bg-btn: rgba(0,0,0,.1);
+        --bg-btn-hover: rgba(0,0,0,.2);
+    }
+
+    .Form {
+        background-color: red;
+    }
+
+
+
+
+    .x-exclude:hover::before {
+        background-color: #666;
+    }
+ 
+
 }
 
 
