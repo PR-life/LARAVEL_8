@@ -35,6 +35,7 @@ class PhoneRequest extends FormRequest
 
             'id_item'=>'nullable|string',
             'from_page'=>'nullable|string',
+            'reachgoal_id'=>'nullable|string',
 
 			//
             'title'=>'nullable|string',

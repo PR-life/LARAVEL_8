@@ -18,6 +18,6 @@
 {{-- <div class="Min -w5">
     @include('zADMIN/PAGE/_wrap/select/name',['Var' => 'Дети'])
     @component('zADMIN._wrap.select.category.main', ['id' => 'categories'])
-        @include('_._brick.select.categories.edit.main',['Categories' => $categories, 'Var' => $face])
+        @include('_._brick.select.categories.edit.index',['Categories' => $categories, 'Var' => $face])
     @endcomponent
 </div> --}}

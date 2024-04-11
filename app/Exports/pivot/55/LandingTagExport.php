@@ -2,26 +2,32 @@
 
 namespace App\Exports\pivot;
 
-use App\Models\pivot\ItemTag;
+use App\Models\pivot\LandingTag;
 use Maatwebsite\Excel\Concerns\FromCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
 
-class ItemTagExport implements FromCollection, WithHeadings
+class LandingTagExport implements FromCollection, WithHeadings
 {
 
+	
 	public function headings(): array {
 		return [
-			"item_id",
+			"landing_id",
 			"tag_id",
 			"created_at",
 			"updated_at",
 		];
 	}
 
+
+
+
+
+
     public function collection()
     {
-        return ItemTag::all();
+        return LandingTag::all();
     }
 }

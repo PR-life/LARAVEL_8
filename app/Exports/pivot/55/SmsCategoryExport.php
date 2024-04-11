@@ -2,32 +2,25 @@
 
 namespace App\Exports\pivot;
 
-use App\Models\PostTag;
+use App\Models\pivot\SmsCategory;
 use Maatwebsite\Excel\Concerns\FromCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
-
-class PostTagExport implements FromCollection, WithHeadings
+class SmsCategoryExport implements FromCollection, WithHeadings
 {
 
-	
 	public function headings(): array {
 		return [
-			"post_id",
-			"tag_id",
+			"sms_id",
+			"category_id",
 			"created_at",
 			"updated_at",
 		];
 	}
 
-
-
-
-
-
     public function collection()
     {
-        return PostTag::all();
+        return SmsCategory::all();
     }
 }

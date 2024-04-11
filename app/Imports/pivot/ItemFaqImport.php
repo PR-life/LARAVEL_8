@@ -6,17 +6,17 @@ use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\ToCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
-use App\Models\pivot\FaqTag;
+use App\Models\pivot\ItemFaq;
 
-class FaqTagImport implements ToCollection, WithHeadingRow 
+class ItemFaqImport implements ToCollection, WithHeadingRow 
 {
     public function collection(Collection $collection)
     {
 
         foreach ($collection as $item) {
-            FaqTag::create([
+            ItemFaq::create([
+                'item_id' => $item['item_id'],
                 'faq_id' => $item['faq_id'],
-                'tag_id' => $item['tag_id'],
             ]);
         }
     }

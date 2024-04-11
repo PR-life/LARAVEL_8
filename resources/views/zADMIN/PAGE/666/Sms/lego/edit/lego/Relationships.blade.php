@@ -3,7 +3,7 @@
         <div class="Min -w5">
             @include('zADMIN._wrap.select.name',['Var' => 'Категория'])
             @component('zADMIN._wrap.select.category.main', ['id' => 'categories'])
-                @include('_._brick.select.categories.edit.main',['Categories' => $categories, 'Var' => $sms->category_id])
+                @include('_._brick.select.categories.edit.index',['Categories' => $categories, 'Var' => $sms->category_id])
             @endcomponent
         </div>
         <div class="Min -w5">

@@ -1,7 +1,6 @@
 <? echo "<style>"?>
     @include('_.src.cssMin')
     @stack('style')
-    
     @media (min-width:800px) and (max-width:8000px){
     @stack('style_PC')
     }
@@ -11,5 +10,4 @@
     @media  screen and (max-width:799px){
     @stack('style_mbl')
     }
-    
 <? echo "</style>"?>

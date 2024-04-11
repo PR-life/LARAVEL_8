@@ -5,10 +5,10 @@ namespace App\Models\pivot;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class CategoryTag extends Model
+class ItemCategory extends Model
 {
     use HasFactory;
 
-    protected $table = 'category_tags';
+    protected $table = 'item_categories';
     protected $guarded = false;
 }

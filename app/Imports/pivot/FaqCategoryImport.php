@@ -6,18 +6,17 @@ use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\ToCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
-// use Maatwebsite\Excel\Concerns\WithCustomCsvSettings;
-use App\Models\FaqFaq;
+use App\Models\pivot\FaqCategory;
 
-class FaqFaqsImport implements ToCollection, WithHeadingRow 
+class FaqCategoryImport implements ToCollection, WithHeadingRow 
 {
     public function collection(Collection $collection)
     {
 
         foreach ($collection as $item) {
-            FaqFaq::create([
+            FaqCategory::create([
                 'faq_id' => $item['faq_id'],
-                'faqs_id' => $item['faqs_id'],
+                'category_id' => $item['category_id'],
             ]);
         }
     }

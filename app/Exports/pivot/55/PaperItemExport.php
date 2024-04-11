@@ -2,7 +2,7 @@
 
 namespace App\Exports\pivot;
 
-use App\Models\PaperItem;
+use App\Models\pivot\PaperItem;
 use Maatwebsite\Excel\Concerns\FromCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadings;

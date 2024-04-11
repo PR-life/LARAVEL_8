@@ -3,7 +3,7 @@
         <div class="Min -w5">
             @include('zADMIN._wrap.select.name',['Var' => 'Родитель'])
             @component('zADMIN._wrap.select.category.main', ['id' => 'categories'])
-                @include('_._brick.select.categories.edit.main',['Categories' => $categories, 'Var' => $category->category_id])
+                @include('_._brick.select.category.edit.main',['Categories' => $categories, 'Var' => $category->category_id])
             @endcomponent
         </div>
         <div class="Min -w5">
@@ -32,7 +32,7 @@
     @component('zADMIN._wrap.Relationships.line')
         <div class="W-100">
             @include('zADMIN._wrap.select.name',['Var' => 'Faq'])
-            @component('zADMIN._wrap.select.faqs.all')
+            @component('zADMIN._wrap.select.faqs.index')
                 @include('_._brick.select.faqs.edit.index',['Faqs' => $faqs,'arr' => $category->faqs->pluck('id')->toArray()])
             @endcomponent
         </div>

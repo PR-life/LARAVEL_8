@@ -46,6 +46,7 @@ class CreateSmsTable extends Migration
             //
             $table->string('type')->default('lead'); // callback ask
             $table->string('label')->default('email');
+            $table->string('reachgoal_id')->nullable();
 
             //
             $table->string('from_page')->nullable();

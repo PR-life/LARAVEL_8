@@ -2,19 +2,17 @@
 
 namespace App\Exports\pivot;
 
-use App\Models\pivot\ItemTag;
+use App\Models\pivot\ItemItem;
 use Maatwebsite\Excel\Concerns\FromCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
-
-class ItemTagExport implements FromCollection, WithHeadings
+class ItemItemExport implements FromCollection, WithHeadings
 {
-
 	public function headings(): array {
 		return [
 			"item_id",
-			"tag_id",
+			"items_id",
 			"created_at",
 			"updated_at",
 		];
@@ -22,6 +20,6 @@ class ItemTagExport implements FromCollection, WithHeadings
 
     public function collection()
     {
-        return ItemTag::all();
+        return ItemItem::all();
     }
 }

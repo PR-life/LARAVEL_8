@@ -2,7 +2,7 @@
 
 namespace App\Exports\pivot;
 
-use App\Models\FaqFaq;
+use App\Models\pivot\FaqFaq;
 use Maatwebsite\Excel\Concerns\FromCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadings;

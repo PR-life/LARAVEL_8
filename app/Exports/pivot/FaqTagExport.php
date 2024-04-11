@@ -2,7 +2,7 @@
 
 namespace App\Exports\pivot;
 
-use App\Models\FaqTag;
+use App\Models\pivot\FaqTag;
 use Maatwebsite\Excel\Concerns\FromCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadings;
@@ -11,7 +11,6 @@ use Maatwebsite\Excel\Concerns\WithHeadings;
 class FaqTagExport implements FromCollection, WithHeadings
 {
 
-	
 	public function headings(): array {
 		return [
 			"faq_id",
@@ -20,11 +19,6 @@ class FaqTagExport implements FromCollection, WithHeadings
 			"updated_at",
 		];
 	}
-
-
-
-
-
 
     public function collection()
     {

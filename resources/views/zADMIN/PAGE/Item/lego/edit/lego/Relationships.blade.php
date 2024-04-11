@@ -2,7 +2,7 @@
     @component('zADMIN._wrap.Relationships.line')
         <div class="Min -w5">
             @include('zADMIN._wrap.select.name',['Var' => 'Категория'])
-            @component('zADMIN._wrap.select.category.main', ['id' => 'categories'])
+            @component('zADMIN._wrap.select.category.main', ['id' => 'category'])
                 @include('_._brick.select.category.edit.main',['Categories' => $categories, 'Var' => $item->category_id])
             @endcomponent
         </div>
@@ -21,10 +21,27 @@
     @endcomponent
 
     @component('zADMIN._wrap.Relationships.line')
-        <div class="Min -w5">
-            @include('zADMIN._wrap.select.name',['Var' => 'Теги'])
-            @component('zADMIN._wrap.select.tags.index')
-                @include('_._brick.select.tags.edit.index',['Tags' => $tags,'arr' => $item->tags->pluck('id')->toArray()])
+        <div class="flex cross">
+            <div class="Min -w5">
+                @include('zADMIN._wrap.select.name',['Var' => 'Теги'])
+                @component('zADMIN._wrap.select.tags.index')
+                    @include('_._brick.select.tags.edit.index',['Tags' => $tags,'arr' => $item->tags->pluck('id')->toArray()])
+                @endcomponent
+            </div>
+            <div class="Min -w5">
+                @include('zADMIN._wrap.select.name',['Var' => 'Категории'])
+                @component('zADMIN._wrap.select.categories.index')
+                    @include('_._brick.select.categories.edit.index',['Categories' => $categories,'arr' => $item->categories->pluck('id')->toArray()])
+                @endcomponent
+            </div>
+        </div>
+    @endcomponent
+
+    @component('zADMIN._wrap.Relationships.line')
+        <div class="W-100">
+            @include('zADMIN._wrap.select.name',['Var' => 'Items'])
+            @component('zADMIN._wrap.select.items.index')
+                @include('_._brick.select.items.edit.index',['Items' => $items,'arr' => $item->items->pluck('id')->toArray(),'currentId' => $item->id])
             @endcomponent
         </div>
     @endcomponent

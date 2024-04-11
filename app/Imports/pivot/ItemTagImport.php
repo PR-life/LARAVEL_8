@@ -6,8 +6,7 @@ use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\ToCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
-// use Maatwebsite\Excel\Concerns\WithCustomCsvSettings;
-use App\Models\ItemTag;
+use App\Models\pivot\ItemTag;
 
 class ItemTagImport implements ToCollection, WithHeadingRow 
 {

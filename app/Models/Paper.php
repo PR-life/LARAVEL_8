@@ -32,13 +32,13 @@ class Paper extends Model
     //     );
     // }
 	
-    public function comments() {
-        return $this->hasMany(
-            CommentPaper::class,
-            'item_id',
-			'id',
-        )->orderBy('created_at', 'desc');
-    }
+    // public function comments() {
+    //     return $this->hasMany(
+    //         CommentPaper::class,
+    //         'item_id',
+	// 		'id',
+    //     )->orderBy('created_at', 'desc');
+    // }
 
 
     public function items() {

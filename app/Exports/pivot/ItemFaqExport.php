@@ -2,32 +2,26 @@
 
 namespace App\Exports\pivot;
 
-use App\Models\PaperTag;
+use App\Models\pivot\ItemFaq;
 use Maatwebsite\Excel\Concerns\FromCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
 
-class PaperTagExport implements FromCollection, WithHeadings
+class ItemFaqExport implements FromCollection, WithHeadings
 {
 
-	
 	public function headings(): array {
 		return [
-			"paper_id",
-			"tag_id",
+			"item_id",
+			"faq_id",
 			"created_at",
 			"updated_at",
 		];
 	}
 
-
-
-
-
-
     public function collection()
     {
-        return PaperTag::all();
+        return ItemFaq::all();
     }
 }

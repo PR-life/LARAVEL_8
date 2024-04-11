@@ -2,7 +2,7 @@
 
 namespace App\Exports\pivot;
 
-use App\Models\CategoryTag;
+use App\Models\pivot\CategoryTag;
 use Maatwebsite\Excel\Concerns\FromCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadings;
