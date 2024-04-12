@@ -39,9 +39,8 @@
 </div>
 
  
-
-
-
+ 
+@if($item->shema_teaser != 'shema-link')
 <div class="paragraph"></div>
 @include('zADMIN._wrap.text.nameTextarea', ['name' => 'Intro'])
 <div class="paragraph"></div>
@@ -58,10 +57,10 @@
 </div>
 <div class="hill-s"></div>
 
-
 @include('zADMIN._wrap.text.nameTextarea', ['name' => 'knot_1'])
 <div class="paragraph"></div>
 <div class="_shell Article aura / Note -lite">
 	<textarea id="tinymce_lite_2" name="knot_1" placeholder='knot...'>{{$item->knot_1}}</textarea>
 </div>
+@endif
  

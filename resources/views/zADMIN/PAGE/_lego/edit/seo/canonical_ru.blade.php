@@ -1,3 +1,4 @@
+@if($item->shema_teaser != 'shema-link')
 @component('zADMIN._wrap.form._shell.x_hr')
     @slot('cssNet', true)
     @slot('nameId','Title')
@@ -19,7 +20,7 @@
     </div>
     <div class="paragraph"></div>
 </div>
-
+@endif
 @component('zADMIN._wrap.form._shell.x_hr')
     {{-- @slot('cssNet', true) --}}
     @slot('nameId','Canonical')

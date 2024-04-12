@@ -1,6 +1,6 @@
 @extends('zADMIN._shema.edit')
 
-@section('title')New. Paper @endsection
+@section('title')New. Item @endsection
 @section('css-body', '-create ')
 
 
@@ -12,7 +12,7 @@
 </li>
 <li>
     <span>
-        <span class="content-xs">новая Статья</span>
+        <span class="content-xs">новый Item</span>
     </span>
 </li>
 @endpush
@@ -22,16 +22,14 @@
 <div class="I aura">
 
 
-	@component('zADMIN._wrap.form.create', ['route' => route('admin.paper.store'), 'css' => '-paper'])
+	@component('zADMIN._wrap.form.create', ['route' => route('admin.item.store'), 'css' => '-item'])
 
-		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.paper.index')])
+		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.item.index')])
 
-
-		<input type="hidden" name="user_id" value="{{auth()->user()->id}}">
 		
 		<div class="_shell _name / vol-Abs">
 			<input id="name" type="text" name="name" value="{{old('name')}}" placeholder='.'>
-			<label class="Abs" for="name">Название статьи</label>
+			<label class="Abs" for="name">Имя</label>
 			@error('name')
 				<div class="Abs / Nameplate -rt">{{$message}}</div>
 			@enderror

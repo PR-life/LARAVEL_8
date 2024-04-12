@@ -40,7 +40,7 @@ class Faq extends Model
             'faq_faqs',
             'faq_id',
             'faqs_id'
-        );
+        )->orderBy('order');
     }
 
 
@@ -50,7 +50,7 @@ class Faq extends Model
             'faq_faqs',
             'faq_id',
             'faqs_id'
-        );
+        )->orderBy('order');
     }
 
     public function tags() {
@@ -59,7 +59,7 @@ class Faq extends Model
             'faq_tags', // через какую тбл свзяь
             'faq_id', // id этой модели в указанной таблице
             'tag_id' // id модели Tag в указанной таблице
-        );
+        )->orderBy('order');
     }
 
     public function categories() {
@@ -68,7 +68,7 @@ class Faq extends Model
             'faq_categories', // через какую тбл свзяь
             'faq_id', // id этой модели в указанной таблице
             'category_id' // id модели Category в указанной таблице
-        );
+        )->orderBy('order');
     }
 
 

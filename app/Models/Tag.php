@@ -43,8 +43,7 @@ class Tag extends Model
 		   
 	}
 
-
-	public function faqTag(){
+	public function magnetFaq(){
 		return $this->hasMany(
 			Faq::class,
 			'tag_id',
@@ -52,7 +51,8 @@ class Tag extends Model
 		)->orderBy('created_at', 'desc');   
 	}
 
-	public function smsTag(){
+
+	public function magnetSms(){
 		return $this->hasMany(
 			Sms::class,
 			'tag_id',

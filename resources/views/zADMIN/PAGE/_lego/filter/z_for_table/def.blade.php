@@ -43,6 +43,8 @@
                     @slot('name','pause')
                 @endcomponent
 
+                {!!$slot!!}
+
 
             </div>
             @isset($var)

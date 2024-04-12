@@ -6,7 +6,7 @@
 				{{strip_tags($Var->sms)}}
 			</div>
 		</div>
-		<div class="none on / x-Talk_block x-Talk_minH">
+		<div class="none on _wrap / x-Talk_block x-Talk_minH">
 			@include('_._brick.A.min',['Var' => $Var, 'User' => $User ?? null, 'cssPreamble' => 'x-Talk_none'])
 		</div>
 		<div class="x-Talk_none / Abs -rb W-100 / flex cI bC / _Axon / space noevents">

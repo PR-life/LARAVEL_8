@@ -47,7 +47,7 @@ class Paper extends Model
             'paper_items',
             'paper_id',
             'item_id'
-        );
+        )->orderBy('order');
     }
 
 
@@ -57,7 +57,7 @@ class Paper extends Model
             'paper_tags',
             'paper_id',
             'tag_id'
-        );
+        )->orderBy('order');
     }
 
     public function tag() {

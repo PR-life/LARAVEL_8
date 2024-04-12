@@ -24,8 +24,18 @@
         </div>
     @endif
 
+    <div class="paragraph"></div>
+    <dl class="-leftXXS void-s">
+        <dt class="content-xxs Grey -c30">name_tag</dt>
+        <dd class="content-xxs">{!!$Var->name_tag ?? '...'!!}</dd>
+        <dt class="content-xxs Grey -c30">name_seo</dt>
+        <dd class="content-xxs">{!!$Var->name_seo ?? '...'!!}</dd>
+    </dl>
+ 
 
-    @if($Var->tags)
+
+
+    @if($Var->tags->count())
         <div class="paragraphX2"></div>
         <ul class="menu -tag -XS / lie cloud">
             @foreach($Var->tags as $tagForeach)

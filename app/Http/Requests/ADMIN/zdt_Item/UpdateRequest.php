@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\ADMIN\zdt_Item;
 
-use App\Http\Requests\ADMIN\Faq\StoreRequest;
+use App\Http\Requests\ADMIN\zdt_Item\StoreRequest;
 // use Illuminate\Validation\Rule;
 
 class UpdateRequest extends StoreRequest

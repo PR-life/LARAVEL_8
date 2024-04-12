@@ -1,17 +1,17 @@
 @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
-@slot('name', 'shema_teaser')
-@slot('id', 'shema_teaser_def')
-@slot('param', $item->shema_teaser)
-@slot('value', 'default')
+    @slot('name', 'shema_teaser')
+    @slot('bd', $item->shema_teaser)
+    @slot('param', 'default')
+    @slot('id', 'shema_teaser')
 
-пусто
+    пусто
 @endcomponent
 
 @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
-@slot('name', 'shema_teaser')
-@slot('id', 'shema_teaser_link')
-@slot('param', $item->shema_teaser)
-@slot('value', 'shema-link')
+    @slot('name', 'shema_teaser')
+    @slot('bd', $item->shema_teaser)
+    @slot('param', 'shema-link')
+    @slot('id', 'shema_teaser')
 
-Link
+    Link
 @endcomponent

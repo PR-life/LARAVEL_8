@@ -49,7 +49,7 @@ class Landing extends Model
             'landing_tags',
             'landing_id',
             'tag_id'
-        );
+        )->orderBy('order');
     }
 
     public function tag() {

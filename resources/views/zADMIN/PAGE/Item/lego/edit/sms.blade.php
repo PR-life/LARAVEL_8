@@ -23,7 +23,7 @@
         <div class="paragraph"></div>
 
         <div class="content-xxs Grey">Full</div>
-        @include('zADMIN.PAGE._lego.edit.shema.full')
+        {{-- @include('zADMIN.PAGE._lego.edit.shema.full') --}}
 
     @endcomponent
 

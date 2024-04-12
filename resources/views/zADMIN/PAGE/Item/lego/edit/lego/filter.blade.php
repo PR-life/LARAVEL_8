@@ -4,15 +4,15 @@
 </div> --}}
 
 <div class="menu -tile -XS / cloud / net">
-    @include('zADMIN.PAGE.Item.lego.edit.lego.brick.type')
+    {{-- @include('zADMIN.PAGE.Item.lego.edit.lego.brick.type') --}}
 </div>
 
 <div class="menu -tag / lie">
-    @include('zADMIN.PAGE.Item.lego.edit.lego.brick.action')
+    {{-- @include('zADMIN.PAGE.Item.lego.edit.lego.brick.action') --}}
 </div>
 
 <div class="menu -tag / lie">
-    @include('zADMIN.PAGE.Item.lego.edit.lego.brick.face')
+    {{-- @include('zADMIN.PAGE.Item.lego.edit.lego.brick.face') --}}
 </div>
 
 

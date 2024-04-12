@@ -41,7 +41,7 @@ class Post extends Model
             'post_tags', // через какую тбл свзяь
             'post_id', // foreignKey этой модели в указанной таблице
             'tag_id' // relatedPivotKey, с кем foreignKey имеет взаимоотношение
-        );
+        )->orderBy('order');
 
 		// return $this->belongsToMany(Tag::class,'post_tags');
 			// !!! не сошлось с видео
@@ -56,7 +56,7 @@ class Post extends Model
             'post_faqs',
             'post_id',
             'faq_id'
-        );
+        )->orderBy('order');
     }
 
 

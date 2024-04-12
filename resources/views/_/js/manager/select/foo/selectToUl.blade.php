@@ -111,6 +111,12 @@ function selectToUl(parent) {
         // if ( index == 0) { return; }
         let li = document.createElement('li');
         li.classList.add('_item')
+
+ 
+        li.classList.add(item.getAttribute('shema-teaser') ?? '532523')
+  
+
+
         li.dataset.loop = index;
         if(item.hasAttribute('selected')) {
             li.classList.add('selected')
