@@ -2,16 +2,20 @@
 
 .-Details,
 // .Details > details,
-details {
+.Details {
+	--x-details-padding-top: 1rem;
 	--x-details-margin-left: 2rem;
+
+	._children {
+		--x-details-margin-left:1rem;
+	}
 }
 
-
-details.-S {
+.Details.-S {
 	--x-details-margin-left: 1.5rem;
 }
 
-details.-S {
+.Details.-S {
 	--x-details-margin-left: 1.5rem;
 }
 
@@ -56,7 +60,7 @@ details.-edgeSummary > summary {
 .Details.-edgeS,
 .Details.-edge {
     > details {
-		.lvl-2 > ._edge,
+		// .lvl-2 > ._edge,
         > ._edge {
 			> * {
 				margin-left: var(--x-details-margin-left);
@@ -68,6 +72,10 @@ details.-edgeSummary > summary {
 				padding-right: 0 !important;
 			}
         }
+		._children {
+			margin-left: var(--x-details-margin-left);
+			margin-right: var(--x-details-margin-left);
+		}
     }
 }
 
@@ -217,8 +225,8 @@ summary {
 	align-items: center;
     min-height: calc(var(--x-details-margin-left)*2); //66666666666666
     //
-    padding-top: ~"calc(var(--x-details-margin-left)*.5)";
-    padding-bottom: ~"calc(var(--x-details-margin-left)*.5)";
+    padding-top: var(--x-details-padding-top);
+    padding-bottom: var(--x-details-padding-top);
     padding-right: 4rem;
 }
 

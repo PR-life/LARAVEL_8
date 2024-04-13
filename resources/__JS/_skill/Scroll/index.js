@@ -1,7 +1,7 @@
 import { easeInOutCubic } from '../easing.js';
 // import { delegate } from '../../_sherpa/delegate.js';
 
-let links = document.querySelectorAll(".JsScroll a");
+let links = document.querySelectorAll(".JsScroll.-link a");
 links.forEach(elem => elem.addEventListener("click", linkClick));
 
 function linkClick(e) {
@@ -48,6 +48,3 @@ function smoothScroll(e) {
 	// 	if (progress < duration) window.requestAnimationFrame(step);
 	// }
 }
-
-
- 
