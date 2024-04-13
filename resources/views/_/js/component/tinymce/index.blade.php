@@ -44,11 +44,14 @@ tinymce.init({
 	// image charmap
 
 
-  link_context_toolbar: true,
+	link_context_toolbar: true,
+
 
 	block_formats: 'paragraph=p; div=div; h1=h1; h2=h2; h3=h3; h4=h4',
 
 	style_formats: [
+
+		{title: 'SPAN', inline: 'span',styles: {} },
 		{title: 'content', selector: 'p, span, div', classes: 'content'},
 		{title: 'content-s', selector: 'p, span, div', classes: 'content-s'},
 		{title: 'content-m', selector: 'p, span, div', classes: 'content-m'},

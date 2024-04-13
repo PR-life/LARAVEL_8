@@ -5,6 +5,10 @@ if(($Var->category && $Var->categories && $Var->name_2) || $Var->status == '200'
 }else {
     $x_23101421 = 'x-empty';
 };
+ 
+if(isset($css)) {
+    $x_23101421 = $x_23101421 . $css;
+}
 
 ?>
 

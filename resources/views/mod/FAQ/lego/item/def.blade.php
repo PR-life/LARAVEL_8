@@ -6,4 +6,11 @@
             {!!$_faq->text ?? ''!!}
         </div>
     </div>
+    @if($_faq->childrenFaqs->count())
+        <div class="_edge _children / Details -edge -edge_mbl">
+            @foreach($_faq->childrenFaqs as $_faq)
+                @include('mod.FAQ.lego.item.def', ['cssSummary' => '-S'])
+            @endforeach
+        </div>
+    @endif
 </details>

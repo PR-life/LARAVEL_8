@@ -19,28 +19,15 @@ class Tag extends Model
 
 
 	public function items(){
-		return $this->belongsToMany(Item::class, 'item_tags', 'tag_id', 'item_id');
+		return $this->belongsToMany(Item::class, 'item_tags', 'tag_id', 'item_id')->where('published', 1);
 	}
 
-
-
 	public function papers(){
-		return $this->belongsToMany(Paper::class, 'paper_tags', 'tag_id', 'paper_id');
+		return $this->belongsToMany(Paper::class, 'paper_tags', 'tag_id', 'paper_id')->where('published', 1);
 	}
 
 	public function faqs(){
-		// $lang = app()->getLocale();
-
-		return $this->belongsToMany(Faq::class, 'faq_tags', 'tag_id', 'faq_id')->where('name', '!=', null)->orderBy('order', 'asc');
-		
-		// if($lang == 'ru') {
-		// 	return $this->belongsToMany(Faq::class, 'faq_tags', 'tag_id', 'faq_id')->where('name', '!=', null)->orderBy('order', 'asc');
-		// } elseif($lang == 'en') {
-		// 	return $this->belongsToMany(Faq::class, 'faq_tags', 'tag_id', 'faq_id')->where('en_name', '!=', null)->orderBy('order', 'asc');
-		// } else {
-		// 	return null;
-		// }
-		   
+		return $this->belongsToMany(Faq::class, 'faq_tags', 'tag_id', 'faq_id')->where('published', 1)->orderBy('order', 'asc'); 
 	}
 
 	public function magnetFaq(){
@@ -48,7 +35,7 @@ class Tag extends Model
 			Faq::class,
 			'tag_id',
 			'id',
-		)->orderBy('created_at', 'desc');   
+		)->where('published', 1)->orderBy('created_at', 'desc');   
 	}
 
 
@@ -62,11 +49,11 @@ class Tag extends Model
 	
 
 	public function posts(){
-		return $this->belongsToMany(Post::class, 'post_tags', 'tag_id', 'post_id');
+		return $this->belongsToMany(Post::class, 'post_tags', 'tag_id', 'post_id')->where('published', 1);
 	}
 
 	public function categories(){
-		return $this->belongsToMany(Category::class, 'category_tags', 'tag_id', 'category_id');
+		return $this->belongsToMany(Category::class, 'category_tags', 'tag_id', 'category_id')->where('published', 1);
 	}
 
     public function category() {

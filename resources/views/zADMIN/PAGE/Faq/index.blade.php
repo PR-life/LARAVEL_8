@@ -24,28 +24,22 @@
         @component('zADMIN._wrap.max', ['css' => 'index'])
             @component('zADMIN._wrap.Table.index', ['css'=> '-faqs', 'Model' => 'Faq'])
 
-                @foreach($faqs as $faq)    
+                @foreach($faqs as $_faq)    
                  
-                    @include('zADMIN._repo.teaser.index', ['Var' => $faq])
+                    @if($_GET == [])
+                        @continue($_faq->faq_id != null)
+                    @endif
 
-                    {{-- @if(count($faq->childrenFaqs))
+
+                    @include('zADMIN._repo.teaser.index', ['Var' => $_faq])
+
+                    @if(count($_faq->childrenFaqs))
                         <div class="children -lvl_1 / round">
-                            @foreach ($faq->childrenFaqs as $childFaq)
-                                @include('zADMIN.combine.Teaser.lib.seo', ['Var' => $childFaq])
-                                @if(count($childFaq->friendFaqs))
-                                <div class="Pivot -bg / space round">
-                                    <ul class="-S ul">
-                                        @foreach($childFaq->friendFaqs as $childfriendFaq)
-                                            <li>
-                                                <a href="{{route('admin.faq.edit',$childfriendFaq->id)}}">{{$childfriendFaq->name}}</a>
-                                            </li>
-                                         @endforeach
-                                    </ul>
-                                    </div>
-                                @endif
+                            @foreach ($_faq->childrenFaqs as $_childFaq)
+                                @include('zADMIN._repo.teaser.index', ['Var' => $_childFaq, 'css' => ' -S'])
                             @endforeach
                         </div>
-                    @endif --}}
+                    @endif
                     
                     {{-- @if(count($faq->friendFaqs))
                         <div class="Pivot -bg / published pause v-DB -on / space round">

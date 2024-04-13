@@ -1,3 +1,8 @@
+
+https://codebeautify.org/minify-html
+
+
+
 *,*:before,*:after{
 	box-sizing:border-box
 }
@@ -167,6 +172,7 @@ body,img,video,input,.block{
 }
 
 .Spot,
+#body > .Abs,
 .Abs{
 	position:absolute
 }

@@ -24,12 +24,7 @@ class Faq extends Model
         'h1',
         'text',
     ];
-
  
-    // public function parentFaq()
-    // {
-    //     return $this->hasMany(Faq::class);
-    // }
 
 
 
@@ -104,27 +99,31 @@ class Faq extends Model
 
     public function childrenFaqs()
     {
-        return $this->hasMany(Faq::class)->with('parentFaq')->orderBy('order','desc');
+        return $this->hasMany(Faq::class)->with('parentFaq')->orderBy('order');
     }
 
 
-    public function fullFaqs()
-    {
+    // public function fullFaqs()
+    // {
 
-         $col_1 = $this->belongsToMany(
-            Faq::class,
-            'faq_faqs',
-            'faq_id',
-            'faqs_id'
-        )->where('published', 1)->get();
+    //      $col_1 = $this->belongsToMany(
+    //         Faq::class,
+    //         'faq_faqs',
+    //         'faq_id',
+    //         'faqs_id'
+    //     )->where('published', 1)->get();
 
-        $col_2 = $this->hasMany(Faq::class)->with('parentFaq')->where('published', 1)->get();
-        $col = $col_1->merge($col_2)->sortBy('order');
+    //     $col_2 = $this->hasMany(Faq::class)->with('parentFaq')->where('published', 1)->get();
+    //     $col = $col_1->merge($col_2)->sortBy('order');
 
-        return $col;
+    //     return $col;
+    // }
+
+
+ 
+    public function parentFaq(){
+        return $this->hasMany(Faq::class);
     }
-
-
 
 
     public function getAttribute($key) {

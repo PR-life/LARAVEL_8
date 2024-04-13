@@ -1,0 +1,89 @@
+@charset "UTF-8";
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+	#body.fix #Wrap {
+		z-index: 20;
+	}
+
+}
+
+@media screen and (max-width:@w-menu-2) {
+	#body.fix {
+		#menuMain {
+			z-index: 190;
+		}
+		.menuOpen .menu > li {z-index: 5;}
+	}
+}
+
+//
+
+#body.fix.-geek {
+	>#menuMain {
+		z-index: 21;
+	}
+
+	> #preWrap {
+		z-index: 21;
+	}
+}
+
+ 
+#body.fix {
+	overflow: hidden;
+
+	> #Geek {
+		z-index: 111;
+	}
+
+	> #Milk {
+		z-index: 30;
+        > .Message {
+            z-index: 90;
+        }
+	}
+
+	> #Veil {z-index: 21;}
+	> #Wrap {z-index: 20;}
+
+	#oi::before,
+	> * {
+		z-index: 0;
+	}
+
+    > #Slump,
+	> #Footer,
+	.owlMin {
+		z-index: -1;
+	}
+
+
+	//
+	.FIX.on {
+		position: relative;
+		z-index: 80;
+
+		> .fix {
+			z-index: 5;
+		}
+		
+		.Scroll_PC,
+		.Scroll_mbl,
+		.Goo,
+		._indexMax {
+			z-index: 10;
+		}
+
+		.index > * {position: relative;}
+
+		.index > .owlAbs,
+		.index > .Scroll {position: absolute;}
+	}
+
+	// .Owl_1 {
+	// 	z-index: 2;
+	// }
+	// .fixIndex_1 {
+	// 	z-index: 1;
+	// }
+}

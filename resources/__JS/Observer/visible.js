@@ -14,7 +14,6 @@ arr.forEach( arr => observer.observe(arr))
 function callback(entries,observer) {
 	entries.forEach(entry => {
 
-
 		// isIntersecting — булево значение. true если есть пересечение элемента и наблюдаемой области.
 		// intersectionRatio — доля пересечения от 0 до 1. Если элемент полностью в наблюдаемой области, то значение будет 1, а если наполовину, то — 0.5.
 		// target — сам наблюдаемый элемент для дальнейших манипуляций. Например, для добавления классов.
@@ -41,12 +40,12 @@ function callback(entries,observer) {
 
 			}
 
-			if(entry.target.hasAttribute('visible-add')) {
+			if(entry.target.hasAttribute('visible-node')) {
 				// console.log(111)
 				let div;
 
-				if(entry.target.getAttribute('visible-add')) {
-					div = document.getElementById(entry.target.getAttribute('visible-add'))
+				if(entry.target.getAttribute('visible-node')) {
+					div = document.getElementById(entry.target.getAttribute('visible-node'))
 				} else {
 					div = entry.target;
 				}
@@ -55,7 +54,7 @@ function callback(entries,observer) {
 
 
 				div.classList.add(entry.target.getAttribute('visible-param'))
-				entry.target.removeAttribute('visible-add')
+				entry.target.removeAttribute('visible-node')
 			}
 		} else {
 			if(entry.target.classList.contains('Visible')) {
