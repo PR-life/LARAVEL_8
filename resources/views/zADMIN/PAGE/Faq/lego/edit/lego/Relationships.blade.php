@@ -15,7 +15,7 @@
         <div class="Min -w5">
             @include('zADMIN._wrap.select.name',['Var' => 'Группа'])
             @component('zADMIN._wrap.select.group.main')
-                @include('_._brick.select.groups.edit.index',['Groups' => $groups, 'Var' => $faq->group_id])
+                @include('_._brick.select.group.edit.index',['Groups' => $groups, 'Var' => $faq->group_id])
             @endcomponent
         </div>
     @endcomponent
@@ -31,6 +31,12 @@
                 @include('zADMIN._wrap.select.name',['Var' => 'Теги'])
                 @component('zADMIN._wrap.select.tags.index')
                     @include('_._brick.select.tags.edit.index',['Tags' => $tags, 'arr' => $faq->tags->pluck('id')->toArray()])
+                @endcomponent
+            </div>
+            <div class="Min -w5">
+                @include('zADMIN._wrap.select.name',['Var' => 'Группы'])
+                @component('zADMIN._wrap.select.groups.index')
+                    @include('_._brick.select.groups.edit.index',['Groups' => $groups, 'arr' => $faq->groups->pluck('id')->toArray()])
                 @endcomponent
             </div>
         </div>

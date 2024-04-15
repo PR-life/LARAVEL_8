@@ -31,7 +31,7 @@ class StoreRequest extends BaseRelationsRequest
             'h1' => 'nullable|string',
             'h1' => 'nullable|string',
             'intro' => 'nullable|string',
-            'text' => 'nullable|string',
+            'article' => 'nullable|string',
             
 			//
             'bread_name' => 'nullable',
@@ -41,6 +41,12 @@ class StoreRequest extends BaseRelationsRequest
 			'prev_p' => 'nullable|string',
             'prev_image' => 'nullable|file',
             'prev_url' => 'nullable|file',
+
+            //
+            'param_report' => 'nullable|string',
+            'param_duration' => 'nullable|string',
+            'param_geo' => 'nullable|string',
+            'param_price' => 'nullable|string',
 
 			//
 			'mafia' => 'nullable|integer',

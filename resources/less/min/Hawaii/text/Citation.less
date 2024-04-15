@@ -27,8 +27,7 @@
 		padding-left: 3px;
 	}
 
-	._wrap,
-	.content {
+	> ._wrap {
 		padding: var(--x-Citation-edge-top) 20px var(--x-Citation-edge-top) calc(var(--x-Citation-space) * .5);
 	}
 }
@@ -38,8 +37,11 @@
 	.author {
 		margin-top: calc(.75rem + var(--x-face)*.1);
 	}
-
 }
+.Citation.face-bottom {
+	.author ._mark {display: none;}
+}
+ 
 
 @media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
 
@@ -57,10 +59,14 @@
 
 @media screen and (max-width: @w-menu-2) {
 
-	.Citation.-faceAuthor_mbl {
-		.author {
-			margin-top: calc(var(--x-face)*.4);
-			padding-left: calc(var(--x-face) + 4px);
-		}
+	// .Citation.-faceAuthor_mbl {
+	// 	.author {
+	// 		margin-top: calc(var(--x-face)*.4);
+	// 		padding-left: calc(var(--x-face) + 4px);
+	// 	}
+	// }
+
+	.Citation.face-bottom_mbl {
+		.author ._mark {display: none;}
 	}
 }

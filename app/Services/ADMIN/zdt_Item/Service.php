@@ -37,12 +37,15 @@ class Service extends BaseService {
 			
 			isset($param['faq_ids']) ? $faqIds = $param['faq_ids'] : $faqIds = [];
 			unset($param['faq_ids']);
-
-			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
-			unset($param['tag_ids']);
 			
 			isset($param['category_ids']) ? $categoryIds = $param['category_ids'] : $categoryIds = [];
 			unset($param['category_ids']);
+
+			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
+			unset($param['tag_ids']);
+
+			// isset($param['group_ids']) ? $groupIds = $param['group_ids'] : $groupIds = [];
+			// unset($param['group_ids']);
 
 			//
 			isset($param['featured']) ? '' : $param['featured'] = '0';
@@ -65,6 +68,9 @@ class Service extends BaseService {
 				// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
 			$tagIds = [];
 
+			// $item->groups()->sync($groupIds);
+			// $groupIds = [];
+
 			$item->items()->sync($itemIds);
 			$itemIds = [];
 
@@ -73,6 +79,7 @@ class Service extends BaseService {
 
 			$item->categories()->sync($categoryIds);
 			$categoryIds = [];
+
 
 			DB::commit();
 		} catch (Exception $exception) {

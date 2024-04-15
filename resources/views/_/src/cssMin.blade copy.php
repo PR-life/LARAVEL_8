@@ -320,6 +320,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.HWin_PC{
 		min-height:100vh;
 	}
+	summary br,
 	.none_PC{
 		display:none !important;
 	}

@@ -42,6 +42,10 @@ class Service extends BaseService {
 			// dd($param);
 
 			//
+			isset($param['group_ids']) ? $groupIds = $param['group_ids'] : $groupIds = [];
+			unset($param['group_ids']);
+
+			//
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);
 
@@ -65,6 +69,9 @@ class Service extends BaseService {
 			$faq->update($param);
 
 			//
+			$faq->groups()->sync($groupIds);
+			$groupIds = [];
+
 			$faq->tags()->sync($tagIds);
 			$tagIds = [];
 			

@@ -66,6 +66,14 @@ class Faq extends Model
         )->orderBy('order');
     }
 
+    public function groups() {
+        return $this->belongsToMany(
+            Group::class,
+            'faq_groups',
+            'faq_id',
+            'group_id'
+        )->orderBy('order');
+    }
 
     public function category() {
         return $this->belongsTo(

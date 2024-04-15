@@ -17,7 +17,7 @@
         <div class="Min -w5">
             @include('zADMIN._wrap.select.name',['Var' => 'Группа'])
             @component('zADMIN._wrap.select.group.main')
-                @include('_._brick.select.groups.edit.index',['Groups' => $groups, 'Var' => $sms->group_id])
+                @include('_._brick.select.group.edit.index',['Groups' => $groups, 'Var' => $sms->group_id])
             @endcomponent
         </div>
     @endcomponent

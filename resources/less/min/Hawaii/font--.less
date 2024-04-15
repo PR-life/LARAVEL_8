@@ -165,7 +165,6 @@ p {
 // .p,
 legend,
 .Details.-summaryS > details > summary,
-summary.-S,
 table tr th,
 table tr td,
 figcaption,
@@ -197,16 +196,20 @@ select option.default,
 	font-size: calc(var(--font-min) - 2px) !important;
 }
 
+summary.-S,
+.content-m {
+	font-size: calc(var(--font) + 1px);
+}
+
+.content-m {
+    line-height: ~"calc(var(--rem-p) * 1.5)";
+}
+
+
 .content-l {
 	font-size: calc(var(--font) + 2px);
     line-height: ~"calc(var(--rem-p) * 1.5)";
 }
-
-.content-m {
-	font-size: calc(var(--font) + 1px);
-    line-height: ~"calc(var(--rem-p) * 1.5)";
-}
-
 
 select {
 	font-size: var(--font);

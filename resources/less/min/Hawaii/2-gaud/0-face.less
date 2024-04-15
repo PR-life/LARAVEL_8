@@ -10,7 +10,7 @@
 }
 
 .face-bottom::before {
-	--x-face-position-top:calc(100% - var(--x-face));;
+	--x-face-position-top:calc(100% - var(--x-face) - 2px);;
 }
 
 .face-top::before {
@@ -135,9 +135,9 @@
 
 @media screen and (max-width:@w-menu-2) {
 
-	.face.x-bottom_mbl {
+	.face.face-bottom_mbl {
 		--x-face: calc(var(--font)*1.5);
-		--x-face-position-top-x:calc(100% - var(--x-face));
+		--x-face-position-top-x:calc(100% - var(--x-face) - 2px);
 
 		//
 		padding-left: 0;

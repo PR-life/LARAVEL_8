@@ -31,7 +31,7 @@
         @slot('id', 'group')
         @slot('name', 'Группа')
         @component('zADMIN._wrap.select.groups.index')
-            @include('_._brick.select.groups.edit.index',['Categories' => $groups, 'Var' => $faq->group_id])
+            @include('_._brick.select.group.edit.index',['Categories' => $groups, 'Var' => $faq->group_id])
         @endcomponent
     @endcomponent
   --}}

@@ -1,4 +1,4 @@
-<div class="Reg {{$css ?? ''}}">
+<div class="Reg {{$css ?? ''}} / index">
 	<div class="_l W-100 / {{$css_l ?? ''}}">
 		{{ $slot }}
 	</div>

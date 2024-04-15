@@ -18,6 +18,15 @@ class Group extends Model
     protected $guarded = false;
     
     
+    public function pivotFaqs() {
+        return $this->belongsToMany(
+            Faq::class,
+            'faq_groups',
+            'group_id',
+            'faq_id'
+        )->orderBy('order');
+    }
+
     public function faqs() {
         return $this->hasMany(
             Faq::class,

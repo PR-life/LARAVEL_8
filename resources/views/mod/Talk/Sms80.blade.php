@@ -13,7 +13,7 @@
                 @foreach($Var as $item)
                     @include('_assembling.wagon_TalkQA',['Var' => $item, 'cssPreamble' => 'flex cI cross-xxs / block_80', 'css' => $cssWagon ?? null])
                 @endforeach
-                <div class="Wagon -w -wL -hS / _last none block_80">
+                <div class="Wagon -w -wL -hS / _last">
                     <div class="Btn dC cC / round" data-click data-goto='milk_formAsk' data-foo='click'>
                        <svg><use xlink:href="#svg-plus"></use></svg>
                       <div class="paragraph-s"></div>
