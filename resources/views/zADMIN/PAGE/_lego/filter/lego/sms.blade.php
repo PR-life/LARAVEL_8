@@ -1,0 +1,1 @@
+<input type="text" name="textsms" placeholder="{{$placeholder ?? 'текст в вопросе'}}..." value="{{isset($_GET["textsms"]) ? $_GET["textsms"] : ''}}">

@@ -1,7 +1,7 @@
 <?php
 
 namespace App\Http\Controllers\ADMIN\Paper;
-////
+//
 use App\Http\Requests\ADMIN\Paper\FilterRequest;
 use App\Http\Filters\PaperFilter;
 //

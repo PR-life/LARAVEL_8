@@ -50,6 +50,15 @@ class Paper extends Model
         )->orderBy('order');
     }
 
+    public function faqs() {
+        return $this->belongsToMany(
+            Faq::class,
+            'paper_faqs',
+            'paper_id',
+            'faq_id'
+        )->orderBy('order');
+    }
+
 
     public function tags() {
         return $this->belongsToMany(

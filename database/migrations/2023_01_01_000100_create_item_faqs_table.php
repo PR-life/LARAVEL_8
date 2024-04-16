@@ -17,7 +17,7 @@ class CreateItemFaqsTable extends Migration
             $table->index('faq_id', 'item_faq_faq_idx');
 
             $table->foreign('item_id', 'item_faq_item_fk')->on('items')->references('id')->onDelete('cascade');
-            $table->foreign('item_id', 'item_faq_faq_fk')->on('faqs')->references('id')->onDelete('cascade');
+            $table->foreign('faq_id', 'item_faq_faq_fk')->on('faqs')->references('id')->onDelete('cascade');
 
             $table->unique(['item_id','faq_id']);
 			$table->timestamps();

@@ -1,5 +1,6 @@
 <?
 $link = route($routeName, [
+	'sms' => request()->get('sms'),
 	'name' => request()->get('name'),
 	'shema' => request()->get('shema'),
 	'tag_id' => request()->get('tag_id'),

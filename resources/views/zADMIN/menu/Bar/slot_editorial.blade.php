@@ -13,7 +13,7 @@
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.sms.index')
         @slot('cssIco', '-XS')
-        @slot('name', 'Формы')
+        @slot('name', 'Входящие')
         @svg('pen')
     @endcomponent
     {{-- @component('_wrap.Chunk.Aside.index')

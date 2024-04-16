@@ -17,7 +17,6 @@
 
 
 @section('content')
-
 <div class="I aura">
 	@component('zADMIN._wrap.form.edit', ['route' => route('admin.paper.update', $paper->id), 'css' => '-paper'])
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.paper.index'])
@@ -33,16 +32,15 @@
 			@slot('flaber')
 				@include('zADMIN.PAGE.Paper.lego.edit.sms')	
 			@endslot
+			@slot('date')
+				@include('zADMIN.PAGE._lego.edit.Flaber.date',['Var'=> $paper])	
+			@endslot
 			<div class="paragraphX2"></div>
 			@include('zADMIN.PAGE.Paper.lego.edit.body')
 		@endcomponent
-
-
 
 		<div class="hill"></div>
 		@include('zADMIN._lego.form.btn.edit.footer')
 	@endcomponent 
 </div>
-
-
 @endsection

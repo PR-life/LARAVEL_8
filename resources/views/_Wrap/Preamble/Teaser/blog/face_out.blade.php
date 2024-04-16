@@ -1,5 +1,4 @@
 <div class="Preamble / face face-out face-ghost face-edge / user-{{$Var->user->id}} {{$Var->css}}">
-
 	<a class="author / flex / relative" href="{{$link}}">
 		<span class="Abs -left -t / face-paddingImg">
 			<img class="Ava" src="{{$Var->user->avatar ?? '/images-0/ava_face.png'}}" alt="автор материала: {{$Var->user->name}}">

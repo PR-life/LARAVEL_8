@@ -10,8 +10,8 @@
                     </span>
                 </a>
                 @else
-                <span class="flex cI cC / Ico -L">
-                    <span class="Ico -M">
+                <span class="flex cI eC / Ico -L">
+                    <span class="Ico">
                         @svg({{$ico}})
                     </span>
                 </span>

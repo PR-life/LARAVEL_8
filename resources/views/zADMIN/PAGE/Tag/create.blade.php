@@ -3,13 +3,13 @@
 @section('title')New. Tag @endsection
 @section('css-body', '-create ')
 
-
-
-@push('bee')
-    {{-- @include('zADMIN.PAGE._lego.filter.btn.content') --}}
-    {{-- @include('zADMIN._lego.Bee.nameIndex',['name' => 'Теги. Создать', 'ico' => 'barMenu_relations']) --}}
+@push('addBread')
+	<li>
+		<span>
+			<span class="content-xs">Новый тег</span>
+		</span>
+	</li>
 @endpush
-
 
 @section('content')
 

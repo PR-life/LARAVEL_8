@@ -7,10 +7,22 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 //
 
-use App\Models\Item;
+use App\Models\Sms;
 
 
 class Service {
+ 
+    
+    public function getSms() {
+        if (!Sms::get()->isEmpty()) {
+            $min = 10;
+            return Sms::where('published', 1)->get()->random($min);
+            // $sms = Sms::where('published', 1)->inRandomOrder()->take($min)->get();
+        } else {
+            return [];
+        }	
+    }
+
 
     public function convert_h_to_numeric_0($param) {
 

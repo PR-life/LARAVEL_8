@@ -63,13 +63,9 @@ class Service extends BaseService {
 
 			//
 			$item->update($param);
-			$item->tags()->sync($tagIds); // изменили attach на sync*, 
-				// и поместили ниже строки '$item->update($param);'
-				// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
+			
+			$item->tags()->sync($tagIds);
 			$tagIds = [];
-
-			// $item->groups()->sync($groupIds);
-			// $groupIds = [];
 
 			$item->items()->sync($itemIds);
 			$itemIds = [];

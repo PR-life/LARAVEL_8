@@ -13,12 +13,12 @@
     @include('zADMIN.PAGE.Item.lego.edit.lego.param')
 
 
-    @component('zADMIN._wrap._open.tool_FlaberSms_slim')
+    @component('zADMIN._wrap._open.tool_FlaberSms')
         @slot('id', 'shema')
         @slot('name', 'шаблон')
 
         <div class="content-xxs Grey">Тизер</div>
-        @include('zADMIN.PAGE._lego.edit.shema.teaser')
+        @include('zADMIN.PAGE._lego.edit.shema.teaser', ['Var' => $item])
 
         <div class="paragraph"></div>
 

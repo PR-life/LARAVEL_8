@@ -21,8 +21,6 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
         Route::delete('/{item}', 'DeleteController')->name('item.delete');
     });
 
-
-
     Route::group(['namespace' => 'Paper', 'prefix' => 'papers'], function(){
         Route::get('/', 'IndexController')->name('paper.index');
         Route::get('/trash', 'IndexTrashedController')->name('paper.trash');
@@ -90,6 +88,41 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
         Route::delete('/{group}', 'DeleteController')->name('group.delete');
         //
         Route::get('/trash', 'IndexTrashedController')->name('group.trash');
+    });
+
+
+
+    //
+    Route::group(['namespace' => 'User', 'prefix' => 'users'], function(){
+		Route::get('/', 'IndexController')->name('user.index');
+		Route::get('/create', 'CreateController')->name('user.create');
+		Route::post('/', 'StoreController' )->name('user.store');
+		// // Route::get('/{user}', 'ShowController')->name('user.show');
+		Route::get('/{user}/edit', 'EditController')->name('user.edit');
+		Route::patch('/{user}', 'UpdateController')->name('user.update');
+		// Route::delete('/{user}', 'DeleteController')->name('user.delete');
+	});
+
+    //
+
+    Route::group(['namespace' => 'Sms', 'prefix' => 'sms'], function(){
+        Route::get('/', 'IndexController')->name('sms.index');
+        
+        // Route::group(['namespace' => 'Conversion', 'prefix' => 'conversion'], function(){
+        //     Route::get('/', 'IndexController')->name('sms.conversion.index');
+        // });
+
+        // Route::group(['namespace' => 'Lead', 'prefix' => 'lead'], function(){
+        //     Route::get('/', 'IndexController')->name('sms.lead.index');
+        // });
+
+        Route::get('/trash', 'IndexTrashedController')->name('sms.trash');
+        // Route::get('/create', 'CreateController')->name('sms.create');
+        // Route::post('/', 'StoreController')->name('sms.store');
+        // // // Route::get('/{sms}', 'ShowController')->name('admin.sms.show');
+        Route::get('/{sms}/edit', 'EditController')->name('sms.edit');
+        Route::patch('/{sms}', 'UpdateController')->name('sms.update');
+        Route::delete('/{sms}', 'DeleteController')->name('sms.delete');
     });
 
 

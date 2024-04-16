@@ -9,6 +9,7 @@ class BaseService {
 					'tag_id' => request()->get('tag_id'),
 					'category_id' => request()->get('category_id'),
 					'group_id' => request()->get('group_id'),
+					'textsms' => request()->get('textsms'),
 					'name' => request()->get('name'),
 					'shema' => request()->get('shema'),
 				];

@@ -22,9 +22,13 @@ class Service extends BaseService {
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);
 
+			isset($param['faq_ids']) ? $faqIds = $param['faq_ids'] : $faqIds = [];
+			unset($param['faq_ids']);
+
 			isset($param['item_ids']) ? $itemIds = $param['item_ids'] : $itemIds = [];
 			unset($param['item_ids']);
 
+			// dd($faqIds);
 			
 			//
 
@@ -48,10 +52,12 @@ class Service extends BaseService {
 
 			//
 			$paper->update($param);
-			$paper->tags()->sync($tagIds); // изменили attach на sync*, 
-				// и поместили ниже строки '$paper->update($param);'
-				// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
+
+			$paper->tags()->sync($tagIds);
 			$tagIds = [];
+			
+			$paper->faqs()->sync($faqIds);
+			$faqIds = [];
 
 			$paper->items()->sync($itemIds); 
 			$itemIds = [];

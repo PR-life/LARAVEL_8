@@ -1,6 +1,6 @@
-<div class="flex W-100 / Edge -flaber / -Sms sms-bar / -KIRA / relative" check-localstorage="{{$id ?? 'Flaber_edit'}}" data-check='off'>
+<div id="Edit" class="flex W-100 / Edge -flaber / -Sms sms-bar / -KIRA / relative" check-localstorage="{{$id ?? 'Flaber_edit'}}" data-check='off'>
 
-    <div class="W-100 edge-flaber">
+    <div class="edit-main / W-100 edge-flaber">
         {!!$slot!!}
     </div>
     

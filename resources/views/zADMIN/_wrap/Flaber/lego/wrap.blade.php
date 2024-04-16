@@ -5,15 +5,15 @@
                 <div class="relative" style="height: 100%">
                     <div class="Scroll -shift -visibleScroll">
                         <div class="_scr">
-                            {{-- <div class="9999 / Plot555"> --}}
-                            <div class="flex eC">
-                                <div data-click data-goto='{{$id ?? 'Flaber_edit'}}' data-foo='click'>
-                                    <div class="_close / Ico -XS / contentBox space pointer">@svg('close')</div>
+                            <div class="Goo">
+                                <div class="flex eC">
+                                    <div data-click data-goto='{{$id ?? 'Flaber_edit'}}' data-foo='click'>
+                                        <div class="Ico -XS / contentBox space pointer">@svg('close')</div>
+                                    </div>
                                 </div>
                             </div>
                             {!!$flaber ?? ''!!}
                             <div class="hill-l"></div>
-                            {{-- </div> --}}
                             <div class="Bar -tool / sms-on"></div>
                         </div>
                     </div>

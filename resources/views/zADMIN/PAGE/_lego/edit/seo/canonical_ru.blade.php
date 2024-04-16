@@ -1,4 +1,4 @@
-@if($item->shema_teaser != 'shema-link')
+@if(isset($item->shema_teaser) && $item->shema_teaser != 'shema-link')
 @component('zADMIN._wrap.form._shell.x_hr')
     @slot('cssNet', true)
     @slot('nameId','Title')

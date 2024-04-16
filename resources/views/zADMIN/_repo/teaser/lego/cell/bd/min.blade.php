@@ -38,7 +38,7 @@
 
 
 
-<div class="flex -wrap dRR / {{$css ?? 'Grey -c30'}} / none D-Db -on">
+<div class="flex -wrap dRR / {{$css15041134 ?? 'Grey -c30'}} / none D-Db -on">
 
     <div class="Min Max -w1 / center-text">      
         <span class="content-xxs">id: {{$Var->id}}</span>

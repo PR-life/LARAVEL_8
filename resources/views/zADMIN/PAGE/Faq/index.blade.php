@@ -1,3 +1,5 @@
+<?unset($_GET['page'])?>
+
 @extends('zADMIN._shema.index')
 
 @section('title')Faq @endsection
@@ -26,6 +28,7 @@
 
                 @foreach($faqs as $_faq)    
                  
+
                     @if($_GET == [])
                         @continue($_faq->faq_id != null)
                     @endif
