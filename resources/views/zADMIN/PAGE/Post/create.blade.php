@@ -5,16 +5,16 @@
 
 
 @push('addBread')
-<li>
-    <span>
-        <span class="content-xs">Контент</span>
-    </span>
-</li>
-<li>
-    <span>
-        <span class="content-xs">новый Материал</span>
-    </span>
-</li>
+	<li>
+		<span>
+			<span class="content-xs">Контент</span>
+		</span>
+	</li>
+	<li>
+		<span>
+			<span class="content-xs">новый Материал</span>
+		</span>
+	</li>
 @endpush
 
 

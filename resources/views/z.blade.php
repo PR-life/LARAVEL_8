@@ -2,6 +2,12 @@
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
 	@include('_shema._lego.head.index')
+	{{-- @include('_shema._lego.head.index', [
+		'linkCssMin' => '/css/minDT.css',
+		'linkCssApp' => '/css/appDT.css',
+		'linkMetaColor' => 'zDT._skeleton.meta.color'
+		])
+	@include('zDT._skeleton.meta.index') --}}
 </head>
 <body id="body" class="MXAT noneJs @yield('css-body') @stack('css-body')">
 <script>
@@ -26,7 +32,7 @@
 @yield('breadBack')
 @yield('head')
 
-@component('_wrap.oiBar', ['id' => 'Wrap', 'css' => 'HWin'])
+@component('_wrap.oi', ['id' => 'Wrap', 'css' => 'HWin'])
 
 	@yield('bee')
 
@@ -73,6 +79,6 @@
 @include('_._skeleton.bodyEnd')
 @include('_shema._lego.afterMilk')
 
-<!-- Yandex.Metrika counter --> <script type="text/javascript" > (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)}; m[i].l=1*new Date(); for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }} k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)}) (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym"); ym(54466420, "init", { clickmap:true, trackLinks:true, accurateTrackBounce:true, webvisor:true }); </script> <noscript><div><img src="https://mc.yandex.ru/watch/54466420" style="position:absolute; left:-9999px;" alt="" /></div></noscript> <!-- /Yandex.Metrika counter -->
+@include('zTHIS._lego.metrika.def')
 </body>
 </html>
