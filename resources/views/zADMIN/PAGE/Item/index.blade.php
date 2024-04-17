@@ -17,11 +17,11 @@
 
 @component('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Item', 'model' => 'item'])
     @component('zADMIN._wrap.manager.btn.localStorage_toggle',['css' => 'x-exclude'])
-        @slot('localstorageName','filter_btn_table_shemaLinkOff')
-        @slot('dataCheck','y-shemaLinkOff')
+        @slot('localstorageName','filter_btn_table_mockupLinkOff')
+        @slot('dataCheck','y-mockupLinkOff')
         @slot('nodeName','Table_index')
-        @slot('toggleCss','y-shemaLinkOff')
-        @slot('name','shema link')
+        @slot('toggleCss','y-mockupLinkOff')
+        @slot('name','mockup link')
     @endcomponent
 @endcomponent
 
