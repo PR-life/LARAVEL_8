@@ -1,4 +1,4 @@
-<input type="checkbox" id="checkKontur" hidden>
+<input id="checkKontur" class="none" type="checkbox">
 <label for="checkKontur" class="Hook -fix -bg -mbl -op"></label>
 <div id="Kontur">
 	<div class="Mbl aura relative H-100">

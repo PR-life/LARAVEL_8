@@ -143,6 +143,8 @@ svg{
 	width:auto
 }
 
+#body.en .En,
+#body.ru .Ru,
 body,img,video,input,.block{
 	display:block
 }
@@ -150,9 +152,10 @@ body,img,video,input,.block{
 #body.Z2 .noneZ2,
 #body:not(.asideClose) .show-asideClose,
 #body.asideClose .show-asideOpen,
-.none,.Rano,body meta{
+#body .En, #body .Ru, .none,.Rano,body meta{
 	display:none
 }
+
 
 .Fade,
 .Start-fade,

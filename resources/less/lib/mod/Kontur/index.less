@@ -1,6 +1,8 @@
 @charset "UTF-8";
 
 #Kontur {
+	--Kontur-h: calc(var(--h) - var(--h-Top) - var(--h-Header) - var(--Kontur-b) - 2rem);
+
 	._head,
 	._footer {
 		padding: 2rem 1rem;
@@ -9,10 +11,10 @@
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
 	#Kontur {
-		--x-kontur-w: 400px;
-		--x-kontur-h: 700px;
-		--x-kontur-r: 1rem;
-		--x-kontur-b: 40px;
+		--Kontur-w: 400px;
+		// --Kontur-h: 700px;
+		--Kontur-r: 1rem;
+		--Kontur-b: 40px;
 
 	}
 }
@@ -21,10 +23,10 @@
 
 
 	#Kontur {
-		--x-kontur-w: calc(100% - 1.5rem);
-		--x-kontur-h: calc(var(--h) - - var(--h-Top) - var(--h-Header) - 52px - 1rem);
-		--x-kontur-b: 0px;
-		--x-kontur-r: 0.75rem;
+		--Kontur-w: calc(100% - 1.5rem);
+		// --Kontur-h: calc(var(--h) - var(--h-Top) - var(--h-Header) - var(--Kontur-b) - 52px - 1rem);
+		--Kontur-b: 0px;
+		--Kontur-r: 0.75rem;
 		//
 		padding-bottom: 60px;
 	}
@@ -32,12 +34,13 @@
 
 
 #Kontur {
-	width: var(--x-kontur-w);
-	height: clamp(calc(var(--h)*.5),var(--x-kontur-h),calc(var(--h) - var(--h-Top) - var(--h-Header) - 1rem));
-	bottom: var(--x-kontur-b);
-	right: var(--x-kontur-r);
+	width: var(--Kontur-w);
+	height: var(--Kontur-h);
+	// height: clamp(calc(var(--h)*.5),var(--Kontur-h),calc(var(--h) - var(--h-Top) - var(--h-Header) - 1rem));
+	bottom: var(--Kontur-b);
+	right: var(--Kontur-r);
 	//
-	max-height: calc(var(--h) - var(--x-kontur-b) - 1rem - 25px);
+	max-height: calc(var(--h) - var(--Kontur-b) - 1rem - 25px);
 
 
 
