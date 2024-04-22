@@ -3,7 +3,7 @@
        <span class="ghostMbl c-h">
        {!!$name ?? 'Новые вопросы <br class="none_PC">от клиентов'!!}
        </span>
-       <div class="Wings Wings-mbl none_PC">
+       <div class="Wings Wings_mbl none_PC">
           <div class="_win -t">
              {!!$name_mbl ?? '<span class="h b500 c-h">Новые вопросы <br class="none_PC">от клиентов</span>'!!}                        
              <div class="paragraph"></div>

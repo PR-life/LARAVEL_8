@@ -40,7 +40,8 @@ class Service {
 		try {
 			DB::beginTransaction();
 
-			$password = Str::random(10);
+			$password = '2024';
+			// $password = Str::random(10);
 			$param['password'] = Hash::make($password);
 	
 			$user = User::firstOrCreate(['email' => $param['email']],$param);

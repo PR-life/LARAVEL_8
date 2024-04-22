@@ -20,9 +20,9 @@ class AdminPanelMiddleware
 		// if(auth()->user()->role !== '0') { // ниже сделал корректнее
         // if((int) auth()->user()->role !== User::ROLE_ADMIN) { // (int) приведение типов
 
-            if((int) auth()->user()->role > 10) {
-                return redirect()->route('home');
-            }
+            // if((int) auth()->user()->role > 10) {
+            //     return redirect()->route('home');
+            // }
 
             // if(auth()->user()->role == User::ROLE_OWNER || auth()->user()->role == User::ROLE_ADMIN) { // (int) приведение типов
             //     return $next($request);

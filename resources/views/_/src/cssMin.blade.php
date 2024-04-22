@@ -448,6 +448,15 @@ hr,.ghost,.visible,.Op,.opVersa{
 }
 @media screen and (max-width:799px){
 
+	#body .Fix_mbl{
+		position:fixed;
+	}
+
+	#body .Abs_mbl.-left{
+		right:100%;
+	}
+
+
 	.float_mbl {
 		float:left;
 	}
