@@ -2,7 +2,7 @@
 	<div id="Oi" class="Oi">
 		<div id="oiBar" class="oiBar flex / index relative {{ $cssOiBar ?? '' }} @stack('css-OiBar')">
 			<div class="_wrap relative">
-				<div class="_main {{ $cssOiBarMain ?? '' }} / Abs -all / index">
+				<div class="_main {{ $cssOiBarMain ?? '' }} / Abs_PC -all / index">
 					<!--googleoff: all-->
 					<!--noindex-->
 					@stack('oiBar')

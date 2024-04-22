@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+@import "./Hint/vol-text.less";
+
+.-Hint.-hover:hover .Hint,
+.Hint.-hover:hover,
+.hint-on .hint-axon > .Hint {
+    opacity: 1;
+}
+
+
+
+
+
+.Hint.-delay {
+    --Hint-delay: 0.4s;
+}
+
+
+.Hint {
+    --Hint-w: 300px;
+    --Hint-bg: #fff;
+    --Hint-delay: 0s;
+
+    opacity: 0;
+    transition: opacity 0.7s ease;
+    -webkit-transition: opacity 0.7s ease;
+    transition-delay: var(--Hint-delay);
+}
+
+
+// .Hint.hint-center {
+//     top: 50%;
+// }
+// .Hint.hint-right {
+//     padding-left: var(--edge);
+// }
+ 
+ 
+ 
+
+
+// .Hint > ._wrap {
+//     width: var(--Hint-w);
+// }
+ 

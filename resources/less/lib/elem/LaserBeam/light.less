@@ -1,0 +1,87 @@
+@charset "UTF-8";
+
+
+
+
+.LaserBeam.-on {
+
+    ._light,
+    ._light:after,
+    ._light:before {
+         transform: scale(1, 1);
+    }
+
+}
+
+ 
+
+.LaserBeam {
+
+    ._light {
+        //  top: 14px;
+        height: calc(var(--LaserBeam-h-ripple) + 1px);
+   }
+
+
+    ._light {
+         width: 100%;
+         left: var(--LaserBeam-oy);
+    }
+
+ 
+
+
+    ._light:after,
+    ._light:before {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+
+        border-top-right-radius: 1rem;
+        border-bottom-right-radius: 1rem;
+        // border-top-right-radius: 50% 7px;
+        // border-bottom-right-radius: 50% 7px;
+
+        transform: scale(0, 1);
+        // transform-origin: 0 0;
+        // transition: transform .3s;
+
+        // opacity: .2;
+    }
+
+
+
+    // Flash
+    ._light:before {
+        content: '';
+        z-index: 5;
+        animation: LaserBeam_glow 2s infinite;
+    }
+
+
+    // Bg
+    ._light:after {
+        content: '';
+        z-index: 10;
+        // opacity: .25;
+    }
+
+
+
+}
+
+ 
+
+
+ 
+@keyframes LaserBeam_glow {
+    from {
+        box-shadow: 0 0 10px  var(--LaserBeam-shadow-1), 0 0 10px var(--LaserBeam-shadow-1), 0 7px 80px var(--LaserBeam-shadow-2), 0 -7px 80px var(--LaserBeam-shadow-2), 0 -20px 100px var(--LaserBeam-shadow-3), 0 20px 100px var(--LaserBeam-shadow-3), 80px -20px 100px var(--LaserBeam-shadow-3), 80px 20px 100px var(--LaserBeam-shadow-3);
+   }
+    50% { 
+        box-shadow: 0 0 10px var(--LaserBeam-shadow-1), 0 0 10px var(--LaserBeam-shadow-1), 0 5px 75px var(--LaserBeam-shadow-2), 0 -5px 75px var(--LaserBeam-shadow-2), 0 -18px 95px var(--LaserBeam-shadow-3), 0 18px 95px var(--LaserBeam-shadow-3), 80px -20px 95px var(--LaserBeam-shadow-3), 80px 20px 95px var(--LaserBeam-shadow-3);
+   }
+    to {
+        box-shadow: 0 0 10px var(--LaserBeam-shadow-1), 0 0 10px var(--LaserBeam-shadow-1), 0 7px 80px var(--LaserBeam-shadow-2), 0 -7px 80px var(--LaserBeam-shadow-2), 0 -20px 100px var(--LaserBeam-shadow-3), 0 20px 100px var(--LaserBeam-shadow-3), 80px -20px 100px var(--LaserBeam-shadow-3), 80px 20px 100px var(--LaserBeam-shadow-3);
+   }
+}

@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+.-Hint.-hover:hover .Hint,
+.Hint.-hover:hover,
+.hint-on .hint-axon > .Hint {
+    .hint-content::before {
+        width: 180px;
+    }
+}
+
+ 
+.Hint.vol-text {
+
+    .hint-content {
+        position: relative;
+        z-index: 5;
+        padding: 12px 0;
+    }
+
+    .hint-content::before,
+    .hint-content::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        background-color: var(--Hint-bg);
+        height: 1px;
+        width: 0px;
+    }
+    .hint-content::before {
+        transition: width .4s ease;
+        transition-delay: var(--Hint-delay);
+    }
+    .hint-content::after {
+        width: 80px;
+        transform-origin: 0 50%;
+        transform: rotate(-225deg);
+    }
+}
+
+
+
+
+
+ 

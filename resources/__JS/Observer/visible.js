@@ -8,6 +8,7 @@ const options = {
 let arr = document.querySelectorAll('.Visible');
 let observer = new IntersectionObserver(callback, options)
 
+// console.log(arr)
 
 arr.forEach( arr => observer.observe(arr))
 
@@ -41,17 +42,33 @@ function callback(entries,observer) {
 			}
 
 			if(entry.target.hasAttribute('visible-node')) {
-				// console.log(111)
+				// console.log(entry.target)
 				let div;
 
 				if(entry.target.getAttribute('visible-node')) {
-					div = document.getElementById(entry.target.getAttribute('visible-node'))
+
+					param = entry.target;
+
+					switch (param.getAttribute('visible-node')) {
+						case 'body':
+							div = document.getElementById('body');
+							break;
+						case 'parent':
+							div = param.parentNode;
+							break;
+						case 'parentParent':
+							div = param.parentNode.parentNode
+							break;
+						default:
+							div = document.getElementById(param.getAttribute('visible-node'))	
+							
+						}
+
 				} else {
 					div = entry.target;
 				}
 
 				// console.log(div)
-
 
 				div.classList.add(entry.target.getAttribute('visible-param'))
 				entry.target.removeAttribute('visible-node')

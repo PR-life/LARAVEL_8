@@ -14,7 +14,7 @@ function smoothScroll(e) {
 	let targetPosition = Math.trunc(document.querySelector(targetId).getBoundingClientRect().y);
 		// let targetPosition = document.querySelector(targetId).offsetTop;
 	let startPosition = window.pageYOffset;
-	let distance = parseInt(startPosition) + parseInt(targetPosition) - (document.querySelector(targetId).getAttribute('corrector-JsScroll') ?? 0);
+	let distance = parseInt(startPosition) + parseInt(targetPosition) - (document.querySelector(targetId).getAttribute('corrector-JsScroll') ?? 100);
 	// let distance = targetPosition - startPosition;
 	// let duration = 200;
 	// let start = null;
@@ -47,4 +47,39 @@ function smoothScroll(e) {
 	// 	window.scrollTo( 0, easeInOutCubic(progress, startPosition, distance, duration) );
 	// 	if (progress < duration) window.requestAnimationFrame(step);
 	// }
+}
+
+
+// !!!!!!! перенос этот код в этом файл, см. в этой папке -  control_active.js
+let threshold = window.innerHeight / 2;
+let activeItems = document.querySelectorAll(".JsScroll.js_param-active a");
+//
+let scrollDelay = 50;
+let scrollTimeout;
+
+window.addEventListener('scroll', function(){
+	clearTimeout(scrollTimeout)
+	scrollTimeout = setTimeout(onScroll, scrollDelay)
+});
+
+// console.log(activeItems)
+
+function onScroll(){
+
+	for(let i = activeItems.length - 1; i >= 0; i--) {
+		let a = activeItems[i]
+		let div = document.querySelector(a.hash)
+
+		// console.log(a)
+
+		if(div.getBoundingClientRect().y < threshold) {
+			setActiveCSS(activeItems,a)
+			break
+		}
+	}
+
+	function setActiveCSS(activeItems,a) {
+		activeItems.forEach(item => item.classList.remove('active'))
+		a.classList.add('active')
+	}
 }

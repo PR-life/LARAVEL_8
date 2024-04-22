@@ -1,10 +1,6 @@
 let x20071126 = document.querySelectorAll("[data-check]")
 
 
-
-
-
-
 x20071126.forEach( item => {
 
 	if(item.getAttribute("data-check") == 'active') {
@@ -26,11 +22,6 @@ x20071126.forEach( item => {
 			}
 		})
 	}
-
-	 
-
-
- 
 
 })
 

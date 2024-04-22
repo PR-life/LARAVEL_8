@@ -53,14 +53,6 @@ body .Ico {
 // 	--x-Ico-orb:~"calc(var(--Ico)*.15)";
 // }
 
-.Ico {
-    font-size: 0;
-	line-height: 0;
-	min-width: var(--x-Ico);
-	min-height: var(--x-Ico);
-}
-
- 
 
 .Ico.-long {
     width: 4rem;
@@ -79,23 +71,14 @@ body .Ico {
 }
 
 
-
-// .Ico.-orb {
-// 	padding: 2px;
-// }
-// .Ico.orb {
-// 	padding: var(--x-Ico-orb);
-// }
-
-
-
-
-
-
 @media (min-width:@w-menu-2-plus) and (max-width:@w-max){
 
 	.Ico.-index {
 		--Ico: clamp(20px, 26px, calc(var(--index)));
+	}
+	
+	.Ico.-vw {
+		--Ico-w: clamp(4vw,var(--x-Ico),6vw);
 	}
 
 }
@@ -107,11 +90,18 @@ body .Ico {
 
 }
 
+
+
+
 .Ico {
-	// display: inline-block;
-	// vertical-align: top;
-    width: var(--x-Ico);
-    height: var(--x-Ico);
+	--Ico-w: var(--x-Ico);
+
+	//
+    font-size: 0;
+	line-height: 0;
+    width: var(--Ico-w);
+    height: var(--Ico-w);
+	min-width: var(--Ico-w);
+	min-height: var(--Ico-w);
 }
 
- 

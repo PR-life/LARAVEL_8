@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+.Glow.-green::after {
+  box-shadow: 0 0 50px 30px rgba(72, 170, 72, .3);
+  animation: glowGreen 2s cubic-bezier(0.25, 0.1, 0.2, 1) infinite;
+}
+
+//
 .Glow {
     --Glow-w: 1rem;
     position: relative;
@@ -13,16 +19,16 @@
 .Glow::after {
     content: '';
     position: absolute;
+    z-index: 0;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    border-radius: 50%;
+
+    //
     width: var(--Glow-w);
     height: var(--Glow-w);
-    z-index: 0;
-    box-shadow: 0 0 50px 30px rgba(72, 170, 72, 0.3);
-    animation: glowGreen 2s cubic-bezier(0.25, 0.1, 0.2, 1) infinite;
-    transition: opacity 0.5s ease;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    transition: opacity .5s ease;
 }
 
 @keyframes glowGreen {

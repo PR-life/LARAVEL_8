@@ -15,6 +15,8 @@ function onScroll(){
 		let a = activeItems[i]
 		let div = document.querySelector(a.hash)
 
+		 
+
 		if(div.getBoundingClientRect().y < threshold) {
 			setActiveCSS(activeItems,a)
 			break

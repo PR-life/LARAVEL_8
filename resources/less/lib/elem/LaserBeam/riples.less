@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+
+
+.LaserBeam ._ripple {
+    opacity: 0;
+
+    // top: 14px;
+    height: var(--LaserBeam-h-ripple);
+    width: var(--LaserBeam-h-handle);
+    background: var(--LaserBeam-bg-white);
+    border-radius: 50%;
+
+}
+
+
+
+.LaserBeam.-on {
+    ._ripple {
+        opacity: 1;
+     
+        // transform: rotate(-1deg);
+        transform-origin: 0;
+        transition: opacity .1s .5s;
+        animation: ripple .2s .3s infinite linear;
+    }
+
+
+    ._ripple:nth-child(1) {
+        left: 20%;
+
+        animation-delay: .5s;
+    }
+
+
+
+}
+
+
+
+ 
+.lightsaber--on .lightsaber__ripple:nth-child(2) {
+    left: 30%;
+    
+    animation-delay: .6s;
+}
+.lightsaber--on .lightsaber__ripple:nth-child(3) {
+    left: 40%;
+    
+    animation-delay: .7s;
+}
+.lightsaber--on .lightsaber__ripple:nth-child(4) {
+    left: 50%;
+    
+    animation-delay: .8s;
+}
+.lightsaber--on .lightsaber__ripple:nth-child(5) {
+    left: 60%;
+    
+    animation-delay: .5s;
+}
+.lightsaber--on .lightsaber__ripple:nth-child(6) {
+    left: 67%;
+    
+    animation-delay: .6s;
+}
+.lightsaber--on .lightsaber__ripple:nth-child(7) {
+    left: 75%;
+    height: calc(var(--LaserBeam-h-ripple) - 1px);
+    
+    animation-delay: .7s;
+}
+.lightsaber--on .lightsaber__ripple:nth-child(8) {
+    left: 80%;
+    height: calc(var(--LaserBeam-h-ripple) - 1px);
+    
+    animation-delay: .8s;
+}
+
+
+
+
+// .lightsaber--on {
+//     .lightsaber__light-right .lightsaber__ripple,
+//     .lightsaber__light-left .lightsaber__ripple {
+//         top: 0;
+//         width: 13px;
+//     }
+//     .lightsaber__light-right .lightsaber__ripple:nth-child(7),
+//     .lightsaber__light-left .lightsaber__ripple:nth-child(7) {
+//         left: 20%;
+//         height: 5px;
+//     }
+//     .lightsaber__light-right .lightsaber__ripple:nth-child(8),
+//     .lightsaber__light-left .lightsaber__ripple:nth-child(8) {
+//         left: 45%;
+//         height: 5px;
+//     }
+// }

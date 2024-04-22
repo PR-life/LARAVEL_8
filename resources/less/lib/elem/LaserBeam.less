@@ -1,0 +1,51 @@
+@charset "UTF-8";
+
+@import "./LaserBeam/_ol.less";
+
+
+// https://codepen.io/ispal/pen/bEQEgM
+ 
+.LaserBeam.-v {
+	transform: rotate(90deg);
+	transform-origin: 0;
+}
+
+.LaserBeam {
+	--LaserBeam-oy:0px; // 89px;
+	--LaserBeam-oy-step:25px; // 89px;
+	--LaserBeam-w:100%;
+	--LaserBeam-w-handle:90px;
+	--LaserBeam-h-handle:40px;
+	--LaserBeam-h-ripple:8px;
+	/* --LaserBeam-bg-1:green;
+	--LaserBeam-bg-white:green; */
+	--LaserBeam-bg-1:#2a806c;
+	// --LaserBeam-bg-1:red;
+	//
+	// --LaserBeam-shadow-1:rgba(243, 206, 121, .5);
+	// --LaserBeam-shadow-2:rgba(42, 128, 108, .8);
+	// --LaserBeam-shadow-3: rgba(42, 128, 108, .5);
+	--LaserBeam-shadow-1:rgba(243, 206, 121, .5);
+	--LaserBeam-shadow-2:rgba(255, 0, 0, .8);
+	--LaserBeam-shadow-3: rgba(255, 0, 0, .5);
+	//
+	--LaserBeam-bg-white:#fefefe;
+	// --LaserBeam-bg-white:#fefefe;
+
+	//  position: absolute;
+	 width: var(--LaserBeam-w);
+}
+
+// .lightsaber__light-left,
+// .lightsaber__light-right,
+.LaserBeam ._light:after {
+	 background: linear-gradient(
+			var(--LaserBeam-bg-1) 0%,
+			var(--LaserBeam-bg-white) 14%,
+			var(--LaserBeam-bg-white) 47%,
+			var(--LaserBeam-bg-white) 90%,
+			var(--LaserBeam-bg-1) 100%
+		);
+}
+
+ 
