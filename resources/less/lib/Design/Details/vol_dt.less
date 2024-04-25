@@ -1,0 +1,45 @@
+@charset "UTF-8";
+
+@c24041855: #f1eee7;
+// #29b35d
+// #414649
+// #aba17d
+// #f6f5f1
+
+
+.Details.vol-dt {
+
+    --c-summary-border:@c24041855;
+    --bg-summary: transparent;
+    --bg-summary-before:#b2a988;
+    --x-bg-dot: @c24041855;
+    --x-details-volDt-w: calc(var(--x-details-margin-left)*1.4);
+    // --x-details-padding-left: 2rem;
+    // --x-ul-before-top: .6rem;
+
+    > details[open] {
+        --x-bg-dot: #fff;
+    }
+
+    > details > summary {
+        color: #414649;
+        border-radius: .5rem;
+    }
+
+    > details > summary::before {
+        content: '';
+        position: absolute;
+        z-index: -1;
+        top: 50%;
+
+        //
+        left: calc(var(--x-details-volDt-w) * .2);
+        top: calc(50% - var(--x-details-volDt-w)*.5);
+        width: var(--x-details-volDt-w);
+        height: var(--x-details-volDt-w);
+        background: var(--x-bg-dot);
+
+        //
+        border-radius: 50%;
+    }
+}

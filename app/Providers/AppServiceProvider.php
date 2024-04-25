@@ -11,6 +11,9 @@ use Illuminate\Support\Str;
 use Carbon\Carbon;
 use Illuminate\Pagination\Paginator;
 
+// use Illuminate\Support\Facades\App;
+// use Illuminate\Support\Facades\URL;
+
 class AppServiceProvider extends ServiceProvider
 {
     public function register()
@@ -25,6 +28,12 @@ class AppServiceProvider extends ServiceProvider
         //     return auth()->check() && auth()->user()->admin;
         // });
         //
+        // URL::forceScheme('https');
+        // if (App::environment(['staging', 'production'])) {
+        //     URL::forceScheme('https');
+        // }
+
+
         Blade::directive('svg', function($expression) {
             $name = str_replace("'", '', $expression);
             return '<svg><use xlink:href="#svg-'. $name .'"></use></svg>';

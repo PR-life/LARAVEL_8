@@ -57,13 +57,11 @@
 @if ($errors->newAsk->any())
 @push('js-bottom-solo')
 <script>
-	const element = document.getElementById('form_ask')
-	const topPos = element.getBoundingClientRect().top + window.pageYOffset
-
-	window.scrollTo({
-		top: topPos,
-		behavior: 'smooth'
-	})
+	document.addEventListener("DOMContentLoaded", () => {
+		// console.log('rr32')
+		setTimeout(() => document.getElementById('milk_formAsk').click(), 250);
+		// document.getElementById('milk_formAsk').click()
+	});
 </script>
 @endpush
 @endif

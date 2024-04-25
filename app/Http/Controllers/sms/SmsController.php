@@ -11,6 +11,7 @@ use App\Http\Requests\Sms\PhoneNameRequest;
 use App\Http\Requests\Sms\AskRequest;
 
 //
+use App\Models\Post;
 use App\Models\Sms;
 use App\Models\En\SmsEn;
 
@@ -21,15 +22,14 @@ class SmsController extends BaseController
  
     public function storeAsk(AskRequest $request) {
 
-        // dd($request);
         $param = $request->validated();
-        // dd($param);
 
         try {
             $sms = $this->service->create($param);
 
-            // return route('sms.manager',$sms->id);
-            return view('zPAGE.Lead', compact('sms'));
+            //
+            $item = Post::whereSlug('storeask')->firstOrFail();
+            return view('zPAGE.Lead', compact('sms', 'item'));
 
         } catch (Exception $e) {
             dd($e);
@@ -40,6 +40,7 @@ class SmsController extends BaseController
         }
     }
 
+    
     public function storePhoneName(PhoneNameRequest $request) {
 
         // dd($request);

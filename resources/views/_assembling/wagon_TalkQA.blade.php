@@ -3,7 +3,7 @@
 		@include('_assembling.lego.Preamble')
 		<div class="off / space-left">
 			<div class="content">
-				{{strip_tags($Var->sms)}}
+				{!!strip_tags($Var->sms)!!}
 			</div>
 		</div>
 		<div class="none on _wrap / x-Talk_block x-Talk_minH">

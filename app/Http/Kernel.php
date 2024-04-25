@@ -4,6 +4,7 @@ namespace App\Http;
 
 use Illuminate\Foundation\Http\Kernel as HttpKernel;
 //
+// use App\Http\Middleware\HttpRedirect;
 use App\Http\Middleware\SetLocaleMiddleware;
 use App\Http\Middleware\AdminPanelMiddleware;
 
@@ -24,6 +25,7 @@ class Kernel extends HttpKernel
         \Illuminate\Foundation\Http\Middleware\ValidatePostSize::class,
         \App\Http\Middleware\TrimStrings::class,
         \Illuminate\Foundation\Http\Middleware\ConvertEmptyStringsToNull::class,
+        \App\Http\Middleware\HttpRedirect::class,
     ];
 
     /**
@@ -67,7 +69,7 @@ class Kernel extends HttpKernel
         'throttle' => \Illuminate\Routing\Middleware\ThrottleRequests::class,
         'verified' => \Illuminate\Auth\Middleware\EnsureEmailIsVerified::class,
         //
-        \App\Http\Middleware\HttpRedirect::class,
+        // 'https' => HttpRedirect::class,
         'setlocale' => SetLocaleMiddleware::class,
         'admin' => AdminPanelMiddleware::class,
     ];

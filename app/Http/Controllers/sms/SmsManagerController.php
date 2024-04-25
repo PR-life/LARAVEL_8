@@ -13,11 +13,6 @@ use App\Models\En\SmsEn;
 class SmsManagerController extends BaseController
 {
 
-    // public function manager($sms) {
-    //     $sandbox = [];
-    //     return view('zPAGE.Lead', compact('sandbox'));
-    // }
-
     public function update(UpdateRequest $request) {
 
         $param = $request->validated();
@@ -35,7 +30,10 @@ class SmsManagerController extends BaseController
         $sms->update($param);
         $this->telega($sms);
 
-        return view('zPAGE.Thanks', compact('sms'));
+        $reachGoalFromController = $sms->reachgoal_id;
+ 
+
+        return view('zPAGE.Thanks', compact('sms','reachGoalFromController'));
         // return view('_.Thanks', compact('sms'));
     }
 

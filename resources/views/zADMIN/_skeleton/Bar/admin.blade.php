@@ -5,10 +5,10 @@
         @include('zADMIN/_skeleton/Bar/lego/preamble')
     </div>
 </div>
+ 
+<div class="Abs -all / flex dC bC / index" style="padding-top: 280px;">
 
-<div class="Abs -all / flex dC bC" style="padding-top: 280px;">
-
-    <div class="Wings / Goo -header">
+    <div class="Wings / Goo -header / _indexMax">
         <div class="_win -t">
 
             <div class="void x-07081718 Grey">
