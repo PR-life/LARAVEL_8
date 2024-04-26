@@ -51,6 +51,10 @@ Route::group(['namespace' => 'Landing', 'prefix' => 'asnone'], function(){
 
 
 
+Route::get('/privacy', function () {
+    return view('zPAGE.Doc.gdpr');
+})->name('fz');
+
 Route::get('/fz-152', function () {
     return view('zPAGE.Doc.Fz');
 })->name('fz');

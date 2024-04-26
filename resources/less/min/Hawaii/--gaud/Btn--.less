@@ -82,6 +82,25 @@
     padding-right: calc(var(--x-padding-left)*1);
 }
 
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-beyond) {
+    .Btn.vol-go {
+        --x-btn:6rem;
+
+        font-size: 12px;
+    }
+}
+
+
+@media screen and (max-width: @w-menu-2) {
+    .Btn.vol-go {
+        --x-btn:calc(var(--Ico) + 0);
+
+        font-size: 0;
+    }
+}
+
+ 
 // .Btn.-Auto {
 //     padding-left: calc(var(--x-padding-left)*.5);
 //     padding-right: calc(var(--x-padding-left)*.5);

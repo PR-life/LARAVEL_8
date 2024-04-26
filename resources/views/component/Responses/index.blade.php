@@ -22,7 +22,7 @@
 
     @if(isset($Var) && count($Var) > 0)
         <div class="h b600 center-text / [ margin bottom S ]">{{__('mod/Responses.name')}}</div>
-        <div class="Medium -S / edgeSPC">
+        <div class="Medium -S / edge-S_PC">
             <div class="Chat -entropy / Entropy Void Edge">
                 @foreach($Var as $item)
                     <div class="Q -M / face face-padding face-top" data-click data-css data-toggle='On'>

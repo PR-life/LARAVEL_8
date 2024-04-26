@@ -6,15 +6,11 @@ use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 //
-
-
-// !!!!!!!!!!!!!!!!
+use App\Http\Filters\LandingFilter;
 use App\Models\Landing;
-// use App\Models\Category;
-// use App\Models\Tag;
+use App\Services\ADMIN\BaseService;
 
-
-class Service {
+class Service extends BaseService  {
 
 
 	public function update($landing,$param) {
@@ -22,32 +18,40 @@ class Service {
 		try {
 			DB::beginTransaction();
 
-
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);
-			
-			//
-			// isset($param['featured']) ? '' : $param['featured'] = '0';
-			// isset($param['published']) ? '' : $param['published'] = '0';
-			// isset($param['mafia']) ? '' : $param['mafia'] = '0';
-				// isset($param['css_type']) ? $param['css_type'] = implode(" ", $param['css_type']) : $param['css_type'] = null;
-			
+
+			isset($param['faq_ids']) ? $faqIds = $param['faq_ids'] : $faqIds = [];
+			unset($param['faq_ids']);
+
+			isset($param['item_ids']) ? $itemIds = $param['item_ids'] : $itemIds = [];
+			unset($param['item_ids']);
+
 
 			//
-			// if(isset($param['prev_image']) && !is_string($param['prev_image'])) {
-			// 	$param['prev_image'] = Storage::disk('public')->put('/images', $param['prev_image']);
-			// 	// $data['prev_image'] = str_replace('public','',Storage::put('/public/images', $data['prev_image']));
-			// }
+			if($param['canonical'] == "/") unset($param['canonical']);
+			
+			isset($param['category_id']) ? '' : $param['category_id'] = null;
+			isset($param['tag_id']) ? '' : $param['tag_id'] = null;
 
-			// dd($param);
+			isset($param['featured']) ? '' : $param['featured'] = '0';
+			isset($param['published']) ? '' : $param['published'] = '0';
+
 
 			//
 			$landing->update($param);
-			$landing->tags()->sync($tagIds); // изменили attach на sync*, 
-				// и поместили ниже строки '$landing->update($param);'
-				// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
-			$tagIds = [];
 
+			$landing->tags()->sync($tagIds);
+			$tagIds = [];
+			
+			$landing->faqs()->sync($faqIds);
+			$faqIds = [];
+
+			$landing->items()->sync($itemIds); 
+			$itemIds = [];
+
+
+			
 			DB::commit();
 		} catch (Exception $exception) {
 			DB::rollBack();

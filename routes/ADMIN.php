@@ -10,6 +10,20 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
     Route::get('/', function() {return view('zADMIN.Morda');})->name('morda');
 
 
+
+    Route::group(['namespace' => 'Landing', 'prefix' => 'landing'], function(){
+        Route::get('/', 'IndexController')->name('landing.index');
+        // // Route::get('/trash', 'IndexTrashedController')->name('landing.trash');
+        Route::get('/create', 'CreateController')->name('landing.create');
+        Route::post('/', 'StoreController')->name('landing.store');
+        // // // // Route::get('/{landing}', 'ShowController')->name('faq.show');
+        Route::get('/{landing}/edit', 'EditController')->name('landing.edit');
+        Route::patch('/{landing}', 'UpdateController')->name('landing.update');
+        Route::delete('/{landing}', 'DeleteController')->name('landing.delete');
+    });
+
+
+
     Route::group(['namespace' => 'zItem', 'prefix' => 'items'], function(){
         Route::get('/', 'IndexController')->name('item.index');
         Route::get('/trash', 'IndexTrashedController')->name('item.trash');

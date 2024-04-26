@@ -27,5 +27,14 @@
 
     @endcomponent
 
+    @component('zADMIN._wrap._open.tool_FlaberSms')
+        @slot('id', 'mockup')
+        @slot('name', 'mockup')
+
+        <div class="content-xxs Grey">Mockup</div>
+        @include('zADMIN.PAGE._lego.edit.mockup.index', ['Var' => $item])
+
+    @endcomponent
+
 
 </div>

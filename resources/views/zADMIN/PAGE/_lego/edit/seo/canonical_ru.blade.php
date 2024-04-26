@@ -1,4 +1,4 @@
-@if(isset($item->shema_teaser) && $item->shema_teaser != 'shema-link')
+@if($Var->mockup != 'link')
 @component('zADMIN._wrap.form._shell.x_hr')
     @slot('cssNet', true)
     @slot('nameId','Title')

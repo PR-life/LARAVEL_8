@@ -1,4 +1,4 @@
-<div id="wrap_{{$id ?? 'Talk'}}" class="Talk {{$css ?? '-def'}}">
+<div id="wrap_{{$id ?? 'Talk'}}" class="Talk {{$css_25041630 ?? '-def'}}">
 
     <div class="I aura / Edge -SPC edge">
          @include('manager.Name.scroll_left')
@@ -6,7 +6,7 @@
      
 
      <div class="_wrap / relative">
-        <div class="Roll_mbl Roll_PC {{$cssRoll ?? '-edge -space -scrollBar cross'}}" data-scroll>
+        <div class="Roll_mbl Roll_PC {{$cssRoll ?? '-edge -scrollBar cross'}}" data-scroll>
             @foreach($Var as $item)
                 @include('_assembling.wagon_TalkQA',['Var' => $item, 'cssPreamble3' => 'flex cI cross-xxs / block_80'])
             @endforeach
@@ -21,7 +21,7 @@
         </div>
         <div class="none_mbl [ margin top S ]"></div>
         <div class="none_mbl Grad / _indexMin"></div>
-        <div class="Veil vol-white">
+        <div class="Veil {{$cssVeil ?? 'vol-white'}}">
             <div class="_bottom"></div>
         </div>
      </div>

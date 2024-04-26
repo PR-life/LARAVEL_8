@@ -58,7 +58,7 @@
 @push('js-bottom-solo')
 <script>
 	const element = document.getElementById('form_ask')
-	const topPos = element.getBoundingClientRect().top + window.pageYOffset
+	const topPos = element.getBoundingClientRect().top + window.pageYOffset - 80
 
 	window.scrollTo({
 		top: topPos,

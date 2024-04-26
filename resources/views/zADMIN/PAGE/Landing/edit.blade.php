@@ -2,7 +2,6 @@
 
 @section('title')edit. Landing - {{$landing->name}} @endsection
 
-
 @push('addBread')
 	<li>
 		<span>
@@ -10,9 +9,9 @@
 		</span>
 	</li>
 	<li>
-		<a href="{{route('admin.landing.index')}}">
+		<span>
 			<span class="content-xs">Landings</span>
-		</a>
+		</span>
 	</li>
 @endpush
 
@@ -21,8 +20,6 @@
 @section('content')
 
 <div class="I aura">
-
-
 	@component('zADMIN._wrap.form.edit', ['route' => route('admin.landing.update', $landing->id), 'css' => '-landing'])
 
 
@@ -33,6 +30,7 @@
 		</div>
 
 		@include('zADMIN.PAGE.Landing.lego.edit.lego.Relationships')
+		<div class="paragraph"></div>
 		
 		@component('zADMIN._wrap.Flaber.edit')
 
@@ -45,22 +43,9 @@
 
 		@endcomponent
 
-
-
-		{{-- <div class="paragraph"></div>
-		@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Блокнот'])
-		<div class="paragraph"></div>
-		<div class="_shell Article aura / Note -lite">
-			<textarea id="tinymce_lite_2" name="knot_1" placeholder='текст...'>{{$landing->knot_1}}</textarea>
-			@include('zADMIN._brick.cleanHTML')
-		</div> --}}
-
-
 		<div class="hill"></div>
 		@include('zADMIN._lego.form.btn.edit.footer')
 
 	@endcomponent 
 </div>
-
-
 @endsection

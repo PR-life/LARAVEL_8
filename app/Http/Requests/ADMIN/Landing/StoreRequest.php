@@ -2,25 +2,16 @@
 
 namespace App\Http\Requests\ADMIN\Landing;
 
-use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Requests\ADMIN\BaseRelationsRequest;
 
-class StoreRequest extends FormRequest
+class StoreRequest extends BaseRelationsRequest
 {
-    /**
-     * Determine if the user is authorized to make this request.
-     *
-     * @return bool
-     */
+
     public function authorize()
     {
         return true;
     }
 
-    /**
-     * Get the validation rules that apply to the request.
-     *
-     * @return array
-     */
     public function rules()
     {
         return [
@@ -41,38 +32,12 @@ class StoreRequest extends FormRequest
             'prev_image' => 'nullable|file',
             'prev_url' => 'nullable|string',
 
-			//
-			'knot_1' => 'nullable|string',
-	
-			//
-			'order' => 'nullable|integer',	
-			'status' => 'nullable|integer',		
-			'views' => 'nullable|integer',		
-			'featured' => 'nullable|integer',		
-			'published' => 'nullable|integer',
 
-			//
-            'tag_id' => 'nullable|integer|exists:tags,id',
-            'group_id' => 'nullable|integer|exists:groups,id',
-            'category_id' => 'nullable|integer|exists:categories,id',
-
-            'tag_ids' => 'nullable|array',
-            'tag_ids.*' => 'nullable|integer|exists:tags,id',
-
-
-			//
-            'title' => 'nullable|string',
-            'description' => 'nullable|string',
-            'keywords' => 'nullable|string',
-            
-            'canonical' => 'nullable|string',
-
+            //
             'ogp_type' => 'nullable|string',
             'ogp_image' => 'nullable|string',
             'ogp_title' => 'nullable|string',
             'ogp_description' => 'nullable|string',
-
-            'keywords' => 'nullable|string',
         ];
     }
 

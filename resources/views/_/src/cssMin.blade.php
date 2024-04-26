@@ -418,7 +418,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 
 
 @media (min-width:1081px) and (max-width:6000px){
-	.Beyond {display:none !Important}
+	{{-- .Beyond {display:none !Important} --}}
 }
 
 @media (min-width:799px) and (max-width:1080px){
@@ -468,7 +468,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 		display:none;
 	}
 
-	.Beyond,
+	{{-- .Beyond, --}}
 	.none_mbl{
 		display:none !important
 	}

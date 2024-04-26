@@ -40,7 +40,7 @@
 
  
  
-@if($item->shema_teaser != 'shema-link')
+
 <div class="paragraph"></div>
 @include('zADMIN._wrap.text.nameTextarea', ['name' => 'Intro'])
 <div class="paragraph"></div>
@@ -48,6 +48,9 @@
 	<textarea id="tinymce_lite_1" name="intro" placeholder='текст...'>{{$item->intro}}</textarea>
 	{{-- @include('zADMIN._brick.cleanHTML') --}}
 </div>
+
+
+@if($item->mockup != 'link')
 <div class="paragraph"></div>
 @include('zADMIN._wrap.text.nameTextarea', ['name' => 'Статья'])
 <div class="paragraph"></div>

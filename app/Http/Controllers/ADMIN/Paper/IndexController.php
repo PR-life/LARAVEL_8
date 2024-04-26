@@ -6,9 +6,7 @@ use App\Http\Requests\ADMIN\Paper\FilterRequest;
 use App\Http\Filters\PaperFilter;
 //
 use App\Models\Paper;
-use App\Models\Category;
-use App\Models\Tag;
-use App\Models\User;
+use App\Models\{Category,Tag, User};
 
 
 class IndexController extends BaseController

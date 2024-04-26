@@ -30,7 +30,7 @@ class StoreRequest extends BaseRelationsRequest
             'name_tag' => 'nullable|string',
             'name_seo' => 'nullable|string',
             'h1' => 'nullable|string',
-            'h1' => 'nullable|string',
+            'h2' => 'nullable|string',
             'intro' => 'nullable|string',
             'article' => 'nullable|string',
             
