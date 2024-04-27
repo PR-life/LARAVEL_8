@@ -17,7 +17,7 @@ class UpdateRequest extends StoreRequest
     {
 
         return array_merge(parent::rules(), [
-            // 'en_name' => 'nullable|string',
+            // 'canonical' => 'nullable|string',
             // 'en_h1' => 'nullable|string',
             // 'en_intro' => 'nullable|string',
             // 'en_text' => 'nullable|string',

@@ -43,6 +43,25 @@ class Landing extends Model
     //     )->orderBy('created_at', 'desc');
     // }
 
+    public function items() {
+        return $this->belongsToMany(
+            Item::class,
+            'landing_items',
+            'landing_id',
+            'item_id'
+        )->orderBy('order');
+    }
+
+    public function faqs() {
+        return $this->belongsToMany(
+            Faq::class,
+            'landing_faqs',
+            'landing_id',
+            'faq_id'
+        )->orderBy('order');
+    }
+
+
     public function tags() {
         return $this->belongsToMany(
             Tag::class,

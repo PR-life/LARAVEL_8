@@ -14,7 +14,7 @@ class StoreRequest extends BaseRelationsRequest
 
     public function rules()
     {
-        return [
+        return array_merge(parent::rules(), [
 			'sku' => 'nullable|string',
             'name' => 'required|string',
 
@@ -38,7 +38,7 @@ class StoreRequest extends BaseRelationsRequest
             'ogp_image' => 'nullable|string',
             'ogp_title' => 'nullable|string',
             'ogp_description' => 'nullable|string',
-        ];
+        ]);
     }
 
 	//написали сами

@@ -14,14 +14,8 @@ class UpdateController extends BaseController
     public function __invoke(UpdateRequest $request, Landing $landing){
 
         $data = $request->validated();
-
-
-        if($data['canonical'] == '/'){
-            unset($data['canonical']);
-        };
-
         $landing = $this->service->update($landing,$data);
-    
+
 		return back()->with('UpdateController', true);
     }
 }

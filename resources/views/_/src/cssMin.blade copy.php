@@ -1,7 +1,4 @@
-
 https://codebeautify.org/minify-html
-
-
 
 *,*:before,*:after{
 	box-sizing:border-box
@@ -148,6 +145,8 @@ svg{
 	width:auto
 }
 
+#body.en .En,
+#body.ru .Ru,
 body,img,video,input,.block{
 	display:block
 }
@@ -155,9 +154,10 @@ body,img,video,input,.block{
 #body.Z2 .noneZ2,
 #body:not(.asideClose) .show-asideClose,
 #body.asideClose .show-asideOpen,
-.none,.Rano,body meta{
+#body .En, #body .Ru, .none,.Rano,body meta{
 	display:none
 }
+
 
 .Fade,
 .Start-fade,
@@ -420,7 +420,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 
 
 @media (min-width:1081px) and (max-width:6000px){
-	.Beyond {display:none !Important}
+	{{-- .Beyond {display:none !Important} --}}
 }
 
 @media (min-width:799px) and (max-width:1080px){
@@ -450,6 +450,15 @@ hr,.ghost,.visible,.Op,.opVersa{
 }
 @media screen and (max-width:799px){
 
+	#body .Fix_mbl{
+		position:fixed;
+	}
+
+	#body .Abs_mbl.-left{
+		right:100%;
+	}
+
+
 	.float_mbl {
 		float:left;
 	}
@@ -461,7 +470,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 		display:none;
 	}
 
-	.Beyond,
+	{{-- .Beyond, --}}
 	.none_mbl{
 		display:none !important
 	}

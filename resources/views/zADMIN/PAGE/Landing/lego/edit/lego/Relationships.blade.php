@@ -31,6 +31,12 @@
     @endcomponent
 
     @component('zADMIN._wrap.Relationships.line')
+        <div class="W-100">
+            @include('zADMIN._wrap.select.name',['Var' => 'Item'])
+            @component('zADMIN._wrap.select.items.index')
+                @include('_._brick.select.items.edit.index',['Items' => $items,'arr' => $landing->items->pluck('id')->toArray()])
+            @endcomponent
+        </div>
         {{-- <div class="W-100">
             @include('zADMIN._wrap.select.name',['Var' => 'Faq'])
             @component('zADMIN._wrap.select.faqs.index')
