@@ -56,14 +56,13 @@
 
     
 
-    <div class="x-Goo">
+    {{-- <div class="x-Goo">
         <div class="flex cC / mrgn">
             <div id="btnPostman" class="x-btn / orb pointer" data-click data-goto='formPostman' data-foo='click' data-form='Form_Lite' form-param='Responses'>
                 <span class="noEvents">
-                    {{-- @include('zImago._ico.plusGrey') --}}
                 </span>
             </div>
         </div>
-    </div>
+    </div> --}}
 
 </div>

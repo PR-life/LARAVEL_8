@@ -29,7 +29,7 @@
 					<!--noindex-->
 					<a href="/" rel="nofollow">oloid.ru</a>
 					<!--/noindex-->
-					© 1994-<span itemprop="copyrightYear">2022</span>
+					© 1994-<span>2022</span>
 				</div>
 				<div class="paragraph-s"></div>
 				<div class="content-xs">Все права защищены. Копирование составляющих частей сайта в какой бы то ни было форме без разрешения запрещено.</div>

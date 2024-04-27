@@ -7,7 +7,7 @@
 @include('_.src.svg.manager')
 @include('_.src.svg.chat')
 
-
+https://codebeautify.org/minify-html
 
 
 <!-- 
