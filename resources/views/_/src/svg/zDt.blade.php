@@ -1,0 +1,8 @@
+@include('_.src.svg.min')
+@include('_.src.svg.lvl_1')
+@include('_.src.svg.market')
+@include('zDT.src.svg.social')
+@include('_.src.svg.messenger')
+@include('_.src.svg.login')
+@include('_.src.svg.manager')
+@include('_.src.svg.chat')

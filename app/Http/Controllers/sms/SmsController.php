@@ -29,6 +29,8 @@ class SmsController extends BaseController
 
             //
             $item = Post::whereSlug('storeask')->firstOrFail();
+
+            // return redirect('/asnone/sms/storeask', compact('sms', 'item'));
             return view('zPAGE.Lead', compact('sms', 'item'));
 
         } catch (Exception $e) {

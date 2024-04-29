@@ -15,7 +15,8 @@
 @push('js-bottom-solo') 
 
 <script>
-
+	// templates
+	// https://www.tiny.cloud/blog/tinymce-templates/
 // https://www.tiny.cloud/docs/configure/content-formatting/
 // https://www.tiny.cloud/docs/tinymce/latest/customize-ui/
 // https://www.tiny.cloud/docs/tinymce/latest/migration-from-5x/#summary
@@ -39,8 +40,8 @@ tinymce.init({
 
 
 
-	plugins: 'image lists link anchor charmap visualblocks code',
-	toolbar: 'blocks styles | bold italic bullist numlist | link anchor | visualblocks | removeformat code',
+	plugins: 'image lists link anchor charmap visualblocks code template',
+	toolbar: 'blocks styles template | bold italic bullist numlist | link anchor | visualblocks | removeformat code',
 	// image charmap
 
 
@@ -51,7 +52,7 @@ tinymce.init({
 
 	style_formats: [
 
-		{title: 'SPAN', inline: 'span',styles: {} },
+		// {title: 'SPAN', inline: 'span',styles: {} },
 		{title: 'content', selector: 'p, span, div', classes: 'content'},
 		{title: 'content-s', selector: 'p, span, div', classes: 'content-s'},
 		{title: 'content-m', selector: 'p, span, div', classes: 'content-m'},
@@ -68,7 +69,18 @@ tinymce.init({
 		// {title: 'Table row 1', selector: 'tr', classes: 'tablerow1'}
 	],
 
-
+	templates: [
+		{
+		title: "Citation",
+		description: "",
+		content: "<div class='Citation / face face-top face-padding / Max'><div class='_wrap / content / Void'><p>текст</p></div><div class='author / flex'><span class='_name b600 mr-2'>— ТОРНАДО</span> <span class='Grey / Ellipsis'>детективное агентство</span></div></div>",
+		},
+		{
+		title: "Some title 2",
+		description: "Some desc 2",
+		url: "templates/development.html",
+		},
+	],
 
 	setup: (editor) => {
 	  editor.on('init', () => {

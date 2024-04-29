@@ -14,16 +14,16 @@ use Illuminate\Support\Facades\Artisan;
 Route::group(['prefix' => 'asnone'], function(){
 
     Route::group(['prefix' => 'sms'], function(){
+
         Route::post('/store', [App\Http\Controllers\sms\SmsController::class, 'store'])->name('sms.store');
+
+        Route::post('/storeask', [App\Http\Controllers\sms\SmsController::class, 'storeAsk'])->name('sms.storeask');
+        Route::get('/storeask', [App\Http\Controllers\sms\SmsController::class, 'storeAskGet']);
 
         Route::post('/storephone', [App\Http\Controllers\sms\SmsController::class, 'storePhone'])->name('sms.storephone');
         Route::post('/storephonename', [App\Http\Controllers\sms\SmsController::class, 'storephonename'])->name('sms.storephonename');
 
-        Route::post('/storeask', [App\Http\Controllers\sms\SmsController::class, 'storeAsk'])->name('sms.storeask');
 
-
-
-        
         Route::get('/manager', [App\Http\Controllers\sms\SmsManagerController::class, 'manager'])->name('sms.manager');
         Route::post('/update', [App\Http\Controllers\sms\SmsManagerController::class, 'update'])->name('sms.update');
         // Route::patch('/asnone/sms/update', [App\Http\Controllers\sms\SmsController::class, 'update'])->name('sms.update');

@@ -16,6 +16,9 @@ let isScrolling = false;
 let icssVarh = parseInt(document.documentElement.clientHeight);
 let icssVarw = document.body.clientWidth;
 
+	/**
+	* Creates the list item HTML and returns as a string 
+	*/
 
 let cssVarh = throttle(function() {
 	if ((icssVarh + 100) < document.documentElement.clientHeight || (icssVarh - 100) > document.documentElement.clientHeight) {

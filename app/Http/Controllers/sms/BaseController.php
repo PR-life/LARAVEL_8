@@ -25,6 +25,7 @@ class BaseController extends Controller {
 
             $token = env('TG_TOKEN', '6440933163:AAE2U2nF_5IXnC3GC1l8kd8n8iljL6JyN1Y');
             $chat_id = env('TG_CHAT_ID', '6020403524');
+            // $chat_id = env('TG_CHAT_ID', '-1002111235698');
             $sitename = env('APP_NAME');
             $Gotelegram = '';       
      

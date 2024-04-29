@@ -51,7 +51,7 @@
 <div id="Milk" class="Abs Milk / index owlFIX">
 	@stack('milk')
 	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-		@include('_.src.svg._def')
+		@include('_.src.svg.zDt')
 		@include('zDT.src.svg.index')
 		@stack('svg')
 	</svg>
@@ -62,15 +62,8 @@
 <div id="Veil" data-click data-foo='click' data-goto></div>
 
 @include('_._skeleton.bodyEnd')
-{{-- @include('_shema._lego.afterMilk') --}}
+@include('zDT._shema._lego.afterMilk')
 {{-- @include('zTHIS.analytica.add_footer') --}}
-
-<script async src="{{ mix('/js/merged.js') }}"></script>
-@stack('js-bottom-link')
-<script>
-	@stack('js-bottom')
-</script>
-@stack('js-bottom-solo')
 
 
 

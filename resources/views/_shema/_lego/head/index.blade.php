@@ -6,8 +6,8 @@
 	<meta name="description" content="@yield('description')">
 	<meta name="keywords" content="@yield('keywords')">
 	@yield('canonical')
-@include('_.head.meta.ogp')
 @stack('meta')
+@include('_.head.meta.ogp')
 @include('_.head.link')
 @include('_.head.style')
 @include('_.head.css')
