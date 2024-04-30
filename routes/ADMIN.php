@@ -11,6 +11,43 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
 
 
 
+
+    Route::group(['namespace' => '_CRM', 'prefix' => 'crm'], function(){
+
+        Route::get('/', function() {return 'crm';})->name('crm.index');
+
+
+        Route::group(['namespace' => 'Face', 'prefix' => 'faces'], function(){
+            Route::get('/', 'IndexController')->name('crm.face.index');
+            Route::get('/create', 'CreateController')->name('crm.face.create');
+            Route::post('/', 'StoreController')->name('crm.face.store');
+            Route::get('/{face}/edit', 'EditController')->name('crm.face.edit');
+            Route::patch('/{face}', 'UpdateController')->name('crm.face.update');
+            // // Route::get('/trash', 'IndexTrashedController')->name('crm.face.trash');
+            // Route::delete('/{face}', 'DeleteController')->name('crm.customer.delete');
+        });
+        Route::group(['namespace' => 'Customer', 'prefix' => 'customers'], function(){
+            Route::get('/', 'IndexController')->name('crm.customer.index');
+            // // Route::get('/trash', 'IndexTrashedController')->name('crm.customer.trash');
+            Route::get('/create', 'CreateController')->name('crm.customer.create');
+            Route::post('/', 'StoreController')->name('crm.customer.store');
+            // // // // // Route::get('/{face}', 'ShowController')->name('crm.customer.show');
+            Route::get('/{face}/edit', 'EditController')->name('crm.customer.edit');
+            Route::patch('/{face}', 'UpdateController')->name('crm.customer.update');
+            // Route::delete('/{face}', 'DeleteController')->name('crm.customer.delete');
+    
+            // Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function(){
+            //     Route::get('/', function() {return view('zADMIN.PAGE.Customer.CATEGORY');})->name('customer.category.index');
+            // });
+            // Route::group(['namespace' => 'Discount', 'prefix' => 'discounts'], function(){
+            //     Route::get('/', function() {return view('zADMIN.PAGE.Customer.DISCOUNT');})->name('customer.discount.index');
+            // });
+        });
+    });
+
+
+
+
     Route::group(['namespace' => 'Landing', 'prefix' => 'landing'], function(){
         Route::get('/', 'IndexController')->name('landing.index');
         // // Route::get('/trash', 'IndexTrashedController')->name('landing.trash');
@@ -21,8 +58,6 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
         Route::patch('/{landing}', 'UpdateController')->name('landing.update');
         Route::delete('/{landing}', 'DeleteController')->name('landing.delete');
     });
-
-
 
     Route::group(['namespace' => 'zItem', 'prefix' => 'items'], function(){
         Route::get('/', 'IndexController')->name('item.index');

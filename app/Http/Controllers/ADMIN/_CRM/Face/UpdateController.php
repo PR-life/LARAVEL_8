@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Http\Controllers\ADMIN\CRM\Customer;
+namespace App\Http\Controllers\ADMIN\_CRM\Face;
 
 //
 use App\Http\Requests\ADMIN\Face\UpdateRequest;

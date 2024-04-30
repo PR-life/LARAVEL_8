@@ -1,13 +1,12 @@
 <?php
 
-namespace App\Http\Controllers\ADMIN\CRM\Face;
+namespace App\Http\Controllers\ADMIN\_CRM\Customer;
 // use App\Http\Controllers\Controller;
 ////
 use App\Http\Requests\ADMIN\Face\FilterRequest;
 use App\Http\Filters\FaceFilter;
 //
 use App\Models\Face;
-use App\Models\Crm;
 use App\Models\Category;
 use App\Models\Tag;
 
@@ -27,11 +26,10 @@ class IndexController extends BaseController
 			// $posts = Post::paginate(10);
         // $faces = Face::paginate(50);
 
-        // $categories = Category::all();
-		// $tags = Tag::all();
-		$Crm = Crm::all();
+        $categories = Category::all();
+		$tags = Tag::all();
 
-        return view('zADMIN.PAGE.Face.index', compact('faces','Crm'));
+        return view('zADMIN.PAGE.Customer.index', compact('faces','categories','tags'));
 
     }
 }
