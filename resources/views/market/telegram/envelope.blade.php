@@ -1,5 +1,5 @@
 <div class="inline / {{$cssWrap ?? ''}}">
-	<a class="Blog / flex dC / space-m round / {{$css ?? 'bg-2'}}" href="{{env('TG_LINK', 'https://t.me/prlifecom');}}" target="_blank">
+	<a class="Blog / flex dC / space-m round / {{$css ?? 'bg-2'}}" href="{{config('THIS.tg_link', 'https://t.me/prlifecom')}}" target="_blank">
 	{{-- <a class="Blog / flex dC / space-m round / {{$css ?? 'bg-2'}}" href="{{__('_const/tornado.telegramLinkNews')}}" target="_blank"> --}}
 		<div class="flex cI / cross-xxs">
 			<div class="Ico -S/ round-s">
