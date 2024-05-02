@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 @c-avisited:red;
+@c-a: #488bf0;
 
-// .D-Adham {
 .Design.x-Adham {
     --bg:#485ccc;
     --bg-Aside_2:#485ccc;
@@ -56,13 +56,15 @@
         background-color: var(--bg-oiBar);
         background-attachment: fixed;
 
+        div > a {
+            color: @c-a;
+        }
+
+
         .menu {
-            // --c-menu-border: #e6e6e6;
-            // --c-menu-border-active: #e6e6e6;
-            --c-menu: #ccc;
+            --c-menu: #999;
             --c-menu-active: #fff;
-            --c-menu-hover: @c-avisited;
-            // --c-menu-border: transparent;
+            --c-menu-hover: #ccc;
           }
 
     }
@@ -79,15 +81,27 @@
         background-color: var(--bg);
 
         a {
-            color: #3396ff;
+            color: #22cfa2;
         }
 
         .Grey {
             --x-color-1: rgba(255,255,255,.25);
         }
+
+        .menu {
+            --c-menu: #ccc;
+            --c-menu-active: #eee;
+            --c-menu-hover: #ccc;
+            --bg-menu: #333;
+            --bg-menu-kite: #222;
+            --bg-menu-kite-active: #666;
+        }
     }
 
 
+    .Vote {
+        --c-text:#000;
+    }
     
 
     .oi,

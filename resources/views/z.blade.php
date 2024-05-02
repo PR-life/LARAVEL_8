@@ -71,8 +71,6 @@
 
 @include('_._skeleton.bodyEnd')
 @include('_shema._lego.afterMilk')
-{{-- @include('zTHIS.analytica.add_footer') --}}
-
-@include('zTHIS._lego.metrika.def')
+@include('zTHIS.analytica.add_footer')
 </body>
 </html>
