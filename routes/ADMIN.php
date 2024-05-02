@@ -59,7 +59,7 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
         Route::delete('/{landing}', 'DeleteController')->name('landing.delete');
     });
 
-    Route::group(['namespace' => 'zItem', 'prefix' => 'items'], function(){
+    Route::group(['namespace' => 'Item', 'prefix' => 'items'], function(){
         Route::get('/', 'IndexController')->name('item.index');
         Route::get('/trash', 'IndexTrashedController')->name('item.trash');
         Route::get('/create', 'CreateController')->name('item.create');
