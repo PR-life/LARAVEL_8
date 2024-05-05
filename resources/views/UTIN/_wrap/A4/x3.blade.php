@@ -1,4 +1,4 @@
-<div id="page_{{$loop ?? '999'}}" class="I aura / Bone / OnOff / Plot {{$cssPlot ?? '-h -S'}} / Utin {{$css ?? 'space-m bg-white'}} / round index relative" localstorage-id>
+{{-- <div id="page_{{$loop ?? '999'}}" class="I aura / Bone / OnOff / Plot {{$cssPlot ?? '-h -S'}} / Utin {{$css ?? 'space-m bg-white'}} / round index relative" localstorage-id>
     <div class="_head space-left_mbl / relative">
         @include('UTIN._brick.close')
         <div class="h b500">{!!$header!!}</div>
@@ -23,4 +23,25 @@
             </div>
         </div>
     </div>
-</div>
+</div> --}}
+
+
+@component('UTIN._wrap.A4.wrap.index', [
+    'header' => $header,
+    'loop' => $loop,
+    'cssUtin' => $cssUtin ?? null,
+    'cssPlot' => $cssPlot ?? null,
+    'Font' => $Font
+])
+
+    @slot('cssGrid', ' x3 -gap / bg-cell')
+
+    @slot('cell')
+        @include('UTIN._wrap.lego.cell.1')
+        @include('UTIN._wrap.lego.cell.2')
+        @include('UTIN._wrap.lego.cell.3')
+    @endslot
+
+    {!!$slot!!}
+
+@endcomponent

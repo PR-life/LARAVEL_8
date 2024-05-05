@@ -97,40 +97,50 @@
 	}
 }
 
+
 //
-
-  
-
 @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
 
-    // .Plot.-M {
-    //     --x-Plot:150px;
-    // }
 
-    .Plot.-S {
-        --Plot-precise:calc(0px - var(--h-Top) - var(--h-Header) );
+    .Plot.-XXXXXS {
+        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 50vh);
+    }
+
+    .Plot.-XXXXS {
+        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 36vh);
+    }
+
+    .Plot.-XXXS {
+        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 24vh);
+    }
+
+
+    .Plot.-XXS {
+        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 12vh);
     }
 
     .Plot.-XS {
-        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 );
+        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 2vh);
     }
 
-    .Plot.-h {
-        --Plot:clamp(700px,calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise)),940px);
+    .Plot.-S {
+        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2);
     }
 
-    .Plot.-hMin {
-        --PlotMin:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
+    .Plot.-M {
+        --Plot-precise:calc(0px - var(--h-Top) - var(--h-Header));
     }
 
+    //
 
-    .Plot.-XXS.-h {
-        --Plot:calc(var(--h) *.5);
-    }
 
-    .Plot.-XXS.-hMin {
-        --PlotMin:calc(var(--h)*.5 - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
-    }
+    // .Plot.-XXS.plot-h {
+    //     --Plot:calc(var(--h) *.5);
+    // }
+
+    // .Plot.-XXS {
+    //     --PlotMin:calc(var(--h)*.5 - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
+    // }
 
 
     //
@@ -142,7 +152,7 @@
 
 
 @media screen and (max-width:@w-menu-2) {
-    .Plot.-h.-mbl {
+    .Plot.plot-h.plot-mbl {
         --Plot:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
         // height:auto;
     }
@@ -151,31 +161,44 @@
     //     height:var(--Plot);
     // }
 }
- 
 
+
+
+.Plot.plot-h,
+.Plot.-L {
+    --Plot:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
+}
 
 .Plot {
-    --Plot:auto;
-    --PlotMin:auto;
-    --Plot-precise: 0px;
-    // calc(var(--h) - var(--h-Top) - var(--h-Header) - var(--x-Plot));
-    //  //
-    height:var(--Plot);
-    min-height:var(--PlotMin);
-    // max-height:740px;
-    // min-height: 360px;
+    --PlotMin:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
 }
 
 
+.Plot.plot-hMin {
+    height:auto !important;
+	min-height:var(--PlotMin);
+}
 
+.Plot.On,
 .Plot.on {
     height:auto;
     min-height: auto;
 }
 
+.Plot:not(.plot-h) {
+    height:auto;
+}
+
+.Plot {
+    --Plot-precise: 0px;
+
+    height:var(--Plot);
+    min-height:auto;
+}
+
+
 
 //
-
 .Tape {
     --Tape:auto;
     --TapeMin:auto;

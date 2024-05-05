@@ -4,251 +4,281 @@
 
 
 html {
-  --h-Top: 10px;
-  --h-Header:40px;
-  //
-  --family: var(--family-Inter);
-  --bg-selection: pink;
-  --bg:#d4d4d7;
-  --bg-2:#fff;
-
-  ////
-  background-color: var(--bg);
+  --h-Top: 30px;
+  --h-Header:40px; 
 }
 
 
-.ico-2602 {
-  display: block;
-  width: 16px;
-  height: 16px;
-  background-color: #29b35d;
-  border-radius: 50%;
-  background-repeat: no-repeat;
-  background-position: center;
-  background-size: 50%;
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 611.99 611.99'%3e%3cg%3e%3cpath d='M589.105,80.63c-30.513-31.125-79.965-31.125-110.478,0L202.422,362.344l-69.061-70.438 c-30.513-31.125-79.965-31.125-110.478,0c-30.513,31.125-30.513,81.572,0,112.678l124.29,126.776 c30.513,31.125,79.965,31.125,110.478,0l331.453-338.033C619.619,162.202,619.619,111.755,589.105,80.63z' fill='%23ffffff'/%3e%3c/g%3e%3c/svg%3e");
+@media (min-width: @w-menu-2-plus) and (max-width: @Edge0305) {
+	.sherpa_rightEdge {
+		margin-left: var(--bar);
+	}
+}
+
+@media (min-width:@w-menu-2-plus) and (1360px) {
+	.sherpa_rightEdge {
+		margin-left: var(--x-03051046);
+	}
 }
 
 
 
 
+#body.asideClose {
+	#oiBar {
+		--fontMenu:12px;
 
+		.menu {
+			--font:12px;
+		}
 
+		.x-space--left {
+			padding-left: .5rem;
+		}
+	}
 
-
-.bg-blue,
-.bg-blueFon,
-.x-white {
-  --c-text:#fff;
-}
-
-.bg-white,
-.bg {
-    background-color: var(--bg-2);
-}
-
-.bg-blueFon {
-  background: #42b2fe;
-}
-.bg-blue {
-  background: #5fbeff;
-}
-
-.bg-blue,
-.bg-blueFon {
-  ul.vol-check > li::before {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 611.99 611.99'%3e%3cg%3e%3cpath d='M589.105,80.63c-30.513-31.125-79.965-31.125-110.478,0L202.422,362.344l-69.061-70.438 c-30.513-31.125-79.965-31.125-110.478,0c-30.513,31.125-30.513,81.572,0,112.678l124.29,126.776 c30.513,31.125,79.965,31.125,110.478,0l331.453-338.033C619.619,162.202,619.619,111.755,589.105,80.63z' fill='%23fff'/%3e%3c/g%3e%3c/svg%3e");
-  }
+	.sherpa_rightEdge {
+		--x-03051046:var(--bar);
+	}
 }
 
 
 
-.-Black {
-  .Chat {
-    --Chat-bg-Q: #222;
-    --Chat-c-border-Q: #303435;
 
-    --c-text: #fff;
-  }
+
+
+//
+.sherpa_rightEdge {
+	--x-03051046:calc(var(--Aside)*.25);
+
+	padding-right: var(--x-03051046);
+}
+
+
+
+
+// .ico-2602 {
+//   display: block;
+//   width: 16px;
+//   height: 16px;
+//   background-color: #29b35d;
+//   border-radius: 50%;
+//   background-repeat: no-repeat;
+//   background-position: center;
+//   background-size: 50%;
+//   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 611.99 611.99'%3e%3cg%3e%3cpath d='M589.105,80.63c-30.513-31.125-79.965-31.125-110.478,0L202.422,362.344l-69.061-70.438 c-30.513-31.125-79.965-31.125-110.478,0c-30.513,31.125-30.513,81.572,0,112.678l124.29,126.776 c30.513,31.125,79.965,31.125,110.478,0l331.453-338.033C619.619,162.202,619.619,111.755,589.105,80.63z' fill='%23ffffff'/%3e%3c/g%3e%3c/svg%3e");
+// }
+
+
+
+
+
+
+
+
+// .bg-blue,
+// .bg-blueFon,
+// .x-white {
+//   --c-text:#fff;
+// }
+
+// .bg-white,
+// .bg {
+//     background-color: var(--bg-2);
+// }
+
+// .bg-blueFon {
+//   background: #42b2fe;
+// }
+// .bg-blue {
+//   background: #5fbeff;
+// }
+
+// .bg-blue,
+// .bg-blueFon {
+//   ul.vol-check > li::before {
+//     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 611.99 611.99'%3e%3cg%3e%3cpath d='M589.105,80.63c-30.513-31.125-79.965-31.125-110.478,0L202.422,362.344l-69.061-70.438 c-30.513-31.125-79.965-31.125-110.478,0c-30.513,31.125-30.513,81.572,0,112.678l124.29,126.776 c30.513,31.125,79.965,31.125,110.478,0l331.453-338.033C619.619,162.202,619.619,111.755,589.105,80.63z' fill='%23fff'/%3e%3c/g%3e%3c/svg%3e");
+//   }
+// }
+
+
+
+// .-Black {
+//   .Chat {
+//     --Chat-bg-Q: #222;
+//     --Chat-c-border-Q: #303435;
+
+//     --c-text: #fff;
+//   }
  
-  .blockquote blockquote::before {
-    background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23b2b2b2' viewBox='0 0 16 16'%3e%3cpath d='M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z'%3e%3c/path%3e%3c/svg%3e");
-  }
+//   .blockquote blockquote::before {
+//     background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' fill='%23b2b2b2' viewBox='0 0 16 16'%3e%3cpath d='M12 12a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1h-1.388c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 9 7.558V11a1 1 0 0 0 1 1h2Zm-6 0a1 1 0 0 0 1-1V8.558a1 1 0 0 0-1-1H4.612c0-.351.021-.703.062-1.054.062-.372.166-.703.31-.992.145-.29.331-.517.559-.683.227-.186.516-.279.868-.279V3c-.579 0-1.085.124-1.52.372a3.322 3.322 0 0 0-1.085.992 4.92 4.92 0 0 0-.62 1.458A7.712 7.712 0 0 0 3 7.558V11a1 1 0 0 0 1 1h2Z'%3e%3c/path%3e%3c/svg%3e");
+//   }
 
-  details {
-    --c-summary-border:#444;
-    --bg-summary-before: #176dea;
-    --bg-summary-before-open:#c70000;
-    --c-summary: var(--c-text);
 
-    // i::after,
-    // i::before {
-    //   background-color:#176dea;
-    // }
-  }
 
-  .Preloader::after {
-    border-top-color: #91fddd;
-    border-right-color: #91fddd;
-  } 
+//   .Preloader::after {
+//     border-top-color: #91fddd;
+//     border-right-color: #91fddd;
+//   } 
 
 
   
-.face.vol-life::before {
-  background-image: url(/Utin/ava/life_white.jpg);
-}
+// .face.vol-life::before {
+//   background-image: url(/Utin/ava/life_white.jpg);
+// }
 
-.Info.-ico.vol-2::before  {
-  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16.5 16.5'%3e%3cpath fill='%23ffffff' d='M8 16c-4.418278 0-8-3.581722-8-8s3.581722-8 8-8 8 3.581722 8 8-3.581722 8-8 8zm0-1c3.8659932 0 7-3.1340068 7-7s-3.1340068-7-7-7-7 3.1340068-7 7 3.1340068 7 7 7zm0-8c.5522847 0 1 .4477153 1 1v4c0 .5522847-.4477153 1-1 1s-1-.4477153-1-1V8c0-.5522847.4477153-1 1-1zm0-4c.5522847 0 1 .4477153 1 1s-.4477153 1-1 1-1-.4477153-1-1 .4477153-1 1-1z'%3e%3c/path%3e%3c/svg%3e");
-}
-
-
-
-}
-
-
-.face::before {
-  background-size: cover;
-  border-radius: 50%;
-}
-
-
-.face.vol-life::before {
-  background-image: url(/Utin/ava/life.jpg);
-}
- 
-
-// .Black.-bg .Info.-ico::before {
-//   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCA0OCA0OCI+CiAgICA8cGF0aCBkPSJNMiA0Mmg0NEwyNCA0IDIgNDJ6bTI0LTZoLTR2LTRoNHY0em0wLThoLTR2LThoNHY4eiIgZmlsbD0iI2VhODYwMCIvPgo8L3N2Zz4=);
+// .Info.-ico.vol-2::before  {
+//   background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16.5 16.5'%3e%3cpath fill='%23ffffff' d='M8 16c-4.418278 0-8-3.581722-8-8s3.581722-8 8-8 8 3.581722 8 8-3.581722 8-8 8zm0-1c3.8659932 0 7-3.1340068 7-7s-3.1340068-7-7-7-7 3.1340068-7 7 3.1340068 7 7 7zm0-8c.5522847 0 1 .4477153 1 1v4c0 .5522847-.4477153 1-1 1s-1-.4477153-1-1V8c0-.5522847.4477153-1 1-1zm0-4c.5522847 0 1 .4477153 1 1s-.4477153 1-1 1-1-.4477153-1-1 .4477153-1 1-1z'%3e%3c/path%3e%3c/svg%3e");
 // }
 
 
-@media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
 
-
-
-  .abs-26021028 {
-    transform: rotate(-120deg);
-    left: -4rem;
-    bottom: 4rem;
-  }
-
-    #Fon .x-wave::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        right: 0;
-        height: 2rem;
-        bottom: -1rem;
-        mask: url("data:image/svg+xml,%0A%3Csvg data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 33.787'%3E%3Ctitle%3Ewave%3C/title%3E%3Cpath d='M0,16.4V20.61c192,0,192,8.423,384,8.423S576,20.61,767.994,20.61,960,29.033,1152,29.033s192-8.423,384-8.423,192,8.423,384,8.423V16.4Z' fill='%23000'/%3E%3Cpath d='M1920,18.489V5.854c-192,0-192,8.423-384,8.423s-192-8.423-384-8.423-192,8.423-384.006,8.423S576,5.854,384,5.854,192,14.277,0,14.277v4.212Z' fill='%23000'/%3E%3C/svg%3E%0A") no-repeat 100% 50%;
-        mask-size: 110% auto;
-        background-color: var(--bg);
-      }
- 
-      #Fon {
-        // background-size:cover;
-        background-position: center 110px;
-      }
-      
-
-
-      .dcZInk {
-        padding-top: 64px;
-      }
-
-      
-      
-      .dcZInk blockquote::before {
-      height: 60px;
-      bottom: auto;
-      top: 0
-      }
-
-
-      .plot-26020713 ._cell._3::before {
-        display: none;
-      }
-
-}
-
-@media screen and (max-width:@w-menu-2) {
-
-
-  .abs-26021028 {
-    right: 4rem;
-    bottom: 95%;
-  }
-
-
-
-    #Fon {
-        // background-size: auto 300px;
-        // background-position: left 100px;
-        background-position: center 110px;
-      }
-
-      .x-25021816 {
-        padding-left: 5px;
-        padding-right: 5px;
-      }
-
-
-      .x-25021811 {
-        padding-left: 5px;
-        padding-right: 5px;
-        ._cell {
-          margin-bottom: 5px;
-        }
-        ._cell::after {
-          background: linear-gradient(to top, rgba(0,0,0,.2), #242424);
-        }
-      }
-
-
-      #body.anime-25021817 {
-        ._animeShake.infinite {
-          animation: Shake_def 0.8s linear;
-          animation-iteration-count: infinite;
-        }
-      }
-}
-
-
-.Shake.animeGo ._animeShake {
-  animation-iteration-count: infinite;
-}
-
-
-#Fon {
-  background-color: #c8dc57;
-    background-repeat: no-repeat;
-    background-image: url(https://static.tildacdn.com/tild3931-3663-4632-a330-346438653532/VM_partners_logo.svg);
-    // background-image: url(https://thumb.tildacdn.com/tild3934-3933-4438-b631-666164366263/-/format/webp/P1844401.jpg);
-}
-
-
-
-
-.done {
-  ._animeShake.infinite {
-    animation-play-state: paused !important;
-  }
-}
-
-// #Fon::before {
-//   content: '';
-//   position: absolute;
-//   left: 0;
-//   right: 0;
-//   top: 0;
-//   bottom: 0;
-//   background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, .5) 0, rgba(255, 255, 255, .95) 70%);
-//   background-size: 150%;
-//   background-position: center;
 // }
 
-.shadow {
-    box-shadow: 0 0 2px 0 rgba(0,0,0,.1),0 2px 6px 0 rgba(0,0,0,.1);
-}
+
+// .face::before {
+//   background-size: cover;
+//   border-radius: 50%;
+// }
+
+
+// .face.vol-life::before {
+//   background-image: url(/Utin/ava/life.jpg);
+// }
+ 
+
+// // .Black.-bg .Info.-ico::before {
+// //   background-image: url(data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNHB4IiBoZWlnaHQ9IjI0cHgiIHZpZXdCb3g9IjAgMCA0OCA0OCI+CiAgICA8cGF0aCBkPSJNMiA0Mmg0NEwyNCA0IDIgNDJ6bTI0LTZoLTR2LTRoNHY0em0wLThoLTR2LThoNHY4eiIgZmlsbD0iI2VhODYwMCIvPgo8L3N2Zz4=);
+// // }
+
+
+// @media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
+
+
+
+//   .abs-26021028 {
+//     transform: rotate(-120deg);
+//     left: -4rem;
+//     bottom: 4rem;
+//   }
+
+//     #Fon .x-wave::before {
+//         content: '';
+//         position: absolute;
+//         left: 0;
+//         right: 0;
+//         height: 2rem;
+//         bottom: -1rem;
+//         mask: url("data:image/svg+xml,%0A%3Csvg data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 33.787'%3E%3Ctitle%3Ewave%3C/title%3E%3Cpath d='M0,16.4V20.61c192,0,192,8.423,384,8.423S576,20.61,767.994,20.61,960,29.033,1152,29.033s192-8.423,384-8.423,192,8.423,384,8.423V16.4Z' fill='%23000'/%3E%3Cpath d='M1920,18.489V5.854c-192,0-192,8.423-384,8.423s-192-8.423-384-8.423-192,8.423-384.006,8.423S576,5.854,384,5.854,192,14.277,0,14.277v4.212Z' fill='%23000'/%3E%3C/svg%3E%0A") no-repeat 100% 50%;
+//         mask-size: 110% auto;
+//         background-color: var(--bg);
+//       }
+ 
+//       #Fon {
+//         // background-size:cover;
+//         background-position: center 110px;
+//       }
+      
+
+
+//       .dcZInk {
+//         padding-top: 64px;
+//       }
+
+      
+      
+//       .dcZInk blockquote::before {
+//       height: 60px;
+//       bottom: auto;
+//       top: 0
+//       }
+
+
+//       .plot-26020713 ._cell._3::before {
+//         display: none;
+//       }
+
+// }
+
+// @media screen and (max-width:@w-menu-2) {
+
+
+//   .abs-26021028 {
+//     right: 4rem;
+//     bottom: 95%;
+//   }
+
+
+
+//     #Fon {
+//         // background-size: auto 300px;
+//         // background-position: left 100px;
+//         background-position: center 110px;
+//       }
+
+//       .x-25021816 {
+//         padding-left: 5px;
+//         padding-right: 5px;
+//       }
+
+
+//       .x-25021811 {
+//         padding-left: 5px;
+//         padding-right: 5px;
+//         ._cell {
+//           margin-bottom: 5px;
+//         }
+//         ._cell::after {
+//           background: linear-gradient(to top, rgba(0,0,0,.2), #242424);
+//         }
+//       }
+
+
+//       #body.anime-25021817 {
+//         ._animeShake.infinite {
+//           animation: Shake_def 0.8s linear;
+//           animation-iteration-count: infinite;
+//         }
+//       }
+// }
+
+
+// .Shake.animeGo ._animeShake {
+//   animation-iteration-count: infinite;
+// }
+
+
+// #Fon {
+//   background-color: #c8dc57;
+//     background-repeat: no-repeat;
+//     background-image: url(https://static.tildacdn.com/tild3931-3663-4632-a330-346438653532/VM_partners_logo.svg);
+//     // background-image: url(https://thumb.tildacdn.com/tild3934-3933-4438-b631-666164366263/-/format/webp/P1844401.jpg);
+// }
+
+
+
+
+// .done {
+//   ._animeShake.infinite {
+//     animation-play-state: paused !important;
+//   }
+// }
+
+// // #Fon::before {
+// //   content: '';
+// //   position: absolute;
+// //   left: 0;
+// //   right: 0;
+// //   top: 0;
+// //   bottom: 0;
+// //   background-image: radial-gradient(circle at 50% 50%, rgba(255, 255, 255, .5) 0, rgba(255, 255, 255, .95) 70%);
+// //   background-size: 150%;
+// //   background-position: center;
+// // }
+
+// .shadow {
+//     box-shadow: 0 0 2px 0 rgba(0,0,0,.1),0 2px 6px 0 rgba(0,0,0,.1);
+// }
 
  
