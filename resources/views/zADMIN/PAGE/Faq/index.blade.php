@@ -28,11 +28,9 @@
 
                 @foreach($faqs as $_faq)    
                  
-
                     @if($_GET == [])
                         @continue($_faq->faq_id != null)
                     @endif
-
 
                     @include('zADMIN._repo.teaser.index', ['Var' => $_faq])
 
@@ -56,10 +54,6 @@
                         </div>
                     @endif --}}
          
-
-
-
-
                 @endforeach
             @endcomponent
 

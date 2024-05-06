@@ -3,9 +3,9 @@
 		<div class="cell-1">
 			{!!$slot!!}
 		</div>
-		{{-- <div class="cell-2 / none">
+		<div class="cell-2 / none / D-Relation -on">
 			{!!$cell_2 ?? ''!!}
-		</div> --}}
+		</div>
 		{{-- <div class="cell-3 / none">
 			{!!$cell_3 ?? ''!!}
 		</div> --}}

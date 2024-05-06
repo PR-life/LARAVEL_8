@@ -15,6 +15,18 @@ if(isset($css)) {
 
 @component('zADMIN._wrap.Teaser.index', ['Var' => $Var, 'css' => 'space-left '.$x_23101421])
 
+
+    @slot('cell_2')
+        @if($Var->tags->count())
+            <div class="paragraphX2"></div>
+            <ul class="menu -tag -XS / lie cloud">
+                @foreach($Var->tags as $tagForeach)
+                    <li><a class="content-xxxs round-xs" href="{{route('admin.tag.edit', $tagForeach->id)}}" target="_blank">{{$tagForeach->name}}</a></li>
+                @endforeach
+            </ul>
+        @endif
+    @endslot
+
     <div class="flex bC">
 
         <div class="_l / flex cI / Article / cross-s">
@@ -54,28 +66,6 @@ if(isset($css)) {
 
         <div class="_r / flex sI / cross-s">
             @include('zADMIN._repo.teaser.lego.cell.relation', ['param_seo' => null])
-            
-            {{-- <div class="manager-21011524 / Min Max -w7 / v-Seo -on">
-                <div class="flex dC / -Grey / v-Meta_category -off"> 
-                    @isset($Var->category)
-                        @if($Var->category->id != 1)
-                            <div class="Wings">
-                                <div class="_win right-text">
-                                    <span class="_nameBadge / content-xxxs space-s round-s / Grey">{{$Var->category->slug}}</span>
-                                </div>
-                            </div>
-
-                            @include('zADMIN.combine.Teaser._brick.info.categoryMain', ['Var' => $Var->category])
-        
-                            @if($Var->category->en_name)
-                                <div class="paragraph-s"></div>
-                                @include('zADMIN.combine.Teaser._brick.info.categoryMain_en', ['Var' => $Var->category])
-                            @endif
-                        @endif
-                    @endisset
-                </div>
-            </div> --}}
-
 
             <div class="x-HMin flex cI">
                 @include('zADMIN._repo.teaser.lego.cell.bd.date')
