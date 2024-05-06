@@ -1,11 +1,13 @@
 <div class="flex cI bC_mbl / cross">
     <div class="h b500">
        <span class="ghostMbl c-h">
-       {!!$name ?? 'Новые вопросы <br class="none_PC">от клиентов'!!}
+       {!!$name ?? 'Новые вопросы'!!}
+       {{-- {!!$name ?? 'Новые вопросы <br class="none_PC">от клиентов'!!} --}}
        </span>
        <div class="Wings Wings_mbl none_PC">
           <div class="_win -t">
-             {!!$name_mbl ?? '<span class="h b500 c-h">Новые вопросы <br class="none_PC">от клиентов</span>'!!}                        
+             {!!$name_mbl ?? '<span class="h b500 c-h">Новые вопросы'!!}                        
+             {{-- {!!$name_mbl ?? '<span class="h b500 c-h">Новые вопросы <br class="none_PC">от клиентов</span>'!!}                         --}}
              <span class="paragraph"></span>
           </div>
        </div>

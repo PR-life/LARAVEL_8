@@ -8,7 +8,7 @@
      <div class="_wrap / relative">
         <div class="Roll_mbl Roll_PC {{$cssRoll ?? '-edge -scrollBar cross'}}" data-scroll>
             @foreach($Var as $item)
-                @include('_assembling.wagon_TalkQA',['Var' => $item, 'cssPreamble3' => 'flex cI cross-xxs / block_80'])
+                @include('_assembling.wagon.sms',['Var' => $item, 'cssPreamble3' => 'flex cI cross-xxs / block_80'])
             @endforeach
             <div class="Wagon -w -wL -hS / _last">
                <div class="Btn dC cC / round" data-click data-goto='milk_formAsk' data-foo='click'>

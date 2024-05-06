@@ -11,7 +11,7 @@
         <div class="_scr">
             <div class="_body / Chat -entropy / Entropy / Roll_80 -edge -space -scrollBar / cross void-m" data-scroll>
                 @foreach($Var as $item)
-                    @include('_assembling.wagon_TalkQA',['Var' => $item, 'cssPreamble' => 'flex cI cross-xxs / block_80', 'css' => $cssWagon ?? null])
+                    @include('_assembling.wagon.sms',['Var' => $item, 'cssPreamble' => 'flex cI cross-xxs / block_80', 'css' => $cssWagon ?? null])
                 @endforeach
                 <div class="Wagon -w -wL -hS / _last">
                     <div class="Btn dC cC / round" data-click data-goto='milk_formAsk' data-foo='click'>
