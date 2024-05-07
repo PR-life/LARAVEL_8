@@ -1,6 +1,7 @@
 <script>
 class ScrollLeft {
     constructor(selector){
+        console.log(document.getElementById(selector))
         this.rootElem = document.getElementById(selector)
         this.Track = this.rootElem.querySelector('[data-scroll]')
 

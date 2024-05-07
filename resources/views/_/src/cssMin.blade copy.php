@@ -299,6 +299,9 @@ hr,.ghost,.visible,.Op,.opVersa{
 		top:0;
 		right:0;
 	}
+	#body .Abs_PC.-t{
+		top:0
+	}
 	#body .Abs_PC.-l{
 		left:0
 	}
@@ -312,7 +315,9 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.HWin_PC{
 		min-height:100vh;
 	}
-
+	#body .Abs_PC.-right{
+		left:100%;
+	}
 
 
 	#body:not(.asideClose) .show-asideClose,

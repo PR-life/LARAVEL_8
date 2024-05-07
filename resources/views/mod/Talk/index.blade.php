@@ -1,7 +1,7 @@
 <div id="wrap_{{$id ?? 'Talk'}}" class="Talk {{$css_25041630 ?? '-def'}}">
 
     <div class="I aura / Edge -SPC edge">
-         @include('manager.Name.scroll_left')
+         @include('manager.scroll.Name.left',['name' => 'Как решаем вопросы клиентов'])
      </div>
      
 

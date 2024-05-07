@@ -53,6 +53,9 @@ function callback(entries,observer) {
 						case 'body':
 							div = document.getElementById('body');
 							break;
+						case 'self':
+							div = param;
+							break;
 						case 'parent':
 							div = param.parentNode;
 							break;

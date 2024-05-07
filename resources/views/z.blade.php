@@ -7,7 +7,7 @@
 		'linkCssApp' => '/css/appDT.css',
 		'linkMetaColor' => 'zDT._skeleton.meta.color'
 		])
-	@include('zDT._skeleton.meta.index') --}}
+	@include('xxx._skeleton.meta.index') --}}
 </head>
 <body id="body" class="MXAT noneJs @yield('css-body') @stack('css-body')">
 <script>
