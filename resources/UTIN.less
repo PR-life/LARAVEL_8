@@ -9,50 +9,66 @@ html {
 }
 
 
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	#body.asideClose {
+		#oiBar {
+			--fontMenu:12px;
+	
+			.menu {
+				--font:12px;
+			}
+	
+			.x-space--left {
+				padding-left: .5rem;
+			}
+		}
+	
+		.utin_rightEdge {
+			--x-03051046:var(--bar);
+		}
+	}
+
+	.utin_rightEdge {
+		--x-03051046:calc(var(--Aside)*.25);
+
+		padding-right: var(--x-03051046);
+	}
+}
+
 @media (min-width: @w-menu-2-plus) and (max-width: @Edge0305) {
-	.sherpa_rightEdge {
+	.utin_rightEdge {
 		margin-left: var(--bar);
 	}
 }
 
 @media (min-width:@w-menu-2-plus) and (1360px) {
-	.sherpa_rightEdge {
+	.utin_rightEdge {
 		margin-left: var(--x-03051046);
 	}
 }
 
+@media screen and (max-width:@w-menu-2) {
 
-
-
-#body.asideClose {
-	#oiBar {
-		--fontMenu:12px;
-
-		.menu {
-			--font:12px;
-		}
-
-		.x-space--left {
-			padding-left: .5rem;
-		}
+	.Utin.On {
+		margin-left: .5rem;
+		margin-right: .5rem;
 	}
+	.Utin {
 
-	.sherpa_rightEdge {
-		--x-03051046:var(--bar);
+		>._head {
+			padding-top: 1rem;
+		}
+
+		.bg-cell {
+			padding: 0 .5rem;
+
+			> * {margin-bottom: .5rem;}
+		}
 	}
 }
 
 
-
-
-
-
-//
-.sherpa_rightEdge {
-	--x-03051046:calc(var(--Aside)*.25);
-
-	padding-right: var(--x-03051046);
-}
+ 
 
 
 

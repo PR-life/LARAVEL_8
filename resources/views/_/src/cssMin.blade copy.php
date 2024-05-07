@@ -1,4 +1,4 @@
-https://codebeautify.org/minify-html
+/* https://codebeautify.org/minify-html */
 
 *,*:before,*:after{
 	box-sizing:border-box
@@ -152,8 +152,6 @@ body,img,video,input,.block{
 }
 
 #body.Z2 .noneZ2,
-#body:not(.asideClose) .show-asideClose,
-#body.asideClose .show-asideOpen,
 #body .En, #body .Ru, .none,.Rano,body meta{
 	display:none
 }
@@ -178,8 +176,6 @@ body,img,video,input,.block{
 }
 .Milk{
 	bottom:100%;
-	{{-- height:1px !important; --}}
-	{{-- right:200% --}}
 }
 .Abs.-t{
 	top:0;
@@ -272,19 +268,15 @@ body,img,video,input,.block{
 }
 
 .rotate-l{
-	{{-- -webkit-transform:rotate(90deg); --}}
 	transform:rotate(90deg);
 }
  .rotate-l2{
-	{{-- -webkit-transform:rotate(180deg); --}}
 	transform:rotate(180deg);
 }
 .rotate-r{
-	{{-- -webkit-transform:rotate(-90deg); --}}
 	transform:rotate(-90deg);
 }
 .rotate-r2{
-	{{-- -webkit-transform:rotate(-180deg); --}}
 	transform:rotate(-180deg);
 }
 hr,.ghost,.visible,.Op,.opVersa{
@@ -320,7 +312,11 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.HWin_PC{
 		min-height:100vh;
 	}
-	summary br,
+
+
+
+	#body:not(.asideClose) .show-asideClose,
+	#body.asideClose .show-asideOpen,
 	.none_PC{
 		display:none !important;
 	}
@@ -418,11 +414,6 @@ hr,.ghost,.visible,.Op,.opVersa{
 	}
 }
 
-
-@media (min-width:1081px) and (max-width:6000px){
-	{{-- .Beyond {display:none !Important} --}}
-}
-
 @media (min-width:799px) and (max-width:1080px){
 	.flex-beyond,
 	.Beyond {display:flex !important}
@@ -469,8 +460,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 	#body .morda-display {
 		display:none;
 	}
-
-	{{-- .Beyond, --}}
+	
 	.none_mbl{
 		display:none !important
 	}

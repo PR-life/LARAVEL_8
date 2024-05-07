@@ -8,6 +8,6 @@
     <div class="_item">
         <div class="content-xs / {{$cssName ?? 'b600'}}">{{$name}}</div>
         <div class="paragraph-s"></div>
-        <div class="content-xxs Grey">{{$date ?? ''}}</div>
+        <div class="content-xxs Grey / nowrap">{{$date ?? ''}}</div>
     </div>
 </div>

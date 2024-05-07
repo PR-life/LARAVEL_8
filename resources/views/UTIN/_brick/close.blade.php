@@ -1,5 +1,5 @@
-<div class="Wings / noEvents">
-    <div class="_win / flex eC">
+<div class="Wings -mbl / noEvents highlight">
+    <div class="_win / flex eC / space_mbl">
         <div class="yesEvents" data-click data-css data-node='page_{{$loop ?? '1'}}' data-toggle='On' data-localstorage localstorage-name='page_{{$loop ?? '1'}}'>
             <div class="flex bC pl-edgeS / pointer">
                 <div class="pointer">

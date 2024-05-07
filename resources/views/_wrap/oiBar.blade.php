@@ -2,7 +2,7 @@
 	<div id="Oi" class="Oi / index">
 		<div id="oiBar" class="oiBar flex / index relative {{ $cssOiBar ?? '' }} @stack('css-OiBar')">
 			@stack('oiBar-before')
-			<div class="_wrap relative index">
+			<div class="_wrap W-100 / relative index">
 				@stack('oiBar_before')
 				<div class="_main {{ $cssOiBarMain ?? '' }} / Abs_PC -all / index">
 					<!--googleoff: all-->

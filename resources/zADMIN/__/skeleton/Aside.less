@@ -4,7 +4,6 @@
     --x-userInfo: calc(var(--Aside) - 5rem);
 }
 
-
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
 
 
@@ -41,68 +40,94 @@
             }
         }
     }
-    
-    
-    
-
-//     .Aside_2,
-//     .Aside .asideMenu ._open {
-//         --x-Aside-left-w:47px;
-//     }
-
-
-//     .Aside_2,
-//     .Aside {
-//         ._left {
-//             min-width: var(--x-Aside-left-w);
-    
-//             > ._x {
-//                 min-width: 14px;
-//             }
-//         }
-//     }
-
-
-
-//     .Aside_2 ._left,
-//     .Aside .asideMenu ._open ._left{
-//         padding-right: 5px;
-//     }
- 
-
-
-//     .Aside_2 .menu.x-ico a,
-//     .Aside .asideMenu ._open > ._wrap{
-//         padding-right: .5rem;
-//     }
-
-//     .Aside {
-//         // --x-head-h: calc(200px + var(--Ava));
-//         // --x-padding-info-top: 14px;
-//         --x-Aside-hill-1:280px;
-//         --x-Aside-left-w: 55px;
-//         // --x-oiBar-item-h: 40px;
-
-//         //
-//         // min-width: var(--Aside);
-
-//         > ._wrap {
-//             padding-top:var(--x-Aside-hill-1);
-//         }
-
-//         ._menu {
-//             min-height: calc(var(--h) - var(--h-Header));
-//             // min-height: calc(var(--h) - var(--x-Aside-hill-1));
-//         }
-
-//         .x-profile {
-//             min-height: var(--x-Aside-hill-1);
-//             padding-top: calc(var(--h-Header)*1.5 + .5rem);
-//             // background-color: red;
-//         }
-
-
-
-
-//     }
 }
+
+
+@media (min-width: @w-beyond-plus) and (max-width:@w-max) {
+	#body.asideClose .oiBar {
+	
+		.flex.x-footer {
+			--x-cross: 0;
+			flex-direction: column;
+	
+			> * {
+				margin-top: .5rem;
+			}
+		}
+	
+		.Pr.-x4 {
+			--x-padding: 0;
+		}
+	
+		.pr-2 {
+			padding-right: 0;
+		}
+	
+		.Chunk {
+			flex-direction: column;
+		}
+	
+		._open {
+	
+			.chunk-100_Ico {
+				width: 100%;
+				padding-left: 5px;
+				padding-right: 5px;
+			}
+	
+			._ico {display: none;}
+			._item .content-s {
+				font-size: 10px;
+				line-height: 110%;
+				text-align: center;
+				padding: 7px 0;
+	
+				.x-edge {
+					padding-left: 3px;
+					padding-right: 3px;
+				}
+			}
+		}
+	
+	}
+
+
+    // эффекты отступа
+    #body.x-aside.asideClose {
+
+        .oiBar {
+            padding: calc(var(--Aside-space)*2) var(--Aside-space) 0 calc(var(--Aside-space)*1.5);
+        }
+
+        .KIRA.-aside {
+            --KIRA:1rem;
+            // min-width: 1rem;
+        }
+        
+        .Aside {
+            padding: 0px;
+        }
+    }
+
+
+
+}
+
+
+// #body.x-aside2 {
+// 	.aside2-space-left {
+// 		padding-left: var(--Aside-2);
+// 	}
+// }
+
+// #body.x-aside2.aside2Close {
+// 	.aside2-space-left {
+// 		padding-left: calc(var(--bar)*2);
+// 	}
+
+// 	.Aside_2 {
+// 		min-width: calc(var(--bar)*2);
+// 	}
+// }
+
+//

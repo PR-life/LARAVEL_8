@@ -95,8 +95,6 @@
 }
 
 .skimp-size_Aside {
-	--corrector: -14px;
-	
 	--Aside: calc(var(--Pente-1)*1.5 + var(--corrector));
 	--Aside-2: calc(var(--Pente-1)*1.5 + var(--corrector));
 }
@@ -121,7 +119,11 @@
 	}
 }
 
-
+@media (min-width: @metrika-60-plus) and (max-width: @w-max) {
+	.skimp-size_Aside {
+		--corrector: -14px;
+	}
+}
 
 @media (min-width: @w-menu-2-plus) and (max-width: @metrika-90) {
 
@@ -157,6 +159,11 @@
 	}
 }
 
+@media (min-width:@w-beyond-plus) and (max-width: @metrika-60) {
+	.skimp-size_Aside {
+		--corrector: -40px;
+	}
+}
 
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-beyond) {
@@ -164,10 +171,10 @@
 	.body  {
         --bar:52px;
 		--Sms: calc(@Sms - 80px);
-        //
-       // --Aside:300px;
-	//    background-color: purple !important;
     }
+	.skimp-size_Aside {
+		--corrector: -80px;
+	}
 }
 
 

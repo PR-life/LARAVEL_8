@@ -7,7 +7,7 @@
 {{-- vol-QA Family-OpenSans round-l
 x-30012123 Wagon -w -wL -hS / Bone / space-m / relative555 index555 --}}
 
-@component('_assembling.wagon.shema.index',['css03051331'=>'Bone','cssWagon' => '-w -h'])
+@component('_assembling.wagon.shema.index',['css03051331'=>'Bone','cssWagon' => '-h'])
  
 
 	<div class="_head / space">
@@ -30,7 +30,7 @@ x-30012123 Wagon -w -wL -hS / Bone / space-m / relative555 index555 --}}
 				</div>
 
 				<div class="paragraph-s"></div>
-				<div class="content-xxs Grey">
+				<div class="content-xxs Grey / Ellipsis line-1">
 					<span>{{$Var->user->nickname ?? $Var->user->name}}</span>
 					<span class="relative">
 						<span class="Abs -all / flex cI cC Bg -dotCenter"></span>
