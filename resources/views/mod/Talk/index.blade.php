@@ -19,11 +19,11 @@
             </div>
             <div class="Gstrm"></div>
         </div>
-        <div class="none_mbl [ margin top S ]"></div>
+        {!!$slot!!}
+        {{-- <div class="none_mbl [ margin top S ]"></div>
         <div class="none_mbl Grad / _indexMin"></div>
         <div class="Veil {{$cssVeil ?? 'vol-white'}}">
             <div class="_bottom"></div>
-        </div>
+        </div> --}}
      </div>
-
 </div>

@@ -3,7 +3,7 @@
         <div class="_win -t pr-4">
             <div class="Plot plot-h / sms-design sms-off / flex dC bC / hidden">
                 <div class="relative" style="height: 100%">
-                    <div class="Scroll -shift -visibleScroll">
+                    <div class="Scroll -shift">
                         <div class="_scr">
                             <div class="Goo">
                                 <div class="flex eC">

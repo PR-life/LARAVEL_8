@@ -13,6 +13,7 @@ class UpdateController extends BaseController
 
     public function __invoke(UpdateRequest $request, Sms $sms){
 
+        // dd(11);
         $data = $request->validated();
 
         isset($data['go_mod_talk']) ? '' : $data['go_mod_talk'] = '0';

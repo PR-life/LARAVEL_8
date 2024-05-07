@@ -2,7 +2,6 @@
 
 @section('title')edit. Sms - {{$sms->name}} @endsection
 
-
 @push('addBread')
 	<li>
 		<a href="{{route('admin.sms.index')}}">
@@ -16,41 +15,24 @@
 	</li>
 @endpush
 
-
-
 @section('content')
+
 <div class="I aura">
-
-
 	@component('zADMIN._wrap.form.edit', ['route' => route('admin.sms.update', $sms->id), 'css' => '-sms'])
-
 
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.sms.index'])
 
-		<div class="_shell">
+		<div class="_shell / net">
 			@include('zADMIN._bd.edit.sms',['Var'=> $sms])
 		</div>
 
 		@include('zADMIN.PAGE.Sms.lego.edit.lego.Relationships')
 		<div class="paragraph"></div>
 
-
-		
 		@component('zADMIN._wrap.Flaber.edit')
 
 			@slot('flaber')
-				{{-- @include('zADMIN.PAGE.Sms.lego.edit.sms')	 --}}
-			@endslot
-
-			@slot('date')
-				<div class="pl-edgeS / Form -S"> 
-					<dl class="-dot -rightS Void">
-						<dt class="content-xs Grey">дата</dt>
-						<dd>
-							<input type="text" name="created_at" value="{{$sms->created_at}}">
-						</dd>
-					</dl>
-				</div>
+				@include('zADMIN.PAGE.Sms.lego.edit.sms')	
 			@endslot
 
 			<div class="paragraphX2"></div>
@@ -58,14 +40,9 @@
 
 		@endcomponent
 
-
-
-
 		<div class="hill"></div>
 		@include('zADMIN._lego.form.btn.edit.footer')
 
 	@endcomponent 
 </div>
-
-
 @endsection

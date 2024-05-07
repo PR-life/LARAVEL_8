@@ -95,15 +95,19 @@
 	.Scroll.-shift {
 		--x-Scroll-shift:14px;
 		> ._scr {
-			
+			overflow-y: scroll;
+
+			// !!!!!!!!
 			width: calc(100% + var(--x-Scroll-shift));
-			transform: translateX(var(--x-Scroll-shift));
+			// transform: translateX(var(--x-Scroll-shift));
 		}
 	}
 
-	.Scroll.-visibleScroll > ._scr {
-		overflow-y: scroll;
-	}
+	// .Scroll.-shift,
+	// .Scroll_PC.-shift,
+	// .Scroll.-visibleScroll > ._scr {
+	// 	overflow-y: scroll;
+	// }
 
 	.Scroll_PC {
 		.SCROLL;

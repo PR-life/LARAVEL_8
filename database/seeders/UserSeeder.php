@@ -15,7 +15,7 @@ class UserSeeder extends Seeder
 			'role' => '1',
             'name' => 'Алексей',
             'rank' => 'Full-stack разработка',
-            'avatar' => '/images/ava/hello.jpg',
+            'avatar' => '/images-0/ava/hello.jpg',
             'email' => 'stepanov-mt12@yandex.ru',
             'password' => '$2y$10$hDq6XTwH4cNyDq4BQW8KY.r9M/sbCNXwh3VcMkwX6eVin9QZT4yKS',
 			'remember_token' => Str::random(10),
