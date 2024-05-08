@@ -1,0 +1,31 @@
+@charset "UTF-8";
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+	.Edge.-flaber {
+		.edge-flaber {
+			padding-right: var(--edge);
+		}
+	} 
+	.Edge.-flaber.off {
+		.edge-flaber {
+			padding-right: calc(var(--edge)*3)
+		}
+	} 
+}
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@metrika-80) {
+
+	#body.asideClose .Edge.-flaber.off {
+		.edge-flaber {
+			padding-right: calc(var(--edge)*1)
+		}
+	} 
+
+	.Edge.-flaber.off {
+		.edge-flaber {
+			padding-right: calc(var(--edge)*2)
+		}
+	} 
+}

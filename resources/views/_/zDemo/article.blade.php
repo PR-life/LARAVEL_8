@@ -14,7 +14,7 @@
     </div>
 
     <div class="Pente"> 
-        <div class="{{$css_02051157 ?? 'Article aura / Medium text Edge / [ margin bottom S ]'}}">
+        <div class="{{$css_02051157 ?? 'Article aura / Medium text / [ margin bottom S ]'}}">
             @include('_.zDemo.Article.header.tab_1')
             @include('_.zDemo.Article.header.tab_2')
 

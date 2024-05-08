@@ -1,44 +1,18 @@
 @charset "UTF-8";
 
 
-.-tail {margin-right: 7px;}
+@import "./edge/ai.less";
+@import "./edge/gaud.less";
+@import "./edge/flaber.less";
 
-
+ 
 //
-
 .EDGE {
 	margin-left: 0;
 	margin-right: 0;
 	max-width: 100%;
 }
-
-
-
-.Edge {
-	.Q, .A {
-		.-tail {
-			margin-right: 0;
-		}
-	}
-}
-
-// .Edge-right {
-// 	padding-right: var(--edge);
-// }
-
-// .Edge-rightS {
-// 	padding-right: calc(var(--edge)*.5);
-// }
-
-
-
-//
-
-
-// .Drag.Edge.-I {
-// 	padding-left: calc((100% - var(--I))*.5);
-// }
-
+ 
 
 @media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
 
@@ -82,16 +56,12 @@
 
 	.Edge.-asidePC {
 		.EDGE;
+
+		// может перенести в AI
+		background-color: aqua;
 		padding-left: calc(var(--AsideMin) + var(--Edge)*.5);
 	}
-	// .Edge.-capital {
-	// 	.EDGE;
-	// 	padding-left: 4vw;
-	// }
-	// .Edge.-nex {
-	// 	.EDGE;
-	// 	padding-left: 7.15vw;
-	// }
+ 
 	.Edge.-leftBoxPC {
 		.EDGE;
 		padding-left: calc((var(--w) - var(--Box))*.5);;
@@ -101,17 +71,8 @@
 		padding-left: calc((var(--w) - var(--I))*.5);;
 	}
 
-	//
-	.Edge.-flaber {
-		.edge-flaber {
-			padding-right: var(--edge);
-		}
-	} 
-	.Edge.-flaber.off {
-		.edge-flaber {
-			padding-right: calc(var(--edge)*3)
-		}
-	} 
+	
+ 
 
 	//
 	.Edge.-I {
@@ -247,19 +208,6 @@
 		padding-right: var(--Edge);
 	}
 
-
-
-	#body.asideClose .Edge.-flaber.off {
-		.edge-flaber {
-			padding-right: calc(var(--edge)*1)
-		}
-	} 
-
-	.Edge.-flaber.off {
-		.edge-flaber {
-			padding-right: calc(var(--edge)*2)
-		}
-	} 
 }
 
 
