@@ -30,6 +30,19 @@
 }
 
 
+//
+
+#body.SATIRA {
+	.Nav.-nex {
+		._border {
+			transition: all linear .3s;
+		}
+		._line {
+			transition: transform .3s;
+		}
+	}
+}
+
 
 .Nav.-nex {
 	--Nav-corner:30deg;
@@ -65,8 +78,6 @@
 		border: var(--Nav-border-w) solid var(--Nav-c-border);
 		border-radius: 50%;
 		background-color: var(--Nav-bg-btn);
-		//
-		transition: all linear .3s;
 	}
 
 	._line {
@@ -74,7 +85,6 @@
 		height: var(--Nav-line-h);
 		background-color: var(--Nav-c-line);
 		backface-visibility: hidden;
-		transition: transform .3s;
 	}
 
 	._line.first {
