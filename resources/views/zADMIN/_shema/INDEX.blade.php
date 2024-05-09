@@ -8,7 +8,8 @@ $arrCSS = [
 ]
 ?>
 @extends('_shema.Aside', [
-    '$arrCSS' => $arrCSS,
+    'arrCSS' => $arrCSS,
+    'preloadCss' => 'stylesheet',
     'linkCssMin' => '/css/minAdmin.css',
     'linkCssApp' => '/css/appAdmin.css',
     'cssMilk' => 'skimp-size_Aside'
