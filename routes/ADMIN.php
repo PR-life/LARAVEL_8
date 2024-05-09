@@ -6,7 +6,8 @@ use Illuminate\Support\Facades\Route;
 //  !!!!!middleware verified не сработал + есть еще в коде этот момент
 // ищи по 15031049
 
-Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']], function () {
+// Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']], function () {
+Route::group(['namespace' => 'ADMIN','middleware' => ['auth']], function () {
     Route::get('/', function() {return view('zADMIN.Morda');})->name('morda');
 
 

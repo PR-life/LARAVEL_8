@@ -15,15 +15,8 @@ class AdminPolicy
         //
     }
 
-    public function view(User $user, User $model)
-    {
-		// dd($model->role == User::ROLE_ADMIN);
-		// return $model->role == User::ROLE_ADMIN;
-    }
-
     public function admin(User $user, User $model)
     {
-		// dd($model->role == User::ROLE_ADMIN);
 		return $model->role == User::ROLE_ADMIN;
     }
 
@@ -38,7 +31,10 @@ class AdminPolicy
         return $model->role == User::ROLE_READER;
     }
 
-
+    public function view(User $user, User $model)
+    {
+		return $model->role == User::ROLE_ADMIN;
+    }
 
     //
     public function create(User $user)

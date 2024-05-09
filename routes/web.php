@@ -7,6 +7,11 @@ use Illuminate\Support\Facades\Artisan;
 // use Illuminate\Support\Facades\App;
 //
 
+// Route::get('/asnonehome', function () {
+//     return redirect('/home');
+// })->name('home');
+
+
 // App::currentLocale();
 // App::setLocale($locale);
 // App::isLocale('en');

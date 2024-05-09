@@ -3,25 +3,20 @@
 // @import "../less/lib/theRearguard/_ol.less";
 
 //
-@import "../less/lib/theFont/font-Inter.less";
-@import "../less/lib/theFont/font-castle.less";
-@import "../less/lib/theFont/font-Gilroy.less";
-@import "../less/lib/theFont/font-OpenSans.less";
+// @import "../less/lib/theFont/font-Inter.less";
+// @import "../less/lib/theFont/font-castle.less";
+// @import "../less/lib/theFont/font-Gilroy.less";
+// @import "../less/lib/theFont/font-OpenSans.less";
 
 html {
-	--family: var(--family-Inter);
-	--family-2: var(--family-Gilroy);
+	--family: var(--family-55555);
+	--family-2: var(--family-55555);
 }
 
-
-.mail,
-.tel,
 .family-2,
 .family-2 * {
 	font-family: var(--family-2) !important;
 }
-
-
 
 h1 {
 	font-weight: 500;
@@ -33,19 +28,14 @@ h1 {
 
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
-	.menu.-top *,
-	.menu.-main *{
-		font-family: var(--family-2);
-	}
+	// .menu.-top *,
+	// .menu.-main *{
+	// 	font-family: var(--family-2);
+	// }
 }
-
-
-
 
 @media screen and (max-width: @w-menu-2) {
 
 }
 
-
 @import "./_ol.less";
-// @import "./Imago.less";

@@ -27,17 +27,13 @@ class AppServiceProvider extends ServiceProvider
         // Blade::if('admin', function() {
         //     return auth()->check() && auth()->user()->admin;
         // });
-        //
-        // URL::forceScheme('https');
-        // if (App::environment(['staging', 'production'])) {
-        //     URL::forceScheme('https');
-        // }
-
+         //
 
         Blade::directive('svg', function($expression) {
             $name = str_replace("'", '', $expression);
             return '<svg><use xlink:href="#svg-'. $name .'"></use></svg>';
         });
+        
         Blade::directive('price', function($expression) {
             return "<?php echo number_format($expression, 2, '.', ' '); ?>";
         });
@@ -56,6 +52,7 @@ class AppServiceProvider extends ServiceProvider
         Paginator::defaultView('vendor.pagination.Kyutinen');
         // Paginator::defaultSimpleView('vendor.pagination.view-name');
         //
+
 		$this->removeIndexPhpFromUrl();
     }
 

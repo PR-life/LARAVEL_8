@@ -1,4 +1,4 @@
-font-family - добавить типовый шрифты
+font-family - добавить типовой шрифт
 
 
 https://fontstorage.com/blog/unicode-range/?ysclid=lvmmotct50801652253
