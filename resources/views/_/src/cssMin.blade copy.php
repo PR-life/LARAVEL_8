@@ -1,4 +1,9 @@
 /* https://codebeautify.org/minify-html */
+<!-- h1 *,.h1 *,h2 *,.h2 *,.hMin>*,._h>*{
+	font-style: inherit;
+	font-family:inherit !important
+} -->
+
 
 *,*:before,*:after{
 	box-sizing:border-box
@@ -46,10 +51,7 @@ a {
 	font-weight:inherit;
 	text-decoration:none
 }
-h1 *,.h1 *,h2 *,.h2 *,.hMin>*,._h>*{
-	font-style:inherit;
-	font-family:inherit !important
-}
+ 
 ul{
 	list-style:none
 }

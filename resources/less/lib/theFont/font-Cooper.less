@@ -1,0 +1,27 @@
+@charset "UTF-8";
+
+
+html {
+    --family-Cooper: Cooper, "Times New Roman", sans-serif;
+}
+
+.familyCooper,
+.Family-Cooper * {
+	font-family: var(--family-Cooper) !important;
+}
+
+@font-face {
+    font-family: 'Cooper';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Cooper'), url(/font/Cooper/400.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Cooper';
+    font-style: italic;
+    font-weight: 400;
+    src: local('Cooper'), url(/font/Cooper/400i.woff2) format('woff2');
+    font-display: swap;
+}
+

@@ -4,12 +4,25 @@ html {
     --family-Epic:'Epic';
 }
 
+.familyEpic,
+.Family-Epic * {
+	font-family: var(--family-Epic) !important;
+}
 
 @font-face {
     font-family: 'Epic';
     font-style: normal;
-    // font-weight: 400;
-    src: local('Epic'), url(/font/Epic/3.woff) format('woff2');
+    font-weight: 400;
+    src: local('Epic'), url(/font/Epic/300.woff2) format('woff2');
+    font-display: swap;
+}
+
+
+@font-face {
+    font-family: 'Epic';
+    font-style: normal;
+    font-weight: 500;
+    src: local('Epic'), url(/font/Epic/500.woff2) format('woff2');
     font-display: swap;
 }
 
