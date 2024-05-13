@@ -1,4 +1,3 @@
-
 <div class="menu -fix flex bC index">
 
     <div class="_ico -home / OnOff {!! request()->routeIs('sinnergems.morda') ? 'On' : 'Off' !!}">
@@ -20,7 +19,6 @@
 			</span>
 		</a>
 	</div>
-
 
 	<div class="_ico -burger / flex cI cC" data-click data-localstorage="firstNo">
 		<label for="inputMenuMain" class="flex cC cI">
