@@ -78,19 +78,16 @@
 
 
 #body,
-.On .ARIK.-On,
+.SOMA.On .Axon > .ARIK.-On,
 .KIRA {
 	--ARIK:calc(var(--bar)*1.5);
 	--KIRA:calc(var(--bar)*1.5);
 }
 
-
-// ARIK - для бооков SMS
 .ARIK {
 	--ARIK:1rem;
 	--KIRA:1rem;
 }
-
 
 .ARIK.-M {
 	--ARIK:2rem;
@@ -106,41 +103,23 @@
 	--KIRA:4rem;
 }
 
-
+//
 .KIRA {
 	min-width: var(--KIRA);
-	// background-color: red;
-	// height: 2rem;
 }
 
 .ARIK {
 	min-width: var(--ARIK);
 }
-
-
-
-// .KIRA.-M {
-// 	min-width: 3rem;
-// }
-
-
- 
-
-
-// .on > .KIRA.-on,
-// .KIRA.-sms,
-// .KIRA.-aside {
-// 	min-width: var(--KIRA);
-// }
-
-
-
-.-KIRA.off {
+.-KIRA:not(.On) {
 	.KIRA {
 		min-width: 1rem;
 	}
 }
 
+
+
+//
 .Box {
 	max-width:var(--Box);
 }

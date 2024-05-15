@@ -70,7 +70,7 @@
 			// color: var(--c-input-abs-active);
 			transform: translateY(calc(2px - var(--x-Form-input-h)*.5 - var(--x-Form-label-lineHeight)*.5 + var(--x-Form-input-padding-top) + var(--x-Form-_shell-corrector)));
 
-			svg {display: none;}
+			> svg, > ._svg {display: none;}
 			b {font-size: 0;}
 		}
 
@@ -83,13 +83,12 @@
 			display: flex;
 			align-items: center;
 
-			svg{
+			> svg,
+			> ._svg {
+				border:1px solid #666;
 				width: var(--x-ico-w);
 				height: var(--x-ico-w);
 				margin-right: var(--x-ico-margin);
-
-				border:1px solid #666;
-				border-radius: 50%;
 				padding: 3px;
 			}
 		}

@@ -1,22 +1,20 @@
-<div class="menu -tile -XS / cloud / net">
+<div class="menu -tile / cloud / net">
 		
-    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content'])
         @slot('name', 'crm_id')
         @slot('id', 'save_null')
-        @slot('param', null)
-        @slot('value', null)
-        
+        @slot('value', 'none')
+        @slot('param_from_bd', 'none')
+
         определить <br>позже
     @endcomponent
 
     @foreach($Crm as $_crm)
-
-
-        @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+        @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content'])
             @slot('name', 'crm_id')
             @slot('id', $_crm->id)
-            @slot('param', 'checked')
             @slot('value', $_crm->id)
+            @slot('param_from_bd', null)
             
             {{$_crm->name}}
         @endcomponent

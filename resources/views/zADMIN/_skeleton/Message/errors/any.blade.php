@@ -2,7 +2,7 @@
     @slot('heading')
     ой!
     @endslot
-    <ol class="-S">
+    <ol class="-S slim">
         @foreach ($errors->all() as $error)
         <li>{{ $error }}</li>
         @endforeach 

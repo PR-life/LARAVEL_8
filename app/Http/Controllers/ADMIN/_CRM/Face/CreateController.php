@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\ADMIN\_CRM\Face;
 
 //
-use App\Models\Crm;
+use App\Models\CRM\Crm;
 use App\Models\Group;
 
 

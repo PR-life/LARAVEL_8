@@ -18,6 +18,6 @@ class EditController extends BaseController
             ->orWhereNull('category_id')
             ->get();
 
-        return view('zADMIN.PAGE.Customer.edit', compact('face','faces','categories','tags'));
+        return view('zADMIN.PAGE.zCRM.Customer.edit', compact('face','faces','categories','tags'));
     }
 }

@@ -1,0 +1,125 @@
+<?php
+
+namespace App\Models;
+
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\SoftDeletes;
+use App\Models\Traits\Filterable;
+use Carbon\Carbon;
+//
+
+class Item extends Model
+{
+    use HasFactory;
+	use SoftDeletes;
+	use Filterable;
+
+    protected $table = 'items';
+    protected $guarded = false;
+
+	// protected $withCount = ['likedUsers','comments'];
+	// protected $withCount = ['comments'];
+
+    // public function items() {
+    //     return $this->hasMany(
+    //         Item::class,
+    //         'tag_id',
+    //         'id', //
+    //     )->where('published', 1)->orderBy('order', 'asc');
+    // }
+
+    // public function likedUsers() {
+    //     return $this->belongsToMany(
+    //         User::class,
+    //         'paper_user_likes',
+    //         'paper_id',
+    //         'user_id'
+    //     );
+    // }
+	
+    // public function comments() {
+    //     return $this->hasMany(
+    //         CommentPaper::class,
+    //         'item_id',
+	// 		'id',
+    //     )->orderBy('created_at', 'desc');
+    // }
+
+
+    public function items() {
+        return $this->belongsToMany(
+            Item::class,
+            'item_items',
+            'item_id',
+            'items_id'
+        )->orderBy('order');
+    }
+
+    public function faqs() {
+        return $this->belongsToMany(
+            Faq::class,
+            'item_faqs',
+            'item_id',
+            'faq_id'
+        )->orderBy('order');
+    }
+
+
+    public function categories() {
+        return $this->belongsToMany(
+            Category::class,
+            'item_categories',
+            'item_id',
+            'category_id'
+        )->orderBy('order');
+    }
+
+    public function tags() {
+        return $this->belongsToMany(
+            Tag::class,
+            'item_tags',
+            'item_id',
+            'tag_id'
+        )->orderBy('order');
+    }
+
+    public function tag() {
+        // return 1;
+        return $this->belongsTo(
+            Tag::class,
+            'tag_id', // foreignKey
+			'id', // ownerKey
+        );
+    }
+
+    public function group() {
+        // return 1;
+        return $this->belongsTo(
+            Group::class,
+            'group_id', // foreignKey
+			'id', // ownerKey
+        );
+    }
+
+    public function category() {
+        return $this->belongsTo(
+            Category::class,
+            'category_id',
+			'id',
+        );
+    }
+
+    public function user() {
+        return $this->belongsTo(
+            User::class,
+            'user_id',
+			'id',
+        );
+    }
+
+
+	public function getDateAsCarbonAttribute(){
+		return Carbon::parse($this->created_at);
+	}
+}

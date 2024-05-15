@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.Bg {
+    --x-bg-edge: -1rem;
+    --x-bg-fon: var(--bg);
+    --x-bg-dot: rgba(133, 168, 255, 0.35);
+    --x-23111034_1: 10px;
+    --x-23111034_2: calc(var(--x-23111034_1) + 1px);
+}
+
+.Bg.-grid.vol-crm {
+    left: var(--x-bg-edge);
+    //
+    border-radius: 2rem 1rem 0 0;
+    background: linear-gradient(90deg, var(--x-bg-fon) var(--x-23111034_1), transparent 1%) 50%, linear-gradient(var(--x-bg-fon) var(--x-23111034_1), transparent 1%) 50%, var(--x-bg-dot);
+    background-size: var(--x-23111034_2) var(--x-23111034_2);
+}
+
+.Bg.-grid.vol-crm::before,
+.Bg.-grid.vol-crm::after {
+    content: '';
+    position: absolute;
+    left: var(--x-bg-edge);
+    right: 0;
+    bottom: 0;
+}
+
+
+.Bg.-grid.vol-crm::before {
+    top: 1rem;
+    opacity: 0.85;
+    background: linear-gradient(to left, #28282d 0, transparent 50px, transparent);
+  }
+
+.Bg.-grid.vol-crm::after {
+    top: 0;
+    background: linear-gradient(to bottom, transparent 0, var(--bg) 500px, var(--bg));
+}

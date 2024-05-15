@@ -1,4 +1,4 @@
-@component('zADMIN._wrap.Teaser.index', ['Var' => $Var, 'css' => 'space-left'])
+@component('zADMIN._wrap.Teaser.index', ['Var' => $Var, 'css14051235' => 'space-left'])
 
     @slot('cell_2')
         <div class="paragraph"></div>

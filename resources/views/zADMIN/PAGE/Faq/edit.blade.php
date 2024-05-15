@@ -33,7 +33,7 @@
 		@include('zADMIN.PAGE.Faq.lego.edit.lego.Relationships')
 
 		
-		@component('zADMIN._wrap.Flaber.edit')
+		@component('_wrap.Flaber.admin.edit')
 
 			@slot('flaber')
 				{{-- @include('zADMIN.PAGE.Faq.lego.edit.sms')	 --}}

@@ -13,6 +13,6 @@ class CreateController extends BaseController
         $group = Group::whereSku('customers')->firstOrFail();
         $categories = Category::where('group_id', '=', $group->id)->get();
 
-        return view('zADMIN.PAGE.Customer.create',compact('categories'));
+        return view('zADMIN.PAGE.zCRM.Customer.create',compact('categories'));
     }
 }

@@ -29,7 +29,7 @@ class IndexController extends BaseController
         $categories = Category::all();
 		$tags = Tag::all();
 
-        return view('zADMIN.PAGE.Customer.index', compact('faces','categories','tags'));
+        return view('zADMIN.PAGE.zCRM.Customer.index', compact('faces','categories','tags'));
 
     }
 }

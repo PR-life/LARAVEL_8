@@ -69,20 +69,29 @@
         background: linear-gradient(170deg, rgba(133, 168, 255, 0.1) calc(500px*0.33), transparent calc(500px*0.88));
     }
 
-    .sms-plot {
-        position: relative;
-        
+    .Flaber {
+        --x-edge-bg:.5rem;
+        --x-edge-bg-top:80px;
+        .bg-aside {
+            position: relative;
+        }
+
+        .bg-aside::after {
+            content: '';
+            position: absolute;
+            pointer-events: none;
+            left: var(--x-edge-bg);
+            right: var(--x-edge-bg);
+            top: var(--x-edge-bg-top);
+            bottom: 0;
+            border-radius: 1rem 1rem 0 0;
+            background: linear-gradient(170deg, rgba(133, 168, 255, 0.1) calc(500px*0.33), transparent calc(500px*0.88));
+        }
     }
-    .sms-plot::after {
-        content: '';
-        position: absolute;
-        pointer-events: none;
-        left: .5rem;
-        right: .5rem;
-        top: 80px;
-        bottom: 0;
-        border-radius: 1rem 1rem 0 0;
-        background: linear-gradient(170deg, rgba(133, 168, 255, 0.1) calc(500px*0.33), transparent calc(500px*0.88));
+
+    #wrap_edit_customerFS .Flaber {
+        --x-edge-bg:0;
+        --x-edge-bg-top:0;
     }
 
     .Message {

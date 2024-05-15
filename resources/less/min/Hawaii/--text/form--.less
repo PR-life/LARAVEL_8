@@ -110,9 +110,12 @@ input.-S{
     }
 
  
-
 	input:focus {
-		border-color: var(--c-input-border-focus);
+		border-color: var(--c-input-border-focus) !important;
+	}
+
+	.Error > input {
+		border-bottom: 1px solid var(--c-input-border-error);
 	}
 
 

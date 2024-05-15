@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Traits\Filterable;
 use Carbon\Carbon;
 //
+use App\Models\CRM\Crm;
 
 
 class Face extends Model
@@ -25,7 +26,16 @@ class Face extends Model
 
 
 
+    public function crm() {
+        return $this->belongsTo(
+            Crm::class,
+            'crm_id',
+			'id',
+        );
+    }
 
+
+    //
     public function faces() {
         return $this->belongsToMany(
             Face::class,

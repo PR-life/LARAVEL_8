@@ -11,6 +11,7 @@ use Database\Seeders\zDT\dt_UserSeeder;
 
 
 use App\Models\User;
+use App\Models\CRM\Crm;
 use App\Models\Category;
 use App\Models\Tag;
 use App\Models\Group;

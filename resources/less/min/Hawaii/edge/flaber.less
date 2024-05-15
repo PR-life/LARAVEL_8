@@ -7,7 +7,7 @@
 			padding-right: var(--edge);
 		}
 	} 
-	.Edge.-flaber.off {
+	.Edge.-flaber:not(.On) {
 		.edge-flaber {
 			padding-right: calc(var(--edge)*3)
 		}
@@ -17,13 +17,13 @@
 
 @media (min-width:@w-menu-2-plus) and (max-width:@metrika-80) {
 
-	#body.asideClose .Edge.-flaber.off {
+	#body.asideClose .Edge.-flaber:not(.On) {
 		.edge-flaber {
 			padding-right: calc(var(--edge)*1)
 		}
 	} 
 
-	.Edge.-flaber.off {
+	.Edge.-flaber:not(.On) {
 		.edge-flaber {
 			padding-right: calc(var(--edge)*2)
 		}

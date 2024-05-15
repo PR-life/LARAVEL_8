@@ -2,7 +2,7 @@
 
 namespace App\Exports\Crm;
 
-use App\Models\Crm;
+use App\Models\CRM\Crm;
 use Maatwebsite\Excel\Concerns\FromCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadings;

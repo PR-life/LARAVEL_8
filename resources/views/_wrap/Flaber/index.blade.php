@@ -1,6 +1,17 @@
-<div id="{{$id ?? 'wrap_27041452'}}" class="Flaber {{$css ?? ''}} / relative" {!!$data ?? ''!!}>
-    <div class="_flaber">
+<div id="{{$id ?? 'wrap_flaber_27041452'}}" class="Flaber {{$css_27041452 ?? ''}} / _Axon Axon / relative" {!!$data ?? ''!!}>
+    <div class="_flaber / _Axon Axon">
         {{ $slot ?? ''}}
-        <div class="KIRA -sms"></div>
+
+        @switch($style_off ?? '')
+            @case('ARIK')
+                <div class="none on / Min -w6"></div>
+                <div class="ARIK -XL -On"></div>
+                @break
+            @case('cc555555')
+                {{-- <div class="_left"></div> --}}
+                @break
+            @default
+                <div class="KIRA -sms"></div>
+        @endswitch
     </div>
 </div>

@@ -45,7 +45,7 @@
 				{{-- https://ecco.ru/catalog/500164/02178/ --}}
 				<div class="hill"></div>
 				<div class="void-s space-07031346">
-					@include('zADMIN.PAGE.Customer.lego.edit.right')
+					@include('zADMIN.PAGE.zCRM.Customer.lego.edit.right')
 					<div class="flex cC cI [ margin top ]">
 						<div class="content-s Grey -c30 / relative">
 
@@ -70,7 +70,7 @@
 			
 			<div class="Abs -all / _bg _indexMin"></div>
 			<div class="relative">
-				@include('zADMIN.PAGE.Customer.lego.edit.body')
+				@include('zADMIN.PAGE.zCRM.Customer.lego.edit.body')
 			</div>
 		@endcomponent
 

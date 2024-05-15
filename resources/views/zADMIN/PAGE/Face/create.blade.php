@@ -1,7 +1,7 @@
 @extends('zADMIN._shema.create')
 
 @section('title')New. Профиль @endsection
-
+@section('css-body', '-create ')
 
 @push('addBread')
 	<li>
@@ -36,7 +36,7 @@
 		@endcomponent
 
 		<div class="hill"></div>
-		@include('zADMIN._lego.form.btn.create.footer')
+		{{-- @include('zADMIN._lego.form.btn.create.footer') --}}
 
 	@endcomponent 
 </div>

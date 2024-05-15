@@ -1,4 +1,4 @@
-<div class="item flex cI relative / Soma / {{$Var->published == 1 ? 'published' : 'pause'}} {{$Var->mafia == 1 ? 'mafiaOn' : 'mafiaOff'}} {{$Var->featured == 1 ? 'featured' : ''}} {{'status-'.$Var->status}} mockup-{{$Var->mockup}} {{$css ?? ''}}">
+<div class="item flex cI relative / Soma / {{$Var->published == 1 ? 'published' : 'pause'}} {{$Var->mafia == 1 ? 'mafiaOn' : 'mafiaOff'}} {{$Var->featured == 1 ? 'featured' : ''}} {{'status-'.$Var->status}} mockup-{{$Var->mockup}} {{$css14051235 ?? ''}}">
 	<div class="table-wrap W-100">
 		<div class="cell-1">
 			{!!$slot!!}

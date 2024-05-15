@@ -1,7 +1,7 @@
-<div class="Sms -w / relative" data-stopClick>
-    <div class="Wings">
-        <div class="_win -t pr-4">
-            <div class="Plot plot-h / sms-design sms-off / flex dC bC / hidden">
+<div class="Sms -w / _Axon / relative" data-stopClick>
+    <div class="Wings / _Axon">
+        <div class="_win -t / _Axon Axon /  pr-4">
+            <div class="none on_flex / Plot plot-h / sms-design / flex dC bC / hidden">
                 <div class="relative" style="height: 100%">
                     <div class="Scroll -shift">
                         <div class="_scr">

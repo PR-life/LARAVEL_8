@@ -26,7 +26,7 @@
 			@include('zADMIN._bd.edit.published',['Var'=> $user])
 		</div>
 
-		@component('zADMIN._wrap.Flaber.edit')
+		@component('_wrap.Flaber.admin.edit')
 
 			@slot('flaber')
 				@include('zADMIN.PAGE.User.lego.edit.sms')

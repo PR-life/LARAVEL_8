@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests\ADMIN\Face;
 
-use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Requests\ADMIN\BaseRelationsRequest;
 
-class StoreRequest extends FormRequest
+class StoreRequest extends BaseRelationsRequest
 {
     public function authorize()
     {
@@ -54,29 +54,22 @@ class StoreRequest extends FormRequest
             'face_par_2' => 'nullable|string',
             'face_par_3' => 'nullable|string',
 
-            'knot_1' => 'nullable|string',
+            //
             'note' => 'nullable|string',
 
             //
-            'group_id' => 'nullable|integer|exists:groups,id',
-            'tag_id' => 'nullable|integer|exists:tags,id',
-            'category_id' => 'nullable|integer|exists:categories,id',
-
-            'tag_ids' => 'nullable|array',
-            'tag_ids.*' => 'nullable|integer|exists:tags,id',    
-
+            'crm_id' => 'nullable|integer|exists:crm,id',
 
 			//
-            'order' => 'nullable|integer',
-            'status' => 'nullable|integer',
-            'published' => 'nullable|integer',
-
             'mafia' => 'nullable|integer',
-
-			//
-            'created_at' => 'nullable',
-            'updated_at' => 'nullable',
-            'deleted_at' => 'nullable',
         ];
     }
+
+	public function messages() {
+		// return parent::messages(); // по умолчаиню
+		return array_merge(parent::messages(), [
+			'name.required' => 'Имя: обязательное поле для нового профиля',
+			'surname.required' => 'Фамилия: обязательное поле для нового профиля',
+		]);
+	}
 }

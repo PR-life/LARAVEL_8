@@ -1,4 +1,4 @@
-@component('zADMIN._wrap.Flaber.edit')
+@component('_wrap.Flaber.admin.edit')
 
 @slot('flaber')
     @include('zADMIN.OOGWAY._lego.itemInfo')

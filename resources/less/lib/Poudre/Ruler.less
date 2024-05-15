@@ -1,0 +1,49 @@
+@charset "UTF-8";
+
+.Ruler {
+    --Ruler-bg: #333;
+}
+
+  #Wrap_edit_customerFS.On .Ruler .major,
+  #Wrap_edit_customerFS.On .Ruler .milestone {
+    --Ruler-bg: #222;
+  }
+  #Wrap_edit_customerFS.On .Ruler .label {
+    opacity: 0.1;
+  }
+  .Ruler {
+    --Ruler-w: 9px;
+    --Ruler-h: 1px;
+    --Ruler-font: 9px;
+    --Ruler-bg: #666;
+  }
+  .Ruler > div {
+    width: var(--Ruler-w);
+    height: var(--Ruler-h);
+    box-sizing: content-box;
+    border-top: solid 1px var(--Ruler-bg);
+  }
+  .Ruler .major {
+    --Ruler-bg: #777;
+    --Ruler-w: 13px;
+  }
+  .Ruler .milestone {
+    --Ruler-bg: #888;
+    --Ruler-w: 17px;
+  }
+  .Ruler .milestone {
+    position: relative;
+  }
+  .Ruler .label {
+    font-size: var(--Ruler-font);
+    line-height: var(--Ruler-font);
+    opacity: 0.5;
+    transition: all 0.2s linear;
+  }
+  .Ruler.-v.vol-left {
+    top: -1px;
+  }
+  .Ruler.-v.vol-left .label {
+    left: calc(100% + 7px);
+    top: calc(var(--Ruler-font) - var(--Ruler-font)*1.5);
+  }
