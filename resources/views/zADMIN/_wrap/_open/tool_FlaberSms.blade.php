@@ -1,6 +1,6 @@
 <div id="wrapSms_{{$id}}" class="SOMA / OnOff net" data-click data-css data-toggle='on' data-localstorage localstorage-id>
 
-    <div class="_name flex bC pl-edgeS / _Axon / pointer">
+    <div class="x-name flex bC pl-edgeS / _Axon / pointer">
         <div class="content"><span class="noEvents slctn">{!!$name!!}</span></div>
         <div class="Axon noEvents">
             <div class="off / Ico -XS / orb-s contentBox">@svg('three')</div>

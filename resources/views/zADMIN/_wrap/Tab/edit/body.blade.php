@@ -16,8 +16,8 @@
 
 <div id="tab_EditTabBody" class="Tabs" localstorage-controlCss addcss='-x' param-id='active_menuEditTabBody'>
 
-	<div id="x_06051448" class="Fog / Gardener / OnOff Soma / relative index" 
-		data-click data-css data-toggle='On -on'
+	<div id="x_06051448" class="Fog / Gardener / OnOff SOMA / relative index" 
+		data-click data-css data-toggle='On'
 		data-localstorage localstorage-id
 	>
 

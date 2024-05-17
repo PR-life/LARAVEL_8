@@ -14,6 +14,7 @@ class UpdateController extends BaseController
 
         // dd($request);
         $data = $request->validated();
+        // dd($data);
         $face = $this->service->update($face,$data);
 
 		return back()->with('UpdateController', true);

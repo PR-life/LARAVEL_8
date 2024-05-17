@@ -47,48 +47,48 @@
     @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
         @slot('name', 'public_contact')
         @slot('id', 'public_contact_def')
-        @slot('param', 'checked')
         @slot('value', null)
+        @slot('param_from_bd', null)
         
         не выбран
     @endcomponent
     @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
         @slot('name', 'public_contact')
         @slot('id', 'public_contact_phone')
-        @slot('param', 'phone')
-        @slot('value', $face->public_contact)
+        @slot('value', 'phone')
+        @slot('param_from_bd', $face->public_contact)
         
         Телефон
     @endcomponent
     @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
         @slot('name', 'public_contact')
         @slot('id', 'public_contact_email')
-        @slot('param', 'email')
-        @slot('value', $face->public_contact)
+        @slot('value', 'email')
+        @slot('param_from_bd', $face->public_contact)
         
         email
     @endcomponent
     @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
         @slot('name', 'public_contact')
         @slot('id', 'public_contact_whatsapp')
-        @slot('param', 'whatsapp')
-        @slot('value', $face->public_contact)
+        @slot('value', 'whatsapp')
+        @slot('param_from_bd', $face->public_contact)
         
         whatsapp
     @endcomponent
     @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
         @slot('name', 'public_contact')
         @slot('id', 'public_contact_telegram')
-        @slot('param', 'telegram')
-        @slot('value', $face->public_contact)
+        @slot('value', 'telegram')
+        @slot('param_from_bd', $face->public_contact)
         
         telegram
     @endcomponent
     @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
         @slot('name', 'public_contact')
         @slot('id', 'public_contact_viber')
-        @slot('param', 'viber')
-        @slot('value', $face->public_contact)
+        @slot('value', 'viber')
+        @slot('param_from_bd', $face->public_contact)
         
         viber
     @endcomponent

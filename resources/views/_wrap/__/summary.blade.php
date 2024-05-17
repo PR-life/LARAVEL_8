@@ -1,6 +1,6 @@
 <div id="{{$id ?? 'wrapSummary'}}" class="_summary / SOMA OnOff / {{$css ?? '-border net'}}" data-click data-css data-toggle='on' data-localstorage localstorage-id>
 
-    <div class="_Axon / _name / flex bC pl-edgeS / relative pointer">
+    <div class="_Axon / x-name / flex bC pl-edgeS / relative pointer" style="padding-bottom: 5px">
         @include('_brick.Close.abs.Axon', ['css' => $varCssClose ?? null])
         <div class="{{$cssName ?? 'content'}}"><span class="noEvents slctn">{!!$name!!}</span></div>
     </div>

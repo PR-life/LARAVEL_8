@@ -1,5 +1,5 @@
 @extends('zADMIN._shema.INDEX')
-@push('css-body', '-edit ')
+@push('css-body', '-plura asideClose ')
 
 @include('zADMIN._bd._src.edit.min')
 
@@ -10,11 +10,13 @@
 @endpush
 
 
-@section('Bee')
+
+
+{{-- @section('Bee')
 <div class="Bee">
 	@stack('bee')
 </div>
-@endsection
+@endsection --}}
 
 
 @if (session('UpdateController'))

@@ -1,3 +1,5 @@
+<div class="paragraph"></div>
+<div class="void">
 @component('_wrap.__.summary',['icoCloseName' => 'closeRoll'])
     @slot('css', '')
     @slot('cssName', 'content-m pl-4')
@@ -42,6 +44,6 @@
         <li>49</li>
         <li>50</li>
     </ul>
-    
 @endcomponent
+</div>
  

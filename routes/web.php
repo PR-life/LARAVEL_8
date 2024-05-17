@@ -11,6 +11,7 @@ use Illuminate\Support\Facades\Artisan;
 //     return redirect('/home');
 // })->name('home');
 
+// function () {return redirect('/home');}
 
 // App::currentLocale();
 // App::setLocale($locale);

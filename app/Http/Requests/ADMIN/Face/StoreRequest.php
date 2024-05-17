@@ -13,7 +13,8 @@ class StoreRequest extends BaseRelationsRequest
 
     public function rules()
     {
-        return [
+
+        return array_merge(parent::rules(), [
 
             'sku' => 'nullable|string',
 
@@ -62,7 +63,7 @@ class StoreRequest extends BaseRelationsRequest
 
 			//
             'mafia' => 'nullable|integer',
-        ];
+        ]);
     }
 
 	public function messages() {

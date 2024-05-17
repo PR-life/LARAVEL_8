@@ -1,11 +1,5 @@
-<div class="paragraph"></div>
-<div class="flex cross-l">
-	<a class="Ico -XL / flex cI cC" href="{{route('admin.plura.face.edit',$face->id)}}">
-		<span class="Ico block">
-			@svg('pen')
-		</span>
-	</a>
-
+<div class="flex / space">
+	<div class="Ico -XXL"></div>
 	<div>
 		<div class="h1">{{$face->surname}} {{$face->name}} {{$face->patronymic}}</div>
 
@@ -15,7 +9,7 @@
 
 		<div class="paragraphX2"></div>
 		<div class="flex">
-			@include('zADMIN.PAGE.Face.lego.edit.brick.param.birthday')
+			@include('zADMIN.PAGE.zCRM.Customer.lego.edit.brick.param.birthday')
 		</div>
 	</div>
 </div>
@@ -28,19 +22,18 @@
 
 <div class="hill-s"></div>
 
-<div class="space-right">
 @component('zADMIN._wrap.Tab.edit.body')
 	@slot('nameTab1', 'Контакты')
 	@slot('nameTab2', 'Семья')
 	@slot('tab_1')
 		<div class="paragraphX2 / net"></div>
-		@include('zADMIN.PAGE.Face.lego.edit.lego.tab_data')
+		@include('zADMIN.PAGE.zCRM.Customer.lego.edit.lego.tab_data')
 	@endslot
 	@slot('tab_2')
 		{{-- @include('zADMIN.PAGE.zCRM.Customer.lego.edit.lego.tab_family') --}}
 	@endslot
 @endcomponent
-</div>
+
 <div class="hill"></div>
 
 @include('zADMIN._wrap.text.nameTextarea', ['name' => 'Блокнот'])

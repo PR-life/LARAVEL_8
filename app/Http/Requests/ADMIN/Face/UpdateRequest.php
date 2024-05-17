@@ -15,8 +15,8 @@ class UpdateRequest extends StoreRequest
     public function rules()
     {
         return array_merge(parent::rules(), [
-			'name' => 'required|string',
-            'surname' => 'required|string',
+			'published' => 'nullable',
+            // 'surname' => 'required|string',
         ]);
     }
 }

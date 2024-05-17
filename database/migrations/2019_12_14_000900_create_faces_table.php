@@ -17,6 +17,7 @@ class CreateFacesTable extends Migration
             $table->string('surname')->nullable();
             $table->string('patronymic')->nullable();
             $table->date('birthday')->nullable();
+            $table->string('gender')->nullable();
             // date
             // timestamp
 

@@ -30,30 +30,29 @@
 			@include('zADMIN._bd.edit.face',['Var'=> $face])
 		</div>
  
-
+		 
 		@component('_wrap.Flaber.admin.edit_customerFS')
-			@slot('flaber')
-				<div class="Abs -lt -b / js-Ruler / noEvents Selection _indexMin">
-					<div class="hill-s"></div>
+			@slot('before_Flaber')
+				<div class="Abs -lt -b / noEvents Selection _indexMax / hidden" style="min-width: 3rem">
+					<div class="hill"></div>
+					<div class="js-Ruler"></div>
 				</div>
 			@endslot
-			{{-- @slot('_r') --}}
-				{{-- https://rubashkin.su/muzhskie-rubashki/ --}}
-				{{-- https://ecco.ru/catalog/500164/02178/ --}}
-				{{-- <div class="hill"></div> --}}
-				{{-- <div class="void-s space-07031346"> --}}
-					{{-- @include('zADMIN.PAGE.zCRM.Customer.lego.edit.right') --}}
-					{{-- @include('zADMIN.PAGE.Face.lego.x_14051750') --}}
-				{{-- <div class="hill"></div> --}}
-			{{-- @endslot --}}
-			
-			<div class="Abs -all / Bg -grid vol-crm"></div>
+			@slot('indent_Flaber')
+				<div class="none on" style="min-height: 85vh"></div>
+			@endslot
+			@slot('flaber')
+				@include('zADMIN.PAGE.Face.lego.edit.right')
+				{{-- @include('zADMIN.PAGE.Face.lego.x_14051750') --}}
+			@endslot
 
+			<div class="Abs -all / Bg -grid vol-crm"></div>
 			<div class="relative">
-				@include('zADMIN.PAGE.zCRM.Customer.lego.edit.body')
+				@include('zADMIN.PAGE.Face.lego.edit.body')
 			</div>
 
 		@endcomponent
+ 
 
 		<div class="hill"></div>
 		@include('zADMIN._lego.form.btn.edit.footer')

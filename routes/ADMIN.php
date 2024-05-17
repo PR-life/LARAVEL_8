@@ -143,4 +143,5 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth']], function () {
 
 require __DIR__.'/sherpa/index.php';
 require __DIR__.'/CRM/index.php';
+require __DIR__.'/CRM/this.php';
  
