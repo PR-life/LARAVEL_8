@@ -23,6 +23,8 @@ class StoreRequest extends BaseRelationsRequest
             'surname' => 'required|string',
             'patronymic' => 'nullable|string',
             'birthday' => 'nullable',
+            'gender' => 'nullable',
+
 
             //
             'email' => 'nullable|email',

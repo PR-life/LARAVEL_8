@@ -42,11 +42,11 @@
 				<div class="none on" style="min-height: 85vh"></div>
 			@endslot
 			@slot('flaber')
-				@include('zADMIN.PAGE.Face.lego.edit.right')
+				@include('zADMIN.PAGE.Face.lego.edit.right'.config('AS.view_switch'))
 				{{-- @include('zADMIN.PAGE.Face.lego.x_14051750') --}}
 			@endslot
 
-			<div class="Abs -all / Bg -grid vol-crm"></div>
+			<div class="Abs vol-20052023 / Bg -grid vol-crm"></div>
 			<div class="relative">
 				@include('zADMIN.PAGE.Face.lego.edit.body')
 			</div>

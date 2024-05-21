@@ -1,6 +1,6 @@
 @extends('zADMIN._shema.INDEX')
 
-@push('css-body', '-index ')
+@push('css-body', 'role-' . auth()->user()->role . '-index ')
 
 @push('topAfter')
     @include('zADMIN.PAGE._lego.manager.top_after')

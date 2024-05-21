@@ -36,6 +36,19 @@
 
 @component('_wrap.step.Tochka.line')
     @slot('step', '4')
+    {{-- <div class="content b600">шаг 1</div> --}}
+    <div class="paragraph"></div>
+
+    <div class="flex cross">
+        <div class="content">пол</div>
+        {{-- <div class="paragraph"></div> --}}
+        @include('zADMIN.PAGE.Face.lego.create.check_gender')
+    </div>
+    <div class="paragraphX2"></div>
+@endcomponent
+
+@component('_wrap.step.Tochka.line')
+    @slot('step', '5')
     {{-- <div class="content b600">шаг 4</div> --}}
     <div class="paragraph"></div>
     <button class="content-m / transparent a" type="submit">Сохранить и продолжить</button>

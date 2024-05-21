@@ -19,6 +19,10 @@ class EditController extends BaseController
         //     ->orWhereNull('category_id')
         //     ->get();
 
+        $link_view_flaber = 'zADMIN.PAGE.Face.lego.edit.right' . config('AS.view_switch');
+        // dd($link_view_flaber);
+        // config('AS.tg_token');
+
         return view('zADMIN.PAGE.Face.edit', compact('face','faces','categories','tags'));
     }
 }

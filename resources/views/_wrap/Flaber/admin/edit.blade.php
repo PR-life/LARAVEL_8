@@ -17,6 +17,6 @@
             </div>
         </div>
 
-        @include('_wrap.Flaber.admin.lego.wrap')
+        @include('_wrap.Flaber.admin.lego.wrap_content')
     @endcomponent
 </div>

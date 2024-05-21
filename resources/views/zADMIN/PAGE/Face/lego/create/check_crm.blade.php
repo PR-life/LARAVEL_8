@@ -3,8 +3,8 @@
     @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content'])
         @slot('name', 'crm_id')
         @slot('id', 'save_null')
-        @slot('value', 'none')
-        @slot('param_from_bd', 'none')
+        @slot('value', '')
+        @slot('param_from_bd', '')
 
         определить <br>позже
     @endcomponent

@@ -15,7 +15,7 @@ class AddParamToUsersTable extends Migration
     {
         Schema::table('users', function (Blueprint $table) {
 			$table->after('remember_token', function ($table) {
-				$table->string('nickname')->nullable()->unique();
+				$table->string('nickname')->nullable();
 				$table->string('rank')->nullable();
 				$table->string('avatar')->nullable();
 

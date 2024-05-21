@@ -1,36 +1,36 @@
 @charset "UTF-8";
 
-.menu.-round {
-	--x-menu-round: 100px;
-}
+@import "./menu/_ol.less";
 
-.menu.-roundS {
-	--x-menu-round: 5px;
-}
 
-.menu.-roundS,
-.menu.-round {
+// .menu.-round {
+// 	--x-menu-round: 100px;
+// }
 
-	// > li,
-	>li>* {
-		border-radius: var(--x-menu-round);
-	}
-}
+// .menu.-roundS {
+// 	--x-menu-round: 5px;
+// }
+
+// .menu.-roundS,
+// .menu.-round {
+// 	>li>* {
+// 		border-radius: var(--x-menu-round);
+// 	}
+// }
 
 
 @media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
-	.menu.-roundPC {
-		--x-menu-round: 100px;
-	}
+	// .menu.-roundPC {
+	// 	--x-menu-round: 100px;
+	// }
 
-	.menu.-roundPC {
+	// .menu.-roundPC {
 	
-		// > li,
-		>li>* {
-			border-radius: var(--x-menu-round);
-		}
-	}
-
+	// 	// > li,
+	// 	>li>* {
+	// 		border-radius: var(--x-menu-round);
+	// 	}
+	// }
 }
 
 
@@ -96,27 +96,17 @@
 
 
 @media screen and (max-width: @w-menu-2) {
-	// .menu.-tag,
+
 	.menu {
 		--x-menu-margin-li: .5rem;
 	}
 	.menu.-tileMbl {
 		--x-menu-margin-li: 1rem;
 	}
-	// .menu.-tag {menu -tag -dark -shadow -tileMbl / lie Roll_mbl -space -scrollBar
-	// 	--x-menu-margin-li: 1rem;
-	// }
 
 }
 
-// .menu.-tag.Kite {
-//     --x-menu-margin-li:.25rem;
-//     --x-menu-padding-li--left: 1rem;
-//     --x-menu-padding-li--top: .75rem;
-// }
 
-
-// .menu.-tag,
 .menu {
 	--ulol-line: ~"calc(var(--fontMenuTag)*1.4)";
 }
@@ -128,12 +118,29 @@
 	max-width:100%;
 }
 
-
- 
-
 .menu.-block li > .a a,
 .menu.-block li > * {
 	display: block;
 }
 
  
+//
+.menu {
+	> * {
+		font-size: var(--fontMenu);
+	}
+}
+.menu.-tag > * {
+	font-size: var(--fontMenuTag);
+}
+
+.menu.-main > * {
+	font-size: var(--fontMenuMain);
+}
+
+@media screen and (max-width: @w-menu-2) {
+
+	.menu.-tag.-tileMbl > * {
+		font-size: var(--fontMenu);
+	}
+}

@@ -36,7 +36,7 @@ class CreateFacesTable extends Migration
             $table->string('area')->nullable();
 
             //
-            $table->string('nickname')->nullable()->unique();
+            $table->string('nickname')->nullable();
             $table->string('avatar')->nullable();
 
             //

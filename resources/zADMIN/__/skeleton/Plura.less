@@ -1,0 +1,99 @@
+@charset "UTF-8";
+
+
+.gender-female {
+    .x-male {display: none;}
+}
+.gender-male {
+    .x-female {display: none;}
+}
+
+//
+.Plura {
+    --Plura-edge-left: 2vw;
+
+
+    
+}
+
+.Plura.-aside {
+
+    width: 25vw;
+    background: #0162fd;
+    border-radius: 0 1rem 1rem 0;
+
+    .-Black {
+        --c-text:rgba(255, 255, 255,.9);
+    }
+
+    .x-space-left {
+        padding-left: var(--Plura-edge-left);
+    }
+
+    .menu.-plura {
+        --c-menu-active:#fff;
+        --bg-menu-active:#0077ff;
+        --c-menu-border-active:#333;
+
+        
+        > li > * {
+            padding-left: var(--Plura-edge-left);
+            border-bottom: 1px dashed rgba(255,255,255,.25);
+        }
+        
+    }
+}
+
+
+
+form.Plura {
+    > .Tabs > ._tab > ._shell {
+        border-bottom: 1px solid rgba(255, 255, 255, .1);
+    }
+}
+
+
+//
+
+#body.-plura.Z2 {
+    #Top {
+        width: 95%;
+        transition: width .1s linear;
+    }
+}
+
+#body.-plura {
+    #Top {
+        margin-left: auto;
+        margin-right: auto;
+        width: 80%;
+        background: #000;
+        border-radius: 0 0 1rem 1rem;
+        padding-right: var(--edge);
+
+        transition: width .05s linear;
+
+    }
+    .Design.x-Admin.asideClose .oiBar ._wrap > ._main {
+        background: #000;
+    }
+    #oiBar {
+        background: linear-gradient(to right, transparent, #0162fd);
+    }
+    
+    #wrap::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        height: 200px;
+        background: #0162fd;
+    }
+}
+
+
+//
+.Plura.-edit {
+    background: #1f1f1f;
+    border-radius: 1rem;
+}
