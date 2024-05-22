@@ -11,7 +11,7 @@
     <div class="Wings / Goo -header / _indexMax">
         <div class="_win -t">
 
-            <div class="void x-07081718 Grey">
+            <div id="userMenu_main" class="void x-07081718 Grey">
                 @include('zADMIN.menu.Bar.user')
             </div>
 

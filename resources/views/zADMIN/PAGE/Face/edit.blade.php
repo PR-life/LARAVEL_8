@@ -24,14 +24,14 @@
  
 <div class="I aura">
 	@component('zADMIN._wrap.form.edit', ['route' => route('admin.crm.face.update', $face->id), 'css' => '-face'])
-		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.crm.face.index'])
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.crm.face.index','link_create' => route('admin.crm.face.create')])
 
 		<div class="_shell / net">
 			@include('zADMIN._bd.edit.face',['Var'=> $face])
 		</div>
  
 		 
-		@component('_wrap.Flaber.admin.edit_customerFS')
+		@component('_wrap.Flaber.admin.edit_face')
 			@slot('before_Flaber')
 				<div class="Abs -lt -b / noEvents Selection _indexMax / hidden" style="min-width: 3rem">
 					<div class="hill"></div>
@@ -43,7 +43,6 @@
 			@endslot
 			@slot('flaber')
 				@include('zADMIN.PAGE.Face.lego.edit.right'.config('AS.view_switch'))
-				{{-- @include('zADMIN.PAGE.Face.lego.x_14051750') --}}
 			@endslot
 
 			<div class="Abs vol-20052023 / Bg -grid vol-crm"></div>

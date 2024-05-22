@@ -12,9 +12,9 @@
         @slot('before_Flaber',$before_Flaber ?? '')
  
 
-        <div class="off / Plot plot-h / bg-aside / flex dC cI" data-stopClick>
+        <div class="off / Plot plot-h / bg-aside / flex dC cI / noEvents">
             <div class="paragraph"></div>
-            <div class="Ico / pointer" data-click data-goto='{{$id_Flaber ?? 'Flaber_edit'}}' data-foo='click'>
+            <div class="Ico / pointer">
                 @svg('info')
             </div>
         </div>

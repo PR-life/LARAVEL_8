@@ -1,97 +1,48 @@
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputPhone" type="text" name="phone" value="{{$face->phone ?? old('phone')}}" placeholder=".">
-    <label class="Abs" for="inputPhone">@svg('plus')Телефон</label>
+<div class="net void">
+    @isset($face->phone)
+    <div class="_shell _h x-hr / vol-Abs label-insideInput">
+        <input id="inputPhone" type="text" name="phone" value="{{$face->phone ?? old('phone')}}" readonly>
+        <label class="Abs" for="inputPhone">@svg('plus')Телефон</label>
+        @if($face->public_contact == 'phone')
+            <div id="wrap-21051416" class="Abs -rt / noEvents">
+                @svg('check')
+            </div>
+        @endif
+    </div>
+    @endisset
+    @isset($face->email)
+    <div class="_shell _h x-hr / vol-Abs label-insideInput">
+        <input id="inputEmail" type="text" name="email" value="{{$face->email ?? old('email')}}" readonly>
+        <label class="Abs" for="inputEmail">@svg('plus')email</label>
+        @if($face->public_contact == 'email')
+            <div id="wrap-21051416" class="Abs -rt / noEvents">
+                @svg('check')
+            </div>
+        @endif
+    </div>
+    @endisset
+    @isset($face->whatsapp)
+    <div class="_shell _h x-hr / vol-Abs label-insideInput">
+        <input id="inputWhatsapp" type="text" name="whatsapp" value="{{$face->whatsapp ?? old('whatsapp')}}" readonly>
+        <label class="Abs" for="inputWhatsapp">@svg('plus')whatsapp</label>
+    </div>
+    @endisset
+    @isset($face->telegram)
+    <div class="_shell _h x-hr / vol-Abs label-insideInput">
+        <input id="inputTelegram" type="text" name="telegram" value="{{$face->telegram ?? old('telegram')}}" readonly>
+        <label class="Abs" for="inputTelegram">@svg('plus')telegram</label>
+    </div>
+    @endisset
+    @isset($face->viber)
+    <div class="_shell _h x-hr / vol-Abs label-insideInput">
+        <input id="inputViber" type="text" name="viber" value="{{$face->viber ?? old('viber')}}" readonly>
+        <label class="Abs" for="inputViber">@svg('plus')viber</label>
+    </div>
+    @endisset
 </div>
 
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputEmail" type="text" name="email" value="{{$face->email ?? old('email')}}" placeholder=".">
-    <label class="Abs" for="inputEmail">@svg('plus')email</label>
+@if(!$face->phone)
+<div class="space-left [ padding bottom ]">
+    <a class="p" href="{{route('admin.plura.face.edit',$face->id)}}">добавить контакты</a>
 </div>
-
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputWhatsapp" type="text" name="whatsapp" value="{{$face->whatsapp ?? old('whatsapp')}}" placeholder=".">
-    <label class="Abs" for="inputWhatsapp">@svg('plus')whatsapp</label>
-</div>
-
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputTelegram" type="text" name="telegram" value="{{$face->telegram ?? old('telegram')}}" placeholder=".">
-    <label class="Abs" for="inputTelegram">@svg('plus')telegram</label>
-</div>
-
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputViber" type="text" name="viber" value="{{$face->viber ?? old('viber')}}" placeholder=".">
-    <label class="Abs" for="inputViber">@svg('plus')viber</label>
-</div>
-
-<div class="paragraph net"></div>
-<div class="content-xs center-text / Grey -c50 / higlight slctn noEvents net">Откуда</div>
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputCountry" type="text" name="country" value="{{$face->country ?? old('country')}}" placeholder=".">
-    <label class="Abs" for="inputCountry">@svg('plus')Страна</label>
-</div>
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputCity" type="text" name="city" value="{{$face->city ?? old('city')}}" placeholder=".">
-    <label class="Abs" for="inputCity">@svg('plus')Город</label>
-</div>
-<div class="_shell x-hr Form -S / vol-Abs">
-    <input id="inputArea" type="text" name="area" value="{{$face->area ?? old('area')}}" placeholder=".">
-    <label class="Abs" for="inputArea">@svg('plus')Адрес</label>
-</div>
-
-
-<div class="paragraph net"></div>
-
-
-{{-- <div class="content-xs / Grey -c50 / higlight slctn noEvents net">Основной контакт</div> --}}
-<div class="content-xs center-text / Grey -c50 / higlight slctn noEvents net">Основной контакт</div>
-<div class="paragraph net"></div>
-<div class="menu -tile -XS / cloud / net">
-    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
-        @slot('name', 'public_contact')
-        @slot('id', 'public_contact_def')
-        @slot('value', null)
-        @slot('param_from_bd', null)
-        
-        не выбран
-    @endcomponent
-    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
-        @slot('name', 'public_contact')
-        @slot('id', 'public_contact_phone')
-        @slot('value', 'phone')
-        @slot('param_from_bd', $face->public_contact)
-        
-        Телефон
-    @endcomponent
-    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
-        @slot('name', 'public_contact')
-        @slot('id', 'public_contact_email')
-        @slot('value', 'email')
-        @slot('param_from_bd', $face->public_contact)
-        
-        email
-    @endcomponent
-    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
-        @slot('name', 'public_contact')
-        @slot('id', 'public_contact_whatsapp')
-        @slot('value', 'whatsapp')
-        @slot('param_from_bd', $face->public_contact)
-        
-        whatsapp
-    @endcomponent
-    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
-        @slot('name', 'public_contact')
-        @slot('id', 'public_contact_telegram')
-        @slot('value', 'telegram')
-        @slot('param_from_bd', $face->public_contact)
-        
-        telegram
-    @endcomponent
-    @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
-        @slot('name', 'public_contact')
-        @slot('id', 'public_contact_viber')
-        @slot('value', 'viber')
-        @slot('param_from_bd', $face->public_contact)
-        
-        viber
-    @endcomponent
-</div>
+@endif

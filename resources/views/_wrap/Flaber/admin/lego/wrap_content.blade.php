@@ -18,9 +18,9 @@
                         </div>
                     </div>
                 </div>
-                <div class="hill-m">
+                {{-- <div class="hill-m">
                     {!!$date ?? ''!!}
-                </div>
+                </div> --}}
             </div>
         </div>
     </div>

@@ -17,10 +17,12 @@ class Service {
 	
 	public function temporary_update($face,$validator1,$validator2) {
 
-		if($validator1['year'] && $validator1['month'] && $validator1['day']) {
-			$birthday = sprintf('%04d-%02d-%02d', $validator1['year'], $validator1['month'], $validator1['day']);
-			$validator1['birthday'] = $birthday;
-		}
+		if(isset($validator1['year']) && isset($validator1['month']) && isset($validator1['day'])) {
+			if($validator1['year'] && $validator1['month'] && $validator1['day']) {
+				$birthday = sprintf('%04d-%02d-%02d', $validator1['year'], $validator1['month'], $validator1['day']);
+				$validator1['birthday'] = $birthday;
+			}
+		};
 
 		unset($validator1['year']);
 		unset($validator1['month']);

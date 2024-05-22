@@ -1,1 +1,1 @@
-<div class="Article / content-xxs center-text / Grey / noEvents slctn">{{$name}}</div>
+<div class="_shell / Article aura / content-xxs center-text / Grey / noEvents slctn">{{$name}}</div>

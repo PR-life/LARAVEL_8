@@ -1,4 +1,5 @@
-<div class="_param / flex bC cI / Min -w3 / space round">
+@isset($face->birthday)
+<div class="wrap-birthday / flex bC cI / Min -w3 / space round">
     <div>
         <div class="content-xs / Grey -c30">Дата рождения</div>
         <div class="paragraph-s"></div>
@@ -19,3 +20,17 @@
         </g>
     </svg>
 </div>
+@else
+<div class="W-100">
+    <div class="Info -ico ico-center -space / center-text / W-100">
+        <div class="content">не указана дата рождения</div>
+    </div>
+    <div class="paragraph"></div>
+    <div class="center-text">
+        <a class="p" href="{{route('admin.plura.face.edit',$face->id)}}">
+            добавить
+        </a>
+    </div>
+</div>
+
+@endisset

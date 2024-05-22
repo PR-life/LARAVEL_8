@@ -25,6 +25,7 @@
 	@component('zADMIN._wrap.form.create', ['route' => route('admin.crm.face.store'), 'css' => '-face'])
 
 		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.crm.face.index')])
+		<input type="hidden" name="user_id" value="{{auth()->user()->id}}">
 
 		<div class="Font">
 			<div class="_h -vw / familyTochka b500">Добавить <br>новый профиль</div>

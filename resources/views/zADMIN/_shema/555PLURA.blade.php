@@ -54,7 +54,7 @@ $arrCSS = [
             @stack('addBread')
         </ul>
     </div>
-    <div class="_r / flex cross-xs / edge-right_SPC">
+    <div class="_r / flex cross-xs / edge-rightS_PC">
         @include('zADMIN._skeleton.manager.Top')
     </div>
 </div>

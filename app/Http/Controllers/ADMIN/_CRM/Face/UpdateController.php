@@ -24,7 +24,10 @@ class UpdateController extends BaseController
             'patronymic' => 'nullable|string',
             'birthday' => 'nullable',
             'gender' => 'nullable',
-
+            
+            
+            'note' => 'nullable',
+            'knot_1' => 'nullable',
 
 
             //
@@ -74,7 +77,7 @@ class UpdateController extends BaseController
 
         
 
-        // dd($validator2);
+        // dd($validator1);
         // dd($request);
         // $data = $request->validated();
         // dd($data);
