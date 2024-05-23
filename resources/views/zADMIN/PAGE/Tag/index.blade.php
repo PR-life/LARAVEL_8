@@ -15,14 +15,30 @@
     @include('zADMIN.PAGE._lego.filter.SHEMA.index.tags')
 @endpush
 
-@include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['model' => 'tag', 'Model' => 'Tag'])
- 
+
+@component('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['model' => 'tag', 'Model' => 'Tag','hidden_btn_full' => true])
+    @component('zADMIN._wrap.manager.btn.localStorage_toggle',['css' => 'x-exclude'])
+        @slot('localstorageName','filter_btn_table_backend')
+        @slot('dataCheck','y-backendOff')
+        @slot('nodeName','Table_index')
+        @slot('toggleCss','y-backendOff')
+        @slot('name','Backend')
+    @endcomponent
+    @component('zADMIN._wrap.manager.btn.localStorage_toggle',['css' => 'x-exclude'])
+        @slot('localstorageName','filter_btn_table_frontend')
+        @slot('dataCheck','y-frontendOff')
+        @slot('nodeName','Table_index')
+        @slot('toggleCss','y-frontendOff')
+        @slot('name','Frontend')
+    @endcomponent
+@endcomponent
+
 
 @section('content')
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN._wrap.Table.index', ['css'=> '-tags', 'Model' => 'Tag'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-tags', 'Model' => 'Tag','localstoragePicking' => 'filter_btn_table_frontend filter_btn_table_backend'])
 
             @foreach($tags as $_tag)
                 @include('zADMIN._repo.teaser.tag', ['Var' => $_tag])

@@ -28,6 +28,10 @@
 			@include('zADMIN._bd.edit.published',['Var'=> $tag])
 		</div>
 
+		@include('zADMIN.PAGE.Tag.lego.edit.lego.Relationships')
+		<div class="paragraph"></div>
+
+
 		@component('_wrap.Flaber.admin.edit')
 
 			@slot('flaber')

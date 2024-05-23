@@ -1,4 +1,4 @@
-<div class="on none / {{$css_w_20051500 ?? 'Sms -w'}} / _Axon / relative" data-stopClick>
+<div class="on none / _Axon / relative" data-stopClick>
     <div class="Wings / _Axon">
         <div class="_win -t / _Axon Axon /  pr-4">
             <div class="none on_flex / Plot plot-h / sms-design / flex dC bC / hidden">

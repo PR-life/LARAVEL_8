@@ -7,6 +7,8 @@
     @component('_wrap.Flaber.index')
         @slot('id', $id ?? 'Flaber_edit')
         @slot('data', "data-click data-css data-node='parent' data-toggle='On' data-localStorage localStorage-id")
+        @slot('style_off','KIRA')
+        {{-- @slot('flaber_w','Sms -w') --}}
 
         <div class="none on / HWin" data-stopClick></div>
         

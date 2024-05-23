@@ -19,7 +19,7 @@
             </div>
         </div>
         {!!$indent_Flaber ?? ''!!}
-        @include('_wrap.Flaber.admin.lego.wrap_content',['css_w_20051500' => ''])
+        @include('_wrap.Flaber.admin.lego.wrap_content')
     @endcomponent
 
 </div>

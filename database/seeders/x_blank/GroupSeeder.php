@@ -1,6 +1,6 @@
 <?php
 
-namespace Database\Seeders;
+namespace Database\Seeders\x_blank;
 
 use Illuminate\Database\Seeder;
 //
@@ -11,23 +11,21 @@ class GroupSeeder extends Seeder
 {
     public function run()
     {
-
+        DB::table('groups')->insert([
+            'name' => 'backend',
+            'slug' => 'backend',
+            'order' => '60',
+        ]);
+        DB::table('groups')->insert([
+            'name' => 'frontend',
+            'slug' => 'frontend',
+            'order' => '60',
+        ]);
         DB::table('groups')->insert([
             'name' => 'Главная',
-            'slug' => 'main',
+            'slug' => 'glavnaya',
         ]);
-        DB::table('groups')->insert([
-            'name' => 'Цены',
-            'slug' => 'price',
-        ]);
-        DB::table('groups')->insert([
-            'name' => 'Каталог',
-            'slug' => 'catalog',
-        ]);
-        DB::table('groups')->insert([
-            'name' => 'Клиенты',
-            'slug' => 'customers',
-        ]);
+
 		// можно задать в цикле FOR
     }
 }

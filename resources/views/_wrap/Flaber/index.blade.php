@@ -9,11 +9,12 @@
                 <div class="none on / {{$flaber_w ?? 'Min -w6'}}"></div>
                 <div class="ARIK -XL -On"></div>
                 @break
-            @case('cc555555')
-                {{-- <div class="_left"></div> --}}
+            @case('KIRA')
+                <div class="none on / {{$flaber_w ?? 'Sms -w'}}"></div>
+                <div class="ARIK -XL -On"></div>
                 @break
             @default
-                <div class="KIRA -sms"></div>
+                {{-- <div class="KIRA -sms"></div> --}}
         @endswitch
     </div>
 </div>

@@ -5,6 +5,8 @@
 
             <div class="x-manager / flex / cross-xxs" data-localstorage localstorage-picking="filter_btn_table_empty filter_btn_table_full">
 
+
+            @if(!isset($hidden_btn_full))
                 @component('zADMIN._wrap.manager.btn.localStorage_toggle')
                     @slot('localstorageName','filter_btn_table_empty')
                     @slot('dataCheck','y-empty')
@@ -26,6 +28,7 @@
                     @slot('node07041155','parentParent')
                     @slot('name','full')
                 @endcomponent
+            @endif
 
                 @component('zADMIN._wrap.manager.btn.localStorage_toggle',['css' => 'x-exclude'])
                     @slot('localstorageName','filter_btn_table_statusActive')

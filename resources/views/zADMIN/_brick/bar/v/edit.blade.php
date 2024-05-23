@@ -21,7 +21,7 @@ $link = route($routeName, [
 	</button>
 	<div class="paragraph"></div>
 	@isset($link_create)
-	<a class="flex cI cC / orb / Grey" href="{{$link_create}}" title="назад">
+	<a class="flex cI cC / orb / Grey" href="{{$link_create}}" title="новый">
 		<span class="Ico">@svg('plus')</span>
 	</a>
 	@endisset

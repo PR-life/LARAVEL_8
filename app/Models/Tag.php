@@ -63,7 +63,14 @@ class Tag extends Model
 			'id',
         );
     }
-
+	
+    public function group() {
+        return $this->belongsTo(
+            Group::class,
+            'group_id',
+            'id'
+        );
+    }
  
 
 	public function getDateAsCarbonAttribute(){

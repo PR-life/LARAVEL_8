@@ -1,4 +1,4 @@
-function select_1902(Options,field,select,text = 'выбрать') {
+function select_1902(Options,field,select,text = '<span class="space-s block net">выбрать...<span class="ghost">..</span></span>') {
       
     // console.log(555)
     // console.log(Options)

@@ -6,10 +6,19 @@
 //     $x_23101421 = 'x-empty';
 // };
 
+$css_22051730 = 'space-left';
+
+
+if(isset($Var->group)) {
+    $css_22051730 .= ' group-' . $Var->group->slug;
+}
+
+
+
 ?>
 
 
-@component('zADMIN._wrap.Teaser.index', ['Var' => $Var, 'css' => 'space-left '])
+@component('zADMIN._wrap.Teaser.index', ['Var' => $Var, 'css14051235' => $css_22051730])
 
     <div class="flex bC">
 

@@ -6,11 +6,6 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateTagsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
     public function up()
     {
         Schema::create('tags', function (Blueprint $table) {
@@ -20,8 +15,11 @@ class CreateTagsTable extends Migration
             $table->string('name')->unique();
             $table->string('slug')->unique();
 
-            $table->unsignedBigInteger('category_id')->nullable();
-            
+            $table->foreignId('group_id')
+                ->nullable()
+                ->references('id')
+                ->on('groups');
+
             $table->string('name_2')->nullable();
             $table->string('name_3')->nullable();
             $table->string('name_4')->nullable();
@@ -34,20 +32,11 @@ class CreateTagsTable extends Migration
             $table->unsignedInteger('status')->default('1');
             $table->unsignedInteger('published')->default('1');
 
-			// $table->string('title')->nullable();
-			// $table->string('description')->nullable();
-			// $table->string('keywords')->nullable();
-
             $table->timestamps();
             $table->softDeletes();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('tags');

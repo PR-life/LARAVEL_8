@@ -2,12 +2,13 @@
 
 .On > .x-21020758 {
     top: auto;
-    height: calc(var(--x-Gardener-h) + 5px);
+    height: calc(var(--x-Gardener-h) + 5px + var(--space));
 
     // background-color: red;
 }
 
 .On > .x-21020758:hover {
-    background-color: var(--bg);
-    opacity: .5;
+    background: linear-gradient(to top,var(--bg),transparent);
+    border-bottom:1px solid #222;
+    // opacity: .5;
 }

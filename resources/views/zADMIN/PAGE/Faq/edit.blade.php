@@ -24,7 +24,7 @@
 
 
 	@component('zADMIN._wrap.form.edit', ['route' => route('admin.faq.update', $faq->id), 'css' => '-faq'])
-		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.faq.index'])
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.faq.index','link_create' => route('admin.faq.create')])
 
 		<div class="_shell">
 			@include('zADMIN._bd.edit.min',['Var'=> $faq])

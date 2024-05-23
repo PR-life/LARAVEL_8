@@ -14,8 +14,8 @@ function selectToUl(parent) {
     var Options = Array.from(parent.querySelectorAll('option'));
     
     
-    const csswrap = ['wrap_dropdown','relative','round','-White','White','-bg'];
-    const cssDropDown = ['_dropdown','space-xs'];
+    const csswrap = ['wrap_dropdown','relative','-White','White','-bg'];
+    const cssDropDown = ['_dropdown'];
     const cssBtn = ['_btn', 'content', 'highlight', 'slctn'];
     
  

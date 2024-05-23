@@ -1,6 +1,13 @@
-<a class="flex -wrap / h / cloud cross-xs" href="{{ 
+
+@include('zADMIN._repo.teaser.brick.a_openTag', ['css16041455' => 'flex -wrap / h / cloud cross-xs'])
+ 
+ 
+
+
+
+{{-- <a class="flex -wrap / h / cloud cross-xs" href="{{ 
     route('admin.'.mb_strtolower(class_basename($Var)).'.edit', ['tag' => $Var->id, 'shema' => $shema ?? null])
-    }}">
+    }}"> --}}
     
         <span class="flex / cross-xxs">
             <span>{!!$Var->name!!}</span>
