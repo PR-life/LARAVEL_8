@@ -18,11 +18,12 @@ class CreateCategoriesTable extends Migration
             $table->string('sku')->unique()->nullable();
 
             $table->string('name');
-            $table->string('slug');
+            $table->string('slug')->unique();
 			
             $table->string('name_tag')->nullable();
 			$table->string('name_seo')->nullable();
             $table->string('h1')->nullable();
+            $table->text('intro')->nullable();
 
             $table->string('bread_name')->nullable();
 
@@ -38,10 +39,10 @@ class CreateCategoriesTable extends Migration
                 ->references('id')
                 ->on('groups');
 
-            $table->foreignId('tag_id')
-                ->nullable()
-                ->references('id')
-                ->on('tags');
+            // $table->foreignId('tag_id')
+            //     ->nullable()
+            //     ->references('id')
+            //     ->on('tags');
 
             $table->unsignedBigInteger('category_id')->nullable();
             $table->foreign('category_id')->references('id')->on('categories');

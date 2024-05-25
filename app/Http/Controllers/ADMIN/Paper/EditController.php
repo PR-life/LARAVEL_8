@@ -10,7 +10,7 @@ class EditController extends BaseController
 {
     public function __invoke(Paper $paper){
 		
-        $categories = Category::all();
+        $categories = Category::orderBy('order')->get();
         $groups = Group::all();
 		$tags = Tag::all();
 		$faqs = Faq::all();

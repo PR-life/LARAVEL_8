@@ -79,12 +79,26 @@ class Category extends Model
         )->where('published','1')->orderBy('created_at', 'desc');
     }
 
+    public function tagsMain() {
+
+        return $this->hasMany(
+            Tag::class,
+            'category_id',
+            'id'
+        );
+
+		// return $this->belongsToMany(Tag::class,'post_tags');
+			// !!! не сошлось с видео
+			// запись по конвенции Laravel, тут важно соблюдать имена в атрибутах
+			// https://www.youtube.com/watch?v=c0yuY_Ugacg
+    }
+
 
     public function tags() {
 
         return $this->belongsToMany(
             Tag::class,
-            'category_tags', // через какую тбл свзяь
+            'tag_categories', // через какую тбл свзяь
             'category_id', // foreignKey этой модели в указанной таблице
             'tag_id' // relatedPivotKey, с кем foreignKey имеет взаимоотношение
         );
@@ -129,12 +143,12 @@ class Category extends Model
 
     public function categories()
     {
-        return $this->hasMany(Category::class);
+        return $this->hasMany(Category::class)->orderBy('order', 'asc');
     }
 
     public function childrenCategories()
     {
-        return $this->hasMany(Category::class)->with('categories');
+        return $this->hasMany(Category::class)->with('categories')->orderBy('order', 'asc');
     }
 
 	public function getDateAsCarbonAttribute(){

@@ -15,12 +15,13 @@ class UpdateController extends BaseController
 
 
         $data = $request->validated();
+        // dd($data);
 
 
         $category = $this->service->update($category,$data);
         
         // $param = $request->validated();
-        // // dd($param);
+        
 		// isset($param['published']) ? '' : $param['published'] = '0';
 
         // $category->update($param);

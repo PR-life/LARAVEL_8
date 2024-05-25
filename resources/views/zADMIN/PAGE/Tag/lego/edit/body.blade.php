@@ -72,6 +72,15 @@
 
 	</div>
 
+
+	<div class="paragraphX2"></div>
+	@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Интро'])
+	<div class="paragraph"></div>
+	<div class="_shell Article aura / Note -lite">
+		<textarea id="tinymce_1" name="intro" placeholder='текст...'>{{$tag->intro}}</textarea>
+	</div>
+	<div class="hill-s"></div>
+
 	
 </div>
 

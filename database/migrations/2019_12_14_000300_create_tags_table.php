@@ -14,6 +14,7 @@ class CreateTagsTable extends Migration
 
             $table->string('name')->unique();
             $table->string('slug')->unique();
+            $table->text('intro')->nullable();
 
             $table->foreignId('group_id')
                 ->nullable()

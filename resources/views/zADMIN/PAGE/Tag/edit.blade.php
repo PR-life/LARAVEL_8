@@ -23,7 +23,9 @@
 
 	@component('zADMIN._wrap.form.edit', ['route' => route('admin.tag.update', $tag->id), 'css' => '-tag'])
 
-		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.tag.index'])
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.tag.index','link_create' => route('admin.tag.create')])
+
+
 		<div class="_shell / net">
 			@include('zADMIN._bd.edit.published',['Var'=> $tag])
 		</div>

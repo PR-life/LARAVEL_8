@@ -9,20 +9,23 @@ use App\Models\Paper;
 
 class PaperFilter extends AbstractFilter {
 
-	// 1 пишем констакты, берем из нужных App\Http\Requests\ADMIN\Post
+	// 1 пишем константы, берем из нужных App\Http\Requests\ADMIN\Post
     public const NAME = 'name';
-    public const CATEGORY_ID = 'category_id';
+    public const TAG = 'tag';
+    public const ANSWER = 'answer';
     public const SHEMA = 'shema';
     public const STATUS = 'status';
+    public const CATEGORY_ID = 'category_id';
 
     protected function getCallbacks(): array
     {
         return [
             self::NAME => [$this, 'name'],
-            self::CATEGORY_ID => [$this, 'category_id'],
+            // self::TAG => [$this, 'tag'],
+            self::ANSWER => [$this, 'answer'],
             self::SHEMA => [$this, 'shema'],
             self::STATUS => [$this, 'status'],
-            // self::CATEGORY_ID => [$this, 'category_id'],
+            self::CATEGORY_ID => [$this, 'category_id'],
         ];
     }
 	
@@ -30,9 +33,9 @@ class PaperFilter extends AbstractFilter {
     {
         $builder->where('name', 'like', "%{$value}%");
     }
-    public function category_id(Builder $builder, $value)
+    public function answer(Builder $builder, $value)
     {
-        $builder->where('category_id', $value);
+        $builder->where('answer', '!=', null);
     }
     public function shema(Builder $builder, $value)
     {
@@ -41,5 +44,9 @@ class PaperFilter extends AbstractFilter {
     public function status(Builder $builder, $value)
     {
         $builder->where('status', $value);
+    }
+    public function category_id(Builder $builder, $value)
+    {
+        $builder->where('category_id', $value);
     }
 }

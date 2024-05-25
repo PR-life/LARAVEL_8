@@ -2,12 +2,6 @@
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
 	@include('_shema._lego.head.index')
-	{{-- @include('_shema._lego.head.index', [
-		'linkCssMin' => '/css/minDT.css',
-		'linkCssApp' => '/css/appDT.css',
-		'linkMetaColor' => 'zDT._skeleton.meta.color'
-		])
-	@include('xxx._skeleton.meta.index') --}}
 </head>
 <body id="body" class="MXAT noneJs @yield('css-body') @stack('css-body')">
 <script>
@@ -18,9 +12,9 @@
 @include('_shema._lego.input')
 @include('_._skeleton.Fon')
 
-@include('_._skeleton.top')
-{{-- @include('_._skeleton.header') --}}
-@include('_._skeleton.menuMain')
+@include('zFarmer._skeleton.top')
+@include('zFarmer._skeleton.header')
+{{-- @include('_._skeleton.menuMain') --}}
 
 @yield('breadBack')
 @yield('head')
@@ -54,8 +48,8 @@
 	@include('_._skeleton.menuMobile')
 </div>
 
-@include('_._skeleton.Slump')
-@include('_._skeleton.Geek')
+{{-- @include('_._skeleton.Slump') --}}
+{{-- @include('_._skeleton.Geek') --}}
 
 <div id="Milk" class="Abs Milk / index owlFIX">
 	@stack('milk')

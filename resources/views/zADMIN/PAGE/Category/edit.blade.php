@@ -26,7 +26,7 @@
 	@component('zADMIN._wrap.form.edit', ['route' => route('admin.category.update', $category->id), 'css' => '-category'])
 
 
-		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.category.index'])
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.category.index','link_create' => route('admin.category.create')])
 
 		<div class="_shell / net">
 			@include('zADMIN._bd.edit.category',['Var'=> $category])

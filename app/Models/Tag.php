@@ -26,6 +26,16 @@ class Tag extends Model
 		return $this->belongsToMany(Paper::class, 'paper_tags', 'tag_id', 'paper_id')->where('published', 1);
 	}
 
+    public function papersMain() {
+
+        return $this->hasMany(
+            Paper::class,
+            'tag_id',
+            'id'
+        );
+    }
+
+
 	public function faqs(){
 		return $this->belongsToMany(Faq::class, 'faq_tags', 'tag_id', 'faq_id')->where('published', 1)->orderBy('order', 'asc'); 
 	}

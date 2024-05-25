@@ -32,6 +32,8 @@ class UpdateRequest extends StoreRequest
             'name_6' => 'nullable|string',
             'name_7' => 'nullable|string',
             'name_8' => 'nullable|string',
+            
+            'intro' => 'nullable|string',
 
             'en_name' => 'nullable|string',
             'en_name_2' => 'nullable|string',
