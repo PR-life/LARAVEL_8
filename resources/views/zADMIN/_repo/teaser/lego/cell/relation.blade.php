@@ -1,15 +1,31 @@
-<div class="none D-Relation -on / manager-showParamNone / Min -w2 / hidden Roll_PC -scrollBar"> 
+<div class="none D-Relation -on / flex bC / manager-showParamNone / Min -w2 / hidden @isset($param_seo) Roll_PC -scrollBar @endisset"> 
     
-    <div class="x-HMin flex cC dC / W-100">
+    <div class="mr-2">
+        @if($Var->tags->count())
+            <ul class="menu -tag -XXS / lie cloud">
+                @foreach($Var->tags as $_tag)
+                    <li><a class="nowrap content-xxxs round-xs" href="{{route('admin.tag.edit', $_tag->id)}}" target="_blank">{{$_tag->name}}</a></li>
+                @endforeach
+            </ul>
+        @endif
+    </div>
+
+
+
+
+    <div class="x-HMin flex dC / Min Max -w2 / W-100">
         
+
+
         @isset($Var->tag)
-        <div class="content-xxs / flex cI eC / Grey -c30">
+        <a class="content-xxs nowrap / flex cI / Grey -c30" href="{{route('admin.tag.edit', $Var->tag->id)}}">
             <span class="Ico -XS / mr-2">@svg('magnet')</span>
             {{$Var->tag->name}}
-        </div>
+        </a>
+        <div class="paragraph-s"></div>
         @endisset
         @isset($Var->category)
-        <div class="right-text / @isset($param_seo) D-Seo -off @endisset">
+        <div class="@isset($param_seo) D-Seo -off @endisset">
             <a class="content-s / b600 Grey" href="{{route('admin.category.edit', $Var->id)}}">
                 @include('_wrap._text.ellipsis.name',['Var' => $Var->category->name])
             </a>

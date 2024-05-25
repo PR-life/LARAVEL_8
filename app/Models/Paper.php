@@ -78,6 +78,16 @@ class Paper extends Model
         );
     }
 
+    public function categories() {
+        return $this->belongsToMany(
+            Category::class,
+            'paper_categories',
+            'paper_id',
+            'category_id'
+        )->orderBy('order');
+    }
+
+
     public function category() {
         return $this->belongsTo(
             Category::class,

@@ -9,9 +9,8 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
             Route::get('/', 'IndexController')->name('sherpa.excel.index');
             Route::post('/',[App\Http\Controllers\ADMIN\_sherpa\Excel\ImportController::class, 'import'])->name('sherpa.excel.import');
             Route::get('/export', 'ExportController')->name('sherpa.excel.export');
-            // Route::get('/', [App\Http\Controllers\ADMIN\sherpa\Excel\IndexController::class, 'index'])->name('admin.sherpa.excel.index');
-            // Route::get('/export', [App\Http\Controllers\ADMIN\sherpa\Excel\export::class, 'index'])->name('admin.sherpa.excel.export');
-            // Route::get('/import/{slug}',[App\Http\Controllers\ADMIN\_sherpa\Excel\ImportController::class, 'slug'])->name('sherpa.excel.import.slug');
+            Route::get('/download/{slug}', 'DownloadController')->name('sherpa.excel.download');
+            Route::post('update', 'UpdateController')->name('sherpa.excel.update');
         });
     });
 });

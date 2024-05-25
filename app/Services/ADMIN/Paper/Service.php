@@ -19,6 +19,9 @@ class Service extends BaseService {
 		try {
 			DB::beginTransaction();
 
+			isset($param['category_ids']) ? $categoryIds = $param['category_ids'] : $categoryIds = [];
+			unset($param['category_ids']);
+			
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);
 
@@ -53,9 +56,12 @@ class Service extends BaseService {
 			//
 			$paper->update($param);
 
+			$paper->categories()->sync($categoryIds);
+			$categoryIds = [];
+
 			$paper->tags()->sync($tagIds);
 			$tagIds = [];
-			
+
 			$paper->faqs()->sync($faqIds);
 			$faqIds = [];
 

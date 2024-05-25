@@ -13,6 +13,7 @@ class UpdateController extends BaseController
 
 		// dd($request);
         $data = $request->validated();	
+		// dd($data);
 		$paper = $this->service->update($paper,$data);
 
 		// dd($paper);

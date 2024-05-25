@@ -7,26 +7,27 @@ use Illuminate\Http\Request;
 //
 use Maatwebsite\Excel\Facades\Excel;
 //
-use App\Imports\PostImport;
-use App\Imports\PaperImport;
-use App\Imports\TagImport;
+// use App\Imports\PostUpdate;
+use App\Updates\PaperUpdate;
+// use App\Imports\TagUpdate;
 
 
-class ImportController extends Controller
+class UpdateController extends Controller
 {
 
-	public function import(Request $request)
+	public function __invoke(Request $request)
 	{
-		$file = $request->file('import_file');
+		$file = $request->file('update_file');
 
 
+        // dd($file);
 
 		switch ($file->getClientOriginalName()) {
 			case 'Papers.xlsx':
-				Excel::import( new PaperImport(), $file);
+				Excel::import( new PaperUpdate(), $file);
 				break;
 			case 'Tags.xlsx':
-				Excel::import( new TagImport(), $file);
+				// Excel::import( new TagUpdate(), $file);
 				break;
 			};
 
@@ -36,12 +37,4 @@ class ImportController extends Controller
 		// dd($request->file('import_file'));
 		// Excel::import( new PostImport(), $request->file('import_file'));
 	}
-
-
-
-
-	// public function index()
-	// {
-	// 	return view('zADMIN.PAGE.SHERPA.Excel.Morda', compact('arrModel','arrComment','arrPivot'));
-	// }
 };

@@ -15,7 +15,7 @@ isset($css) ? $x_23101421 .= $css : '';
 
     <div class="flex bC">
 
-        <div class="_l / flex cI / Article / cross-s">
+        <div class="_l / flex cI / Article44 / cross-s">
             <div class="flex cC dC / W-100">
                 @if($Var->slug)
                     @include('zADMIN._repo.teaser.brick.slug')
@@ -51,7 +51,8 @@ isset($css) ? $x_23101421 .= $css : '';
         
         <div class="_r / flex sI / cross-s">
             @include('zADMIN._repo.teaser.lego.cell.relation', ['param_seo' => true])
-            <div class="x-HMin flex cI">
+
+            <div class="x-HMin flex cI / Max -w6">
                 <div class="D-Lite -off">
                     @include('zADMIN._repo.teaser.lego.cell.bd.date')
                 </div>
