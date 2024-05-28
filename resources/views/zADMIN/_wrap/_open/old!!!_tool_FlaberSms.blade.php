@@ -1,3 +1,9 @@
+
+{{-- новое тут
+_wrap.__.summary --}}
+
+
+
 <div id="wrapSms_{{$id}}" class="SOMA / OnOff net" data-click data-css data-toggle='on' data-localstorage localstorage-id>
 
     <div class="x-name flex bC pl-edgeS / _Axon / pointer">

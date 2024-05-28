@@ -20,10 +20,23 @@
         </div>
     </div>
 
+    <div class="pl-edgeS"> 
+        <dl class="-dot -rightS Void">
+            <dt class="content-xs Grey">дата</dt>
+            <dd><span class="content-xs">{{$paper->created_at}}</span></dd>
+        </dl>
+    </div>
 
-    @component('zADMIN._wrap._open.tool_FlaberSms')
-        @slot('id', 'demonUser')
+
+
+    @component('_wrap.__.summary')
+        {{-- @slot('cssName', 'content-m pl-4') --}}
+        {{-- @slot('cssWrap', '') --}}
+        {{-- @slot('cssContent', '') --}}
+        @slot('icoCloseName', 'closeRoll')
+        @slot('id', 'wrapDemonUser')
         @slot('name', 'данные автора')
+
 
         <div class="flex bC cI">
             {{-- <div>
@@ -46,8 +59,17 @@
         </dl>
     @endcomponent
 
+
+
+
+    {{-- @component('zADMIN._wrap._open.tool_FlaberSms')
+        @slot('id', 'demonUser')
+        @slot('name', 'данные автора')
+
+    @endcomponent --}}
+
     
-    @component('zADMIN._wrap._open.tool_FlaberSms')
+    {{-- @component('zADMIN._wrap._open.tool_FlaberSms')
         @slot('id', 'shema')
         @slot('name', 'шаблон')
 
@@ -57,9 +79,9 @@
         <div class="paragraph"></div>
 
         <div class="content-xxs Grey">Full</div>
-        {{-- @include('zADMIN.PAGE._lego.edit.shema.full') --}}
+        @include('zADMIN.PAGE._lego.edit.shema.full')
 
-    @endcomponent
+    @endcomponent --}}
 
 
 

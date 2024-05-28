@@ -5,7 +5,7 @@ namespace App\Http\Controllers\ADMIN\Tag;
 //
 use App\Http\Requests\ADMIN\Group\FilterRequest;
 //
-// use App\Models\Tag;
+use App\Models\Category;
 
 
 class IndexController extends BaseController
@@ -23,7 +23,9 @@ class IndexController extends BaseController
             return view('zADMIN.PAGE.Tag.indexGroup', compact('tags','categories','shema'));
         }
 
-        return view('zADMIN.PAGE.Tag.index', compact('tags','_request'));
+        $categories = Category::orderBy('order')->get();
+
+        return view('zADMIN.PAGE.Tag.index', compact('tags','categories','_request'));
 
          
     }

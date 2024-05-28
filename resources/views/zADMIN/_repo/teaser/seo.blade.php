@@ -15,7 +15,7 @@ isset($css) ? $x_23101421 .= $css : '';
 
     <div class="flex bC">
 
-        <div class="_l / flex cI / Article44 / cross-s">
+        <div class="_l / flex cI / Article44 / cross-s" style="max-width: var(--Article)">
             <div class="flex cC dC / W-100">
                 @if($Var->slug)
                     @include('zADMIN._repo.teaser.brick.slug')

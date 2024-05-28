@@ -28,7 +28,7 @@ class CategoryImport implements ToCollection, WithHeadingRow
                 $params[$_name] = $item[$_name] ?? null;
             };
 
-            Category::firstOrCreate([
+            Category::updateOrCreate([
                 'id' => $params['id'],
                 ],$params);
         }

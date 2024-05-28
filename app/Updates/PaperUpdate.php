@@ -53,9 +53,12 @@ class PaperUpdate implements ToCollection, WithHeadingRow
 
 
             
-                Paper::withTrashed()->updateOrCreate([
-                    'id' => $item['id'],
+                Paper::updateOrCreate([
+                    'sku' => $item['sku'],
                 ],$params);
+                // Paper::withTrashed()->updateOrCreate([
+                //     'id' => $item['id'],
+                // ],$params);
 
             }
         }

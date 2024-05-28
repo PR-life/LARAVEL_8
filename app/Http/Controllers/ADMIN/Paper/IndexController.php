@@ -26,8 +26,8 @@ class IndexController extends BaseController
 		// 	'slug' => 'papers',
 		// ];
 
-        $categories = Category::all();
-		$tags = Tag::all();
+        $categories = Category::orderBy('order')->get();
+		$tags = Tag::orderBy('order')->get();
 
 		$x = $request->validated();
 		$filter = app()->make(PaperFilter::class, ['queryParams' => array_filter($x)]);

@@ -8,6 +8,7 @@
     </div>
     @include('zADMIN.PAGE._lego.filter.lego.name')
     @include('zADMIN.PAGE._lego.filter.lego.categories', ['Var' => $categories])
+    @include('zADMIN.PAGE._lego.filter.lego.tags', ['Var' => $tags])
     
     @include('zADMIN.PAGE._lego.filter.lego.icoEnd')
 

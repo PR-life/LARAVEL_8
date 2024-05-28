@@ -76,7 +76,8 @@ class Category extends Model
             Paper::class,
             'category_id',
             'id', //
-        )->where('published','1')->orderBy('created_at', 'desc');
+            )->where('published','1')->orderBy('created_at', 'desc');
+            // )->orderBy('created_at', 'desc');
     }
 
     public function tagsMain() {

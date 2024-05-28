@@ -17,6 +17,7 @@ class BaseFilterRequest extends FormRequest
         return [
             'name' => 'nullable',
             'tag' => 'nullable',
+            'category' => 'nullable',
         ];
     }
 }

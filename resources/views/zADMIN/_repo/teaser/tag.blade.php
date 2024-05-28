@@ -41,6 +41,7 @@ if(isset($Var->group)) {
 
 
             <div class="none D-Relation -on / cross">
+                @isset($Var->categories)
                 @if($Var->categories->count())
                     <ul class="menu -tag -XS / lie cloud">
                         @foreach($Var->categories as $_category)
@@ -48,6 +49,7 @@ if(isset($Var->group)) {
                         @endforeach
                     </ul>
                 @endif
+                @endisset
                 @isset($Var->category)
                 <div class="Min -w2 / right-text">
                     <a class="content-s / b600 Grey" href="{{route('admin.category.edit', $Var->category->id)}}">

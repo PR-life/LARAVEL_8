@@ -26,7 +26,7 @@
         @endisset
         @isset($Var->category)
         <div class="@isset($param_seo) D-Seo -off @endisset">
-            <a class="content-s / b600 Grey" href="{{route('admin.category.edit', $Var->id)}}">
+            <a class="content-s / b600 Grey" href="{{route('admin.category.edit', $Var->category->id)}}">
                 @include('_wrap._text.ellipsis.name',['Var' => $Var->category->name])
             </a>
         </div>

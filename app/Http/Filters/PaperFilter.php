@@ -11,7 +11,7 @@ class PaperFilter extends AbstractFilter {
 
 	// 1 пишем константы, берем из нужных App\Http\Requests\ADMIN\Post
     public const NAME = 'name';
-    public const TAG = 'tag';
+    public const TAG = 'tag_id';
     public const ANSWER = 'answer';
     public const SHEMA = 'shema';
     public const STATUS = 'status';
@@ -21,7 +21,7 @@ class PaperFilter extends AbstractFilter {
     {
         return [
             self::NAME => [$this, 'name'],
-            // self::TAG => [$this, 'tag'],
+            self::TAG => [$this, 'tag_id'],
             self::ANSWER => [$this, 'answer'],
             self::SHEMA => [$this, 'shema'],
             self::STATUS => [$this, 'status'],
@@ -48,5 +48,9 @@ class PaperFilter extends AbstractFilter {
     public function category_id(Builder $builder, $value)
     {
         $builder->where('category_id', $value);
+    }
+    public function tag_id(Builder $builder, $value)
+    {
+        $builder->where('tag_id', $value);
     }
 }
