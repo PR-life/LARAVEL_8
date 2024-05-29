@@ -18,8 +18,13 @@
 
 @section('content')
 <div class="I aura">
-	@component('zADMIN._wrap.form.edit', ['route' => route('admin.paper.update', $paper->id), 'css' => '-paper'])
-		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.paper.index'])
+	@component('zADMIN._wrap.form.edit', ['route' => route(strtolower('admin.' . ($envData['nameRoute'] ?? 'paper') . '.update'),$paper->id), 'css' => '-paper'])
+		@include('zADMIN._brick.bar.v.edit',['routeName' => strtolower('admin.' . ($envData['nameRoute'] ?? 'paper') . '.index'),'link_create' => route(strtolower('admin.' . ($envData['nameRoute'] ?? 'paper') . '.create'))])
+
+
+
+		
+
 
 		<div class="_shell / net">
 			@include('zADMIN._bd.edit.min',['Var'=> $paper])

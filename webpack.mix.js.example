@@ -4,9 +4,11 @@ mix.version();
 
 mix.less('resources/min.less', 'public/css/min.css')
 	.less('resources/minAdmin.less', 'public/css/minAdmin.css')
+	.less('resources/min-55555555555555.less', 'public/css/min-55555555555555.css')
 	//
 	.less('resources/app.less', 'public/css/app.css')
 	.less('resources/appAdmin.less', 'public/css/appAdmin.css')
+	.less('resources/app-55555555555555.less', 'public/css/app-55555555555555.css')
 	//
 	.less('resources/font.less', 'public/css/font.css')
 	.less('resources/lead.less', 'public/css/lead.css')
@@ -17,7 +19,7 @@ mix.less('resources/min.less', 'public/css/min.css')
 	.less('resources/less/z_env/tinymce.less', 'public/css/env/tinymce.css')
 	//
 	.less('resources/Lite.less', 'public/css/Lite.css')
-	.less('resources/UTIN.less', 'public/css/UTIN.css')
+	// .less('resources/UTIN.less', 'public/css/UTIN.css')
 
 mix.js('resources/__JS/app.js', 'public/js')
 	.js('resources/__JS/Observer/_observer.js', 'public/js/Observer/_observer.js')
@@ -25,3 +27,23 @@ mix.js('resources/__JS/app.js', 'public/js')
 	//
 	.js('resources/__JS/_skill/Scroll/index.js', 'public/js/skill/Scroll.js')
 	.js('resources/__JS/_skill/OXOY.js', 'public/js/skill/OXOY.js')
+	//
+	//
+	.js('resources/__JS/Slider/dt/main.js', 'public/js/Slider/main.js')
+
+mix.combine([
+		'public/js/app.js',
+		'public/js/Observer/_observer.js',
+		'public/js/Observer/visible.js',
+		'public/js/skill/Scroll.js',
+	], 'public/js/merged.js');
+
+
+	// mix.combine([
+	// 	'public/css/bootstrap.min.css', 
+	// 	'public/css/style.css',
+	// 	'public/css/animate.css'
+	// ], 'public/css/app.css');
+
+	// mix.minify(['this/one.js', 'and/this/one.js']);
+	

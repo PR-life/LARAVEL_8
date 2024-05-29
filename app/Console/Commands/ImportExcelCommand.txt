@@ -6,6 +6,8 @@ use Illuminate\Console\Command;
 ////
 use Maatwebsite\Excel\Facades\Excel;
 //
+use App\Imports\FirstCategoryImport;
+//
 use App\Imports\GroupImport;
 use App\Imports\TagImport;
 use App\Imports\CategoryImport;
@@ -35,6 +37,7 @@ use App\Imports\pivot\LandingTagImport;
 use App\Imports\pivot\PaperFaqImport;
 use App\Imports\pivot\PaperItemImport;
 use App\Imports\pivot\PaperTagImport;
+use App\Imports\pivot\PaperCategoryImport;
 // use App\Imports\pivot\PostTagImport;
 // use App\Imports\pivot\SmsCategoryImport;
 // use App\Imports\pivot\SmsTagImport;
@@ -58,9 +61,11 @@ class ImportExcelCommand extends Command
     {
         ini_set('memory_limit', '-1');
  
+        Excel::import(new FirstCategoryImport, storage_path('app/Excel/Categories.xlsx'));
+        //
         Excel::import(new GroupImport, storage_path('app/Excel/Groups.xlsx'));
-        Excel::import(new TagImport, storage_path('app/Excel/Tags.xlsx'));
         Excel::import(new CategoryImport, storage_path('app/Excel/Categories.xlsx'));
+        Excel::import(new TagImport, storage_path('app/Excel/Tags.xlsx'));
         Excel::import(new LandingImport, storage_path('app/Excel/Landings.xlsx'));
         Excel::import(new PostImport, storage_path('app/Excel/Posts.xlsx'));
         Excel::import(new PaperImport, storage_path('app/Excel/Papers.xlsx'));
@@ -85,10 +90,8 @@ class ImportExcelCommand extends Command
         Excel::import(new PaperFaqImport, storage_path('app/Excel/pivot/PaperFaqs.xlsx'));
         Excel::import(new PaperItemImport, storage_path('app/Excel/pivot/PaperItems.xlsx'));
         Excel::import(new PaperTagImport, storage_path('app/Excel/pivot/PaperTags.xlsx'));
+        Excel::import(new PaperCategoryImport, storage_path('app/Excel/pivot/PaperCategories.xlsx'));
  
-        // Excel::import(new PostTagImport, storage_path('app/Excel/pivot/PostTags.xlsx'));
-        // Excel::import(new LandingTagImport, storage_path('app/Excel/pivot/LandingTags.xlsx'));
-
 
     }
 }

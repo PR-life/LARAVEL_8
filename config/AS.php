@@ -1,5 +1,6 @@
 <?php
 return [
+    'env' => env('APP_ENV'),
     'view_switch' => env('VIEW_SWITCH',''),
     'name' => env('APP_NAME'),
     'url' => env('APP_URL'),

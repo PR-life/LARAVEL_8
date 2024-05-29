@@ -16,6 +16,8 @@ use App\Exports\PaperExport;
 use App\Exports\SmsExport;
 use App\Exports\FaqExport;
 //
+use App\Exports\child\TelegramExport;
+//
 use App\Exports\ItemExport;
 //
 // use App\Exports\msg\CommentPostExport;
@@ -40,6 +42,7 @@ use App\Exports\pivot\LandingTagExport;
 use App\Exports\pivot\PaperFaqExport;
 use App\Exports\pivot\PaperItemExport;
 use App\Exports\pivot\PaperTagExport;
+use App\Exports\pivot\PaperCategoryExport;
  
 // use App\Exports\pivot\SmsTagExport;
 // use App\Exports\pivot\SmsCategoryExport;
@@ -56,120 +59,126 @@ class ExportController extends Controller
 	{
 
 		$nameGroup = 'Groups' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new GroupExport, 'Excel/old/'.$nameGroup);
+		Excel::store(new GroupExport, 'Excel/_old/'.$nameGroup);
 		Excel::store(new GroupExport, 'Excel/Groups.xlsx');
 
 		$nameTag = 'Tags' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new TagExport, 'Excel/old/'.$nameTag);
+		Excel::store(new TagExport, 'Excel/_old/'.$nameTag);
 		Excel::store(new TagExport, 'Excel/Tags.xlsx');
 
 		$nameCategory = 'Categories' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new CategoryExport, 'Excel/old/'.$nameCategory);
+		Excel::store(new CategoryExport, 'Excel/_old/'.$nameCategory);
 		Excel::store(new CategoryExport, 'Excel/Categories.xlsx');
 
 		$nameLanding = 'Landing' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new LandingExport, 'Excel/old/'.$nameLanding);
+		Excel::store(new LandingExport, 'Excel/_old/'.$nameLanding);
 		Excel::store(new LandingExport, 'Excel/Landings.xlsx');
 
 		$namePost = 'Posts' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new PostExport, 'Excel/old/'.$namePost);
+		Excel::store(new PostExport, 'Excel/_old/'.$namePost);
 		Excel::store(new PostExport, 'Excel/Posts.xlsx');
 
 		$namePaper = 'Papers' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new PaperExport, 'Excel/old/'.$namePaper);
+		Excel::store(new PaperExport, 'Excel/_old/'.$namePaper);
 		Excel::store(new PaperExport, 'Excel/Papers.xlsx');
 
 		$nameItem = 'Item' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new ItemExport, 'Excel/old/'.$nameItem);
+		Excel::store(new ItemExport, 'Excel/_old/'.$nameItem);
 		Excel::store(new ItemExport, 'Excel/Items.xlsx');
 
 		$nameSms = 'Sms' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new SmsExport, 'Excel/old/'.$nameSms);
+		Excel::store(new SmsExport, 'Excel/_old/'.$nameSms);
 		Excel::store(new SmsExport, 'Excel/Sms.xlsx');
 
 		$nameFaq = 'Faq' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new FaqExport, 'Excel/old/'.$nameFaq);
+		Excel::store(new FaqExport, 'Excel/_old/'.$nameFaq);
 		Excel::store(new FaqExport, 'Excel/Faq.xlsx');
-
-
+		
+		
+		//
+		$nameTelegram = 'Telegram' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new TelegramExport, 'Excel/_old/child/'.$nameTelegram);
+		Excel::store(new TelegramExport, 'Excel/child/Telegrams.xlsx');
+		
 
 
 		// dd(444)
 		$nameCategoryFaq = 'CategoryFaq' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new CategoryFaqExport, 'Excel/old/pivot/'.$nameCategoryFaq);
+		Excel::store(new CategoryFaqExport, 'Excel/_old/pivot/'.$nameCategoryFaq);
 		Excel::store(new CategoryFaqExport, 'Excel/pivot/CategoryFaqs.xlsx');
 		$nameCategoryTag = 'CategoryTag' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new CategoryTagExport, 'Excel/old/pivot/'.$nameCategoryTag);
+		Excel::store(new CategoryTagExport, 'Excel/_old/pivot/'.$nameCategoryTag);
 		Excel::store(new CategoryTagExport, 'Excel/pivot/CategoryTags.xlsx');
 
 		$nameFaqCategory = 'FaqCategories' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new FaqCategoryExport, 'Excel/old/pivot/'.$nameFaqCategory);
+		Excel::store(new FaqCategoryExport, 'Excel/_old/pivot/'.$nameFaqCategory);
 		Excel::store(new FaqCategoryExport, 'Excel/pivot/FaqCategories.xlsx');
 		$nameFaqFaq = 'FaqFaqs' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new FaqFaqExport, 'Excel/old/pivot/'.$nameFaqFaq);
+		Excel::store(new FaqFaqExport, 'Excel/_old/pivot/'.$nameFaqFaq);
 		Excel::store(new FaqFaqExport, 'Excel/pivot/FaqFaqs.xlsx');
 		$nameFaqGroup = 'FaqGroups' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new FaqGroupExport, 'Excel/old/pivot/'.$nameFaqGroup);
+		Excel::store(new FaqGroupExport, 'Excel/_old/pivot/'.$nameFaqGroup);
 		Excel::store(new FaqGroupExport, 'Excel/pivot/FaqGroups.xlsx');
 		$nameFaqTag = 'FaqTags' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new FaqTagExport, 'Excel/old/pivot/'.$nameFaqTag);
+		Excel::store(new FaqTagExport, 'Excel/_old/pivot/'.$nameFaqTag);
 		Excel::store(new FaqTagExport, 'Excel/pivot/FaqTags.xlsx');
 
 		$nameItemCategory = 'ItemCategories' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new ItemCategoryExport, 'Excel/old/pivot/'.$nameItemCategory);
+		Excel::store(new ItemCategoryExport, 'Excel/_old/pivot/'.$nameItemCategory);
 		Excel::store(new ItemCategoryExport, 'Excel/pivot/ItemCategories.xlsx');
 		$nameItemFaq = 'ItemFaqs' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new ItemFaqExport, 'Excel/old/pivot/'.$nameItemFaq);
+		Excel::store(new ItemFaqExport, 'Excel/_old/pivot/'.$nameItemFaq);
 		Excel::store(new ItemFaqExport, 'Excel/pivot/ItemFaqs.xlsx');
 		$nameItemItem = 'ItemItems' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new ItemItemExport, 'Excel/old/pivot/'.$nameItemItem);
+		Excel::store(new ItemItemExport, 'Excel/_old/pivot/'.$nameItemItem);
 		Excel::store(new ItemItemExport, 'Excel/pivot/ItemItems.xlsx');
 		$nameItemTag = 'ItemTags' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new ItemTagExport, 'Excel/old/pivot/'.$nameItemTag);
+		Excel::store(new ItemTagExport, 'Excel/_old/pivot/'.$nameItemTag);
 		Excel::store(new ItemTagExport, 'Excel/pivot/ItemTags.xlsx');
 
 
 		$nametLandingFaq = 'LandingFaqs' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new LandingFaqExport, 'Excel/old/pivot/'.$nametLandingFaq);
+		Excel::store(new LandingFaqExport, 'Excel/_old/pivot/'.$nametLandingFaq);
 		Excel::store(new LandingFaqExport, 'Excel/pivot/LandingFaqs.xlsx');
 		$nametLandingItem = 'LandingItems' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new LandingItemExport, 'Excel/old/pivot/'.$nametLandingItem);
+		Excel::store(new LandingItemExport, 'Excel/_old/pivot/'.$nametLandingItem);
 		Excel::store(new LandingItemExport, 'Excel/pivot/LandingItems.xlsx');
 		$nametLandingTag = 'LandingTags' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new LandingTagExport, 'Excel/old/pivot/'.$nametLandingTag);
+		Excel::store(new LandingTagExport, 'Excel/_old/pivot/'.$nametLandingTag);
 		Excel::store(new LandingTagExport, 'Excel/pivot/LandingTags.xlsx');
 
 
  		$nametPaperFaq = 'PaperFaqs' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new PaperFaqExport, 'Excel/old/pivot/'.$nametPaperFaq);
+		Excel::store(new PaperFaqExport, 'Excel/_old/pivot/'.$nametPaperFaq);
 		Excel::store(new PaperFaqExport, 'Excel/pivot/PaperFaqs.xlsx');
  		$nametPaperItem = 'PaperItems' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new PaperItemExport, 'Excel/old/pivot/'.$nametPaperItem);
+		Excel::store(new PaperItemExport, 'Excel/_old/pivot/'.$nametPaperItem);
 		Excel::store(new PaperItemExport, 'Excel/pivot/PaperItems.xlsx');
 		$nametPaperTag = 'PaperTags' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new PaperTagExport, 'Excel/old/pivot/'.$nametPaperTag);
+		Excel::store(new PaperTagExport, 'Excel/_old/pivot/'.$nametPaperTag);
 		Excel::store(new PaperTagExport, 'Excel/pivot/PaperTags.xlsx');
+		Excel::store(new PaperCategoryExport, 'Excel/pivot/PaperCategories.xlsx');
 
 
 
 
 		// $nametLandingTag = 'LandingTags' . '_' . date('dm_Gi'). '.xlsx';
-		// Excel::store(new LandingTagExport, 'Excel/old/pivot/'.$nametLandingTag);
+		// Excel::store(new LandingTagExport, 'Excel/_old/pivot/'.$nametLandingTag);
 		// Excel::store(new LandingTagExport, 'Excel/pivot/LandingTags.xlsx');
 
 
 		
 
 		// $namePostTag = 'PostTags' . '_' . date('dm_Gi'). '.xlsx';
-		// Excel::store(new PostTagExport, 'Excel/old/pivot/'.$namePostTag);
+		// Excel::store(new PostTagExport, 'Excel/_old/pivot/'.$namePostTag);
 		// Excel::store(new PostTagExport, 'Excel/pivot/PostTags.xlsx');
 
 		// $nameSmsTag = 'SmsTags' . '_' . date('dm_Gi'). '.xlsx';
-		// Excel::store(new SmsTagExport, 'Excel/old/pivot/'.$nameSmsTag);
+		// Excel::store(new SmsTagExport, 'Excel/_old/pivot/'.$nameSmsTag);
 		// Excel::store(new SmsTagExport, 'Excel/pivot/SmsTags.xlsx');
 		
 		// $nameSmsCategory = 'SmsCategories' . '_' . date('dm_Gi'). '.xlsx';
-		// Excel::store(new SmsCategoryExport, 'Excel/old/pivot/'.$nameSmsCategory);
+		// Excel::store(new SmsCategoryExport, 'Excel/_old/pivot/'.$nameSmsCategory);
 		// Excel::store(new SmsCategoryExport, 'Excel/pivot/SmsCategories.xlsx');
 		
 		

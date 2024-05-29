@@ -37,6 +37,15 @@
         </span>
     @endcomponent 
     @component('_wrap.Chunk.Aside.index')
+        @slot('routeName', 'admin.lib.telegram.index')
+        @slot('linkAdd', route('admin.lib.telegram.create'))
+        @slot('cssIco', '-XS')
+        @slot('name', 'Новости')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
+    @endcomponent
+    @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.post.index')
         @slot('linkAdd', route('admin.post.create'))
         @slot('cssIco', '-XS')

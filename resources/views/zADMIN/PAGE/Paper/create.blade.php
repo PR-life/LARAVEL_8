@@ -20,14 +20,13 @@
 @section('content')
 
 <div class="I aura">
+	@component('zADMIN._wrap.form.create', ['route' => route(strtolower('admin.' . ($envData['nameRoute'] ?? 'paper') . '.store')), 'css' => '-paper'])
 
-
-	@component('zADMIN._wrap.form.create', ['route' => route('admin.paper.store'), 'css' => '-paper'])
-
-		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.paper.index')])
+		@include('zADMIN._brick.bar.v.create', ['route' => route(strtolower('admin.' . ($envData['nameRoute'] ?? 'paper') . '.index'))])
 
 
 		<input type="hidden" name="user_id" value="{{auth()->user()->id}}">
+		<input type="hidden" name="published" value="1">
 		
 		<div class="_shell _name / vol-Abs">
 			<input id="name" type="text" name="name" value="{{old('name')}}" placeholder='.'>

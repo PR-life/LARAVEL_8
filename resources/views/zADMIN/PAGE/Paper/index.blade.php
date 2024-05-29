@@ -11,7 +11,7 @@
 @endpush
 
 @push('bee')
-    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Paper', 'add' => route('admin.paper.create'), 'Model' => 'Paper'])
+    @include('zADMIN._lego.Bee.nameIndex',['name' => $envData['name_28051841'] ?? 'Paper', 'add' => route(strtolower('admin.' . ($envData['nameRoute'] ?? 'paper') . '.create')), 'Model' => 'Paper'])
     @include('zADMIN.PAGE._lego.filter.SHEMA.index.papers')
 @endpush
 

@@ -20,33 +20,9 @@ isset($css) ? $x_23101421 .= $css : '';
                 @if($Var->slug)
                     @include('zADMIN._repo.teaser.brick.slug')
                 @endif
-
                 @include('zADMIN._repo.teaser.lego.name.seo_en')
                 @include('zADMIN._repo.teaser.lego.cell.seo')
-
- 
-
-                {{-- @if(isset($Var->pivotItem) && count($Var->pivotItem))
-                    <div class="Ico -S / pointer" data-click data-node="pivot_{{$Var->id}}" data-css data-toggle='Block'>
-                        @svg('compare')
-                    </div>
-                @endif --}}
-
-
-                {{-- @if(isset($Var->pivotItem) && count($Var->pivotItem))
-                <div id="pivot_{{$Var->id}}" class="Pivot / none">
-                    <div class="paragraph"></div>
-                    <ul class="-S ul / vol-dot">
-                    @foreach($Var->pivotItem as $pivot)
-                        <li>
-                            <a href="{{route('admin.faq.edit',$pivot->id)}}">{{$pivot->name}}</a>
-                        </li>
-                     @endforeach
-                    </ul>
-                </div>
-                @endif --}}
             </div>
-    
         </div>
         
         <div class="_r / flex sI / cross-s">
@@ -59,7 +35,7 @@ isset($css) ? $x_23101421 .= $css : '';
                 @include('zADMIN._repo.teaser.lego.cell.bd.min')
             </div>
             <div class="_last / D-Shield -off / x-HMin flex cI">
-                @include('zADMIN._brick.manager.basket', ['class' => class_basename($Var), 'id' => $Var->id, 'css' => 'Grey'])
+                {{-- @include('zADMIN._brick.manager.basket', ['class' => class_basename($Var), 'id' => $Var->id, 'css' => 'Grey']) --}}
             </div>
         </div>
     </div>
