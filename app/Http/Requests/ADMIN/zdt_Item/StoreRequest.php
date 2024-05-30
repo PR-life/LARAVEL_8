@@ -75,7 +75,7 @@ class StoreRequest extends BaseRelationsRequest
 	public function messages() {
 		// return parent::messages(); // по умолчаиню
 		return array_merge(parent::messages(), [
-			'name.required' => 'Название поста',
+			'name.required' => 'Название услуги',
 			'prev_image.file' => 'необходимо выбрать файл',
 		]);
 	}

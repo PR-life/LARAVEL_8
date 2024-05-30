@@ -41,7 +41,8 @@ class StoreRequest extends BaseRelationsRequest
 			'prev_h1' => 'nullable|string',
 			'prev_h2' => 'nullable|string',
 			'prev_p' => 'nullable|string',
-            'prev_image' => 'nullable|file',
+            'prev_image' => 'nullable',
+            // 'prev_image' => 'nullable|file',
 			'prev_url' => 'nullable|string',
 			'prev_veil' => 'nullable|string',
 

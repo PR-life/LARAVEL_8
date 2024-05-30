@@ -1,14 +1,14 @@
 <div class="inline">
-    <ul id="active_menuEditTabBody" class="menu -tag -S / Kite kite-space / pointer" 
+    <ul id="active_menuEditTabBody" class="menu -tag -S / Kite kite-space / Order / pointer" 
         data-click data-switch data-package='tab_EditTabBody' 
         data-stop 
         data-localstorage localstorage-id='switch'
         data-check="active"
     >
-        <li data-item='1' data-packagetype='css' data-packagefoo='radio' package="Tabs -x1"><span class="a noEvents">{{$nameTab1 ?? 'Тизер'}}</span></li>
-        <li data-item='2' data-packagetype='css' data-packagefoo='radio' package="Tabs -x2"><span class="a noEvents">{{$nameTab2 ?? 'SEO'}}</span></li>
+        <li class="order-first" data-item='1' data-packagetype='css' data-packagefoo='radio' package="Tabs -x1"><span class="a noEvents">{{$nameTab1 ?? 'Тизер'}}</span></li>
+        <li class="order-last" data-item='2' data-packagetype='css' data-packagefoo='radio' package="Tabs -x2"><span class="a noEvents">{{$nameTab2 ?? 'SEO'}}</span></li>
 		@isset($nameTab3)
-        <li data-item='3' data-packagetype='css' data-packagefoo='radio' package="Tabs -x3"><span class="a noEvents">{{$nameTab3}}</span></li>
+        <li class="order-{{$orderTab3}}" data-item='3' data-packagetype='css' data-packagefoo='radio' package="Tabs -x3"><span class="a noEvents">{{$nameTab3}}</span></li>
 		@endisset
     </ul>
 </div>

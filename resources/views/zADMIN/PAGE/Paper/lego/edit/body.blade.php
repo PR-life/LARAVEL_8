@@ -22,6 +22,12 @@
 			<div class="paragraphX2 / net"></div>
 			@include('zADMIN.PAGE._lego.edit.seo.canonical_ru', ['Var' => $paper])
 		@endslot
+		@slot('nameTab3', 'Медиа')
+		@slot('orderTab3', '2')
+		@slot('tab_3')
+			<div class="paragraphX2 / net"></div>
+			@include('zADMIN.PAGE._lego.edit.media.index', ['Var' => $paper])
+		@endslot
 	@endcomponent
 
 	<div class="hill"></div>
