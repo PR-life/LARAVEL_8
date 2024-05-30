@@ -1,0 +1,43 @@
+@charset "UTF-8";
+
+a.-grey {color:inherit;}
+
+a.-grey.vol-1 {color: @c-50;}
+
+a.-grey > span {
+	position: relative;	
+	// color:inherit;
+}
+a.-grey:hover {
+	color: @c-ahover;
+}
+
+a.-grey>span {
+	background-image: linear-gradient(transparent, transparent), linear-gradient(@c-border, @c-border);
+	background-repeat: no-repeat;
+	background-position: 100% 100%,0 100%;
+	background-size: 0 1px,100% 1px;
+}
+
+
+
+
+// @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+// 	a.-grey > span::after {
+// 		content: '';
+// 		position: absolute;
+// 		left: -3px; 
+// 		right: -3px; 
+// 		bottom: -1px;
+// 		height: 1px;
+// 		background-color: @c-border;
+// 	}
+// }
+
+// @media screen and (max-width: @w-menu-2) {
+// 	a.-grey > span {border-bottom:1px solid @c-border}
+// }
+ 
+// a.-grey > span:last-child::after {
+// 	right: 0;
+// }

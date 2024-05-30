@@ -3,7 +3,15 @@
         <div class="Min -w5 / wrap-relationship -solo / round">
             @include('zADMIN._wrap.select.name',['Var' => 'Категория'])
             @component('zADMIN._wrap.select.category.main', ['id' => 'category'])
-                @include('_._brick.select.category.edit.main',['Categories' => $categories, 'Var' => $paper->category_id])
+            {{-- @dd($categories) --}}
+                @include('_._brick.select.category.edit.main',[
+                    'Categories' => $categories,
+                    // 'Var' => $paper->category_id
+                    'Var' => class_basename($paper) == 'Telegram' ? 
+                    ($paper->category_id ? $paper->category_id : $categories->firstWhere('slug', 'news')->id)
+                    : $paper->category_id
+                    // 'Var' => class_basename($paper) == 'Telegram' ? $categories->firstWhere('slug', 'news'); : $paper->category_id
+                    ])
             @endcomponent
         </div>
         <div class="Min -w5 / wrap-relationship -solo / round">

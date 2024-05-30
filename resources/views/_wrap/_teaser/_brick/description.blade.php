@@ -14,14 +14,17 @@
 		@endisset
 	@endisset
 
-
-	@if (isset($Var->text))
+	@if(isset($Var->text))
 		<div class="{{$cssContent ?? 'content-m -lineHeight'}}">
-			@if ($Var->shema_teaser == 'poster')
+			{{-- @if ($Var->shema_teaser == 'poster') --}}
 				{!!\Illuminate\Support\Str::words(strip_tags($Var->text), 20, $end="...")!!}
-			@else
+			{{-- @else --}}
 				{!!\Illuminate\Support\Str::words(strip_tags($Var->text), 50, $end="...")!!}
-			@endif
+			{{-- @endif --}}
+		</div>
+	@elseif(isset($Var->article))
+		<div class="{{$cssContent ?? 'content-m -lineHeight'}}">
+			{!!\Illuminate\Support\Str::words(strip_tags($Var->article), 50, $end="...")!!}
 		</div>
 	@endif
 </a>

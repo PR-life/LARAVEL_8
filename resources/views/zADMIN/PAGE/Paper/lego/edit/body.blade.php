@@ -46,7 +46,7 @@
 
 
 <div class="paragraph"></div>
-@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Текст'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Вступление'])
 <div class="paragraph"></div>
 <div class="_shell Article aura / Note -lite">
 	<textarea id="tinymce_lite_1" name="text" placeholder='текст...'>{{$paper->text}}</textarea>

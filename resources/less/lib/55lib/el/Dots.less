@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.Dots {
+	--x-dots:1.5rem;
+	.dot {
+		width: var(--x-dots);
+		height: var(--x-dots);
+		background-color: #f1f2f4;
+		// border-radius: 1rem;
+	}
+
+	.dot.active {
+		width: calc(var(--x-dots)*3);
+	}
+
+}
+
+

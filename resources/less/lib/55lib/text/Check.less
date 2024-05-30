@@ -1,0 +1,91 @@
+@charset "UTF-8";
+
+
+.Check.-text {
+	--x-Check-bg-off:transparent;
+
+	.check-bg {
+		border:1px solid var(--x-Check-c-border);
+	}
+}
+
+
+
+
+.Check {
+	--x-Check-bg-on:transparent;
+	--x-Check-bg-off:#fcebeb;
+	--x-Check-c-border:@c-border;
+
+	.check-bg {
+		right: 0; bottom: 0; top: 0;
+		background-color: var(--x-Check-bg-off);
+	}
+	
+	input:checked ~ .check-bg {
+		background-color:var(--x-Check-bg-on);
+	}
+
+}
+
+
+/*
+.Check {
+	--x-Check-c-on: @green;
+	--x-Check-c-off: @c-border;
+	--x-Check-bg-on:transparent;
+	--x-Check-bg-off:#fcebeb;
+	--x-Check-c-border: @c-border;
+	//
+	--x-Check-size-border:2px;
+	//
+	--x-Check-ico-width:11px;
+	--x-Check-ico-height:7px;
+	--x-Check-ico-border:2px;
+}
+
+ 
+
+.Check::after,
+.Check::before,
+.Check {
+	position: absolute;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+}
+
+.Check::after,
+.Check::before {
+	content: '';
+}
+
+
+.Check::before {
+	background-color: var(--x-Check-bg-off);
+	border: var(--x-Check-size-border) solid var(--x-Check-c-border);
+}
+
+.Check::after {
+	width: var(--x-Check-ico-width);
+	height: var(--x-Check-ico-height);
+	left: 50%;
+	top: 50%;
+	border-left: var(--x-Check-ico-border) solid transparent;
+	border-bottom: var(--x-Check-ico-border) solid transparent;
+	transform: translate(-50%, -70%) rotate(-45deg);
+	border-color: var(--x-Check-c-off);
+}
+
+.On.Check::before,
+input:checked+.Check::before {
+	background-color: var(--x-Check-bg-on);
+}
+
+.On.Check::after,
+input:checked+.Check::after {
+	border-color: var(--x-Check-c-on);
+}
+
+/**/

@@ -1,0 +1,47 @@
+@charset "UTF-8";
+
+
+.Form.vol-1:valid {
+	border-color: green;
+}
+.Form.vol-1:invalid {
+	border-color: red;
+}
+
+.Form.vol-1:focus-within {
+	border-color: blue;
+}
+
+.Form.vol-1 {
+	border-left: 5px solid grey;
+
+	div[contenteditable="true"] {
+		color: #8b00ff;
+	}
+
+
+	input:in-range{background-color:rgba(0,255,0,0.25);}
+	input:out-of-range ~ ._range .-not,
+	input:in-range ~ ._range .-ok {display: inline !important}
+
+
+
+	// input:read-write {
+	// 	color: #7d4d5d
+	// }
+	//Применяется к полям формы,доступных для изменения. Псевдокласс :read-write является противоположным по своему действию :read-only,который применяется к полям с атрибутом readonly (только для чтения).
+
+	
+	// input:autofill~label {
+	// 	background-color: rgba(0, 255, 0, 0.25);
+	// }
+ 
+ 
+ 
+ 
+
+}
+
+
+
+

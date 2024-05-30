@@ -1,0 +1,166 @@
+@charset "UTF-8";
+ 
+.On,
+.FIX.on {
+
+	.Jolt.-tOn,
+	.Jolt.-tOn {
+		transform: translateY(calc(var(--jolt) - var(--jolt)*2));
+	}
+
+	.Jolt.-t_mbl,
+	.Jolt.-t {
+		transform: translateY(0px);
+	}
+
+	.Jolt.-l,
+	.Jolt.-r {
+		transform: translateX(0px);
+	}
+
+}
+
+.Jolt.-t {
+	transform: translateY(var(--jolt));
+}
+
+.Jolt.-r {
+	transform: translateX(calc(var(--jolt) - var(--jolt)*2));
+}
+
+.Jolt.-l {
+	transform: translateX(calc(var(--jolt)));
+}
+
+.Jolt {
+	.transition(transform);
+}
+
+
+// @media screen and (max-width:@w-menu-2) {
+// 	.Jolt.-t_mbl {
+// 		transform: translateY(var(--jolt));
+// 	}
+// }
+
+
+
+
+
+// .On .Jolt.-l,
+// .FIX.on .Jolt.-l {
+// 	transform: translateX(calc(var(--jolt) - var(--jolt)*2));
+// }
+
+
+// .On .Jolt.-an {
+// 	animation: Jolt .2s ease;
+// }
+
+
+.Jolt.-anime {
+	animation: Jolt_top 2.5s ease;
+}
+
+.Jolt.-anime:hover {
+    animation-play-state: paused;
+}
+
+
+@keyframes Jolt_top {
+	0% {
+		transform: translateY(var(--jolt));
+	}
+
+	10% {
+		transform: translateY(0);
+	}
+	100% {
+		transform: translateY(0);
+	}
+}
+
+/*
+
+ 
+
+body.up .Jolt.-stop,
+.Jolt {
+	.transform(0, 0);
+	.transition(transform,linear,.1s);
+}
+
+
+
+.Jolt.-on.-t {
+	-webkit-transform: translateY(var(--x-jolt));
+	transform: translateY(var(--x-jolt));
+}
+
+
+
+
+
+
+// .jolt.visible {
+// 	--x-jolt:0px;
+// }
+
+// body.i .jolt {
+// 	--x-jolt:0rem;
+// }
+
+// .Fix.on .Jolt {
+// 	.transform(0, var(--x-jolt));
+	
+// }
+
+
+// .Jolt .jolt,
+// body.Z1 .Jolt .jolt,
+// .jolt-b,
+// body.Z2 .jolt {
+// 	.transform(0, var(--x-jolt));
+// 	.transition(transform,linear,.1s);
+// }
+
+
+// .Jolt:hover .jolt-b,
+// body.i .jolt,
+// body.up .jolt,
+// body.Z1 .jolt,
+// .jolt.on,
+// input:checked ~ .Jolt .jolt {
+// 	.transform(0, 0);
+// }
+
+
+
+
+
+
+// body.up .jolt {
+// 	opacity: 0;
+// }
+
+
+/*
+
+.jolt {
+    -webkit-transform: translateY(-30px);
+    transform: translateY(-30px);
+    -webkit-transition: transform .2s ease 0s;
+    transition: transform .2s ease 0s;
+}
+
+.jolt.-up {
+    -webkit-transform: translateY(30px);
+    transform: translateY(30px);
+}
+
+
+
+
+/**/
+
+ 

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.Route {
+	display: flex;
+}
+
+.Route>* {
+	margin-right: 2rem;
+}
+
+
+.Route a:hover {
+	opacity: .5;
+}
+
+.Route p a {
+	color: #fff;
+	border-radius: .5rem;
+	background: linear-gradient(145deg, #414141 10%, #161616 100%);
+	box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.05), 0 1px 0 1px rgba(0, 0, 0, 0.05), 0 4px 6px 0 rgba(0, 0, 0, 0.05);
+}
+
+.Route p a {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	font-size: var(--font-min);
+	width: calc(var(--Ico)*3);
+	height: calc(var(--Ico)*3);
+}
+
+.Route p svg,
+.Route p span {
+	width: 2.5rem;
+	height: 2.5rem;
+	margin: 0 0 5px 0;
+}
