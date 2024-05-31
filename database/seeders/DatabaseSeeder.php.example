@@ -7,14 +7,15 @@ use Illuminate\Database\Seeder;
 ////
 use Illuminate\Support\Arr;
 //
-use Database\Seeders\zDT\dt_UserSeeder;
+use Database\Seeders\_blank\GroupSeeder;
+use Database\Seeders\_blank\PostSeeder;
 
 
 use App\Models\User;
 use App\Models\CRM\Crm;
 use App\Models\Category;
 use App\Models\Tag;
-use App\Models\Group;
+// use App\Models\Group;
 use App\Models\Post;
 use App\Models\Faq;
 use App\Models\Sms;
@@ -37,10 +38,10 @@ class DatabaseSeeder extends Seeder
 
 		$this->call([
 			UserSeeder::class,
+			GroupSeeder::class,
 			// CategorySeeder::class,
 			// TagSeeder::class,
-			// GroupSeeder::class,
-			// PostSeeder::class
+			PostSeeder::class
 		]);
 
 		// $tags = Tag::all();

@@ -1,13 +1,25 @@
 @charset "UTF-8";
 
 @import "./less/blank/@w.less"; 
+@import "./zUTIN/_ol.less";
+
+@import "./less/lib/theFont/font-OpenSans.less";
+@import "./less/lib/theFont/font-samolet.less";
+@import "./less/lib/theFont/font-tochka.less";
 
 
 html {
   --h-Top: 30px;
   --h-Header:40px; 
+
+  --family: var(--family-OpenSans);
+}
+ 
+#oiBar ._open ._item{
+	--family: var(--family-Samolet);
 }
 
+ 
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
 	#body.asideClose {
@@ -41,7 +53,7 @@ html {
 	}
 }
 
-@media (min-width:@w-menu-2-plus) and (1360px) {
+@media (min-width:@w-menu-2-plus) and (max-width: 1360px) {
 	.utin_rightEdge {
 		margin-left: var(--x-03051046);
 	}
@@ -49,7 +61,7 @@ html {
 
 @media screen and (max-width:@w-menu-2) {
 
-	.Utin.On {
+	.UTIN.On {
 		margin-left: .5rem;
 		margin-right: .5rem;
 	}
@@ -69,6 +81,10 @@ html {
 
 
  
+
+
+
+
 
 
 

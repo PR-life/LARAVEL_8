@@ -12,7 +12,7 @@
     </div>
 
     <div class="_head {{$cssHead ?? ''}} / relative">
-        @include('_brick.Close.Utin.close')
+        @include('_brick.Close.zUTIN.close')
         {!!$head!!}
         <div class="paragraphX2"></div>
     </div>

@@ -33,8 +33,8 @@ $ogp = (object) $Arr;
 <div id="Fon" class="Abs -lt -r @stack('css-fon')">@stack('fon')</div>
 
 
-@include('UTIN.skeleton.Top')
-@include('UTIN.skeleton.header')
+@include('zUTIN.skeleton.Top')
+@include('zUTIN.skeleton.header')
 {{-- @include('_._skeleton.menuMain') --}}
 
 @yield('breadBack')
@@ -68,7 +68,7 @@ $ogp = (object) $Arr;
 </div> --}}
 {{-- @include('zImago._skeleton.menuBeyond') --}}
 
-{{-- @include('UTIN._skeleton.Slump') --}}
+{{-- @include('zUTIN._skeleton.Slump') --}}
 {{-- @include('_._skeleton.Geek') --}}
 
 <div id="Milk" class="Abs Milk / index owlFIX">
