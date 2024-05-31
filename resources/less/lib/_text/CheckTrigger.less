@@ -1,0 +1,77 @@
+@charset "UTF-8";
+
+
+.CheckTrigger {
+	--x-CheckTrigger-c-border:#ebf7fc;
+	//
+	--x-CheckTrigger-bg-on:#ebf7fc;
+	--x-CheckTrigger-bg-off:#fcebeb;
+	--x-CheckTrigger-bg-knob-on:#03a9f4;
+	--x-CheckTrigger-bg-knob-off:#f44336;
+
+
+	input {opacity: 0;}
+
+	.check-bg {
+		border: 1px solid var(--x-CheckTrigger-c-border);
+		background-color: var(--x-CheckTrigger-bg-off);
+		//
+		transition: 0.3s ease all;
+	}
+	
+	.check-knob::before {
+		background-color: var(--x-CheckTrigger-bg-knob-off);
+		//
+		transition: all .1s ease;
+	}
+
+
+
+	//
+	.check-bg,
+	.check-knob,
+	.check-knob::before {
+		position: absolute;
+	}
+
+	.check-bg,
+	.check-knob {
+		top:0;
+		left: 0;
+		right:0;
+		bottom:0;
+		z-index: 5;
+
+		//
+		pointer-events: none;
+	}
+
+
+	.check-knob::before {
+		content: '';
+		top: 50%;
+		left: var(--x-CheckTrigger-space-left);
+		margin-top: calc(var(--x-CheckTrigger-knob-h) - var(--x-CheckTrigger-knob-h)*1.5);
+
+		width: calc(var(--x-CheckTrigger-w)*.5);
+		height: var(--x-CheckTrigger-knob-h);
+	}
+
+	// input:checked+.check-knob::before {
+	// 	transform: translateX(calc(var(--x-CheckTrigger-w)*.5));
+	// }
+
+}
+
+
+.CheckTrigger.On .check-bg,
+.CheckTrigger input:checked~.check-bg {
+	background-color: var(--x-CheckTrigger-bg-on);
+}
+
+.CheckTrigger.On .check-knob::before,
+.CheckTrigger input:checked~.check-knob::before {
+	transform: translateX(calc(var(--x-CheckTrigger-w)*.5 - var(--x-CheckTrigger-space-left)*2));
+	background-color: var(--x-CheckTrigger-bg-knob-on);
+}
+

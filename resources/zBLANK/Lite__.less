@@ -2,7 +2,24 @@
 
 @import "./__/_ol.less";
 
- 
+ //
+// @import "../less/lib/theFont/font-Inter.less";
+// @import "../less/lib/theFont/font-castle.less";
+// @import "../less/lib/theFont/font-Gilroy.less";
+// @import "../less/lib/theFont/font-OpenSans.less";
+
+html {
+	--family: var(--family-55555);
+	--family-2: var(--family-55555);
+}
+
+.family-2,
+.family-2 * {
+	font-family: var(--family-2) !important;
+}
+
+
+
 @media (min-width: @w-menu-2-plus) and (max-width: @metrika-100) {
  
 }

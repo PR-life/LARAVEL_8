@@ -18,7 +18,7 @@
 @include('_shema._lego.input')
 @include('_._skeleton.Fon')
 
-@include('_._skeleton.top')
+@include('_._skeleton.Top')
 {{-- @include('_._skeleton.header') --}}
 @include('_._skeleton.menuMain')
 
@@ -61,6 +61,7 @@
 	@stack('milk')
 	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		@include('_.src.svg._def')
+		{{-- @include('55555.src.svg.index') --}}
 		@stack('svg')
 	</svg>
 </div>
@@ -71,6 +72,10 @@
 
 @include('_._skeleton.bodyEnd')
 @include('_shema._lego.afterMilk')
+
+@if(config('AS.env') == 'production')
 @include('zTHIS.analytica.add_footer')
+@endif
+
 </body>
 </html>
