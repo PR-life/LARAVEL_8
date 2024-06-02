@@ -1,6 +1,7 @@
 @component('zUTIN._wrap.A4.wrap.index', [
     'header' => $header,
     'loop' => $loop,
+    'cssOn' => $cssOn ?? null,
     'cssUtin' => $cssUtin ?? null,
     'cssPlot' => $cssPlot ?? null,
     'cssBody' => $cssBody ?? null,
