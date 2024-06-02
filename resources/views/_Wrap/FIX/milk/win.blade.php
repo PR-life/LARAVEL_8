@@ -6,7 +6,7 @@
                 <div class="Close -scroll -black -an / yesEvents" data-close></div>
             </div>
         </div>
-        <div class="Abs -all {{$css ?? ''}} {{$cssMin ?? 'bg-pop / Jolt -t / hidden'}} / _indexMin Index">
+        <div class="Abs -all {{$cssAbsAll ?? ''}} {{$cssMin ?? 'bg-pop / Jolt -t / hidden'}} / _indexMin Index">
             {!!$slot!!}
         </div>
      </div>

@@ -6,6 +6,7 @@
 @import "./less/lib/theFont/font-OpenSans.less";
 @import "./less/lib/theFont/font-samolet.less";
 @import "./less/lib/theFont/font-tochka.less";
+@import "./less/lib/theFont/font-Inter.less";
 
 
 html {
@@ -15,8 +16,10 @@ html {
   --family: var(--family-OpenSans);
 }
  
-#oiBar ._open ._item{
-	--family: var(--family-Samolet);
+#oiBar {
+	.menu {
+		--family: var(--family-Inter);
+	}
 }
 
  
@@ -35,12 +38,17 @@ html {
 			}
 		}
 	
-		.utin_rightEdge {
+		.utin_edge-right {
 			--x-03051046:var(--bar);
 		}
 	}
 
-	.utin_rightEdge {
+	.utin_edge-Header {
+		padding-left: var(--edge);
+		padding-right: var(--edge);
+	}
+
+	.utin_edge-right {
 		--x-03051046:calc(var(--Aside)*.25);
 
 		padding-right: var(--x-03051046);
@@ -48,20 +56,46 @@ html {
 }
 
 @media (min-width: @w-menu-2-plus) and (max-width: @Edge0305) {
-	.utin_rightEdge {
+	.utin_edge-right {
 		margin-left: var(--bar);
 	}
 }
 
 @media (min-width:@w-menu-2-plus) and (max-width: 1360px) {
-	.utin_rightEdge {
+	.utin_edge-right {
 		margin-left: var(--x-03051046);
 	}
 }
 
 @media screen and (max-width:@w-menu-2) {
 
-	.UTIN.On {
+	#menu_aside {
+		transition: padding-left .2s linear;
+	}
+
+	#body.MXAT {
+		#menu_aside {
+			padding-left: 8rem;
+		}
+	}
+
+
+
+
+	//
+	.bg-White-Life {
+		._cell._1 {
+			margin-bottom: 1rem;
+		}
+	}
+
+	.utin_edge-Header {
+		padding-left: 5px;
+		padding-right: 5px;
+	}
+
+
+	.Utin.On {
 		margin-left: .5rem;
 		margin-right: .5rem;
 	}
@@ -71,18 +105,40 @@ html {
 			padding-top: 1rem;
 		}
 
-		.bg-cell {
+		.border-cell {
 			padding: 0 .5rem;
 
 			> * {margin-bottom: .5rem;}
 		}
+	}
+
+	#menu_aside {
+		li > ul {
+			margin-left: 1rem;
+		}
+		li {
+			margin-right: 1rem;
+		}
+	}
+	#ul_01061423 {
+		padding: 0;
 	}
 }
 
 
  
 
+.Utin{
 
+
+    ._cell::before,
+    ._cell::after,
+    ._bg::before,
+    ._bg::after {
+        content:'';
+        position: absolute;
+    }
+}
 
 
 

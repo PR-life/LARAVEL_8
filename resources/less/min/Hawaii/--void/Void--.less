@@ -1,11 +1,6 @@
 @charset "UTF-8";
 
 
-// dl.Void.-lineHeight {
-// 	--void: 7px;
-// }
-
-//
 
 ul, ol {
 	--void-ulol:.8rem;
@@ -27,11 +22,6 @@ ul.slim-s, ol.slim-s {
 
 //
 
-// .Void,
-// .void {
-// 	--void:1rem;
-// }
-
 
 .Q .Void {
 	--void:.5rem;
@@ -44,25 +34,8 @@ ul.slim-s, ol.slim-s {
 }
 
 
-// .Void > ._group > *{
-// 	--void:.25rem;
-// }
-
-
-// ._shell.Void {
-// 	--void: .4rem;
-// }
-
-
-// .Void.text,
-// .void.text {
-// 	--void: 17px;
-// }
-
 @media (min-width:@metrika-80-plus) and (max-width: @w-max) {
-	#body {
-		// --void-r:~"calc(var(--w)*.08)";
-	}
+
 }
 
 
@@ -104,6 +77,9 @@ ul.slim-s, ol.slim-s {
 		--void:7px;
 	}
 
+	.void.x-def {
+		--void:1rem;
+	}
 
 	.void-mbl > *{
 		margin-top:  0 !important;
@@ -181,6 +157,7 @@ ul.slim-s, ol.slim-s {
 	> .net,
 	> span:last-child,
 	> p:last-child,
+	> li:last-child,
     > div:last-child {
         margin-bottom: 0;
     }

@@ -7,17 +7,98 @@
       background-color: #161719;
     }
 
+    .Utin {
+        .bg-White-Life {
+            ._cell._1 {
+                details summary > i {
+                    right: 1rem;
+                }
+            }
+        }
+    }
+}
 
+
+@media screen and (max-width:@w-menu-2) {
+    #Fon ._mbl {
+        background: #141d2c;
+        box-shadow: 0px 50px 30px 35px #141d2c;
+      }
+
+    .Utin {
+        .bg-White-Life {
+            ._cell._2 {
+                .Citation {
+                    --c-Citation-border: #fff;
+                }
+            }
+        }
+    }
+
+}
+
+
+
+.Utin.-Black  {
+
+    .Preloader::after {
+        border-top-color: #fff;
+        border-right-color: #fff;
+    }
+}
+
+
+
+
+//
+
+.Utin {
     .bg-White-Life {
         ._cell._1 {
             --c-text: #000;
             background: #fff;
+            .Citation {
+                --bg-Citation-mbl:#eceef2;
+            }
+
+            .face.vol-life::before {
+                background-image: url(/Utin/ava/life.jpg);
+            }
+            
         }
         ._cell._2 {
             --c-text: #000;
             background: #f2ece0;
             // background: #42b2fe;
+            .Citation {
+                --bg-Citation-mbl:#fff8e7;
+            }
         }
     }
- 
+    .bg-Blue {
+        background: #42b2fe;
+        ._cell {
+            --c-text: #fff;
+            background: #5fbeff;
+        }
+    }
 }
+
+ 
+
+
+//
+.face::before {
+    background-size: cover;
+    border-radius: 50%;
+}
+
+face.vol-life::before {
+    background-image: url(/Utin/ava/life.jpg);
+}
+.-Black .face.vol-life::before {
+    background-image: url(/Utin/ava/life_white.jpg);
+}
+
+
+

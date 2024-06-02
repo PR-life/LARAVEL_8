@@ -1,0 +1,46 @@
+@charset "UTF-8";
+
+
+.UTIN.-border {
+
+    border: 1px solid var(--Utin-c-border);
+}
+
+
+
+.Utin.-Black {
+    ._cell::before {
+        background: linear-gradient(to bottom, rgba(255, 255, 255, 0.8), transparent);
+    }
+    ._cell::after {
+        background-color: #242424;
+    }
+}
+
+.Utin{
+
+    .border-cell {
+
+        ._cell::before,
+        ._cell::after {
+            bottom: 0;
+            border-radius: 1rem 1rem 0 0;
+        }
+
+        ._cell::before {
+            left: -1px;
+            top: -1px;
+            right: -1px;
+            z-index: 0;
+        }
+
+        ._cell::after {
+            left: 0px;
+            top: 0px;
+            right: 0;
+            z-index: 1;
+        }
+    }
+
+ 
+}

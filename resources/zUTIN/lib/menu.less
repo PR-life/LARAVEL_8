@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+@media (min-width: 800px) and (max-width: 6000px) {
+#oiBar {
+    .menu {
+      --c-menu:#ccc;
+      --c-menu-active: #fff;
+      --c-menu-hover: var(--c-brand);
+    }
+  }
+}
+@media screen and (max-width:@w-menu-2) {
+    .menu.-aside.-tileMbl {
+        --c-menu: #fff;
+        --c-menu-active: #000;
+        --c-menu-hover: var(--c-brand);
+        --bg-menu: rgba(255, 255, 255, 0.1);
+        --bg-menu-active: #fff;
+        --bg-menu-hover: #dbdbdb;
+
+        li::before {display: none;}
+    }
+
+}

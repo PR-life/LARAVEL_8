@@ -7,11 +7,11 @@
     'Font' => $Font
 ])
 
-    @slot('cssGrid', ' x2 -gap / bg-cell')
+    @slot('cssGrid', ' x2 -gap / bg-cell44' . ($cssGrid ?? ''))
 
     @slot('cell')
-        @include('zUTIN._wrap._lego.cell.1')
-        @include('zUTIN._wrap._lego.cell.2')
+        @include('zUTIN._wrap._lego.cell.1', ['css' => $cssCell ?? null])
+        @include('zUTIN._wrap._lego.cell.2', ['css' => $cssCell ?? null])
     @endslot
 
     {!!$slot!!}

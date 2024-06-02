@@ -11,7 +11,7 @@
 
 .Anime.vol-shake_hor {
     --Anime-name:Anime-shake_hor;
-    --Anime-duration:.35s;
+    --Anime-duration:3s;
     // --Anime-duration:.8s;
     // --Anime-function:linear;
 }
@@ -37,9 +37,12 @@
 
 @keyframes Anime-shake_hor {
     0% { transform: translateX(0) }
-    25% { transform: translateX(5px) }
-    50% { transform: translateX(-5px) }
-    75% { transform: translateX(5px) }
+    3% { transform: translateX(5px) }
+    6% { transform: translateX(-5px) }
+    9% { transform: translateX(5px) }
+    12% { transform: translateX(-5px) }
+    16% { transform: translateX(5px) }
+    20% { transform: translateX(0) }
     100% { transform: translateX(0) }
 }
 

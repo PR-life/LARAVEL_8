@@ -42,6 +42,11 @@ hr{
 a {
 	color:inherit;
 }
+
+mark {
+	background: transparent;
+}
+
 .contentBox{
 	box-sizing:content-box
 }
@@ -576,10 +581,4 @@ hr,.ghost,.visible,.Op,.opVersa{
 	100% { transform: rotate(360deg) }
 }
 
-@media screen and (max-width:799px){
-	.Preloader::after {
-		border-top-color: #fff;
-		border-right-color: #fff;
-	}
-}
   

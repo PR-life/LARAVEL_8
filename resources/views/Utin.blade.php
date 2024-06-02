@@ -24,7 +24,7 @@
 @yield('breadBack')
 @yield('head')
 
-@component('_wrap.oiBar', ['id' => 'Wrap', 'css' => 'HWin', 'cssOiBar' => 'skimp-size_Aside'])
+@component('_wrap.oiBar', ['id' => 'Wrap', 'css' => 'HWin', 'cssOiBar' => 'skimp-size_Aside', 'cssOi' => 'skimp-size_Aside'])
 
 	@yield('bee')
 
