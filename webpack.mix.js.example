@@ -18,7 +18,8 @@ mix.less('resources/min.less', 'public/css/min.css')
 	.less('resources/less/z_env/tinymce.less', 'public/css/env/tinymce.css')
 	//
 	.less('resources/Lite.less', 'public/css/Lite.css')
-	// .less('resources/zUTIN.less', 'public/css/zUTIN.css')
+	.less('resources/UTIN.less', 'public/css/UTIN.css')
+	.less('resources/style.less', 'public/css/style.css')
 
 mix.js('resources/__JS/app.js', 'public/js')
 	.js('resources/__JS/Observer/_observer.js', 'public/js/Observer/_observer.js')

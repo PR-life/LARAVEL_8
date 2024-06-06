@@ -13,7 +13,12 @@
     @include('zADMIN.PAGE.Item.lego.edit.lego.param')
 
 
-    @component('zADMIN._wrap._open.tool_FlaberSms')
+
+    @component('_wrap.__.summary')
+        {{-- @slot('cssName', 'content-m pl-4') --}}
+        {{-- @slot('cssWrap', '') --}}
+        {{-- @slot('cssContent', '') --}}
+        @slot('icoCloseName', 'closeRoll')
         @slot('id', 'shema')
         @slot('name', 'шаблон')
 
@@ -22,19 +27,20 @@
 
         <div class="paragraph"></div>
 
-        <div class="content-xxs Grey">Full</div>
+        {{-- <div class="content-xxs Grey">Full</div> --}}
         {{-- @include('zADMIN.PAGE._lego.edit.shema.full') --}}
 
     @endcomponent
 
-    @component('zADMIN._wrap._open.tool_FlaberSms')
+
+    {{-- @component('zADMIN._wrap._open.tool_FlaberSms')
         @slot('id', 'mockup')
         @slot('name', 'mockup')
 
         <div class="content-xxs Grey">Mockup</div>
         @include('zADMIN.PAGE._lego.edit.mockup.index', ['Var' => $item])
 
-    @endcomponent
+    @endcomponent --}}
 
 
 </div>

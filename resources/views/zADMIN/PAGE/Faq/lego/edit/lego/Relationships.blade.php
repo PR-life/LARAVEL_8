@@ -22,6 +22,14 @@
     @component('zADMIN._wrap.Relationships.line')
         <div class="flex cross">
             <div class="Min -w5">
+                @include('zADMIN._wrap.select.name',['Var' => 'Категории'])
+                <div class="wrap-relationship -multiple">
+                    @component('zADMIN._wrap.select.categories.index')
+                        @include('_._brick.select.categories.edit.index',['Categories' => $categories,'arr' => $faq->categories->pluck('id')->toArray()])
+                    @endcomponent
+                </div>
+            </div>
+            <div class="Min -w5">
                 @include('zADMIN._wrap.select.name',['Var' => 'Теги'])
                 <div class="wrap-relationship -multiple">
                     @component('zADMIN._wrap.select.tags.index')

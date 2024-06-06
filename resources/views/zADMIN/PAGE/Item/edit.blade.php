@@ -20,7 +20,7 @@
 
 <div class="I aura">
 	@component('zADMIN._wrap.form.edit', ['route' => route('admin.item.update', $item->id), 'css' => '-item'])
-		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.item.index'])
+		@include('zADMIN._brick.bar.v.edit',['routeName' => strtolower('admin.' . ($envData['nameRoute'] ?? 'item') . '.index'),'link_create' => route(strtolower('admin.' . ($envData['nameRoute'] ?? 'item') . '.create'))])
 
 		<div class="_shell / net">
 			@include('zADMIN._bd.edit.min',['Var'=> $item])

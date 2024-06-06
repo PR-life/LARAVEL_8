@@ -20,7 +20,7 @@
 <div class="I aura">
 	@component('zADMIN._wrap.form.edit', ['route' => route('admin.post.update', $post->id), 'css' => '-post'])
 
-		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.post.index'])
+		@include('zADMIN._brick.bar.v.edit',['routeName' => strtolower('admin.' . ($envData['nameRoute'] ?? 'post') . '.index'),'link_create' => route(strtolower('admin.' . ($envData['nameRoute'] ?? 'post') . '.create'))])
 
 		<div class="_shell / net">
 			@include('zADMIN._bd.edit.min',['Var'=> $post])

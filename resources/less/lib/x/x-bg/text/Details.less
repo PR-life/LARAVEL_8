@@ -11,6 +11,7 @@
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
     .Details.-bg {
+        // ._details,
         > details {
             z-index: 5;
             > :last-child::after {
@@ -26,6 +27,7 @@
                 .transition(background-color,linear,.1s)
             }
         }
+        // ._details[open],
         > details[open] {
             // > summary {
             //     opacity: .5;

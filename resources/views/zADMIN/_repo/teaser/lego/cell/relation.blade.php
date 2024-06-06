@@ -2,12 +2,21 @@
     
     <div class="mr-2">
         @if($Var->tags->count())
-            <ul class="menu -tag -XXS / lie cloud">
+            <ul class="menu -tag -XXS vol-tags / lie cloud">
                 @foreach($Var->tags as $_tag)
                     <li><a class="nowrap content-xxxs round-xs" href="{{route('admin.tag.edit', $_tag->id)}}" target="_blank">{{$_tag->name}}</a></li>
                 @endforeach
             </ul>
         @endif
+        @isset($Var->categories)
+        @if($Var->categories->count())
+            <ul class="menu -tag -XXS vol-categories / lie cloud">
+                @foreach($Var->categories as $_category)
+                    <li><a class="nowrap content-xs round-s" href="{{route('admin.category.edit', $_category->id)}}" target="_blank">{{$_category->name}}</a></li>
+                @endforeach
+            </ul>
+        @endif
+        @endisset
     </div>
 
 

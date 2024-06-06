@@ -5,7 +5,7 @@
 	{{-- @include('_shema._lego.head.index', [
 		'linkCssMin' => '/css/minDT.css',
 		'linkCssApp' => '/css/appDT.css',
-		'linkMetaColor' => 'zDT._skeleton.meta.color'
+		'linkMetaColor' => 'zAsgrupp._skeleton.meta.color'
 		])
 	@include('xxx._skeleton.meta.index') --}}
 </head>
