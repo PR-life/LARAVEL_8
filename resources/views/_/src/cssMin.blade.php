@@ -145,11 +145,6 @@ svg{
 	width:auto
 }
 
-#body.en .En,
-#body.ru .Ru,
-body,img,video,input,.block{
-	display:block
-}
 
 #body.Z2 .noneZ2,
 #body .En, #body .Ru, .none,.Rano,body meta{
@@ -161,8 +156,12 @@ body,img,video,input,.block{
 .Start-fade,
 .Start .fade {opacity: 0;}
 
+#body.Z2 .blockZ2,
 .Block,
-#body.load .rano{
+#body.load .rano,
+#body.en .En,
+#body.ru .Ru,
+body,img,video,input,.block{
 	display:block
 }
 .None{
@@ -420,6 +419,8 @@ hr,.ghost,.visible,.Op,.opVersa{
 }
 
 @media (min-width:799px) and (max-width:1080px){
+
+	#body.Z2 .blockZ2-Beyond,
 	.flex-beyond,
 	.Beyond {display:flex !important}
 	.hidden_beyond{
@@ -429,6 +430,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.none_Beyond {
 		display:none;
 	}
+
 }
 
 @media screen and (max-width:1080px){

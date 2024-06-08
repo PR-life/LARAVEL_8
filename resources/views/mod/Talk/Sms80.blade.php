@@ -1,4 +1,4 @@
-<div id="Sms_13041005" class="Sms -wMin / Talk -w80 {{$css ?? ''}} / Bone / index relative">
+<div id="Sms_13041005" class="Sms -w -wMin / Talk -w80 {{$css ?? ''}} / Bone / index relative">
     <div class="padding top / stop_80"></div>
     <div class="I Edge -PC edge / stop_80">
         @include('manager.scroll.Name.left', ['name_mbl' => $name_Roll ?? null, 'name' => $name ?? null])

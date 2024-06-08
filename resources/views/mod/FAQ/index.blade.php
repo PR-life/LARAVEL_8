@@ -9,8 +9,9 @@
 	} --}}
 @endpush
 
-<div class="{!!$css_wrap_menu ?? ''!!}">
-    <div>
+<div class="{!!$css_wrap_menu ?? ''!!}" itemscope itemtype="https://schema.org/WPSideBar">
+    <meta itemprop="name" content="навигация по FAQ">
+    <div role="navigation" aria-label="навигация по FAQ">
         <ul class="menu -tag {{$css_menu ?? '-roundS edge-left'}} / flex -wrap cloud / Pointer" data-click data-switch data-package="{{$id_package}}" data-stop>
            {!!$menu_li!!}
            <li class="gstrm"></li>
@@ -20,7 +21,8 @@
 
 <div class="paragraph / none_mbl"></div>
 
-<div class="{{$css_wrap_content ?? 'I aura / Edge -SPC'}}">
+<div class="{{$css_wrap_content ?? 'I aura / Edge -SPC'}}" itemscope itemtype="https://schema.org/FAQPage">
+    <meta itemprop="name" content="Часто задаваемые вопросы">
 	<div id="{{$id_package}}" class="{{$id_package_css ?? 'all first'}}">
 		<div class="Ef -list -first / -Details">
             @foreach($Var as $_faq)

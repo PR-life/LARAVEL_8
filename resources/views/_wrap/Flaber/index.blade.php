@@ -1,4 +1,4 @@
-<div id="{{$id ?? 'Flaber_edit'}}" class="Flaber {{$css_27041452 ?? ''}} / _Axon Axon / relative" {!!$data ?? ''!!}>
+<aside id="{{$id ?? 'Flaber_edit'}}" class="Flaber {{$css_27041452 ?? ''}} / _Axon Axon / relative" {!!$data ?? ''!!}>
     {{$before_Flaber ?? ''}}
     <div class="_flaber / _Axon Axon">
         {{$indent_Flaber ?? ''}}
@@ -17,4 +17,4 @@
                 {{-- <div class="KIRA -sms"></div> --}}
         @endswitch
     </div>
-</div>
+</aside>

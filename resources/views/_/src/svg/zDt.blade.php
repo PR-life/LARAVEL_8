@@ -1,7 +1,7 @@
 @include('_.src.svg.min')
 @include('_.src.svg.lvl_1')
 @include('_.src.svg.market')
-@include('zAsgrupp.src.svg.social')
+@include('zDT.src.svg.social')
 @include('_.src.svg.messenger')
 @include('_.src.svg.login')
 @include('_.src.svg.manager')

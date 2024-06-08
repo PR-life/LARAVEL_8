@@ -1,5 +1,13 @@
-# .gitignore
 # public, public_html, node_*, vendor, storage
+
+
+# .gitignore
+
+# *
+# !public/
+# !.gitignore
+
+
 
 /node_modules
 /storage/*.key

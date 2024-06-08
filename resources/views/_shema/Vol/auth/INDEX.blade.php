@@ -1,0 +1,1 @@
+@extends('_shema.vol-lite')

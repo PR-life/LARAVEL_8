@@ -1,4 +1,4 @@
-@extends('_shema.auth.register')
+@extends('_shema.Vol.auth.register')
 
 {{-- @extends('layouts.app')
 
