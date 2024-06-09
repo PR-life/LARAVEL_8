@@ -1,6 +1,6 @@
 <section id="wrap_{{$id ?? 'Talk'}}" class="Talk {{$css_25041630 ?? 'vol-def'}}" itemscope itemtype="https://schema.org/Comment">
     <h2 class="none" itemprop="name">отвечаем на вопросы</h2>
-    <div class="I aura / Edge -SPC edge">
+    <div class="I aura / Edge -SPC">
          @include('manager.scroll.Name.left',['name' => 'Оперативно решаем вопросы клиентов'])
          {{-- Как решаем вопросы клиентов --}}
      </div>

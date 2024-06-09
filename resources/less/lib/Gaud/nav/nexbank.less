@@ -75,9 +75,42 @@
 	}
 
 	._border {
+		z-index: 2;
+	}
+
+	._field {
+		z-index: 5;
+	}
+
+	._border {
 		border: var(--Nav-border-w) solid var(--Nav-c-border);
-		border-radius: 50%;
+		// border-radius: 50%;
+	}
+	
+	._border:after {
 		background-color: var(--Nav-bg-btn);
+	}
+
+	._border:after,
+	._border:before {
+		content: '';
+		position: absolute;
+	}
+	._border:before {
+		z-index: 0;
+		left: var(--x-Nav-abs-shift);
+		right: var(--x-Nav-abs-shift);
+		top: var(--x-Nav-abs-shift);
+		bottom: var(--x-Nav-abs-shift);
+	}
+	._border:after {
+		content: '';
+		position: absolute;
+		z-index: 1;
+		left: 0;
+		right: 0;
+		top: 0;
+		bottom: 0;
 	}
 
 	._line {

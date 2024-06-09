@@ -6,7 +6,7 @@
       </span>
       <div class="Wings Wings_mbl none_PC">
          <div class="_win -t">
-            <span class="h b500 c-h edge-left">{!!$name_mbl ?? 'Новые вопросы'!!}  </span>                 
+            <span class="block / h b500 c-h edge-left">{!!$name_mbl ?? 'Новые вопросы'!!}  </span>                 
              {{-- {!!$name_mbl ?? '<span class="h b500 c-h">Новые вопросы <br class="none_PC">от клиентов</span>'!!}                         --}}
              <div class="paragraph"></div>
           </div>
