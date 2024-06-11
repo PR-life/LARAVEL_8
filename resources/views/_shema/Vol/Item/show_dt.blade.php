@@ -16,7 +16,7 @@
 	@include('zDT._brick.fon.show')
 @endpush
 
-@push('bread_DT')
+@push('bread_Asgrupp')
 <li itemprop="itemListElement" itemscope itemtype="https://schema.org/ListItem">
     <a href="{{route('dt.price')}}" itemprop="item" title="Цены">Цены</a>
     <meta itemprop="name" content="Цены">

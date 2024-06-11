@@ -7,9 +7,9 @@ use Illuminate\Http\Request;
 //
 use Maatwebsite\Excel\Facades\Excel;
 //
-use App\Imports\PostImport;
-use App\Imports\PaperImport;
 use App\Imports\TagImport;
+use App\Imports\PaperImport;
+use App\Imports\child\ServiceImport;
 
 
 class ImportController extends Controller
@@ -24,6 +24,9 @@ class ImportController extends Controller
 		switch ($file->getClientOriginalName()) {
 			case 'Papers.xlsx':
 				Excel::import( new PaperImport(), $file);
+				break;
+			case 'Services.xlsx':
+				Excel::import( new ServiceImport(), $file);
 				break;
 			case 'Tags.xlsx':
 				Excel::import( new TagImport(), $file);

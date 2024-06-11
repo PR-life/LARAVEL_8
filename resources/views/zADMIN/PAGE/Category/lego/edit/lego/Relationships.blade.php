@@ -41,5 +41,30 @@
     @endcomponent
 
 
+    @component('zADMIN._wrap.Relationships.line')
+        <div class="flex cross">
+
+            <div class="Min -w5">
+                @include('zADMIN._wrap.select.name',['Var' => 'Items'])
+                <div class="wrap-relationship -multiple">
+                    @component('zADMIN._wrap.select.items.index', ['id' => 'items'])
+                        @include('_._brick.select.items.edit.index',['Items' => $items, 'arr' => $category->thisItemsPivot->pluck('id')->toArray()])
+                    @endcomponent
+                </div>
+            </div>
+
+            
+            <div class="Min -w5">
+                @include('zADMIN._wrap.select.name',['Var' => 'Services'])
+                <div class="wrap-relationship -multiple">
+                    @component('zADMIN._wrap.select.services.index', ['id' => 'services'])
+                        @include('_._brick.select.services.edit.index',['Services' => $services, 'arr' => $category->thisServicesPivot->pluck('id')->toArray()])
+                    @endcomponent
+                </div>
+            </div>
+
+        </div>
+    @endcomponent
+
 
 @endcomponent

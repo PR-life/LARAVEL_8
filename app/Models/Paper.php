@@ -69,15 +69,6 @@ class Paper extends Model
         )->orderBy('order');
     }
 
-    public function tag() {
-        // return 1;
-        return $this->belongsTo(
-            Tag::class,
-            'tag_id', // foreignKey
-			'id', // ownerKey
-        );
-    }
-
     public function categories() {
         return $this->belongsToMany(
             Category::class,
@@ -87,7 +78,15 @@ class Paper extends Model
         )->orderBy('order');
     }
 
-
+    public function tag() {
+        // return 1;
+        return $this->belongsTo(
+            Tag::class,
+            'tag_id', // foreignKey
+			'id', // ownerKey
+        );
+    }
+    
     public function category() {
         return $this->belongsTo(
             Category::class,

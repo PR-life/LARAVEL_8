@@ -63,6 +63,9 @@ class StoreRequest extends BaseRelationsRequest
 			'demon_par_1' => 'nullable|string',
 			'demon_par_2' => 'nullable|string',
 			'demon_par_3' => 'nullable|string',
+			
+			//
+			'price' => 'nullable|string',
      
 			//
 			'mafia' => 'nullable|integer',	

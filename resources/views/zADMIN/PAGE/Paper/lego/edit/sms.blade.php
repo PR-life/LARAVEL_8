@@ -30,21 +30,12 @@
 
 
     @component('_wrap.__.summary')
-        {{-- @slot('cssName', 'content-m pl-4') --}}
-        {{-- @slot('cssWrap', '') --}}
-        {{-- @slot('cssContent', '') --}}
         @slot('icoCloseName', 'closeRoll')
         @slot('id', 'wrapDemonUser')
         @slot('name', 'данные автора')
 
 
         <div class="flex bC cI">
-            {{-- <div>
-                <div class="Badge -net -blue / Shift -stepXS -left">
-                    <div class="b600">статус</div>
-                    <span class="content-xxs">Руководство</span>
-                </div>
-            </div> --}}
             <input class="Max -w1" id="inputUser_id" type="text" name="user_id" value="{{$paper->user_id}}" placeholder="...">
         </div>
 
@@ -60,13 +51,51 @@
     @endcomponent
 
 
+    @component('_wrap.__.summary')
+        @slot('icoCloseName', 'closeRoll')
+        @slot('id', 'shema')
+        @slot('name', 'шаблон')
+
+        <div class="content-xxs Grey">Тизер</div>
+        @include('zADMIN.PAGE._lego.edit.shema.teaser', ['Var' => $paper])
+
+        <div class="paragraph"></div>
+
+    @endcomponent
 
 
-    {{-- @component('zADMIN._wrap._open.tool_FlaberSms')
-        @slot('id', 'demonUser')
-        @slot('name', 'данные автора')
+    @component('_wrap.__.summary')
+        @slot('icoCloseName', 'closeRoll')
+        @slot('id', 'mockup')
+        @slot('name', 'mockup')
 
-    @endcomponent --}}
+        {{-- <div class="content-xxs Grey">Тизер</div> --}}
+        @include('zADMIN.PAGE._lego.edit.mockup.index', ['Var' => $paper])
+        {{-- <div class="paragraph"></div> --}}
+
+    @endcomponent
+
+
+
+    @component('_wrap.__.summary')
+        {{-- @slot('cssName', 'content-m pl-4') --}}
+        {{-- @slot('cssWrap', '') --}}
+        {{-- @slot('cssContent', '') --}}
+        @slot('icoCloseName', 'closeRoll')
+        @slot('id', 'demon')
+        @slot('name', 'price')
+
+        {{-- <div class="paragraph / net"></div> --}}
+        <dl class="-dot Void / Form -XS / net">
+            <dt class="content-xs Grey"><label for="inputPrice">price</label></dt>
+            <dd><span class="content-xs"><input id="inputPrice" type="text" name="price" value="{{$paper->price}}"></dd>
+        </dl>
+    @endcomponent
+
+
+
+
+
 
     
     {{-- @component('zADMIN._wrap._open.tool_FlaberSms')

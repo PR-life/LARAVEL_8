@@ -28,6 +28,15 @@
         </span>
     @endcomponent 
     @component('_wrap.Chunk.Aside.index')
+        @slot('linkAdd', route('admin.lib.service.create'))
+        @slot('routeName', 'admin.lib.service.index')
+        @slot('cssIco', '-XS')
+        @slot('name', 'Услуги')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
+    @endcomponent 
+    @component('_wrap.Chunk.Aside.index')
         @slot('linkAdd', route('admin.faq.create'))
         @slot('routeName', 'admin.faq.index')
         @slot('cssIco', '-XS')

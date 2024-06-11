@@ -17,6 +17,7 @@ use App\Exports\SmsExport;
 use App\Exports\FaqExport;
 //
 use App\Exports\child\TelegramExport;
+use App\Exports\child\ServiceExport;
 //
 use App\Exports\ItemExport;
 //
@@ -25,6 +26,8 @@ use App\Exports\ItemExport;
 //
 use App\Exports\pivot\CategoryFaqExport;
 use App\Exports\pivot\CategoryTagExport;
+use App\Exports\pivot\CategoryItemExport;
+use App\Exports\pivot\CategoryServiceExport;
 // use App\Exports\pivot\FaceFaceExport;
 // use App\Exports\pivot\FaceTagExport;
 use App\Exports\pivot\FaqCategoryExport;
@@ -43,6 +46,10 @@ use App\Exports\pivot\PaperFaqExport;
 use App\Exports\pivot\PaperItemExport;
 use App\Exports\pivot\PaperTagExport;
 use App\Exports\pivot\PaperCategoryExport;
+use App\Exports\pivot\ServiceFaqExport;
+use App\Exports\pivot\ServiceItemExport;
+use App\Exports\pivot\ServiceTagExport;
+use App\Exports\pivot\ServiceCategoryExport;
  
 // use App\Exports\pivot\SmsTagExport;
 // use App\Exports\pivot\SmsCategoryExport;
@@ -99,6 +106,9 @@ class ExportController extends Controller
 		$nameTelegram = 'Telegram' . '_' . date('dm_Gi'). '.xlsx';
 		Excel::store(new TelegramExport, 'Excel/_old/child/'.$nameTelegram);
 		Excel::store(new TelegramExport, 'Excel/child/Telegrams.xlsx');
+		$nameService = 'Telegram' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new ServiceExport, 'Excel/_old/child/'.$nameService);
+		Excel::store(new ServiceExport, 'Excel/child/Services.xlsx');
 		
 
 
@@ -109,6 +119,12 @@ class ExportController extends Controller
 		$nameCategoryTag = 'CategoryTag' . '_' . date('dm_Gi'). '.xlsx';
 		Excel::store(new CategoryTagExport, 'Excel/_old/pivot/'.$nameCategoryTag);
 		Excel::store(new CategoryTagExport, 'Excel/pivot/CategoryTags.xlsx');
+		$nameCategoryItem = 'CategoryItem' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new CategoryItemExport, 'Excel/_old/pivot/'.$nameCategoryItem);
+		Excel::store(new CategoryItemExport, 'Excel/pivot/CategoryItems.xlsx');
+		$nameCategoryService = 'CategoryService' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new CategoryServiceExport, 'Excel/_old/pivot/'.$nameCategoryService);
+		Excel::store(new CategoryServiceExport, 'Excel/pivot/CategoryServices.xlsx');
 
 		$nameFaqCategory = 'FaqCategories' . '_' . date('dm_Gi'). '.xlsx';
 		Excel::store(new FaqCategoryExport, 'Excel/_old/pivot/'.$nameFaqCategory);
@@ -158,6 +174,18 @@ class ExportController extends Controller
 		Excel::store(new PaperTagExport, 'Excel/_old/pivot/'.$nametPaperTag);
 		Excel::store(new PaperTagExport, 'Excel/pivot/PaperTags.xlsx');
 		Excel::store(new PaperCategoryExport, 'Excel/pivot/PaperCategories.xlsx');
+
+
+ 		$nametServiceFaq = 'ServiceFaqs' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new ServiceFaqExport, 'Excel/_old/pivot/'.$nametServiceFaq);
+		Excel::store(new ServiceFaqExport, 'Excel/pivot/ServiceFaqs.xlsx');
+ 		$nametServiceItem = 'ServiceItems' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new ServiceItemExport, 'Excel/_old/pivot/'.$nametServiceItem);
+		Excel::store(new ServiceItemExport, 'Excel/pivot/ServiceItems.xlsx');
+		$nametServiceTag = 'ServiceTags' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new ServiceTagExport, 'Excel/_old/pivot/'.$nametServiceTag);
+		Excel::store(new ServiceTagExport, 'Excel/pivot/ServiceTags.xlsx');
+		Excel::store(new ServiceCategoryExport, 'Excel/pivot/ServiceCategories.xlsx');
 
 
 

@@ -25,14 +25,24 @@ class Service extends BaseService{
 
 			isset($param['faq_ids']) ? $faqIds = $param['faq_ids'] : $faqIds = [];
 			unset($param['faq_ids']);
+
+			isset($param['item_ids']) ? $itemIds = $param['item_ids'] : $itemIds = [];
+			unset($param['item_ids']);
+
+			isset($param['service_ids']) ? $serviceIds = $param['service_ids'] : $serviceIds = [];
+			unset($param['service_ids']);
 			
 			//
 			isset($param['published']) ? '' : $param['published'] = '0';
 
+			// dd($itemIds);
 			//
 			$category->update($param);
 			$category->tags()->sync($tagIds);
+			$category->thisItemsPivot()->sync($itemIds);
+			$category->thisServicesPivot()->sync($serviceIds);
 			$tagIds = [];
+
 
 			$category->update($param);
 			$category->faqs()->sync($faqIds);

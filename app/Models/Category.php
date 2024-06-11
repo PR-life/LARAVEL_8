@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Traits\Filterable;
 use Carbon\Carbon;
+//
+use App\Models\_child\Service;
 
 class Category extends Model
 {
@@ -28,6 +30,40 @@ class Category extends Model
     ];
 
 
+    public function thisServicesPivot() {
+        return $this->belongsToMany(
+            Service::class,
+            'category_services',
+            'category_id',
+            'service_id'
+        );
+    }
+
+    public function thisItemsPivot() {
+        return $this->belongsToMany(
+            Item::class,
+            'category_items',
+            'category_id',
+            'item_id'
+        );
+    }
+
+
+    public function papersPivot() {
+
+        return $this->belongsToMany(
+            Paper::class,
+            'paper_categories',
+            'category_id',
+            'paper_id'
+        );
+
+		// return $this->belongsToMany(Tag::class,'post_tags');
+			// !!! не сошлось с видео
+			// запись по конвенции Laravel, тут важно соблюдать имена в атрибутах
+			// https://www.youtube.com/watch?v=c0yuY_Ugacg
+    }
+
 
 
     public function itemsPivot() {
@@ -47,12 +83,12 @@ class Category extends Model
 
 
 
+    public function services() {
+        return $this->hasMany(Service::class)->orderBy('order', 'asc');
+    }
+
+
     public function items() {
-        // return $this->hasMany(
-        //     Item::class,
-        //     'category_id',
-        //     'id',
-        // )->orderBy('created_at', 'desc');
         return $this->hasMany(Item::class)->orderBy('order', 'asc');
     }
 

@@ -16,10 +16,10 @@ class StoreController extends BaseController
 
 		$param = $request->validated();
 
-		$paper = $ServiceTelegram->store($param);
+		$telegram = $ServiceTelegram->store($param);
 
 		
 
-		return redirect()->route('admin.lib.telegram.edit', $paper->id);
+		return redirect()->route('admin.lib.telegram.edit', $telegram->id);
     }
 }

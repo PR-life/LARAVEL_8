@@ -18,11 +18,16 @@ use App\Imports\ItemImport;
 use App\Imports\SmsImport;
 use App\Imports\FaqImport;
 //
+use App\Imports\child\TelegramImport;
+use App\Imports\child\ServiceImport;
+//
 // use App\Imports\CommentsImport;
 // use App\Imports\CommentsPaperImport;
 //
 use App\Imports\pivot\CategoryFaqImport;
 use App\Imports\pivot\CategoryTagImport;
+use App\Imports\pivot\CategoryItemImport;
+use App\Imports\pivot\CategoryServiceImport;
 use App\Imports\pivot\FaqCategoryImport;
 use App\Imports\pivot\FaqFaqImport;
 use App\Imports\pivot\FaqGroupImport;
@@ -38,6 +43,10 @@ use App\Imports\pivot\PaperFaqImport;
 use App\Imports\pivot\PaperItemImport;
 use App\Imports\pivot\PaperTagImport;
 use App\Imports\pivot\PaperCategoryImport;
+use App\Imports\pivot\ServiceFaqImport;
+use App\Imports\pivot\ServiceItemImport;
+use App\Imports\pivot\ServiceTagImport;
+use App\Imports\pivot\ServiceCategoryImport;
 // use App\Imports\pivot\PostTagImport;
 // use App\Imports\pivot\SmsCategoryImport;
 // use App\Imports\pivot\SmsTagImport;
@@ -73,9 +82,14 @@ class ImportExcelCommand extends Command
         Excel::import(new SmsImport, storage_path('app/Excel/Sms.xlsx'));
         Excel::import(new FaqImport, storage_path('app/Excel/Faq.xlsx'));
         //
+        Excel::import(new TelegramImport, storage_path('app/Excel/child/Telegrams.xlsx'));
+        Excel::import(new ServiceImport, storage_path('app/Excel/child/Services.xlsx'));
+        //
         //
         Excel::import(new CategoryFaqImport, storage_path('app/Excel/pivot/CategoryFaqs.xlsx'));
         Excel::import(new CategoryTagImport, storage_path('app/Excel/pivot/CategoryTags.xlsx'));
+        Excel::import(new CategoryItemImport, storage_path('app/Excel/pivot/CategoryItems.xlsx'));
+        Excel::import(new CategoryServiceImport, storage_path('app/Excel/pivot/CategoryServices.xlsx'));
         Excel::import(new FaqCategoryImport, storage_path('app/Excel/pivot/FaqCategories.xlsx'));
         Excel::import(new FaqFaqImport, storage_path('app/Excel/pivot/FaqFaqs.xlsx'));
         Excel::import(new FaqGroupImport, storage_path('app/Excel/pivot/FaqGroups.xlsx'));
@@ -91,6 +105,10 @@ class ImportExcelCommand extends Command
         Excel::import(new PaperItemImport, storage_path('app/Excel/pivot/PaperItems.xlsx'));
         Excel::import(new PaperTagImport, storage_path('app/Excel/pivot/PaperTags.xlsx'));
         Excel::import(new PaperCategoryImport, storage_path('app/Excel/pivot/PaperCategories.xlsx'));
+        Excel::import(new ServiceFaqImport, storage_path('app/Excel/pivot/ServiceFaqs.xlsx'));
+        Excel::import(new ServiceItemImport, storage_path('app/Excel/pivot/ServiceItems.xlsx'));
+        Excel::import(new ServiceTagImport, storage_path('app/Excel/pivot/ServiceTags.xlsx'));
+        Excel::import(new ServiceCategoryImport, storage_path('app/Excel/pivot/ServiceCategories.xlsx'));
  
 
     }

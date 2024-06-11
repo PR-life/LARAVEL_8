@@ -109,7 +109,7 @@ tinymce.init({
 		content_css: "{{Request::root() . "/css/env/tinymce.css?4"}}",
 
 		language: 'ru',
-		height: parseInt(document.documentElement.clientHeight) * .25,
+		height: parseInt(document.documentElement.clientHeight) * .4,
 
 		toolbar_location: 'bottom',
 		statusbar: false,

@@ -24,7 +24,6 @@ class CreatePapersTable extends Migration
             $table->string('shema')->default('default');
             $table->string('shema_teaser')->default('default');
             $table->string('css')->nullable();
-            // $table->string('filter_par_1')->nullable();
 
             $table->string('h1')->nullable();
             $table->text('text')->nullable();
@@ -58,28 +57,31 @@ class CreatePapersTable extends Migration
             $table->string('demon_par_2')->nullable();
             $table->string('demon_par_3')->nullable();
 
+            //Offer
+            $table->string('price')->nullable();
+
             //
             $table->string('knot_1')->nullable();
 
-            //
-			$table->foreignId('user_id')
-				->default('1')
-				->references('id')
-				->on('users')
-				->cascadeOnDelete();
+            // //
+			// $table->foreignId('user_id')
+			// 	->default('1')
+			// 	->references('id')
+			// 	->on('users')
+			// 	->cascadeOnDelete();
 
-            $table->foreignId('group_id')
-                ->nullable()
-                ->references('id')
-                ->on('groups');
+            // $table->foreignId('group_id')
+            //     ->nullable()
+            //     ->references('id')
+            //     ->on('groups');
 
-            $table->foreignId('tag_id')
-                ->nullable()
-                ->references('id')
-                ->on('tags');
+            // $table->foreignId('tag_id')
+            //     ->nullable()
+            //     ->references('id')
+            //     ->on('tags');
 
-            $table->unsignedBigInteger('category_id')->nullable();
-            $table->foreign('category_id')->references('id')->on('categories');
+            // $table->unsignedBigInteger('category_id')->nullable();
+            // $table->foreign('category_id')->references('id')->on('categories');
 
 
             //

@@ -2,7 +2,7 @@
 
     <div class="_Axon / x-name / flex bC pl-edgeS / relative pointer" style="padding-bottom: 5px">
         @include('_brick.Close.abs.Axon', ['css' => $varCssClose ?? null])
-        <div class="_name {{$cssName ?? 'content'}}"><span class="noEvents slctn">{!!$name!!}</span></div>
+        <div class="_name {{$cssName ?? 'content-s'}}"><span class="noEvents slctn">{!!$name!!}</span></div>
     </div>
 
     <div class="{{$cssWrap ?? 'space-s'}} _open" data-stopclick>
