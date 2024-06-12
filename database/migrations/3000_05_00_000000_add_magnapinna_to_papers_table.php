@@ -30,6 +30,11 @@ class AddMagnapinnaToPapersTable extends Migration
 
                 $table->unsignedBigInteger('category_id')->nullable();
                 $table->foreign('category_id')->references('id')->on('categories');
+
+                $table->unsignedBigInteger('paper_id')->nullable();
+                $table->foreign('paper_id')->references('id')->on('papers');
+
+
              });
          });
      }
@@ -49,6 +54,9 @@ class AddMagnapinnaToPapersTable extends Migration
 
             $table->dropForeign('papers_category_id_foreign');
 			$table->dropColumn('category_id');
+
+            $table->dropForeign('papers_paper_id_foreign');
+			$table->dropColumn('paper_id');
 		});
     }
 }

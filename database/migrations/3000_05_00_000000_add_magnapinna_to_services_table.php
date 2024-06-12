@@ -30,6 +30,11 @@ class AddMagnapinnaToServicesTable extends Migration
 
                 $table->unsignedBigInteger('category_id')->nullable();
                 $table->foreign('category_id')->references('id')->on('categories');
+
+                $table->unsignedBigInteger('service_id')->nullable();
+                $table->foreign('service_id')->references('id')->on('services');
+
+
              });
          });
      }
@@ -48,6 +53,10 @@ class AddMagnapinnaToServicesTable extends Migration
 
             $table->dropForeign('services_category_id_foreign');
 			$table->dropColumn('category_id');
+
+            $table->dropForeign('services_service_id_foreign');
+			$table->dropColumn('service_id');
+
 		});
     }
 }

@@ -30,6 +30,11 @@ class AddMagnapinnaToTelegramsTable extends Migration
 
                 $table->unsignedBigInteger('category_id')->nullable();
                 $table->foreign('category_id')->references('id')->on('categories');
+
+                $table->unsignedBigInteger('telegram_id')->nullable();
+                $table->foreign('telegram_id')->references('id')->on('telegrams');
+
+
              });
          });
      }
@@ -48,6 +53,9 @@ class AddMagnapinnaToTelegramsTable extends Migration
 
             $table->dropForeign('telegrams_category_id_foreign');
 			$table->dropColumn('category_id');
+
+            $table->dropForeign('telegrams_telegram_id_foreign');
+			$table->dropColumn('telegram_id');
 		});
     }
 }

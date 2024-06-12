@@ -63,27 +63,6 @@ class CreatePapersTable extends Migration
             //
             $table->string('knot_1')->nullable();
 
-            // //
-			// $table->foreignId('user_id')
-			// 	->default('1')
-			// 	->references('id')
-			// 	->on('users')
-			// 	->cascadeOnDelete();
-
-            // $table->foreignId('group_id')
-            //     ->nullable()
-            //     ->references('id')
-            //     ->on('groups');
-
-            // $table->foreignId('tag_id')
-            //     ->nullable()
-            //     ->references('id')
-            //     ->on('tags');
-
-            // $table->unsignedBigInteger('category_id')->nullable();
-            // $table->foreign('category_id')->references('id')->on('categories');
-
-
             //
             $table->unsignedInteger('mafia')->default('0');
 

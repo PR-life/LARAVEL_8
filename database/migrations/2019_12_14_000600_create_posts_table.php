@@ -47,6 +47,9 @@ class CreatePostsTable extends Migration
 
 			$table->text('knot_1')->nullable();
 
+            //
+            $table->unsignedBigInteger('post_id')->nullable();
+            $table->foreign('post_id')->references('id')->on('posts');
 
             //
 			$table->foreignId('user_id')
@@ -67,8 +70,6 @@ class CreatePostsTable extends Migration
 
 			$table->unsignedBigInteger('category_id')->nullable(); // ИМЯ ед. ч. -- эта тбл. и тбл. на какую ссылаемся + суффикс 
             $table->foreign('category_id')->references('id')->on('categories');
-            // $table->index('category_id', 'post_category_idx'); //какой параметр берем ...  задаем ему имя для оращения, по правилу "ИМЯ ед. ч. -- эта тбл. и тбл. на какую ссылаемся + суффикс" 
-            // $table->foreign('category_id', 'post_category_fk')->on('categories')->references('id')->onDelete('cascade');
 
 
             //
