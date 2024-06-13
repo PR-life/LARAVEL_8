@@ -30,6 +30,17 @@ class Category extends Model
     ];
 
 
+
+    public function categoryService() {
+        return $this->belongsTo(
+            Category::class,
+            'category_services_id',
+			'id',
+        );
+    }
+
+
+
     public function thisServicesPivot() {
         return $this->belongsToMany(
             Service::class,

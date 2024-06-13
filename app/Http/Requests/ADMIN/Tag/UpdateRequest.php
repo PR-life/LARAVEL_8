@@ -25,6 +25,11 @@ class UpdateRequest extends StoreRequest
                 Rule::unique('tags')->ignore($this->route('tag'))
             ],
 
+
+            'service_delivery_id' => 'nullable|integer|exists:services,id',
+            'category_services_id' => 'nullable|integer|exists:categories,id',
+
+
             'name_2' => 'nullable|string',
             'name_3' => 'nullable|string',
             'name_4' => 'nullable|string',

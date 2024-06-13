@@ -55,16 +55,28 @@
                     @endcomponent
                 </div>
             </div>
-            {{-- <div class="Min -w5">
-                @include('zADMIN._wrap.select.name',['Var' => 'Группы'])
-                <div class="wrap-relationship -multiple">
-                    @component('zADMIN._wrap.select.groups.index')
-                        @include('_._brick.select.groups.edit.index',['Groups' => $groups, 'arr' => $faq->groups->pluck('id')->toArray()])
-                    @endcomponent
-                </div>
-            </div> --}}
         </div>
 
+
+    @endcomponent
+
+
+
+    @component('zADMIN._wrap.Relationships.line')
+
+        <div class="Min -w5 / wrap-relationship -solo / round">
+            @include('zADMIN._wrap.select.name',['Var' => 'Delivery service'])
+            @component('zADMIN._wrap.select.service.delivery', ['id' => 'delivery_service'])
+                @include('_._brick.select.service.edit.delivery',['Services' => $services, 'Var' => $tag->service_delivery_id])
+            @endcomponent
+        </div>
+
+        <div class="Min -w5 / wrap-relationship -solo / round">
+            @include('zADMIN._wrap.select.name',['Var' => 'Category services'])
+            @component('zADMIN._wrap.select.category.services', ['id' => 'category_service'])
+                @include('_._brick.select.category.edit.services',['Categories' => $categories, 'Var' => $tag->category_services_id])
+            @endcomponent
+        </div>
 
     @endcomponent
 

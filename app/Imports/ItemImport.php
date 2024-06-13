@@ -27,7 +27,7 @@ class ItemImport implements ToCollection, WithHeadingRow
                 $params[$_name] = $item[$_name] ?? null;
             };
 
-            Item::firstOrCreate([
+            Item::updateOrCreate([
                 'id' => $params['id'],
                 ],$params);
         }

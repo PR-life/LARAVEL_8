@@ -56,9 +56,32 @@
 <div class="paragraph"></div>
 <div class="_shell Article aura / Note -lite">
 	<textarea id="tinymce_1" name="article" placeholder='текст...'>{{$item->article}}</textarea>
-	{{-- @include('zADMIN._brick.cleanHTML') --}}
 </div>
 <div class="hill-s"></div>
+
+<div class="Details transparent">
+	<details>
+		<summary><span>details_1</span><i></i></summary>
+		<div class="_shell Article aura / Note -lite">
+			<textarea id="tinymce_2" name="details_1" placeholder='текст...'>{{$item->details_1}}</textarea>
+		</div>
+	</details>
+	<details>
+		<summary><span>details_2</span><i></i></summary>
+		<div class="_shell Article aura / Note -lite">
+			<textarea id="tinymce_3" name="details_2" placeholder='текст...'>{{$item->details_2}}</textarea>
+		</div>
+	</details>
+</div>
+ 
+
+<div class="hill"></div>
+
+
+
+
+
+
 
 @include('zADMIN._wrap.text.nameTextarea', ['name' => 'knot_1'])
 <div class="paragraph"></div>

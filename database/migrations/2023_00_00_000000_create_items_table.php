@@ -6,11 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateItemsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('items', function (Blueprint $table) {
@@ -50,28 +46,11 @@ class CreateItemsTable extends Migration
 			$table->text('menu_kite')->nullable();
 
 			// vars
-			$table->string('param_report')->nullable();
-			$table->string('param_duration')->nullable();
-			$table->string('param_geo')->nullable();
 			$table->string('param_price')->nullable();
+
 
 			//
 			$table->text('knot_1')->nullable();
-
-
-			//		
-            $table->foreignId('group_id')
-                ->nullable()
-                ->references('id')
-                ->on('groups');
-
-            $table->foreignId('tag_id')
-                ->nullable()
-                ->references('id')
-                ->on('tags');
-
-            $table->unsignedBigInteger('category_id')->nullable();
-            $table->foreign('category_id')->references('id')->on('categories');
 
 
             $table->unsignedInteger('mafia')->default('0');
@@ -97,11 +76,6 @@ class CreateItemsTable extends Migration
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
     public function down()
     {
         Schema::dropIfExists('items');

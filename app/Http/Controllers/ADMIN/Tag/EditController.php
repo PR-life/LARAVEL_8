@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 //
 use App\Models\Tag;
 use App\Models\{Category,Group};
+use App\Models\_child\Service;
 
 
 class EditController extends Controller
@@ -19,7 +20,8 @@ class EditController extends Controller
         // $tags = Tag::all();
         $categories = Category::all();
         $groups = Group::all();
+        $services = Service::all();
 
-        return view('zADMIN.PAGE.Tag.edit', compact('tag','categories','groups'));
+        return view('zADMIN.PAGE.Tag.edit', compact('tag','categories','groups','services'));
     }
 }

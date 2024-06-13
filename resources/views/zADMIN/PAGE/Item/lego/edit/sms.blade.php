@@ -10,7 +10,8 @@
 
 
     {{-- <div class="paragraph-s / net"></div> --}}
-    @include('zADMIN.PAGE.Item.lego.edit.lego.param')
+    {{-- @include('zADMIN.PAGE.Item._this.edit.param') --}}
+    @includeIf('zADMIN.PAGE.Item._this.edit.param')
 
 
 

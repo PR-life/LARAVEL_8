@@ -12,6 +12,33 @@ table.vol-barrier {
 	--table-h-th: calc(var(--h-th)*1.4);
 	//
 	--x-c-border:#e6ebf0;
+
+	--x-bg-background:rgba(250, 251, 253, .6);
+
+	// thead {
+	// 	border-bottom: 4px solid var(--x-bg-background);
+	// }
+
+	tbody {
+		--c-text: #989aa8;
+
+		a {
+			color: #2b6cc4;
+		}
+
+		td {
+			border-bottom:1px solid var(--x-c-border);
+		}
+
+		tr.active {
+			--x-c-border:#999;
+			> td {		
+				a {
+					color: #0b1031;
+				}
+			}
+		}
+	}
 }
 
 
@@ -71,7 +98,7 @@ table.vol-barrier {
 	}
 
 	tbody {
-		background: rgba(250, 251, 253, .6);
+		background: var(--x-bg-background);
 	}
 
 	tr > *:first-child {

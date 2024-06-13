@@ -19,7 +19,11 @@ class BaseRelationsRequest extends BaseRequest
             'group_id' => 'nullable|integer|exists:groups,id',
             'tag_id' => 'nullable|integer|exists:tags,id',
             'category_id' => 'nullable|integer|exists:categories,id', 
-                // exists:существует в тбл categories в колонке id
+            'item_id' => 'nullable|integer|exists:items,id',
+
+            //
+            'paper_delivery' => 'nullable|integer|exists:papers,id',
+            'category_services_id' => 'nullable|integer|exists:categories,id',
                 
             //
             'tag_ids' => 'nullable|array',

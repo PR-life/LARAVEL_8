@@ -25,25 +25,19 @@
                     @endcomponent
                 </div>
             </div>
-
-        </div>
-    @endcomponent
-
-    @component('zADMIN._wrap.Relationships.line')
-        <div class="Min -w5">
-            @include('zADMIN._wrap.select.name',['Var' => 'Faqs'])
-            <div class="wrap-relationship -multiple">
-                @component('zADMIN._wrap.select.faqs.index', ['id' => 'faqs'])
-                    @include('_._brick.select.faqs.edit.index',['Faqs' => $faqs, 'arr' => $category->faqs->pluck('id')->toArray(), 'currentId' => $category->id])
-                @endcomponent
+            <div class="Min -w5">
+                @include('zADMIN._wrap.select.name',['Var' => 'Faqs'])
+                <div class="wrap-relationship -multiple">
+                    @component('zADMIN._wrap.select.faqs.index', ['id' => 'faqs'])
+                        @include('_._brick.select.faqs.edit.index',['Faqs' => $faqs, 'arr' => $category->faqs->pluck('id')->toArray(), 'currentId' => $category->id])
+                    @endcomponent
+                </div>
             </div>
         </div>
     @endcomponent
 
-
     @component('zADMIN._wrap.Relationships.line')
         <div class="flex cross">
-
             <div class="Min -w5">
                 @include('zADMIN._wrap.select.name',['Var' => 'Items'])
                 <div class="wrap-relationship -multiple">
@@ -62,6 +56,20 @@
                     @endcomponent
                 </div>
             </div>
+        </div>
+    @endcomponent
+
+
+    @component('zADMIN._wrap.Relationships.line')
+        <div class="flex cross">
+
+            <div class="Min -w5 / wrap-relationship -solo / round">
+                @include('zADMIN._wrap.select.name',['Var' => 'Category services'])
+                @component('zADMIN._wrap.select.category.services', ['id' => 'category_service'])
+                    @include('_._brick.select.category.edit.services',['Categories' => $categories, 'Var' => $category->category_services_id])
+                @endcomponent
+            </div>
+
 
         </div>
     @endcomponent

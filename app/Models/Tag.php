@@ -7,6 +7,8 @@ use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Traits\Filterable;
 use Carbon\Carbon;
+//
+use App\Models\_child\Service;
 
 class Tag extends Model
 {
@@ -16,7 +18,28 @@ class Tag extends Model
 	
     protected $table = 'tags';
     protected $guarded = false;
+ 
 
+
+
+    public function serviceCategory() {
+        return $this->belongsTo(
+            Category::class,
+            'category_services_id',
+			'id',
+        );
+    }
+
+
+    public function serviceDelivery() {
+        return $this->belongsTo(
+            Service::class,
+            'service_delivery_id',
+			'id',
+        );
+    }
+
+	//
 
 	public function items(){
 		return $this->belongsToMany(Item::class, 'item_tags', 'tag_id', 'item_id')->where('published', 1);
