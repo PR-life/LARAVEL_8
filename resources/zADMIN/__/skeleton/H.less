@@ -11,3 +11,24 @@
         max-height: 2000px;
     }
 }
+
+#wrap_Relationships {
+    cursor: pointer;
+
+    .Field {
+        cursor: default;
+    }
+    .Field.-t::before {
+        display: none;
+        pointer-events: none;
+    }
+}
+
+#wrap_Relationships.On.Gardener {
+    padding-top: var(--x-Gardener-h);
+
+    .Field.-t::before {
+        display: block;
+        top: calc(0px - var(--x-Gardener-h));
+    }
+}

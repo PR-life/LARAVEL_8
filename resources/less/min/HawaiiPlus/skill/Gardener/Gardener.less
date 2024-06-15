@@ -3,11 +3,8 @@
 .Gardener {
 	--x-Gardener-w:calc(var(--Ico)*1.25);
 	--x-Gardener-h:calc(var(--Ico)*1.0);
+	
 	//
-
-
-	// max-height: 800px;
-
 	.Field {
 		--x-Field-color-1:#eee;
 		--x-Field-color-2:#f5f5f5;
@@ -27,62 +24,3 @@
 .Gardener.Off {
 	max-height: 100px;
 }
-
-
-// .Gardener.On {
-// 	max-height: 2500px;
-// 	overflow-y: visible;
-// }
-
-// .Gardener.-bar{
-// 	padding-right: var(--bar);
-// }
-
-//
-
-.Field::before,
-.Field::after {
-	content: '';
-	position: absolute;
-	background: repeating-linear-gradient(-45deg, var(--x-Field-color-1), var(--x-Field-color-1) 25%, var(--x-Field-color-2) 25%, var(--x-Field-color-2) 50%, var(--x-Field-color-1) 50%) top left fixed;
-	background-size: var(--x-Field) var(--x-Field);
-}
-
-.Field::before {
-	cursor: pointer;
-}
-
-.Field.-w::before {
-	width: var(--x-Gardener-w);
-}
-
-.Field.-h::before {
-	height: var(--x-Gardener-h);
-}
-
-.Field.-l::before {
-	top: 0;
-	bottom: 0;
-	left: 0;
-}
-
-.Field.-b::before {
-	right: 0;
-	bottom: 0;
-	left: 0;
-}
-
-
-
-.Field.-l.-w {
-	padding-left: calc(var(--x-Gardener-w) + 5px);
-}
-
-.Field.-r.-w {
-	padding-right: calc(var(--x-Gardener-w) + 5px);
-}
-
-.Field.-h {
-	padding-bottom: calc(var(--x-Gardener-w) + 5px);
-}
- 

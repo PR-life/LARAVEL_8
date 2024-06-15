@@ -11,7 +11,7 @@
 </div> --}}
 
 <div>
-    <form class="Form vol-go {{$cssForm ?? '-M / flex / space-s round-s / Jolt -tOn'}}" action="{{$action}}" method="get" target="_self" accept-charset="utf-8">
+    <form class="Form vol-go {{$cssForm ?? '-L / flex / space-s round-s / Jolt -tOn'}}" action="{{$action}}" method="get" target="_self" accept-charset="utf-8">
         {{-- <meta content="{{$metaUrl}}"> --}}
         <input type="hidden" name="searchid" value="{{$yID}}">
         <input id="input_{{$id_input ?? '2320114'}}" class="_search tel" type="search" name="text" value="{{$_GET['text'] ?? ''}}" placeholder="{{$placeholder ?? 'текст запроса'}}">

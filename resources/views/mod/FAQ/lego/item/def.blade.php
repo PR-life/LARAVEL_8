@@ -1,4 +1,4 @@
-<details class="{{$css ?? ''}} category-{{$_faq->category->slug ?? ''}} category-{{$_faq->category->category->slug ?? ''}} {{$_faq->featured ? 'featured' : ''}} @foreach($_faq->tags as $param) tag-{{$param->slug}}@endforeach @foreach($_faq->categories as $param) categories-{{$param->slug}}@endforeach" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
+<details class="{{$css_wrap_details_14061213 ?? ''}} category-{{$_faq->category->slug ?? ''}} category-{{$_faq->category->category->slug ?? ''}} {{$_faq->featured ? 'featured' : ''}} @foreach($_faq->tags as $param) tag-{{$param->slug}}@endforeach @foreach($_faq->categories as $param) categories-{{$param->slug}}@endforeach" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
     <summary class="{{$cssSummary ?? ''}}"><span itemprop="name">{!!$_faq->name!!}</span><i class="vol-close"></i></summary>
     <div class="{{$cssWrapContent ?? '_edge void'}}" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
         <div itemprop="text">

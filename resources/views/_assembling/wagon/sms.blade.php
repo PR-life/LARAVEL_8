@@ -1,6 +1,6 @@
-@component('_assembling.wagon.shema.index',['css03051331'=>'vol-QA Family-OpenSans round-l'])
+@component('_assembling.wagon.shema.index',['css03051331'=>'vol-QA Family-OpenSans round-l','css_wrap_Wagon_14061210' => $css_wrap_Wagon_14061210 ?? ''])
 	@slot('shemaOrg', 'itemscope itemtype="https://schema.org/Comment"')
-	<h2 class="none" itemprop="author">{{$Var->name}}</h2>
+	<h2 class="none">{{$Var->name}}</h2>
 	<div class="W-100 relative pointer / _Axon Axon">
 		@include('_assembling.lego.Preamble')
 		<div class="off / space-left">

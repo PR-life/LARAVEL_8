@@ -14,7 +14,6 @@
     @includeIf('zADMIN.PAGE.Item._this.edit.param')
 
 
-
     @component('_wrap.__.summary')
         {{-- @slot('cssName', 'content-m pl-4') --}}
         {{-- @slot('cssWrap', '') --}}
@@ -32,16 +31,13 @@
         {{-- @include('zADMIN.PAGE._lego.edit.shema.full') --}}
 
     @endcomponent
-
-
-    {{-- @component('zADMIN._wrap._open.tool_FlaberSms')
+    @component('_wrap.__.summary')
+        @slot('icoCloseName', 'closeRoll')
         @slot('id', 'mockup')
         @slot('name', 'mockup')
 
-        <div class="content-xxs Grey">Mockup</div>
         @include('zADMIN.PAGE._lego.edit.mockup.index', ['Var' => $item])
-
-    @endcomponent --}}
+    @endcomponent
 
 
 </div>

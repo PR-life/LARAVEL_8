@@ -1,0 +1,69 @@
+@charset "UTF-8";
+
+.Field::before,
+.Field::after {
+	position: absolute;
+    cursor: pointer;
+	background: repeating-linear-gradient(-45deg, var(--x-Field-color-1), var(--x-Field-color-1) 25%, var(--x-Field-color-2) 25%, var(--x-Field-color-2) 50%, var(--x-Field-color-1) 50%) top left fixed;
+	background-size: var(--x-Field) var(--x-Field);
+}
+
+.Field.-l::before,
+.Field.-r::after,
+.Field.-t::before,
+.Field.-b::after {
+    content: '';
+}
+
+.Field.-w::before,
+.Field.-w::after {
+	width: var(--x-Gardener-w);
+}
+.Field.-h::before,
+.Field.-h::after {
+	height: var(--x-Gardener-h);
+}
+
+.Field.-l::before {
+	left: 0;
+}
+
+.Field.-r::after {
+	right: 0;
+}
+
+.Field.-l::before,
+.Field.-r::after {
+	top: 0;
+	bottom: 0;
+}
+
+.Field.-t::before,
+.Field.-b::after {
+	right: 0;
+	left: 0;
+}
+
+.Field.-t::before {
+	top: 0;
+}
+
+.Field.-b::after {
+    content: '';
+	bottom: 0;
+}
+
+
+
+.Field.-l.-w {
+	padding-left: calc(var(--x-Gardener-w) + 5px);
+}
+
+.Field.-r.-w {
+	padding-right: calc(var(--x-Gardener-w) + 5px);
+}
+
+.Field.-h {
+	padding-bottom: calc(var(--x-Gardener-w) + 5px);
+}
+ 

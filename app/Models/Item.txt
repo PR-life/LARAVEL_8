@@ -47,6 +47,11 @@ class Item extends Model
     // }
 
 
+    public function childrenItems()
+    {
+        return $this->hasMany(Item::class)->with('items')->orderBy('order', 'asc');
+    }
+
     public function items() {
         return $this->belongsToMany(
             Item::class,
@@ -83,6 +88,16 @@ class Item extends Model
             'tag_id'
         )->orderBy('order');
     }
+
+
+    public function item() {
+        return $this->belongsTo(
+            Item::class,
+            'item_id',
+			'id',
+        );
+    }
+
 
     public function tag() {
         // return 1;
