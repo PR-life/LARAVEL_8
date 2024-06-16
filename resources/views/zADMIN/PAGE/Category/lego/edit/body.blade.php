@@ -1,19 +1,5 @@
 <div class="Article aura">
 
-	{{-- @component('zADMIN._wrap.form._shell.Lang', ['id' => 'nameCategory'])
-	<div class="_shell _name @error('name') Error @enderror / vol-Abs / net">
-		<input id="inputName" type="text" name="name" value="{{$category->name ?? old('name')}}" placeholder=".">
-		<label class="Abs" for="inputName">@svg('plus')Name</label>
-		@error('name')
-			<div class="Abs / Nameplate -rt">{{ $errors->first('name') }}</div>
-		@enderror
-	</div>
-	<div class="_shell _name / vol-Abs / _Open">
-		<input id="inputName_en" type="text" name="en_name" value="{{$category->en_name ?? old('en_name')}}" placeholder=".">
-		<label class="Abs" for="inputName_en">@svg('plus')en_Name</label>
-	</div>
-	@endcomponent --}}
-
 	<div class="_shell _name @error('name') Error @enderror / vol-Abs / net">
 		<input id="inputName" type="text" name="name" value="{{$category->name ?? old('name')}}" placeholder=".">
 		<label class="Abs" for="inputName">@svg('plus')Name</label>
@@ -27,19 +13,18 @@
 
 	@component('zADMIN._wrap.Tab.edit.body')
 		@slot('nameTab1', 'Заголовки')
+		@slot('nameTab3', 'Тизер')
 		@slot('tab_1')
 			<div class="paragraphX2 / net"></div>
 			@include('zADMIN.PAGE.Category.lego.edit.lego.tab_1')
 		@endslot
 		@slot('tab_2')
-			@slot('nameTab2', 'Тизер')
-			<div class="paragraphX2 / net"></div>
-			@include('zADMIN.PAGE.Category.lego.edit.lego.teaser')
-		@endslot
-		@slot('tab_3')
-			@slot('nameTab3', 'SEO')
 			<div class="paragraphX2 / net"></div>
 			@include('zADMIN.PAGE._lego.edit.seo.canonical', ['Var' => $category])
+		@endslot
+		@slot('tab_3')
+			<div class="paragraphX2 / net"></div>
+			@include('zADMIN.PAGE.Category.lego.edit.lego.teaser')
 		@endslot
 	@endcomponent
 

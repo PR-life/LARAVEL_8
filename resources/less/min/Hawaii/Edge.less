@@ -316,6 +316,19 @@
 
 }
 
+@media (min-width:@w-menu-2-plus) and (max-width:980px + 100px*2 + 16px) {
+	.Wrap.Edge.-SPC {
+		.EDGE;
+		padding-left: calc(var(--Edge)*0.5);
+		padding-right: calc(var(--Edge)*0.5);
+	}
+
+	.Wrap.Edge.-XSPC {
+		.EDGE;
+		padding-left: calc(var(--Edge)*0.25);
+		padding-right: calc(var(--Edge)*0.25);
+	}
+}
 @media (min-width:@w-menu-2-plus) and (max-width:830px + 100px*2 + 16px) {
 
 	.Article.Edge {
@@ -465,6 +478,15 @@
 ////
 /**/
 @media screen and (max-width:@w-menu-2) {
+
+
+	.Blog .Teaser ._edge {
+		padding-left: var(--edge);
+		padding-right: 7px;
+	}
+
+
+
 
 	.edge-l {
 		padding-left: calc(var(--edge)*2);

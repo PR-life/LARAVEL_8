@@ -24,7 +24,9 @@
 	.Font.-XS {
 		--Font-h1:2.5vw;
 		--Font-h1-max: calc(48px - 1rem);
+		--Font-min: calc(var(--rem-h) + 8px);
 	}
+
 	.Font.-S {
 		--Font-h1:3vw;
 		--Font-h1-max: 40px;
@@ -33,11 +35,6 @@
 	.Font.-M {
 		--Font-h1:4.5vw;
 		--Font-h1-max: 92px;
-		// --Font-h2-max: calc(28px + 1rem);
-
-		// --Font-min: 18px;
-		// --Font-min-line: calc(var(--Font-min) + 4px);
-		// --font-min:16px;
 
 		._p.-vw {
 			--Font-p-min: calc(var(--rem-p) + 2px);
@@ -47,14 +44,6 @@
 	.Font.-L {
 		--Font-h1:5vw;
 		--Font-h1-max: 120px;
-
-		//
-		// --Font-h2-max: calc(28px + 2rem);
-
-		//
-		// --rem-p:22px;
-		// --Font-min: 18px;
-		// --Font-min-line: calc(var(--Font-min) + 4px);
 	}
 
 
@@ -70,28 +59,17 @@
 		--Font-h2: 3vw;
 	
 		//
-		--Font-min:var(--rem-h);
+		--Font-min:calc(var(--rem-h) + .5rem);
 		--Font-min-lineHeight:calc(var(--Font-min) + 4px);
 
-		//
-		// --Font-p: var(--font);
-		// --Font-p-max: var(--rem-p);
 	}
 
 	.Font.-XS {
 		--Font-h1-max:calc(var(--rem-h1) - 1rem);
-		// --Font-h1-max: calc(48px - 2rem);
-
-		// //
-		// --Font-h2-max: calc(28px - 1rem);
 	}
 
 
 }
-
-
-
-
 
 //
 

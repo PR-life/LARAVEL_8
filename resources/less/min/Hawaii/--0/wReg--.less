@@ -61,7 +61,12 @@
 	.Reg{
 
 		>._S {
-			width: var(--x-Reg-S);
+			min-width: var(--x-Reg-S);
+			max-width: var(--x-Reg-S);
+		}
+		> ._S.-min {
+			min-width: var(--x-Reg-S);
+			max-width: var(--x-Reg-S);
 		}
 
 		>._L {
@@ -78,18 +83,14 @@
 			min-width: var(--x-Reg-M);
 		}
 
-		> ._S {
-			width: var(--x-Reg-S);
-		}
-		> ._S.-min {
-			min-width: var(--x-Reg-S);
-		}
 
-		>._L,
-		>._M,
-		> ._S {
-			max-width: 100%;
-		}
+
+
+		// >._L,
+		// >._M,
+		// > ._S {
+		// 	max-width: 100%;
+		// }
 
 
 	}

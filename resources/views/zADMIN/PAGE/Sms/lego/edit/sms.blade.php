@@ -1,9 +1,9 @@
 <div class="void / Form -S">
  
-    @component('zADMIN._wrap._open.tool_FlaberSms')
+
+    @component('_wrap.__.summary')
         @slot('id', 'demonUser')
-        @slot('name', 'кто отправил')
-        
+        @slot('name', 'кто отправил') 
         <dl class="-dot -leftS Void">
             <dt class="content-xs Grey"><label for="inputVisitor_name">name</label></dt>
 
@@ -30,33 +30,20 @@
 
     @endcomponent
 
-
-    {{-- @component('_wrap.__.summary')
-        @slot('id', 'wrapFlaber_sms_visitor')
-        @slot('name', 'Посетитель')
-
-
-
-
-    @endcomponent --}}
-    {{-- @component('_wrap.__.summary')
+ 
+    @component('_wrap.__.summary')
         @slot('id', 'wrapFlaber_sms_data')
         @slot('name', 'Данные')
 
-
-            <dl class="-dot -rightS Void">
-                <dt class="content-xs Grey">type</dt>
-                <dd><span class="content-xs">{{$sms->type}}</span></dd>
-                <dt class="content-xs Grey">label</dt>
-                <dd><span class="content-xs">{{$sms->label}}</span></dd>
-                <dt class="content-xs Grey">id_item</dt>
-                <dd><span class="content-xs">{{$sms->id_item}}</span></dd>
-                <dt class="content-xs Grey">from_page</dt>
-                <dd class="content-xs -lineHeight">{{$sms->from_page}}</dd>
-            </dl>
-
-    @endcomponent --}}
-
-
-
+        <dl class="-dot -rightS Void">
+            <dt class="content-xs Grey">type</dt>
+            <dd><span class="content-xs">{{$sms->type}}</span></dd>
+            <dt class="content-xs Grey">label</dt>
+            <dd><span class="content-xs">{{$sms->label}}</span></dd>
+            <dt class="content-xs Grey">id_item</dt>
+            <dd><span class="content-xs">{{$sms->id_item}}</span></dd>
+            <dt class="content-xs Grey">from_page</dt>
+            <dd class="content-xs -lineHeight">{{$sms->from_page}}</dd>
+        </dl>
+    @endcomponent
 </div>

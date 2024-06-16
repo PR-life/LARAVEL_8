@@ -11,7 +11,9 @@
 <!DOCTYPE html>
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-	@include('_shema._lego.head.index')
+	@include('_shema._lego.head.index', [
+		'preloadCss' => false,
+		])
 	{{-- @include('_shema._lego.head.index', ['ogp' => $ogp]) --}}
 </head>
 <body id="body" class="MXAT @yield('css-body') @stack('css-body')">

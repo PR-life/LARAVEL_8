@@ -2,7 +2,7 @@
 
 	<div class="author / flex cI / cross-xxs">
 		<a class="b500 / nowrap" href="{{$link}}">
-			{{$Var->name}}
+			{{$Var->name == 'без имени' ? 'аноним' : $Var->name}}
 		</a>
 		{{-- <span class="Grey">
 			<span class="ghost">_</span>
