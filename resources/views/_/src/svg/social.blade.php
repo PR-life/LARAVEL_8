@@ -58,7 +58,7 @@
 </symbol>
 
 <symbol id="svg-youtube" viewBox="0 0 192 192">
-	<path d="M187,50c-2.2-8.2-8.6-14.7-16.8-16.9c-14.8-4-74.2-4-74.2-4s-59.4,0-74.2,4C13.6,35.3,7.2,41.7,5,50 C1,64.9,1,96,1,96s0,31.1,4,46c2.2,8.2,8.6,14.7,16.8,16.9c14.8,4,74.2,4,74.2,4s59.4,0,74.2-4c8.2-2.2,14.6-8.7,16.8-16.9 c4-14.9,4-46,4-46S191,64.9,187,50z" fill="#FF0000"/>
+	<path d="M187,50c-2.2-8.2-8.6-14.7-16.8-16.9c-14.8-4-74.2-4-74.2-4s-59.4,0-74.2,4C13.6,35.3,7.2,41.7,5,50 C1,64.9,1,96,1,96s0,31.1,4,46c2.2,8.2,8.6,14.7,16.8,16.9c14.8,4,74.2,4,74.2,4s59.4,0,74.2-4c8.2-2.2,14.6-8.7,16.8-16.9 c4-14.9,4-46,4-46S191,64.9,187,50z" fill="#FF0000"></path>
 	<polygon points="76.6,124.3 76.6,67.7 126.2,96" fill="#fff"></polygon>
 </symbol>
 <symbol id="svg-youtubeText" viewBox="0 0 90 20">
@@ -109,3 +109,6 @@
 		<path d="M104.837 9.30582H117.38V6H101V21H118V17.6941H104.837V15.153H117.081L117.38 11.8471H104.837V9.30582Z" ></path>
 	</g>
 </symbol>
+
+
+<symbol id="svg-yuslugi" viewBox="0 0 32 29"><path fill="#EBFF00" d="M13.515 14.633L20.067 4.16C24.818-3.496 35.736.207 30.704 8.846l-5.234 8.99c-2.273 3.753-7.513 3.646-10.078-.114l-1.986-2.917.109-.171z"></path><path fill="url(#logo-touch_svg__logo_touch_svg__paint0_linear)" d="M13.515 14.633L20.067 4.16C24.818-3.496 35.736.207 30.704 8.846l-5.234 8.99c-2.273 3.753-7.513 3.646-10.078-.114l-1.986-2.917.109-.171z"></path><path fill="#EBFF00" d="M25.114 18.446l.035-.059.12-.207-.155.266z"></path><path fill="url(#logo-touch_svg__logo-touch_svg__paint1_linear)" d="M25.114 18.446l.035-.059.12-.207-.155.266z"></path><path fill="#02BE9C" d="M15.392 17.722l-3.868-5.68c-5.44-7.99-14.973-1.152-10.25 6.013 1.578 2.393 2.203 3.305 3.78 5.698 4.332 6.501 13.197 6.456 16.958 0l3.525-6.03c-2.234 3.867-7.554 3.797-10.145 0z"></path><path fill="url(#logo-touch_svg__logo-touch_svg__paint2_linear)" d="M15.392 17.722l-3.868-5.68c-5.44-7.99-14.973-1.152-10.25 6.013 1.578 2.393 2.203 3.305 3.78 5.698 4.332 6.501 13.197 6.456 16.958 0l3.525-6.03c-2.234 3.867-7.554 3.797-10.145 0z"></path><defs><linearGradient id="logo-touch_svg__logo_touch_svg__paint0_linear" x1="10.813" x2="32.467" y1="32.982" y2="-3.293" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#28BD7C"></stop><stop offset="1" stop-color="#38CF90" stop-opacity="0"></stop></linearGradient><linearGradient id="logo-touch_svg__logo-touch_svg__paint1_linear" x1="10.813" x2="32.467" y1="32.982" y2="-3.293" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#28BD7C"></stop><stop offset="1" stop-color="#38CF90" stop-opacity="0"></stop></linearGradient><linearGradient id="logo-touch_svg__logo-touch_svg__paint2_linear" x1="25.527" x2="4.919" y1="47.759" y2="13.623" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#414B80"></stop><stop offset="1" stop-color="#414B80" stop-opacity="0"></stop></linearGradient></defs></symbol>
