@@ -1,13 +1,12 @@
 <!DOCTYPE html>
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-	@include('_schema._lego.head.index')
-	{{-- @include('_schema._lego.head.index', [
-		'linkCssMin' => '/css/minDT.css',
-		'linkCssApp' => '/css/appDT.css',
-		'linkMetaColor' => 'zAsgrupp._skeleton.meta.color'
+	@include('_schema._lego.head.index', [
+		'preloadCss' => false,
+		// 'linkCssMin' => '/css/minDT.css',
+		// 'linkCssApp' => '/css/appDT.css',
+		// 'linkMetaColor' => 'zAsgrupp._skeleton.meta.color'
 		])
-	@include('xxx._skeleton.meta.index') --}}
 </head>
 <body id="body" class="MXAT noneJs @yield('css-body') @stack('css-body')">
 <script>

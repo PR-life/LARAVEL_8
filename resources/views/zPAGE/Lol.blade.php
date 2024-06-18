@@ -1,7 +1,9 @@
 <!DOCTYPE html>
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-	@include('_schema._lego.head.index')
+	@include('_schema._lego.head.index', [
+		'preloadCss' => false,
+		])
 </head>
 <body id="body" class="MXAT @yield('css-body') @stack('css-body')">
 <script>

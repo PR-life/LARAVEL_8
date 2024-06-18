@@ -1,7 +1,10 @@
 <!DOCTYPE html>
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-	@include('_schema._lego.head.index')
+	{{-- @include('_schema._lego.head.index') --}}
+	@include('_schema._lego.head.index', [
+		'preloadCss' => false,
+		])
 	<link href="{{ mix($linkCssMin ?? '/css/lead.css') }}" rel="stylesheet" type="text/css">
 
     @include('zTHIS.style.Lead')
