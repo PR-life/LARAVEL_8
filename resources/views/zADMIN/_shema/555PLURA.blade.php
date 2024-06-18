@@ -7,7 +7,7 @@ $arrCSS = [
     'cssKIRA' => 'KIRA -aside'
 ]
 ?>
-@extends('_shema.Aside', [
+@extends('_schema.Aside', [
     'arrCSS' => $arrCSS,
     'preloadCss' => 'stylesheet',
     'linkCssMin' => '/css/minAdmin.css',

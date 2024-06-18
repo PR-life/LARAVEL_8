@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-	@include('_shema._lego.head.index')
-	{{-- @include('_shema._lego.head.index', ['ogp' => $ogp]) --}}
+	@include('_schema._lego.head.index')
+	{{-- @include('_schema._lego.head.index', ['ogp' => $ogp]) --}}
 </head>
 <body id="body" class="MXAT noneJs @yield('css-body') @stack('css-body')">
 <script>
@@ -12,7 +12,7 @@
 
 
 
-@include('_shema._lego.input')
+@include('_schema._lego.input')
 
 <div id="Fon" class="Abs -lt -r @stack('css-fon')">@stack('fon')</div>
 
@@ -70,7 +70,7 @@
 <div id="Veil" data-click data-foo='click' data-goto></div>
 
 @include('_._skeleton.bodyEnd')
-@include('_shema._lego.afterMilk')
+@include('_schema._lego.afterMilk')
 @include('zTHIS.analytica.add_footer')
 
 

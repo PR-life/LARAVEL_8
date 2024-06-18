@@ -5,9 +5,6 @@
 
 <script>
 
-
-
-
     var RulersGuides = function () {
     
         
@@ -44,7 +41,7 @@
             // cssText     = 'html,body{margin:0;padding:0}',
             
             
-            Ruler       = function (type, size) {
+            Ruler = function (type, size) {
                 var ruler       = document.createElement('div'),
                     i           = 0,
                     span        = document.createElement('div'),
@@ -58,7 +55,7 @@
                 for (i; i < cnt; i = i + 1) {
                     span = span.cloneNode(false);
     
-                    if (i % 25 === 0) {
+                    if (i % 5 === 0) {
                         span.className = 'milestone';
     
                         if (i > 0) {
@@ -97,7 +94,7 @@
             // Menu
             // SnapDialog
     
-            prepare     = function () {
+            prepare = function () {
                 var style = document.createElement('style'),
                     size = 500,
                     elements = document.getElementsByTagName('*'),
@@ -120,7 +117,7 @@
     
                 setTimeout(function () {
                     // hRuler = new Ruler('h', 3000);
-                    vRuler = new Ruler('-v vol-left', 1200);
+                    vRuler = new Ruler('-v vol-left / flex dCR bC H-100 / relative', 65);
     
                     wrapper = document.createElement('div');
                     gInfoBlockWrapper = wrapper.cloneNode(false);
@@ -133,10 +130,11 @@
     
                     // wrapper.appendChild(hRuler);
                     wrapper.appendChild(vRuler);
-                    wrapper.appendChild(gInfoBlockWrapper);
+                    // wrapper.appendChild(gInfoBlockWrapper);
     
-                    body.appendChild(wrapper);
-    
+                        // body.appendChild(wrapper);
+                    body.appendChild(vRuler);
+
                     // domDimensions = calculateDomDimensions();
     
                     // menu = new Menu();
@@ -162,7 +160,3 @@
     let rg = new RulersGuides()
     
     </script>
-    
-    {{-- 
-    <div class="ruler v unselectable"><span class="milestone"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="milestone"><span class="label l10">50</span></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="milestone"><span class="label l100">100</span></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="milestone"><span class="label l100">150</span></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="milestone"><span class="label l100">200</span></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="milestone"><span class="label l100">250</span></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="milestone"><span class="label l100">300</span></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="milestone"><span class="label l100">350</span></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="milestone"><span class="label l100">400</span></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="major"></span><span></span><span></span><span></span><span></span><span class="milestone"><span class="label l100">450</span></span>
-    </div> --}}

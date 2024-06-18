@@ -1,4 +1,4 @@
-@extends('_shema.Aside', ['linkCssMin' => $linkCssMin ?? null, 'linkCssApp' => $linkCssApp ?? null,])
+@extends('_schema.Aside', ['linkCssMin' => $linkCssMin ?? null, 'linkCssApp' => $linkCssApp ?? null,])
 
 
 @push('css-body', 'Design')

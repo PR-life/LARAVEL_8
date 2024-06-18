@@ -1,4 +1,4 @@
-@extends('_shema.Vol.auth.index')
+@extends('_schema.Vol.auth.index')
 
 
 @section('content')

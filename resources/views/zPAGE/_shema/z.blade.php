@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-	@include('_shema._lego.head.index')
+	@include('_schema._lego.head.index')
 	<link href="{{ mix($linkCssMin ?? '/css/lead.css') }}" rel="stylesheet" type="text/css">
 
     @include('zTHIS.style.Lead')
@@ -12,7 +12,7 @@
 	@stack('script-bodyStart')
 </script>
 
-@include('_shema._lego.input')
+@include('_schema._lego.input')
 
 <div id="Fon" class="Abs -all index">@stack('fon')</div>
 
@@ -28,7 +28,7 @@
 </div>
 
 @include('_._skeleton.bodyEnd')
-@include('_shema._lego.afterMilk')
+@include('_schema._lego.afterMilk')
 
 </body>
 </html>

@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-	@include('_shema._lego.head.index')
-	{{-- @include('_shema._lego.head.index', [
+	@include('_schema._lego.head.index')
+	{{-- @include('_schema._lego.head.index', [
 		'linkCssMin' => '/css/minDT.css',
 		'linkCssApp' => '/css/appDT.css',
 		'linkMetaColor' => 'zAsgrupp._skeleton.meta.color'
@@ -15,7 +15,7 @@
 	@stack('script-bodyStart')
 </script>
 
-@include('_shema._lego.input')
+@include('_schema._lego.input')
 @include('_._skeleton.Fon')
 
 @include('_._skeleton.Top')
@@ -71,7 +71,7 @@
 <div id="Veil" data-click data-foo='click' data-goto></div>
 
 @include('_._skeleton.bodyEnd')
-@include('_shema._lego.afterMilk')
+@include('_schema._lego.afterMilk')
 
 @if(config('AS.env') == 'production')
 @include('zTHIS.analytica.add_footer')

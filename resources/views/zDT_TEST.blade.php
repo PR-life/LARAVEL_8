@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-@include('_shema._lego.head.index', [
+@include('_schema._lego.head.index', [
 	'linkCssMin' => '/css/minDT.css',
 	'linkCssApp' => '/css/appDT.css',
 	'linkMetaColor' => 'zAsgrupp._skeleton.meta.color'
@@ -13,7 +13,7 @@
 	@include('_.js.bodyStart')
 	@stack('script-bodyStart')
 </script>
-@include('_shema._lego.input')
+@include('_schema._lego.input')
 @include('_._skeleton.Fon')
 @include('zAsgrupp._skeleton.Top')
 @include('zAsgrupp._skeleton.header')
@@ -62,7 +62,7 @@
 <div id="Veil" data-click data-foo='click' data-goto></div>
 
 @include('_._skeleton.bodyEnd')
-@include('zAsgrupp._shema._lego.afterMilk')
+@include('zAsgrupp._schema._lego.afterMilk')
 {{-- @include('zTHIS.analytica.add_footer') --}}
 
 

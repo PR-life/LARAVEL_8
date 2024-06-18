@@ -79,7 +79,7 @@ class ServiceImport implements ToCollection, WithHeadingRow
             }
 
 
-            Service::firstOrCreate([
+            Service::updateOrCreate([
                 'id' => $params['id'],
                 ],$params);
         }

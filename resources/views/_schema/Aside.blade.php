@@ -10,7 +10,7 @@
 <!DOCTYPE html>
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-	@include('_shema._lego.head.index')
+	@include('_schema._lego.head.index')
 	@stack('head')
 </head>
 <body id="body" class="shema-aside MXAT @yield('css-body') @stack('css-body') {{ str_replace('_', '-', app()->getLocale()) }}">
@@ -19,7 +19,7 @@
 	@stack('script-bodyStart')
 </script>
 
-@include('_shema._lego.input')
+@include('_schema._lego.input')
 
 <div id="Fon" class="Abs -all @stack('css-fon')">@stack('fon')</div>
 
@@ -72,7 +72,7 @@
 
 
 @include('_._skeleton.bodyEnd')
-@include('_shema._lego.afterMilk')
+@include('_schema._lego.afterMilk')
 
 
 </body>

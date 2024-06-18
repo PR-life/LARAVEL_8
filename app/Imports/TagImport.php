@@ -43,6 +43,7 @@ class TagImport implements ToCollection, WithHeadingRow
 
             if(!$params['created_at']) {
                 $params['created_at'] = date('Y-m-d H:i:s');
+                sleep(1);
             }
 
 
@@ -65,7 +66,7 @@ class TagImport implements ToCollection, WithHeadingRow
 
 
 
-            Tag::firstOrCreate([
+            Tag::updateOrCreate([
                 'id' => $params['id'],
                 ],$params);
         }

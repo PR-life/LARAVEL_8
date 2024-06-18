@@ -1,1 +1,1 @@
-@extends('_shema.Vol.auth.login')
+@extends('_schema.Vol.auth.login')

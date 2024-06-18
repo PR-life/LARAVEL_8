@@ -483,7 +483,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 		display:block
 	}
 
-	#body.-morda .morda-display,
+	#body.schema-morda .morda-display,
 	.flex_mbl{
 		display:flex;
 	}

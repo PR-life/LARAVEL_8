@@ -7,9 +7,9 @@ $arrCSS = [
     'cssKIRA' => 'KIRA -aside'
 ]
 ?>
-@extends('_shema.Aside', [
+@extends('_schema.Aside', [
     'arrCSS' => $arrCSS,
-    'preloadCss' => 'stylesheet',
+    'preloadCss' => false,
     'linkCssMin' => '/css/minAdmin.css',
     'linkCssApp' => '/css/appAdmin.css',
     'cssMilk' => 'skimp-size_Aside'

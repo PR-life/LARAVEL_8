@@ -1,4 +1,4 @@
-@extends('_shema.vol-lite')
+@extends('_schema.vol-lite')
 
  
 
