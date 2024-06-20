@@ -14,7 +14,8 @@
 
 	@component('zADMIN._wrap.Tab.edit.body')
 		@slot('nameTab1', 'name-calling')
-		@slot('nameTab3', 'Фильтр')
+		@slot('nameTab3', 'Медиа')
+		@slot('nameTab4', 'Фильтр')
 
 		@slot('tab_1')
 			<div class="paragraphX2 / net"></div>
@@ -25,6 +26,10 @@
 			@include('zADMIN.PAGE._lego.edit.seo.canonical_ru', ['Var' => $item])
 		@endslot
 		@slot('tab_3')
+			<div class="paragraphX2 / net"></div>
+			@include('zADMIN.PAGE._lego.edit.media.index', ['Var' => $item])
+		@endslot
+		@slot('tab_4')
 			<div class="paragraph / net"></div>
 			@include('zADMIN.PAGE.Item.lego.edit.lego.filter')
 		@endslot

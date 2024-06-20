@@ -1,4 +1,4 @@
-<div class="Preamble / face face-out face-ghost face-edge / user-{{$Var->user->id}} {{$Var->css}}">
+<div class="Preamble x-{{class_basename($Var)}} / face face-out face-ghost face-edge / user-{{$Var->user->id}} {{$Var->css}}">
 	<a class="author / flex / relative" href="{{$link}}">
 		<span class="Abs -left -t / face-paddingImg">
 			<img class="Ava" src="{{$Var->user->avatar ?? '/images-0/ava_face.png'}}" alt="автор материала: {{$Var->user->name}}">
@@ -10,6 +10,8 @@
 				{{$Var->user->nickname ?? $Var->user->name}}
 			@endisset
 		</span>
+
+		@if(class_basename($Var) != 'Service')
 		<span class="Grey">
 			<span class="ghost">_</span>
 			{{$Var->demon_par_2 ?? $Var->user->user_par_1}}
@@ -18,8 +20,15 @@
 			@endif
 			{{$Var->demon_par_1 ?? $Var->user->user_par_2}}
 		</span>
+		@endif
 	</a>
+	@if(class_basename($Var) == 'Service')
+    <div class="content-xs / Grey">
+		{{$Var->user->user_par_1}}
+    </div>
+	@else
     <div class="content-xs / Grey" title="{{$Var->dateAsCarbon->translatedFormat('F')}} {{$Var->dateAsCarbon->day}}, {{$Var->dateAsCarbon->year}}">
 		{{$Var->dateAsCarbon->diffForHumans()}}
     </div>
+	@endif
 </div>

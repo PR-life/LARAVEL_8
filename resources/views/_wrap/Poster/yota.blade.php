@@ -1,46 +1,47 @@
-{{-- <div class="Poster -space dC bC {{$css ?? ''}} / _indexMax">
-    <div class="_edge / content-s">{!!$Var->prev_h1!!}</div>
-    <div class="_edge">
-        <div class="p">{!!$Var->prev_p!!}</div>
-        <div class="h2 b600">{!!$Var->prev_h2!!}</div>
-    </div>
-</div> --}}
+@isset($link)
+<a class="edge-s block highlight" href="{{$Var->canonical ?? $link}}">
+@endisset
+<div class="inline index relative {{$cssWrapPoster ?? ''}}">
 
-<div class="Poster -center vol-yota {{$css ?? '-Black round'}} / _indexMax index">
-	{{-- <div class="Abs -all {{$cssBg ?? ''}}"></div> --}}
-	<div class="Font -S / space">
-		<div class="paragraph"></div>
-		@isset($Var->prev_h1)
-		<div class="_h -vw / b600 center-text">{!!$Var->prev_h1!!}</div>
-		@endisset
-		@isset($Var->prev_h2)
-		<div class="_h2 -vw / b600 center-text">{!!$Var->prev_h2!!}</div>
-		@endisset
-		@isset($Var->prev_p)
-		<div class="paragraph-s"></div>
-		<div class="_p p center-text">{!!$Var->prev_p!!}</div>
-		@endisset
-	</div>			
+	@include('_._brick.img.teaser')
+
+	@if(isset($prev_image))
+	<div class="Abs -all / hidden">
+		<img src="{{$prev_image}}">
+	</div>
+	@endif
+
+	@isset($Veil)
+	<div class="Veil">
+	@switch($Veil)
+		@case('bottom')
+			<div class="_bottom"></div>
+			@break
+		@case('left')
+			<div class="_left"></div>
+			@break
+		@default
+			{{-- Default case... --}}
+	@endswitch
+	</div>
+	@endisset
+
+	<div class="Poster -center vol-yota {{$css ?? '-Black round'}} / _indexMax index">
+		<div class="Font -S / space">
+			<div class="paragraph"></div>
+			@isset($Var->prev_h1)
+			<div class="_h -vw / b500 center-text">{!!$Var->prev_h1!!}</div>
+			@endisset
+			@isset($Var->prev_h2)
+			<div class="_h2 -vw / b500 center-text">{!!$Var->prev_h2!!}</div>
+			@endisset
+			@isset($Var->prev_p)
+			<div class="paragraph-s"></div>
+			<div class="_p p center-text">{!!$Var->prev_p!!}</div>
+			@endisset
+		</div>			
+	</div>
 </div>
-
-
-{{-- <div class="Poster index / {{isset($h) ? '-h' : ''}} {{isset($p) ? '-p' : ''}} {{$css ?? ''}}">
-
-
-	<h1>543643</h1>
-	<div class="Abs -all {{$cssBg ?? ''}}"></div>
-	<div class="_body Font / _indexMax">
-		@isset($h)
-		<div class="_h / {{$cssH ?? ''}}">{!!$h!!}</div>
-		@endisset
-		@isset($h2)
-		<div class="_h2 / {{$cssH2 ?? ''}}">{!!$h2!!}</div>
-		@endisset
-		@isset($p)
-			@if(isset($h) || isset($h2))
-				<div class="paragraph go-s"></div>
-			@endif
-		<div class="_p -mbl / {{$cssP ?? ''}}">{!!$p!!}</div>
-		@endisset
-	</div>			
-</div> --}}
+@isset($link)
+</a>
+@endisset

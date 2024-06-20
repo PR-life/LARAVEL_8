@@ -39,8 +39,6 @@ class Category extends Model
         );
     }
 
-
-
     public function thisServicesPivot() {
         return $this->belongsToMany(
             Service::class,
@@ -59,7 +57,15 @@ class Category extends Model
         );
     }
 
-
+     
+    public function servicesPivot() {
+        return $this->belongsToMany(
+            Service::class,
+            'service_categories',
+            'category_id',
+            'service_id'
+        );
+    }
     public function papersPivot() {
 
         return $this->belongsToMany(

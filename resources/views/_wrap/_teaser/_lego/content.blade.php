@@ -9,7 +9,7 @@
 		@include('_wrap.Poster.paper', ['Var' => $Var, 'link' => $routeName])
 	@elseif ($Var->shema_teaser == 'yota')
 		<div class="paragraph"></div>
-		@include('_Wrap.Poster.yota', ['Var' => $Var, 'link' => $routeName])
+		@include('_wrap.Poster.yota', ['Var' => $Var, 'link' => $routeName])
 		<div class="paragraph"></div>
 		@include('_wrap._teaser._brick.descriptionMin', ['Var' => $Var, 'link' => $routeName])
 	@else

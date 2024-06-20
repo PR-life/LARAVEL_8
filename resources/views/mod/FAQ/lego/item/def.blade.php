@@ -3,9 +3,14 @@
     <div class="{{$cssWrapContent ?? '_edge void'}}">
         <div>
             @include('mod.FAQ.brick.name')
+            @isset($_faq->text)
+                @isset($_faq->h1)
+                <div class="paragraphX2"></div>
+                @endisset
             <div class="x-text / text text-m void">
-                {!!$_faq->text ?? ''!!}
+                {!!$_faq->text!!}
             </div>
+            @endisset
         </div>
     </div>
     @if($_faq->childrenFaqs->count())

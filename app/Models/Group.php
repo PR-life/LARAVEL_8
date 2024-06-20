@@ -7,6 +7,7 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Traits\Filterable;
 use Carbon\Carbon;
 
+use App\Models\_child\Service;
 
 class Group extends Model
 {
@@ -25,6 +26,14 @@ class Group extends Model
             'group_id',
             'faq_id'
         )->orderBy('order');
+    }
+
+    public function services() {
+        return $this->hasMany(
+            Service::class,
+            'group_id',
+            'id', //
+        )->orderBy('order', 'asc');
     }
 
     public function faqs() {

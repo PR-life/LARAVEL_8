@@ -10,6 +10,9 @@
 		@isset($nameTab3)
         <li class="order-{{$orderTab3 ?? ''}}" data-item='3' data-packagetype='css' data-packagefoo='radio' package="Tabs -x3"><span class="a noEvents">{{$nameTab3}}</span></li>
 		@endisset
+		@isset($nameTab4)
+        <li class="order-{{$orderTab4 ?? ''}}" data-item='4' data-packagetype='css' data-packagefoo='radio' package="Tabs -x4"><span class="a noEvents">{{$nameTab4}}</span></li>
+		@endisset
     </ul>
 </div>
 
@@ -34,6 +37,9 @@
 					<div class="_shell / _tab x2 / void-m">{!!$tab_2 ?? '<h1>EMPTY</h1>'!!}</div>
 					@isset($tab_3)
 					<div class="_shell / _tab x3 / void-m">{!!$tab_3!!}</div>
+					@endisset
+					@isset($tab_4)
+					<div class="_shell / _tab x4 / void-m">{!!$tab_4!!}</div>
 					@endisset
 					{{-- <div class="_shell / _tab x4">{!!$tab_4 ?? '<h1>EMPTY</h1>'!!}</div> --}}
 				</div>

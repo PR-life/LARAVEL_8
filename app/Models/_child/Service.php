@@ -9,7 +9,7 @@ namespace App\Models\_child;
 // use Carbon\Carbon;
 //
 use App\Models\Paper;
-use App\Models\{Category,Tag,Faq,Item};
+use App\Models\{Group,Category,Tag,Faq,Item};
 
 class Service extends Paper
 {
@@ -50,5 +50,13 @@ class Service extends Paper
             'service_id',
             'category_id'
         )->orderBy('order');
+    }
+
+    public function group() {
+        return $this->belongsTo(
+            Group::class,
+            'group_id',
+			'id',
+        );
     }
 }

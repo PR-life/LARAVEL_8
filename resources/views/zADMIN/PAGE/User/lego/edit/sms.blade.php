@@ -1,6 +1,8 @@
 <div class="void / Form -S">
 
-    @component('zADMIN._wrap._open.tool_FlaberSms')
+
+    @component('_wrap.__.summary')
+        @slot('icoCloseName', 'closeRoll')
         @slot('id', 'user')
         @slot('name', 'База')
 
@@ -13,9 +15,13 @@
             <input id="inputEmail" type="text" name="email" value="{{$user->email ?? old('email')}}" placeholder=".">
             <label class="Abs" for="inputEmail">@svg('plus')email</label>
         </div>
+
     @endcomponent
 
-    @component('zADMIN._wrap._open.tool_FlaberSms')
+ 
+
+    @component('_wrap.__.summary')
+        @slot('icoCloseName', 'closeRoll')
         @slot('id', 'password')
         @slot('name', 'Пароль')
 
