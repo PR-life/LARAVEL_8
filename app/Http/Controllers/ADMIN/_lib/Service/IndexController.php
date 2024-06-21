@@ -14,7 +14,8 @@ class IndexController extends BaseController
     public function __invoke(FilterRequest $request){
 
 		$envData = $this->initializeEnvData();
-		$envData['name_28051841'] = 'Новости';
+		$envData['name_28051841'] = 'Услуги';
+		$categoryPivotServices = null;
 
 
 		//
@@ -37,7 +38,12 @@ class IndexController extends BaseController
 		
         $_request = $this->service->_request($request);
 
+		if($_request['category_id']) {
+			$category = Category::findOrFail($_request['category_id']);
+			$categoryPivotServices = $category->servicesPivot()->get();
+		}
 
-        return view('zADMIN.PAGE.Paper.index', compact('papers','roles','categories','tags','_request','envData'));
+
+        return view('zADMIN.PAGE.Paper.index', compact('papers','roles','categories','tags','_request','categoryPivotServices','envData'));
     }
 }

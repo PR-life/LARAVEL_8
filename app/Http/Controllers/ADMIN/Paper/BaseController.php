@@ -14,4 +14,11 @@ class BaseController extends Controller {
     public function __construct(Service $service) {
         $this->service = $service;
     }
+
+    protected function initializeEnvData()
+    {
+        return [
+            'Model' => 'Paper',
+        ];
+    }
 }

@@ -20,6 +20,6 @@ class StoreController extends BaseController
 
 		
 
-		return redirect()->route('admin.lib.service.edit', $service->id);
+		return redirect()->route('admin.service.edit', $service->id);
     }
 }

@@ -13,6 +13,9 @@ class IndexController extends BaseController
 {
     public function __invoke(FilterRequest $request){
 
+		$envData = $this->initializeEnvData();
+
+		//
  
 		$param1 = $request->input('type');
 		$uri = $request->path();
@@ -43,6 +46,6 @@ class IndexController extends BaseController
 
         $_request = $this->service->_request($request);
 
-        return view('zADMIN.PAGE.Paper.index', compact('papers','roles','categories','tags','_request'));
+        return view('zADMIN.PAGE.Paper.index', compact('papers','roles','categories','tags','_request','envData'));
     }
 }

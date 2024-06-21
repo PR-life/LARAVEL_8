@@ -4,6 +4,15 @@
 //     margin-bottom: var(--x-void-text);
 // }
 
+.text.Void.void-slim {
+    --x-text-void-max: 3rem;
+}
+
+.text {
+    --x-text-void-max: 6rem;
+}
+
+//
 
 .text > .Roll {
     margin-bottom: 0;
@@ -106,7 +115,7 @@
 .text > .h1,
 .text > h2, .text > .h2,
 .text > h3, .text > .h3 {
-    margin-top: 6rem;
+    margin-top: var(--x-text-void-max);
 }
 
 details .text> :first-child {margin-top: 0;}
@@ -117,6 +126,7 @@ details .text> :first-child {margin-top: 0;}
     margin-top: 0;
     margin-bottom: 0;
 }
+
 
 
 // .text > :first-child {

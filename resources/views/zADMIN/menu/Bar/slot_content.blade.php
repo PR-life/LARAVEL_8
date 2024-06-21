@@ -28,8 +28,8 @@
         </span>
     @endcomponent 
     @component('_wrap.Chunk.Aside.index')
-        @slot('linkAdd', route('admin.lib.service.create'))
-        @slot('routeName', 'admin.lib.service.index')
+        @slot('linkAdd', route('admin.service.create'))
+        @slot('routeName', 'admin.service.index')
         @slot('cssIco', '-XS')
         @slot('name', 'Услуги')
         <span class="block / Ico -XS">
@@ -46,8 +46,8 @@
         </span>
     @endcomponent 
     @component('_wrap.Chunk.Aside.index')
-        @slot('routeName', 'admin.lib.telegram.index')
-        @slot('linkAdd', route('admin.lib.telegram.create'))
+        @slot('routeName', 'admin.telegram.index')
+        @slot('linkAdd', route('admin.telegram.create'))
         @slot('cssIco', '-XS')
         @slot('name', 'Новости')
         <span class="block / Ico -XS">

@@ -19,7 +19,8 @@ class BaseController extends Controller {
     protected function initializeEnvData()
     {
         return [
-            'nameRoute' => 'lib.telegram',
+            'Model' => 'Telegram',
+            'nameRoute' => 'telegram',
         ];
     }
 }

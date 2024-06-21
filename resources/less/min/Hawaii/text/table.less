@@ -13,15 +13,28 @@ table {
 	}
 }
 
+
+
 table.-M {
-    --table-h-td: ~"calc(var(--h-td) + 1rem)";
+    --table-h-td: ~"calc(var(--h-td) + 2rem)";
 }
 
+
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	table.-L {
+		--table-h-td: ~"calc(var(--h-td) + 2rem)";
+	}
+}
 
 @media screen and (max-width:@w-menu-2){
     table {
         --table-padding-table: ~"calc(1rem + 8px)";
     }
+	table.-L {
+		--table-h-td: ~"calc(var(--h-td) + 1rem)";
+	}
 
 }
 

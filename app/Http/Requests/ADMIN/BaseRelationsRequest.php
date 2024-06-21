@@ -23,6 +23,7 @@ class BaseRelationsRequest extends BaseRequest
 
             //
             'paper_delivery' => 'nullable|integer|exists:papers,id',
+            'service_delivery_id' => 'nullable|integer|exists:services,id',
             'category_services_id' => 'nullable|integer|exists:categories,id',
                 
             //

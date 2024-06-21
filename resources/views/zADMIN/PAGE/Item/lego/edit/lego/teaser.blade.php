@@ -13,8 +13,10 @@
     <label class="Abs" for="inputName_seo">@svg('plus')name_seo</label>
 </div>
 
-
-
+<div class="_shell / vol-Abs label-insideInput / net">
+    <input id="inputBread_name" type="text" name="bread_name" value="{{$item->bread_name ?? old('bread_name')}}" placeholder=".">
+    <label class="Abs" for="inputBread_name">@svg('plus')bread_name</label>
+</div>
 
 <div class="_shell x-hr Form -S / vol-Abs">
     <input id="inputPrev_h1" type="text" name="prev_h1" value="{{$item->prev_h1 ?? old('prev_h1')}}" placeholder=".">

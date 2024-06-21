@@ -6,20 +6,20 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
     Route::group(['namespace' => '_lib'], function(){
         
         Route::group(['namespace' => 'Service', 'prefix' => 'services'], function(){
-            Route::get('/', 'IndexController')->name('lib.service.index');
-            Route::get('/create', 'CreateController')->name('lib.service.create');
-            Route::patch('/{service}', 'UpdateController')->name('lib.service.update');
-            Route::post('/', 'StoreController')->name('lib.service.store');
-            Route::get('/{service}/edit', 'EditController')->name('lib.service.edit');
-            Route::delete('/{service}', 'DeleteController')->name('lib.service.delete');
+            Route::get('/', 'IndexController')->name('service.index');
+            Route::get('/create', 'CreateController')->name('service.create');
+            Route::patch('/{service}', 'UpdateController')->name('service.update');
+            Route::post('/', 'StoreController')->name('service.store');
+            Route::get('/{service}/edit', 'EditController')->name('service.edit');
+            Route::delete('/{service}', 'DeleteController')->name('service.delete');
         });
         Route::group(['namespace' => 'Telegram', 'prefix' => 'telegram'], function(){
-            Route::get('/', 'IndexController')->name('lib.telegram.index');
-            Route::get('/create', 'CreateController')->name('lib.telegram.create');
-            Route::patch('/{telegram}', 'UpdateController')->name('lib.telegram.update');
-            Route::post('/', 'StoreController')->name('lib.telegram.store');
-            Route::get('/{telegram}/edit', 'EditController')->name('lib.telegram.edit');
-            Route::delete('/{telegram}', 'DeleteController')->name('lib.telegram.delete');
+            Route::get('/', 'IndexController')->name('telegram.index');
+            Route::get('/create', 'CreateController')->name('telegram.create');
+            Route::patch('/{telegram}', 'UpdateController')->name('telegram.update');
+            Route::post('/', 'StoreController')->name('telegram.store');
+            Route::get('/{telegram}/edit', 'EditController')->name('telegram.edit');
+            Route::delete('/{telegram}', 'DeleteController')->name('telegram.delete');
         });
 
     });
