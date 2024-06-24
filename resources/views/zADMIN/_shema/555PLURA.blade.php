@@ -23,7 +23,7 @@ $arrCSS = [
 
 @include('zADMIN._shema._brick.src')
 @include('zADMIN._shema._brick.style')
-@include('zADMIN.zTHIS._shema.index')
+@include('zADMIN.zTHIS._schema.index')
 
 @push('css-body', 'x-aside Design x-Admin ')
 @push('css-fon', 'skimp-size_Aside ')

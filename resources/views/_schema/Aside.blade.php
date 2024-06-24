@@ -25,7 +25,7 @@
 
 @component('_wrap.oiBar', $arrCSS)
 
-	<div class="index relative">
+	<div class="W-100 / index relative">
 		@stack('topBefore')
 		@yield('top')
 		@stack('topAfter')
