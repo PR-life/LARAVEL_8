@@ -1,4 +1,4 @@
-@extends('zADMIN._shema.edit')
+@extends('zADMIN._schema.edit')
 
 @section('title')New. Paper @endsection
 @section('css-body', '-create ')

@@ -30,11 +30,13 @@
     <div class="h">Полнота</div>
     <ul class="Sizes / flex -wrap">
         @for ($i = 4; $i < 9; $i++)
-        <li>
-            <input id="size_18051740_{{$i}}" class="none" name="size_jacket_exhaustiveness" value="{{ $i }}" type="radio" 
-            {{$size->size_jacket_exhaustiveness == $i ? 'checked' : ''}}>
-            <label class="Ico -XL / flex cI cC" for="size_18051740_{{$i}}">{{ $i }}</label>
-        </li>
+            @if($i != 5 && $i != 8)
+            <li>
+                <input id="size_18051740_{{$i}}" class="none" name="size_jacket_exhaustiveness" value="{{ $i }}" type="radio" 
+                {{$size->size_jacket_exhaustiveness == $i ? 'checked' : ''}}>
+                <label class="Ico -XL / flex cI cC" for="size_18051740_{{$i}}">{{ $i }}</label>
+            </li>
+            @endif
         @endfor
     </ul>
     

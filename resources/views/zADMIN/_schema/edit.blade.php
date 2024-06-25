@@ -1,4 +1,4 @@
-@extends('zADMIN._shema.INDEX')
+@extends('zADMIN._schema.INDEX')
 @push('css-body', '-edit ')
 
 @include('zADMIN._bd._src.edit.min')

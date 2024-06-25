@@ -1,4 +1,4 @@
-@extends('zADMIN._shema.create')
+@extends('zADMIN._schema.create')
 
 @section('title')New. User @endsection
 @section('css-body', '-create ')

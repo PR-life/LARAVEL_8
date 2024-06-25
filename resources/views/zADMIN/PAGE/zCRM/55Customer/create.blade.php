@@ -1,4 +1,4 @@
-@extends('zADMIN._shema.create')
+@extends('zADMIN._schema.create')
 
 @section('title')New. Персона @endsection
 
