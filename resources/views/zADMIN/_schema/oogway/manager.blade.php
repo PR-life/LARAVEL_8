@@ -1,4 +1,4 @@
-@component('zADMIN._shema._wrap.oogway')
+@component('zADMIN._schema._wrap.oogway')
      
 @slot('push')
     @push('css-body', 'x-aside2 aside2Close55 ')

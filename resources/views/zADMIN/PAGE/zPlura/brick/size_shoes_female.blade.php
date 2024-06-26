@@ -1,7 +1,7 @@
 <div class="x-female / net void">
     <div class="h">Размер {{$size->size_shoes}}</div>
     <ul class="Sizes / flex -wrap">
-        @for ($i = 38; $i < 42; $i+=.5)
+        @for ($i = 35; $i < 42; $i+=.5)
         <li>
             <input id="size_19051646_{{$i}}" class="none" name="size_shoes" value="{{ $i }}" type="radio" 
             {{$size->size_shoes == $i ? 'checked' : ''}}>

@@ -1,4 +1,4 @@
-@extends('zADMIN._shema.zPlura')
+@extends('zADMIN._schema.zPlura')
 
 @section('title')данные профиля: {{$face->id}} @endsection
 

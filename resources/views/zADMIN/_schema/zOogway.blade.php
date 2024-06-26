@@ -1,4 +1,4 @@
-@component('zADMIN._shema._wrap.oogway')
+@component('zADMIN._schema._wrap.oogway')
      
 @slot('push')
 
@@ -118,7 +118,7 @@
             <div class="_scr / Shift -left -stepScroll shift-space">
                 <div class="_fix / index">
                     <div class="Top -h"></div>
-                    {{-- @include('zADMIN._shema.mod.branch.index') --}}
+                    {{-- @include('zADMIN._schema.mod.branch.index') --}}
                 </div>
             </div>
         </div>

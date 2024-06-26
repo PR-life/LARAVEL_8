@@ -1,9 +1,9 @@
-@extends('zADMIN._shema.edit')
+@extends('zADMIN._schema.edit')
 
 @section('title')edit. Face - {{$face->name}} @endsection
 
 @push('js-bottom-solo')
-	@include('decor.JS.ruler')
+	@include('decor.JS.rulerFS')
 @endpush
 
 @push('addBread')

@@ -1,6 +1,6 @@
 <div class="Goo -top / bgToBottom _indexMax">
     <div class="paragraph"></div>
-    @include('zADMIN._shema.mod.branch.menu')
+    @include('zADMIN._schema.mod.branch.menu')
     <div class="paragraph"></div>
 </div>
 

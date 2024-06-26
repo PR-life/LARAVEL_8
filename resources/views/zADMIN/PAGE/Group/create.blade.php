@@ -1,4 +1,4 @@
-@extends('zADMIN._shema.edit')
+@extends('zADMIN._schema.edit')
 
 @section('title')New. Group @endsection
 @section('css-body', '-create ')

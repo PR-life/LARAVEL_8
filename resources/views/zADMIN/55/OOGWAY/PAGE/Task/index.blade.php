@@ -1,4 +1,4 @@
-@extends('zADMIN._shema.oogway.manager')
+@extends('zADMIN._schema.oogway.manager')
 
 @section('title')Task @endsection
 

@@ -1,4 +1,4 @@
-@extends('zADMIN._shema.oogway')
+@extends('zADMIN._schema.oogway')
 
 @section('title')edit: Oogway @endsection
  

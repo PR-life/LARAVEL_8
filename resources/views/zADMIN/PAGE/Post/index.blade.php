@@ -1,4 +1,4 @@
-@extends('zADMIN._shema.index')
+@extends('zADMIN._schema.index')
 
 @section('title')Материалы @endsection
 
@@ -36,7 +36,7 @@
 
 
 {{-- 
-@extends('zADMIN._shema.index')
+@extends('zADMIN._schema.index')
 
 @section('title')Admin @endsection
 

@@ -1,4 +1,4 @@
-@extends('zADMIN._shema.edit')
+@extends('zADMIN._schema.edit')
 
 @section('title')edit. Customer - {{$face->name}} @endsection
 
