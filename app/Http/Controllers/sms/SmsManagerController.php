@@ -31,7 +31,7 @@ class SmsManagerController extends BaseController
         $this->telega($sms);
 
         $reachGoalFromController = $sms->reachgoal_id;
- 
+
 
         return view('zPAGE.Thanks', compact('sms','reachGoalFromController'));
         // return view('_.Thanks', compact('sms'));

@@ -148,6 +148,13 @@ class Post extends Model
 		return Carbon::parse($this->created_at);
 	}
     
+
+
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
+
     public function getAttribute($key) {
         $default = parent::getAttribute($key);
         if ((app()->getLocale() !== 'ru') && isset($this->lang_fields) && in_array($key, $this->lang_fields)) {

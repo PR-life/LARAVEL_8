@@ -217,4 +217,9 @@ class Category extends Model
         }
         return $default;
     }
+    
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
 }
