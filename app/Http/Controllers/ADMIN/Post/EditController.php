@@ -12,8 +12,8 @@ use App\Models\Item;
 
 class EditController extends BaseController
 {
-    public function __invoke(Post $post){
-
+    public function __invoke($id){
+        $post = Post::findOrFail($id);
         $categories = Category::whereNull('category_id')
         ->with('childrenCategories')
         ->orderBy('name', 'asc')->get();

@@ -8,8 +8,9 @@ use App\Models\{Group,Tag,Faq,Category,Item,User};
 
 class EditController extends BaseController
 {
-    public function __invoke(Service $service){
-		
+
+	public function __invoke($id){
+		$service = Service::findOrFail($id);
 		$envData = $this->initializeEnvData();
 		// $envData['name_28051841'] = 'Новости';
 

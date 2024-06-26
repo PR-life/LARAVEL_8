@@ -20,6 +20,6 @@ class StoreController extends BaseController
 
 		
 
-		return redirect()->route('admin.lib.telegram.edit', $telegram->id);
+		return redirect()->route('admin.telegram.edit', $telegram->id);
     }
 }
