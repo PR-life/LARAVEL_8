@@ -5,7 +5,7 @@
 	{!!$package ?? ""!!}
 	
 	<div class="Shell / _indexMin / hidden">
-		<div class="paragraphX2 none_PC"></div>
+		{{-- <div class="paragraphX2 none_PC"></div> --}}
 		<div class="Track / {!!$cssTrack ?? ''!!}" style="transform: translateX(0px);" data-switch>
 			{{$slot}}
 		</div>

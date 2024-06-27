@@ -13,7 +13,7 @@ class UpdateController extends BaseController
 
         $data = $request->validated();	
 
-        // dd($data);
+        dd($data);
 
 		$this->service->update($service,$data);
 

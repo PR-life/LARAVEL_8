@@ -3,15 +3,24 @@ import { listPrev } from '../_sherpa/listPrev.js';
 import { cssSwitch } from '../_skill/cssSwitch.js';
 
 export default class Slider {
-	constructor(selector){
-		this.rootElem = document.getElementById(selector)
-		this.Track = this.rootElem.querySelector('.Track')
-		this.items = this.Track.querySelectorAll(".item")
-		this.count = this.items.length
-		this.sherpa = this.rootElem.querySelector('.sherpaSlider')
-		this.carousel = this.Track.dataset.carousel ?? false;
-		this.trigger = true;
 
+	constructor(selector){
+        this.rootElem = document.getElementById(selector);
+        if (!this.rootElem) throw new Error(`Element with id ${selector} not found`);
+
+        this.Track = this.rootElem.querySelector('.Track');
+        if (!this.Track) throw new Error(`Track element not found in ${selector}`);
+
+        this.items = this.Track.querySelectorAll(".item");
+        if (this.items.length === 0) throw new Error(`No items found in the track of ${selector}`);
+
+        this.count = this.items.length;
+
+        this.sherpa = this.rootElem.querySelector('.sherpaSlider');
+        if (!this.sherpa) throw new Error(`Sherpa element not found in ${selector}`);
+
+        this.carousel = this.Track.dataset.carousel === 'true';
+        this.trigger = true;
 
 		let btnLeft = this.rootElem.querySelector('._btn.left')
 		let btnRight = this.rootElem.querySelector('._btn.right')
@@ -28,78 +37,90 @@ export default class Slider {
 		btnLeft.addEventListener('click', () => this.sliderClick('next'))
 		btnRight.addEventListener('click', () => this.sliderClick('prev'))
 		this.dataUpdate(0)
-
 	}
 
-
 	Go(x){
-		// console.log(this.items[x])
-		this.move(x)
-		cssSwitch(this.Track,this.items[x].getAttribute('data-item'))
-
-		// cssSwitch(
-		// 	c,
-		// 	t.getAttribute('data-item'),
-		// 	t.getAttribute('data-switch') != null ? t.getAttribute('data-switch') : 'active',
-		// 	t.getAttribute('data-time') ? t.getAttribute('data-time') : '0'
-		// );
-		// export function cssSwitch(param, item, css = 'active',time = 0){
-
+		//Здесь всё в порядке, но можно добавить проверку индекса x на допустимый диапазон.
+		if (x < 0 || x >= this.count) return;
+		this.move(x);
+		cssSwitch(this.Track, this.items[x].getAttribute('data-item'));
 	}
 
 
 	sliderClick(param){
-		// console.log(this.sherpa)
-		// console.log(this.trigger)
-		// console.log(this.count)
-		// console.log(param)
-		// console.log(this.getCurrent())
-		// console.log(2222)
-		// this.move(this.direction(param))
-		// console.log(this.carousel)
-		this.dataUpdate(this.direction(param))
-		this.sliderDotUpdate()
-		
+		const direction = this.direction(param);
+		if (direction === undefined) return;
+		this.dataUpdate(direction);
+		this.sliderDotUpdate();
 	}
+	
 
 	direction(param){
-		// console.log(param)
-		let arr = {
+		const arr = {
 			prev: listNext(this.getCurrent() - 1,this.count,this.carousel),
 			next: listPrev(this.getCurrent() - 1,this.count,this.carousel),
-		}
+		};
 		return arr[param];
 	}
 
-
-	getCurrent(){return this.rootElem.dataset.current ?? 1}
-	move(x) {this.Track.style.transform = `translateX(-${x * this.Track.querySelector('.item').clientWidth}px)`;}
-	dataUpdate(x){this.rootElem.dataset.current = ++x}
+	
+	getCurrent(){
+		return parseInt(this.rootElem.dataset.current) || 1;
+	}
+	
+	move(x){
+		this.Track.style.transform = `translateX(-${x * this.Track.querySelector('.item').clientWidth}px)`;
+	}
+	
+	dataUpdate(x){
+		this.rootElem.dataset.current = x + 1;
+	}
 	sliderDotUpdate(){
-		if(this.rootElem.querySelector('.slider-dot')){
-			this.rootElem.querySelector('.slider-dot .Sherpa').dataset.item = this.rootElem.dataset.current
-			this.rootElem.querySelector('.slider-dot .Sherpa').click()
+		const sliderDot = this.rootElem.querySelector('.slider-dot .Sherpa');
+		if (sliderDot){
+			sliderDot.dataset.item = this.rootElem.dataset.current;
+			sliderDot.click();
 		}
 	}
 
 }
 
 export class textSlider extends Slider{
+	// constructor(selector){
+	// 	super(selector);
+	// 	this.innerCountActive = this.rootElem.querySelector('.slider-nav .x1');
+	// 	if (!this.innerCountActive) throw new Error(`Element .slider-nav .x1 not found in ${selector}`);
+	// 	let innerCountSum = this.rootElem.querySelector('.slider-nav .x2');
+	// 	if (!innerCountSum) throw new Error(`Element .slider-nav .x2 not found in ${selector}`);
+	// 	innerCountSum.innerText = this.items.length;
+	// }
 
-	constructor(selector){
-		super(selector)		
-		this.innerCountActive = this.rootElem.querySelector('.slider-nav .x1')
-		let innerCountSum = this.rootElem.querySelector('.slider-nav .x2')
+    constructor(selector) {
+        super(selector);
+        this.innerCountActive = this.rootElem.querySelector('.slider-nav .x1');
+        let innerCountSum = this.rootElem.querySelector('.slider-nav .x2');
 
-		innerCountSum.innerText = this.items.length
-	}
+        // Проверяем, существуют ли элементы перед выполнением операций
+        if (this.innerCountActive) {
+            this.innerCountActive.innerText = this.items.length;
+        }
 
-	Go(x){
-		this.move(x)
-		this.innerCountActive.innerText = ++x
-	}
+        if (innerCountSum) {
+            innerCountSum.innerText = this.items.length;
+        }
+    }
+    // Go(x){
+    //     super.Go(x);
+    //     this.innerCountActive.innerText = x + 1;
+    // }
 
+	Go(x) {
+        this.move(x);
+        
+        // Проверяем, существует ли элемент перед выполнением операций
+        if (this.innerCountActive) {
+            this.innerCountActive.innerText = ++x;
+        }
+    }
 }
-
-
  

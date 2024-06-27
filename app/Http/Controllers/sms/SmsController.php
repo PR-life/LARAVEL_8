@@ -53,6 +53,7 @@ class SmsController extends BaseController
             $sms = $this->service->create($param);
             $this->telega($sms);
 
+
             return view('zPAGE.Thanks', compact('sms'));
 
         } catch (Exception $e) {
