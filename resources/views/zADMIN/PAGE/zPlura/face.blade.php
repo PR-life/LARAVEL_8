@@ -2,6 +2,46 @@
 
 @section('title')данные профиля: {{$face->id}} @endsection
 
+@push('js-bottom-link')
+	@include('_.src.link.js.inputmask')
+@endpush
+
+@push('js-bottom-solo')
+    <script>
+        // Применяем маску к полю ввода
+        Inputmask({
+            mask: "+7 (999) 999-99-99",
+            placeholder: "_",
+            showMaskOnHover: false,
+            showMaskOnFocus: true
+        }).mask(document.getElementById('inputPhone'));
+ 
+    </script>
+    <script>
+        // document.getElementById('inputPhone').addEventListener('input', function(event) {
+        //     const input = event.target;
+        //     let value = input.value;
+
+        //     // Удаляем все символы, кроме цифр
+        //     value = value.replace(/\D/g, '');
+
+        //     // Если первая цифра 7, заменяем ее на +7
+        //     if (value.startsWith('7')) {
+        //         value = '+7' + value.slice(1);
+        //     } else {
+        //         value = '+7' + value;
+        //     }
+
+        //     // Форматируем значение
+        //     value = value.replace(/(\+7)(\d{3})(\d{3})(\d{2})(\d{2})/, '$1 ($2) $3-$4-$5');
+
+        //     // Обновляем значение поля ввода
+        //     input.value = value;
+        // });
+    </script>
+@endpush
+
+
 @push('addBread')
 	<li>
 		<span>

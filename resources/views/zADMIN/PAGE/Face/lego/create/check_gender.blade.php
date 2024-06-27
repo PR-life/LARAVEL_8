@@ -1,4 +1,4 @@
-<div class="menu -tile -XS / cloud / net">
+<div class="menu -tile -XXS / cloud / net">
 		
     {{-- @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content'])
         @slot('name', 'crm_id')
@@ -14,7 +14,7 @@
         @slot('value', 'male')
         @slot('param_from_bd', null)
         
-        <div class="h1">М</div>
+        <div class="h2">М</div>
     @endcomponent
     @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content'])
         @slot('name', 'gender')
@@ -22,7 +22,7 @@
         @slot('value', 'female')
         @slot('param_from_bd', null)
         
-        <div class="h1">Ж</div>
+        <div class="h2">Ж</div>
     @endcomponent
     {{-- @foreach($Crm as $_crm) --}}
  
