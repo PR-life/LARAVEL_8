@@ -1,6 +1,6 @@
 <div class="flex cI bC_mbl / cross">
 <div class="W-100">
-      <span class="ghostMbl c-h / h b500">
+      <span class="ghostMbl c-h {{$css29061211 ?? ''}} / h b500">
          {!!$name ?? 'Новые вопросы'!!}
          {{-- {!!$name ?? 'Новые вопросы <br class="none_PC">от клиентов'!!} --}}
       </span>

@@ -4,11 +4,19 @@
  	{!!$manager ?? ""!!}
 	{!!$package ?? ""!!}
 	
-	<div class="Shell / {!!$cssShell ?? '_indexMin'!!} / hidden">
-		{{-- <div class="paragraphX2 none_PC"></div> --}}
+	<form class="Shell / {!!$cssShell ?? '_indexMin'!!} / hidden" method="POST" action="{{route($route ?? 'sms.storeask')}}" enctype="multipart/form-data">
+		@csrf
+		@include('component.Form._brick.input.bd_min')
+		@include('component.Form._brick.input.spam')
+		<input type="hidden" name="label" value="ask">
+		<input type="hidden" name="reachgoal_id" value="999999999956846846">
+
 		<div class="Track / {!!$cssTrack ?? ''!!}" style="transform: translateX(0px);" data-switch>
 			{{$slot}}
 		</div>
 		<div class="Abs Loki ghost / sherpaSlider"></div>
-	</div>
+	</form>
 </div>
+
+
+ 
