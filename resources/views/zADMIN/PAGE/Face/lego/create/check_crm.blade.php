@@ -1,4 +1,4 @@
-<div class="menu -tile / cloud / net">
+<div class="menu -tile -S / cloud / net">
 		
     @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content'])
         @slot('name', 'crm_id')

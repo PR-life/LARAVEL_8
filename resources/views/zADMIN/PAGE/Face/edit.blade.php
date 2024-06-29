@@ -1,10 +1,9 @@
 @extends('zADMIN._schema.edit')
+@includeIf('zADMIN.PAGE.Face._this.edit_js')
 
 @section('title')edit. Face - {{$face->name}} @endsection
 
-@push('js-bottom-solo')
-	@include('decor.JS.rulerFS')
-@endpush
+
 
 @push('addBread')
     <li>

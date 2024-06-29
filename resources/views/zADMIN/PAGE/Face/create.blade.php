@@ -27,8 +27,14 @@
 		@include('zADMIN._brick.bar.v.create', ['route' => route('admin.crm.face.index')])
 		<input type="hidden" name="user_id" value="{{auth()->user()->id}}">
 
-		<div class="Font">
-			<div class="_h -vw / familyTochka b500">Добавить <br>новый профиль</div>
+
+		<div class="Bee"></div>
+		<div class="Wings">
+			<div class="_win -t">
+				<div class="Font">
+					<div class="_h -vw / familyTochka b500">Добавить <br>новый профиль</div>
+				</div>
+			</div>
 		</div>
 		<div class="hill-s"></div>	
  
