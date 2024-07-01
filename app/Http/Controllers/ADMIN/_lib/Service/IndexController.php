@@ -17,7 +17,6 @@ class IndexController extends BaseController
 		$envData['name_28051841'] = 'Услуги';
 		$categoryPivotServices = null;
 
-
 		//
  
 		$param1 = $request->input('type');

@@ -23,7 +23,7 @@
 <div class="I aura">
 
 
-	@component('zADMIN._wrap.form.edit', ['route' => route('admin.category.update', $category->id), 'css' => '-category'])
+	@component('zADMIN._wrap.form.edit', ['route' => route('admin.category.update', $category->slug), 'css' => '-category'])
 
 
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.category.index','link_create' => route('admin.category.create')])

@@ -10,7 +10,9 @@ use App\Models\_child\Service;
 
 class EditController extends Controller
 {
-    public function __invoke(Category $category){
+    public function __invoke($id){
+
+        $category = Category::findOrFail($id);
 
         $categories = Category::whereNull('category_id')
         ->with('childrenCategories')

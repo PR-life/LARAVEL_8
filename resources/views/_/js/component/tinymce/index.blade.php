@@ -31,6 +31,7 @@ tinymce.init({
 	relative_urls : false,
 	// remove_script_host : true,
 	document_base_url : '/',
+	// extended_valid_elements: "svg[*],defs[*],pattern[*],desc[*],metadata[*],g[*],mask[*],path[*],line[*],marker[*],rect[*],circle[*],ellipse[*],polygon[*],polyline[*],linearGradient[*],radialGradient[*],stop[*],image[*],view[*],text[*],textPath[*],title[*],tspan[*],glyph[*],symbol[*],switch[*],use[*]",
 	
 
 	menubar: 'format',

@@ -22,15 +22,16 @@ class SmsController extends BaseController
  
     public function storeAsk(AskRequest $request) {
 
+        
         $param = $request->validated();
-
+        
         try {
             $sms = $this->service->create($param);
 
+            
             //
             $item = Post::whereSlug('storeask')->firstOrFail();
 
-            // return redirect('/asnone/sms/storeask', compact('sms', 'item'));
             return view('zPAGE.Lead', compact('sms', 'item'));
 
         } catch (Exception $e) {

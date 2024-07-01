@@ -20,6 +20,7 @@ class BaseRelationsRequest extends BaseRequest
             'tag_id' => 'nullable|integer|exists:tags,id',
             'category_id' => 'nullable|integer|exists:categories,id', 
             'item_id' => 'nullable|integer|exists:items,id',
+            'item_surrogate_id' => 'nullable|integer|exists:items,id',
 
             //
             'paper_delivery' => 'nullable|integer|exists:papers,id',
