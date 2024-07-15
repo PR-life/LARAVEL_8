@@ -23,7 +23,8 @@
 
 tinymce.init({
 	selector: '#tinymce_1, #tinymce_2, #tinymce_3',
-	content_css: "{{Request::root() . "/css/env/tinymce.css?4"}}",
+	content_css: "{{Request::root() . mix('/css/env/tinymce.css')}}",
+	// content_css: "{{Request::root() . "/css/env/tinymce.css?5"}}",
 	// content_css: "/css/env/tinymce.css",
 	language: 'ru',
 	height: parseInt(document.documentElement.clientHeight) * .8,
@@ -31,6 +32,7 @@ tinymce.init({
 	relative_urls : false,
 	// remove_script_host : true,
 	document_base_url : '/',
+	// extended_valid_elements: "svg[*],defs[*],pattern[*],desc[*],metadata[*],g[*],mask[*],path[*],line[*],marker[*],rect[*],circle[*],ellipse[*],polygon[*],polyline[*],linearGradient[*],radialGradient[*],stop[*],image[*],view[*],text[*],textPath[*],title[*],tspan[*],glyph[*],symbol[*],switch[*],use[*]",
 	
 
 	menubar: 'format',

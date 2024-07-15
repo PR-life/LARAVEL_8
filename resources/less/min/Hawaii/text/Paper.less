@@ -1,12 +1,12 @@
 @charset "UTF-8";
  
 .author.flex {
-	>._name,
-	> .Grey {
+	>._name {
 		white-space: nowrap;
 	}
 	> .Grey {
 		.ellipsis;
+		.line-clamp(1);
 	}
 }
 

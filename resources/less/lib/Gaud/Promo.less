@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+@import "./Promo/_ol.less";
+
+
+.Promo {
+    --c-h:#000;
+    --Promo-c: #e32636;
+    --Promo-bg: rgba(255, 255, 0,.8);
+    --Promo-border: #e32636;
+    --Promo-line: #ebebeb;
+
+    .Btn {
+        --c-btn: #1c2126;
+        --c-btn-hover: 1c2126#fff;
+        // --c-btn-border: transparent;
+        --bg-btn: #eeeff1;
+        --bg-btn-hover: #dadcde;
+    }
+
+    .promo-bg {
+        background-color: var(--Promo-bg);
+    }
+
+    .promo-price {
+        border:1px solid var(--Promo-border);
+        border-radius: var(--round);
+    }
+
+    .promo-h {
+        color: var( --Promo-c);
+    }
+
+    .promo-line {
+        height: 1px;
+        background-color: var(--Promo-line);
+    }
+}

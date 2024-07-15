@@ -2,7 +2,7 @@
 
 .Citation {
 	._wrap::after,
-	.content {
+	._wrap {
 		background-color: var(--bg-Citation);
 	}
 }
@@ -21,9 +21,7 @@
 		// }
 
 		._wrap,
-		.content,
-		._wrap::after,
-		.content::after {
+		._wrap::after{
 			background-color: var(--bg-Citation-mbl);
 		}
 	}
@@ -32,14 +30,11 @@
 
 @media screen and (max-width: @w-menu-2) {
 	.Citation.-mbl {
-		._wrap,
-		.content {
+		._wrap {
 			background-color: var(--bg-Citation-mbl);
 		}
-		._wrap,
-		.content,
-		._wrap::after,
-		.content::after {
+		._wrap
+		._wrap::after {
 			background-color: var(--bg-Citation-mbl);
 		}
 	}

@@ -182,6 +182,11 @@ input, textarea {
     font-size: var(--font);
 }
 
+dl.-M {
+	--font: var(--rem-p);
+}
+
+
 summary.-XS,
 .content-s {
     font-size: calc(var(--font) - 1px);
@@ -301,6 +306,7 @@ dl dt, dl dd {
 }
 
 dt.-lineHeight,
+dd.-lineHeight,
 dl.-lineHeight dt, dl.-lineHeight dd {
     line-height: calc(var(--font)*1.15);
 }

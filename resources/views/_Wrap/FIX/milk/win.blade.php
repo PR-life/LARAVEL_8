@@ -1,4 +1,4 @@
-@component('_Wrap.FIX.wrap.FIX_on',['id' => $id, 'css_26071457' => $css_26071457 ?? null])
+@component('_Wrap.FIX.wrap.FIX_on',['id' => $id, 'css_26071457' => $css_to_FIX ?? null])
 <div class="fix / flex / {{$fix_css ?? ''}}" data-close>
     <div class="_fix {{$_fix_css ?? ''}} / relative">
         <div class="Wings -mbl" style="z-index: 5">

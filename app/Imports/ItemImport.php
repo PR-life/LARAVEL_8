@@ -76,7 +76,7 @@ class ItemImport implements ToCollection, WithHeadingRow
 
                 // dd($params);
 
-                $ddd = Item::firstOrCreate([
+                $ddd = Item::updateOrCreate([
                     'id' => $params['id'],
                     ],$params);
 

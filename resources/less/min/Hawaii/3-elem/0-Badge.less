@@ -1,19 +1,25 @@
 @charset "UTF-8";
 
 .Badge {
-	--x-badge-padding: 8px;
+	--Badge-wide: 0px;
+	--Badge-padding: 8px;
 }
+
+.Badge.-M {
+	--Badge-wide: 10px;
+}
+
 .Badge.-paddingS {
-	--x-badge-padding: 2px;
+	--Badge-padding: 2px;
 	padding-right: 5px;
 }
 .Badge.-paddingXS {
-	--x-badge-padding: 1px;
+	--Badge-padding: 1px;
 }
 
 .Badge.-solo,
 .Badge.-net {
-	--x-badge-padding: 0;
+	--Badge-padding: 0;
 }
 
 
@@ -35,11 +41,11 @@
 	}
 }
 
-.Badge.-bold {
-	> *:first-child {
-		font-weight: bold;
-	}
-}
+// .Badge.-bold {
+// 	> *:first-child {
+// 		font-weight: bold;
+// 	}
+// }
 
 
 .Badge.-reverseBg {
@@ -62,7 +68,7 @@
     justify-content: flex-start;
     // width: auto;
     //
-    padding: var(--x-badge-padding);
+    padding: var(--Badge-padding);
     //
     // line-height: 120%;
 }
@@ -74,7 +80,7 @@
 	// }
 	
     > *:first-child {
-        padding: 0 10px;
+        padding: var(--Badge-wide) 10px;
         margin-right: .5rem;
     }
 

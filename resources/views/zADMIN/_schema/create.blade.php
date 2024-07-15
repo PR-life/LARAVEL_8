@@ -1,4 +1,4 @@
-@extends('zADMIN._schema.INDEX')
+@extends('zADMIN._schema.INDEX_')
 @push('css-body', '-create ')
 
 {{-- @include('_.js.component.tinymce.index') --}}

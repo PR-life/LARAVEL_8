@@ -1,7 +1,17 @@
 @charset "UTF-8";
 
+@import "../blank/__.less";
+@import "../blank/VARcolors.less";
+@import "../blank/VARbg.less";
+@import "../lib/@/@c.less";
+@import "../lib/@/_ol.less";
+//
 @import "../lib/theFont/font-OpenSans.less";
 
+@import "../min/Hawaii/text/_ol.less";
+@import "../min/Aloha/text/_ol.less";
+@import "../lib/x/x-bg/text/Info.less";
+ 
 
 html {
 	--family: var(--family-OpenSans);
@@ -13,7 +23,10 @@ html {
 //
 body { 
     --rem-p: 14.6px;
+    --font: 14.6px;
     --rem-h1: 20px;
+
+ 
 
     > div {color: orange;}
 
@@ -70,6 +83,13 @@ body {
 
     .-space {
         padding: 1rem;
+    }
+
+
+    //
+
+    .Info {
+
     }
 
 

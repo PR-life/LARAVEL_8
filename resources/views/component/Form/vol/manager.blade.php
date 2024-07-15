@@ -10,7 +10,7 @@
 
 	<div class="center-text / fade start-fade scene-3">
 		<div class="inline / start-joltLeft scene-2">
-			<ul class="menu -tag -dark / Kite kite-space kite-round / pointer" data-click data-switch data-package='tabForm' data-stop>
+			<ul class="menu -tag / Kite kite-space kite-round vol-dark / pointer" data-click data-switch data-package='tabForm' data-stop>
 				<li class="active" data-item='1' data-packagetype='css' data-packagefoo='radio' package='Tabs -x1' li-type='email'><span class="a nowrap noEvents">email</span></li>
 				<li data-item='2' data-packagetype='css' data-packagefoo='radio' package='Tabs -x2' li-type='phone'><span class="a nowrap noEvents">телефон</span></li>
 				<li data-item='3' data-packagetype='css' data-packagefoo='radio' package='Tabs -x3' li-type='whatsapp'><span class="a nowrap noEvents">whatsapp</span></li>

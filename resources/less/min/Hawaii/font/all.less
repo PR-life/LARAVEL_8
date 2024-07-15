@@ -5,7 +5,7 @@
 // }
 
 .Badge,
-.Badge > :first-child,
+.Badge > ._font:first-child,
 .Nameplate {
     font-size: var(--font-min);
 }
@@ -26,8 +26,8 @@
 
 
 .Badge> :first-child {
-	min-height: ~"calc(var(--font-min) * 1.4)";
-	line-height: 0;
+	// min-height: ~"calc(var(--font-min) * 1.4)";
+	line-height: var(--font-min);
 }
 
 .Badge.-lineHeight> :first-child {

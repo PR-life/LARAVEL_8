@@ -18,7 +18,7 @@
 
 @section('content')
 <div class="I aura">
-	@component('zADMIN._wrap.form.edit', ['route' => route(strtolower('admin.' . ($envData['nameRoute'] ?? 'paper') . '.update'),$paper->id), 'css' => '-paper'])
+	@component('zADMIN._wrap.form.edit', ['route' => route(strtolower('admin.' . ($envData['nameRoute'] ?? 'paper') . '.update'),$paper->slug), 'css' => '-paper'])
 		@include('zADMIN._brick.bar.v.edit',['routeName' => strtolower('admin.' . ($envData['nameRoute'] ?? 'paper') . '.index'),'link_create' => route(strtolower('admin.' . ($envData['nameRoute'] ?? 'paper') . '.create'))])
 
 		<div class="_shell / net">

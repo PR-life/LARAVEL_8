@@ -1,4 +1,4 @@
-<div class="slider-nav">
+<div class="slider-nav / Abs _indexMax">
 	<div class="flex">
 		<div class="_btn left / orb pointer highlight yesEvents">
 			<div class="Ico -M rotate-l">@svg('arrow')</div>

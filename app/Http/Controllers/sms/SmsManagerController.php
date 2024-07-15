@@ -32,7 +32,7 @@ class SmsManagerController extends BaseController
 
         $reachGoalFromController = $sms->reachgoal_id ?? '5555';
 
-        dd($sms->reachgoal_id);
+        // dd($sms->reachgoal_id);
 
         return view('zPAGE.Thanks', compact('sms','reachGoalFromController'));
         // return view('_.Thanks', compact('sms'));

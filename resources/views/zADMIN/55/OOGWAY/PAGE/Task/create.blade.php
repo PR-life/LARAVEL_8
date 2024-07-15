@@ -1,4 +1,4 @@
-@extends('zADMIN._schema.index')
+@extends('zADMIN._schema.INDEX_')
 
 @section('title')new Task @endsection
 

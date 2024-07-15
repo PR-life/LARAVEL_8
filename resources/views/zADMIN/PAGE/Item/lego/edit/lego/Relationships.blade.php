@@ -47,6 +47,39 @@
     @endcomponent
 
     @component('zADMIN._wrap.Relationships.line')
+        <div class="Min -w5 / wrap-relationship -solo / round">
+            @include('zADMIN._wrap.select.name',['Var' => 'Родитель'])
+            @component('zADMIN._wrap.select.item.main', ['id' => 'item'])
+                @include('_._brick.select.item.edit.main',['Items' => $items, 'Var' => $item->item_id])
+            @endcomponent
+        </div>
+        
+        <div class="Min -w5 / wrap-relationship -solo / round">
+            @include('zADMIN._wrap.select.name',['Var' => 'Surrogate'])
+            @component('zADMIN._wrap.select.item.surrogate', ['id' => 'surrogate'])
+                @include('_._brick.select.item.edit.surrogate',['Items' => $items, 'Var' => $item->item_surrogate_id])
+            @endcomponent
+        </div>
+
+
+        <div class="Min -w5 / wrap-relationship -solo / round">
+            @include('zADMIN._wrap.select.name',['Var' => 'Delivery service'])
+            @component('zADMIN._wrap.select.service.delivery', ['id' => 'delivery_service'])
+                @include('_._brick.select.service.edit.delivery',['Services' => $services, 'Var' => $item->service_delivery_id])
+            @endcomponent
+        </div>
+
+        <div class="Min -w5 / wrap-relationship -solo / round">
+            @include('zADMIN._wrap.select.name',['Var' => 'Category services'])
+            @component('zADMIN._wrap.select.category.services', ['id' => 'category_service'])
+                @include('_._brick.select.category.edit.services',['Categories' => $categories, 'Var' => $item->category_services_id])
+            @endcomponent
+        </div>
+
+    @endcomponent
+
+
+    @component('zADMIN._wrap.Relationships.line')
         <div class="W-100">
             @include('zADMIN._wrap.select.name',['Var' => 'Items'])
             <div class="wrap-relationship -multiple">
@@ -68,27 +101,5 @@
         </div>
     @endcomponent
 
-    @component('zADMIN._wrap.Relationships.line')
-        <div class="Min -w5 / wrap-relationship -solo / round">
-            @include('zADMIN._wrap.select.name',['Var' => 'Родитель'])
-            @component('zADMIN._wrap.select.item.main', ['id' => 'item'])
-                @include('_._brick.select.item.edit.main',['Items' => $items, 'Var' => $item->item_id])
-            @endcomponent
-        </div>
-        <div class="Min -w5 / wrap-relationship -solo / round">
-            @include('zADMIN._wrap.select.name',['Var' => 'Delivery service'])
-            @component('zADMIN._wrap.select.service.delivery', ['id' => 'delivery_service'])
-                @include('_._brick.select.service.edit.delivery',['Services' => $services, 'Var' => $item->service_delivery_id])
-            @endcomponent
-        </div>
-
-        <div class="Min -w5 / wrap-relationship -solo / round">
-            @include('zADMIN._wrap.select.name',['Var' => 'Category services'])
-            @component('zADMIN._wrap.select.category.services', ['id' => 'category_service'])
-                @include('_._brick.select.category.edit.services',['Categories' => $categories, 'Var' => $item->category_services_id])
-            @endcomponent
-        </div>
-
-    @endcomponent
 
 @endcomponent

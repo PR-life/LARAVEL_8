@@ -57,6 +57,9 @@ if(isset($Var->group)) {
                     </a>
                 </div>
                 @endisset
+                @isset($Var->group)
+                <div class="content">{{$Var->group->name}}</div>
+                @endisset
             </div>
 
 

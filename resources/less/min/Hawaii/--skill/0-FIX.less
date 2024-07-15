@@ -1,14 +1,20 @@
 @charset "UTF-8";
 
+
+
+// выдвижная панель
 #Milk > .Fix.On,
 #Milk > .Fix.on {
 	top: 0;
 	left: calc( var(--x-milk-left) + var(--Aside-space) * 2.5 );
+
 	// left: var(--x-milk-left);
 }
 
 #Milk {
 	--x-milk-left: var(--Aside);
+
+	right: 200%;
 }
 
 // body {opacity: .5;}

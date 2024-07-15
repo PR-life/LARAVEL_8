@@ -24,3 +24,12 @@
 
     Yota
 @endcomponent
+
+@component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+    @slot('name', 'shema_teaser')
+    @slot('id', 'shema_teaser_Service')
+    @slot('value', 'service')
+    @slot('param_from_bd', $Var->shema_teaser)
+
+    Service
+@endcomponent

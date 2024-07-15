@@ -19,11 +19,11 @@ $arrCSS = [
 <base href="http://detectives.su/" />
 @endpush --}}
 
-@push('css-body', 'role-'.auth()->user()->role.' ')
+@push('css-body', 'role-'.auth()->user()->role.' user-id-'.auth()->user()->id.' ')
 
 @include('zADMIN._schema._brick.src')
 @include('zADMIN._schema._brick.style')
-@include('zADMIN.zTHIS._schema.index')
+@include('zADMIN.zTHIS._schema.INDEX_')
 
 @push('css-body', 'x-aside Design x-Admin ')
 @push('css-fon', 'skimp-size_Aside ')

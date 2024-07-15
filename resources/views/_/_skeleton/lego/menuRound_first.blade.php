@@ -7,13 +7,13 @@ data-click data-css data-toggle='On Off' data-node='wrap_MenuRound'
 @endslot
 
 @slot('burger11051411')
-    <div class="Burger / flex cI cC / mr-3">
-        <div class="_burger">
-            <div class="_1 noEvents"></div>
-            <div class="_2 noEvents"></div>
-            <div class="_3 noEvents"></div>
-        </div>
-    </div>
+    <span class="Burger / flex cI cC / mr-3">
+        <span class="_burger">
+            <span class="_1 noEvents"></span>
+            <span class="_2 noEvents"></span>
+            <span class="_3 noEvents"></span>
+        </span>
+    </span>
 @endslot
 
 @slot('ico11051411')

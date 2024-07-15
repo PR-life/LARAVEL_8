@@ -1,1 +1,1 @@
-<img class="{{$css ?? ''}}" src="data:image/gif;base64,R0lGODlhCgAKAIAAAP///wAAACH5BAEAAAEALAAAAAAKAAoAAAIIjI+py+0PYysAOw==" {{isset($width) ? "width=$width" : ''}} {{isset($height) ? "height=$height" : ''}} alt="превью">
+<img class="{{$css09071611 ?? ''}}" src="data:image/gif;base64,R0lGODlhCgAKAIAAAP///wAAACH5BAEAAAEALAAAAAAKAAoAAAIIjI+py+0PYysAOw==" {{isset($width) ? "width=$width" : ''}} {{isset($height) ? "height=$height" : ''}} alt="превью">

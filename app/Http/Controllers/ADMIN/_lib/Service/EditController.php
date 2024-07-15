@@ -25,7 +25,6 @@ class EditController extends BaseController
 
 		
 
-
 	    return view('zADMIN.PAGE.Paper.edit', compact('paper','groups','tags','faqs','categories','items','roles','envData'));
     }
 }

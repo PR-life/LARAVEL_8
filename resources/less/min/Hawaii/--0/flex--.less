@@ -130,7 +130,6 @@
 }
 
 @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
-
 	.Bone_PC > * {order:5}
 
 	//.Flex,
@@ -200,6 +199,12 @@
 
 }
 
+@media (min-width: @w-beyond-plus) and (max-width:@w-max) {
+	.dC_beforeBeyond  {
+		flex-direction: column;
+	}
+}
+
 @media (min-width:@w-menu-2-plus) and (max-width:@w-beyond) {
 
 	.flexBeyond {
@@ -237,6 +242,7 @@
 	.dC_beyond  {
 		flex-direction: column;
 	}
+
 }
 
  
@@ -253,6 +259,9 @@
 		flex-direction: column;
 	}
 
+	.dRR_mbl {
+		flex-direction: row-reverse;
+	}
 	
 	.dCR_mbl {
 		flex-direction: column-reverse;
@@ -271,6 +280,9 @@
 		align-items: flex-end;
 	}
 
+	.cI_mbl {
+		align-items: center;
+	}
 
 	.sI_mbl {
 		align-items: flex-start;

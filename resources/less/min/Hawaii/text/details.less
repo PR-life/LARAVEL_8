@@ -5,10 +5,11 @@
 .Details {
 	--x-details-padding-top: 1rem;
 	--x-details-margin-left: 2rem;
+	--x-details-padding-right: 5px;
 
-	._children {
-		--x-details-margin-left:1rem;
-	}
+	// ._children {
+	// 	--x-details-margin-left:1rem;
+	// }
 }
 
 .Details.-S {
@@ -64,7 +65,7 @@ details.-edgeSummary > summary {
         > ._edge {
 			> * {
 				margin-left: var(--x-details-margin-left);
-				padding-right: 5px;
+				padding-right: var(--x-details-padding-right);
 			}
 
 			> .vol-center {
@@ -72,10 +73,10 @@ details.-edgeSummary > summary {
 				padding-right: 0 !important;
 			}
         }
-		._children {
-			margin-left: var(--x-details-margin-left);
-			margin-right: var(--x-details-margin-left);
-		}
+		// ._children {
+		// 	margin-left: var(--x-details-margin-left);
+		// 	margin-right: var(--x-details-margin-left);
+		// }
     }
 }
 
@@ -101,7 +102,7 @@ details.-edgeSummary > summary {
 		> details {
 			> ._edge {
 				margin-left: var(--x-details-margin-left);
-				padding-right: 5px;
+				padding-right: var(--x-details-padding-right);
 			}
 		}
 	}
@@ -109,6 +110,18 @@ details.-edgeSummary > summary {
 }
 
 @media screen and (max-width:@w-menu-2) {
+
+
+	.edge-s,
+	.edge {
+		> .Details > details {
+
+			> ._edge {
+				--x-details-margin-left: 0;
+				--x-details-padding-right: 0;
+			}
+		}
+	}
 
 
 	.Details.-edge > details,
@@ -130,7 +143,7 @@ details.-edgeSummary > summary {
 			> ._edge {
 				> * {
 					margin-left: var(--x-details-margin-left);
-					padding-right: 5px;
+					padding-right: var(--x-details-padding-right);
 				}
 				> .W-100 {
 					width: auto;
@@ -147,7 +160,7 @@ details.-edgeSummary > summary {
 		> details {
 			> ._edge {
 				margin-left: calc(var(--x-details-margin-left)*.5);
-				padding-right: 5px;
+				padding-right: var(--x-details-padding-right);
 			}
 		}
 	}	
@@ -206,11 +219,14 @@ details.-L,
 @media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
 	details {
 		.Info {
-			margin-right: var(--x-details-margin-left);
+			width: calc(100% - var(--x-details-margin-left) + var(--x-details-padding-right));
 		}
-		.Info.net {
-			margin-right: 0;
-		}
+		// .Info {
+		// 	margin-right: var(--x-details-margin-left);
+		// }
+		// .Info.net {
+		// 	margin-right: 0;
+		// }
 	}
 }
 

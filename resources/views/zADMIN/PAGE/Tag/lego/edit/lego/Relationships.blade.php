@@ -33,6 +33,8 @@
                     
                     Frontend
                 @endcomponent
+
+                @includeIf('zADMIN.PAGE.Tag._this.edit.group_id')
             </div>
 
             {{-- @include('zADMIN._wrap.select.name',['Var' => 'Группа'])
