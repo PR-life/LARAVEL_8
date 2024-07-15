@@ -1,23 +1,30 @@
 @charset "UTF-8";
 
+.Citation.vol-offer {
+    --Citation-border-size: 8px;
+
+    ._wrap::after {
+		left: calc(var(--Citation-border-size) - var(--Citation-border-size)*1.5 + 2px);
+    }
+}
+
 .Citation {
-    ._wrap,
-    > .content {
+    --Citation-border-size: 2px;
+    ._wrap {
         position: relative;
     }
 
-    ._wrap::after,
-    > .content::after {
+    ._wrap::after {
         content: '';
         position: absolute;
-		top: 10px;
-		left: -1px;
+		top: calc(var(--Citation-border-size) + 8px);
+		left:-1px;
 
 		//
-        width: 6px;
-        height: 6px;
-		background-color: var(--c-Citation-border-tail);
+        width: calc(var(--Citation-border-size) + 4px);
+        height: calc(var(--Citation-border-size) + 4px);
 		border: 2px solid var(--c-Citation-border);
+		background-color: var(--c-Citation-border-tail);
 		border-top: none;
 		border-right: none;
 
@@ -33,15 +40,13 @@
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
 	.Citation.-mblPC {
-        ._wrap::after,
-		> .content::after {display: none;}
+        ._wrap::after {display: none;}
 	}
 }
 
 
 @media screen and (max-width: @w-menu-2) {
 	.Citation.-mbl {
-        ._wrap::after,
-		> .content::after {display: none;}
+        ._wrap::after {display: none;}
 	} 
 }

@@ -14,10 +14,11 @@
 ul.-M,
 ol.-M {
     --ulol-font: calc(var(--rem-li) + 2px);
+	
 }
 
 ul, ol {
-    --ulol-font: var(--rem-p);
+    --ulol-font: var(--rem-li);
     --ulol-line:calc(var(--ulol-font)*1.6);
     //
     --ulol-padding-left:2rem;
@@ -61,7 +62,7 @@ ul, ol{
 
 li.-lineHeight,
 ul.-lineHeight > li, ol.-lineHeight > li{
-	line-height:calc(var(--ulol-font) * 1.2);
+	--ulol-line:calc(var(--ulol-font) * 1.2);
 }
 
 

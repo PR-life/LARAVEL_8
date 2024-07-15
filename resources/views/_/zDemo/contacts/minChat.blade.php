@@ -1,5 +1,5 @@
 <div class="content">
-	<a class="flex cI" href="{{__('_const/imago.whatsappLink')}}" title="{{__('_const/imago.LLC')}} - Whatsapp: {{__('_const/imago.whatsappPhone')}}">
+	<a class="flex cI" href="{{__('_const/imago.whatsappLink')}}" title="{{__('_const/imago.LLC')}} - Whatsapp: {{__('_const/imago.whatsappPhone')}}" >
 		<span class="Ico -S mr-2">@svg('whatsapp')</span>
 		<span class="b600">{{__('_const/imago.whatsappPhone')}}</span>
 	</a>

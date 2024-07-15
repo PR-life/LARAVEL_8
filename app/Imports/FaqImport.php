@@ -27,7 +27,7 @@ class FaqImport implements ToCollection, WithHeadingRow
                 $params[$_name] = $item[$_name] ?? null;
             };
 
-            Faq::firstOrCreate([
+            Faq::updateOrCreate([
                 'id' => $params['id'],
                 ],$params);
         }

@@ -12,3 +12,11 @@
 @include('_.head.style')
 @include('_.head.css')
 @include('_.head.js')
+
+@push('meta')
+	@isset($item)
+		@if($item->status == '404') 
+		<meta name="robots" content="noindex, follow">
+		@endif
+	@endisset
+@endpush

@@ -426,6 +426,9 @@ hr,.ghost,.visible,.Op,.opVersa{
 @media (min-width:799px) and (max-width:1080px){
 	.flex-beyond,
 	.Beyond {display:flex !important}
+
+	.Beyond_inlneBlock {display:inline-block !important}
+
 	.hidden_beyond{
 		overflow:hidden;
 	}

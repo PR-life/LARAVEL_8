@@ -52,7 +52,7 @@
 	@stack('milk')
 	<svg version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
 		@include('_.src.svg.zDt')
-		@include('zAsgrupp.src.svg.index')
+		@include('zAsgrupp._src.svg.index')
 		@stack('svg')
 	</svg>
 </div>

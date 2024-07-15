@@ -68,8 +68,6 @@ export function srcControl(param) {
 }
 
 
-
-
 function iframeYoutubeVideo(param, status) {
 	param.contentWindow.postMessage('{"event":"command","func":"' + status + '","args":""}', '*');
 }

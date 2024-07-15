@@ -29,6 +29,8 @@ class CreateTagsTable extends Migration
             $table->string('name_7')->nullable();
             $table->string('name_8')->nullable();
 
+            $table->string('prev_image')->nullable();
+
 			$table->unsignedInteger('order')->default('50');
             $table->unsignedInteger('status')->default('1');
             $table->unsignedInteger('published')->default('1');

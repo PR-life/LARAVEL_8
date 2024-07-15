@@ -1,3 +1,3 @@
 @isset($_faq->h1)
-<div class="h x-name">{!!$_faq->h1!!}</div>
+<div class="h b500 x-name">{!!$_faq->h1!!}</div>
 @endisset

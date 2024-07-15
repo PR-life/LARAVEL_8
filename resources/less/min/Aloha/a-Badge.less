@@ -1,14 +1,21 @@
 @charset "UTF-8";
 
+.Badge.-radiusS {
+    --Badge-radius: 5px;
+}
+
+
 .Badge.transparent {
     background-color: transparent;
 }
 
 .Badge {
+    --Badge-radius: 50px;
+
     background-color: #eee;
-    border-radius: 50px;
+    border-radius: var(--Badge-radius);
     > :first-child {
-        border-radius: 50px;
+        border-radius: var(--Badge-radius);
         background-color: #ccc;
     }
 }

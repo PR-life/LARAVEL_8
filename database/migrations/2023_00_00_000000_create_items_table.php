@@ -43,6 +43,8 @@ class CreateItemsTable extends Migration
             $table->string('prev_image')->nullable();
             $table->string('prev_url')->nullable();
 
+            $table->string('foto_main')->nullable();
+
 			$table->text('menu_kite')->nullable();
 
 			// vars
