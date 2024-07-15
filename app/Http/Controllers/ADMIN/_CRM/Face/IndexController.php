@@ -23,7 +23,7 @@ class IndexController extends BaseController
         // dd($filter);
 
 
-        $faces = Face::filter($filter)->orderBy('order', 'asc')->orderBy('created_at', 'DESC')->paginate(25);
+        $faces = Face::filter($filter)->orderBy('order', 'asc')->orderBy('surname', 'ASC')->paginate(25);
 
 
         return view('zADMIN.PAGE.Face.index', compact('faces'));

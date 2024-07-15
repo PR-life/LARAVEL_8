@@ -6,7 +6,7 @@ use Exception;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Storage;
 //
-use App\Models\_lib\Clothes;
+use App\Models\_lib\Clothe;
 
 
 
@@ -32,7 +32,7 @@ class Service {
 		$face->update($validator1);
 
 
-		$size = Clothes::firstOrCreate([
+		$size = Clothe::firstOrCreate([
 			'face_id' => $face->id,
 		]);
 		$size->update($validator2);
