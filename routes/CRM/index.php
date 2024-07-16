@@ -9,6 +9,7 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
 
         Route::group(['namespace' => 'Face', 'prefix' => 'face'], function(){
             Route::get('/', 'IndexController')->name('crm.face.index');
+            Route::get('/trash', 'IndexTrashedController')->name('crm.face.trash');
             Route::get('/create', 'CreateController')->name('crm.face.create');
             Route::patch('/{face}', 'UpdateController')->name('crm.face.update');
             Route::post('/', 'StoreController')->name('crm.face.store');

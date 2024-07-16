@@ -13,6 +13,16 @@ class IndexController extends BaseController
 {
     public function __invoke(FilterRequest $request){
 
+        $sort = $request->get('sort');
+
+        if ($sort === 'date') {
+            $x1607 = 'created_at';
+        } elseif ($sort === 'surname') {
+            $x1607 = 'surname';
+        } else {
+            $x1607 = 'surname';
+        }
+
         $groups = Group::all();
         $categories = Category::all();
 		$tags = Tag::all();
@@ -23,7 +33,7 @@ class IndexController extends BaseController
         // dd($filter);
 
 
-        $faces = Face::filter($filter)->orderBy('order', 'asc')->orderBy('surname', 'ASC')->paginate(25);
+        $faces = Face::filter($filter)->orderBy('order', 'asc')->orderBy($x1607, 'ASC')->paginate(25);
 
 
         return view('zADMIN.PAGE.Face.index', compact('faces'));

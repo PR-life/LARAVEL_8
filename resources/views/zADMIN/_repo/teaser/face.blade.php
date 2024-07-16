@@ -1,17 +1,10 @@
 @component('zADMIN._wrap.Teaser.index', ['Var' => $Var, 'css14051235' => 'space-left'])
-
-    <div class="flex bC W-100">
-
+    <div class="flex bC / W-100">
         <div class="flex cI">
-            <div class="_1 / Max Min -w5">
+            <div class="_1">
                 @include('zADMIN._repo.teaser.lego.name.customer')
             </div>
             <div class="Min -w1"></div>
-            <div class="_2 / Max Min -w4">
-                @include('zADMIN._repo.teaser.lego.public_contact')
-            </div>
-            <div class="Min -w1"></div>
-
             <div class="_4 none_80 / flex cI cross-s">
                 {{-- <h1>{{$Var->crm->name ?? ''}}</h1> --}}
                 {{-- @isset($Var->category->name)
@@ -29,10 +22,12 @@
             </div>
         </div>
 
-        <div class="flex cI / cross-s">
-            <div class="flex cI">
+        {{-- <div class="flex cI"> --}}
+            <div class="flex cI / cross-s">
 
-                <div class="center-text / Min Max -w2 / none_80">
+                @include('zADMIN._repo.teaser.lego.public_contact')
+
+                <div class="mowrap">
                     <b class="content-s / Grey -c30" title="{{$Var->created_at}}">
                         @include('_wrap._text.ellipsis.name',['Var' => $Var->dateAsCarbon->diffForHumans()])
                     </b>
@@ -44,7 +39,6 @@
                     </div>    
                 </div>
             </div>
-             
-        </div>
+        {{-- </div> --}}
     </div>
 @endcomponent

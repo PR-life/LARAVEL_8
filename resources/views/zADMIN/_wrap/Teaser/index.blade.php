@@ -1,5 +1,5 @@
 <div class="item flex cI relative / Soma / {{$Var->published == 1 ? 'published' : 'pause'}} {{$Var->mafia == 1 ? 'mafiaOn' : 'mafiaOff'}} {{$Var->featured == 1 ? 'featured' : ''}} {{'status-'.$Var->status}} mockup-{{$Var->mockup}} {{$css14051235 ?? ''}}">
-	<div class="table-wrap W-100">
+	<div class="table-wrap / W-100">
 		<div class="cell-1">
 			{!!$slot!!}
 		</div>
@@ -13,8 +13,6 @@
 			{!!$cell_4 ?? ''!!}
 		</div> --}}
 	</div>
-
-
 	<div class="Abs -right -t / _Axon">
 		@include('zADMIN._brick.manager.on_teaser')
 	</div>

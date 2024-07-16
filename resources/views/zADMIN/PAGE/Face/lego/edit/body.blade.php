@@ -1,6 +1,6 @@
 <div class="paragraph"></div>
 <div class="flex cross-s / space-left">
-	<a class="Ico -XL ico-20051538 / flex cI cC / ml-2" href="{{route('admin.plura.face.edit',$face->id)}}">
+	<a id="btn16070930" class="Ico -XL ico-20051538 / flex cI cC / ml-2" href="{{route('admin.plura.face.edit',$face->id)}}">
 		<span class="Ico block">
 			@svg('pen')
 		</span>
