@@ -87,6 +87,11 @@ class CreateFacesTable extends Migration
 				->cascadeOnDelete();
 
             //
+
+            $table->date('last_interaction_at')->nullable();
+
+
+            //
             $table->unsignedInteger('order')->default('50');
             $table->unsignedInteger('status')->default('1');
             $table->unsignedInteger('published')->default('1');

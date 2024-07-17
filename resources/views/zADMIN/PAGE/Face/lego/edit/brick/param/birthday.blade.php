@@ -3,7 +3,7 @@
     <div>
         <div class="content-xs / Grey -c30">Дата рождения</div>
         <div class="paragraph-s"></div>
-        <div class="content">{{$face->birthdayAsCarbon->day}} {{$face->birthdayAsCarbon->translatedFormat('M')}}, {{$face->birthdayAsCarbon->year}}</div>
+        <div class="content">{{$face->birthdayAsCarbon->day}} {{$face->birthdayAsCarbon->translatedFormat('M')}} {{$face->birthdayAsCarbon->year}}</div>
     </div>
     <svg class="Ico Grey" viewBox="0 0 24 24">
         <g fill="currentColor">

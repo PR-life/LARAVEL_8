@@ -86,6 +86,10 @@ class Face extends Model
 		return Carbon::parse($this->birthday);
 	}
 
+	public function getLastContactAttribute(){
+		return Carbon::parse($this->last_interaction_at);
+	}
+
 	public function getDateAsCarbonAttribute(){
 		return Carbon::parse($this->created_at);
 	}
