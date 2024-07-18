@@ -24,7 +24,7 @@
         @component('_wrap.Chunk.Aside.index')
             @slot('routeName', 'admin.crm.face.index')
             @slot('linkAdd', route('admin.crm.face.create'))
-            @slot('name', 'Все профили')
+            @slot('name', Lang::has('z_admin/menu/bar.crmMain') ? __('z_admin/menu/bar.crmMain') : 'Все профили')
             <span class="block / Ico -XS">
                 @svg('plus')
             </span>

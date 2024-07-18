@@ -9,7 +9,7 @@ use App\Models\Traits\Filterable;
 use Carbon\Carbon;
 //
 use App\Models\CRM\Crm;
-use App\Models\_lib\Clothes;
+use App\Models\_lib\Clothe;
 
 
 class Face extends Model
@@ -27,7 +27,7 @@ class Face extends Model
 
 
     public function clothes() {
-        return $this->hasOne(Clothes::class, 'face_id');
+        return $this->hasOne(Clothe::class, 'face_id');
     }
 
     public function crm() {
@@ -84,6 +84,10 @@ class Face extends Model
 
 	public function getBirthdayAsCarbonAttribute(){
 		return Carbon::parse($this->birthday);
+	}
+
+	public function getLastContactAttribute(){
+		return Carbon::parse($this->last_interaction_at);
 	}
 
 	public function getDateAsCarbonAttribute(){

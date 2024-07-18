@@ -4,7 +4,7 @@
         <div class="space-left / -Grey">
             <div class="flex cI / cross-xs">
                 @isset($add)
-                <a class="flex cI cC / Ico -L btn-plus / round-m" href="{{$add}}">
+                <a id="btn16070826" class="flex cI cC / Ico -L btn-plus / round-m" href="{{$add}}">
                     <span class="block Ico -XS">
                         @svg('plus')
                     </span>
@@ -18,7 +18,7 @@
                 @endisset
                 <div class="h2 -lineHeight / b100 noEvents">{{$name}}</div>
 
-                <div class="pointer" check-localstorage='trigger_model_{{$Model}}' data-check='active' param='on'>
+                <div id="btn16070829" class="pointer" check-localstorage='trigger_model_{{$Model}}' data-check='active' param='on'>
                     <div data-click data-css data-toggle='on' data-node='parent'>
                     <div data-click data-css data-toggle='triggerGap' data-node='trigger_table_index'>
                     <div data-click data-css data-toggle='blockManager' data-node='filter_tags_1_jsId'>

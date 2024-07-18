@@ -19,7 +19,7 @@ $arrCSS = [
 <base href="http://detectives.su/" />
 @endpush --}}
 
-@push('css-body', 'role-'.auth()->user()->role.' ')
+@push('css-body', 'role-'.auth()->user()->role.' user-id-'.auth()->user()->id.' ')
 
 @include('zADMIN._schema._brick.src')
 @include('zADMIN._schema._brick.style')

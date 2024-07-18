@@ -2,7 +2,7 @@
  
 <div class="Wings / Goo / _indexMax">
     <div class="_win x-preamble"> 
-        @include('zADMIN/_skeleton/Bar/lego/preamble')
+        @include('zADMIN._skeleton.Bar.lego.preamble')
     </div>
 </div>
  
@@ -27,7 +27,7 @@
             <div class="paragraph x-border-top">
                 <div class="Wings">
                     <div class="_win -t">
-                        @include('zADMIN/_skeleton/Bar/lego/logout')
+                        @include('zADMIN._skeleton.Bar.lego.logout')
                     </div>
                 </div>
             </div>

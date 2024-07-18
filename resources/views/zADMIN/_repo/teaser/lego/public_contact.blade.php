@@ -2,19 +2,19 @@
     @switch($Var->public_contact)
     @case('email')
         <span class="Ico -S">@svg('emailBg')</span>
-        <span>{{$Var->email ?? $Var->phone}}</span>
+        <span class="nowrap">{{$Var->email ?? $Var->phone}}</span>
         @break
     @case('whatsapp')
         <span class="Ico -S">@svg('whatsappBg')</span>
-        <span>{{$Var->whatsapp ?? $Var->phone}}</span>
+        <span class="nowrap">{{$Var->whatsapp ?? $Var->phone}}</span>
         @break
     @case('telegram')
         <span class="Ico -S">@svg('telegramBg')</span>
-        <span>{{$Var->telegram ?? $Var->phone}}</span>
+        <span class="nowrap">{{$Var->telegram ?? $Var->phone}}</span>
         @break
     @case('viber')
         <span class="Ico -S">@svg('viberBg')</span>
-        <span>{{$Var->viber ?? $Var->phone}}</span>
+        <span class="nowrap">{{$Var->viber ?? $Var->phone}}</span>
         @break
     @default
         <span class="Ico -S">
@@ -39,6 +39,6 @@
             </svg>
     
         </span>
-        <span>{{$Var->phone}}</span>
+        <span class="nowrap">{{$Var->phone}}</span>
     @endswitch
 </span>

@@ -11,7 +11,7 @@ use Carbon\Carbon;
 use App\Models\Face;
 
 
-class Clothes extends Model
+class Clothe extends Model
 {
     use HasFactory;
 	use SoftDeletes;

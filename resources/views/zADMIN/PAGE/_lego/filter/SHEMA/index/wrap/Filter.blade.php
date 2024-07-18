@@ -1,6 +1,6 @@
-<div class="flex cross-xs / space-leftS">
-    <div id="Filter" class="{{$cssModel}} / relative _indexMax / none" check-localstorage='Filter' data-check='active' param='Block'>
-        <form id="form_filter{{$cssModel}}" class="Form -S / flex cI / cross-xxs">
+<div id="Filter" class="flex {{$triggerShow ?? 'none'}} / space-leftS">
+    <div class="filter-{{$Model ?? ''}} / relative _indexMax" check-localstorage='Filter' data-check='active' param='Block'>
+        <form id="form_filter_{{$Model ?? ''}}" class="Form {{$cssForm ?? '-S'}} / flex cI / cross-xxs">
             {!!$slot!!}
         </form>
     </div>

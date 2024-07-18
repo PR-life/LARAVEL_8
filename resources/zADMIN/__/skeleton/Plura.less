@@ -9,17 +9,15 @@
 }
 
 //
-.Plura {
+#body {
     --Plura-edge-left: 2vw;
-
-
-    
+    --Plura-bg: #0162fd;
 }
 
 .Plura.-aside {
 
     width: 25vw;
-    background: #0162fd;
+    background: var(--Plura-bg);
     border-radius: 0 1rem 1rem 0;
 
     .-Black {
@@ -78,7 +76,7 @@ form.Plura {
         background: #000;
     }
     #oiBar {
-        background: linear-gradient(to right, transparent, #0162fd);
+        background: linear-gradient(to right, transparent, var(--Plura-bg));
     }
     
     #wrap::before {
@@ -87,7 +85,7 @@ form.Plura {
         left: 0;
         right: 0;
         height: 200px;
-        background: #0162fd;
+        background: var(--Plura-bg);
     }
 }
 

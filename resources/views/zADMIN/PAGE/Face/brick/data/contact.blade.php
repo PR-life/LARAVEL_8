@@ -10,7 +10,7 @@
 
 
 <div class="flex">
-    <div class="_shell {{$css_shell_18051438 ?? 'x-hr Form -S'}} / vol-Abs ">
+    <div class="_shell {{$css_shell_18051438 ?? 'x-hr Form -S'}} / vol-Abs label-insideInput">
         <input id="inputWhatsapp" type="text" name="whatsapp" value="{{$face->whatsapp ?? old('whatsapp')}}" {!!$readonly ?? 'placeholder="."' !!}>
         <label class="Abs" for="inputWhatsapp"><span class="_svg / round-s contentBox">@svg('plus')</span>whatsapp</label>
     </div>
@@ -18,14 +18,14 @@
 </div>
 
 <div class="flex">
-    <div class="_shell {{$css_shell_18051438 ?? 'x-hr Form -S'}} / vol-Abs">
+    <div class="_shell {{$css_shell_18051438 ?? 'x-hr Form -S'}} / vol-Abs label-insideInput">
         <input id="inputViber" type="text" name="viber" value="{{$face->viber ?? old('viber')}}" {!!$readonly ?? 'placeholder="."' !!}>
         <label class="Abs" for="inputViber"><span class="_svg / round-s contentBox">@svg('plus')</span>viber</label>
     </div>
     @include('zADMIN.PAGE.Face.brick.data.brick.btnCopy',['id' => 'copyButtonViber', 'name' => 'телефон'])
 </div>
 <div class="flex">
-    <div class="_shell {{$css_shell_18051438 ?? 'x-hr Form -S'}} / vol-Abs">
+    <div class="_shell {{$css_shell_18051438 ?? 'x-hr Form -S'}} / vol-Abs label-insideInput">
         <input id="inputTelegram" type="text" name="telegram" value="{{$face->telegram ?? old('telegram')}}" {!!$readonly ?? 'placeholder="."' !!}>
         <label class="Abs" for="inputTelegram"><span class="_svg / round-s contentBox">@svg('plus')</span>telegram</label>
     </div>

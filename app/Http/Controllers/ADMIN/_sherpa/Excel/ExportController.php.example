@@ -21,6 +21,10 @@ use App\Exports\child\ServiceExport;
 //
 use App\Exports\ItemExport;
 //
+use App\Exports\FaceExport;
+//
+use App\Exports\_lib\ClotheExport;
+//
 // use App\Exports\msg\CommentPostExport;
 // use App\Exports\msg\CommentPaperExport;
 //
@@ -110,6 +114,16 @@ class ExportController extends Controller
 		Excel::store(new ServiceExport, 'Excel/_old/child/'.$nameService);
 		Excel::store(new ServiceExport, 'Excel/child/Services.xlsx');
 		
+
+		//
+		$nameFace = 'Faces' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new FaceExport, 'Excel/_old/'.$nameFace);
+		Excel::store(new FaceExport, 'Excel/Faces.xlsx');
+
+		// dd('lib')
+		$nameClothe = 'Clothes' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new ClotheExport, 'Excel/_old/lib/'.$nameFace);
+		Excel::store(new ClotheExport, 'Excel/lib/Clothes.xlsx');
 
 
 		// dd(444)
