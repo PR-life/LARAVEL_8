@@ -12,10 +12,11 @@
 
 
 
-@include('zTHIS._lego.metrika.def')
+{{-- @include('zTHIS._lego.metrika.def') --}}
+@include('zTHIS.analytica.add_footer')
 
 <script>
-    ym({{$_ENV['ym'] ?? '54466420'}},'reachGoal','step_1');
+    ym({{config('AS.yandex_metrika_id') ?? '54466420'}},'reachGoal','ask_step_1');
 </script>
 
 

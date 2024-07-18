@@ -48,6 +48,10 @@ class SmsController extends BaseController
 
         // dd($request);
         $param = $request->validated();
+        // dd($param);
+
+        $reachGoalFromController = $param['reachgoal_id'];
+        // dd($reachGoalFromController);
 
         try {
 
@@ -55,7 +59,7 @@ class SmsController extends BaseController
             $this->telega($sms);
 
 
-            return view('zPAGE.Thanks', compact('sms'));
+            return view('zPAGE.Thanks', compact('sms','reachGoalFromController'));
 
         } catch (Exception $e) {
             dd($e);
