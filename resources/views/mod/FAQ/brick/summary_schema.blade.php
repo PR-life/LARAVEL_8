@@ -1,0 +1,1 @@
+<summary class="{{$cssSummary ?? ''}}"><span itemprop="name">{!!$_faq->name!!}</span><i class="vol-close"></i></summary>

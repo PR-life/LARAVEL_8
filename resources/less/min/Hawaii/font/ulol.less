@@ -55,11 +55,22 @@ ol.-XS {
 ul, ol{
 	li {
 		font-size:var(--ulol-font);
+	}
+
+	li,
+	li span.-lineHeight {
 		line-height:var(--ulol-line);
+	}
+}
+
+ol.slim{
+	li::before {
+		font-size:90%;
 	}
 
 }
 
+li span.-lineHeight,
 li.-lineHeight,
 ul.-lineHeight > li, ol.-lineHeight > li{
 	--ulol-line:calc(var(--ulol-font) * 1.2);

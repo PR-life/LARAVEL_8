@@ -13,7 +13,7 @@ if(isset($Var->group)) {
     $css_22051730 .= ' group-' . $Var->group->slug;
 }
 
-
+ 
 
 ?>
 

@@ -109,7 +109,13 @@ class Category extends Model
         return $this->hasMany(Item::class)->orderBy('order', 'asc');
     }
 
-
+    public function faq() {
+        return $this->hasMany(
+            Faq::class,
+            'category_id',
+            'id',
+        )->orderBy('order', 'asc');
+    }
 
     public function posts() {
         return $this->hasMany(
@@ -129,7 +135,7 @@ class Category extends Model
             Paper::class,
             'category_id',
             'id', //
-            )->where('published','1')->orderBy('created_at', 'desc');
+            )->where('published','1');
             // )->orderBy('created_at', 'desc');
     }
 
@@ -171,7 +177,7 @@ class Category extends Model
             'category_faqs',
             'category_id',
             'faq_id'
-        );
+        )->orderBy('order', 'asc');
     }
 
 

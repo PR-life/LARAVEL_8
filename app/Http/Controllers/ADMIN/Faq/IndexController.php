@@ -13,7 +13,8 @@ class IndexController extends BaseController
     public function __invoke(FilterRequest $request){
 
 
-        $faqs = $this->service->faqs($request->validated());
+        $faqs = $this->service->faqs($request->validated())->orderBy('created_at', 'DESC')->paginate(25);
+        // $faqs = $this->service->faqs($request->validated())->orderBy('order', 'asc')->orderBy('created_at', 'DESC')->paginate(25);
 
         $groups = Group::all();
         $tags = Tag::all();

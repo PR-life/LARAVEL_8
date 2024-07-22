@@ -1,5 +1,24 @@
 @charset "UTF-8";
 
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+    .Details.-bg ._children {
+		// --c-summary: #11142d;
+		// --c-summary-active: @c-50;
+		// --c-summary-border: rgba(17, 20, 45, .05);
+		// --bg-details: #fff; //#f2fafc;
+		--bg-summary: #fff;
+		// --bg-summary-open: #f5f5f5;
+		// --bg-summary-before: var(--c-brand); //#8ccc98;
+		// --bg-summary-before-open: #333;
+
+		details[open] {
+			background-color: #fff;
+		}
+	}
+}
+
+
 .Details {
 	--c-summary: #11142d;
 	--c-summary-active: @c-50;
@@ -10,3 +29,4 @@
 	--bg-summary-before: var(--c-brand); //#8ccc98;
 	--bg-summary-before-open: #333;
 }
+

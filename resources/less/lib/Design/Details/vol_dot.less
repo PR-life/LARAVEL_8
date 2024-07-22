@@ -14,12 +14,13 @@
 .Details.vol-dot {
 
     --x-bg-dot: @c24041855;
+    --x-bg-dot-open:#fff;
     --x-details-volDt-w: calc(var(--x-details-margin-left)*1.4);
     // --x-details-padding-left: 2rem;
     // --x-ul-before-top: .6rem;
 
     > details[open] {
-        --x-bg-dot: #fff;
+        --x-bg-dot: var(--x-bg-dot-open);
     }
 
     > details > summary::before {

@@ -10,6 +10,9 @@
     }}"> --}}
     
         <span class="flex / cross-xxs">
+            @if(isset($Var->group_id))
+			    <span>[ {{$Var->group->name}} ]</span>
+		    @endif
             <span>{!!$Var->name!!}</span>
             <span class="none En -on">{!!$Var->en_name!!}</span>
         </span>

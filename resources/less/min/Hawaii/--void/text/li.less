@@ -41,6 +41,11 @@ details {
 		ol.net {
 			padding-bottom: 0 !important;
 		}
+
+        li > span.block {
+            margin-top: var(--void-ulol);
+            margin-bottom: calc(var(--void-ulol) * 2);
+        }
 	}
 
     ol > {
@@ -72,24 +77,14 @@ details {
 
     ///
 
-    > ul > {
+    ul > {
 
         li {
             margin-bottom:calc(var(--void-ulol) * 2);
         }
 
-        > li {
-          > span {
-                margin-top: 0.5rem;
-          }
-        }
-
         li li {
-            margin-bottom: 0.3rem; //4
-
-            span {
-                margin-top: 0.3rem;
-            }
+            margin-bottom: 0.3rem;
         }
 
         ul {

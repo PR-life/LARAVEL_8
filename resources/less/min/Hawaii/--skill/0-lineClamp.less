@@ -1,7 +1,13 @@
 @charset "UTF-8";
 
+.Citation:not(.On) ._wrap.lineClamp {
+	padding-bottom: 5px;
+	padding-right: 2rem;
+}
+
+
+//
 .lineClamp {
-// input:checked ~ .lineClamp {
 	--lineClamp:1;
 	--lineClamp-padding:1rem;
 }
@@ -15,7 +21,6 @@
 }
 
 .lineClamp.var-4 {
-// input:checked ~ .A .content.-M {
 	--lineClamp:4;
 }
 
@@ -23,23 +28,13 @@
 	--lineClamp: 10;
 }
 
-// .Q[data-css-toggle],
-// .A[data-css-toggle],
-// input:checked ~ .A {
 
 .lineClamp {
 	cursor: pointer;
-	// overflow: hidden;
-	// text-overflow: ellipsis;
-	
-	// display: -webkit-box;
-	// -webkit-line-clamp: var(--lineClamp);
-	// -webkit-box-orient: vertical;
 
 	> * {
 		display: none;
 	}
-
 
 	br {display: none;}
 		
@@ -48,6 +43,10 @@
 		display: -webkit-box;
 		-webkit-line-clamp: var(--lineClamp);
 		-webkit-box-orient: vertical;
+
+		strong, b {
+			padding-right: 1ch;
+		}
 	}
 
 }
@@ -64,38 +63,16 @@
 	}
 }
 
-// .A:not(.On),
-// .A:not(.on) {
-// 	.lineClamp > :first-child {margin-bottom: 0;}
-// }
-
 //
 
-
-.lineClamp.-padding{
-	padding-right: 2rem;
+.lineClamp.-padding {
+	padding-right: var(--lineClamp-padding);
 }
 
-
-
-// .Fog.off,
-// .On,
-// .on {
-// 	.lineClamp.-padding {
-// 		padding-right: 0;
-// 	}
-// }
-
-
 //
-// .lineClamp.-x1 {padding-right: 2rem;}
 
 
 
-
-// .-lineClamp,
-// .On .lineClamp,
-// .owl-lineClamp.lineClamp,
 .On.lineClamp,
 .On .lineClamp,
 .on > .lineClamp {
@@ -103,13 +80,10 @@
 	cursor: default;
 	> * {
 		display: block !important;
+
+		strong, b {
+			padding-right:0;
+		}
 	}
 	br {display: block;}
 }
-
-
-// .On,
-.lineClamp.-padding {
-	padding-right: var(--lineClamp-padding);
-}
-

@@ -20,7 +20,7 @@
                 @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content'])
                     @slot('name', 'group_id')
                     @slot('id', 'group_id_backend')
-                    @slot('value', '1')
+                    @slot('value', '9')
                     @slot('param_from_bd', $tag->group_id)
                     
                     Backend
@@ -28,7 +28,7 @@
                 @component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content'])
                     @slot('name', 'group_id')
                     @slot('id', 'group_id_frontend')
-                    @slot('value', '2')
+                    @slot('value', '10')
                     @slot('param_from_bd', $tag->group_id)
                     
                     Frontend

@@ -116,9 +116,14 @@ ol {
 		--x-padding-left-precise: 3px;
 	}
 	
+	.ul.-out_mbl,
+	ul.-out_mbl {
+		padding-left: 0;
+	}
 
-	.ul.-out,
-	ul.-out {
+
+	.ul.-out_mbl,
+	ul.-out_mbl {
 		li::before {
 			left: ~"calc(var(--ulol-padding-left) - var(--ulol-padding-left)*2)";
 		}

@@ -20,7 +20,7 @@ class Service extends BaseService {
 		$filter = app()->make(FaqFilter::class, ['queryParams' => array_filter($x)]);
 
 
-		return Faq::filter($filter)->orderBy('order', 'asc')->orderBy('created_at', 'DESC')->paginate(25);
+		return Faq::filter($filter);
 
         // $paginator = true;
          

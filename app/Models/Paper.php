@@ -103,6 +103,9 @@ class Paper extends Model
         );
     }
 
+	public function getDateUpdateAsCarbonAttribute(){
+		return Carbon::parse($this->updated_at);
+	}
 
 	public function getDateAsCarbonAttribute(){
 		return Carbon::parse($this->created_at);

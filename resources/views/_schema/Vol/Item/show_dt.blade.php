@@ -1,4 +1,4 @@
-@extends('zDT._shema.SHOW')
+@extends('zDT._schema.SHOW')
 
 @if($item->canonical)
     @section('canonical')
