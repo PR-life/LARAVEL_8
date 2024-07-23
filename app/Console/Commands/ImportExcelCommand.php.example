@@ -5,8 +5,13 @@ namespace App\Console\Commands;
 use Illuminate\Console\Command;
 ////
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Facades\Storage;
 //
 use App\Imports\FirstCategoryImport;
+use App\Imports\FirstTagImport;
+use App\Imports\FirstItemImport;
+use App\Imports\FirstServiceImport;
+use App\Imports\FirstFaqImport;
 //
 use App\Imports\GroupImport;
 use App\Imports\TagImport;
@@ -69,8 +74,13 @@ class ImportExcelCommand extends Command
     public function handle()
     {
         ini_set('memory_limit', '-1');
- 
+        
+        // dd(Storage::get(storage_path('app/Excel/Categories.xlsx')));
         Excel::import(new FirstCategoryImport, storage_path('app/Excel/Categories.xlsx'));
+        Excel::import(new FirstTagImport, storage_path('app/Excel/Tags.xlsx'));
+        Excel::import(new FirstItemImport, storage_path('app/Excel/Items.xlsx'));
+        Excel::import(new FirstServiceImport, storage_path('app/Excel/child/Services.xlsx'));
+        Excel::import(new FirstFaqImport, storage_path('app/Excel/Faq.xlsx'));
         //
         Excel::import(new GroupImport, storage_path('app/Excel/Groups.xlsx'));
         Excel::import(new CategoryImport, storage_path('app/Excel/Categories.xlsx'));
@@ -109,7 +119,6 @@ class ImportExcelCommand extends Command
         Excel::import(new ServiceItemImport, storage_path('app/Excel/pivot/ServiceItems.xlsx'));
         Excel::import(new ServiceTagImport, storage_path('app/Excel/pivot/ServiceTags.xlsx'));
         Excel::import(new ServiceCategoryImport, storage_path('app/Excel/pivot/ServiceCategories.xlsx'));
- 
 
     }
 }

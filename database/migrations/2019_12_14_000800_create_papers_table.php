@@ -28,6 +28,7 @@ class CreatePapersTable extends Migration
             $table->string('h1')->nullable();
             $table->text('text')->nullable();
             $table->text('article')->nullable();
+            $table->text('contents')->nullable();
             $table->text('answer')->nullable();
             $table->string('answer_user_name')->nullable();
 

@@ -24,7 +24,7 @@
 		data-localstorage localstorage-id
 	>
 
-		<div class="_close / Abs -all / _indexMax / x-06051532 / pointer"></div>
+		<div class="_Close / Abs -all / _indexMax / x-06051532 / pointer"></div>
 
 		@include('_brick.Close.abs.Axon')
 
