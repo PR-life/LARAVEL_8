@@ -57,6 +57,7 @@
         {title: 'Grey', selector: 'p, span, div', classes: 'Grey'},
         {title: '-S', selector: 'p, span, div', classes: '-S'},
         {title: '-M', selector: 'p, span, div', classes: '-M'},
+        {title: 'vol-2', selector: 'p, span, div', classes: 'vol-2'},
       ],
 
       templates: [
@@ -75,13 +76,18 @@
           description: "",
           content: "<figure><picture> <img src='/images-0/catalog/box.png' alt=''> </picture><figcaption class='-edge -b'>55555555</figcaption></figure>",
         },
-
-
         {
-          title: "Some title 2",
-          description: "Some desc 2",
-          url: "templates/development.html",
+          title: "Details vol-dt",
+          description: "",
+          content: "<div class='Details -edge -line vol-dot vol-dt -shadow_PC -shadow_mbl'><details open><summary>555555555555</summary><div class='_edge / text void'><div class='h x-name'>555555</div><p>55555555555555</p></div></details></div>",
         },
+
+
+        // {
+        //   title: "Some title 2",
+        //   description: "Some desc 2",
+        //   url: "templates/development.html",
+        // },
       ],
 
       setup: function (editor) {

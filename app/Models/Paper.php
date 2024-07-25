@@ -3,13 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Traits\Filterable;
-use Carbon\Carbon;
 //
 
-class Paper extends Model
+class Paper extends BaseContent
 {
     use HasFactory;
 	use SoftDeletes;
@@ -21,7 +20,11 @@ class Paper extends Model
 	// protected $withCount = ['likedUsers','comments'];
 	// protected $withCount = ['comments'];
 
-
+    // Если вам нужно использовать кастомное имя внешнего ключа, вы можете переопределить метод getForeignKey в дочернем классе, например, в модели Paper:
+    // public function getForeignKey()
+    // {
+    //     return 'custom_paper_id';
+    // }
 
     // public function likedUsers() {
     //     return $this->belongsToMany(
@@ -41,75 +44,18 @@ class Paper extends Model
     // }
 
 
-    public function items() {
-        return $this->belongsToMany(
-            Item::class,
-            'paper_items',
-            'paper_id',
-            'item_id'
-        )->orderBy('order');
+    protected function getItemPivotTable(){
+        return 'paper_items';
     }
-
-    public function faqs() {
-        return $this->belongsToMany(
-            Faq::class,
-            'paper_faqs',
-            'paper_id',
-            'faq_id'
-        )->orderBy('order');
+    protected function getFaqPivotTable(){
+        return 'paper_faqs';
     }
-
-
-    public function tags() {
-        return $this->belongsToMany(
-            Tag::class,
-            'paper_tags',
-            'paper_id',
-            'tag_id'
-        )->orderBy('order');
+    protected function getTagPivotTable(){
+        return 'paper_tags';
     }
-
-    public function categories() {
-        return $this->belongsToMany(
-            Category::class,
-            'paper_categories',
-            'paper_id',
-            'category_id'
-        )->orderBy('order');
+    protected function getCategoryPivotTable(){
+        return 'paper_categories';
     }
-
-    public function tag() {
-        // return 1;
-        return $this->belongsTo(
-            Tag::class,
-            'tag_id', // foreignKey
-			'id', // ownerKey
-        );
-    }
-    
-    public function category() {
-        return $this->belongsTo(
-            Category::class,
-            'category_id',
-			'id',
-        );
-    }
-
-    public function user() {
-        return $this->belongsTo(
-            User::class,
-            'user_id',
-			'id',
-        );
-    }
-
-	public function getDateUpdateAsCarbonAttribute(){
-		return Carbon::parse($this->updated_at);
-	}
-
-	public function getDateAsCarbonAttribute(){
-		return Carbon::parse($this->created_at);
-	}
 
     public function getRouteKeyName(): string
     {

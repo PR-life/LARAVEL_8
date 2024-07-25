@@ -11,6 +11,33 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth']], function () {
     Route::get('/', function() {return view('zADMIN.Morda');})->name('morda');
 
 
+
+    Route::group(['namespace' => 'Lego', 'prefix' => 'lego'], function(){
+        Route::get('/', 'IndexController')->name('lego.index');
+        // // Route::get('/trash', 'IndexTrashedController')->name('lego.trash');
+        Route::get('/create', 'CreateController')->name('lego.create');
+        Route::post('/', 'StoreController')->name('lego.store');
+        // // // // Route::get('/{lego}', 'ShowController')->name('lego.show');
+        Route::get('/{lego}/edit', 'EditController')->name('lego.edit');
+        Route::patch('/{lego}', 'UpdateController')->name('lego.update');
+        Route::delete('/{lego}', 'DeleteController')->name('lego.delete');
+        //
+        Route::get('/trash', 'IndexTrashedController')->name('lego.trash');
+    });
+
+    Route::group(['namespace' => 'Faq', 'prefix' => 'faq'], function(){
+        Route::get('/', 'IndexController')->name('faq.index');
+        // // Route::get('/trash', 'IndexTrashedController')->name('faq.trash');
+        Route::get('/create', 'CreateController')->name('faq.create');
+        Route::post('/', 'StoreController')->name('faq.store');
+        // // // // Route::get('/{faq}', 'ShowController')->name('faq.show');
+        Route::get('/{faq}/edit', 'EditController')->name('faq.edit');
+        Route::patch('/{faq}', 'UpdateController')->name('faq.update');
+        Route::delete('/{faq}', 'DeleteController')->name('faq.delete');
+        //
+        Route::get('/trash', 'IndexTrashedController')->name('faq.trash');
+    });
+
     Route::group(['namespace' => 'Landing', 'prefix' => 'landing'], function(){
         Route::get('/', 'IndexController')->name('landing.index');
         // // Route::get('/trash', 'IndexTrashedController')->name('landing.trash');
@@ -52,19 +79,6 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth']], function () {
         Route::get('/{post}/edit', 'EditController')->name('post.edit');
         Route::patch('/{post}', 'UpdateController')->name('post.update');
         Route::delete('/{post}', 'DeleteController')->name('post.delete');
-    });
-
-    Route::group(['namespace' => 'Faq', 'prefix' => 'faq'], function(){
-        Route::get('/', 'IndexController')->name('faq.index');
-        // // Route::get('/trash', 'IndexTrashedController')->name('faq.trash');
-        Route::get('/create', 'CreateController')->name('faq.create');
-        Route::post('/', 'StoreController')->name('faq.store');
-        // // // // Route::get('/{faq}', 'ShowController')->name('faq.show');
-        Route::get('/{faq}/edit', 'EditController')->name('faq.edit');
-        Route::patch('/{faq}', 'UpdateController')->name('faq.update');
-        Route::delete('/{faq}', 'DeleteController')->name('faq.delete');
-        //
-        Route::get('/trash', 'IndexTrashedController')->name('faq.trash');
     });
 
     Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function(){

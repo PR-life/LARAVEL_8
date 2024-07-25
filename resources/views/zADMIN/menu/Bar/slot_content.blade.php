@@ -37,15 +37,6 @@
         </span>
     @endcomponent 
     @component('_wrap.Chunk.Aside.index')
-        @slot('linkAdd', route('admin.faq.create'))
-        @slot('routeName', 'admin.faq.index')
-        @slot('cssIco', '-XS')
-        @slot('name', 'Faq')
-        <span class="block / Ico -XS">
-            @svg('plus')
-        </span>
-    @endcomponent 
-    @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.telegram.index')
         @slot('linkAdd', route('admin.telegram.create'))
         @slot('cssIco', '-XS')

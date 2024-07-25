@@ -1,15 +1,16 @@
-<div id="Responses" class="Responses {{$cssH ? '' : 'Plot -hMin -XS'}} [ padding top bottom ]">
-
-    @if(isset($answer))
+<div id="Responses" class="Responses {{$wrap14061146 ? '' : 'Plot -hMin -XS'}} [ padding top bottom ]">
+    <div class="Medium -S / edge-S_PC">
+        <div class="Chat -entropy / Entropy Void Edge">
+            {!!$slot!!}
+        </div>
+    </div>
+    {{-- @if(isset($Var->answer))
         <div class="hMin b500 center-text">Ответ представителя компании</div>
         <div class="paragraph"></div>
         <div class="Edge edge-s">
             <div class="Citation aura -mbl -mblPC / face face-out face-bottom -faceAuthor_mbl var-alfa">
-            {{-- <div class="Citation aura -mbl -mblPC / face face-out face-bottom -faceAuthor_mbl var-alfa" data-click data-css data-add="on"> --}}
-            {{-- <div class="Citation aura -mbl -mblPC var-alfa / face face-xs face-bottom" data-click data-css data-add="on"> --}}
-                {{-- <div class="content lineClamp -block var-4 Void"> --}}
                 <div class="content Void">
-                    {!!$answer!!}
+                    {!!$Var->answer!!}
                 </div>
                 <div class="author">
                     <span class="name">— ООО Альфа-Мед,</span> <span class="Grey">представитель компании</span>
@@ -17,10 +18,10 @@
             </div>
         </div>
         <div class="hill"></div>
-    @endif
+    @endif --}}
 
 
-    @if(isset($Var) && count($Var) > 0)
+    {{-- @if(isset($Var) && count($Var) > 0)
         <div class="h b600 center-text / [ margin bottom S ]">{{__('mod/Responses.name')}}</div>
         <div class="Medium -S / edge-S_PC">
             <div class="Chat -entropy / Entropy Void Edge">
@@ -52,9 +53,7 @@
         <div class="paragraph-s"></div>
         <div class="content-s center-text Grey">{{__('z/mod/Responses.startComment')}}</div>
         <div class="paragraph"></div>
-    @endif
-
-    
+    @endif --}}
 
     {{-- <div class="x-Goo">
         <div class="flex cC / mrgn">
@@ -64,5 +63,4 @@
             </div>
         </div>
     </div> --}}
-
 </div>

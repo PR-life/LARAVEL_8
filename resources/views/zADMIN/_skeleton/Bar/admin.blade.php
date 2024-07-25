@@ -40,6 +40,7 @@
             @include('zADMIN.menu.Bar.slot_crm')
             @include('zADMIN.menu.Bar.slot_target')
             @include('zADMIN.menu.Bar.slot_content')
+            @include('zADMIN.menu.Bar.slot_lego')
             @include('zADMIN.menu.Bar.slot_relations')
             @include('zADMIN.menu.Bar.slot_editorial')
             @include('zADMIN.menu.Bar.slot_office')

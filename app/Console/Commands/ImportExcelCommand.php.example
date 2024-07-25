@@ -12,6 +12,7 @@ use App\Imports\FirstTagImport;
 use App\Imports\FirstItemImport;
 use App\Imports\FirstServiceImport;
 use App\Imports\FirstFaqImport;
+use App\Imports\first\FirstLegoImport;
 //
 use App\Imports\GroupImport;
 use App\Imports\TagImport;
@@ -22,6 +23,7 @@ use App\Imports\PaperImport;
 use App\Imports\ItemImport;
 use App\Imports\SmsImport;
 use App\Imports\FaqImport;
+use App\Imports\LegoImport;
 //
 use App\Imports\child\TelegramImport;
 use App\Imports\child\ServiceImport;
@@ -52,6 +54,9 @@ use App\Imports\pivot\ServiceFaqImport;
 use App\Imports\pivot\ServiceItemImport;
 use App\Imports\pivot\ServiceTagImport;
 use App\Imports\pivot\ServiceCategoryImport;
+use App\Imports\pivot\Lego\LegoGroupImport;
+use App\Imports\pivot\Lego\LegoTagImport;
+use App\Imports\pivot\Lego\LegoCategoryImport;
 // use App\Imports\pivot\PostTagImport;
 // use App\Imports\pivot\SmsCategoryImport;
 // use App\Imports\pivot\SmsTagImport;
@@ -81,6 +86,7 @@ class ImportExcelCommand extends Command
         Excel::import(new FirstItemImport, storage_path('app/Excel/Items.xlsx'));
         Excel::import(new FirstServiceImport, storage_path('app/Excel/child/Services.xlsx'));
         Excel::import(new FirstFaqImport, storage_path('app/Excel/Faq.xlsx'));
+        Excel::import(new FirstLegoImport, storage_path('app/Excel/Lego.xlsx'));
         //
         Excel::import(new GroupImport, storage_path('app/Excel/Groups.xlsx'));
         Excel::import(new CategoryImport, storage_path('app/Excel/Categories.xlsx'));
@@ -91,6 +97,7 @@ class ImportExcelCommand extends Command
         Excel::import(new ItemImport, storage_path('app/Excel/Items.xlsx'));
         Excel::import(new SmsImport, storage_path('app/Excel/Sms.xlsx'));
         Excel::import(new FaqImport, storage_path('app/Excel/Faq.xlsx'));
+        Excel::import(new LegoImport, storage_path('app/Excel/Lego.xlsx'));
         //
         Excel::import(new TelegramImport, storage_path('app/Excel/child/Telegrams.xlsx'));
         Excel::import(new ServiceImport, storage_path('app/Excel/child/Services.xlsx'));
@@ -119,6 +126,9 @@ class ImportExcelCommand extends Command
         Excel::import(new ServiceItemImport, storage_path('app/Excel/pivot/ServiceItems.xlsx'));
         Excel::import(new ServiceTagImport, storage_path('app/Excel/pivot/ServiceTags.xlsx'));
         Excel::import(new ServiceCategoryImport, storage_path('app/Excel/pivot/ServiceCategories.xlsx'));
+        Excel::import(new LegoGroupImport, storage_path('app/Excel/pivot/LegoGroups.xlsx'));
+        Excel::import(new LegoTagImport, storage_path('app/Excel/pivot/LegoTags.xlsx'));
+        Excel::import(new LegoCategoryImport, storage_path('app/Excel/pivot/LegoCategories.xlsx'));
 
     }
 }
