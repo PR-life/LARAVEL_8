@@ -16,9 +16,12 @@ class CreateLegoTable extends Migration
             $table->string('name');
 
             $table->string('css')->nullable();
+            $table->string('add_to_contents')->nullable();
+            $table->string('where_to_show')->nullable();
 
             $table->string('h')->nullable();
             $table->text('text')->nullable();
+
 
             //
             $table->string('note')->nullable();

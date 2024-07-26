@@ -7,7 +7,7 @@ use Maatwebsite\Excel\Concerns\ToCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 // use Maatwebsite\Excel\Concerns\WithCustomCsvSettings;
-use App\Models\ItemCategory;
+use App\Models\Item\ItemCategory;
 
 class ItemCategoryImport implements ToCollection, WithHeadingRow 
 {

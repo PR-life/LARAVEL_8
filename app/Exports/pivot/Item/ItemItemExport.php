@@ -1,8 +1,8 @@
 <?php
 
-namespace App\Exports\pivot;
+namespace App\Exports\pivot\Item;
 
-use App\Models\pivot\ItemItem;
+use App\Models\pivot\Item\ItemItem;
 use Maatwebsite\Excel\Concerns\FromCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadings;

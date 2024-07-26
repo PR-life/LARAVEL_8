@@ -50,6 +50,9 @@ class BaseRelationsRequest extends BaseRequest
             'service_ids' => 'nullable|array',
             'service_ids.*' => 'nullable|integer|exists:services,id',
 
+            'lego_ids' => 'nullable|array',
+            'lego_ids.*' => 'nullable|integer|exists:lego,id',
+
         ]);
     }
     

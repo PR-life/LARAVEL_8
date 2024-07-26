@@ -44,6 +44,10 @@ class Paper extends BaseContent
     // }
 
 
+    protected function getLegoPivotTable(){
+        return 'paper_lego';
+    }
+
     protected function getItemPivotTable(){
         return 'paper_items';
     }

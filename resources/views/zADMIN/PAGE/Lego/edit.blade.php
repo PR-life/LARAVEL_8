@@ -36,7 +36,7 @@
 		@component('_wrap.Flaber.admin.edit')
 
 			@slot('flaber')
-				@include('zADMIN.PAGE.Faq.lego.edit.sms')	
+				@include('zADMIN.PAGE.Lego.lego.edit.sms')	
 			@endslot
 		
 

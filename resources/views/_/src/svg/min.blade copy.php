@@ -10,11 +10,17 @@
 	<path clip-rule="evenodd" d="M11.566 7.926L6.241 13.25l-1.06-1.06 4.257-4.258-4.254-4.2 1.054-1.067 5.328 5.26z" fill="currentColor" fill-rule="evenodd"></path>
 </symbol>
 
+<symbol id="svg-arrow-3" fill="currentColor" viewBox="0 0 28 10">
+	<path fill-rule="evenodd" d="M21.253.336a1 1 0 0 0 .082 1.411l2.535 2.254H1a1 1 0 1 0 0 2h22.87l-2.534 2.252a1 1 0 1 0 1.328 1.495l4.5-4a1 1 0 0 0 0-1.494l-4.5-4.001a1 1 0 0 0-1.411.083z" clip-rule="evenodd"></path> 
+</symbol>
+
+<!-- <svg xmlns="http://www.w3.org/2000/svg" width="28" height="10" fill="#fff" class="fill"> -->
+
 <symbol id="svg-arrow-2" fill="currentColor" viewBox="0 0 16 16">
 	<path d="M16 7H3.8l5.6-5.6L8 0 0 8l8 8 1.4-1.4L3.8 9H16z"></path>
 </symbol>
 
-<symbol id="svg-arrow-3" viewBox="0 0 57 8">
+<symbol id="svg-arrow-4" viewBox="0 0 57 8">
 	<path d="M56.354 4.354a.5.5 0 000-.708L53.172.464a.5.5 0 10-.707.708L55.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM56 3.5H0v1h56v-1z" fill="currentColor"></path>	
 </symbol>
 <symbol id="svg-arrow-3_Zleft" viewBox="0 0 57 8">

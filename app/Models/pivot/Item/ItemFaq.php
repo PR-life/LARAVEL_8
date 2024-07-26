@@ -1,14 +1,14 @@
 <?php
 
-namespace App\Models\pivot;
+namespace App\Models\pivot\Item;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ItemItem extends Model
+class ItemFaq extends Model
 {
     use HasFactory;
 
-    protected $table = 'item_items';
+    protected $table = 'item_faqs';
     protected $guarded = false;
 }

@@ -1,15 +1,14 @@
 <?php
 
-namespace App\Models\pivot;
+namespace App\Models\pivot\Item;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class ItemTag extends Model
+class ItemLego extends Model
 {
     use HasFactory;
 
-    protected $table = 'item_tags';
+    protected $table = 'item_lego';
     protected $guarded = false;
-
 }

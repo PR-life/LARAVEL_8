@@ -15,7 +15,7 @@ class BaseContent extends Model
             $this->getGroupPivotTable(),
             $this->getForeignKey(),
             'group_id'
-        )->orderBy('order');
+        );
     }
 
     public function tags()
@@ -25,7 +25,7 @@ class BaseContent extends Model
             $this->getTagPivotTable(),
             $this->getForeignKey(),
             'tag_id'
-        )->orderBy('order');
+        );
     }
 
     public function categories()
@@ -35,7 +35,7 @@ class BaseContent extends Model
             $this->getCategoryPivotTable(),
             $this->getForeignKey(),
             'category_id'
-        )->orderBy('order');
+        );
     }
 
     public function faqs()
@@ -45,7 +45,7 @@ class BaseContent extends Model
             $this->getFaqPivotTable(),
             $this->getForeignKey(),
             'faq_id'
-        )->orderBy('order');
+        );
     }
 
     public function items()
@@ -55,9 +55,18 @@ class BaseContent extends Model
             $this->getItemPivotTable(),
             $this->getForeignKey(),
             'item_id'
-        )->orderBy('order');
+        );
     }
 
+    public function lego()
+    {
+        return $this->belongsToMany(
+            Lego::class,
+            $this->getLegoPivotTable(),
+            $this->getForeignKey(),
+            'lego_id'
+        );
+    }
 
     // Метод для связи с моделью User
     public function user()

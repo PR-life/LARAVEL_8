@@ -22,6 +22,8 @@ class StoreRequest extends BaseRelationsRequest
 			'name' => 'nullable|string',
 
 			'css' => 'nullable|string',
+			'add_to_contents' => 'nullable|string',
+			'where_to_show' => 'nullable|string',
 
             'h' => 'nullable|string',
             'text' => 'nullable|string',

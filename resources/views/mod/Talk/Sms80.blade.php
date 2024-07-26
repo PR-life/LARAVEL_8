@@ -1,8 +1,8 @@
 <div id="Sms_13041005" class="Sms -w -wMin / Talk -w80 {{$css_wrap_14061200 ?? ''}} / Bone / index relative">
+    {{-- <meta itemprop="headline" content="{{$headline ?? ''}}" /> --}}
     <div class="padding top / stop_80"></div>
     <div class="I Edge -PC / stop_80">
         @include('manager.scroll.Name.left', ['name_mbl' => $name_Roll ?? null, 'name' => $name ?? null])
-        {{-- <div class="h">{{$name_Roll ?? $name}}</div> --}}
     </div>
     <div class="_head space content / none_80">
         <em>{{$name}}</em>

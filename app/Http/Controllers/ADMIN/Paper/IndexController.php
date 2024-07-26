@@ -37,7 +37,7 @@ class IndexController extends BaseController
         // dd($filter);
 
 
-        $papers = Paper::filter($filter)->orderBy('order', 'asc')->orderBy('created_at', 'DESC')->paginate(25);
+        $papers = Paper::filter($filter)->orderBy('created_at', 'DESC')->paginate(25);
 			// $posts = Post::filter($filter)->orderBy('created_at', 'desc')->get();
 			// $posts = Post::paginate(10);
 

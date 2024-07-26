@@ -18,7 +18,13 @@
 	--x-QA-padding-top: 1.5rem;
 }
 
+.Q {
+	--x-QA-padding-bottom: 1rem;
+}
 
+.A {
+	--x-QA-padding-bottom: 0rem;
+}
 
 .Chat .face {
 	--x-face-rem: calc(var(--x-face)*.5);
@@ -168,7 +174,7 @@
 .Q, .A {
      ._wrap { 
 		padding-top: var(--x-QA-padding-top);
-		padding-bottom: var(--x-QA-padding-top);
+		padding-bottom: calc(var(--x-QA-padding-top) + var(--x-QA-padding-bottom));
 		> * {margin-top: 1rem;}
 		> .net {margin-top: 0;}
 		> svg,
@@ -211,7 +217,9 @@
 	}
 }
 
-
+.padding-26071907 {
+	padding-top: .4rem;
+}
 
 
 

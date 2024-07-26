@@ -3,7 +3,7 @@
         <div class="_win -t / _Axon Axon /  pr-4">
             <div class="none on_flex / Plot plot-h / sms-design / flex dC bC / hidden">
                 <div class="relative" style="height: 100%">
-                    <div class="Scroll -shift">
+                    <div class="Scroll -scrollBar">
                         <div class="_scr">
                             <div class="Goo">
                                 <div class="flex eC">

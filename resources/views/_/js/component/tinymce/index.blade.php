@@ -161,5 +161,35 @@
 			o.node.innerHTML = o.node.innerHTML.replace(/&nbsp;/ig, " ");
 		},
 	});
+
+
+	tinymce.init({
+		selector: '#tinymce_contents',
+		// content_css: "{{Request::root() . "/css/env/tinymce.css?4"}}",
+    content_style: 'ol {padding-left:0;} ol ul {padding-left:7px;margin-top:10px;margin-bottom:7px} ol li {font-size:90%;line-height:100%; margin-bottom:7px}',
+
+		language: 'ru',
+		height: parseInt(document.documentElement.clientHeight) * .4,
+
+		toolbar_location: 'bottom',
+		statusbar: false,
+		browser_spellcheck: true,
+		contextmenu: false,
+		menubar: false,
+		branding: false,
+		
+		// block_formats: 'paragraph=p; div=div; h1=h1; h2=h2; h3=h3; h4=h4',
+		plugins: 'code visualblocks lists link anchor',
+
+		toolbar: 'bold bullist numlist | link removeformat code', 
+		
+
+
+
+		paste_auto_cleanup_on_paste : true,
+		paste_postprocess : function(pl, o) {
+			o.node.innerHTML = o.node.innerHTML.replace(/&nbsp;/ig, " ");
+		},
+	});
 </script>
 @endpush

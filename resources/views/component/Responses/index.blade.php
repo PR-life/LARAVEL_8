@@ -1,6 +1,6 @@
 <div id="Responses" class="Responses {{$wrap14061146 ? '' : 'Plot -hMin -XS'}} [ padding top bottom ]">
     <div class="Medium -S / edge-S_PC">
-        <div class="Chat -entropy / Entropy Void Edge">
+        <div class="Chat -entropy -ava / Entropy Void Edge">
             {!!$slot!!}
         </div>
     </div>

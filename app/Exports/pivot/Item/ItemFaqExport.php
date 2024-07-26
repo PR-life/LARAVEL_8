@@ -1,19 +1,20 @@
 <?php
 
-namespace App\Exports\pivot;
+namespace App\Exports\pivot\Item;
 
-use App\Models\pivot\ItemCategory;
+use App\Models\pivot\Item\ItemFaq;
 use Maatwebsite\Excel\Concerns\FromCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadings;
 
-class ItemCategoryExport implements FromCollection, WithHeadings
+
+class ItemFaqExport implements FromCollection, WithHeadings
 {
 
 	public function headings(): array {
 		return [
 			"item_id",
-			"category_id",
+			"faq_id",
 			"created_at",
 			"updated_at",
 		];
@@ -21,6 +22,6 @@ class ItemCategoryExport implements FromCollection, WithHeadings
 
     public function collection()
     {
-        return ItemCategory::all();
+        return ItemFaq::all();
     }
 }

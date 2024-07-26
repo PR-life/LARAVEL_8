@@ -44,6 +44,9 @@ class Service extends BaseService {
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);
 
+			isset($param['lego_ids']) ? $legoIds = $param['lego_ids'] : $legoIds = [];
+			unset($param['lego_ids']);
+
 			// isset($param['group_ids']) ? $groupIds = $param['group_ids'] : $groupIds = [];
 			// unset($param['group_ids']);
 
@@ -75,6 +78,9 @@ class Service extends BaseService {
 
 			$item->categories()->sync($categoryIds);
 			$categoryIds = [];
+
+			$item->lego()->sync($legoIds);
+			$legoIds = [];
 
 
 			DB::commit();

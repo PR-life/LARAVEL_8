@@ -1,12 +1,12 @@
 <?php
 
-namespace App\Imports\pivot;
+namespace App\Imports\pivot\Item;
 
 use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\ToCollection;
 //
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
-use App\Models\pivot\ItemItem;
+use App\Models\pivot\Item\ItemItem;
 
 class ItemItemImport implements ToCollection, WithHeadingRow 
 {
