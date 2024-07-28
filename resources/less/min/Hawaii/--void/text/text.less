@@ -96,7 +96,6 @@
     margin-top: 2rem;
 }
 
-.text>blockquote,
 .text>.blockquote,
 .text > ._citation,
 .text > .Citation {
@@ -138,10 +137,19 @@ details .text> :first-child {margin-top: 0;}
 //     margin-bottom: 0 !important;
 // }
 
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+    .text>blockquote {
+        margin-top: 3rem;
+    }
+}
 
 
 
 @media screen and (max-width:@w-menu-2) {
+
+    .text>blockquote {
+        margin-top: 6rem;
+    }
 
     .text > h4,
     .text > h5,

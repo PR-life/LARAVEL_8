@@ -1,5 +1,5 @@
 <div id="Relationships_{{$id ?? 'noneName'}}" class="SOMA OnOff on / space-left / relative" data-click data-css data-toggle='on' data-localstorage localstorage-id>
-    @include('_brick.Close.abs.Axon', ['cssClose' => 'Abs -lt','cssCloseIcoClose' => '-XXS'])
+    @include('_brick.Close.abs.Axon', ['cssClose' => 'Abs -lt -b x-27071330 / flex cI','cssCloseIcoClose' => '-XXS'])
     <div class="_close pointer">
         <div class="paragraph"></div>
         <div class="content / space-left / Grey">{{$name22071756 ?? 'имя блока'}}</div>
@@ -12,6 +12,7 @@
         </div>
     </div>
 </div>
+
 
 
 {{-- <div id="{{$id ?? 'wrapSummary'}}" class="_summary / SOMA OnOff / {{$css ?? '-border net'}}" data-click data-css data-toggle='on' data-localstorage localstorage-id>

@@ -1,6 +1,24 @@
 @charset "UTF-8";
 
 
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+	blockquote::before {
+		left: var(--x-left);
+		width: var(--x-Ico);
+	}
+
+}
+
+
+@media screen and (max-width:@w-menu-2) {
+
+	blockquote::before {
+		bottom: 100%;
+		width:  100%;
+	}
+
+}
+
 blockquote {
 	--x-Ico: calc(var(--Ico)*2);
 	--x-left: 0rem;
@@ -12,9 +30,6 @@ blockquote {
 blockquote::before {
 	content: '';
 	position: absolute;
-	left: var(--x-left);
-
-	width: var(--x-Ico);
 	height: var(--x-Ico);
 	background-position: center;
 	background-repeat: no-repeat;
@@ -38,13 +53,13 @@ blockquote::before {
 // 	}
 // }
 
-@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+// @media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
 	// .Medium .blockquote.vol-2 {
 	// 	blockquote::before {
 	// 		left: calc(var(--x-Ico) + .5rem);
 	// 	}
 	// }
-}
+// }
 
 
 

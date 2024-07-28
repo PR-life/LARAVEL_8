@@ -76,5 +76,7 @@
 @include('zTHIS.analytica.add_footer')
 @endif
 
+@stack('metrika_events')
+
 </body>
 </html>

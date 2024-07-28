@@ -1,5 +1,5 @@
 <div class="paragraph"></div>
-<a class="_edge / block / highlight" href="{{$Var->canonical ?? $link}}">
+<a class="teaser-edge / block / highlight" href="{{$Var->canonical ?? $link}}">
 	
 	@isset($Var->name)
 		@if($Var->foto_count_teaser)

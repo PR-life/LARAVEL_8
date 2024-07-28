@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
-	{{-- @include('_schema._lego.head.index') --}}
 	@include('_schema._lego.head.index', [
 		'preloadCss' => false,
 		])
 	<link href="{{ mix($linkCssMin ?? '/css/lead.css') }}" rel="stylesheet" type="text/css">
-
-    @include('zTHIS.style.Lead')
 </head>
 <body id="body" class="MXAT @yield('css-body') @stack('css-body')">
 <script>
@@ -32,6 +29,12 @@
 
 @include('_._skeleton.bodyEnd')
 @include('_schema._lego.afterMilk')
+
+@if(config('AS.env') == 'production')
+	@include('zTHIS.analytica.add_footer')
+@endif
+
+@stack('metrika_events')
 
 </body>
 </html>

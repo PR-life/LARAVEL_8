@@ -480,7 +480,7 @@
 @media screen and (max-width:@w-menu-2) {
 
 
-	.Blog .Teaser > ._edge {
+	.Blog .Teaser .teaser-edge {
 		padding-left: var(--edge);
 		padding-right: 7px;
 
@@ -570,6 +570,14 @@
 			margin-left: var(--edge);
 			margin-right: 5px;
 		}
+
+
+		> blockquote {
+			margin-left: calc(var(--edge)*.5);
+			margin-right: calc(var(--edge)*.5);
+		}
+
+
 
 		> dl {
 			margin-left: var(--edge);

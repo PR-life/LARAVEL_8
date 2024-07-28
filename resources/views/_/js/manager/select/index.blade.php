@@ -21,9 +21,9 @@
     
     
         selectToUl(parent)
+        
         select_1902(select.selectedOptions,field,select,text)
-    
-    
+        
         // select.addEventListener("change", function(element) {
         //     // let selectedOptions = this.selectedOptions;
         //     // field.innerHTML = "";
@@ -35,6 +35,9 @@
         // select.options[2].setAttribute('selected', true)
     
     })
+
+
+    add_manager('wrap_select_items')
     
     
     // multiselect_block.forEach(function(item, index) {
@@ -43,6 +46,6 @@
     
     
 @include('_/js/manager/select/foo/selectToUl')
-@include('_/js/manager/select/foo/manager')
-
+@include('_/js/manager/select/foo/select_1902')
+@include('_/js/manager/select/foo/add_manager')
 </script>

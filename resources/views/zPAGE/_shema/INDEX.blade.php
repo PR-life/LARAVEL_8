@@ -1,4 +1,3 @@
-@extends('zPAGE._shema.z')
+@extends('zPAGE.z')
 
-{{-- @include('_._construct.ogp') --}}
 @include('_.src.link.css.Start')

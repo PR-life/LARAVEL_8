@@ -1,0 +1,16 @@
+@charset "UTF-8";
+
+.Shift.Noggin {
+	> :nth-child(2) {
+		transform: translateX(var(--x-Shift));
+	}
+	> :nth-child(3) {
+		transform: translateX(calc(var(--x-Shift)*2));
+	}
+	> :nth-child(4) {
+		transform: translateX(calc(var(--x-Shift)*3));
+	}
+	> .last:nth-child(4) {
+		transform: translateX(calc(var(--x-Shift)*2));
+	}
+}

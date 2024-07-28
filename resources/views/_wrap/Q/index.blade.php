@@ -12,7 +12,7 @@
                         <span itemprop="name">{{$Var->name ?? 'аноним'}}</span>                        
                     </span>
                     @include('_.elem.dot',['separator'=>'___'])
-                    <span>{{$Var->dateAsCarbon->diffForHumans()}}</span>
+                    <span class="Ellipsis line-1">{{$Var->dateAsCarbon->diffForHumans()}}</span>
                 </div>
             </div>
         </div>

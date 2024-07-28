@@ -43,6 +43,30 @@ h3.wide {
 }
 
 
+//
+
+@media (min-width: @metrika-70-plus) and (max-width:@w-max) {
+	blockquote p {
+		font-size: 1.5vw;
+		line-height: calc(1.5vw * 1.4);
+	}
+}
+
+@media screen and (max-width:@metrika-70) {
+	blockquote p {
+		font-size: var(--rem-h);
+		line-height: calc(var(--rem-h) * 1.8);
+	}
+}
+
+@media screen and (max-width:@w-menu-2) {
+	blockquote p {
+		text-align: center;
+	}
+}
+
+
+//
 .h {
 	font-size: var(--rem-h);
 	line-height: calc(var(--rem-h) * 1.4);
@@ -51,12 +75,6 @@ h3.wide {
 .h {
 	line-height: calc(var(--rem-h) * 1.4);
 }
-
-blockquote p {
-	font-size: 1.5vw;
-	line-height: calc(1.5vw * 1.4);
-}
-
 
 h1.-vw, .h1.-vw {
 	font-size: clamp(calc(var(--rem-h2) + 2px),var(--rem-h1),calc(var(--indexW)*2.5));

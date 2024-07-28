@@ -1,179 +1,114 @@
 function selectToUl(parent) {
+    // Скрываем оригинальный select
+    const selectElement = parent.querySelector('select');
+    selectElement.classList.add('none');
 
-    parent.querySelector('select').classList.add('none');
+    // Создаем обертки и элементы для кастомного dropdown
+    const wrap = document.createElement('div');
+    const dropdown = document.createElement('div');
+    const ul_wrap = document.createElement('div');
+    const ul = document.createElement('ul');
+    const withSearch = parent.classList.contains('vol-withSearch');
+    const withManager = parent.classList.contains('vol-withManager');
 
-    //   let invoker = document.createElement('div');
-    let wrap = document.createElement('div')
-        dropdown = document.createElement('div')
-        ul = document.createElement('ul')
-        values = [];
-    
-    let withSearch = parent.classList.contains('vol-withSearch')
-        searchInput = '';
-
-    var Options = Array.from(parent.querySelectorAll('option'));
-    
-    
-    const csswrap = ['wrap_dropdown','relative','-White','White','-bg'];
-    const cssDropDown = ['_dropdown'];
-    const cssBtn = ['_btn', 'content', 'highlight', 'slctn'];
-    
- 
-    wrap.classList.add(...csswrap);
-    dropdown.classList.add(...cssDropDown);
+    // Классы для стилизации
+    wrap.classList.add('wrap_dropdown', 'relative', '-White', 'White', '-bg');
+    dropdown.classList.add('_dropdown');
+    ul_wrap.id = 'wrap_select_items_filter';
     ul.classList.add('_ul');
 
+    // Добавляем поле поиска, если это необходимо
+    if (withSearch) {
+        // if (withManager) {
+        //     dropdown.innerHTML = `
+        //     <div class="_manager space-s / Goo -t / bg-manager">
+        //         <div class="x-manager">
+        //             <ul class="menu -tag -S / lie">
+        //                 <li data-click data-node='wrap_select_items' data-css data-toggle='category-bazy'><span class="a noEvents">Базы</span></li>
+        //                 <li data-click data-node='wrap_select_items' data-css data-toggle='tag-zags'><span class="a noEvents">загс</span></li>
+        //             </ul>
+        //         </div>
+        //         <input class="_search" type="text" placeholder="поиск...">
+        //     </div>
+        //     `;
+        // } else {
+            dropdown.innerHTML = `
+            <div class="_manager space-s / Goo -t / bg-manager">
+                <input class="_search" type="text" placeholder="поиск...">
+            </div>
+            `;
+        // }
+ 
 
-    if(withSearch) {
-        searchInput = document.createElement('input');
-    
-        searchInput.classList.add('_search');
-        searchInput.classList.add('Goo');
-        searchInput.classList.add('-t');
-        searchInput.setAttribute('type', 'text');
-        searchInput.setAttribute('placeholder', 'поиск...')
-    
-        // var searchInputLabel = document.createElement('label');
-        // searchInputLabel.classList.add('_search__label');
-        // searchInputLabel.textContent = "Search term: ";
-        // dropdown.appendChild(searchInputLabel);
-    
-        dropdown.appendChild(searchInput);
+
+        // Находим input для фильтрации
+        const searchInput = dropdown.querySelector('input._search');
+
+
+        // Фильтрация элементов списка по введенному тексту
+        searchInput.addEventListener('keyup', function() {
+            const inputVal = this.value.toLowerCase();
+            ul.querySelectorAll('li').forEach(item => {
+                const matches = item.textContent.toLowerCase().includes(inputVal);
+                item.classList.toggle('none', !matches);
+            });
+        });
     }
 
-    //
-
-
-
-    let observerSelect = new MutationObserver(mutationRecords => {
-
-        mutationRecords.forEach(element => {
-
-            if(element.removedNodes.length) {
-
-                // console.log(element);
-
-                let node = element.target.closest('.Select').querySelector('.wrap_dropdown');
-
-                // console.log(element.removedNodes);
-                
-                element.removedNodes.forEach(el => {
-                    
-                    // console.log(el);
-                    // console.log(el.nodeName == '#text');
-
-                    
-                    if(!(el.nodeName == '#text')) {
-                        let itemId = el.getAttribute('data-value')
-                        node.querySelector(`[data-value='${itemId}']`).classList.remove('selected')
-                    }
-
-
-                } )
-
-                // let node = element.target.closest('.Select').querySelector('.wrap_dropdown');
-
-                // let idOption = element.z.closest('.Select').querySelector('.wrap_dropdown');
-
-                // console.log(node);
-            }
-   
-            // let dropdown = element.target.closest('.Select').querySelector('.wrap_dropdown');
-            // let arr = dropdown.querySelectorAll('._item');
-            
-            // arr.forEach(element => {
-            //     element.classList.remove('None')
-            // });
-
-            // element.addedNodes.forEach(element => {
-            //     console.log(2222)
-            //     // console.log(element)
-            //     // console.log(element.nodeName == '#text')
-
-            //     if(!(element.nodeName == '#text')) {
-            //         let itemId = element.getAttribute('data-var')
-            //         console.log(3333)
-            //         // console.log(itemId)
-            //         if(itemId) {
-            //             dropdown.querySelector(`[data-value='${itemId}']`).classList.add('None')
-            //         }
-            //     }
-            // });
-
-        });
-      });
-
-
-
-    //
-
-    Options.forEach(function(item, index) {
-        // if ( index == 0) { return; }
-        let li = document.createElement('li');
-        li.classList.add('_item')
-
- 
-        li.classList.add(item.getAttribute('shema-teaser') ?? '532523')
-  
-
-
+    // Создаем элементы списка из option
+    Array.from(selectElement.options).forEach((option, index) => {
+        const li = document.createElement('li');
+        li.classList.add('_item');
+        li.classList.add(option.getAttribute('shema-teaser') || 'default-class');
+        li.dataset.value = option.value;
         li.dataset.loop = index;
-        if(item.hasAttribute('selected')) {
-            li.classList.add('selected')
-        }
-        li.dataset.value = item.value;
-        li.textContent = item.text;
-        ul.appendChild(li);
-    })
+        li.textContent = option.textContent;
 
-    dropdown.appendChild(ul);
+        if (option.selected) {
+            li.classList.add('selected');
+        }
+
+        ul.appendChild(li);
+    });
+    
+    // Добавляем dropdown в обертку и в родительский элемент
+    dropdown.appendChild(ul_wrap).appendChild(ul);
     wrap.appendChild(dropdown);
     parent.appendChild(wrap);
 
-    let arrLi_search =  Array.from(ul.querySelectorAll('li'));
-    if(withSearch) {
-        searchInput.addEventListener('keyup', function() {
-            let inputVal = this.value;
-            let pattern = new RegExp(inputVal, 'i');
-            arrLi_search.forEach(function(item, index) {
-                if (!item.textContent.match(pattern)) {
-                    item.classList.add('none');
-                } else {
-                    item.classList.remove('none');
-                }  
-            })
-        })
-    }
+    // Обработка кликов на элементы списка
+    ul.addEventListener('click', event => {
+        const li = event.target.closest('li');
+        if (!li) return;
+        const select = ul.closest('.Select').querySelector('select');
+        const field = ul.closest('.Select').querySelector('._field');
 
-
-
-    ul.addEventListener('click', function() {
-        let ul = event.currentTarget;
-        let li = event.target;
-        let select = ul.closest('.Select').querySelector('select')
-        let field = ul.closest('.Select').querySelector('._field')
-
-        if(select.hasAttribute('multiple')) {
-            li.classList.toggle('selected')
-            select.options[Number(li.getAttribute("data-loop"))].selected = true;
-                                // !!!!!!!! 
-                                //select.options[Number(li.getAttribute("data-loop"))].setAttribute('selected', true);
-            // console.log('select.selectedOptions: ' + select.selectedOptions)
-            select_1902(select.selectedOptions,field,select)
+        if (select.multiple) {
+            li.classList.toggle('selected');
+            select.options[li.dataset.loop].selected = li.classList.contains('selected');
         } else {
-            // console.log(select.selectedIndex)
-            select.selectedIndex = li.getAttribute("data-loop")
-            select_1902(select.selectedOptions,field,select)
-
-            parent.querySelector('.js-close').click()
+            select.selectedIndex = li.dataset.loop;
+            parent.querySelector('.js-close').click();
         }
 
-    })
+        select_1902(select.selectedOptions, field, select);
+    });
 
-    // наблюдать за всем, кроме атрибутов
-    observerSelect.observe(ul.closest('.Select').querySelector('._field'), {
-        childList: true, // наблюдать за непосредственными детьми
-        subtree: true, // и более глубокими потомками
-        characterDataOldValue: true // передавать старое значение в колбэк
-    })
+    // Наблюдатель за изменениями в элементе select
+    const observerSelect = new MutationObserver(mutationRecords => {
+        mutationRecords.forEach(record => {
+            if (record.removedNodes.length) {
+                const removedNode = record.removedNodes[0];
+                if (removedNode.nodeType === Node.ELEMENT_NODE) {
+                    const value = removedNode.getAttribute('data-value');
+                    ul.querySelector(`[data-value='${value}']`).classList.remove('selected');
+                }
+            }
+        });
+    });
+
+    observerSelect.observe(parent.querySelector('._field'), {
+        childList: true,
+        subtree: true,
+    });
 }

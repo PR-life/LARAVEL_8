@@ -3,13 +3,12 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-use Illuminate\Database\Eloquent\Model;
+// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Traits\Filterable;
-use Carbon\Carbon;
 //
 
-class Item extends Model
+class Item extends BaseContent
 {
     use HasFactory;
 	use SoftDeletes;
@@ -18,128 +17,43 @@ class Item extends Model
     protected $table = 'items';
     protected $guarded = false;
 
-	// protected $withCount = ['likedUsers','comments'];
-	// protected $withCount = ['comments'];
-
-    // public function items() {
-    //     return $this->hasMany(
-    //         Item::class,
-    //         'tag_id',
-    //         'id', //
-    //     )->where('published', 1)->orderBy('order', 'asc');
-    // }
-
-    // public function likedUsers() {
-    //     return $this->belongsToMany(
-    //         User::class,
-    //         'paper_user_likes',
-    //         'paper_id',
-    //         'user_id'
-    //     );
-    // }
-	
-    // public function comments() {
-    //     return $this->hasMany(
-    //         CommentPaper::class,
-    //         'item_id',
-	// 		'id',
-    //     )->orderBy('created_at', 'desc');
-    // }
-
 
     public function childrenItems()
     {
         return $this->hasMany(Item::class)->with('items')->orderBy('order', 'asc');
     }
 
-    public function items() {
+    protected function getLegoPivotTable(){
+        return 'item_lego';
+    }
+
+    // protected function getItemPivotTable(){
+    //     return 'item_items';
+    // }
+
+    public function items()
+    {
         return $this->belongsToMany(
             Item::class,
             'item_items',
-            'item_id',
+            $this->getForeignKey(),
             'items_id'
-        )->orderBy('order');
-    }
-
-    public function faqs() {
-        return $this->belongsToMany(
-            Faq::class,
-            'item_faqs',
-            'item_id',
-            'faq_id'
-        )->orderBy('order');
-    }
-
-
-    public function categories() {
-        return $this->belongsToMany(
-            Category::class,
-            'item_categories',
-            'item_id',
-            'category_id'
-        )->orderBy('order');
-    }
-
-    public function tags() {
-        return $this->belongsToMany(
-            Tag::class,
-            'item_tags',
-            'item_id',
-            'tag_id'
-        )->orderBy('order');
-    }
-
-
-    public function item() {
-        return $this->belongsTo(
-            Item::class,
-            'item_id',
-			'id',
         );
     }
 
-
-    public function tag() {
-        // return 1;
-        return $this->belongsTo(
-            Tag::class,
-            'tag_id', // foreignKey
-			'id', // ownerKey
-        );
+    protected function getFaqPivotTable(){
+        return 'item_faqs';
+    }
+    protected function getTagPivotTable(){
+        return 'item_tags';
+    }
+    protected function getCategoryPivotTable(){
+        return 'item_categories';
     }
 
-    public function group() {
-        // return 1;
-        return $this->belongsTo(
-            Group::class,
-            'group_id', // foreignKey
-			'id', // ownerKey
-        );
-    }
+    // public function getRouteKeyName(): string
+    // {
+    //     return 'slug';
+    // }
 
-    public function category() {
-        return $this->belongsTo(
-            Category::class,
-            'category_id',
-			'id',
-        );
-    }
-
-    public function user() {
-        return $this->belongsTo(
-            User::class,
-            'user_id',
-			'id',
-        );
-    }
-
-
-	public function getDateAsCarbonAttribute(){
-		return Carbon::parse($this->created_at);
-	}
-
-    public function getRouteKeyName(): string
-    {
-        return 'slug';
-    }
 }

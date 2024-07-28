@@ -70,6 +70,7 @@ class Service extends BaseService {
 			$item->tags()->sync($tagIds);
 			$tagIds = [];
 
+			// dd($itemIds);
 			$item->items()->sync($itemIds);
 			$itemIds = [];
 
