@@ -42,6 +42,8 @@
             <dd><span class="content-xs">{{$sms->label}}</span></dd>
             <dt class="content-xs Grey">id_item</dt>
             <dd><span class="content-xs">{{$sms->id_item}}</span></dd>
+            <dt class="content-xs Grey">date</dt>
+            <dd class="content-xs -lineHeight">{{$sms->created_at}}</dd>
             <dt class="content-xs Grey">from_page</dt>
             <dd class="content-xs -lineHeight">{{$sms->from_page}}</dd>
         </dl>
