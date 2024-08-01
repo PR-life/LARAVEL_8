@@ -1,13 +1,13 @@
 <div id="Beyond_2001" class="Beyond none / FixMenu -pad / noEvents">  
-    <div class="_btn / flex cC cI">
-        <div class="Ico -M / space contentBox / yesEvents" data-click data-localstorage='firstNo'>
-            <label for="inputMenuMain" class="flex cC cI">
+    <div class="_btn / flex cI">
+        <div class="space contentBox / yesEvents" data-click data-localstorage='firstNo'>
+            <label for="inputMenuMain" class="flex cC cI / Ico -M">
                 <span class="Hamburger -minus -vw">
                     <span class="_inner"></span>
                   </span>	
             </label>
         </div>
-        <div class="Header -h / noneZ255"></div>
+        <div class="Header -h"></div>
     </div>
 </div>
 

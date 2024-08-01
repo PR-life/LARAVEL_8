@@ -46,7 +46,7 @@
 
 
 
-	@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Блокнот'])
+	@include('zADMIN._wrap.text.nameTextarea', ['name' => 'текст knot_1'])
 	<div class="paragraph"></div>
 	<div class="_shell / Note -lite">
 		<textarea id="tinymce_lite_1" name="knot_1" placeholder='текст...'>{{$category->knot_1}}</textarea>

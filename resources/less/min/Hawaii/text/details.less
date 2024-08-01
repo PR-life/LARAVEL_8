@@ -3,8 +3,6 @@
 .-Details,
 // .Details > details,
 .Details {
-	--x-details-padding-top: 1rem;
-	--x-details-margin-left: 2rem;
 	--x-details-padding-right: 5px;
 
 	// ._children {
@@ -12,13 +10,7 @@
 	// }
 }
 
-.Details.-S {
-	--x-details-margin-left: 1.5rem;
-}
 
-.Details.-S {
-	--x-details-margin-left: 1.5rem;
-}
 
 //
 @media (min-width:1397px) and (max-width:@w-max) {
@@ -187,32 +179,10 @@ details.-edgeSummary > summary {
 	}
 }
 
-.Details {
-	summary {
-		min-height: calc(var(--x-details-margin-left)*2); //66666666666666
-		//
-		padding-top: var(--x-details-padding-top);
-		padding-bottom: var(--x-details-padding-top);
-		padding-right: 4rem;
-	}
-}
 
 
 
-//
-details.-M > summary,
-.Details.-M > details > summary {
-    padding-top: calc(var(--x-details-margin-left));
-    padding-bottom: calc(var(--x-details-margin-left));
-}
 
-details.-L,
-.Details.-L > details{
-    > summary {
-    	padding-top: calc(var(--x-details-margin-left)*1.25);
-    	padding-bottom: calc(var(--x-details-margin-left)*1.25);
-    }
-}
 
 
 ////
@@ -269,9 +239,6 @@ details {
 	// }
 
 }
-
-summary::-webkit-details-marker {display: none;}
-summary {list-style: none; border:1px solid transparent}
 
 
 summary {

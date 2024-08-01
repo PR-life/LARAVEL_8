@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+@media screen and (max-width:@w-menu-2) {
+	.Bread.Back {
+		--font: 0;
+
+		width: calc(var(--Ico)*2);
+		height: calc(var(--Ico)*2);
+
+		// background-color: red;
+
+		> li {
+			display: none;
+		}
+		> ._main,
+		> ._prev {
+			display: block;
+			position: absolute;
+			
+		}
+	}
+
+	.Bread.Back > *::before {
+		display: none;
+	}
+
+    #Back {
+        --Back-edge: 7px;
+    }
+
+    #Back::before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        left: var(--Back-edge);
+        right: var(--Back-edge);
+        top: var(--Back-edge);
+        bottom: var(--Back-edge);
+      }
+
+}

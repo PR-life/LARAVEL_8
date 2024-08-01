@@ -1,72 +1,6 @@
 @charset "UTF-8";
 
 
-table {
-    --table-h-th:var(--h-th);
-	--table-h-td:var(--h-td);
-    --table-void-table:4px;
-    --table-padding-table: ~"calc(1rem + 10px)";
-    --table-tableFlag: 30px;
-
-	tr.-S {
-		--table-h-td:calc(var(--h-td)*.5);
-	}
-}
-
-
-
-table.-M {
-    --table-h-td: ~"calc(var(--h-td) + 2rem)";
-}
-
-
-
-
-@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
-	table.-L {
-		--table-h-td: ~"calc(var(--h-td) + 2rem)";
-	}
-}
-
-@media screen and (max-width:@w-menu-2){
-    table {
-        --table-padding-table: ~"calc(1rem + 8px)";
-    }
-	table.-L {
-		--table-h-td: ~"calc(var(--h-td) + 1rem)";
-	}
-
-}
-
-
-
-////
-
-table.-noneair {border-collapse: collapse;}
-
-table {
-	.table-top {
-		vertical-align: top;
-	}
-	.table-bottom {
-		vertical-align: bottom;
-	}
-
-	.table-middle {
-		vertical-align: middle;
-	}
-}
-
-@media (min-width: @w-menu-2-plus) and (max-width:@w-max){
-	table.center tr td {text-align: center;}
-	table.center tr td:first-child {text-align: left;}
-
-	table.-optimizeMbl {
-		td._last {
-			display: none;
-		}
-	}
-}
 
 @media screen and (max-width:@w-menu-2) {}
 
@@ -129,37 +63,6 @@ table {
 	> tfoot {z-index: 3;}
 
 
-	th, td {
-		padding-left:var(--table-void-table);
-		padding-right:var(--table-void-table);
-	}
-	th {
-		vertical-align: bottom;		
-		text-align: left;
-		padding-bottom:calc(var(--table-void-table)*2);
-	}
-
-	td {
-        padding-top:var(--table-void-table);
-        padding-bottom:var(--table-void-table);
-        
-		div {
-			display: inline;
-		}
-		a div {
-			display: inline-block;
-		}
-	}
-
-	thead th {
-		height: var(--table-h-th);
-	}
-	
-    tbody td{
-		height: var(--table-h-td);
-		vertical-align: middle;
-	}
- 
     //
 
     tfoot {

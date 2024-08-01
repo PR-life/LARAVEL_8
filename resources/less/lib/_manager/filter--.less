@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+
+.Ef.-M {
+	--x-Ef-hMin: 7rem;
+}
+
+.Ef {
+	--x-Ef-hMin: 6rem;
+	--x-Ef-marginAll: 2px;
+}
+
+//
+.all>.Ef.-list>._ef {
+	height: auto;
+	min-height: var(--x-Ef-hMin);
+	margin-bottom:var(--x-Ef-marginAll);
+}
+
+.first>.Ef.-list.-first>._ef.x-1,
+.all>.Ef.-list>._ef.archive {
+	height: 0 !important;
+	min-height: 0 !important;
+	opacity: 0 !important;
+	border-width: 0 !important;
+	margin-top: 0;
+	margin-bottom: 0;
+	// margin-bottom: 0 !important;
+	//
+	pointer-events: none !important;
+}
+
+
+//
+.Ef {
+
+	.Ef-height {
+		height: var(--x-Ef-hMin);
+	}
+
+}

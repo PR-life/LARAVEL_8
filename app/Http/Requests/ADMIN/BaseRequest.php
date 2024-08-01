@@ -17,6 +17,7 @@ class BaseRequest extends FormRequest
         return [
 			//
 			'knot_1' => 'nullable|string',
+			'note' => 'nullable|string',
 	
 			//
 			'order' => 'nullable|integer',	

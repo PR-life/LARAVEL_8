@@ -27,3 +27,14 @@
     @slot('name','canonical')
     {{$Var->canonical ?? '/'}}
 @endcomponent
+
+
+
+<div class="Details transparent / space">
+    <details>
+		<summary><span>keywords</span><i></i></summary>
+        <div class="_shell Article aura / Note -lite">
+            <textarea name="keywords" placeholder="текст...">{{$Var->keywords ?? old('keywords')}}</textarea>
+        </div>
+	</details>
+</div>

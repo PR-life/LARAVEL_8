@@ -31,7 +31,7 @@
 
 <div id="menuMain" class="Goo / menuOpen menuBeyond / index">
 	<label for="inputMenuMain" class="Hook Abs -i -all -bg -op"></label>
-	<nav class="I Mbl aura / flex / _indexMax Edge -SPC">
+	<div class="_nav I Mbl aura / flex / _indexMax Edge -SPC">
 		<div class="W-100 relative_PC">
 			<div class="Mid_Bey x-menuMain">
 				<div class="Abs">
@@ -41,6 +41,6 @@
 				</div>
 			</div>
 		</div>
-	</nav>
+	</div>
 </div>
 <div class="Loki / Header -h / none_mbl none_beyond"></div>

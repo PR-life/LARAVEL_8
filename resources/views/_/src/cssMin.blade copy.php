@@ -45,8 +45,15 @@ mark {
 	background: transparent;
 }
 
+#body.MXAT .containPaint {
+	contain: paint;
+}
+
 .contentBox{
-	box-sizing:content-box
+	box-sizing:content-box;
+}
+.contentBox{
+	box-sizing: border-box;
 }
 .inline,input,button,textarea,select,a,strong,em,span,i,time,b,nobr,abbr,mark{
 	font-size:inherit;

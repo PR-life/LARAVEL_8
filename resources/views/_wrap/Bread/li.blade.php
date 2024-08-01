@@ -4,10 +4,10 @@
         <span itemprop="name">{{$name}}</span>
     </a>
     @else
-    {{-- <a class="_last noEvents" itemprop="item" href="{{url()->current()}}" title="{{$title ?? ''}}">
+    <a class="_last noEvents" itemprop="item" href="{{url()->current()}}" title="{{$title ?? ''}}">
         <span itemprop="name">{{$name}}</span>
-    </a> --}}
-    <span itemprop="name">{{$name}}</span>
+    </a>
+    {{-- <span itemprop="name">{{$name}}</span> --}}
     @endisset
     <meta itemprop="position" content="{{$loop}}">
 </li>

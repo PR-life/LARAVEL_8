@@ -1,16 +1,17 @@
 @extends('zDT._schema.SHOW')
 
 @if($item->canonical)
+@php
+    // Получить хост без www
+    $host = Request::getHost();
+    $host = str_replace('www.', '', $host);
+@endphp
     @section('canonical')
-<link href="https://{{Request::getHost()}}{{$item->canonical}}" rel="canonical">
+<link href="https://{{ $host }}{{ $item->canonical }}" rel="canonical">
     @endsection
 @endif
 
 @push('css-body','item-'.$item->id.' ')
-
-@push('milk')
-    @include('zDT.milk.form.ask')
-@endpush
 
 @push('fon')
 	@include('zDT._brick.fon.show')
