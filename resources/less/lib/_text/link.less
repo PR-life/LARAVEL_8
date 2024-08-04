@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+a.-grey {
+	--x-color-border:@c-border;
+}
+
+
+a:visited.-grey,
 a.-grey {color:inherit;}
 
 a.-grey.vol-1 {color: @c-50;}
@@ -13,10 +19,10 @@ a.-grey:hover {
 }
 
 a.-grey>span {
-	background-image: linear-gradient(transparent, transparent), linear-gradient(@c-border, @c-border);
+	background-image: linear-gradient(transparent, transparent), linear-gradient(var(--x-color-border), var(--x-color-border));
 	background-repeat: no-repeat;
-	background-position: 100% 100%,0 100%;
-	background-size: 0 1px,100% 1px;
+	background-position: 100% 100%,15% 100%;
+	background-size: 0 1px,96% 1px;
 }
 
 

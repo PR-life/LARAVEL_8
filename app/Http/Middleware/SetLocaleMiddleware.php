@@ -11,8 +11,13 @@ class SetLocaleMiddleware
     public function handle(Request $request, Closure $next)
     {
 
-        app()->setLocale($request->segment(2));
-        URL::defaults(['locale' => $request->segment(2)]);
+        // dd($request->segments());
+
+        //локаль приложения на значение сегмента URL
+        app()->setLocale($request->segment(1));
+
+        // Этот вызов устанавливает значение по умолчанию для параметра locale в URL-адресах, создаваемых с помощью фасада URL. Это гарантирует, что генерируемые ссылки будут содержать текущую локаль.
+        URL::defaults(['locale' => $request->segment(1)]);
 
         return $next($request);
     }

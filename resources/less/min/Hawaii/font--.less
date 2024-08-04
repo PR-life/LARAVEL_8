@@ -50,12 +50,18 @@ h3.wide {
 		font-size: 1.5vw;
 		line-height: calc(1.5vw * 1.4);
 	}
+	blockquote.-lineHeight p {
+		line-height: calc(1.5vw * 1.2);
+	}
 }
 
 @media screen and (max-width:@metrika-70) {
 	blockquote p {
 		font-size: var(--rem-h);
 		line-height: calc(var(--rem-h) * 1.8);
+	}
+	blockquote.-lineHeight p {
+		line-height: calc(var(--rem-h) * 1.2);
 	}
 }
 

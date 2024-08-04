@@ -2,7 +2,11 @@
 @include($linkMetaColor ?? '_.head.meta.color')
 	<title>@yield('title', $item->title ?? '') @stack('title')</title>
 	<meta name="description" content="@yield('description', $item->description ?? '') @stack('description')">
-	<meta name="keywords" content="@yield('keywords', $item->keywords ?? '') @stack('keywords')">
+@isset($item)
+@if($item->keywords)
+	<meta name="keywords" content="@yield('keywords', $item->keywords) @stack('keywords')">
+@endif
+@endisset
 	@yield('canonical')
 @stack('meta')
 @include('_.head.meta.ogp')

@@ -3,13 +3,13 @@
 
 @media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
 	.Reg{
-		--x-Reg-S: 268px;
+		--x-Reg-S: 368px;
 		--x-Reg-L: var(--Blog);
 
 		
-		._S.Plus {
-			--x-Reg-S: calc(268px + 80px);
-		}
+		// ._S.Plus {
+		// 	--x-Reg-S: calc(268px + 80px);
+		// }
 	}
 
 }
@@ -64,24 +64,24 @@
 			min-width: var(--x-Reg-S);
 			max-width: var(--x-Reg-S);
 		}
-		> ._S.-min {
-			min-width: var(--x-Reg-S);
-			max-width: var(--x-Reg-S);
+		> ._XS {
+			min-width: calc(var(--x-Reg-S) - 100px);
+			max-width: calc(var(--x-Reg-S) - 100px);
 		}
 
 		>._L {
 			width: var(--x-Reg-L);
 		}
-		>._L.-min {
-			min-width: var(--x-Reg-L);
-		}
+		// >._L.-min {
+		// 	min-width: var(--x-Reg-L);
+		// }
 
 		> ._M {
 			width: var(--x-Reg-M);
 		}
-		> ._M.-min {
-			min-width: var(--x-Reg-M);
-		}
+		// > ._M.-min {
+		// 	min-width: var(--x-Reg-M);
+		// }
 
 
 

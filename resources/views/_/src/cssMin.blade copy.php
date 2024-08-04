@@ -4,7 +4,7 @@
 	font-family:inherit !important
 } -->
 *,*:before,*:after{
-	box-sizing:border-box
+	box-sizing:border-box;
 }
 :root{
 	 --index:calc(1vw + 1vh);
@@ -52,7 +52,7 @@ mark {
 .contentBox{
 	box-sizing:content-box;
 }
-.contentBox{
+.borderBoxBox{
 	box-sizing: border-box;
 }
 .inline,input,button,textarea,select,a,strong,em,span,i,time,b,nobr,abbr,mark{

@@ -13,7 +13,7 @@ return [
     'available_locales' => [
         'ru',
         'en',
-        'de'
+        // 'de'
     ],
 
 

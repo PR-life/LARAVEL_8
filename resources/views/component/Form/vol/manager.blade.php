@@ -4,7 +4,7 @@
 
 <form id="form_Manager" class="Form -L -shadow / Start" method="POST" action="{{route('sms.update')}}" enctype="multipart/form-data">
 	@csrf
-	<input id="title" class="none" type="text" name="title" value="." placeholder='.'>
+	<input class="none" type="text" name="title" value="." placeholder='.'>
 	<input id="id" class="none" type="text" name="id" value="{{$sms->id}}" placeholder='.'>
 	<input id="lang_sms" class="none" type="text" name="lang" value="{{$sms->lang ?? 'ru'}}" placeholder='.'>
 

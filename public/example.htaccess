@@ -1,9 +1,26 @@
+# $ - конец
+# .* - любой
+# [NC] - нет регистра nocase
+# HTTP_HOST - Адрес сервера, например host.com
+# REQUEST_URI - Ресурс, запрошенный в строке HTTP запроса.
+
+# %1 это имя домена --######
+
+##
+# HTTP_HOST --- /home/papka-s-saitom/public_html/razdel/podrazdel/
+# HTTP_HOST --- /razdel/podrazdel/
+# RewriteRule - Шаблон Подстановка [Флаги]
+
 <IfModule mod_rewrite.c>
     <IfModule mod_negotiation.c>
         Options -MultiViews -Indexes
     </IfModule>
 
     RewriteEngine On
+
+
+# RewriteCond %{HTTP_HOST} ^www\.(.*)$ [NC]
+# RewriteRule ^(.*)$ https://%1/$1 [R=301,L]
 
     # Handle Authorization Header
     RewriteCond %{HTTP:Authorization} .
@@ -19,4 +36,3 @@
     RewriteCond %{REQUEST_FILENAME} !-f
     RewriteRule ^ index.php [L]
 </IfModule>
-
