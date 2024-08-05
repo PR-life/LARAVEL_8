@@ -43,9 +43,13 @@
             <dt class="content-xs Grey">id_item</dt>
             <dd><span class="content-xs">{{$sms->id_item}}</span></dd>
             <dt class="content-xs Grey">date</dt>
-            <dd class="content-xs -lineHeight">{{$sms->created_at}}</dd>
+            <dd class="content-xs -lineHeight">
+                <input class="-S" name="created_at" value="{{$sms->created_at}}" placeholder=".">
+            </dd>
             <dt class="content-xs Grey">from_page</dt>
-            <dd class="content-xs -lineHeight">{{$sms->from_page}}</dd>
+            <dd class="content-xs -lineHeight">
+                <input class="-S readOnly" value="{{$sms->from_page}}" placeholder="." readonly>
+            </dd>
         </dl>
     @endcomponent
 </div>

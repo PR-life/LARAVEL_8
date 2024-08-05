@@ -1,12 +1,41 @@
-<div class="none D-Relation -on / flex bC / manager-showParamNone / Min -w2 / hidden @isset($param_seo) Roll_PC -scrollBar @endisset"> 
+<div class="none D-Relation -on W-100 / flex eC cross / manager-showParamNone / Min -w4 / hidden @isset($param_seo) Roll_PC -scrollBar @endisset"> 
     
-    <div class="mr-2">
+    <div class="W-100 right-text">
         @if($Var->tags->count())
-            <ul class="menu -tag -XXS vol-tags / lie cloud">
+            <ul class="menu -tag -XS vol-tags / lie cloud">
                 @foreach($Var->tags as $_tag)
-                    <li><a class="nowrap content-xxxs round-xs" href="{{route('admin.tag.edit', $_tag->id)}}" target="_blank">{{$_tag->name}}</a></li>
+                    <li class="{{$_tag->name_2 ? 'original' : ''}}">
+                        <a class="nowrap content-xxxs round-xs" href="{{route('admin.tag.edit', $_tag->id)}}" target="_blank">
+                            {{$_tag->name}}
+
+                            <span class="none En -on">{{$_tag->en_name}}</span>
+                        </a>
+                    </li>
+                    @if($_tag->name_2)
+                    <li class="none D-Seo -on inline-block / replica {{$_tag->name_3 ? '' : '-last'}}">
+                        <span class="a round">
+                            {{$_tag->name_2}}
+                            <span class="none En -on">{{$_tag->en_name_2}}</span>
+                        </span>
+                    </li>
+                    @endif
+                    @if($_tag->name_3)
+                    <li class="none D-Seo -on inline-block / replica {{$_tag->name_4 ? '' : '-last'}}">
+                        <span class="a round">
+                            {{$_tag->name_3}}
+                            <span class="none En -on">{{$_tag->en_name_3}}</span>
+                        </span>
+                    </li>
+                    @endif
+
+
+                    {{-- Дополнить --}}
+
                 @endforeach
             </ul>
+
+
+
         @endif
         @isset($Var->categories)
         @if($Var->categories->count())
@@ -22,7 +51,7 @@
 
 
 
-    <div class="x-HMin flex dC / Min Max -w2 / W-100">
+    <div class="x-HMin flex dC / Min Max4444 -w3">
         
 
 
@@ -40,7 +69,6 @@
             </a>
         </div>
         @endisset
-
 
         @isset($param_seo)
             @isset($Var->category)

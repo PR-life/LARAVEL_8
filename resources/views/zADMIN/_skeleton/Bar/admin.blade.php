@@ -9,7 +9,7 @@
 <div class="Abs -all / flex dC bC / index" style="padding-top: 280px;">
 
     <div class="Wings / Goo -header / _indexMax">
-        <div class="_win -t">
+        <div class="_win -t / bg-05081137">
 
             <div id="userMenu_main" class="void x-07081718 Grey">
                 @include('zADMIN.menu.Bar.user')

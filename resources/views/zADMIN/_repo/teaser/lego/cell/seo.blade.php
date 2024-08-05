@@ -36,8 +36,8 @@
 
 
     @if($Var->tags->count())
-        <div class="paragraphX2"></div>
-        <ul class="menu -tag -XS / lie cloud">
+        {{-- <div class="paragraphX2"></div> --}}
+        {{-- <ul class="menu -tag -XS / lie cloud">
             @foreach($Var->tags as $tagForeach)
                 <li class="{{$tagForeach->name_2 ? 'original' : ''}}"><a href="{{route('admin.tag.edit', $tagForeach->id)}}" target="_blank">{{$tagForeach->name}}</a></li>
                 @if($tagForeach->name_2)
@@ -56,31 +56,8 @@
                 <li class="replica {{$tagForeach->name_7 ? '' : '-last'}}"><span class="a round">{{$tagForeach->name_6}}</span></li>
                 @endif
             @endforeach
-        </ul>
+        </ul> --}}
             
-        <div class="none En -on">
-            <div class="EN paragraphX2"></div>
-            <ul class="menu -tag -XS / lie cloud">
-                @foreach($Var->tags as $tagForeach)
-                    <li class="{{$tagForeach->en_name_2 ? 'original' : ''}}"><a href="{{route('admin.tag.edit', $tagForeach->id)}}" target="_blank">{{$tagForeach->en_name}}</a></li>
-                    @if($tagForeach->en_name_2)
-                    <li class="replica {{$tagForeach->en_name_3 ? '' : '-last'}}"><span class="a round">{{$tagForeach->en_name_2}}</span></li>
-                    @endif
-                    @if($tagForeach->en_name_3)
-                    <li class="replica {{$tagForeach->en_name_4 ? '' : '-last'}}"><span class="a round">{{$tagForeach->en_name_3}}</span></li>
-                    @endif
-                    @if($tagForeach->en_name_4)
-                    <li class="replica {{$tagForeach->en_name_5 ? '' : '-last'}}"><span class="a round">{{$tagForeach->en_name_4}}</span></li>
-                    @endif
-                    @if($tagForeach->en_name_5)
-                    <li class="replica {{$tagForeach->en_name_6 ? '' : '-last'}}"><span class="a round">{{$tagForeach->en_name_5}}</span></li>
-                    @endif
-                    @if($tagForeach->en_name_6)
-                    <li class="replica {{$tagForeach->en_name_7 ? '' : '-last'}}"><span class="a round">{{$tagForeach->en_name_6}}</span></li>
-                    @endif
-                @endforeach
-            </ul>
-        </div>
  
     @endif
 

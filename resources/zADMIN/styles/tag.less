@@ -32,6 +32,15 @@
 }
 
 
+.vol-seo .menu.-tag {
+    .original::before,
+    .original::after,
+    .replica::after {
+        content: '';
+        position: absolute;        
+    }
+}
+
 .menu.-tag {
     --x-2110-w:8px;
 
@@ -67,12 +76,7 @@
     }
 
 
-    .original::before,
-    .original::after,
-    .replica::after {
-        content: '';
-        position: absolute;        
-    }
+ 
 
     .replica.-last::after {display: none;}
 
