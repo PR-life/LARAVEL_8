@@ -16,5 +16,8 @@
         "less-loader": "^11.1.0",
         "lodash": "^4.17.19",
         "postcss": "^8.1.14"
+    },
+    "dependencies": {
+        "heatmap.js": "^2.0.5"
     }
 }
