@@ -158,6 +158,33 @@
     }
 
 
+    blockquote::before {
+        background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 320 320' fill='%23a4aee6'%3e%3cpath d='M82.87 129.48S77.32 98.96 114.31 74c-12.95 0-89.7 30.52-89.7 113.74 0 33.09 27.59 59.73 61.01 58.19 29.85-1.37 54.07-25.6 55.44-55.45 1.54-33.41-25.1-61-58.19-61zm154.26 0S231.58 98.96 268.57 74c-12.95 0-89.7 30.52-89.7 113.74 0 33.09 27.58 59.73 61.01 58.19 29.85-1.37 54.07-25.6 55.44-55.45 1.54-33.41-25.1-61-58.19-61z'%3e%3c/path%3e%3c/svg%3e");
+    }
+
+    .Citation {
+        --bg-Citation: transparent;
+        // --bg-Citation-mbl: #eceef2;
+        // --c-Citation-border: hsla(0, 0%, 100%, 0.15);
+      }
+
+      .Story {
+        --bg-Story: #5566cf;
+        --c-Story-border-bg: #5566cf;
+      }
+
+
+      .Opinion::before {
+        --x-bg: 6px;
+        --x-bg-color-1: #495ecc;
+        --x-bg-color-2: #5566cf;
+        background: repeating-linear-gradient(-45deg, var(--x-bg-color-1), var(--x-bg-color-1) 25%, var(--x-bg-color-2) 25%, var(--x-bg-color-2) 50%, var(--x-bg-color-1) 50%) top left fixed;
+        background-size: var(--x-bg) var(--x-bg);
+      }
+
+
 }
+
+ 
 
 @import "./x-adham/_ol.less";

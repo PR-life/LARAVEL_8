@@ -1,4 +1,4 @@
-<div id="{{$id ?? ''}}" class="Citation {{$css_16060918 ?? '-mblPC -mbl / face face-xs face-bottom face-bottom_mbl'}}">
+<div id="{{$id_16060918 ?? ''}}" class="Citation {{$css_16060918 ?? '-mblPC -mbl / face face-xs face-bottom face-bottom_mbl'}}">
     <div class="_wrap void / {{$css_wrap_16060918 ?? ''}}">
         {!!$slot!!}
     </div>

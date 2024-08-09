@@ -20,9 +20,13 @@
 
             @include('_.zDemo.text.p.dropcap')
 
-            @include('_.zDemo.text.blockquote.vol_2')
-            @include('_.zDemo.text.blockquote.x_airM')
-            @include('_.zDemo.text.blockquote.dcZInk')
+            @include('_.zDemo.text.Opinion.index')
+            @include('_.zDemo.text.Story.index')
+            @include('_.zDemo.text.Citation.index')
+            @include('_.zDemo.text.blockquote.index')
+            {{-- @include('_.zDemo.text.blockquote.vol_2') --}}
+            {{-- @include('_.zDemo.text.blockquote.x_airM') --}}
+            {{-- @include('_.zDemo.text.blockquote.dcZInk') --}}
         
             @include('_.zDemo.Article.body')
         </div>

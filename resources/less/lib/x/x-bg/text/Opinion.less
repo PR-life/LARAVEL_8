@@ -1,0 +1,17 @@
+@charset "UTF-8";
+
+.Opinion {
+    position: relative;
+}
+
+.Opinion::before {
+    content: '';
+    position: absolute;
+    width: 100vw;
+    height: 100%;
+    background: var(--bg-Opinion);
+    top: 0px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -1;
+}

@@ -1,0 +1,59 @@
+@charset "UTF-8";
+
+
+.Story {
+    --Story-border-size: 15px;
+}
+
+
+.Story > ._wrap {
+    > ._tail {
+        left: calc(var(--space)*2 + var(--space));
+        bottom: calc(100% + 1px);
+
+        border:var(--Story-border-size) solid transparent;
+        // width: var(--Story-border-size);
+        // height: var(--Story-border-size);
+        // var(--c-Story-border-bg)
+        border-width: var(--Story-border-size) 0 0 var(--Story-border-size);
+        border-color: transparent transparent transparent var(--bg-Story);
+    }
+ 
+    > ._tail::before,
+    > ._tail::after {
+            content: "";
+            position: absolute;
+            display: block;
+            width: 0;
+            height: 0;
+            border:var(--Story-border-size) solid transparent;
+      }
+
+
+    > ._tail::before {
+        right: 0;
+        bottom: 0;
+        border-width: var(--Story-border-size) 0 0 var(--Story-border-size);
+        border-color: transparent transparent transparent var(--c-Story-border);
+      }
+
+      > ._tail::after {
+        // opacity: 0;
+        right: .2px;
+        bottom: -1px;
+        border-width: calc(var(--Story-border-size) - 1px) 0 0 calc(var(--Story-border-size) - 1px);
+        border-color: transparent transparent transparent var(--bg-Story);
+      }
+
+
+
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+
+}
+
+
+@media screen and (max-width: @w-menu-2) {
+
+}

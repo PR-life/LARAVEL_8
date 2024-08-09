@@ -1,6 +1,11 @@
-<figure class="blockquote">
-    <blockquote>
-        <p>Hanc ego cum a philosophis compluribus permulta dicantur, cur verear, ne interiret at vero eos censes aut reiciendis voluptatibus maiores alias consequatur aut reiciendis voluptatibus maiores alias consequatur.</p>
-    </blockquote>
-    <figcaption>— John Smith <a href="https://imperavi.com/article/examples/articles/article-01/">link</a></figcaption>
-</figure>
+<blockquote>
+    <p>«Единственный способ делать великие дела — любить то, что вы делаете».</p>
+    <footer>— <cite>Стив Джобс</cite></footer>
+</blockquote>
+
+{{-- <blockquote>
+    <p>«Неважно, насколько медленно вы идете, главное — не останавливаться».</p>
+    <footer>— Конфуций, <cite>Высказывания великих мудрецов</cite></footer>
+</blockquote> --}}
+
+

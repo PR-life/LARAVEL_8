@@ -20,7 +20,7 @@
 			</div>
 		</div>		
 	</div>
-	@include('_Wrap.Rail.lego.name')
+	@include('_wrap.Rail.lego.name')
 </div>
 
 

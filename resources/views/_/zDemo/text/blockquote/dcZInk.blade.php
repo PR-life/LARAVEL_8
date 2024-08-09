@@ -1,4 +1,4 @@
-<figure class="blockquote vol-center x-airM / dcZInk">
+<figure class="blockquote vol-center x-airM / dcZInk relative">
     <blockquote>
         <div class="h2 / family-2">Забудьте и не думайте о том, что самопрезентация - это выпячивание себя напоказ</div>
     </blockquote>
@@ -9,7 +9,8 @@
     .dcZInk {
             padding: 64px 90px 80px;
         }
-    .dcZInk::before, .dcZInk::after {
+    .dcZInk::before,
+    .dcZInk::after {
       position: absolute;
       content: "";
       width: 20%;

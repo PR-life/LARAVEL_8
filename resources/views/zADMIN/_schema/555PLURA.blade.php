@@ -34,8 +34,8 @@ $arrCSS = [
 @endpush
 
 @push('bottomAfter')
-    <div class="Plot -h"></div>
-    <div class="Plot -h"></div>
+    <div class="Plot plot-h"></div>
+    <div class="Plot plot-h"></div>
 @endpush
 
 @push('svg')
