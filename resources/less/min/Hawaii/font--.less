@@ -11,7 +11,7 @@ h1, .h1 {
 
 h2, .h2, h3 {
     font-size: var(--rem-h2);
-    line-height: calc(var(--rem-h2) * 1.2);
+    line-height: calc(var(--rem-h2) * var(--line-spacing));
 }
 
 h2.wide,
@@ -20,9 +20,16 @@ h3.wide {
     line-height: calc(var(--rem-h2) * 1.6);
 }
 
+h2.widest,
+.h2.widest,
+h3.widest {
+    line-height: calc(var(--rem-h2) * 2);
+}
+
+
 .h3 {
     font-size: var(--rem-h3);
-    line-height: ~"calc(var(--rem-h3) * 1.2)";
+    line-height: ~"calc(var(--rem-h3) * var(--line-spacing))";
 }
 
 
@@ -38,7 +45,7 @@ h3.wide {
 @media screen and (max-width: @w-menu-2) {
 	summary.-M {
 		font-size: calc(var(--rem-h) + 1vw);
-		line-height: calc((var(--rem-h) + 1vw) * 1.2);
+		line-height: calc((var(--rem-h) + 1vw) * var(--line-spacing));
 	}
 }
 
@@ -51,7 +58,7 @@ h3.wide {
 		line-height: calc(1.5vw * 1.4);
 	}
 	blockquote.-lineHeight p {
-		line-height: calc(1.5vw * 1.2);
+		line-height: calc(1.5vw * var(--line-spacing));
 	}
 }
 
@@ -61,7 +68,7 @@ h3.wide {
 		line-height: calc(var(--rem-h) * 1.8);
 	}
 	blockquote.-lineHeight p {
-		line-height: calc(var(--rem-h) * 1.2);
+		line-height: calc(var(--rem-h) * var(--line-spacing));
 	}
 }
 
@@ -115,7 +122,7 @@ h2.-lineHeight, .h2.-lineHeight, h3.-lineHeight {
 }
 
 .h.-lineHeight {
-    line-height: ~"calc(var(--rem-h) * 1.2)";
+    line-height: ~"calc(var(--rem-h) * var(--line-spacing))";
 }
 
 .hMin {
@@ -129,7 +136,7 @@ h2.-lineHeight, .h2.-lineHeight, h3.-lineHeight {
 }
 
 .hMin.-lineHeight {
-    line-height: ~"calc(var(--rem-h-min) * 1.2)";
+    line-height: ~"calc(var(--rem-h-min) * var(--line-spacing))";
 }
 
 
@@ -177,7 +184,7 @@ summary {
 
 
 summary {
-	line-height:~"calc(var(--rem-p)*1.2)";
+	line-height:~"calc(var(--rem-p)*var(--line-spacing))";
 	* {font-style: normal;}
 }
 
@@ -307,7 +314,7 @@ input, textarea {
 legend,
 .Bread *,
 .content-s.slim {
- 	line-height: ~"calc(var(--font) * 1.2)";
+ 	line-height: ~"calc(var(--font) * var(--line-spacing))";
  }
 
 
@@ -322,8 +329,11 @@ legend,
     line-height: calc(var(--font) + 1px + 5px);
 }
 
-.content-m.-lineHeightM {
-	line-height: ~"calc(var(--rem-p) * 1.75)";
+.content-m.wide {
+	line-height:calc(var(--rem-p) * 1.75);
+}
+.content-m.widest {
+	line-height:calc(var(--rem-p) * 2);
 }
 
 .content-l.-lineHeight {
@@ -334,7 +344,7 @@ figcaption,
 .Form label,
 table tr th,
 table tr td {
-    line-height: ~"calc(var(--font) * 1.2)";	
+    line-height: ~"calc(var(--font) * var(--line-spacing))";	
 }
 
 

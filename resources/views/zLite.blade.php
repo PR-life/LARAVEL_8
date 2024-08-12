@@ -70,7 +70,7 @@
 
 @include('_._skeleton.bodyEnd')
 @include('_schema._lego.afterMilk')
-@include('zTHIS.analytica.add_footer')
+{{-- @include('zTHIS.analytica.add_footer') --}}
 
  </body>
 </html>

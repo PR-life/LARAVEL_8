@@ -92,6 +92,11 @@ svg{
 	width:1.5rem;
 	height:1.5rem
 }
+svg.-auto{
+	width:auto;
+	height:auto;
+}
+
 
 
 .autoSize,.autoW{
