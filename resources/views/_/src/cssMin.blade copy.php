@@ -433,6 +433,9 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.block_60{
 		display:block
 	}
+	.flex_60 {
+		display:flex !important;
+	}
 }
 
 @media (min-width:799px) and (max-width:1080px){

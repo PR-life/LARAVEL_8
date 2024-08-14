@@ -1,137 +1,120 @@
 // самостоятельный тег [check-localstorage='filter_tags_1' data-check='active' param='Block']
 let x09081525 = document.querySelectorAll("[check-localstorage]")
-
-// let x09081525 = document.querySelectorAll("[localstorage-check]")
 let x02051653 = document.querySelectorAll("[localstorage-id]")
 let x10051101 = document.querySelectorAll("[localstorage-picking]")
 let x19072257 = document.querySelectorAll("[localstorage-controlCss]")
 
 
+// [check-localstorage]
+x09081525.forEach(item => {
+    const storageKey = item.getAttribute("check-localStorage");
+    const arr = getLocalStorageData(storageKey);
+    const check = item.getAttribute('data-check');
+    const param = item.getAttribute('param');
+    const paramDef = item.getAttribute('paramDef');
+    const className = param || check;  // Приоритет на param, если он существует
 
-// console.log(x09081525)
-
-x09081525.forEach( item => {
-	let arr = JSON.parse(localStorage.getItem(item.getAttribute("check-localStorage")))
-		check = item.getAttribute('data-check'),
-		param = item.getAttribute('param');
-
-		// console.log(item)
-		// console.log(arr)
-		// console.log(check)
-		// console.log(param)
- 
-
-	if(arr != null && arr.includes(check)) {
-
-
-		if(item.hasAttribute('localstorage-reverse')) {
-			if(param) {
-				// console.log(param)
-				item.classList.remove(param);
-			} else {
-				// console.log(check)
-				item.classList.remove(check);
-			}
-		} else {
-			if(param) {
-				// console.log(param)
-				item.classList.add(param);
-			} else {
-				// console.log(check)
-				item.classList.add(check);
-			}
-		}
-
+	// console.log(arr);
+    if (arr && arr.includes(check)) {
+        const shouldAddClass = !item.hasAttribute('localstorage-reverse');
+        toggleClass(item, className, shouldAddClass);
+    } else if(paramDef) {
+		toggleClass(item, paramDef, true);
 	}
-
-
-
-	// if(item.hasAttribute('data-check')) {
-
-	// 	let x = item.getAttribute('data-check');
-	// for (let i in arr){
-
-	// 	item.classList.toggle(x);
-	// }
-
-
-	// } else {
-		// for (let i in arr){
-		// 	console.log(arr[i])
-		// 	item.classList.toggle(arr[i]);
-		// }
-	// }
-
-  
- })
-
-
- 
+});
 
 
 
 
+// x09081525.forEach( item => {
+// 	let arr = JSON.parse(localStorage.getItem(item.getAttribute("check-localStorage")))
+// 		check = item.getAttribute('data-check'),
+// 		param = item.getAttribute('param');
 
-
-//  x09081525.forEach( item => {
-// 	let arr = JSON.parse(localStorage.getItem(item.getAttribute("check-localstorage")))
-
-
-// 	// console.log(arr)
- 
-// 	if(item.hasAttribute('data-check')) {
-
-// 		let x = item.getAttribute('data-check');
-// 		let param = item.getAttribute('param');
-		
- 
-// 		// console.log(param)
-// 		// console.log(arr.includes(x))
 // 		// console.log(item)
+// 		// console.log(arr)
+// 		// console.log(check)
+// 		// console.log(param)
+ 
 
-// 		if(arr.includes(x)) {
-// 			item.classList.add(param ?? x);
+// 	if(arr != null && arr.includes(check)) {
+
+
+// 		if(item.hasAttribute('localstorage-reverse')) {
+// 			if(param) {
+// 				// console.log(param)
+// 				item.classList.remove(param);
+// 			} else {
+// 				// console.log(check)
+// 				item.classList.remove(check);
+// 			}
+// 		} else {
+// 			if(param) {
+// 				// console.log(param)
+// 				item.classList.add(param);
+// 			} else {
+// 				// console.log(check)
+// 				item.classList.add(check);
+// 			}
 // 		}
 
-// 		// console.log(item)
-
 // 	}
-
-//  })
-
+// })
 
 
-x02051653.forEach( item => {
-   let arr = JSON.parse(localStorage.getItem(item.id))
 
 
-	// console.log(arr)
-	// console.log(check)
-	// console.log(param)
-	// console.log(item)
+// [localstorage-id]
+x02051653.forEach(item => {
+    // Определяем ключ для localStorage: используем либо атрибут, либо ID элемента
+    const storageKey = item.getAttribute("localStorage-id") || item.id;
+    const arr = getLocalStorageData(storageKey);
 
-//    console.log(item.getAttribute("localStorage-id") == 'active')
+    // Если атрибут "localStorage-id" равен 'switch', сохраняем предыдущее значение в "data-last"
+    if (item.getAttribute("localStorage-id") === 'switch') {
+        item.setAttribute("data-last", localStorage.getItem(item.id));
+    } else {
+        // Проверка наличия атрибута "check-localstorage" и того, что массив не пустой
+        if (item.hasAttribute("check-localstorage") && arr && arr.length > 0) {
+            toggleClasses(item, item.getAttribute("check-localstorage"));
+        } else {
+            toggleClasses(item, arr);
+        }
+    }
+});
 
-	if(item.getAttribute("localStorage-id") == 'switch') {
 
-		item.setAttribute("data-last", localStorage.getItem(item.id));
-	}
 
-	else {
-		//    console.log(localStorage.getItem(item.id) == [])
-		if(item.hasAttribute("check-localstorage") && arr != null && arr.length > 0) {
-			// console.log(item)
-			item.classList.toggle(item.getAttribute("check-localstorage"));
-		} else {
-			// console.log(arr)
-			// console.log(arr != null && arr.length > 0)
-			for (let i in arr){
-				item.classList.toggle(arr[i]);
-			}
-		}
-	}
+// x02051653.forEach( item => {
+
+//    let arr = JSON.parse(localStorage.getItem(item.getAttribute("localStorage-id") ?? item.id))
+
+// 	// console.log(arr)
+// 	// console.log(check)
+// 	// console.log(param)
+// 	// console.log(item)
+
+// //    console.log(item.getAttribute("localStorage-id") == 'active')
+
+// 	if(item.getAttribute("localStorage-id") == 'switch') {
+// 		item.setAttribute("data-last", localStorage.getItem(item.id));
+// 	}
+// 	else {
+// 		//    console.log(localStorage.getItem(item.id) == [])
+// 		if(item.hasAttribute("check-localstorage") && arr != null && arr.length > 0) {
+// 			console.log(1)
+// 			// console.log(item)
+// 			item.classList.toggle(item.getAttribute("check-localstorage"));
+// 		} else {
+// 			// console.log(arr)
+// 			// console.log(arr != null && arr.length > 0)
+// 			for (let i in arr){
+// 				item.classList.toggle(arr[i]);
+// 			}
+// 		}
+// 	}
  
-})
+// })
 
 
 x10051101.forEach( item => {
@@ -199,15 +182,42 @@ x19072257.forEach( item => {
 
 		
 	} 
-	
-
-
-
-
-	 
 
 	// console.log(localStorageData)
 	// console.log(param)
 
-	
 })
+
+
+// Функция для безопасного получения и парсинга данных из localStorage
+function getLocalStorageData(key) {
+    try {
+        const data = localStorage.getItem(key);
+        return data ? JSON.parse(data) : null;
+    } catch (error) {
+        console.error(`Ошибка при парсинге данных из localStorage по ключу "${key}":`, error);
+        return null;
+    }
+}
+
+// Функция для изменения классов в зависимости от условий
+function toggleClass(item, className, shouldAdd) {
+    if (shouldAdd) {
+		// console.log('add');
+        item.classList.add(className);
+    } else {
+		// console.log('remove');
+        item.classList.remove(className);
+    }
+}
+
+// Функция для переключения классов на основе массива
+function toggleClasses(item, classes) {
+    if (Array.isArray(classes)) {
+        classes.forEach(className => {
+            item.classList.toggle(className);
+        });
+    } else if (classes) {
+        item.classList.toggle(classes);
+    }
+}
