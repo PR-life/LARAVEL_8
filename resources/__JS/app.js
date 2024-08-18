@@ -89,6 +89,9 @@ function fooListenerMousedown(e) {
 
 function fooListenerClick(param) {
 
+	// мой Оец ацу где ты был
+
+
 	// console.log(param)
 	// console.log(startX);
 	// console.log(param.clientX);

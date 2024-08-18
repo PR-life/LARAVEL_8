@@ -1,25 +1,28 @@
 import { oX } from '../_sherpa/css/oXoY.js';
 import { oY } from '../_sherpa/css/oXoY.js';
 import { thisOXOY } from '../_sherpa/css/oXoY.js';
-import { thisOXOYsolo } from '../_sherpa/css/oXoY.js';
 
 
-oX(document.getElementById('Solar'))
-oY(document.getElementById('Solar'))
+// const solarElement = document.getElementById('Solar');
+const solarElementXY = document.querySelectorAll(".SOLAR");
 
+if (solarElementXY.length > 0) {
+    // Проходимся по каждому элементу в коллекции и вызываем функции oX и oY
+    solarElementXY.forEach(element => {
+        const relativeToElement = element.getAttribute('data-relativeToElement') === 'true';
 
-let Solar = document.querySelectorAll(".Solar");
-console.log(Solar)
-// Solar.forEach(elem => elem.addEventListener("click", linkClick));
+        oX(element, relativeToElement); 
+        oY(element, relativeToElement);
+    });
+} else {
+    console.warn("No elements with class 'SOLAR' found.");
+}
 
-Solar.forEach(
-	// item => console.log(item.getBoundingClientRect().y)
-	item => thisOXOY(item)
-	// thisOXOY(Solar)
-);
+// Получение всех элементов с классом 'Solar'
+const solarElements = document.querySelectorAll(".Solar");
 
-// Solar.forEach(
-// 	// item => console.log(item.getBoundingClientRect().y)
-// 	item => thisOXOYsolo(item)
-// 	// thisOXOY(Solar)
-// );
+if (solarElements.length > 0) {
+    solarElements.forEach(item => thisOXOY(item));
+} else {
+    // console.warn("No elements with class 'Solar' found.");
+}
