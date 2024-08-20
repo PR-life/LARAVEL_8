@@ -17,4 +17,7 @@
             {!!$slot!!}
         </div>
     </div>
+    @isset($html)
+        {!!$html!!}
+    @endisset
 </div>

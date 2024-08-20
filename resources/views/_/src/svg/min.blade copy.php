@@ -9,23 +9,7 @@
 <symbol id="svg-arrow_slim" fill="none" viewBox="0 0 16 16">
 	<path clip-rule="evenodd" d="M11.566 7.926L6.241 13.25l-1.06-1.06 4.257-4.258-4.254-4.2 1.054-1.067 5.328 5.26z" fill="currentColor" fill-rule="evenodd"></path>
 </symbol>
-
-<symbol id="svg-arrow-3" fill="currentColor" viewBox="0 0 28 10">
-	<path fill-rule="evenodd" d="M21.253.336a1 1 0 0 0 .082 1.411l2.535 2.254H1a1 1 0 1 0 0 2h22.87l-2.534 2.252a1 1 0 1 0 1.328 1.495l4.5-4a1 1 0 0 0 0-1.494l-4.5-4.001a1 1 0 0 0-1.411.083z" clip-rule="evenodd"></path> 
-</symbol>
-
-<!-- <svg xmlns="http://www.w3.org/2000/svg" width="28" height="10" fill="#fff" class="fill"> -->
-
-<symbol id="svg-arrow-2" fill="currentColor" viewBox="0 0 16 16">
-	<path d="M16 7H3.8l5.6-5.6L8 0 0 8l8 8 1.4-1.4L3.8 9H16z"></path>
-</symbol>
-
-<symbol id="svg-arrow-4" viewBox="0 0 57 8">
-	<path d="M56.354 4.354a.5.5 0 000-.708L53.172.464a.5.5 0 10-.707.708L55.293 4l-2.828 2.828a.5.5 0 10.707.708l3.182-3.182zM56 3.5H0v1h56v-1z" fill="currentColor"></path>	
-</symbol>
-<symbol id="svg-arrow-3_Zleft" viewBox="0 0 57 8">
-	<path d="m56.554,4.354a0.5,0.5 0 0 0 0,-0.708l-3.182,-3.182a0.5,0.5 0 1 0 -0.707,0.708l2.828,2.828l-2.828,2.828a0.5,0.5 0 1 0 0.707,0.708l3.182,-3.182zm-0.354,-0.854l-56,0l0,1l56,0l0,-1z" fill="currentColor" id="svg_1" transform="rotate(-180, 28.4504, 4)"></path>
-</symbol>
+ 
 
 <symbol id="svg-email" viewBox="0 0 50 34">
 	<path fill="currentColor" d="M44.1,0H3.9A3.84,3.84,0,0,0,0,3.9V30.2A3.82,3.82,0,0,0,3.9,34H44.2a3.9,3.9,0,0,0,3.9-3.9V3.9A4,4,0,0,0,44.1,0ZM4.1,1.8H44a2.92,2.92,0,0,1,.9.2l-19,16.1a3,3,0,0,1-3.6,0L3.2,2A1.49,1.49,0,0,1,4.1,1.8ZM46.2,29.9a2.26,2.26,0,0,1-2.3,2.3H4.1a2.26,2.26,0,0,1-2.3-2.3V4.1A2.28,2.28,0,0,1,2.1,3L17.6,16.1h-.1L8.7,24.3a.78.78,0,0,0,0,1.1.73.73,0,0,0,.6.2.76.76,0,0,0,.5-.2l8.8-8.2c.1-.1.1-.1.1-.2l2.5,2.1a4.19,4.19,0,0,0,2.8,1,4,4,0,0,0,2.8-1l2.1-1.7,8.6,8a.76.76,0,0,0,.5.2,1.42,1.42,0,0,0,.6-.2.78.78,0,0,0,0-1.1l-8.4-7.9L46,3a1.93,1.93,0,0,1,.3,1V29.9Z"></path>

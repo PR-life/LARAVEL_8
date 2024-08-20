@@ -274,6 +274,12 @@ ul.slim-s, ol.slim-s {
 .margin.top.XL {margin-top: ~"calc(var(--margin)*3)";}
 .padding.top.XL {padding-top: ~"calc(var(--padding)*3)";}
 
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.padding.top.L_PC {padding-top: ~"calc(var(--padding)*2)";}
+}
+@media (min-width: @w-beyond-plus) and (max-width: @w-max) {
+	.padding.top.L_beyond {padding-top: ~"calc(var(--padding)*2)";}
+}
 //
 
 .margin.bottom {margin-bottom: var(--padding);}

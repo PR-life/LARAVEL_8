@@ -19,6 +19,24 @@
 	width: 0;
 }
 
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-Box + 80px * 2 + 16px) {
+
+	.Box.Roll_PC.-edge,
+	.Box.Roll_PC.-edgePC {
+		padding-left: var(--Edge);
+	}
+
+	.Box.Roll_PC.-edgeS,
+	.Box.Roll_PC.-edge-S_PC {
+		padding-left: calc(var(--Edge)*.5);
+	}
+
+}
+
+
+
 @media screen and (max-width:@w-menu-2) {
 
 	.Roll_PC.-scrollBarPC,
@@ -115,17 +133,7 @@
         padding-top:2rem;
         padding-bottom:2rem;
     }
-	
-	.Roll_PC.-edge,
-	.Roll_PC.-edgePC {
-		padding-left: var(--Edge);
-	}
-
-	.Roll_PC.-edgeS,
-	.Roll_PC.-edge-S_PC {
-		padding-left: calc(var(--Edge)*.5);
-	}
-	
+		
 }
 
 @media (min-width:@w-menu-2-plus) and (max-width:@metrika-100) {

@@ -1,3 +1,3 @@
-<div class="Ico -XS / rotate-r contentBox">
+<div class="none_60 Ico -XS / rotate-r contentBox">
     @svg('arrow')
 </div>

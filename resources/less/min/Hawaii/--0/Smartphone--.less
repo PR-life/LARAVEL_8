@@ -1,17 +1,19 @@
 @charset "UTF-8";
 
-.Smartphone {
-	--Smartphone-W:33em;
-	// --Smartphone-W:calc(var(--Smartphone-H)/2.16);
-	// --Smartphone-H:70vmin;
-	// --Smartphone-W:calc(var(--Smartphone-H)/2.16);
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+ 
+	.Smartphone {
+		--Smartphone-W:33em;
+		// --Smartphone-W:calc(var(--Smartphone-H)/2.16);
+		// --Smartphone-H:70vmin;
+		// --Smartphone-W:calc(var(--Smartphone-H)/2.16);
+		font-size: .6vw;
+		width: var(--Smartphone-W);
+		aspect-ratio: 21/46;
+		// min-width: 280px;
+		// height: var(--Smartphone-H);
+	}
 
-	font-size: .6vw;
-	width: var(--Smartphone-W);
-	aspect-ratio: 21/46;
-	
-	// min-width: 280px;
-	// height: var(--Smartphone-H);
 }
 
 // .Smartphone,

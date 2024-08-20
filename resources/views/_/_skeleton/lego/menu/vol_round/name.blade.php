@@ -1,12 +1,16 @@
 <div class="_item W-100 flex cI W-100 / Hover pointer / _Axon / yesEvents relative index x-first" data-click data-css data-toggle="On Off" data-node='wrap_MenuRound'>
     <div class="flex eC / W-100 / _Axon / space-left space-rightS / relative">
-        <span class="Burger / flex cI cC / none flex_60">
+        <span class="Burger x-burger / flex cI cC / none flex_60">
             <span class="_burger">
                 <span class="_1 noEvents"></span>
                 <span class="_2 noEvents"></span>
                 <span class="_3 noEvents"></span>
             </span>
         </span>
+        <div class="none / space ico-close">
+            <div class="Ico">@svg('close')</div>
+        </div>
+
         <div class="x-name pl-2 _Axon / flex cI bC W-100 / none_60">
             Меню
             <div class="flex cI / Axon">
