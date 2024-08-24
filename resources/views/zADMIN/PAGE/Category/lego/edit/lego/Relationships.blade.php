@@ -1,7 +1,9 @@
 @component('zADMIN._wrap.Relationships.index')
     @component('zADMIN._wrap.Relationships.line')
         <div class="Min -w5 / wrap-relationship -solo / round">
-            @include('zADMIN._wrap.select.name',['Var' => 'Родитель'])
+            @component('zADMIN._wrap.select.name',['Var' => 'Родитель'])
+                @include('zADMIN._wrap.select.name_manager')
+            @endcomponent
             @component('zADMIN._wrap.select.category.main', ['id' => 'category'])
                 @include('_._brick.select.category.edit.main',['Categories' => $categories, 'Var' => $category->category_id])
             @endcomponent

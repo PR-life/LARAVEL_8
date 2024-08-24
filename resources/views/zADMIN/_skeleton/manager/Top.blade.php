@@ -16,6 +16,8 @@
     <div class="flex cI / cross-xxs">
     
         @include('zADMIN._skeleton.manager.brick.btn_shield')
+        @include('zADMIN._skeleton.manager.brick.btn_frontend')
+        @include('zADMIN._skeleton.manager.brick.btn_backend')
         @include('zADMIN._skeleton.manager.brick.btn_lite')
     
         <div class="_last">

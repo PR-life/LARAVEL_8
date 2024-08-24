@@ -19,26 +19,38 @@ class IndexController extends BaseController
         ->orderBy('name', 'asc')->get();
 
 
-        
-
 		$x = $request->validated();
-		$filter = app()->make(CategoryFilter::class, ['queryParams' => array_filter($x)]);
 
-        // dd($filter);
-        $Categories = Category::filter($filter)
-            ->whereNull('category_id')
-            ->with('childrenCategories')
-            ->orderBy('order', 'asc')
-            ->orderBy('created_at', 'DESC')
-            ->paginate(100);
- 
-        if(!$Categories->total()) {
- 
+       if(count($x)) {
+
+            $filter = app()->make(CategoryFilter::class, ['queryParams' => array_filter($x)]);
+
+            // dd($filter);
             $Categories = Category::filter($filter)
+                ->whereNull('category_id')
+                ->with('childrenCategories')
                 ->orderBy('order', 'asc')
                 ->orderBy('created_at', 'DESC')
                 ->paginate(100);
-        }
+    
+            if(!$Categories->total()) {
+    
+                $Categories = Category::filter($filter)
+                    ->orderBy('order', 'asc')
+                    ->orderBy('created_at', 'DESC')
+                    ->paginate(100);
+            }
+       } else {
+        // dd(111);
+            $Categories = Category::whereNull('category_id')->with('childrenCategories')->get();
+       }
+
+ 
+ 
+
+
+
+
 
 
 
@@ -52,9 +64,6 @@ class IndexController extends BaseController
 
         $_request = $this->service->_request($request);
         
-
-
         return view('zADMIN.PAGE.Category.index', compact('Categories','categories','_request'));
-        // return view('zADMIN.PAGE.Category.index', compact('Categories','categories','name','page','tag_id','category_id'));
     }
 }

@@ -9,40 +9,12 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']], function () {
     Route::get('/', function() {return view('zADMIN.Morda');})->name('morda');
 
-
-
-
  
-
-
-    
- 
-
-
- 
-
-
- 
- 
-
-
-    //
-
-
-
-
- 
-    
-    ////
 
     Route::group(['namespace' => 'CRM', 'prefix' => 'crm'], function(){
 
 
- 
-
-
     Route::group(['namespace' => 'OOGWAY', 'prefix' => 'oogway'], function(){
-
 
         Route::group(['namespace' => 'Manager', 'prefix' => 'manager'], function(){
             Route::get('/', 'IndexController')->name('oogway.manager.index');
@@ -75,10 +47,6 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
             });
         });
 
-
-
-
-
         Route::get('/morda', 'IndexController')->name('oogway.morda');
         Route::get('/{oogway}', 'ShowController')->name('oogway.show');
 
@@ -91,83 +59,4 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
 
 
 
-
-    Route::group(['namespace' => '_sherpa', 'prefix' => 'sherpa'], function(){
-
-
-        Route::group(['namespace' => 'Excel', 'prefix' => 'excel'], function(){
-
-            Route::get('/', 'IndexController')->name('sherpa.excel.index');
-            Route::get('/export', 'ExportController')->name('sherpa.excel.export');
-            // Route::get('/', [App\Http\Controllers\ADMIN\sherpa\Excel\IndexController::class, 'index'])->name('admin.sherpa.excel.index');
-            // Route::get('/export', [App\Http\Controllers\ADMIN\sherpa\Excel\export::class, 'index'])->name('admin.sherpa.excel.export');
-
-
-        });
-
-
-    });
-
 });
-
-require __DIR__.'/CRM/web.php';
-require __DIR__.'/sherpa/web.php';
- 
- 
-
-
-
-// Route::group(['namespace' => 'ADMIN', 'prefix' => 'admin', 'middleware' => ['auth','admin']], function () {
-    
-//     Route::get('/', function () {
-//         return view('zADMIN.Morda');
-//     })->name('admin.morda');
-
-
-// });
-
-
- 
-
- 
-
-
-    
-
-    // Route::group(['namespace' => 'postman', 'prefix' => 'postman'], function(){
-        
-    //     Route::get('/', 'IndexController')->name('admin.postman.index');
-
-	// 	Route::group(['namespace' => 'Post', 'prefix' => 'post'], function(){
-	// 		Route::get('/', 'IndexController')->name('admin.postman.post.index');
-	// 		Route::get('/{postmanItem}/edit', 'EditController')->name('admin.postman.post.edit');
-	// 		Route::patch('/{postmanItem}', 'UpdateController')->name('admin.postman.post.update');
-	// 		Route::delete('/{postmanItem}', 'DeleteController')->name('admin.postman.commentpost.delete');		
-	// 	});
-
-	// 	Route::group(['namespace' => 'Paper', 'prefix' => 'paper'], function(){
-	// 		Route::get('/', 'IndexController')->name('admin.postman.paper.index');
-	// 		Route::get('/{postmanItem}/edit', 'EditController')->name('admin.postman.paper.edit');
-	// 		Route::patch('/{postmanItem}', 'UpdateController')->name('admin.postman.paper.update');
-	// 		Route::delete('/{postmanItem}', 'DeleteController')->name('admin.postman.commentpaper.delete');		
-	// 	});
-
-	// 	// Route::group(['namespace' => 'Course', 'prefix' => 'course'], function(){
-	// 	// 	Route::get('/', 'IndexController')->name('admin.postman.course.index');
-	// 	// 	Route::get('/{postmanCourse}/edit', 'EditController')->name('admin.postman.course.edit');
-	// 	// 	Route::patch('/{postmanCourse}', 'UpdateController')->name('admin.postman.course.update');
-	// 	// 	Route::delete('/{postmanCourse}', 'DeleteController')->name('admin.postman.course.delete');
-	// 	// });
-
-
-    //     // Route::get('/create', 'CreateController')->name('admin.postman.create');
-    //     // Route::post('/', 'StoreController')->name('admin.postman.store');
-    //     // Route::get('/{post}', 'ShowController')->name('admin.postman.show');
-    //     // Route::get('/{sms}/edit', 'EditController')->name('admin.postman.edit');
-    //     // Route::patch('/{sms}', 'UpdateController')->name('admin.postman.update');
-    //     // Route::delete('/{sms}', 'DeleteController')->name('admin.postman.delete');
-    // });
-
-
-
-    

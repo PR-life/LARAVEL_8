@@ -49,6 +49,8 @@
 
 //
 
+.vol-frontend .D-Frontend.-on,
+.vol-backend .D-Backend.-on,
 .vol-relation .D-Relation.-on,
 .vol-db .D-Db.-on,
 .vol-status .D-Status.-on,
@@ -57,6 +59,8 @@
 
 .vol-seo .D-Seo.-on.inline-block {display: inline-block;}
 
+.vol-frontend .D-Frontend.-off,
+.vol-backend .D-Backend.-off,
 .vol-relation .D-Relation.-off,
 .vol-db .D-Db.-off,
 .vol-status .D-Status.-off,
@@ -65,7 +69,61 @@
 
 
 
+#wrap_Relationships .vol-backend,
+#wrap.vol-backend .Table {
+    .group-frontend {
+        display: none;
+    } 
 
+    .btn_backend {
+        opacity: 1;
+    }
+}
+
+#wrap_Relationships .vol-frontend,
+#wrap.vol-frontend .Table {
+    .group-backend {
+        display: none;
+    }
+    .btn_frontend {
+        opacity: 1;
+    }
+}
+
+
+#wrap_Relationships .vol-backend,
+#wrap_Relationships .vol-frontend {
+    .group-none {
+        display: none;
+    }
+}
+
+.btn_backend,
+.btn_frontend {
+    opacity: .2;
+}
+
+#wrap_Relationships .vol-backend.vol-frontend{
+    .group-none {
+        display: block;
+    }
+}
+
+
+
+#wrap.vol-backend {
+    .group-none,
+    .group-frontend {
+        display: none;
+    }
+}
+
+#wrap.vol-frontend {
+    .group-none,
+    .group-backend {
+        display: none;
+    }
+}
 
 //
 
@@ -84,7 +142,9 @@
 //
 #Table_index.y-backendOff .triggerGap .item.group-backend,
 #Table_index.y-frontendOff .triggerGap .item.group-frontend,
-#Table_index.y-categoryChildrenLevelOneOff .triggerGap .children.-lvl_1 > .item,
+#Table_index.y-categoryChildrenLevelThreeOff .triggerGap .children.-lvl_2 > .item,
+#Table_index.y-categoryChildrenLevelTwoOff .triggerGap .children.-lvl_1 > .item,
+#Table_index.y-categoryChildrenLevelOff .triggerGap .children > .item,
 #Table_index.y-categoryLevelOneOff .triggerGap .item.parent,
 #Table_index.y-mockupLinkOff .triggerGap .item.mockup-link,
 #Table_index.y-pause .triggerGap .item.pause,
@@ -95,6 +155,15 @@
     overflow: hidden;
     min-height: 0;
 }
+
+#body #Table_index {
+    .x-open .item{
+        height: auto !important;
+    }
+}
+ 
+
+
 
 #body.SATIRA .Table > .item {
     transition: min-height linear .1s;

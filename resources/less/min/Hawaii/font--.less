@@ -90,12 +90,12 @@ h3.widest {
 }
 
 h1.-vw, .h1.-vw {
-	font-size: clamp(calc(var(--rem-h2) + 2px),var(--rem-h1),calc(var(--indexW)*2.5));
-	line-height: clamp(calc(var(--rem-h2)*1.4 + 2px),calc(var(--rem-h1)*1.4),calc(var(--indexW)*2.5*1.4));
+	font-size: clamp(calc(var(--rem-h2) + 2px),var(--rem-h1),calc(var(--indexW)*var(--rem-h1-ratio)));
+	line-height: clamp(calc(var(--rem-h2)*1.4 + 2px),calc(var(--rem-h1)*1.4),calc(var(--indexW)*var(--rem-h1-ratio)*1.4));
 }
 
 h1.-lineHeight, .h1.-lineHeight, h1.-vw.-lineHeight, .h1.-vw.-lineHeight {
-    line-height: clamp(calc(var(--rem-h2)*1.1 + 2px),calc(var(--rem-h1)*1.1),calc(var(--indexW)*2.5*1.1));
+    line-height: clamp(calc(var(--rem-h2)*1.1 + 2px),calc(var(--rem-h1)*1.1),calc(var(--indexW)*var(--rem-h1-ratio)*1.1));
 }
 
 h2.-vw, .h2.-vw {

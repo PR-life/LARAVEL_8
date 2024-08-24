@@ -17,8 +17,11 @@
     </div>
     @include('zADMIN._repo.teaser.brick.a_openTag')
         <span class="_name / flex cI cross-xxs">
-            @if($Var->mockup == 'link')
-            <span class="_mockup">MOCKUP:link</span>
+            @if($Var->mockup)
+            <span class="_mockup">MOCKUP:{{$Var->mockup}}</span>
+            @endif
+            @if($Var->group_id)
+            <span class="_mockup">[ {{$Var->group->name}} ]</span>
             @endif
             @include('_wrap._text.ellipsis.name',['Var' => $NAME])
             <span class="En none">

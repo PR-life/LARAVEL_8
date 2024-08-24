@@ -201,15 +201,39 @@ class Category extends Model
     }
 
 
-    public function categories()
-    {
-        return $this->hasMany(Category::class)->orderBy('order', 'asc');
-    }
 
+
+
+
+
+
+
+
+
+
+ 
+
+    
     public function childrenCategories()
     {
-        return $this->hasMany(Category::class)->with('categories')->orderBy('order', 'asc');
+        return $this->hasMany(Category::class, 'category_id', 'id');
+        // return $this->hasMany(Category::class)->with('categories')->orderBy('order', 'asc');
     }
+
+    // Определяем отношение для родительской категории
+    public function parentCategory()
+    {
+        return $this->belongsTo(Category::class, 'category_id', 'id');
+    }
+        // public function categories()
+        // {
+        //     return $this->hasMany(Category::class)->orderBy('order', 'asc');
+        // }
+
+
+
+
+
 
 	public function getDateAsCarbonAttribute(){
 		return Carbon::parse($this->created_at);

@@ -16,8 +16,14 @@
         padding-left: .5rem;
     }
 
-    ._label {
+    ._label::before {
+        content: '';
+        position: absolute;
+        left: 0;
         top: -1rem;
+        bottom: 0;
+        width: 40%;
+        // background-color: red;
     }
 
     ._field {

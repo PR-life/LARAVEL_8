@@ -59,7 +59,7 @@ function selectToUl(parent) {
     Array.from(selectElement.options).forEach((option, index) => {
         const li = document.createElement('li');
         li.classList.add('_item');
-        li.classList.add(option.getAttribute('shema-teaser') || 'default-class');
+        li.classList.add(option.getAttribute('data-css') || 'default-class');
         li.dataset.value = option.value;
         li.dataset.loop = index;
         li.textContent = option.textContent;
