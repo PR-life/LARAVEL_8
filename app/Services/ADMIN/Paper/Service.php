@@ -40,6 +40,7 @@ class Service extends BaseService {
 			isset($param['category_id']) ? '' : $param['category_id'] = null;
 			isset($param['tag_id']) ? '' : $param['tag_id'] = null;
 
+			isset($param['pin']) ? '' : $param['pin'] = '0';
 			isset($param['featured']) ? '' : $param['featured'] = '0';
 			isset($param['published']) ? '' : $param['published'] = '0';
 			isset($param['mafia']) ? '' : $param['mafia'] = '0';
@@ -51,7 +52,6 @@ class Service extends BaseService {
 				$param['prev_image'] = Storage::disk('public')->put('/images', $param['prev_image']);
 				// $data['prev_image'] = str_replace('public','',Storage::put('/public/images', $data['prev_image']));
 			}
-
 
 			//
 			$paper->update($param);
@@ -87,6 +87,7 @@ class Service extends BaseService {
 			// isset($param['tag_ids']) ? $tagIds=$param['tag_ids'] : $tagIds=[];
 			// unset($param['tag_ids']);
 
+			// dd($param);
         	$paper = Paper::firstOrCreate($param);
 			
 			// $paper->tags()->attach($tagIds);

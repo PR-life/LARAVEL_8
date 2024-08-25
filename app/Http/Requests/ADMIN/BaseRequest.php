@@ -20,10 +20,11 @@ class BaseRequest extends FormRequest
 			'note' => 'nullable|string',
 	
 			//
-			'order' => 'nullable|integer',	
-			'status' => 'nullable|integer',		
-			'views' => 'nullable|integer',		
-			'featured' => 'nullable|integer',		
+			'order' => 'nullable|integer',
+			'status' => 'nullable|integer',
+			'views' => 'nullable|integer',
+			'pin' => 'nullable|integer',
+			'featured' => 'nullable|integer',
 			'published' => 'nullable|integer',
 
 			//

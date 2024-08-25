@@ -56,9 +56,10 @@ class CreateCategoriesTable extends Migration
             //
             $table->text('note')->nullable();
   			
-			$table->unsignedInteger('order')->default('50');
-            $table->unsignedInteger('status')->default('1');
-            $table->unsignedInteger('published')->default('1');
+			$table->unsignedInteger('order')->default(50);
+            $table->unsignedInteger('status')->default(1);
+            $table->unsignedInteger('pin')->nullable()->default(0);
+            $table->unsignedInteger('published')->default(1);
 			
 			$table->string('canonical')->nullable();
 			$table->string('title')->nullable();

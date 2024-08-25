@@ -52,11 +52,11 @@ class CreateLandingsTable extends Migration
 
 
             //
-			$table->unsignedInteger('order')->default('50');
-            $table->unsignedInteger('status')->default('1');
+			$table->unsignedInteger('order')->default(50);
+            $table->unsignedInteger('status')->default(1);
             $table->unsignedInteger('views')->default('1');
             $table->unsignedInteger('featured')->default('0');
-            $table->unsignedInteger('published')->default('1');
+            $table->unsignedInteger('published')->default(1);
 
 			//
 			$table->string('canonical')->nullable();

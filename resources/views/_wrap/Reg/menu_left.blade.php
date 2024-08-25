@@ -1,5 +1,5 @@
 <div class="Reg / index {{$css ?? ''}}">
-	<div class="_l _S -min / _indexMin  / {{$css_l ?? ''}}">
+	<div class="_l _XS / _indexMin  / {{$css_l ?? ''}}">
 		<div class="Goo -header">
 			<div class="Wings_beyond">
 				<div class="_win -t">

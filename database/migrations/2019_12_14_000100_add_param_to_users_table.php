@@ -23,9 +23,9 @@ class AddParamToUsersTable extends Migration
 				$table->string('user_par_2')->nullable();
 				$table->string('user_par_3')->nullable();
 				//
-				$table->unsignedInteger('order')->default('50');
-				$table->unsignedInteger('status')->default('1');
-				$table->unsignedInteger('published')->default('1');
+				$table->unsignedInteger('order')->default(50);
+				$table->unsignedInteger('status')->default(1);
+				$table->unsignedInteger('published')->default(1);
 				
 				$table->unsignedInteger('mafia')->default('0');
 			});

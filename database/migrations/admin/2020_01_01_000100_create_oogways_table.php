@@ -27,9 +27,9 @@ class CreateOogwaysTable extends Migration
             $table->foreign('oogway_id')->references('id')->on('oogways');
 			
   			
-			$table->unsignedInteger('order')->default('50');
-            $table->unsignedInteger('status')->default('1');
-            $table->unsignedInteger('published')->default('1');
+			$table->unsignedInteger('order')->default(50);
+            $table->unsignedInteger('status')->default(1);
+            $table->unsignedInteger('published')->default(1);
 			
             $table->timestamps();
             $table->softDeletes();

@@ -76,9 +76,10 @@ class CreateSmsTable extends Migration
             $table->unsignedInteger('mafia')->default('0');
 
 			$table->integer('views')->default('1');
-			$table->unsignedInteger('order')->default('50');
-            $table->unsignedInteger('status')->default('1');
+			$table->unsignedInteger('order')->default(50);
+            $table->unsignedInteger('status')->default(1);
 
+            $table->unsignedInteger('pin')->nullable()->default(0);
             $table->unsignedInteger('featured')->default('0');
             $table->unsignedInteger('published')->default('0');
 			

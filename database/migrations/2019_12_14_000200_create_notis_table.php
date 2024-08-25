@@ -26,8 +26,8 @@ class CreateNotisTable extends Migration
             $table->string('telegram')->nullable();
             $table->string('viber')->nullable();
 
-			$table->unsignedInteger('order')->default('50');
-            $table->unsignedInteger('status')->default('1');
+			$table->unsignedInteger('order')->default(50);
+            $table->unsignedInteger('status')->default(1);
             $table->unsignedInteger('published')->default('0');
 
             $table->timestamps();

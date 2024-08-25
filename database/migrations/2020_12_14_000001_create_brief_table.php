@@ -79,9 +79,10 @@ class CreateBriefTable extends Migration
             $table->foreign('category_id', 'brief_category_fk')->on('categories')->references('id');
 
             //
-			$table->unsignedInteger('order')->default('50');
-            $table->unsignedInteger('status')->default('1');
+			$table->unsignedInteger('order')->default(50);
+            $table->unsignedInteger('status')->default(1);
 
+            $table->unsignedInteger('pin')->nullable()->default(0);
             $table->unsignedInteger('featured')->default('0');
             $table->unsignedInteger('published')->default('0');
 			

@@ -92,11 +92,11 @@ class CreateFacesTable extends Migration
 
 
             //
-            $table->unsignedInteger('order')->default('50');
-            $table->unsignedInteger('status')->default('1');
-            $table->unsignedInteger('published')->default('1');
-            
             $table->unsignedInteger('mafia')->default('0');
+            $table->unsignedInteger('order')->default(50);
+            $table->unsignedInteger('status')->default(1);
+            $table->unsignedInteger('pin')->nullable()->default(0);
+            $table->unsignedInteger('published')->default(1);
             
 
             //

@@ -26,7 +26,7 @@
 
 
 		<input type="hidden" name="user_id" value="{{auth()->user()->id}}">
-		<input type="hidden" name="published" value="1">
+		{{-- <input type="hidden" name="published" value="1"> --}}
 		
 		<div class="_shell _name / vol-Abs">
 			<input id="name" type="text" name="name" value="{{old('name')}}" placeholder='.'>
