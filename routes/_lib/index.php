@@ -22,6 +22,7 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
             Route::delete('/{telegram}', 'DeleteController')->name('telegram.delete');
         });
 
+
     });
 
 });

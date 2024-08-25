@@ -7,12 +7,15 @@
         <div class="Ico {{$cssIco ?? 'space-02081055'}}">{!!$slot ?? ''!!}</div>
         @endisset   
     </div>
-    <div class="_item chunk-100_Ico round-s {!! (isset($routeName) &&  request()->routeIs($routeName)) ? 'active' : '' !!}">
+    <div class="_item flex bC cI / chunk-100_Ico round-s {!! (isset($routeName) &&  request()->routeIs($routeName)) ? 'active' : '' !!}">
         @isset($routeName)
         <a class="{{$sizeName ?? 'content-s'}} / nowrap Ellipsis / W-100 block" href="{{route($routeName)}}"><span class="x-edge slctn">{{$name}}</span></a>     
         @else
         <span class="{{$sizeName ?? 'content-s'}} / nowrap Ellipsis / pointer"><span class="x-edge slctn">{{$name}}</span></span>  
-        @endisset           
+        @endisset     
+        <div class="pr-2">
+            <div class="ico-close Ico -XXS / none">@svg('close')</div>
+        </div>
     </div>
 </div>
 

@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Imports;
+namespace App\Imports\first;
 
 use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\ToCollection;
@@ -8,28 +8,25 @@ use Maatwebsite\Excel\Concerns\ToCollection;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 //
 use Illuminate\Support\Facades\Schema;
-use App\Models\Item;
+use App\Models\_child\Service;
 
 
-class FirstItemImport implements ToCollection, WithHeadingRow 
+class FirstServiceImport implements ToCollection, WithHeadingRow 
 {
 	
     public function collection(Collection $collection)
     {
         $params = [];
 
-        foreach($collection as $item) {
+        foreach ($collection as $item) {
             
             $params['id'] = $item['id'];
             $params['name'] = $item['name'];
             $params['slug'] = $item['slug'];
 
-
-            Item::firstOrCreate([
+            Service::firstOrCreate([
                 'id' => $params['id'],
                 ],$params);
-
         }
     }
-
 }

@@ -30,14 +30,14 @@
 			@include('zADMIN._bd.edit.published',['Var'=> $feature])
 		</div>
 
-		{{-- @include('zADMIN.PAGE.Feature.lego.edit.lego.Relationships') --}}
+		@include('zADMIN.PAGE.Feature.lego.edit.lego.Relationships')
 		<div class="paragraph"></div>
 
 
 		@component('_wrap.Flaber.admin.edit')
 
 			@slot('flaber')
-				{{-- @include('zADMIN.PAGE.feature.lego.edit.sms') --}}
+				{{-- @include('zADMIN.PAGE.Feature.lego.edit.sms') --}}
 			@endslot
 
 			<div class="paragraphX2"></div>

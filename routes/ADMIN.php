@@ -49,6 +49,7 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth']], function () {
         Route::delete('/{landing}', 'DeleteController')->name('landing.delete');
     });
 
+
     Route::group(['namespace' => 'Item', 'prefix' => 'items'], function(){
         Route::get('/', 'IndexController')->name('item.index');
         Route::get('/trash', 'IndexTrashedController')->name('item.trash');
@@ -59,6 +60,19 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth']], function () {
         Route::patch('/{item}', 'UpdateController')->name('item.update');
         Route::delete('/{item}', 'DeleteController')->name('item.delete');
     });
+
+
+    Route::group(['namespace' => 'Product', 'prefix' => 'products'], function(){
+        Route::get('/', 'IndexController')->name('product.index');
+        Route::get('/trash', 'IndexTrashedController')->name('product.trash');
+        Route::get('/create', 'CreateController')->name('product.create');
+        Route::post('/', 'StoreController')->name('product.store');
+        // // Route::get('/{product}', 'ShowController')->name('product.show');
+        Route::get('/{product}/edit', 'EditController')->name('product.edit');
+        Route::patch('/{product}', 'UpdateController')->name('product.update');
+        Route::delete('/{product}', 'DeleteController')->name('product.delete');
+    });
+
 
     Route::group(['namespace' => 'Paper', 'prefix' => 'papers'], function(){
         Route::get('/', 'IndexController')->name('paper.index');
@@ -80,6 +94,20 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth']], function () {
         Route::patch('/{post}', 'UpdateController')->name('post.update');
         Route::delete('/{post}', 'DeleteController')->name('post.delete');
     });
+
+
+    Route::group(['namespace' => 'Feature', 'prefix' => 'features'], function(){
+        Route::get('/', 'IndexController')->name('feature.index');
+        Route::get('/create', 'CreateController')->name('feature.create');
+        Route::post('/', 'StoreController')->name('feature.store');
+        // // Route::get('/{feature}', 'ShowController')->name('feature.show');
+        Route::get('/{feature}/edit', 'EditController')->name('feature.edit');
+        Route::patch('/{feature}', 'UpdateController')->name('feature.update');
+        Route::delete('/{feature}', 'DeleteController')->name('feature.delete');
+        //
+        Route::get('/trash', 'IndexTrashedController')->name('feature.trash');
+    });
+
 
     Route::group(['namespace' => 'Category', 'prefix' => 'categories'], function(){
         Route::get('/', 'IndexController')->name('category.index');

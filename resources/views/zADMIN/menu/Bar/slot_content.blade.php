@@ -10,19 +10,31 @@
 <div class="-Chunk / diminish -icoDown">
     <div class="paragraph-s"></div>
     @component('_wrap.Chunk.Aside.index')
-        @slot('routeName', 'admin.paper.index')
-        @slot('linkAdd', route('admin.paper.create'))
+        @slot('routeName', 'admin.item.index')
+        @slot('linkAdd', route('admin.item.create'))
         @slot('cssIco', '-XS')
-        @slot('name', 'Статьи')
+        @slot('name', 'item')
         <span class="block / Ico -XS">
             @svg('plus')
         </span>
     @endcomponent 
     @component('_wrap.Chunk.Aside.index')
-        @slot('routeName', 'admin.item.index')
-        @slot('linkAdd', route('admin.item.create'))
+        @slot('linkAdd', route('admin.product.create'))
+        @slot('routeName', 'admin.product.index')
         @slot('cssIco', '-XS')
-        @slot('name', 'item')
+        @slot('name', 'Товары')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
+    @endcomponent
+    <div class="paragraph"></div>
+
+
+    @component('_wrap.Chunk.Aside.index')
+        @slot('routeName', 'admin.paper.index')
+        @slot('linkAdd', route('admin.paper.create'))
+        @slot('cssIco', '-XS')
+        @slot('name', 'Статьи')
         <span class="block / Ico -XS">
             @svg('plus')
         </span>
@@ -45,6 +57,8 @@
             @svg('plus')
         </span>
     @endcomponent
+
+    <div class="paragraph"></div>
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.post.index')
         @slot('linkAdd', route('admin.post.create'))

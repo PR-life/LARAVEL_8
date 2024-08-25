@@ -26,6 +26,14 @@
         </span>
     @endcomponent 
     @component('_wrap.Chunk.Aside.index')
+        @slot('routeName', 'admin.feature.index')
+        @slot('linkAdd', route('admin.feature.create'))
+        @slot('name', 'Св-ва')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
+    @endcomponent 
+    @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.group.index')
         @slot('linkAdd', route('admin.group.create'))
         @slot('name', 'Группы')

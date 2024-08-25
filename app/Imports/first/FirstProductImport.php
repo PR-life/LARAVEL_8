@@ -1,6 +1,6 @@
 <?php
 
-namespace App\Imports;
+namespace App\Imports\first;
 
 use Illuminate\Support\Collection;
 use Maatwebsite\Excel\Concerns\ToCollection;
@@ -8,25 +8,28 @@ use Maatwebsite\Excel\Concerns\ToCollection;
 use Maatwebsite\Excel\Concerns\WithHeadingRow;
 //
 use Illuminate\Support\Facades\Schema;
-use App\Models\Tag;
+use App\Models\Product;
 
 
-class FirstTagImport implements ToCollection, WithHeadingRow 
+class FirstProductImport implements ToCollection, WithHeadingRow 
 {
 	
     public function collection(Collection $collection)
     {
         $params = [];
 
-        foreach ($collection as $item) {
+        foreach($collection as $item) {
             
             $params['id'] = $item['id'];
             $params['name'] = $item['name'];
             $params['slug'] = $item['slug'];
 
-            Tag::firstOrCreate([
+
+            Product::firstOrCreate([
                 'id' => $params['id'],
                 ],$params);
+
         }
     }
+
 }
