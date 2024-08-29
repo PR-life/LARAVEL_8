@@ -17,8 +17,8 @@
 @include('_schema._lego.input')
 @include('xAsgrupp._skeleton.Fon')
 
-@include('xAsgrupp._skeleton.logo')
 @include('xAsgrupp._skeleton.Top')
+@include('xAsgrupp._skeleton.logo')
 @include('xAsgrupp._skeleton.Header')
 {{-- @include('_._skeleton.menuMain') --}}
 

@@ -23,7 +23,7 @@
         @slot('name', 'шаблон')
 
         <div class="content-xxs Grey">Тизер</div>
-        @include('zADMIN.PAGE._lego.edit.shema.teaser', ['Var' => $item])
+        @include('zADMIN.PAGE._lego.edit.shema.kovka', ['Var' => $item])
 
         <div class="paragraph"></div>
 
@@ -39,17 +39,6 @@
         @include('zADMIN.PAGE._lego.edit.mockup.index', ['Var' => $item])
     @endcomponent
 
-
-    @component('_wrap.__.summary')
-        @slot('cssWrap', '')
-        @slot('icoCloseName', 'closeRoll')
-        @slot('id', 'contents')
-        @slot('name', 'contents')
-
-			<textarea id="tinymce_contents" name="contents" placeholder='текст...'>{{$item->contents ?? old('contents')}}</textarea>
-			{{-- @include('zADMIN._brick.cleanHTML') --}}
-
-    @endcomponent
  
 
 

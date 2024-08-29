@@ -138,10 +138,14 @@ ul.slim-s, ol.slim-s {
 .void-m,
 .void-l,
 .void-xl {
-    > * {
+	
+	> ._void:last-child,
+    > ._void:first-child,
+	> * {
       margin-bottom: var(--void);
       margin-top: var(--void);
     }
+
     > ul, ol {
         li {
             margin-bottom:.5rem;

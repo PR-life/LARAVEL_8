@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+.Tape {
+    --Tape:auto;
+    --TapeMin:200px;
+    --Tape-precise: 0px;
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+    .Tape_PC {
+        --Tape:clamp(var(--TapeMin),calc(var(--h)*.25 + 10vmax + var(--Tape-precise)),400px);
+
+        background-color: red;
+    }
+}
+
+@media screen and (max-width:@w-menu-2) {
+
+    .Tape_mbl.-M {
+        --Tape-precise: calc(var(--h)*.05);
+    }
+
+
+    .Tape_mbl {
+        --Tape:clamp(var(--TapeMin),calc(var(--h)*.3 + var(--Tape-precise)),400px);
+    }
+}
+
+
+//
+.Tape {
+    min-height:var(--Tape);
+}

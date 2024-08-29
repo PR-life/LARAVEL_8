@@ -1,5 +1,10 @@
 @charset "UTF-8";
 
+@import "./lego/H_Plot.less";
+@import "./lego/H_Tape.less";
+
+
+ 
 .H-100 {height: 100%;}
 .HMax {max-height: var(--FIX-height);}
 // .HMin {min-height: calc(var(--Wagon-h) - 100px);}
@@ -99,122 +104,4 @@
 
 
 //
-@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
-
-
-    .Plot.-XXXXXS {
-        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 50vh);
-    }
-
-    .Plot.-XXXXS {
-        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 36vh);
-    }
-
-    .Plot.-XXXS {
-        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 24vh);
-    }
-
-
-    .Plot.-XXS {
-        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 12vh);
-    }
-
-    .Plot.-XS {
-        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 2vh);
-    }
-
-    .Plot.-S {
-        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2);
-    }
-
-    .Plot.-M {
-        --Plot-precise:calc(0px - var(--h-Top) - var(--h-Header));
-    }
-
-    //
-
-
-    // .Plot.-XXS.plot-h {
-    //     --Plot:calc(var(--h) *.5);
-    // }
-
-    // .Plot.-XXS {
-    //     --PlotMin:calc(var(--h)*.5 - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
-    // }
-
-
-    //
-    .Tape.-h {
-        --Tape:320px;
-        // --TapeMin:auto;
-    }
-}
-
-
-@media screen and (max-width:@w-menu-2) {
-
-
-    .Plot.plot_PC {
-        --Plot: auto !important;
-    }
-
-
-    .Plot.plot-h.plot-mbl {
-        --Plot:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
-        // height:auto;
-    }
-
-    .Plot.plot-h.plot-h--auto_mbl {
-        height:auto !important;
-    }
-
-    // .Plot.-h.-fixMbl {
-    //     height:var(--Plot);
-    // }
-}
-
-
-
-.Plot.plot-h,
-.Plot.-L {
-    --Plot:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
-}
-
-.Plot {
-    --PlotMin:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
-}
-
-
-.Plot.plot-hMin {
-    height:auto !important;
-	min-height:var(--PlotMin);
-}
-
-.Plot.On,
-.Plot.on {
-    height:auto;
-    min-height: auto;
-}
-
-.Plot:not(.plot-h) {
-    height:auto;
-}
-
-.Plot {
-    --Plot-precise: 0px;
-
-    height:var(--Plot);
-    min-height:auto;
-}
-
-
-
-//
-.Tape {
-    --Tape:auto;
-    --TapeMin:auto;
-    --Tape-precise: 0px;
-
-    height:var(--Tape);
-    min-height:var(--TapeMin);
-}
+ 

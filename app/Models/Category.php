@@ -206,13 +206,6 @@ class Category extends Model
 
 
 
-
-
-
-
-
- 
-
     
     public function childrenCategories()
     {
@@ -221,14 +214,40 @@ class Category extends Model
     }
 
     // Определяем отношение для родительской категории
-    public function parentCategory()
-    {
-        return $this->belongsTo(Category::class, 'category_id', 'id');
+    public function parentCategory() {
+        return $this->belongsTo(Category::class, 'category_id');
+        // return $this->belongsTo(Category::class, 'category_id', 'id');
     }
-        // public function categories()
-        // {
-        //     return $this->hasMany(Category::class)->orderBy('order', 'asc');
-        // }
+
+    public function getAllParents() {
+        $parents = collect();
+
+        $category = $this;
+
+        while ($category->parentCategory) {
+            $parents->push($category->parentCategory);
+            $category = $category->parentCategory;
+        }
+
+        return $parents;
+    }
+
+
+    public function getFullSlugAttribute()
+    {
+        // Собираем все родительские категории
+        $slugs = collect([$this->slug]);
+
+        $category = $this->parentCategory;
+
+        while ($category) {
+            $slugs->prepend($category->slug); // Добавляем slug родительской категории в начало коллекции
+            $category = $category->parentCategory;
+        }
+
+        // Объединяем все slugs через "/"
+        return $slugs->implode('/');
+    }
 
 
 

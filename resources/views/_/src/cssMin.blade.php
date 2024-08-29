@@ -428,7 +428,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.block_60{
 		display:block
 	}
-	body .flex_60 {
+	.flex_60 {
 		display:flex !important;
 	}
 }
@@ -516,6 +516,10 @@ hr,.ghost,.visible,.Op,.opVersa{
 	}
 	.Abs_mbl.-lt{
 		left:0;
+		top:0;
+	}
+	.Abs_mbl.-rt{
+		right:0;
 		top:0;
 	}
 }

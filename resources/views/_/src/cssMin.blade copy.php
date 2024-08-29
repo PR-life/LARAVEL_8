@@ -523,6 +523,10 @@ hr,.ghost,.visible,.Op,.opVersa{
 		left:0;
 		top:0;
 	}
+	.Abs_mbl.-rt{
+		right:0;
+		top:0;
+	}
 }
 @media (min-width:481px) and (max-width:799px){
 	.gstrm.var-480{

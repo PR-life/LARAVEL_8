@@ -2,62 +2,62 @@
 
 
 @media (min-width: @metrika-60-plus) and (max-width: @w-max) {
-    .Burger {
+    .Burger.vol-Lerou {
         --Burger-w: 40px;
     }
 }
 
 @media (min-width: @w-menu-2-plus) and (max-width: @metrika-60) {
-    .Burger {
+    .Burger.vol-Lerou {
         --Burger-w: 30px;
     }
 }
 
 @media screen and (max-width: @w-menu-2) {
-    .Burger {
+    .Burger.vol-Lerou {
         --Burger-w: 30px;
     }
 }
 
-.Burger {
+.Burger.vol-Lerou {
     // --x-Lerou:5px;
     --Burger-shift: 5px;
     // --Burger-opacity: 0;
     --Burger-scaleX: 0;
     //
     --Burger-line-h: 2px;
-    --Burger-color: #fff;
+    --Burger-color: red;
 }
 
-.Burger:hover {
+.Burger.vol-Lerou:hover {
     --Burger-shift: 10px;
     // --Burger-opacity: 1;
     --Burger-scaleX: 1;
 }
 
-// .Burger:hover > ._burger ._2 {
+// .Burger.vol-Lerou:hover > ._burger ._2 {
 //     opacity: 1;
 //     transform: none;
 //   }
 
-.Burger>._burger ._1,
-.Burger>._burger ._3 {
+.Burger.vol-Lerou>._burger ._1,
+.Burger.vol-Lerou>._burger ._3 {
     left:0;
     width: var(--Burger-w);
 }
 
 
-.Burger>._burger ._1 {
+.Burger.vol-Lerou>._burger ._1 {
     // left: -5px;
     transform: translateY(calc(var(--Burger-shift) - var(--Burger-shift)*2));
 }
 
-.Burger>._burger ._3 {
+.Burger.vol-Lerou>._burger ._3 {
     // left: -5px;
     transform: translateY(var(--Burger-shift));
 }
 
-.Burger>._burger ._2 {
+.Burger.vol-Lerou>._burger ._2 {
     left: calc((var(--Burger-w)*.5)*.5);
     width: calc(var(--Burger-w)*.5);
     opacity: var(--Burger-opacity);
@@ -66,7 +66,7 @@
 
 
 
-.Burger{
+.Burger.vol-Lerou{
     >._burger {
 
         >div {
@@ -78,7 +78,7 @@
 }
 
 #body.-menuMilk {
-    .Burger > ._burger {
+    .Burger.vol-Lerou > ._burger {
         > div,
         ._1,
         ._3 {
@@ -99,24 +99,24 @@
  
 
 
-// #body.load .Burger > ._burger > ._2 {
+// #body.load .Burger.vol-Lerou > ._burger > ._2 {
 //     opacity: 1;
 //   }
 
-//   #body.-aside > .Aside.x-2411 .Burger > ._burger ._1,
+//   #body.-aside > .Aside.x-2411 .Burger.vol-Lerou > ._burger ._1,
  
-//   #body.-aside > .Aside.x-2411 .Burger > ._burger ._3,
+//   #body.-aside > .Aside.x-2411 .Burger.vol-Lerou > ._burger ._3,
  
-//   #body.-aside > .Aside.x-2411 .Burger > ._burger > div {
+//   #body.-aside > .Aside.x-2411 .Burger.vol-Lerou > ._burger > div {
 //     height: 2px;
 //   }
-//   #body.-aside > .Aside.x-2411 .Burger > ._burger ._1 {
+//   #body.-aside > .Aside.x-2411 .Burger.vol-Lerou > ._burger ._1 {
 //     transform: rotate(-45deg);
 //   }
-//   #body.-aside > .Aside.x-2411 .Burger > ._burger ._2 {
+//   #body.-aside > .Aside.x-2411 .Burger.vol-Lerou > ._burger ._2 {
 //     transform: scaleX(0) !important;
 //   }
-//   #body.-aside > .Aside.x-2411 .Burger > ._burger ._3 {
+//   #body.-aside > .Aside.x-2411 .Burger.vol-Lerou > ._burger ._3 {
 //     transform: rotate(45deg);
 //   }
 

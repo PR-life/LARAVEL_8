@@ -190,6 +190,40 @@
 }
 
 
+@media (min-width:@w-menu-2-plus) and (max-width:@w-beyond) {
+    .Roll_beyond {
+		.ROLL;
+	}
+
+    .Roll_beyond.-space {
+        padding-top:2rem;
+        padding-bottom:2rem;
+    }
+
+    .Roll_beyond.-spaceS {
+        padding-top:1rem;
+        padding-bottom:1rem;
+    }
+
+    .Roll_beyond.-edge {
+        padding-left: calc(var(--Edge) - 1rem)
+    }
+    .Roll_beyond.-edgeS {
+        padding-left: calc(var(--Edge)*.5)
+    }	
+
+	.Roll_beyond.-cross {
+		> * {margin-right: 2rem;}
+	}
+
+	.Roll_beyond.-crossS {
+		> * {margin-right: 1rem;}
+	}
+
+
+}
+
+
 @media screen and (max-width:@w-menu-2) {
 
 	.Roll_mbl.menu,
@@ -219,6 +253,7 @@
         padding-bottom:2rem;
     }
 
+	.Roll_mbl.-spaceS,
     .Roll_mbl.-space {
         padding-top:1rem;
         padding-bottom:1rem;

@@ -30,11 +30,24 @@
     @component('zADMIN._wrap.index', ['css' => 'relative'])
         @component('zADMIN._wrap.max', ['css' => 'index'])
             @component('zADMIN._wrap.Table.index', ['css'=> '-items', 'Model' => 'Item', 'localstoragePicking' => 'filter_btn_table_mockupLink'])
-                @foreach($items as $_item)     
-                    @include('zADMIN._repo.teaser.seo', ['Var' => $_item])
+
+
+                @foreach($items as $_item)   
+                    @include('zADMIN._repo.teaser.xItem', ['Var' => $_item, 'css' => ' parent'])
+                    {{-- @include('zADMIN._repo.teaser.seo', ['Var' => $_item, 'css' => ' parent']) --}}
+                    
+                    @if($_item->childrenItems->isNotEmpty())
+                        <div class="children -lvl_{{ $_level ?? 1 }} / round">
+                            @include('zADMIN._repo.xItem-tree', ['items' => $_item->childrenItems, '_level' => ($_level ?? 1) + 1])
+                        </div>
+                    @endif
                 @endforeach
+
+
+
+
             @endcomponent
-            @include('zADMIN.mod.paginator', ['Var' => $items])
+            {{-- @include('zADMIN.mod.paginator', ['Var' => $items]) --}}
         @endcomponent
     @endcomponent
 

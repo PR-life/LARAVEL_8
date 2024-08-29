@@ -1,0 +1,94 @@
+@charset "UTF-8";
+
+
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+
+
+    // .Plot.-XXXXXS {
+    //     --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 50vh);
+    // }
+
+    // .Plot.-XXXXS {
+    //     --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 36vh);
+    // }
+
+    // .Plot.-XXXS {
+    //     --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 24vh);
+    // }
+
+
+    // .Plot.-XXS {
+    //     --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 12vh);
+    // }
+
+    .Plot.-XS {
+        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 2vh);
+    }
+
+    .Plot.-S {
+        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2);
+    }
+
+    .Plot.-M {
+        --Plot-precise:calc(0px - var(--h-Top) - var(--h-Header));
+    }
+
+}
+
+
+@media screen and (max-width:@w-menu-2) {
+
+
+    .Plot.plot_PC {
+        --Plot: auto !important;
+    }
+
+
+    .Plot.plot-h.plot-mbl {
+        --Plot:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
+        // height:auto;
+    }
+
+    .Plot.plot-h.plot-h--auto_mbl {
+        height:auto !important;
+    }
+
+    // .Plot.-h.-fixMbl {
+    //     height:var(--Plot);
+    // }
+}
+
+
+
+.Plot.plot-h,
+.Plot.-L {
+    --Plot:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
+}
+
+.Plot {
+    --PlotMin:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
+}
+
+
+.Plot.plot-hMin {
+    height:auto !important;
+	min-height:var(--PlotMin);
+}
+
+.Plot.On,
+.Plot.on {
+    height:auto;
+    min-height: auto;
+}
+
+.Plot:not(.plot-h) {
+    height:auto;
+}
+
+.Plot {
+    --Plot-precise: 0px;
+
+    height:var(--Plot);
+    min-height:auto;
+}

@@ -51,4 +51,14 @@ class Product extends BaseContent
         return 'product_categories';
     }
 
+
+
+    public function getRouteKeyName(): string
+    {
+        if (request()->is('admin/*')) {
+            return 'id';
+        }
+        return 'slug'; 
+    }
+
 }
