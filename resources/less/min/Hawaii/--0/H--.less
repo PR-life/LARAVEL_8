@@ -61,7 +61,18 @@
 
 //
 .hill {
+    --k-min: .5;
+    --k-max: 2;
+    --h-min: 10vh;
+    --h-max: 30vh;
+	--factor: .3;
+
 	height: var(--hill);
+}
+
+.hill.-vw {
+	// height: calc(var(--h-min) + (var(--h-max) - var(--h-min)) * ((var(--k-max) - var(--AR)) / (var(--k-max) - var(--k-min))));
+    height: calc(var(--h-min) + (var(--h-max) - var(--h-min)) * ((var(--k-max) - var(--AR)) / (var(--k-max) - var(--k-min)) * var(--factor)));
 }
 
 .hill-xs {

@@ -49,6 +49,10 @@
 @stack('basementAfter')
 
 
+@include('xAsgrupp._skeleton.footer')
+{{-- @include('xAsgrupp._skeleton.footer_back') --}}
+
+
 {{-- <div id="FixMenu" class="FixMenu -mbl / none_PC">
 	@include('_._skeleton.menuMobile')
 </div> --}}
@@ -83,5 +87,7 @@
 
 @stack('metrika_events')
 
+
+@include('_Rearguard.index')
 </body>
 </html>

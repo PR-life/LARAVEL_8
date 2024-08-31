@@ -2,32 +2,40 @@
 
 .Tape {
     --Tape:auto;
-    --TapeMin:200px;
     --Tape-precise: 0px;
 }
 
+ 
+
 @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
     .Tape_PC {
-        --Tape:clamp(var(--TapeMin),calc(var(--h)*.25 + 10vmax + var(--Tape-precise)),400px);
-
-        background-color: red;
+        --TapeMin:220px;
+        --TapeMax:var(--h)*.33;
+    }
+    .Tape_PC.-M {
+        --Tape-precise: calc(var(--h)*.05);
     }
 }
 
 @media screen and (max-width:@w-menu-2) {
-
+    .Tape_mbl {
+        --TapeMin:240px;
+        --TapeMax:calc(var(--h)*.6);
+    }
     .Tape_mbl.-M {
         --Tape-precise: calc(var(--h)*.05);
-    }
-
-
-    .Tape_mbl {
-        --Tape:clamp(var(--TapeMin),calc(var(--h)*.3 + var(--Tape-precise)),400px);
     }
 }
 
 
 //
 .Tape {
+    --Tape: clamp(
+        var(--TapeMin),
+        calc(30vmax * calc(1 / var(--AR)) + var(--Tape-precise)),
+        var(--TapeMax),
+    );
+
     min-height:var(--Tape);
 }
+ 

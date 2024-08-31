@@ -6,13 +6,17 @@
 
 @media screen and (max-width:@w-menu-2) {
 	.Bee.-S_mbl {
-		min-height: calc(var(--Bee)*.75);
+		--x-Bee: calc(var(--Bee)*.75);
 	}
 }
 
 .Bee {
-	min-height: var(--Bee);
+	--x-Bee: var(--Bee);
 }
 .Bee.-S {
-	min-height: calc(var(--Bee)*.75);
+	--x-Bee: calc(var(--Bee)*.75);
+}
+
+.Bee {
+	min-height: clamp(80px,11vh,var(--x-Bee));
 }

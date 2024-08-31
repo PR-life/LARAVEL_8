@@ -4,6 +4,13 @@ html {
     --family-Droid:'Droid Serif';
 }
 
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+    .familyDroid_PC,
+    .Family-Droid_PC * {
+        font-family: var(--family-Droid) !important;
+    }
+}
+
 .familyDroid,
 .Family-Droid * {
 	font-family: var(--family-Droid) !important;

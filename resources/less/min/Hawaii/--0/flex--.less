@@ -38,8 +38,17 @@
 
 
 @media (min-width: @metrika-70-plus) and (max-width:@w-max) {
+	.flex_70 {
+		display: flex;
+	}
 	.cC_70 {
 		justify-content: center;
+	}
+}
+
+@media (min-width: @w-beyond-plus) and (max-width:@w-max) {
+	.flexPC {
+		display: flex;
 	}
 }
 
@@ -200,8 +209,11 @@
 }
 
 @media (min-width: @w-beyond-plus) and (max-width:@w-max) {
-	.dC_beforeBeyond  {
+	.dC-PC  {
 		flex-direction: column;
+	}
+	.bC-PC {
+		justify-content: space-between;
 	}
 }
 

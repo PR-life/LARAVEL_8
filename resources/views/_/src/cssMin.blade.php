@@ -2,8 +2,9 @@
 	box-sizing:border-box;
 }
 :root{
-	 --index:calc(1vw + 1vh);
-	 --indexW:calc(1vw);
+	--index:calc(1vw + 1vh);
+	--indexW:1vw;
+	--indexH:1vh;
 }
  body{
 	position:relative;
@@ -159,7 +160,7 @@ svg.-auto{
 
 
 #body.Z2 .noneZ2,
-#body .En, #body .Ru, .none,.Rano,body meta{
+#body .En, #body .Ru, #body .none,.Rano,body meta{
 	display:none
 }
 

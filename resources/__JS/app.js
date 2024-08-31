@@ -30,6 +30,9 @@ let cssVarh = throttle(function() {
 		body.style.setProperty('--w', document.body.clientWidth+'px');
 		icssVarw = document.documentElement.clientWidth;
 	};
+
+
+	document.body.style.setProperty('--AR', (document.documentElement.clientWidth / document.documentElement.clientHeight).toFixed(1));
 }, 300);
 
 let adapt = throttle(function() {

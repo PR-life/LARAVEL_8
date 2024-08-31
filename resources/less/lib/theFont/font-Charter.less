@@ -5,6 +5,12 @@ html {
     --family-Charter: Charter, "Times New Roman", sans-serif;
 }
 
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+    .familyCharter_PC,
+    .Family-Charter_PC * {
+        font-family: var(--family-Charter) !important;
+    }
+}
 .familyCharter,
 .Family-Charter * {
 	font-family: var(--family-Charter) !important;

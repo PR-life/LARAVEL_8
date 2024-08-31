@@ -8,9 +8,11 @@
 }
 :root{
 	 --index:calc(1vw + 1vh);
-	 --indexW:calc(1vw);
+	 --indexW:1vw;
+	 --indexH:1vh;
 }
  body{
+	--AR: calc(var(--w) / var(--h));
 	position:relative;
 	margin:0 auto;
 	
