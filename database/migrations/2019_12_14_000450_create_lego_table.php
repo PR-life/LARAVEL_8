@@ -15,7 +15,7 @@ class CreateLegoTable extends Migration
 
             $table->string('name');
 
-            $table->string('bladeName')->nullable();
+            $table->string('blade_name')->nullable();
             $table->string('shema')->default('default');
 
             $table->string('css')->nullable();

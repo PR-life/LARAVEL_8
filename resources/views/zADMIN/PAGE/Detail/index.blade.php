@@ -1,6 +1,6 @@
 @extends('zADMIN._schema.index')
 
-@section('title')Особенности @endsection
+@section('title')details @endsection
 
 @push('addBread')
 <li>
@@ -11,12 +11,12 @@
 @endpush
 
 @push('bee')
-    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Особенности', 'add' => route('admin.feature.create'), 'Model' => 'Feature'])
+    @include('zADMIN._lego.Bee.nameIndex',['name' => 'details', 'add' => route('admin.detail.create'), 'Model' => 'Detail'])
     {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.tags') --}}
 @endpush
 
 
-@component('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['model' => 'feature', 'Model' => 'Feature','hidden_btn_full' => true])
+@component('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['model' => 'detail', 'Model' => 'Detail','hidden_btn_full' => true])
     @component('zADMIN._wrap.manager.btn.localStorage_toggle',['css' => 'x-exclude'])
         @slot('localstorageName','filter_btn_table_backend')
         @slot('dataCheck','y-backendOff')
@@ -38,14 +38,14 @@
 
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN._wrap.Table.index', ['css'=> '-features', 'Model' => 'Feature','localstoragePicking' => 'filter_btn_table_frontend filter_btn_table_backend'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-details', 'Model' => 'Detail','localstoragePicking' => 'filter_btn_table_frontend filter_btn_table_backend'])
 
-            @foreach($features as $_feature)
-                @include('zADMIN._repo.teaser.tag', ['Var' => $_feature])
+            @foreach($details as $_detail)
+                @include('zADMIN._repo.teaser.tag', ['Var' => $_detail])
             @endforeach
 
             @endcomponent
-            @include('zADMIN.mod.paginator', ['Var' => $features])
+            @include('zADMIN.mod.paginator', ['Var' => $details])
         @endcomponent
     @endcomponent
 

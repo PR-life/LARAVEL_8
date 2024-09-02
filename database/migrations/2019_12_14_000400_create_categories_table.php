@@ -24,7 +24,8 @@ class CreateCategoriesTable extends Migration
 			$table->string('name_seo')->nullable();
             $table->string('h1')->nullable();
             $table->text('intro')->nullable();
-
+            $table->text('text')->nullable();
+            
             $table->string('bread_name')->nullable();
 
             $table->string('prev_h1')->nullable();
@@ -49,7 +50,9 @@ class CreateCategoriesTable extends Migration
 			
 			
             //
-            $table->unsignedBigInteger('menu')->nullable();
+            // $table->unsignedBigInteger('menu')->nullable();
+            $table->text('text_top')->nullable();
+            $table->text('text_bottom')->nullable();
             $table->string('string_1')->nullable();
             $table->text('knot_1')->nullable();
 

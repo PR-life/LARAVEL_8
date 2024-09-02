@@ -10,6 +10,7 @@ use Illuminate\Support\Facades\Storage;
 use App\Imports\first\FirstCategoryImport;
 use App\Imports\first\FirstTagImport;
 use App\Imports\first\FirstFeatureImport;
+use App\Imports\first\FirstDetailImport;
 use App\Imports\first\FirstItemImport;
 use App\Imports\first\FirstServiceImport;
 use App\Imports\first\FirstFaqImport;
@@ -19,6 +20,7 @@ use App\Imports\first\FirstProductImport;
 use App\Imports\GroupImport;
 use App\Imports\TagImport;
 use App\Imports\FeatureImport;
+use App\Imports\DetailImport;
 use App\Imports\CategoryImport;
 use App\Imports\LandingImport;
 use App\Imports\PostImport;
@@ -36,9 +38,10 @@ use App\Imports\child\ServiceImport;
 // use App\Imports\CommentsPaperImport;
 //
 use App\Imports\pivot\Category\CategoryFaqImport;
-use App\Imports\pivot\Category\CategoryTagImport;
 use App\Imports\pivot\Category\CategoryItemImport;
+use App\Imports\pivot\Category\CategoryLegoImport;
 use App\Imports\pivot\Category\CategoryServiceImport;
+use App\Imports\pivot\Category\CategoryTagImport;
 use App\Imports\pivot\Faq\FaqCategoryImport;
 use App\Imports\pivot\Faq\FaqFaqImport;
 use App\Imports\pivot\Faq\FaqGroupImport;
@@ -88,6 +91,7 @@ class ImportExcelCommand extends Command
         Excel::import(new FirstCategoryImport, storage_path('app/Excel/Categories.xlsx'));
         Excel::import(new FirstTagImport, storage_path('app/Excel/Tags.xlsx'));
         Excel::import(new FirstFeatureImport, storage_path('app/Excel/Features.xlsx'));
+        Excel::import(new FirstDetailImport, storage_path('app/Excel/Details.xlsx'));
         Excel::import(new FirstItemImport, storage_path('app/Excel/Items.xlsx'));
         Excel::import(new FirstServiceImport, storage_path('app/Excel/child/Services.xlsx'));
         Excel::import(new FirstFaqImport, storage_path('app/Excel/Faq.xlsx'));
@@ -98,6 +102,7 @@ class ImportExcelCommand extends Command
         Excel::import(new CategoryImport, storage_path('app/Excel/Categories.xlsx'));
         Excel::import(new TagImport, storage_path('app/Excel/Tags.xlsx'));
         Excel::import(new FeatureImport, storage_path('app/Excel/Features.xlsx'));
+        Excel::import(new DetailImport, storage_path('app/Excel/Details.xlsx'));
         Excel::import(new LandingImport, storage_path('app/Excel/Landings.xlsx'));
         Excel::import(new PostImport, storage_path('app/Excel/Posts.xlsx'));
         Excel::import(new PaperImport, storage_path('app/Excel/Papers.xlsx'));
@@ -112,9 +117,10 @@ class ImportExcelCommand extends Command
         //
         //
         Excel::import(new CategoryFaqImport, storage_path('app/Excel/pivot/CategoryFaqs.xlsx'));
-        Excel::import(new CategoryTagImport, storage_path('app/Excel/pivot/CategoryTags.xlsx'));
         Excel::import(new CategoryItemImport, storage_path('app/Excel/pivot/CategoryItems.xlsx'));
+        Excel::import(new CategoryLegoImport, storage_path('app/Excel/pivot/CategoryLego.xlsx'));
         Excel::import(new CategoryServiceImport, storage_path('app/Excel/pivot/CategoryServices.xlsx'));
+        Excel::import(new CategoryTagImport, storage_path('app/Excel/pivot/CategoryTags.xlsx'));
         Excel::import(new FaqCategoryImport, storage_path('app/Excel/pivot/FaqCategories.xlsx'));
         Excel::import(new FaqFaqImport, storage_path('app/Excel/pivot/FaqFaqs.xlsx'));
         Excel::import(new FaqGroupImport, storage_path('app/Excel/pivot/FaqGroups.xlsx'));

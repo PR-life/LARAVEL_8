@@ -28,7 +28,7 @@
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.feature.index')
         @slot('linkAdd', route('admin.feature.create'))
-        @slot('name', 'Св-ва')
+        @slot('name', 'Особенности')
         <span class="block / Ico -XS">
             @svg('plus')
         </span>

@@ -27,5 +27,14 @@
             @svg('plus')
         </span>
     @endcomponent 
+    @component('_wrap.Chunk.Aside.index')
+        @slot('linkAdd', route('admin.detail.create'))
+        @slot('routeName', 'admin.detail.index')
+        @slot('cssIco', '-XS')
+        @slot('name', 'Detail')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
+    @endcomponent 
 </div>
 @endcomponent
