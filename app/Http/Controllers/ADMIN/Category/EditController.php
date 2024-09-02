@@ -8,15 +8,14 @@ use App\Models\Category;
 use App\Models\{Tag,Group,Faq,Item};
 use App\Models\_child\Service;
 
-class EditController extends Controller
+class EditController extends BaseController
 {
     public function __invoke($id){
 
         $category = Category::findOrFail($id);
 
-        $categories = Category::whereNull('category_id')
-        ->with('childrenCategories')
-        ->orderBy('name', 'asc')->paginate(25);
+        $categories = $this->getCategories();
+
         $tags = Tag::all();
         $groups = Group::all();
         $faqs = Faq::all();

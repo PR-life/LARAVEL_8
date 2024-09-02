@@ -1,6 +1,6 @@
 {{-- главная на Торнадо --}}
 <div id="{{$id ?? 'Wrap'}}">
-	<div id="Oi" class="Oi hidden">
+	<div id="Oi" class="Oi">
 		<div id="oiBar" class="oiBar flex / index relative {{ $cssOiBar ?? '' }} @stack('css-OiBar')">
 			<div class="_wrap relative">
 				<div class="_main / Abs -all / index">

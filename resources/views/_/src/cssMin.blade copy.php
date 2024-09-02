@@ -3,16 +3,16 @@
 	font-style: inherit;
 	font-family:inherit !important
 } -->
+
 *,*:before,*:after{
 	box-sizing:border-box;
 }
 :root{
-	 --index:calc(1vw + 1vh);
-	 --indexW:1vw;
-	 --indexH:1vh;
+	--index:calc(1vw + 1vh);
+	--indexW:1vw;
+	--indexH:1vh;
 }
  body{
-	--AR: calc(var(--w) / var(--h));
 	position:relative;
 	margin:0 auto;
 	
@@ -166,7 +166,7 @@ svg.-auto{
 
 
 #body.Z2 .noneZ2,
-#body .En, #body .Ru, .none,.Rano,body meta{
+#body .En, #body .Ru, body .none,.Rano,body meta{
 	display:none
 }
 
@@ -176,7 +176,7 @@ svg.-auto{
 .Start .fade {opacity: 0;}
 
 #body.Z2 .blockZ2,
-.Block,
+#body .Block,
 #body.load .rano,
 #body.en .En,
 #body.ru .Ru,

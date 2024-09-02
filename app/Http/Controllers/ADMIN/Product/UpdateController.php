@@ -9,12 +9,13 @@ use App\Models\Product;
 
 class UpdateController extends BaseController
 {
-    public function __invoke(UpdateRequest $request, Product $item){
+    public function __invoke(UpdateRequest $request, Product $product){
 
 		// dd($request);
         $data = $request->validated();	
 		// dd($data);
-		$item = $this->service->update($item,$data);
+		// dd($product);
+		$product = $this->service->update($product,$data);
 
 		// dd($paper);
 

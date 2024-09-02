@@ -35,16 +35,17 @@ let cssVarh = throttle(function() {
 	document.body.style.setProperty('--AR', (document.documentElement.clientWidth / document.documentElement.clientHeight).toFixed(1));
 }, 300);
 
-let adapt = throttle(function() {
-	let click = document.querySelectorAll('[data-adaptClick]')
-	click.forEach( item => item.click())
-}, 300);
+
+// let adapt = throttle(function() {
+// 	let click = document.querySelectorAll('[data-adaptClick]')
+// 	click.forEach( item => item.click())
+// }, 300);
 
 
 
 window.addEventListener('scroll', throttleScroll, false);
 window.addEventListener('resize', cssVarh, false);
-window.addEventListener('resize', adapt, false);
+// window.addEventListener('resize', adapt, false);
 
 // document.addEventListener('DOMContentLoaded', function(){
 const listenerClick = document.querySelectorAll("[data-click]");

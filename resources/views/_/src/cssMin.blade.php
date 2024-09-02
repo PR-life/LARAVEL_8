@@ -160,7 +160,7 @@ svg.-auto{
 
 
 #body.Z2 .noneZ2,
-#body .En, #body .Ru, #body .none,.Rano,body meta{
+#body .En, #body .Ru, body .none,.Rano,body meta{
 	display:none
 }
 
@@ -170,7 +170,7 @@ svg.-auto{
 .Start .fade {opacity: 0;}
 
 #body.Z2 .blockZ2,
-.Block,
+#body .Block,
 #body.load .rano,
 #body.en .En,
 #body.ru .Ru,

@@ -10,9 +10,9 @@
 	 
 }
 
-body .Ico {
-	line-height: 0 !important;
-}
+// body .Ico {
+// 	line-height: 0 !important;
+// }
 
 //
 
@@ -76,15 +76,11 @@ body .Ico {
 
 @media (min-width:@w-menu-2-plus) and (max-width:@w-max){
 
-	.Ico.-index {
-		--Ico: clamp(20px, 26px, calc(var(--index)));
-	}
-	
 	.Ico.-vw {
-		--Ico-w: clamp(4vw,var(--x-Ico),6vw);
+		--Ico-w: clamp(2rem,5vw,var(--x-Ico));
 	}
-
 }
+
 @media screen and (max-width:@w-menu-2){
 
     .Ico.long {
@@ -107,4 +103,3 @@ body .Ico {
 	min-width: var(--Ico-w);
 	min-height: var(--Ico-w);
 }
-

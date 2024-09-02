@@ -12,16 +12,9 @@ class IndexController extends BaseController
 {
     public function __invoke(FilterRequest $request){
 
-  
-        $categories = Category::whereNull('category_id')
-        ->with('childrenCategories')
-        ->orderBy('order', 'asc')
-        ->orderBy('name', 'asc')->get();
-
-
 		$x = $request->validated();
 
-       if(count($x)) {
+        if(count($x)) {
 
             $filter = app()->make(CategoryFilter::class, ['queryParams' => array_filter($x)]);
 
@@ -42,25 +35,21 @@ class IndexController extends BaseController
             }
        } else {
         // dd(111);
-            $Categories = Category::whereNull('category_id')->with('childrenCategories')->get();
+            $Categories = Category::whereNull('category_id')
+                ->with('childrenCategories')
+                ->orderBy('order', 'asc')
+                ->orderBy('created_at', 'DESC')
+                ->get();
        }
 
  
- 
-
-
-
-
-
-
-
 
         // if($name || $tag_id || $category_id) {
         //     $Categories = Category::filter($filter)->orderBy('order', 'asc')->orderBy('name', 'asc')->paginate(100);
         // } else {
         //     $Categories = Category::filter($filter)->whereNull('category_id')->orderBy('order', 'asc')->orderBy('name', 'asc')->paginate(25);
         // }
-
+        $categories = $this->getCategories();
 
         $_request = $this->service->_request($request);
         
