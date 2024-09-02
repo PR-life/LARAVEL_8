@@ -41,6 +41,7 @@
 		
 
 			<div class="paragraphX2"></div>
+ 
 			@include('zADMIN.PAGE.Lego.lego.edit.body')
 
 		@endcomponent

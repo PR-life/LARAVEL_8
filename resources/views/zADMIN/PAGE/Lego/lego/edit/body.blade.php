@@ -18,7 +18,12 @@
 
 <div class="paragraph"></div>
 
+<div class="_shell _h1 / net">
+	<input id="inputBladeName" type="text" name="bladeName" value="{{$lego->bladeName ?? old('bladeName')}}" placeholder="bladeName">
+</div>
 
+
+@if(!$lego->bladeName)
 <div class="Article aura / pl-2">
 	<div>
 		@include('zADMIN._wrap.text.nameTextarea', ['name' => 'текст'])
@@ -39,6 +44,7 @@
 			<textarea id="tinymce_note" name="note" placeholder='текст...'>{{$lego->note}}</textarea>
 		</div>
 
-    @endcomponent
-
+    @endcomponent	
 </div>
+
+@endif

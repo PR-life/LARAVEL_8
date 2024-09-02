@@ -49,7 +49,7 @@ class Service extends BaseService {
 			//
 			isset($param['featured']) ? '' : $param['featured'] = '0';
 			isset($param['published']) ? '' : $param['published'] = '0';
-			isset($param['mafia']) ? '' : $param['mafia'] = '0';
+			// isset($param['mafia']) ? '' : $param['mafia'] = '0';
 				// isset($param['css_type']) ? $param['css_type'] = implode(" ", $param['css_type']) : $param['css_type'] = null;
 			
 

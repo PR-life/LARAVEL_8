@@ -26,13 +26,9 @@
         @component('zADMIN._wrap.max', ['css' => 'index'])
             @component('zADMIN._wrap.Table.index', ['css'=> '-lego', 'Model' => 'Lego'])
 
-                @foreach($lego as $_faq)    
+                @foreach($lego as $_lego)    
                  
-                    @if($_GET == [])
-                        @continue($_faq->faq_id != null)
-                    @endif
-
-                    @include('zADMIN._repo.teaser.index', ['Var' => $_faq])
+                    @include('zADMIN._repo.teaser.lego', ['Var' => $_lego])
          
                 @endforeach
             @endcomponent

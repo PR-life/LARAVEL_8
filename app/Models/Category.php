@@ -48,6 +48,15 @@ class Category extends Model
         );
     }
 
+    public function thisLegoPivot() {
+        return $this->belongsToMany(
+            Lego::class,
+            'category_lego',
+            'category_id',
+            'lego_id'
+        );
+    }
+
     public function thisItemsPivot() {
         return $this->belongsToMany(
             Item::class,
@@ -105,6 +114,9 @@ class Category extends Model
     }
 
 
+    public function products() {
+        return $this->hasMany(Product::class)->orderBy('order', 'asc');
+    }
     public function items() {
         return $this->hasMany(Item::class)->orderBy('order', 'asc');
     }
@@ -154,11 +166,27 @@ class Category extends Model
     }
 
 
+    public function lego() {
+
+        return $this->belongsToMany(
+            Lego::class,
+            'category_lego',
+            'category_id',
+            'lego_id'
+        );
+
+		// return $this->belongsToMany(Tag::class,'post_tags');
+			// !!! не сошлось с видео
+			// запись по конвенции Laravel, тут важно соблюдать имена в атрибутах
+			// https://www.youtube.com/watch?v=c0yuY_Ugacg
+    }
+
+
     public function tags() {
 
         return $this->belongsToMany(
             Tag::class,
-            'tag_categories', // через какую тбл свзяь
+            'category_tags', // через какую тбл свзяь
             'category_id', // foreignKey этой модели в указанной таблице
             'tag_id' // relatedPivotKey, с кем foreignKey имеет взаимоотношение
         );

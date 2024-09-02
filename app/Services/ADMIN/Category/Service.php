@@ -20,6 +20,9 @@ class Service extends BaseService{
 			// dd($param);
 
 
+			isset($param['lego_ids']) ? $legoIds = $param['lego_ids'] : $legoIds = [];
+			unset($param['lego_ids']);
+
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);
 
@@ -39,6 +42,7 @@ class Service extends BaseService{
 			//
 			$category->update($param);
 			$category->tags()->sync($tagIds);
+			$category->lego()->sync($legoIds);
 			$category->thisItemsPivot()->sync($itemIds);
 			$category->thisServicesPivot()->sync($serviceIds);
 			$tagIds = [];

@@ -50,24 +50,24 @@
         </div>
     @endcomponent --}}
 
-    {{-- @component('zADMIN._wrap.Relationships.line')
+    @component('zADMIN._wrap.Relationships.line')
         @slot('id','22071700')
         @slot('name22071756','Solo связи')
         <div class="Min -w5 / wrap-relationship -solo / round">
             @include('zADMIN._wrap.select.name',['Var' => 'Родитель'])
             @component('zADMIN._wrap.select.product.main', ['id' => 'product'])
-                @include('_._brick.select.product.edit.main',['Items' => $products, 'Var' => $product->product_id])
+                @include('_._brick.select.product.edit.main',['Products' => $products, 'Var' => $product->product_id])
             @endcomponent
         </div>
         
-        <div class="Min -w5 / wrap-relationship -solo / round">
+        {{-- <div class="Min -w5 / wrap-relationship -solo / round">
             @include('zADMIN._wrap.select.name',['Var' => 'Surrogate'])
             @component('zADMIN._wrap.select.product.surrogate', ['id' => 'surrogate'])
                 @include('_._brick.select.product.edit.surrogate',['Items' => $products, 'Var' => $product->product_surrogate_id])
             @endcomponent
-        </div>
+        </div> --}}
 
-    @endcomponent --}}
+    @endcomponent
 
 
     {{-- @component('zADMIN._wrap.Relationships.line')

@@ -15,6 +15,9 @@
     </div>
     @include('zADMIN._repo.teaser.brick.a_openTag')
         <span class="_name / flex cI cross-xxs">
+            @if($Var->bladeName)
+            <span class="Grey">[ blade ]</span>
+            @endif
             @include('_wrap._text.ellipsis.name',['Var' => $NAME])
         </span>
     </a>

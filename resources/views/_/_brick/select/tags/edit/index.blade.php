@@ -2,9 +2,9 @@
 	// $arr = $Var->tags->pluck('id')->toArray();
 ?>
 
-@foreach($Tags as $tag)
-	<option class="x-{{$tag->id}}" value="{{$tag->id}}"{{ is_array($arr) && in_array($tag->id, $arr) ? ' selected' : ''}}{{$tag->id == old('tag_id') ? ' selected' : ''}}>{{$tag->name}}</option>
-	{{-- <option value="{{$tag->id}}"{{ is_array($arr) && in_array($tag->id, $arr) ? ' selected' : ''}}{{$tag->id == old('tag_id') ? ' selected' : ''}}>{{$tag->name}}</option> --}}
+@foreach($Tags as $_tag)
+	<option class="x-{{$_tag->id}}" value="{{$_tag->id}}"{{ is_array($arr) && in_array($_tag->id, $arr) ? ' selected' : ''}}{{$_tag->id == old('tag_id') ? ' selected' : ''}}>{{$_tag->name}}</option>
+	{{-- <option value="{{$_tag->id}}"{{ is_array($arr) && in_array($_tag->id, $arr) ? ' selected' : ''}}{{$_tag->id == old('tag_id') ? ' selected' : ''}}>{{$_tag->name}}</option> --}}
 @endforeach
  
  

@@ -52,9 +52,9 @@ if(isset($Var->group)) {
                 @endisset
                 @isset($Var->category)
                 <div class="Min -w2 / right-text">
-                    <a class="content-s / b600 Grey" href="{{route('admin.category.edit', $Var->category->id)}}">
+                    <a class="content-s flex / b600 Grey" href="{{route('admin.category.edit', $Var->category->id)}}">
                         @include('_wrap._text.ellipsis.name',['Var' => $Var->category->name])
-                        {{$Var->category->group ? '[ '.$Var->category->group->name.' ]' : '333'}}
+                        <span class="ml-2 content-min">{{$Var->category->group ? '[ '.$Var->category->group->name.' ]' : ''}}</span>
                     </a>
                 </div>
                 @endisset

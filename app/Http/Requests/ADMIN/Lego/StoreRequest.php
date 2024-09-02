@@ -21,6 +21,9 @@ class StoreRequest extends BaseRelationsRequest
             //
 			'name' => 'nullable|string',
 
+			'bladeName' => 'nullable|string',
+			'shema' => 'nullable|string',
+
 			'css' => 'nullable|string',
 			'add_to_contents' => 'nullable|string',
 			'where_to_show' => 'nullable|string',

@@ -20,6 +20,6 @@
 
 
 <div class="_shell _h1 / vol-Abs label-insideInput">
-    <input id="inputCss" type="text" name="css" value="{{$item->css ?? old('css')}}" placeholder=".">
+    <input id="inputCss" type="text" name="css" value="{{$product->css ?? old('css')}}" placeholder=".">
     <label class="Abs" for="inputCss">@svg('plus')CSS</label>
 </div>

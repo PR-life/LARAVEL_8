@@ -15,7 +15,11 @@ class CreateLegoTable extends Migration
 
             $table->string('name');
 
+            $table->string('bladeName')->nullable();
+            $table->string('shema')->default('default');
+
             $table->string('css')->nullable();
+ 
             $table->string('add_to_contents')->nullable();
             $table->string('where_to_show')->nullable();
 
@@ -25,9 +29,6 @@ class CreateLegoTable extends Migration
 
             //
             $table->string('note')->nullable();
-
-            //
-            $table->unsignedInteger('mafia')->default('0');
 
             //
 			$table->unsignedInteger('order')->default(50);

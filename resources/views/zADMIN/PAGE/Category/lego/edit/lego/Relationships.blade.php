@@ -72,6 +72,15 @@
                 @endcomponent
             </div>
 
+            <div class="Min -w5">
+                @include('zADMIN._wrap.select.name',['Var' => 'Lego'])
+                <div class="wrap-relationship -multiple">
+                    @component('zADMIN._wrap.select.lego.index', ['id' => 'category_lego'])
+                        @include('_._brick.select.lego.edit.index',['Lego' => $lego, 'arr' => $category->thisLegoPivot->pluck('id')->toArray()])
+                    @endcomponent
+                </div>
+            </div>
+ 
 
         </div>
     @endcomponent
