@@ -25,6 +25,9 @@ class AddMagnapinnaToItemsTable extends Migration
                 $table->unsignedBigInteger('category_id')->nullable();
                 $table->foreign('category_id')->references('id')->on('categories');
 
+                $table->unsignedBigInteger('feature_id')->nullable();
+                $table->foreign('feature_id')->references('id')->on('features');
+
                 $table->unsignedBigInteger('item_id')->nullable();
                 $table->foreign('item_id')->references('id')->on('items');
                 
@@ -54,6 +57,9 @@ class AddMagnapinnaToItemsTable extends Migration
 
             $table->dropForeign('items_category_id_foreign');
 			$table->dropColumn('category_id');
+
+            $table->dropForeign('items_feature_id_foreign');
+			$table->dropColumn('feature_id');
 
             $table->dropForeign('items_item_id_foreign');
 			$table->dropColumn('item_id');

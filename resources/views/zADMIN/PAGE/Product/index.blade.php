@@ -31,7 +31,9 @@
         @component('zADMIN._wrap.max', ['css' => 'index'])
             @component('zADMIN._wrap.Table.index', ['css'=> '-products', 'Model' => 'Product', 'localstoragePicking' => 'filter_btn_table_mockupLink'])
                 @foreach($products as $_product)     
-                    @include('zADMIN._repo.teaser.seo', ['Var' => $_product])
+                    @include('zADMIN._repo.teaser.seo', [
+                        'Var' => $_product,
+                        'css03091324' => $_product->product_id ? ' x-children' : ' x-solo'])
                 @endforeach
             @endcomponent
             @include('zADMIN.mod.paginator', ['Var' => $products])

@@ -2,7 +2,7 @@
 
 namespace App\Http\Requests\ADMIN\Feature;
 
-use App\Http\Requests\ADMIN\Tag\StoreRequest;
+use App\Http\Requests\ADMIN\Feature\StoreRequest;
 use Illuminate\Validation\Rule;
 
 class UpdateRequest extends StoreRequest

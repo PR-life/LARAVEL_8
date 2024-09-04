@@ -99,13 +99,13 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth']], function () {
     Route::group(['namespace' => 'Detail', 'prefix' => 'details'], function(){
         Route::get('/', 'IndexController')->name('detail.index');
         Route::get('/create', 'CreateController')->name('detail.create');
-        // Route::post('/', 'StoreController')->name('detail.store');
-        // // // Route::get('/{detail}', 'ShowController')->name('detail.show');
-        // Route::get('/{detail}/edit', 'EditController')->name('detail.edit');
-        // Route::patch('/{detail}', 'UpdateController')->name('detail.update');
-        // Route::delete('/{detail}', 'DeleteController')->name('detail.delete');
-        // //
-        // Route::get('/trash', 'IndexTrashedController')->name('detail.trash');
+        Route::post('/', 'StoreController')->name('detail.store');
+        // // Route::get('/{detail}', 'ShowController')->name('detail.show');
+        Route::get('/{detail}/edit', 'EditController')->name('detail.edit');
+        Route::patch('/{detail}', 'UpdateController')->name('detail.update');
+        Route::delete('/{detail}', 'DeleteController')->name('detail.delete');
+        //
+        Route::get('/trash', 'IndexTrashedController')->name('detail.trash');
     });
 
 

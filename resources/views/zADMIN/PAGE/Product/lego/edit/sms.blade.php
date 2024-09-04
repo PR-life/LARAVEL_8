@@ -11,7 +11,7 @@
 
     {{-- <div class="paragraph-s / net"></div> --}}
     {{-- @include('zADMIN.PAGE.Item._this.edit.param') --}}
-    @includeIf('zADMIN.PAGE.Item._this.edit.param')
+    @includeIf('zADMIN.PAGE.Product._this.edit.params')
 
 
     @component('_wrap.__.summary')

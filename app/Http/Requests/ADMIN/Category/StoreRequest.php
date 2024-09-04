@@ -24,9 +24,10 @@ class StoreRequest extends BaseRelationsRequest
             'name_seo' => 'nullable|string',
             'h1' => 'nullable|string',
             'intro' => 'nullable|string',
+            'text' => 'nullable|string',
 
             //
-            'menu' => 'nullable',
+            // 'menu' => 'nullable',
 
             //
             'bread_name' => 'nullable',
@@ -37,7 +38,9 @@ class StoreRequest extends BaseRelationsRequest
             'prev_url' => 'nullable',
  
 			//
-            'string_1' => 'nullable',
+            'text_top' => 'nullable|string',
+            'text_bottom' => 'nullable|string',
+            'string_1' => 'nullable|string',
 
             //
 			'en_name' => 'nullable|string',

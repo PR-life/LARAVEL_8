@@ -41,7 +41,7 @@
             @component('zADMIN._wrap.Table.index', ['css'=> '-details', 'Model' => 'Detail','localstoragePicking' => 'filter_btn_table_frontend filter_btn_table_backend'])
 
             @foreach($details as $_detail)
-                @include('zADMIN._repo.teaser.tag', ['Var' => $_detail])
+                @include('zADMIN._repo.teaser.detail', ['Var' => $_detail])
             @endforeach
 
             @endcomponent

@@ -21,9 +21,9 @@ class CreateItemsTable extends Migration
             $table->string('shema_teaser')->default('default');
             $table->string('css')->nullable();
 
-            $table->string('type')->nullable();
-            $table->string('action')->nullable();
-            $table->string('face')->nullable();
+            // $table->string('type')->nullable();
+            // $table->string('action')->nullable();
+            // $table->string('face')->nullable();
 
             $table->string('name_tag')->nullable();
             $table->string('name_seo')->nullable();

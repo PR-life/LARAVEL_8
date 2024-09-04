@@ -237,7 +237,7 @@ class Category extends Model
     
     public function childrenCategories()
     {
-        return $this->hasMany(Category::class, 'category_id', 'id');
+        return $this->hasMany(Category::class, 'category_id', 'id')->orderBy('order', 'asc');
         // return $this->hasMany(Category::class)->with('categories')->orderBy('order', 'asc');
     }
 

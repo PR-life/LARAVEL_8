@@ -1,6 +1,6 @@
 @extends('zADMIN._schema.edit')
 
-@section('title')edit. Feature - {{$feature->name}} @endsection
+@section('title')edit. Detail - {{$detail->name}} @endsection
 
 
 @push('addBread')
@@ -11,7 +11,7 @@
 	</li>
 	<li>
 		<span>
-			<span class="content-xs">Св-ва</span>
+			<span class="content-xs">detail</span>
 		</span>
 	</li>
 @endpush
@@ -21,27 +21,27 @@
 
 <div class="I aura">
 
-	@component('zADMIN._wrap.form.edit', ['route' => route('admin.feature.update', $feature->id), 'css' => '-feature'])
+	@component('zADMIN._wrap.form.edit', ['route' => route('admin.detail.update', $detail->id), 'css' => '-detail'])
 
-		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.feature.index','link_create' => route('admin.feature.create')])
+		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.detail.index','link_create' => route('admin.detail.create')])
 
 
 		<div class="_shell / net">
-			@include('zADMIN._bd.edit.published',['Var'=> $feature])
+			@include('zADMIN._bd.edit.published',['Var'=> $detail])
 		</div>
 
-		@include('zADMIN.PAGE.Feature.lego.edit.lego.Relationships')
+		@include('zADMIN.PAGE.Detail.lego.edit.lego.Relationships')
 		<div class="paragraph"></div>
 
 
 		@component('_wrap.Flaber.admin.edit')
 
 			@slot('flaber')
-				{{-- @include('zADMIN.PAGE.Feature.lego.edit.sms') --}}
+				{{-- @include('zADMIN.PAGE.Detail.lego.edit.sms') --}}
 			@endslot
 
 			<div class="paragraphX2"></div>
-			@include('zADMIN.PAGE.Feature.lego.edit.body')
+			@include('zADMIN.PAGE.Detail.lego.edit.body')
 
 		@endcomponent
 

@@ -70,19 +70,19 @@
     @endcomponent
 
 
-    {{-- @component('zADMIN._wrap.Relationships.line')
+    @component('zADMIN._wrap.Relationships.line')
         @slot('id','22071759')
         @slot('name22071756','Дополнительные связи')
         <div class="W-100 / flex cross">
             <div class="W-50">
                 @include('zADMIN._wrap.select.name',['Var' => 'Lego'])
                 <div class="wrap-relationship -multiple">
-                    @component('zADMIN._wrap.select.Lego.index', ['id' => 'lego'])
-                        @include('_._brick.select.Lego.edit.index',['Lego' => $Lego, 'arr' => $product->lego->pluck('id')->toArray(), 'currentId' => $product->id])
+                    @component('zADMIN._wrap.select.lego.index', ['id' => 'lego'])
+                        @include('_._brick.select.lego.edit.index',['Lego' => $Lego, 'arr' => $product->lego->pluck('id')->toArray()])
                     @endcomponent
                 </div>
             </div>
-            <div class="W-50 void">
+            {{-- <div class="W-50 void">
                 <div class="Min -w5 / wrap-relationship -solo / round">
                     @include('zADMIN._wrap.select.name',['Var' => 'Delivery service'])
                     @component('zADMIN._wrap.select.service.delivery', ['id' => 'delivery_service'])
@@ -96,9 +96,9 @@
                         @include('_._brick.select.category.edit.services',['Categories' => $categories, 'Var' => $product->category_services_id])
                     @endcomponent
                 </div>
-            </div>
+            </div> --}}
         </div>
-    @endcomponent --}}
+    @endcomponent
 
 
     {{-- @component('zADMIN._wrap.Relationships.line')

@@ -1,19 +1,15 @@
 <div class="Article aura">
 
-	@component('zADMIN._wrap.form._shell.Lang', ['id' => 'nameFeature'. (class_basename($feature))])
+	@component('zADMIN._wrap.form._shell.Lang', ['id' => 'nameFeature'. (class_basename($detail))])
 	<div class="_shell _name @error('name') Error @enderror / vol-Abs / net">
-		<input id="inputName" type="text" name="name" value="{{$feature->name ?? old('name')}}" placeholder=".">
+		<input id="inputName" type="text" name="name" value="{{$detail->name ?? old('name')}}" placeholder=".">
 		<label class="Abs" for="inputName">@svg('plus')Name</label>
 		@error('name')
 			<div class="Abs / Nameplate -rt">{{ $errors->first('name') }}</div>
 		@enderror
 	</div>
-	<div class="none on / _shell _name / vol-Abs">
-		<input id="inputName_en" type="text" name="en_name" value="{{$feature->en_name ?? old('en_name')}}" placeholder=".">
-		<label class="Abs" for="inputName_en">@svg('plus')en_Name</label>
-	</div>
 	@endcomponent
-	@include('zADMIN._lego.form.slug.edit', ['Var' => $feature->slug])
+	@include('zADMIN._lego.form.slug.edit', ['Var' => $detail->slug])
 
 	<div class="hill"></div>
 
@@ -27,11 +23,11 @@
 
 		@slot('tab_1')
 			<div class="paragraphX2 / net"></div>
-			{{-- @include('zADMIN.PAGE.Feature.lego.edit.tab_1') --}}
+			{{-- @include('zADMIN.PAGE.Detail.lego.edit.tab_1') --}}
 		@endslot
 		@slot('tab_2')
-			<div class="paragraphX2 / net"></div>
-			@include('zADMIN.PAGE.Feature.lego.edit.tab_2')
+			{{-- <div class="paragraphX2 / net"></div> --}}
+			{{-- @include('zADMIN.PAGE.Detail.lego.edit.tab_2') --}}
 		@endslot
 		{{-- @slot('tab_3')
 			<div class="paragraphX2 / net"></div>

@@ -12,13 +12,11 @@ use App\Models\Detail;
 
 class Service extends BaseService {
 
-
 	public function details($x) {
 		$filter = app()->make(DetailFilter::class, ['queryParams' => array_filter($x)]);
 	
 		return Detail::filter($filter)->orderBy('order', 'asc')->orderBy('created_at', 'DESC')->paginate(25);
 	}
-
 
 
 	public function update($detail,$param) {
@@ -31,8 +29,8 @@ class Service extends BaseService {
 
 
 
-			isset($param['category_ids']) ? $categoryIds = $param['category_ids'] : $categoryIds = [];
-			unset($param['category_ids']);
+			// isset($param['category_ids']) ? $categoryIds = $param['category_ids'] : $categoryIds = [];
+			// unset($param['category_ids']);
 
 			
 			//
@@ -54,10 +52,10 @@ class Service extends BaseService {
 			$detail->update($param);
 
 			// dd($detail);
-			$detail->categories()->sync($categoryIds); // изменили attach на sync*, 
+			// $detail->categories()->sync($categoryIds); // изменили attach на sync*, 
 				// и поместили ниже строки '$category->update($param);'
 				// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
-			$categoryIds = [];
+			// $categoryIds = [];
 
 			DB::commit();
 		} catch (Exception $exception) {

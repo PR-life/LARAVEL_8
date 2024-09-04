@@ -19,7 +19,9 @@ class BaseRelationsRequest extends BaseRequest
             'group_id' => 'nullable|integer|exists:groups,id',
             'tag_id' => 'nullable|integer|exists:tags,id',
             'category_id' => 'nullable|integer|exists:categories,id', 
+            'product_id' => 'nullable|integer|exists:products,id',
             'item_id' => 'nullable|integer|exists:items,id',
+            'feature_id' => 'nullable|integer|exists:features,id',
             'item_surrogate_id' => 'nullable|integer|exists:items,id',
 
             //

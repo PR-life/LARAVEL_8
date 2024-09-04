@@ -86,8 +86,8 @@
             <div class="W-50">
                 @include('zADMIN._wrap.select.name',['Var' => 'Lego'])
                 <div class="wrap-relationship -multiple">
-                    @component('zADMIN._wrap.select.Lego.index', ['id' => 'lego'])
-                        @include('_._brick.select.Lego.edit.index',['Lego' => $Lego, 'arr' => $item->lego->pluck('id')->toArray(), 'currentId' => $item->id])
+                    @component('zADMIN._wrap.select.lego.index', ['id' => 'lego'])
+                        @include('_._brick.select.lego.edit.index',['Lego' => $Lego, 'arr' => $item->lego->pluck('id')->toArray(), 'currentId' => $item->id])
                     @endcomponent
                 </div>
             </div>

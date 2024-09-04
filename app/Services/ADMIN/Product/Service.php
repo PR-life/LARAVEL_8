@@ -25,6 +25,9 @@ class Service extends BaseService {
 			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
 			unset($param['tag_ids']);
 
+			isset($param['lego_ids']) ? $legoIds = $param['lego_ids'] : $legoIds = [];
+			unset($param['lego_ids']);
+
 			isset($param['faq_ids']) ? $faqIds = $param['faq_ids'] : $faqIds = [];
 			unset($param['faq_ids']);
 
@@ -61,6 +64,9 @@ class Service extends BaseService {
 
 			$product->tags()->sync($tagIds);
 			$tagIds = [];
+
+			$product->lego()->sync($legoIds);
+			$legoIds = [];
 
 			$product->faqs()->sync($faqIds);
 			$faqIds = [];

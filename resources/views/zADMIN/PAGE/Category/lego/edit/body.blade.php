@@ -39,20 +39,44 @@
 	@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Интро'])
 	<div class="paragraph"></div>
 	<div class="_shell Article aura / Note -lite">
-		<textarea id="tinymce_1" name="intro" placeholder='текст...'>{{$category->intro}}</textarea>
+		<textarea id="tinymce_lite_1" name="intro" placeholder='текст...'>{{$category->intro}}</textarea>
 	</div>
 	<div class="hill-s"></div>
 
+	
 
-
-
-	@include('zADMIN._wrap.text.nameTextarea', ['name' => 'текст knot_1'])
-	<div class="paragraph"></div>
-	<div class="_shell / Note -lite">
-		<textarea id="tinymce_lite_1" name="knot_1" placeholder='текст...'>{{$category->knot_1}}</textarea>
-		{{-- @include('zADMIN._brick.cleanHTML') --}}
+	<div class="Details transparent">
+		<details>
+			<summary><span>text_top</span><i></i></summary>
+			<div class="_shell Article aura / Note -lite">
+				<textarea id="tinymce_1" name="text_top" placeholder='текст...'>{{$category->text_top}}</textarea>
+			</div>
+		</details>
+		<details>
+			<summary><span>text_bottom</span><i></i></summary>
+			<div class="_shell Article aura / Note -lite">
+				<textarea id="tinymce_2" name="text_bottom" placeholder='текст...'>{{$category->text_bottom}}</textarea>
+			</div>
+		</details>
+		<details>
+			<summary><span>text</span><i></i></summary>
+			<div class="_shell Article aura / Note -lite">
+				<textarea id="tinymce_3" name="text" placeholder='текст...'>{{$category->text}}</textarea>
+			</div>
+		</details>
+		<details>
+			<summary><span>knot_1</span><i></i></summary>
+			<div class="_shell Article aura / Note -lite">
+				<textarea id="tinymce_lite_2" name="knot_1" placeholder='текст...'>{{$category->knot_1}}</textarea>
+			</div>
+		</details>
 	</div>
 
+
+
+
+
+	
 
 </div>
 

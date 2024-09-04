@@ -1,7 +1,8 @@
 <div class="none D-Relation -on W-100 / flex eC cross / manager-showParamNone / Min -w4 / hidden @isset($param_seo) Roll_PC -scrollBar @endisset"> 
     
     <div class="W-100 right-text">
-        @if($Var->tags->count())
+
+        @if(isset($Var->tags) && $Var->tags->count())
             <ul class="menu -tag -XS vol-tags / lie cloud">
                 @foreach($Var->tags as $_tag)
                     <li class="{{$_tag->name_2 ? 'original' : ''}}">
@@ -49,9 +50,7 @@
     </div>
 
 
-
-
-    <div class="x-HMin flex dC / Min Max4444 -w3">
+    <div class="x-HMin flex dC / Min -w3">
         
 
 
@@ -69,6 +68,15 @@
             </a>
         </div>
         @endisset
+
+        @isset($Var->parent)
+        <div class="flex cI / -Grey">
+            <svg viewBox="0 0 24 24"><path fill-rule="evenodd" fill="currentColor" d="m5.414 12 6.585-6.586L18.585 12 12 18.586zM5 12l-1.208-1.207L10.585 4a2 2 0 0 1 2.829 0l6.792 6.793L19 12l1.207 1.207L13.414 20a2 2 0 0 1-2.828 0l-6.793-6.793z" clip-rule="evenodd"></path></svg>
+            <span class="content-xxs">{{$Var->parent->name}}</span>
+        </div>
+        @endisset
+
+
 
         @isset($param_seo)
             @isset($Var->category)

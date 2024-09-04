@@ -18,7 +18,7 @@
 	// https://www.tiny.cloud/docs/tinymce/latest/customize-ui/
 	// https://www.tiny.cloud/docs/tinymce/latest/migration-from-5x/#summary
     tinymce.init({
-      selector: '#tinymce_1, #tinymce_2, #tinymce_3',
+      selector: '#tinymce_1, #tinymce_2, #tinymce_3, #tinymce_4',
       content_css: "{{Request::root() . mix('/css/env/tinymce.css')}}",
       language: 'ru',
       height: parseInt(document.documentElement.clientHeight) * .8,

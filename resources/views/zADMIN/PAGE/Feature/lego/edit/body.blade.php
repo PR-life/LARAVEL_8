@@ -29,10 +29,10 @@
 			<div class="paragraphX2 / net"></div>
 			{{-- @include('zADMIN.PAGE.Feature.lego.edit.tab_1') --}}
 		@endslot
-		@slot('tab_2')
+		{{-- @slot('tab_2')
 			<div class="paragraphX2 / net"></div>
 			@include('zADMIN.PAGE.Feature.lego.edit.tab_2')
-		@endslot
+		@endslot --}}
 		{{-- @slot('tab_3')
 			<div class="paragraphX2 / net"></div>
 			@include('zADMIN.PAGE._lego.edit.media.index', ['Var' => $item])

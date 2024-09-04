@@ -3,7 +3,7 @@
 namespace App\Http\Controllers\ADMIN\Feature;
 
 //
-use App\Http\Requests\ADMIN\Group\FilterRequest;
+use App\Http\Requests\ADMIN\Feature\FilterRequest;
 //
 use App\Models\Category;
 

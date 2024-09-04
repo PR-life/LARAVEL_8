@@ -6,7 +6,7 @@ if(($Var->category && $Var->categories && $Var->name_2) || $Var->status == '200'
     $x_23101421 = 'x-empty ';
 };
 
-isset($css) ? $x_23101421 .= $css.' ' : '';
+isset($css03091324) ? $x_23101421 .= $css03091324.' ' : '';
 
 $x_23101421 .= 'group-'.($Var->group ? $Var->group->slug : 'none');
 

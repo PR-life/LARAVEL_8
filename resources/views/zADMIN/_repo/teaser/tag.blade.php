@@ -50,6 +50,7 @@ if(isset($Var->group)) {
                     </ul>
                 @endif
                 @endisset
+
                 @isset($Var->category)
                 <div class="Min -w2 / right-text">
                     <a class="content-s flex / b600 Grey" href="{{route('admin.category.edit', $Var->category->id)}}">

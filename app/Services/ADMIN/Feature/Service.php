@@ -54,9 +54,7 @@ class Service extends BaseService {
 			$feature->update($param);
 
 			// dd($feature);
-			$feature->categories()->sync($categoryIds); // изменили attach на sync*, 
-				// и поместили ниже строки '$category->update($param);'
-				// *sync - удаляет все привязки которые есть у поста и добавляет те что указали
+			// $feature->categories()->sync($categoryIds);
 			$categoryIds = [];
 
 			DB::commit();

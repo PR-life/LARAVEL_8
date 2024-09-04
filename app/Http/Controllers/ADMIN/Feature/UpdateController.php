@@ -9,12 +9,12 @@ use App\Models\Feature;
 
 class UpdateController extends BaseController
 {
-    public function __invoke(UpdateRequest $request, Tag $tag){
+    public function __invoke(UpdateRequest $request, Feature $feature){
 
         // dd($request);
         $data = $request->validated();
         // dd($data);
-        $tag = $this->service->update($tag,$data);
+        $feature = $this->service->update($feature,$data);
 
         return back()->with('UpdateController', true);
     }

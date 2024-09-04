@@ -6,15 +6,13 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Traits\Filterable;
-use Carbon\Carbon;
+use App\Models\Traits\HasCarbonDate;
 //
 use App\Models\_child\Service;
 
 class Tag extends Model
 {
-    use HasFactory;
-	use SoftDeletes;
-    use Filterable;
+    use HasFactory, SoftDeletes, Filterable, HasCarbonDate;
 	
     protected $table = 'tags';
     protected $guarded = false;
@@ -110,8 +108,4 @@ class Tag extends Model
         );
     }
  
-
-	public function getDateAsCarbonAttribute(){
-		return Carbon::parse($this->created_at);
-	}
 }

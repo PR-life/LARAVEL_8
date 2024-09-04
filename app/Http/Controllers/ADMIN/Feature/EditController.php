@@ -22,6 +22,6 @@ class EditController extends Controller
         $groups = Group::all();
         $services = Service::all();
 
-        return view('zADMIN.PAGE.Tag.edit', compact('feature','categories','groups','services'));
+        return view('zADMIN.PAGE.Feature.edit', compact('feature','categories','groups','services'));
     }
 }

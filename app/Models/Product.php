@@ -18,6 +18,19 @@ class Product extends BaseContent
     protected $guarded = false;
 
 
+
+    public function parent() 
+    {
+        return $this->belongsTo(
+            Product::class,
+            'product_id',
+			'id',
+        );
+    }
+
+
+
+
     public function childrenProducts()
     {
         return $this->hasMany(Product::class)->with('products')->orderBy('order', 'asc');
