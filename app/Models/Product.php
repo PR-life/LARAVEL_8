@@ -3,7 +3,6 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
-// use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Traits\Filterable;
 //
@@ -61,7 +60,23 @@ class Product extends BaseContent
         return 'product_lego';
     }
 
-    //
+
+    // Добавляем метод для генерации полного slug
+    public function getFullSlugAttribute()
+    {
+        // Если у продукта есть родительский продукт, рекурсивно добавляем его slug
+        if ($this->parent) {
+            return $this->parent->full_slug . '/' . $this->slug;
+        }
+
+        // Если нет родителя, возвращаем просто slug
+        return $this->slug;
+    }
+
+
+
+
+    // Маршруты
     public function getRouteKeyName(): string
     {
         if (request()->is('admin/*')) {
