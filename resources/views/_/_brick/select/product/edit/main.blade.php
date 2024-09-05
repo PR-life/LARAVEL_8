@@ -1,6 +1,6 @@
 <option value=''>--не выбрано--</option>
 @foreach($Products as $_product)
-	@if(!$_product->product_id)
+	{{-- @if(!$_product->product_id) --}}
 		<option
 		value="{{$_product->id}}"
 		{{ $Var == $_product->id ? ' selected' : ''}}
@@ -17,5 +17,5 @@
 			</option>
 			@endforeach
 		@endif  --}}
-	@endif
+	{{-- @endif --}}
 @endforeach

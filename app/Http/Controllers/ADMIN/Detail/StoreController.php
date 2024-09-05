@@ -2,17 +2,16 @@
 
 namespace App\Http\Controllers\ADMIN\Detail;
 
-use App\Http\Controllers\Controller;
-//
 use App\Http\Requests\ADMIN\Detail\StoreRequest;
 use App\Models\Detail;
 
-class StoreController extends Controller
+class StoreController extends BaseController
 {
     public function __invoke(StoreRequest $request){
+        // dd($request);
         $data = $request->validated();
         // dd($data);
-        $detail = Detail::firstOrFail($data);
+        $detail = $this->service->store($data);
 
         return redirect()->route('admin.detail.edit', $detail->id);
     }

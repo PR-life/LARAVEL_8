@@ -9,35 +9,6 @@ use Carbon\Carbon;
 class BaseContent extends Model
 {
 
-    public function groups() {
-        return $this->belongsToMany(
-            Group::class,
-            $this->getGroupPivotTable(),
-            $this->getForeignKey(),
-            'group_id'
-        );
-    }
-
-    public function tags()
-    {
-        return $this->belongsToMany(
-            Tag::class,
-            $this->getTagPivotTable(),
-            $this->getForeignKey(),
-            'tag_id'
-        );
-    }
-
-    public function categories()
-    {
-        return $this->belongsToMany(
-            Category::class,
-            $this->getCategoryPivotTable(),
-            $this->getForeignKey(),
-            'category_id'
-        );
-    }
-
     public function faqs()
     {
         return $this->belongsToMany(
@@ -65,25 +36,16 @@ class BaseContent extends Model
             $this->getLegoPivotTable(),
             $this->getForeignKey(),
             'lego_id'
-        );
+        )->orderBy('order', 'asc');
     }
 
-    // Метод для связи с моделью User
-    public function user()
+    public function tags()
     {
-        return $this->belongsTo(
-            User::class,
-            'user_id',
-            'id'
-        );
-    }
-
-    public function group() 
-    {
-        return $this->belongsTo(
-            Group::class,
-            'group_id',
-			'id',
+        return $this->belongsToMany(
+            Tag::class,
+            $this->getTagPivotTable(),
+            $this->getForeignKey(),
+            'tag_id'
         );
     }
 
@@ -95,7 +57,17 @@ class BaseContent extends Model
 			'id',
         );
     }
-    
+
+    public function categories()
+    {
+        return $this->belongsToMany(
+            Category::class,
+            $this->getCategoryPivotTable(),
+            $this->getForeignKey(),
+            'category_id'
+        );
+    }
+
     public function category() 
     {
         return $this->belongsTo(
@@ -105,8 +77,31 @@ class BaseContent extends Model
         );
     }
 
+    public function groups() {
+        return $this->belongsToMany(
+            Group::class,
+            $this->getGroupPivotTable(),
+            $this->getForeignKey(),
+            'group_id'
+        );
+    }
+    public function group() 
+    {
+        return $this->belongsTo(
+            Group::class,
+            'group_id',
+			'id',
+        );
+    }
 
-
+    public function user()
+    {
+        return $this->belongsTo(
+            User::class,
+            'user_id',
+            'id'
+        );
+    }
 
     //
     // Аксессор для получения даты обновления как объекта Carbon

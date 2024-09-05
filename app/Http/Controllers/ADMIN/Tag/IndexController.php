@@ -23,10 +23,14 @@ class IndexController extends BaseController
             return view('zADMIN.PAGE.Tag.indexGroup', compact('tags','categories','shema'));
         }
 
-        $categories = Category::orderBy('order')->get();
+        // $categories = Category::orderBy('order')->get();
+
+        $categories = Category::whereNull('category_id')
+            ->with('childrenCategories')
+            ->orderBy('order', 'asc')
+            ->orderBy('created_at', 'DESC')->get();
+
 
         return view('zADMIN.PAGE.Tag.index', compact('tags','categories','_request'));
-
-         
     }
 }

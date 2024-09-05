@@ -11,7 +11,7 @@ class UpdateController extends BaseController
 {
     public function __invoke(UpdateRequest $request, Detail $detail){
 
-        // dd($request);
+        dd($request);
         $data = $request->validated();
         // dd($data);
         $tag = $this->service->update($detail,$data);

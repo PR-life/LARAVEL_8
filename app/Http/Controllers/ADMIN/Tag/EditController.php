@@ -18,7 +18,10 @@ class EditController extends Controller
         // ->orderBy('name', 'asc')->paginate(25);
 
         // $tags = Tag::all();
-        $categories = Category::all();
+        $categories = Category::whereNull('category_id')
+            ->with('childrenCategories')
+            ->orderBy('order', 'asc')
+            ->orderBy('created_at', 'DESC')->get();
         $groups = Group::all();
         $services = Service::all();
 

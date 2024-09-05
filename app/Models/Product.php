@@ -18,7 +18,6 @@ class Product extends BaseContent
     protected $guarded = false;
 
 
-
     public function parent() 
     {
         return $this->belongsTo(
@@ -28,21 +27,10 @@ class Product extends BaseContent
         );
     }
 
-
-
-
     public function childrenProducts()
     {
         return $this->hasMany(Product::class)->with('products')->orderBy('order', 'asc');
     }
-
-    protected function getLegoPivotTable(){
-        return 'product_lego';
-    }
-
-    // protected function getItemPivotTable(){
-    //     return 'item_items';
-    // }
 
     public function products()
     {
@@ -54,6 +42,12 @@ class Product extends BaseContent
         );
     }
 
+
+    ////
+
+    // protected function getItemPivotTable(){
+    //     return 'item_items';
+    // }
     protected function getFaqPivotTable(){
         return 'product_faqs';
     }
@@ -63,9 +57,11 @@ class Product extends BaseContent
     protected function getCategoryPivotTable(){
         return 'product_categories';
     }
+    protected function getLegoPivotTable(){
+        return 'product_lego';
+    }
 
-
-
+    //
     public function getRouteKeyName(): string
     {
         if (request()->is('admin/*')) {

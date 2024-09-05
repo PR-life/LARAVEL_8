@@ -96,19 +96,14 @@ details {
     ul > :last-child {
         margin-bottom: 0;
     }
-
-
-    //
-    ul.-lineHeight.slim-s,
-    ol.-lineHeight.slim-s {
-        > li {
-            margin-bottom: calc(var(--void-ulol) * 3);
-        }
-    }
-
 }
 
-
+ul.-lineHeight.slim-s,
+ol.-lineHeight.slim-s {
+    > li {
+        margin-bottom: calc(var(--void-ulol) * 3);
+    }
+}
 
 @media screen and (max-width:@w-menu-2) {
 

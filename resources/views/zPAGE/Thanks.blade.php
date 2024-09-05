@@ -1,4 +1,4 @@
-@extends('zPAGE._shema.INDEX')
+@extends('zPAGE._schema.INDEX')
 
 @push('metrika_events')
 	<script>
