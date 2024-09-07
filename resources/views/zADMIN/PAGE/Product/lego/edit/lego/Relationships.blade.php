@@ -60,12 +60,12 @@
             @endcomponent
         </div>
         
-        {{-- <div class="Min -w5 / wrap-relationship -solo / round">
+        <div class="Min -w5 / wrap-relationship -solo / round">
             @include('zADMIN._wrap.select.name',['Var' => 'Surrogate'])
             @component('zADMIN._wrap.select.product.surrogate', ['id' => 'surrogate'])
-                @include('_._brick.select.product.edit.surrogate',['Items' => $products, 'Var' => $product->product_surrogate_id])
+                @include('_._brick.select.product.edit.surrogate',['Products' => $products, 'Var' => $product->product_surrogate_id])
             @endcomponent
-        </div> --}}
+        </div>
 
     @endcomponent
 
@@ -73,8 +73,8 @@
     @component('zADMIN._wrap.Relationships.line')
         @slot('id','22071759')
         @slot('name22071756','Дополнительные связи')
-        <div class="W-100 / flex cross">
-            <div class="W-50">
+        <div class="W-100 / Grid x3 -gap">
+            <div>
                 @include('zADMIN._wrap.select.name',['Var' => 'Lego'])
                 <div class="wrap-relationship -multiple">
                     @component('zADMIN._wrap.select.lego.index', ['id' => 'lego'])
@@ -82,21 +82,48 @@
                     @endcomponent
                 </div>
             </div>
-            {{-- <div class="W-50 void">
-                <div class="Min -w5 / wrap-relationship -solo / round">
-                    @include('zADMIN._wrap.select.name',['Var' => 'Delivery service'])
+            <div class="void">
+                <div class="content">Услуги</div>
+                <div class="wrap-relationship -solo / round">
+                    @include('zADMIN._wrap.select.name',['Var' => 'Доставка'])
                     @component('zADMIN._wrap.select.service.delivery', ['id' => 'delivery_service'])
                         @include('_._brick.select.service.edit.delivery',['Services' => $services, 'Var' => $product->service_delivery_id])
                     @endcomponent
                 </div>
-        
-                <div class="Min -w5 / wrap-relationship -solo / round">
+                <div class="wrap-relationship -solo / round">
                     @include('zADMIN._wrap.select.name',['Var' => 'Category services'])
                     @component('zADMIN._wrap.select.category.services', ['id' => 'category_service'])
                         @include('_._brick.select.category.edit.services',['Categories' => $categories, 'Var' => $product->category_services_id])
                     @endcomponent
                 </div>
-            </div> --}}
+            </div>
+            <div class="void">
+                <div class="content">Paper</div>
+                <div class="wrap-relationship -solo / round">
+                    @include('zADMIN._wrap.select.name',['Var' => 'Условия оплаты'])
+                    @component('zADMIN._wrap.select.paper.index', ['id' => 'paper_payment_id','name'=>'paper_payment_id'])
+                        @include('_._brick.select.paper.edit.index',['Papers' => $papers, 'Var' => $product->paper_payment_id])
+                    @endcomponent
+                </div>
+                <div class="wrap-relationship -solo / round">
+                    @include('zADMIN._wrap.select.name',['Var' => 'Про гарантии'])
+                    @component('zADMIN._wrap.select.paper.index', ['id' => 'paper_warranty_id','name'=>'paper_warranty_id'])
+                        @include('_._brick.select.paper.edit.index',['Papers' => $papers, 'Var' => $product->paper_warranty_id])
+                    @endcomponent
+                </div>
+                <div class="wrap-relationship -solo / round">
+                    @include('zADMIN._wrap.select.name',['Var' => 'свободный paper 1'])
+                    @component('zADMIN._wrap.select.paper.index', ['id' => 'paper_one_id','name'=>'paper_one_id'])
+                        @include('_._brick.select.paper.edit.index',['Papers' => $papers, 'Var' => $product->paper_one_id])
+                    @endcomponent
+                </div>
+                <div class="wrap-relationship -solo / round">
+                    @include('zADMIN._wrap.select.name',['Var' => 'свободный paper 2'])
+                    @component('zADMIN._wrap.select.paper.index', ['id' => 'paper_two_id','name'=>'paper_two_id'])
+                        @include('_._brick.select.paper.edit.index',['Papers' => $papers, 'Var' => $product->paper_two_id])
+                    @endcomponent
+                </div>
+            </div>
         </div>
     @endcomponent
 

@@ -37,6 +37,19 @@ class AddMagnapinnaToProductsTable extends Migration
                 $table->unsignedBigInteger('service_delivery_id')->nullable();
                 $table->foreign('service_delivery_id')->references('id')->on('services');
 
+                $table->unsignedBigInteger('paper_payment_id')->nullable();
+                $table->foreign('paper_payment_id')->references('id')->on('papers');
+
+                $table->unsignedBigInteger('paper_warranty_id')->nullable();
+                $table->foreign('paper_warranty_id')->references('id')->on('papers');
+
+                $table->unsignedBigInteger('paper_one_id')->nullable();
+                $table->foreign('paper_one_id')->references('id')->on('papers');
+
+                $table->unsignedBigInteger('paper_two_id')->nullable();
+                $table->foreign('paper_two_id')->references('id')->on('papers');
+
+                //
                 $table->unsignedBigInteger('category_services_id')->nullable();
                 $table->foreign('category_services_id')->references('id')->on('categories');
 
@@ -70,6 +83,19 @@ class AddMagnapinnaToProductsTable extends Migration
             $table->dropForeign('products_service_delivery_id_foreign');
 			$table->dropColumn('service_delivery_id');
 
+            $table->dropForeign('products_paper_payment_id_foreign');
+			$table->dropColumn('paper_payment_id');
+
+            $table->dropForeign('products_paper_warranty_foreign');
+			$table->dropColumn('paper_warranty_id');
+
+            $table->dropForeign('products_paper_one_foreign');
+			$table->dropColumn('paper_one_id');
+
+            $table->dropForeign('products_paper_two_foreign');
+			$table->dropColumn('paper_two_id');
+
+            //
             $table->dropForeign('products_category_services_id_foreign');
 			$table->dropColumn('category_services_id');
 		});

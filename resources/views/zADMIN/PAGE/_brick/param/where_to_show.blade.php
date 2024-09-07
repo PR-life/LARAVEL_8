@@ -22,3 +22,11 @@
 
     Bottom
 @endcomponent
+@component('zADMIN._wrap.menu.tile.radio', ['cssName' => 'content-xxs'])
+    @slot('name', 'where_to_show')
+    @slot('id', 'where_to_show_important')
+    @slot('value', 'important')
+    @slot('param_from_bd', $Var->where_to_show)
+
+    important
+@endcomponent

@@ -12,7 +12,11 @@
 @push('js-bottom-solo') 
 
 <script>
-
+	// templates
+	// https://www.tiny.cloud/blog/tinymce-templates/
+	// https://www.tiny.cloud/docs/configure/content-formatting/
+	// https://www.tiny.cloud/docs/tinymce/latest/customize-ui/
+	// https://www.tiny.cloud/docs/tinymce/latest/migration-from-5x/#summary
     tinymce.init({
       selector: '#tinymce_1, #tinymce_2, #tinymce_3, #tinymce_4',
       content_css: "{{Request::root() . mix('/css/env/tinymce.css')}}",
@@ -21,9 +25,6 @@
 
       relative_urls : false,
       document_base_url : '/',
-      convert_urls: false,
-      // relative_urls: true, // Использовать относительные ссылки
-      // remove_script_host: true // Убирает домен из ссылок
 
       menubar: 'format',
       menu: {
@@ -80,6 +81,13 @@
           description: "",
           content: "<div class='Details -edge -line vol-dot vol-dt -shadow_PC -shadow_mbl'><details open><summary>555555555555</summary><div class='_edge / text void'><div class='h x-name'>555555</div><p>55555555555555</p></div></details></div>",
         },
+
+
+        // {
+        //   title: "Some title 2",
+        //   description: "Some desc 2",
+        //   url: "templates/development.html",
+        // },
       ],
 
       setup: function (editor) {
@@ -101,7 +109,21 @@
         });
       },
 
-      extended_valid_elements: 'b,strong,i[*], summary[*], blockquote[*]',  // Разрешаем все атрибуты для i, summary, blockquote
+      // Разрешаем все элементы с любыми атрибутами
+      // valid_elements: '*[*]',  
+      extended_valid_elements: 'i[*], summary[*], blockquote[*]',  // Разрешаем все атрибуты для i, summary, blockquote
+
+
+
+    //   valid_elements: '*[*]',  // Разрешаем все элементы с любыми атрибутами
+    //   extended_valid_elements: 'span[*]',  // Явно разрешаем все атрибуты для span
+
+    //   // Дополнительно можно отключить автоматическое удаление пустых элементов
+    //   protect: [
+    //     /\<\/?(span)[^>]*>/g  // Защищаем пустые span от удаления
+    //   ],
+
+
 
     });
  
@@ -119,9 +141,6 @@
 		language: 'ru',
 		height: parseInt(document.documentElement.clientHeight) * .4,
 
-    document_base_url : '/',
-    convert_urls: false,
-
 		toolbar_location: 'bottom',
 		statusbar: false,
 		browser_spellcheck: true,
@@ -134,17 +153,13 @@
 
 		toolbar: 'blocks | bold italic bullist numlist | link | removeformat visualblocks | code', 
 		
+
+
+
 		paste_auto_cleanup_on_paste : true,
 		paste_postprocess : function(pl, o) {
 			o.node.innerHTML = o.node.innerHTML.replace(/&nbsp;/ig, " ");
 		},
-
-    // Добавляем следующие параметры
-    extended_valid_elements: 'b,strong', // Разрешаем использование обоих тегов
-    // forced_root_block: false, // Отключаем автоматическое создание оберток для текста
-    // cleanup: false, // Отключаем очистку HTML, чтобы TinyMCE не менял теги
-    // valid_elements: '*[*]', // Разрешаем все элементы с любыми атрибутами
-
 	});
 
 

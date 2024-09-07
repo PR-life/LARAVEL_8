@@ -423,7 +423,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.none_70{
 		display:none !important
 	}
-	.block_70{
+	#body .block_70{
 		display:block
 	}
 }

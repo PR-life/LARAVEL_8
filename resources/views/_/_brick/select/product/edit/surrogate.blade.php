@@ -1,19 +1,19 @@
 <option value=''>--не выбрано--</option>
-@foreach($Items as $_item)
-	@if(!$_item->item_id)
+@foreach($Products as $_product)
+	@if(!$_product->product_id)
 		<option
-		value="{{$_item->id}}"
-		{{ $Var == $_item->id ? ' selected' : ''}}
-		{{$_item->id == old('item_surrogate_id') ? ' selected' : ''}}>
-			{{$_item->name}}
+		value="{{$_product->id}}"
+		{{ $Var == $_product->id ? ' selected' : ''}}
+		{{$_product->id == old('product_surrogate_id') ? ' selected' : ''}}>
+			{{$_product->name}}
 		</option>
-		@if($_item->childrenItems->count() > 0)
-			@foreach($_item->childrenItems as $_childItem)
+		@if($_product->childrenProducts->count() > 0)
+			@foreach($_product->childrenProducts as $_childproduct)
 			<option
-				value="{{$_childItem->id}}"
-				{{ $Var == $_childItem->id ? ' selected' : ''}}
-				{{$_childItem->id == old('item_surrogate_id') ? ' selected' : ''}}>
-				–- {{$_childItem->name}}
+				value="{{$_childproduct->id}}"
+				{{ $Var == $_childproduct->id ? ' selected' : ''}}
+				{{$_childproduct->id == old('product_surrogate_id') ? ' selected' : ''}}>
+				–- {{$_childproduct->name}}
 			</option>
 			@endforeach
 		@endif 

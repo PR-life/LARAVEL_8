@@ -1,20 +1,3 @@
-@push('style')
-
-
-.done > .Ef.-list > ._ef.done,
-.myObserver > .Ef.-list > ._ef.myObserver,
-.myContract > .Ef.-list > ._ef.myContract,
-.myTask > .Ef.-list > ._ef.myTask {
-	height: auto;
-	min-height: var(--x-Ef-hMin);
-	opacity: 1;
-	pointer-events: all;
-    margin-bottom:var(--x-Ef-margin);
-}
-@endpush
-
-
-
 <div class="flex / Golden -left_60 vol-task">
 
     <div class="_l / pr-2">

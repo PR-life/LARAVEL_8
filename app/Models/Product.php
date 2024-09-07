@@ -42,11 +42,32 @@ class Product extends BaseContent
     }
 
 
-    ////
 
-    // protected function getItemPivotTable(){
-    //     return 'item_items';
+
+    // Универсальный метод для получения свойств родительской категории
+    public function getParentCategoryAttribute($property)
+    {
+        return optional(optional($this->parent)->category)->{$property};
+    }
+
+    // public function __get($name)
+    // {
+    //     // Проверяем, если имя начинается с "parentCategory_", то обрабатываем как обращение к свойству родительской категории
+    //     if (strpos($name, 'parentCategory_') === 0) {
+    //         $property = str_replace('parentCategory_', '', $name);
+    //         return $this->getParentCategoryAttribute($property);
+    //     }
+    
+    //     // В остальных случаях вызываем стандартное поведение __get
+    //     return parent::__get($name);
     // }
+    // {!! $item->parentCategory_text_top !!}
+    // {!! $item->parentCategory_another_property !!}
+
+
+    //// Пивотные таблицы
+
+ 
     protected function getFaqPivotTable(){
         return 'product_faqs';
     }
@@ -59,7 +80,9 @@ class Product extends BaseContent
     protected function getLegoPivotTable(){
         return 'product_lego';
     }
-
+    // protected function getItemPivotTable(){
+    //     return 'item_items';
+    // }
 
     // Добавляем метод для генерации полного slug
     public function getFullSlugAttribute()
@@ -72,9 +95,7 @@ class Product extends BaseContent
         // Если нет родителя, возвращаем просто slug
         return $this->slug;
     }
-
-
-
+ 
 
     // Маршруты
     public function getRouteKeyName(): string

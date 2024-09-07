@@ -111,10 +111,12 @@ h2.-vw, .h2.-vw {
 	
 }
 
-h2.-lineHeight, .h2.-lineHeight, h3.-lineHeight {
-    line-height: ~"calc(var(--rem-h2) * 1.1)";
+// h2.-lineHeight, .h2.-lineHeight, h3.-lineHeight {
+//     line-height: ~"calc(var(--rem-h2) * 1.1)";
+// }
+h2.-lineHeight, .h2.-lineHeight, h2.-vw.-lineHeight, .h2.-vw.-lineHeight {
+    line-height: clamp(calc(var(--rem-h)*1.1 + 2px),calc(var(--rem-h2)*1.1),calc(var(--indexW)*var(--rem-h1-ratio)*1.1));
 }
-
 
 .h.-vw {
 	font-size: clamp(calc(var(--font) + 2px),calc(var(--indexW)*1.8),var(--rem-h));

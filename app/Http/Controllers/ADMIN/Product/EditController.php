@@ -3,8 +3,8 @@
 namespace App\Http\Controllers\ADMIN\Product;
 
 use App\Models\Product;
+use App\Models\{Group,Tag,Category,Faq,Lego,Paper,User};
 use App\Models\_child\Service;
-use App\Models\{Group,Tag,Faq,Category,Lego,User};
 
 
 class EditController extends BaseController
@@ -13,17 +13,20 @@ class EditController extends BaseController
 		
 
 		$product = Product::findOrFail($id);
+		$products = Product::all();
 
-        $categories = Category::orderBy('order')->get();
+		//
         $groups = Group::all();
 		$tags = Tag::all();
+        $categories = Category::orderBy('order')->get();
 		$faqs = Faq::all();
-		$products = Product::all();
 		$Lego = Lego::all();
-		$services = Service::all();
+		$papers = Paper::all();
 		$roles = User::getRoles();
+		//
+		$services = Service::all();
 
 
-	    return view('zADMIN.PAGE.Product.edit', compact('product','groups','tags','faqs','categories','products','Lego','services','roles'));
+	    return view('zADMIN.PAGE.Product.edit', compact('product','products','groups','tags','categories','faqs','Lego','papers','roles','services'));
     }
 }

@@ -53,17 +53,18 @@
 			</div>
 		</details>
 		<details>
-			<summary><span>text_bottom</span><i></i></summary>
-			<div class="_shell Article aura / Note -lite">
-				<textarea id="tinymce_2" name="text_bottom" placeholder='текст...'>{{$category->text_bottom}}</textarea>
-			</div>
-		</details>
-		<details>
 			<summary><span>text</span><i></i></summary>
 			<div class="_shell Article aura / Note -lite">
 				<textarea id="tinymce_3" name="text" placeholder='текст...'>{{$category->text}}</textarea>
 			</div>
 		</details>
+		<details>
+			<summary><span>text_bottom</span><i></i></summary>
+			<div class="_shell Article aura / Note -lite">
+				<textarea id="tinymce_2" name="text_bottom" placeholder='текст...'>{{$category->text_bottom}}</textarea>
+			</div>
+		</details>
+ 
 		<details>
 			<summary><span>knot_1</span><i></i></summary>
 			<div class="_shell Article aura / Note -lite">
