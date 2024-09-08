@@ -13,7 +13,7 @@ if(isset($css)) {
 ?>
 
 
-@component('zADMIN._wrap.Teaser.index', ['Var' => $Var, 'css' => 'space-left '.$x_23101421])
+@component('zADMIN._wrap.teaser.index', ['Var' => $Var, 'css' => 'space-left '.$x_23101421])
 
 
     @slot('cell_2')

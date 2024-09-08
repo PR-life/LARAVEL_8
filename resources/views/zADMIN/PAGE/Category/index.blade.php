@@ -16,32 +16,33 @@
 @endpush
     
 @component('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Category', 'model' => 'category'])
+    @include('zADMIN.PAGE._lego.filter._lego.filter_for_table.brick.btn_lvl_1')
     @component('zADMIN._wrap.manager.btn.localStorage_toggle',['css' => 'x-exclude'])
-        @slot('localstorageName','filter_btn_table_categoryLevelOne')
-        @slot('dataCheck','y-categoryLevelOneOff')
+        @slot('localstorageName','filter_btn_table_level_1')
+        @slot('dataCheck','y-childrenLevel_1_off')
         @slot('nodeName','Table_index')
-        @slot('toggleCss','y-categoryLevelOneOff')
-        @slot('name','lvl 1')
-    @endcomponent
-    @component('zADMIN._wrap.manager.btn.localStorage_toggle',['css' => 'x-exclude'])
-        @slot('localstorageName','filter_btn_table_categoryLevelTwo')
-        @slot('dataCheck','y-categoryChildrenLevelTwoOff')
-        @slot('nodeName','Table_index')
-        @slot('toggleCss','y-categoryChildrenLevelTwoOff')
+        @slot('toggleCss','y-childrenLevel_1_off')
         @slot('name','lvl 2')
     @endcomponent
     @component('zADMIN._wrap.manager.btn.localStorage_toggle',['css' => 'x-exclude'])
-        @slot('localstorageName','filter_btn_table_categoryLevelThree')
-        @slot('dataCheck','y-categoryChildrenLevelThreeOff')
+        @slot('localstorageName','filter_btn_table_level_2')
+        @slot('dataCheck','y-childrenLevel_2_off')
         @slot('nodeName','Table_index')
-        @slot('toggleCss','y-categoryChildrenLevelThreeOff')
+        @slot('toggleCss','y-childrenLevel_2_off')
         @slot('name','lvl 3')
     @endcomponent
     @component('zADMIN._wrap.manager.btn.localStorage_toggle',['css' => 'x-exclude'])
-        @slot('localstorageName','filter_btn_table_categoryChildrenLevel')
-        @slot('dataCheck','y-categoryChildrenLevelOff')
+        @slot('localstorageName','filter_btn_table_level_3')
+        @slot('dataCheck','y-childrenLevel_3_off')
         @slot('nodeName','Table_index')
-        @slot('toggleCss','y-categoryChildrenLevelOff')
+        @slot('toggleCss','y-childrenLevel_3_off')
+        @slot('name','lvl 4')
+    @endcomponent
+    @component('zADMIN._wrap.manager.btn.localStorage_toggle',['css' => 'x-exclude'])
+        @slot('localstorageName','filter_btn_table_childrenLevel')
+        @slot('dataCheck','y-childrenLevelOff')
+        @slot('nodeName','Table_index')
+        @slot('toggleCss','y-childrenLevelOff')
         @slot('name','children')
     @endcomponent
 @endcomponent
@@ -50,7 +51,12 @@
 @section('content')
     @component('zADMIN._wrap.index')
         @component('zADMIN._wrap.max', ['css' => 'index'])
-            @component('zADMIN._wrap.Table.index', ['css'=> '-categories', 'Model' => 'Category', 'localstoragePicking' => 'filter_btn_table_categoryLevelOne filter_btn_table_categoryChildrenLevel filter_btn_table_categoryLevelOne filter_btn_table_categoryLevelTwo filter_btn_table_categoryLevelThree'])
+            @component('zADMIN._wrap.Table.index', ['css'=> '-categories', 'Model' => 'Category', 'localstoragePicking' => 'filter_btn_table_parent
+            filter_btn_table_level_1
+            filter_btn_table_level_2
+            filter_btn_table_level_3
+            filter_btn_table_childrenLevel
+            '])
 
 
             {{-- старый код ля 2 уровней --}}

@@ -18,7 +18,7 @@ if(isset($Var->group)) {
 ?>
 
 
-@component('zADMIN._wrap.Teaser.index', ['Var' => $Var, 'css14051235' => $css_22051730])
+@component('zADMIN._wrap.teaser.index', ['Var' => $Var, 'css14051235' => $css_22051730])
 
     <div class="flex bC">
 

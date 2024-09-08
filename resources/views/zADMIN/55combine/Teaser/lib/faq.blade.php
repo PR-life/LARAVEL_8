@@ -9,7 +9,7 @@ if($Var->status == '200') {
 ?>
 
 
-@component('zADMIN._wrap.Teaser.index', ['Var' => $Var, 'css' => 'space-left '.$x_23102159])
+@component('zADMIN._wrap.teaser.index', ['Var' => $Var, 'css' => 'space-left '.$x_23102159])
 
 <?
 

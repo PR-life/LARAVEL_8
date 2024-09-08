@@ -8,7 +8,7 @@ if(($tag->category && $tag->categories && $tag->name_2) || $tag->status == '200'
 
 ?>
 
-@component('zADMIN._wrap.Teaser.index', ['Var' => $tag, 'css' => 'space-left '.$x_23101421])
+@component('zADMIN._wrap.teaser.index', ['Var' => $tag, 'css' => 'space-left '.$x_23101421])
 
     <div class="flex bC -wrap">
 

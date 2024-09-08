@@ -1,4 +1,4 @@
-@component('zADMIN._wrap.Teaser.index', ['Var' => $Var])
+@component('zADMIN._wrap.teaser.index', ['Var' => $Var])
     <div class="flex cI / cross-s space-left">
         <a class="_1 / Min Max -w4" href="{{$route}}">
             <span class="content / nowrap Ellipsis" title="{{$Var->name}}">

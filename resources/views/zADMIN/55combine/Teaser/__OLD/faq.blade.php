@@ -1,4 +1,4 @@
-@component('zADMIN._wrap.Teaser.index', ['Var' => $Var, 'css14051235' => 'space-left'])
+@component('zADMIN._wrap.teaser.index', ['Var' => $Var, 'css14051235' => 'space-left'])
     <div class="flex cI / cross-s">
         <div class="_1 flex cI / Min Max -w9">
             <a class="content b600 / nowrap Ellipsis" href="{{$route}}">

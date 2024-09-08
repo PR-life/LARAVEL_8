@@ -1,4 +1,4 @@
-@component('zADMIN._wrap.Teaser.index', ['Var' => $group, 'css' => 'space-left'])
+@component('zADMIN._wrap.teaser.index', ['Var' => $group, 'css' => 'space-left'])
 
     <div class="flex bC">
 

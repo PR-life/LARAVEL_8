@@ -10,7 +10,7 @@ isset($css) ? $x_23101421 .= $css : '';
 
 ?>
 
-@component('zADMIN._wrap.Teaser.index', ['Var' => $Var, 'css' => 'space-left '.$x_23101421])
+@component('zADMIN._wrap.teaser.index', ['Var' => $Var, 'css' => 'space-left '.$x_23101421])
     <div class="flex bC">
         @include('zADMIN._repo.teaser.lego.sms_l')
         @include('zADMIN._repo.teaser.lego.sms_r')

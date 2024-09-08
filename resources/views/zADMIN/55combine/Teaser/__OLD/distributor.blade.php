@@ -1,4 +1,4 @@
-@component('zADMIN._wrap.Teaser.index', ['Var' => $Var])
+@component('zADMIN._wrap.teaser.index', ['Var' => $Var])
     <div class="flex cI / cross-s">
         <a class="_1 / flex cI / cross-xs / Min Max -w5" href="{{$route}}">
             <div class="Ava -S">

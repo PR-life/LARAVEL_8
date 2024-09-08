@@ -1,4 +1,4 @@
-@component('zADMIN._wrap.Teaser.index', ['Var' => $Var, 'css' => 'space-left '])
+@component('zADMIN._wrap.teaser.index', ['Var' => $Var, 'css' => 'space-left '])
 <div class="flex bC">
     <div class="_l / flex cI / Article / cross-s">
         <div class="flex cC dC / W-100">
