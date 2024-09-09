@@ -25,6 +25,9 @@ class CreatePapersTable extends Migration
             $table->string('shema_teaser')->default('default');
             $table->string('css')->nullable();
 
+            $table->string('name_tag')->nullable();
+            $table->string('name_seo')->nullable();
+
             $table->string('h1')->nullable();
             $table->text('text')->nullable();
             $table->text('article')->nullable();

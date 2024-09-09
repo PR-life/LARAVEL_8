@@ -5,12 +5,16 @@
 // }
 
 
+table {
+	--table-c-border: @c-border;
+}
 table.-zebra {
 	--table-bg-1:#f5f5f5;
 	--table-bg-2:#f4f6fb; // #f7f7f7; // fafaf9;
 	--table-c-border:#e0e0e0;
 }
 
+//
 table.-zebra tr td {
     background-color: var(--table-bg-1);
 }

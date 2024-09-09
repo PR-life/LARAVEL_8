@@ -25,6 +25,9 @@ class StoreRequest extends BaseRelationsRequest
 			'shema_teaser' => 'nullable|string',
 			'css' => 'nullable|string',
 
+			'name_tag' => 'nullable|string',
+			'name_seo' => 'nullable|string',
+
 			//
             'h1' => 'nullable|string',
             'text' => 'nullable|string',

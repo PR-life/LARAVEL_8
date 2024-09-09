@@ -17,6 +17,28 @@ class Product extends BaseContent
     protected $guarded = false;
 
 
+    public function serviceCategory() 
+    {
+        return $this->belongsTo(
+            Category::class,
+            'category_services_id',
+			'id',
+        );
+    }
+
+    //
+    public function surrogate() 
+    {
+        return $this->belongsTo(
+            Product::class,
+            'product_surrogate_id',
+			'id',
+        );
+    }
+
+
+
+    //
     public function parent() 
     {
         return $this->belongsTo(
@@ -41,13 +63,14 @@ class Product extends BaseContent
         );
     }
 
-
+ 
 
 
     // Универсальный метод для получения свойств родительской категории
     public function getParentCategoryAttribute($property)
     {
-        return optional(optional($this->parent)->category)->{$property};
+        return $this->parent?->category?->{$property};
+        // return optional(optional($this->parent)->category)->{$property};
     }
 
     // public function __get($name)
@@ -87,13 +110,19 @@ class Product extends BaseContent
     // Добавляем метод для генерации полного slug
     public function getFullSlugAttribute()
     {
-        // Если у продукта есть родительский продукт, рекурсивно добавляем его slug
-        if ($this->parent) {
-            return $this->parent->full_slug . '/' . $this->slug;
-        }
 
-        // Если нет родителя, возвращаем просто slug
-        return $this->slug;
+        //оптимизирован с использованием тернарного оператора:
+        return $this->parent ? $this->parent->full_slug . '/' . $this->slug : $this->slug;
+
+
+        //код ДО
+        // // Если у продукта есть родительский продукт, рекурсивно добавляем его slug
+        // if ($this->parent) {
+        //     return $this->parent->full_slug . '/' . $this->slug;
+        // }
+
+        // // Если нет родителя, возвращаем просто slug
+        // return $this->slug;
     }
  
 
