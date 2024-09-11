@@ -14,12 +14,8 @@ class UpdateController extends BaseController
 		// dd($request);
         $data = $request->validated();	
 		// dd($data);
-		// dd($product);
 		$product = $this->service->update($product,$data);
 
-		// dd($paper);
-
 		return back()->with('UpdateController', true);
-		// return redirect()->route('admin.post.edit',$post->id);
     }
 }

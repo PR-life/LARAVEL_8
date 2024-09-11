@@ -278,7 +278,7 @@
 		.ROLL;
 	}
 
-	.Roll_mbl.-h100 {
+	.Roll_mbl.-controlH {
 		align-items:  stretch;
 	}
 
@@ -309,6 +309,22 @@
 			display: table-cell;
 			min-width: 80px;
 		}
+	}
+
+	//
+
+	.Roll_mbl.vol-table {
+		> table {
+			tr > *:first-child {
+				min-width: clamp(180px,calc(var(--w)*.55),220px);
+			}
+		}
+	}
+
+	.Roll_mbl.vol-Wagon {
+		> *{
+			min-width: clamp(180px,calc(var(--w)*.6),220px);
+		}	
 	}
 
 }

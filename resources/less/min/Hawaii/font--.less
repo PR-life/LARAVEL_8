@@ -36,6 +36,13 @@ h3.widest {
  
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+
+	h2.widest_PC,
+	.h2.widest_PC,
+	h3.widest_PC {
+		line-height: calc(var(--rem-h2) * 2);
+	}
+
 	summary.-M {
 		font-size: var(--rem-h);
 		line-height: calc(var(--rem-h) * 1.4);
@@ -102,13 +109,20 @@ h2.-vw, .h2.-vw {
 	font-size: clamp(calc(var(--rem-h2) - .5rem),var(--rem-h2),calc(var(--indexW)*2));
 	line-height: clamp(calc(var(--rem-h2)*1.4 + 2px - .5rem),calc(var(--rem-h2)*1.4),calc(var(--indexW)*2*1.4));
 }
+@media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
+	h2.-vw_PC, .h2.-vw_PC {
+		font-size: clamp(calc(var(--rem-h2) - .5rem),var(--rem-h2),calc(var(--indexW)*2));
+		line-height: clamp(calc(var(--rem-h2)*1.4 + 2px - .5rem),calc(var(--rem-h2)*1.4),calc(var(--indexW)*2*1.4));
+	}
+}
+
+
 
 @media screen and (max-width: @w-menu-2) {
 	h2.-vw_mbl, .h2.-vw_mbl {
 		font-size: clamp(calc(var(--rem-h2) - .5rem),var(--rem-h2),calc(var(--indexW)*2));
 		line-height: clamp(calc(var(--rem-h2)*1.4 + 2px - .5rem),calc(var(--rem-h2)*1.4),calc(var(--indexW)*2*1.4));
 	}
-	
 }
 
 // h2.-lineHeight, .h2.-lineHeight, h3.-lineHeight {
@@ -210,7 +224,7 @@ p {
 }
 
 
-.Bread *,
+// .Bread *,
 .Btn,
 .author,
 .content,
@@ -312,7 +326,7 @@ input, textarea {
 
 // .Citation.slim .content,
 legend,
-.Bread *,
+// .Bread *,
 .content-s.slim {
  	line-height: ~"calc(var(--font) * var(--line-spacing))";
  }

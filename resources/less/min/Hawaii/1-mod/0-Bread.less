@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 
-.Bread.Back {
+.Bread.control-w {
 	li > * {
 		display: block;
 		overflow: hidden;
@@ -20,41 +20,45 @@
 }
 
 @media screen and (max-width:@w-menu-2) {
-	.Bread.Back {
+
+
+	#Bread.Back {
 		--font: 0;
+		--ulol-font:0;
+		--Bread-margin:0;
 
 		width: calc(var(--Ico)*2);
 		height: calc(var(--Ico)*2);
 
 		// background-color: red;
-
+		> li > a,
 		> li {
+			position: absolute;
+			left: 0;
+			top: 0;
+			right: 0;
+			bottom: 0;
+		}
+
+		> li:last-child,
+		.Ico {
 			display: none;
 		}
-		> ._main,
-		> ._prev {
-			display: block;
-			position: absolute;
+ 
+		// > ._main,
+		// > ._prev {
+		// 	display: block;
+		// 	position: absolute;
 			
-		}
+		// }
 	}
 
 	.Bread.Back > *::before {
 		display: none;
 	}
 
-    #Back {
-        --Back-edge: 7px;
-    }
-
-    #Back::before {
-        content: '';
-        position: absolute;
-        z-index: 0;
-        left: var(--Back-edge);
-        right: var(--Back-edge);
-        top: var(--Back-edge);
-        bottom: var(--Back-edge);
-      }
-
+    // #Back {
+    //     --Back-edge: 7px;
+    // }
+ 
 }

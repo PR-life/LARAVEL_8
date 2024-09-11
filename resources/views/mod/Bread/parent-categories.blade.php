@@ -2,7 +2,7 @@
     @include('mod.Bread.parent-categories', ['Var' => $Var->parentCategory])
 @endif
 
-<li>
+<li class="x-parent {{$Var->slug}}">
     <a href="{{ url($Var->full_slug) }}">{{ $Var->bread_name ?? $Var->name }}</a>
 </li>
 

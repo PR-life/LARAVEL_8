@@ -1,0 +1,22 @@
+@charset "UTF-8";
+
+ 
+@media screen and (max-width:@w-menu-2) {
+	.Back {
+		--Back-edge: 7px;
+	}
+
+
+	.Back::after, .Back::before {
+		content: '';
+		position: absolute;
+		bottom: var(--Back-edge);
+		left: var(--Back-edge);
+		right: var(--Back-edge);
+		top: var(--Back-edge);
+		// z-index: 0;
+		pointer-events: none;
+	  }
+		 
+}
+

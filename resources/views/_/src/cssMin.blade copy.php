@@ -428,6 +428,12 @@ hr,.ghost,.visible,.Op,.opVersa{
 	}
 }
 
+@media (min-width:799px) and (max-width:1280px){
+	#body .block-70{
+		display:block
+	}
+}
+
 @media screen and (max-width:1143px){
 	.none_60{
 		display:none !important
@@ -454,7 +460,11 @@ hr,.ghost,.visible,.Op,.opVersa{
 		display:none;
 	}
 }
-
+@media (min-width:799px) and (max-width:1080px){
+	.none-beyond{
+		display:none !important
+	}
+}
 @media screen and (max-width:1080px){
 	.none_beyond{
 		display:none !important
