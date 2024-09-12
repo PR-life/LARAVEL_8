@@ -12,10 +12,16 @@ dl.-dot dt,
 	padding-right: 4px;
 }
 
-span.-dot::after,
 dl.-dot dt::after,
+span.-dot::after,
 ol.-dot > li::after {
     content: "";
+}
+
+dl.-dot dt::after,
+dl.-dot dd::after,
+span.-dot::after,
+ol.-dot > li::after {
     position: absolute;
 	z-index: 0;
     left: 0;
