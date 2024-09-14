@@ -2,24 +2,30 @@
 
 .Badge {
 	--Badge-wide: 0px;
-	--Badge-padding: 8px;
+	--Badge-padding-left: 8px;
+	--Badge-padding-top: 8px;
 }
 
 .Badge.-M {
 	--Badge-wide: 10px;
 }
 
+.Badge.-reverseBg,
 .Badge.-paddingS {
-	--Badge-padding: 2px;
-	padding-right: 5px;
+	--Badge-padding-left: 2px;
+	--Badge-padding-top: 2px;
+
+	// padding-right: 5px;
 }
 .Badge.-paddingXS {
-	--Badge-padding: 1px;
+	--Badge-padding-left: 1px;
+	--Badge-padding-top: 1px;
 }
 
 .Badge.-solo,
 .Badge.-net {
-	--Badge-padding: 0;
+	--Badge-padding-left: 0;
+	--Badge-padding-top: 0;
 }
 
 
@@ -48,10 +54,6 @@
 // }
 
 
-.Badge.-reverseBg {
-	padding-top: 2px;
-	padding-bottom: 2px;
-}
 
 
 //
@@ -65,20 +67,11 @@
 
 
 .Badge {
-    justify-content: flex-start;
-    // width: auto;
-    //
-    padding: var(--Badge-padding);
-    //
-    // line-height: 120%;
-}
 
-.Badge {
+	justify-content: flex-start;
+    padding: var(--Badge-padding-left) var(--Badge-padding-top);
 
-	// > div:last-child {
-	// 	padding-right: 6px;
-	// }
-	
+	//
     > *:first-child {
         padding: var(--Badge-wide) 10px;
         margin-right: .5rem;
@@ -97,8 +90,8 @@
 	// 	margin-right: 0;
 	// }
 
-	> ._text {
-		font-size: inherit;
-		line-height: inherit;
-	}
+	// > ._text {
+	// 	font-size: inherit;
+	// 	line-height: inherit;
+	// }
 }
