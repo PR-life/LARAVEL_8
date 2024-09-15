@@ -1,7 +1,7 @@
 <header id="Header" class="Goo / Abs_mbl index">
 	<div class="Box Edge -PC only-right / Header -h_PC / flex cI_PC bC_PC / relative" style="background: red">
 		<div class="Article W-100 / flex cI cC_mbl / cross_PC">
-			<a class="x-ava flex none_mbl block_morda / Shift -left -stepS / relative" href="/">
+			<a class="x-ava flex none_mbl block_morda / relative" href="/">
 				<span class="Abs -t -left / pr-2 x-opVersa none_Beyond none_mbl">
 					<span class="block Ico -XL"></span>
 				</span>
