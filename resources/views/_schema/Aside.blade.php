@@ -1,37 +1,31 @@
-<?
-// $arrCSS = [
-// 	'id' => 'Wrap',
-// 	'cssOiBar' => 'skimp-size_Aside x-asideClose',
-// 	'cssOi' => 'HWin skimp-size_Aside',
-// 	'cssASIDE' => 'ASIDE',
-// 	'cssKIRA' => 'KIRA -aside'
-// ]
-?>
 <!DOCTYPE html>
 <html id="html" lang="{{ str_replace('_', '-', app()->getLocale()) }}">
 <head>
 	@include('_schema._lego.head.index')
-	@stack('head')
 </head>
-<body id="body" class="shema-aside MXAT @yield('css-body') @stack('css-body') {{ str_replace('_', '-', app()->getLocale()) }}">
+<body id="body" class="MXAT @yield('css-body') @stack('css-body')">
 <script>
 	@include('_.js.bodyStart')
 	@stack('script-bodyStart')
 </script>
 
 @include('_schema._lego.input')
+@include('_._skeleton.Fon')
 
-<div id="Fon" class="Abs -all @stack('css-fon')">@stack('fon')</div>
+@yield('breadBack')
+@yield('head')
 
 @component('_wrap.oiBar', ['arrCSS'=>$arrCSS])
 
 	<div class="W-100 / index relative">
+
+		@yield('bee')
+
 		@stack('topBefore')
 		@yield('top')
 		@stack('topAfter')
 
-		@yield('Bee')
-		@stack('beeAfter')
+		@yield('bread')
 	
 		@stack('contentBefore')
 		@yield('content')
@@ -43,20 +37,17 @@
 
 @endcomponent
 
-{{-- @yield('footer')
-@stack('footer') --}}
-
 @stack('basementBefore')
 @yield('basement')
 @stack('basementAfter')
 
-{{-- <div class="FixMenu -mbl / none_PC">
+<div id="FixMenu" class="FixMenu -mbl / none_PC">
 	@include('_._skeleton.menuMobile')
-</div> --}}
-{{-- @include('zImago._skeleton.menuBeyond') --}}
+</div>
 
 {{-- @include('_._skeleton.Slump') --}}
 {{-- @include('_._skeleton.Geek') --}}
+
 
 <div id="Milk" class="Abs Milk / @stack('css-milk') / index owlFIX">
 	@stack('milk')	
@@ -75,5 +66,6 @@
 @include('_schema._lego.afterMilk')
 
 
+{{-- @include('_Rearguard.index') --}}
 </body>
 </html>
