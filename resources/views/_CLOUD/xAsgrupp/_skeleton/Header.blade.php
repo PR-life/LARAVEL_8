@@ -20,6 +20,7 @@
 		<div class="none_Beyond none_mbl / ml-2 pl-2">
 			<div class="flex">
 				@includeIf('xAsgrupp.menu.top')
+				@includeIf('zTHIS.honeycomb.menu.asgrupp_top')
 			</div>
 		</div>
 	</div>
