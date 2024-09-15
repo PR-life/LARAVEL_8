@@ -8,7 +8,7 @@
 				<span class="content-m b500 nowrap">Арт Сити Групп</span>
 			</a>
 			<div class="W-100 / flex cI / none_morda">
-				@include('xAsgrupp.mod.Bread.index')
+				@includeIf('xAsgrupp.mod.Bread.index')
 				<div class="x-line"></div>
 			</div>
 		</div>
@@ -19,7 +19,7 @@
 		</div>
 		<div class="none_Beyond none_mbl / ml-2 pl-2">
 			<div class="flex">
-				@include('xAsgrupp.menu.top')
+				@includeIf('xAsgrupp.menu.top')
 			</div>
 		</div>
 	</div>

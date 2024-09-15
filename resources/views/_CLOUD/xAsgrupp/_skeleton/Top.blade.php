@@ -4,7 +4,7 @@
 		<div class="Top -h / Box Edge -PC / flex eC_PC bC_mbl cI_mbl">
 			<div class="_left none_mbl flex_morda / flex cI_PC cross-m / yesEvents">
 				<div class="none_mbl / flex cross-m / Family-OpenSans -Grey">
-					@include('xAsgrupp._skeleton.lego.top_1')
+					@includeif('xAsgrupp._skeleton.lego.top_1')
 				</div>
 				<a class="flex cI / Grey" rel="nofollow" href="tel:{{__('_const/asgrupp.phoneCode')}}" title="{{__('_const/asgrupp.title')}}, Москва {{__('_const/asgrupp.phoneView')}}">
 					<span class="Ico -S / mr-1">@svg('tel')</span>
