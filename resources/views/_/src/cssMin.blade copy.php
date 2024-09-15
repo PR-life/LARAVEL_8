@@ -304,7 +304,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 	white-space:nowrap;
 }
 
-@media (min-width:800px) and (max-width:8000px){
+@media (min-width:820px) and (max-width:8000px){
 	#body,.body{
 		max-width:5200px;
 	}
@@ -428,7 +428,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 	}
 }
 
-@media (min-width:799px) and (max-width:1280px){
+@media (min-width:819px) and (max-width:1280px){
 	#body .block-70{
 		display:block
 	}
@@ -446,7 +446,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 	}
 }
 
-@media (min-width:799px) and (max-width:1080px){
+@media (min-width:819px) and (max-width:1080px){
 	.flex-beyond,
 	.Beyond {display:flex !important}
 
@@ -460,7 +460,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 		display:none;
 	}
 }
-@media (min-width:799px) and (max-width:1080px){
+@media (min-width:819px) and (max-width:1080px){
 	.none-beyond{
 		display:none !important
 	}
@@ -478,7 +478,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 		display:none !important
 	}
 }
-@media screen and (max-width:799px){
+@media screen and (max-width:819px){
 
 	#body .Fix_mbl{
 		position:fixed;
@@ -540,13 +540,13 @@ hr,.ghost,.visible,.Op,.opVersa{
 		top:0;
 	}
 }
-@media (min-width:481px) and (max-width:799px){
+@media (min-width:481px) and (max-width:819px){
 	.gstrm.var-480{
 		display:none
 	}
 }
 
-@media screen and (max-width:799px){
+@media screen and (max-width:819px){
 	#body,.Mbl{
 		max-width:480px
 	}
