@@ -12,8 +12,8 @@
 					<!--googleon: all-->
 					{{-- <div class="_bg / Abs -all"></div> --}}
 				</div>
-				<div class="ASIDE {{ $cssASIDE ?? '' }}"></div>
-				<div class="KIRA {{ $cssKIRA ?? '' }}"></div>
+				<div class="{{ $arrCSS['cssASIDE'] ?? 'ASIDE' }}"></div>
+				<div class="{{ $arrCSS['cssKIRA'] ?? 'KIRA' }}"></div>
 			</div>
 			@stack('oiBar-after')
 		</div>

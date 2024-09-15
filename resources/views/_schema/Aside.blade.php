@@ -23,7 +23,7 @@
 
 <div id="Fon" class="Abs -all @stack('css-fon')">@stack('fon')</div>
 
-@component('_wrap.oiBar', $arrCSS)
+@component('_wrap.oiBar', ['arrCSS'=>$arrCSS])
 
 	<div class="W-100 / index relative">
 		@stack('topBefore')
