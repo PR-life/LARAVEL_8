@@ -1,0 +1,23 @@
+@charset "UTF-8";
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+
+    #body.vol-Five.aside-abs.asideClose {
+        --Aside-abs: calc(var(--KIRA) + calc(var(--x-Five-space)*2));
+    }
+
+
+
+    #body.vol-Five {
+        --x-Five-space:20px;
+        //
+        --Aside-abs: calc(var(--Aside) + calc(var(--x-Five-space)*2));
+        #oiBar {
+            padding: var(--x-Five-space);
+        }
+    }
+
+}
+
+ 

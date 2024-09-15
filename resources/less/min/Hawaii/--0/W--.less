@@ -54,13 +54,38 @@
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
 
-	#body.shema-aside #oi {
+	#body.aside-width #oi {
 		max-width: calc(100% - var(--Aside));
 	}
 
-	#body.shema-aside.asideClose #oi {
+	#body.aside-width.asideClose #oi {
 		max-width: calc(100% - var(--KIRA));
 	}
+
+
+	#body.aside-abs {
+		--Aside-abs: var(--Aside);
+
+		#Oi {
+			padding-left: var(--Aside-abs);
+		}
+	}
+
+	#body.aside-abs.asideClose {
+		--Aside-abs: var(--KIRA);
+		// --Aside-1409: var(--Aside);
+		
+		// #Oi {
+		// 	padding-left: var(--Aside-1409);
+		// }
+	}
+ 
+
+	// #body.aside-abs.asideClose #oi {
+	// 	max-width: calc(100% - var(--KIRA));
+	// }
+
+	
 
 }
  

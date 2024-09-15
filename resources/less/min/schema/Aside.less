@@ -1,0 +1,24 @@
+@charset "UTF-8";
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+    #body.aside-abs {
+        #oiBar {
+            position: absolute;
+            left: 0;
+            top: 0;
+            bottom: 0;
+        }
+    }
+    #body.aside-sticky {
+        --x-aside-top:0;
+        #oiBar {
+            ._wrap {
+                position: sticky;
+                top: var(--x-aside-top);
+                height: calc(var(--h));
+            }
+        }
+    }
+}
+ 
