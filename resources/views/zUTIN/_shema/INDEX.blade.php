@@ -1,6 +1,6 @@
 @extends('Utin')
 
-@push('css-body', 'shema-aside')
+@push('css-body', 'schema-aside')
 @push('linkCss')
 {{-- rel="preload" --}}
 <link href="{{ mix('/css/UTIN.css') }}" type="text/css" rel="stylesheet">

@@ -15,8 +15,8 @@
 {{-- <div id="wrapLogoGoo" class="none_mbl">
     <div id="Logo" class="Abs -lt / LOGO / _indexMax op">
         <div class="flex cC cI / Header -h">
-            <div id="btnMenuAside" class="x-spaceBurger pointer" data-click data-localstorage localstorage-name='body' data-toggle="shema-aside">
-                <div class="Burger vol-def" data-click data-css data-node='body' data-toggle='shema-aside'>
+            <div id="btnMenuAside" class="x-spaceBurger pointer" data-click data-localstorage localstorage-name='body' data-toggle="schema-aside">
+                <div class="Burger vol-def" data-click data-css data-node='body' data-toggle='schema-aside'>
                     <div class="_burger">
                         <div class="_inner"></div>
                     </div>
