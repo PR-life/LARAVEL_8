@@ -8,11 +8,12 @@
 				<span class="content-m b500 nowrap / none_beyond block_morda">Арт Сити Групп</span>
 			</a>
 			<div class="W-100 / flex cI / none_morda">
-				@includeIf('xAsgrupp.mod.Bread.index')
 				<div class="x-line"></div>
 			</div>
 		</div>
 		<div class="none Beyond none_mbl x-01091746 / ml-2">
+			@include('_CLOUD.xAsgrupp._skeleton.brick.btn_search')
+			<div class="content ghost">_</div>
 			<div class="Btn -auto slimS vol-grey round-m">
 				Контакты
 			</div>
@@ -26,11 +27,5 @@
 	</div>
 </header>
  
-
-{{-- <div class="Wings"> --}}
-	{{-- <div class="_win -t"> --}}
-		{{-- <div class="Header -h / flex cI"> --}}
-			@includeIf('zTHIS.honeycomb.Bread.demo')
-		{{-- </div> --}}
-	{{-- </div> --}}
-{{-- </div> --}}
+@includeIf('xAsgrupp.mod.Bread.index')
+@includeIf('zTHIS.honeycomb.Bread.demo')

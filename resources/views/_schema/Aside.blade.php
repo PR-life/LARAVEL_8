@@ -10,7 +10,7 @@
 </script>
 
 @include('_schema._lego.input')
-@include('_._skeleton.Fon')
+{{-- @include('_._skeleton.Fon') --}}
 
 @yield('breadBack')
 @yield('head')
