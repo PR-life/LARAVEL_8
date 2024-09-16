@@ -1,5 +1,32 @@
 @charset "UTF-8";
 
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+    .menu.-aside {
+        --fontMenu: 18px;
+		
+		ul {
+			--ulol-font:16.4px;
+		}
+		
+        > li {
+            margin-bottom: 1rem;
+
+            ul {
+                padding-top: .5rem;
+                padding-bottom: 1rem;
+
+				li {
+					margin-bottom: .25rem;
+				}
+            }
+        }
+    }
+}
+
+
+
 @media (min-width:@w-menu-2-plus) and (max-width:@w-beyond) {
 	.menuBeyond {
 

@@ -1,5 +1,39 @@
 @charset "UTF-8";
 
+
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+	.menu.-aside {
+		li.open > .a{
+			font-weight: 500;
+		}
+
+		ul ul {
+			> li {
+				position: relative;
+				padding-left: 1rem;
+			}
+			> li::before {
+				content: '';
+				position: absolute;
+				top: 50%;
+				left: 0;
+				width: 4px;
+				height: 4px;
+				background-color: #333;
+				border-radius: 50%;
+			}
+			> li.open::before {
+				display: none;
+			}
+		}
+	}
+}
+
+
+
+
+
 @media (min-width:@w-menu-2-plus) and (max-width:@w-beyond) {
 
 	.menuBeyond {

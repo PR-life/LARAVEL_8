@@ -1,10 +1,10 @@
 <div id="wrapLogoGoo" class="none_mbl">
-    <div id="Logo" class="Abs -lt / LOGO / _indexMax op">
+    <div id="Logo" class="Abs -lt / LOGO / _indexMax">
         <div class="flex cC cI / Header -h">
             <div class="space">
                 @include('_brick.btn.menu.btnMenuAside')
             </div>
-            <a class="Logo" href="/">
+            <a class="Logo / op" href="/">
                 <img src="/images/logo/logo.jpg" alt="">
             </a>
         </div>

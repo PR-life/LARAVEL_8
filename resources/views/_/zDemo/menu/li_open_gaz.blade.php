@@ -1,5 +1,5 @@
 @component('_wrap._menu.li_open')
-@slot('name','Газы')
+@slot('name','Технические газы и оборудовавние')
 <ul class="none">
     @component('_wrap._menu.li_open')
     @slot('name','Технические газы')
