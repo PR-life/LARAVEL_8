@@ -6,8 +6,6 @@
 	<div class="Abs x_white x-bottom"></div>
 
 	<div class="_bg x-shadow / relative">
-		{{-- <div class="Top -h / none_mbl none_beyond"></div> --}}
-		{{-- <div class="Header -h / none_mbl"></div> --}}
 		@yield('fon')@stack('fon')
 	</div>
 	 

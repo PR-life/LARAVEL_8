@@ -66,6 +66,6 @@
 @include('_schema._lego.afterMilk')
 
 
-{{-- @include('_Rearguard.index') --}}
+@include('_Rearguard.index')
 </body>
 </html>

@@ -31,6 +31,15 @@ let cssVarh = throttle(function() {
 		icssVarw = document.documentElement.clientWidth;
 	};
 
+	if(document.documentElement.clientWidth / document.documentElement.clientHeight >= 1) {
+		body.classList.add('AR_h')
+		body.classList.remove('AR_v')
+	} else {
+		body.classList.add('AR_v')
+		body.classList.remove('AR_h')
+	}
+
+
 
 	document.body.style.setProperty('--AR', (document.documentElement.clientWidth / document.documentElement.clientHeight).toFixed(1));
 }, 300);
