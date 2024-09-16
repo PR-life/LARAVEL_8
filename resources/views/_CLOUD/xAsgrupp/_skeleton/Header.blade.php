@@ -5,7 +5,7 @@
 				<span class="Abs -t -left / pr-2 x-opVersa none_Beyond none_mbl">
 					<span class="block Ico -XL"></span>
 				</span>
-				<span class="content-m b500 nowrap">Арт Сити Групп</span>
+				<span class="content-m b500 nowrap / none_beyond block_morda">Арт Сити Групп</span>
 			</a>
 			<div class="W-100 / flex cI / none_morda">
 				@includeIf('xAsgrupp.mod.Bread.index')
