@@ -42,6 +42,22 @@
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-beyond) {
 
+    #body.AR_h.schema-aside.aside-sticky {
+        --x-aside-top:var(--h-Top);
+        #oiBar {
+            background-color: red;
+            // position: relative;
+            ._wrap {
+                position: sticky;
+                top: var(--x-aside-top);
+                height: calc(var(--h));
+            }
+        }
+    }
+}
+
+
+@media screen and (max-width: @w-beyond) {
 
     #body.schema-aside {
         #oiBar {
@@ -56,6 +72,9 @@
  
 
     #body.AR_v.schema-aside {
+        #wrapLogoGoo {
+            z-index: 1001;
+        }
         #Wrap {
             z-index: 999;
         }
@@ -65,20 +84,13 @@
         }
     } 
 
-
-    #body.AR_h.schema-aside.aside-sticky {
-        --x-aside-top:var(--h-Top);
-        #oiBar {
-            background-color: red;
-            // position: relative;
-            ._wrap {
-                position: sticky;
-                top: var(--x-aside-top);
-                height: calc(var(--h));
-            }
-        }
-    }
 }
+
+
+
+
+
+
 
 
 #body:not(.schema-aside){
