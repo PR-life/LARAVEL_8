@@ -4,7 +4,7 @@
 			@stack('oiBar-before')
 			<div class="_wrap W-100 / relative index">
 				@stack('oiBar_before')
-				<div class="_main _hidden {{ $cssOiBarMain ?? '' }} / Abs_PC -all / index">
+				<div class="_main _hidden {{ $cssOiBarMain ?? '' }} / Abs -all / index">
 					<!--googleoff: all-->
 					<!--noindex-->
 					@stack('oiBar')

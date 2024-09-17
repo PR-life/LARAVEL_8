@@ -1,21 +1,5 @@
 @charset "UTF-8";
 
-
-@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
-
- 
-
- 
-    //
-    // #body.aside-AR.AR_h {
-    //     --Aside-abs:0 !important;
-    //     #oiBar {
-    //         position: fixed !important;
-    //     }
-    // }
-}
- 
-
 @media (min-width: @w-beyond-plus) and (max-width: @w-max) {
 
     #body.AR_h.schema-aside.aside-abs {
@@ -43,10 +27,9 @@
 @media (min-width: @w-menu-2-plus) and (max-width: @w-beyond) {
 
     #body.AR_h.schema-aside.aside-sticky {
-        --x-aside-top:var(--h-Top);
+        --x-aside-top:calc(var(--h-Header) + 1rem);
         #oiBar {
-            background-color: red;
-            // position: relative;
+            // background-color: red;
             ._wrap {
                 position: sticky;
                 top: var(--x-aside-top);
@@ -54,38 +37,90 @@
             }
         }
     }
-}
-
-
-@media screen and (max-width: @w-beyond) {
-
-    #body.schema-aside {
-        #oiBar {
-            position: absolute;
-            left: 0;
-            bottom: 0;
-            top: 0;
-            // left: -1000px;
-        }
-    }
-
- 
 
     #body.AR_v.schema-aside {
         #wrapLogoGoo {
             z-index: 1001;
+
+            .Logo {display: none;}
         }
         #Wrap {
             z-index: 999;
         }
         #oiBar {
-            background-color: green;
+            // background-color: green;
+            position: fixed;
+
+            // ._wrap {
+            //     background-color: #fff;
+            // }
+        }
+
+        #oiBar::before {
+            content: '';
+            position: fixed;
+            inset:0;
+            background-color: rgba(0,0,0,.6);
+        }
+
+
+    } 
+
+    #body.schema-aside {
+        #oiBar {
+            position: absolute;
+        }
+    }
+    
+}
+
+
+@media screen and (max-width: @w-beyond) {
+
+    #body {
+        #oiBar {
+            left: 0;
+            bottom: 0;
+            top: 0;
+        }
+    }
+
+}
+
+@media screen and (max-width:  @w-menu-2) {
+
+
+
+    // #body,
+    #body.aside-on {
+
+        #btn_17091300 {
+            display: none;
+        }
+        #btn_17091301 {
+            display: flex;
+        }
+        #Top {
+            z-index: 1001 !important;
+        }
+        #Wrap {
+            z-index: 999 !important;
+            pointer-events: none;
+            #oiBar {
+                pointer-events: all;
+            }
+        }
+        #oiBar {
+            left: auto;
+            width: clamp(220px,calc(100% - 10vw),380px);
+            right: 0;
+            // background-color: green;
             position: fixed;
         }
     } 
 
-}
 
+}
 
 
 
