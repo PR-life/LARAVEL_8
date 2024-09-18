@@ -14,7 +14,7 @@
 					@isset($slot)
 						{!!$slot!!}
 					@else
-						Согласен(на) на <a href="{{route('fz')}}" class="-grey vol-1"><span>обработку персональных данных.</span></a>
+						Согласен(на) на <a href="{{route('fz.agreement')}}" class="-grey vol-1"><span>обработку персональных данных.</span></a>
 					@endif
 				</span>
 			</span>

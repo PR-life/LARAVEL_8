@@ -239,6 +239,6 @@
 @media screen and (max-width:580px) {
 	#body,
 	.body {
-		--Wagon-w: calc(var(--w) *.5);
+		--Wagon-w: clamp(180px,calc(var(--w) *.5),480px);
 	}
 }

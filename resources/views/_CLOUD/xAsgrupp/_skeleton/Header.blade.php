@@ -2,8 +2,8 @@
 	<div class="Box Edge -PC only-right / Header -h_PC / flex cI_PC bC_PC / relative">
 		<div class="Article W-100 / flex cI cC_mbl / cross_PC">
 			<a class="x-ava flex none_mbl block_morda / relative" href="/">
-				<span class="Abs -t -left / pr-2 x-opVersa none_Beyond none_mbl">
-					<span class="block Ico -XL"></span>
+				<span class="Abs -left / pr-2 x-opVersa none_Beyond none_mbl">
+					<span class="block Ico -L"></span>
 				</span>
 				<span class="content-m b500 nowrap / none_beyond block_morda">Арт Сити Групп</span>
 			</a>

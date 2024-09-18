@@ -6,7 +6,14 @@
 @extends('zTHIS._schema.ASIDE')
  
 @push('css-body', 'Design schema-aside aside-AR aside-sticky aside-wide / vol-Terms x-Terms / x-Dark / skimp-size_Aside ')
-
+@push('style_mbl')
+#body.aside-on #btn_18091147 .Ico{
+	display:flex
+}
+#body.aside-on #btn_18091147 ._burger{
+	display:none
+}
+@endpush
 
 @section('head')
 <header id="Top" class="Wings -mbl / edge-s / none_PC Beyond_ARV">
@@ -15,10 +22,12 @@
 
 			<div class="_left"></div>
 			<div class="_right">
+
 				<div id="btn_18091147" class="Burger vol-def" data-click data-node='body' data-css data-toggle='aside-on fix -veil' data-loop data-veil="btn_18091147">
 					<div class="_burger">
 						<div class="_inner"></div>
 					</div>
+					<div class="Ico / none">@svg('close')</div>
 				</div>
 			</div>
 
@@ -67,7 +76,7 @@
 <div class="Bee"></div>
 <ol id="Bread" class="Bread Back vol-oblique vol-white control-w / flex / Edge / _indexMax">
     <li class="_prev">
-        <a href="#">главная</a>
+        <a href="/">главная</a>
     </li>
 	<li>{{$item->name ?? ''}}</li>
 </ol>

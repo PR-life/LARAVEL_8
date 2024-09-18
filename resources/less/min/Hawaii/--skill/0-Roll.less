@@ -21,15 +21,17 @@
 
 
 
-@media (min-width:@w-menu-2-plus) and (max-width:@w-Box + 80px * 2 + 16px) {
+@media (min-width:@w-menu-2-plus) and (max-width:@w-Box + 80px + 16px) {
 
 	.Box.Roll_PC.-edge,
 	.Box.Roll_PC.-edgePC {
-		padding-left: var(--Edge);
+		max-width: 100%;
+		padding-left: calc(var(--Edge)*.75);
 	}
 
 	.Box.Roll_PC.-edgeS,
 	.Box.Roll_PC.-edge-S_PC {
+		max-width: 100%;
 		padding-left: calc(var(--Edge)*.5);
 	}
 
