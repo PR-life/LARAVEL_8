@@ -326,6 +326,30 @@
 		padding-right: calc(var(--Edge)*0.25);
 	}
 }
+
+@media (min-width:@w-beyond-plus) and (max-width:1400px) {
+	#body.schema-aside {
+		.Article.Edge {
+			max-width: 100%;
+			padding-left: var(--Edge);
+			padding-right: var(--Edge);
+		}
+	}
+}
+
+
+@media (min-width:@w-menu-2) and (max-width:@w-beyond) {
+	#body.schema-aside.AR_h {
+		.Article.Edge {
+			max-width: 100%;
+			padding-left: var(--Edge);
+			padding-right: var(--Edge);
+		}
+	}
+}
+
+
+
 @media (min-width:@w-menu-2-plus) and (max-width:830px + 100px*2 + 16px) {
 
 	.Article.Edge {
@@ -343,6 +367,9 @@
 		padding-right: calc(var(--Edge)*0.5);
 	  }
 }
+
+
+
 
 
 @media (min-width:@w-menu-2-plus) and (max-width:@metrika-60) {

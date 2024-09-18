@@ -1,33 +1,66 @@
 @charset "UTF-8";
 
-.Design.Dark {
-    --bg:#23262b;
+.Design.x-Dark {
+    --bg:#23262b; //#23262b;;
     --bg-2:#15191c;
     --bg-3:#2f343a;
+    --bg-aside:#17181d;
 	--c-text:#b2b2b2; //#8f8f90;
 	--c-h:#fff;
 
+    //
+    --bg-opacity-lighter:rgba(0,0,0,.5);
+
+
+    background-color: var(--bg);
+
+    //
+
+    .text {
+        a {
+            color: #638fff;
+        }
+
+        li li {
+            a {
+                color: inherit;
+            }
+        }
+    }
     .menu {
         --c-menu-border: #e6e6e6;
         --c-menu-border-active: #e6e6e6;
-        --c-menu: #eee;
-        --c-menu-active: #eee;
+        --c-menu: #595952;
+        --c-menu-active: #fff;
         --c-menu-hover: #eee;
         --c-menu-border: transparent;
-      }
-
-
-    #Wrap {
-        background-color: var(--bg);
     }
 
-    #oiBar {
-        background-color: var(--bg-2);
-    }
-
-    .black-bg, .Black.-bg {
-        background-color: var(--bg-3);
+    .Burger.vol-def {
+        --x-Burger-bg: #fff;
       }
 
+      
+      dl.-dot dt::after,
+      dl.-dot dd::after,
+      span.-dot::after,
+      ol.-dot > li::after {
+          opacity: .5;
+      }
 
 }
+
+
+@media screen and (max-width: @w-menu-2) {
+    .Design.x-Dark {
+        #oiBar {
+            background-color: #fff;
+        }
+        .menu {
+            --c-menu: #000;
+            --c-menu-hover: #000;
+            --c-menu-active: #999;
+        }
+    }
+}
+

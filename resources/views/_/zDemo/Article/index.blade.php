@@ -1,6 +1,6 @@
 <article class="text Edge {{$css ?? ''}}">
 
-	@include('_.zDemo.text._lego.Article.top.index')
+	{{-- @include('_.zDemo.text._lego.Article.top.index') --}}
 
 	<h2>Primum igitur, quid est primum</h2>
 	<p>Sunt autem quibusdam et voluptates omittantur maiorum dolorum fuga et molestiae non intellegamus, tu paulo ante cum a se texit, ne ad modum, quaeso, interpretaris? sicine eos censes aut perferendis doloribus asperiores repellat hanc ego assentior, cum a natura incorrupte atque corrupti, quos tu paulo.</p>

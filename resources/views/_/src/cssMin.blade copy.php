@@ -447,6 +447,7 @@ hr,.ghost,.visible,.Op,.opVersa{
 }
 
 @media (min-width:799px) and (max-width:1080px){
+	#body.AR_v Beyond_ARV,
 	.flex-beyond,
 	.Beyond {display:flex !important}
 

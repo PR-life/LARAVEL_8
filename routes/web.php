@@ -6,7 +6,7 @@ use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Artisan;
 // use Illuminate\Support\Facades\App;
 //
-
+ 
 // Route::get('/asnonehome', function () {
 //     return redirect('/home');
 // })->name('home');
@@ -52,18 +52,6 @@ Route::group(['namespace' => 'Landing', 'prefix' => 'asnone'], function(){
     Route::get('/', [App\Http\Controllers\BriefController::class, 'index'])->name('morda');
 });
 
-
-
-
-
-
-Route::get('/agreement', function () {
-    return view('zPAGE.Doc.gdpr');
-})->name('gdpr');
-
-Route::get('/privacy', function () {
-    return view('zPAGE.Doc.Fz');
-})->name('fz');
 
 
 // !! verify  15031049

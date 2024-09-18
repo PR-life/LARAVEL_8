@@ -17,6 +17,10 @@
 
 @component('_wrap.oiBar', ['arrCSS'=>$arrCSS])
 
+	@slot('pre_wrap')
+		@yield('pre_wrap')
+	@endslot
+
 	<div class="W-100 / index relative">
 
 		@yield('bee')
@@ -41,9 +45,9 @@
 @yield('basement')
 @stack('basementAfter')
 
-<div id="FixMenu" class="FixMenu -mbl / none_PC">
+{{-- <div id="FixMenu" class="FixMenu -mbl / none_PC">
 	@include('_._skeleton.menuMobile')
-</div>
+</div> --}}
 
 {{-- @include('_._skeleton.Slump') --}}
 {{-- @include('_._skeleton.Geek') --}}
@@ -66,6 +70,6 @@
 @include('_schema._lego.afterMilk')
 
 
-@include('_Rearguard.index')
+{{-- @include('_Rearguard.index') --}}
 </body>
 </html>

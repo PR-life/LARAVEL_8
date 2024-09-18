@@ -37,36 +37,54 @@
             }
         }
     }
+ 
+    #body.schema-aside.AR_v {
 
-    #body.AR_v.schema-aside {
-        #wrapLogoGoo {
-            z-index: 1001;
-
-            .Logo {display: none;}
-        }
-        #Wrap {
-            z-index: 999;
-        }
         #oiBar {
-            // background-color: green;
             position: fixed;
 
-            // ._wrap {
-            //     background-color: #fff;
+            // > ._wrap {
+            //     transform: translateX(-1000px);
             // }
         }
-
-        #oiBar::before {
-            content: '';
-            position: fixed;
-            inset:0;
-            background-color: rgba(0,0,0,.6);
-        }
-
-
     } 
 
-    #body.schema-aside {
+
+    #body.schema-aside.AR_v.aside-on {
+
+        > #Wrap {
+            position: static;
+        }
+
+        #oiBar {
+            z-index: 99999;
+            left: 0;
+            right: auto;
+
+            > ._wrap ._hidden {
+                padding: var(--h-Header) 0 0 var(--edge);
+            }
+        }
+
+        // #wrapLogoGoo {
+        //     z-index: 1001;
+
+        //     // .Logo {display: none;}
+        // }
+        // #Wrap {
+        //     z-index: 999;
+        // }
+
+        // #oiBar::before {
+        //     content: '';
+        //     position: fixed;
+        //     inset:0;
+        //     background-color: red;
+        // }
+    } 
+
+
+    #body.schema-aside.aside-abs {
         #oiBar {
             position: absolute;
         }
@@ -75,11 +93,11 @@
 }
 
 
-@media screen and (max-width: @w-beyond) {
+@media (min-width: @w-menu-2-plus) and (max-width: @w-beyond) {
 
-    #body {
+    #body.AR_v {
         #oiBar {
-            left: 0;
+            right: 100%;
             bottom: 0;
             top: 0;
         }
@@ -87,37 +105,84 @@
 
 }
 
-@media screen and (max-width:  @w-menu-2) {
+@media screen and (max-width: @w-menu-2) {
 
-
-
-    // #body,
-    #body.aside-on {
-
-        #btn_17091300 {
-            display: none;
-        }
-        #btn_17091301 {
-            display: flex;
-        }
-        #Top {
-            z-index: 1001 !important;
-        }
-        #Wrap {
-            z-index: 999 !important;
-            pointer-events: none;
-            #oiBar {
-                pointer-events: all;
-            }
-        }
+ 
+    #body.schema-aside {
         #oiBar {
-            left: auto;
-            width: clamp(220px,calc(100% - 10vw),380px);
-            right: 0;
-            // background-color: green;
             position: fixed;
+            right: 100%;
+            bottom: 0;
+            top: 0;
         }
     } 
+    #body.schema-aside.aside-on {
+
+        > #Wrap {
+            position: static;
+        }
+
+        > #Top {
+            z-index: 999999;
+        }
+
+        #oiBar {
+            z-index: 99999;
+            left: auto;
+            right: 0;
+
+            padding-top: var(--h-Header);
+            width: clamp(220px,calc(100% - 5rem),380px);
+
+            ._scr {
+                padding-left: 1rem;
+            }
+        }
+
+        // #wrapLogoGoo {
+        //     z-index: 1001;
+
+        //     // .Logo {display: none;}
+        // }
+        // #Wrap {
+        //     z-index: 999;
+        // }
+
+        // #oiBar::before {
+        //     content: '';
+        //     position: fixed;
+        //     inset:0;
+        //     background-color: red;
+        // }
+    } 
+
+    // // #body,
+    // #body.aside-on {
+
+    //     #btn_17091300 {
+    //         display: none;
+    //     }
+    //     #btn_17091301 {
+    //         display: flex;
+    //     }
+    //     #Top {
+    //         z-index: 1001 !important;
+    //     }
+    //     #Wrap {
+    //         z-index: 999 !important;
+    //         pointer-events: none;
+    //         #oiBar {
+    //             pointer-events: all;
+    //         }
+    //     }
+    //     #oiBar {
+    //         left: auto;
+    //         width: clamp(220px,calc(100% - 10vw),380px);
+    //         right: 0;
+    //         // background-color: green;
+    //         position: fixed;
+    //     }
+    // } 
 
 
 }
@@ -131,6 +196,7 @@
 #body:not(.schema-aside){
     #oiBar {
         > ._wrap > ._hidden {
+            background-color: green;
             transform: translateX(-1000px);
         }
     }

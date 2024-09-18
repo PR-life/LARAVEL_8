@@ -16,7 +16,23 @@
 		top: var(--Back-edge);
 		// z-index: 0;
 		pointer-events: none;
-	  }
+	}
+
+	// .Back.vol-white::before {
+	// 	background-color: #fff;
+	// }
+
+	.Back.vol-black::after {
+		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12h12M6 12l5-5m-5 5 5 5' stroke='%23000' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+		background-position: 50%;
+		background-size: 110%;
+	}
+
+	.Back.vol-white::after {
+		background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg viewBox='0 0 24 24' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M6 12h12M6 12l5-5m-5 5 5 5' stroke='%23fff' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+		background-position: 50%;
+		background-size: 110%;
+	}
 		 
 }
 
