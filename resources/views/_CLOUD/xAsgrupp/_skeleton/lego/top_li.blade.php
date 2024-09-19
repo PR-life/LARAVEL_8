@@ -11,7 +11,7 @@
 </a>
 <div class="none_mbl / Min -w1 / Shift -right -step">
     @guest()
-        <a href="" class="Btn -auto slimS vol-grey round-m / none_beyond">войти</a>
+        <a href="" class="Btn -auto -shadow slimS vol-white round-m / none_beyond">войти</a>
         <a href="" class="content / none Beyond">войти</a>
     @endguest
     @auth()

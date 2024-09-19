@@ -6,7 +6,7 @@
     </div>
 </div>
  
-<div class="Abs -all / flex dC bC / index" style="padding-top: 280px;">
+<div class="Abs -all / flex dC bC44 / index" style="padding-top: 280px;">
 
     <div class="Wings / Goo -header / _indexMax">
         <div class="_win -t / bg-05081137">

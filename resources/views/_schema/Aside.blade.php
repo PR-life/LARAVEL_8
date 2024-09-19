@@ -10,8 +10,8 @@
 </script>
 
 @include('_schema._lego.input')
-{{-- @include('_._skeleton.Fon') --}}
 
+@yield('Fon')
 @yield('breadBack')
 @yield('head')
 
@@ -19,6 +19,7 @@
 
 	@slot('pre_wrap')
 		@yield('pre_wrap')
+		@stack('pre_wrap')
 	@endslot
 
 	<div class="W-100 / index relative">

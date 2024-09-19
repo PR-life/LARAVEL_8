@@ -17,7 +17,6 @@
 			</div>
 			@stack('oiBar-after')
 		</div>
-				
 		<div id="oi" class="oi W-100 {{ $cssOi ?? '' }} @stack('css-Oi')">
 			{{ $pre_wrap ?? '' }}
 			<div id="wrap" class="wrap W-100 / index relative {{ $cssOi ?? '' }} @stack('css-wrap')" data-localstorage localstorage-id>

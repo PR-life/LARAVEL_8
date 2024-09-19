@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
 
+.Bread.-nowrap {
+	> li {
+		white-space: nowrap;
+	}
+}
 .Bread.control-w {
 	li > * {
 		display: block;
@@ -17,6 +22,10 @@
 	.flex {
 		display: flex;
 	}
+}
+
+.Bread {
+	--ulol-line:var(--ulol-font);
 }
 
 @media screen and (max-width:@w-menu-2) {

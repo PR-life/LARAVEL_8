@@ -19,7 +19,11 @@ $arrCSS = [
 <base href="http://detectives.su/" />
 @endpush --}}
 
-@push('css-body', 'role-'.auth()->user()->role.' user-id-'.auth()->user()->id.' ')
+@push('css-body', 'schema-aside Design x-Admin role-'.auth()->user()->role.' user-id-'.auth()->user()->id.' ')
+
+@section('Fon')
+    <div id="Fon" class="Abs -all Fix skimp-size_Aside "></div>
+@endsection
 
 @include('zADMIN._schema._brick.src')
 @include('zADMIN._schema._brick.style')
@@ -28,6 +32,7 @@ $arrCSS = [
 @push('css-body', 'x-aside Design x-Admin ')
 @push('css-fon', 'skimp-size_Aside ')
 @push('css-milk', 'skimp-size_Aside ')
+
 
 @push('oiBar')
     @include('zADMIN._skeleton.Bar.admin')
@@ -42,8 +47,8 @@ $arrCSS = [
     @include('_.src.svg.admin')
 @endpush
 
-@section('top')
-<div id="Top" class="Top -h / flex bC cI space-left / Goo -t / bg _indexMax">
+@section('pre_wrap')
+<div id="Top" class="Top -h / flex bC cI space-left / Goo -t / bg _indexMax666 relative" style="z-index: 10">
     <div class="_l">
         <ul class="Bread vol-dot / flex / Grey -c30">
             <li>

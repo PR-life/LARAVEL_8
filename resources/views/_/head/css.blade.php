@@ -5,5 +5,5 @@
 <link href="{{ mix($linkCssApp ?? '/css/app.css') }}" rel="stylesheet">
 @endif
 <noscript><link href="{{ mix($linkCssApp ?? '/css/app.css') }}" rel="stylesheet"></noscript>
-@yield('linkCss')
-@stack('linkCss')
+{{-- @yield('linkCss') --}}
+{{-- @stack('linkCss') --}}

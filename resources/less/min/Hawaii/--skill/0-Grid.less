@@ -18,7 +18,13 @@
 	.Grid.x3 {
 		grid-template-columns: repeat(3, 1fr);
 	}
-	
+		
+	.Grid.x300 {
+		// grid-template-columns: repeat(3, 1fr);
+		grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	}
+
+
 	.Grid.x4 {
 		grid-template-columns: repeat(4, 1fr);
 	}

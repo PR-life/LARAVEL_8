@@ -118,20 +118,42 @@
 // }
 
 
-@media (min-width:@w-menu-2-plus) and (max-width:@w-Box + 80px * 2 + 16px) {
+@media (min-width:@w-menu-2-plus) and (max-width:1260px + 80px * 2 + 16px) {
 
 	.Box.Edge.-PC {
 		.EDGE;
 		padding-left: var(--Edge);
 		padding-right: var(--Edge);
+
+		// background-color: blue;
 	}
 	.Box.Edge.-PC.only-right {
 		padding-left: 0;
 	}
 
 }
+
+@media (min-width:@w-Box + 80px + 16px + 1px) and (max-width:@w-max) {
+
+	.edge-left_Box {
+		padding-left: calc((var(--w) - var(--Box))*.5);
+	}
+
+	#body.schema-aside {
+		.edge-left_Box {
+			padding-left: 0;
+		}
+		.edge-left_Box.Roll_PC {
+			padding-left: var(--edge);
+		}
+	}
+
+}
+
+
 @media (min-width:@w-menu-2-plus) and (max-width:@w-Box + 80px + 16px) {
 
+	.EdgeBox,
 	.Box.Edge.-SPC {
 		.EDGE;
 		padding-left: calc(var(--Edge)*0.5);
@@ -151,10 +173,17 @@
 
 @media (min-width:@w-menu-2-plus) and (max-width:@w-Box + @w-AsideMin * 2 + 16px) {
 
-	.Box.Edge.-asidePC {
-		.EDGE;
-		padding-left: var(--AsideMin);
+	// .Box.Edge.-asidePC {
+	// 	.EDGE;
+	// 	padding-left: var(--AsideMin);
+	// }
+
+	#body.AR_h.schema-aside {
+		.Box.Edge.-PC {
+			padding-left: 0;
+		}
 	}
+
 
 }
 
@@ -179,7 +208,7 @@
 
 
 
-@media (min-width:@w-menu-2-plus) and (max-width:@w-I + 100px*2 + 16px) {
+@media (min-width:@w-menu-2-plus) and (max-width:@w-I + 100px + 16px) {
 
 	.I.Edge.-PC {
 		.EDGE;
@@ -248,13 +277,13 @@
 
 
 
-@media (min-width:@w-menu-2-plus) and (max-width:1680px) {
-	.Box.Edge.-PC {
-		.EDGE;
-		padding-left: var(--Edge);
-		padding-right: var(--Edge);
-	}
-}
+// @media (min-width:@w-menu-2-plus) and (max-width:1680px) {
+// 	.Box.Edge.-PC {
+// 		.EDGE;
+// 		padding-left: var(--Edge);
+// 		padding-right: var(--Edge);
+// 	}
+// }
 
 
 

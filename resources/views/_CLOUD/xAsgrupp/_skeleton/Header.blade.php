@@ -14,7 +14,7 @@
 		<div class="none Beyond none_mbl x-01091746 / ml-2">
 			@include('_CLOUD.xAsgrupp._skeleton.brick.btn_search')
 			<div class="content ghost">_</div>
-			<div class="Btn -auto slimS vol-grey round-m">
+			<div class="Btn -auto -shadow slimS vol-grey round-m">
 				Контакты
 			</div>
 		</div>

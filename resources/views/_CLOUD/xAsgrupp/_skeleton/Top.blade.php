@@ -1,4 +1,4 @@
-<header id="Top" class="33Wings_beyond noEvents / Abs_mbl -rt / 44none-beyond block_morda / edge-s">
+<header id="Top" class="Abs_mbl -rt / block_morda / edge-s">
 	<div class="_win">
 		<div class="Top -h / Box Edge -PC only-right / flex eC_PC eI_beyond / bC_mbl cI_mbl">
 			<div class="_left none_mbl flex_morda / flex cI_PC cross-m / yesEvents">

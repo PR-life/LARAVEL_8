@@ -1,5 +1,11 @@
 @charset "UTF-8";
 
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+   .Burger.vol-def {
+      --Burger-line-h: 3px;
+   }
+}
 @media (min-width: @w-beyond-plus) and (max-width: @w-max) {
    .Burger.vol-def {
       --Burger-w: clamp(30px,4vw,40px);
@@ -10,6 +16,13 @@
       --Burger-w: clamp(25px,3.5vw,40px);
    }
 }
+
+@media screen and (max-width:@w-menu-2) {
+   .Burger.vol-def {
+      --Burger-line-h: 2px;
+   }
+}
+
 
 #body.schema-aside .Burger.vol-def.x-aside {
    ._inner {
@@ -185,7 +198,7 @@
 //     --Burger-shift: 5px;
 //     --Burger-scaleX: 0;
 //     //
-//     --Burger-line-h: 3px;
+
 //     --Burger-bg: #222;
 // }
 

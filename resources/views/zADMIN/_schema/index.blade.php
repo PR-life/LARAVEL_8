@@ -7,7 +7,7 @@
 @endpush
  
 
-@section('Bee')
+@section('bee')
 <div class="Bee / flex dC bC">
 	@stack('bee')
 </div>
