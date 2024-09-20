@@ -103,14 +103,14 @@
 	}
 }
 
-@media (min-width: 1537px) and (max-width: @w-max) {
+@media (min-width: @w-Box + 40*2 + 1px) and (max-width: @w-max) {
 	#body,
 	.body {
 		--Box: @w-Box;
 	}
 }
 
-@media (min-width: @w-menu-2-plus) and (max-width: 1536px) {
+@media (min-width: @w-menu-2-plus) and (max-width: @w-Box + 40*2) {
 	#body,
 	.body {
 		--Box:1360px;
@@ -213,7 +213,7 @@
 	.body  {
 		--Edge: 2rem;
 		--Z1:30px;
-		--Bee: 100px;
+		--Bee: 140px;
 		//
         --Ico: 20px;
         --Ava: 30px;

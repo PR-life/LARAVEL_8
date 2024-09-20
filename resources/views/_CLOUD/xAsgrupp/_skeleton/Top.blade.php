@@ -1,6 +1,6 @@
 <header id="Top" class="Abs_mbl -rt / block_morda / edge-s">
 	<div class="_win">
-		<div class="Top -h / Box Edge -PC only-right / flex eC_PC eI_beyond / bC_mbl cI_mbl">
+		<div class="Top -h / Box edge-20090815 / flex eC_PC eI_beyond / bC_mbl cI_mbl">
 			<div class="_left none_mbl flex_morda / flex cI_PC cross-m / yesEvents">
 				@include('_CLOUD.xAsgrupp._skeleton.lego.top_li')
 			</div>

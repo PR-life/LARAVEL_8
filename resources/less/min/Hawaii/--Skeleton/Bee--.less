@@ -2,21 +2,31 @@
 
 @media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
 
+	.Bee.-S_PC {
+		--x-Bee: calc(var(--Bee)*.75);
+	}
+	
+
+	.Bee.-vh_PC {
+		min-height: clamp(80px,11vh,var(--x-Bee));
+	}
 }
 
 @media screen and (max-width:@w-menu-2) {
 	.Bee.-S_mbl {
 		--x-Bee: calc(var(--Bee)*.75);
 	}
+
+	.Bee {
+		min-height: clamp(80px,11vh,var(--x-Bee));
+	}
 }
 
 .Bee {
 	--x-Bee: var(--Bee);
+
+	min-height: var(--x-Bee);
 }
 .Bee.-S {
 	--x-Bee: calc(var(--Bee)*.75);
-}
-
-.Bee {
-	min-height: clamp(80px,11vh,var(--x-Bee));
 }
