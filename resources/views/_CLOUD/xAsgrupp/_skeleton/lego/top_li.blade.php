@@ -9,9 +9,9 @@
     <span class="Ico -S / mr-1">@svg('tel')</span>
     <span class="content-xxs / none_mbl">{{__('_const/asgrupp.phoneView')}}</span>
 </a>
-<div class="none_mbl / Min -w1 / Shift -right -step">
+<div class="none_mbl / Min -w1">
     @guest()
-        <a href="" class="Btn -auto -shadow slimS vol-white round-m / none_beyond">войти</a>
+        <a href="" class="Btn -auto -shadow slimS vol-white round-m / Shift -right -step / none_beyond">войти</a>
         <a href="" class="content / none Beyond">войти</a>
     @endguest
     @auth()

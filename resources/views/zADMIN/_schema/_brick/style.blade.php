@@ -1,10 +1,9 @@
-@push('style')
+{{-- @push('style')
 .oneLine555 br{
 	display:none;
 }
-@endpush
+@endpush --}}
 
-
-@push('css-fon')
+{{-- @push('css-fon')
     Fix
-@endpush
+@endpush --}}

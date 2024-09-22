@@ -57,6 +57,7 @@ ul.slim-s, ol.slim-s {
 		--x-void: 0;
 	}
 
+	.void-m_PC,
 	.Void.-M,
 	.void-m{
 		--x-void:2rem;
@@ -82,6 +83,14 @@ ul.slim-s, ol.slim-s {
 	.void_mbl > *{
 		margin-top:  0 !important;
 		margin-bottom:  0 !important;
+	}
+
+	.void-m_PC,
+	.void_PC {
+		> * {
+			margin-bottom: var(--x-void);
+			margin-top: var(--x-void);
+		  }
 	}
 
 }

@@ -6,13 +6,13 @@
 			</div>
 			<div class="_right x-edge none_PC / yesEvents">
 				<div id="btn_17091300" class="Burger vol-def / pointer" 
-					data-click data-node='body' data-css data-add='schema-aside aside-on fix -veil' data-loop data-veil="btn_17091301">
+					data-click data-node='body' data-css data-add='schema-aside aside-on fix -veil' data-loop data-veil="btn_17091300">
 					<div class="_burger">
 						<div class="_inner"></div>
 					</div>
 				</div>
-				<div id="btn_17091301" class="none / Burger vol-def / pointer" 
-					data-click data-node='body' data-css data-remove='shema-aside aside-on fix -veil' data-loop>
+				<div id="btn_17091301" class="none / Ico / pointer" 
+					data-click data-node='body' data-css data-remove='schema-aside aside-on fix -veil' data-loop>
 					@svg('close')
 				</div>
 			</div>

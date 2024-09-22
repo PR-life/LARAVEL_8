@@ -1,15 +1,15 @@
-<div class="paragraph"></div>
+{{-- <div class="paragraph"></div> --}}
  
-<div class="Wings / Goo / _indexMax">
-    <div class="_win x-preamble"> 
+{{-- <div class="Wings / Goo / _indexMax"> --}}
+    {{-- <div class="_win x-preamble">  --}}
         @include('zADMIN._skeleton.Bar.lego.preamble')
-    </div>
-</div>
+    {{-- </div> --}}
+{{-- </div> --}}
  
-<div class="Abs -all / flex dC bC44 / index" style="padding-top: 280px;">
+{{-- <div class="Abs -all / flex dC bC44 / index" 44style="padding-top: 280px;"> --}}
 
-    <div class="Wings / Goo -header / _indexMax">
-        <div class="_win -t / bg-05081137">
+    {{-- <div class="Wings / Goo -header / _indexMax"> --}}
+        {{-- <div class="_win -t / bg-05081137"> --}}
 
             <div id="userMenu_main" class="void x-07081718 Grey">
                 @include('zADMIN.menu.Bar.user')
@@ -31,8 +31,8 @@
                     </div>
                 </div>
             </div>
-        </div>
-    </div>
+        {{-- </div> --}}
+    {{-- </div> --}}
 
     <div class="_menu / Goo -b / flex dC bC" style="min-height: calc(var(--h) - var(--h-Header) - 1rem);">
         <div class="void / flex dC / OnionAll">
@@ -50,7 +50,25 @@
             @include('zADMIN/_skeleton/Bar/lego/manager')
         </div>
     </div>
-</div>
+{{-- </div> --}}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

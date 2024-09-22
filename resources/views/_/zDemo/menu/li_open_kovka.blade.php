@@ -1,5 +1,8 @@
 @component('_wrap._menu.li_open')
 @slot('name','Ковка')
+@slot('ico')
+    @include('xAsgrupp.menu._brick.Ico_plus')
+@endslot
 <ul class="none">
     @component('_wrap._menu.li_open')
     @slot('name','Кованые элементы')

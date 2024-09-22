@@ -1,32 +1,28 @@
 <?
 $arrCSS = [
-    'id' => 'Wrap',
-    'cssOiBar' => 'skimp-size_Aside x-asideClose',
-    'cssOi' => 'HWin skimp-size_Aside',
-    'cssASIDE' => 'ASIDE',
-    'cssKIRA' => 'KIRA -aside'
+    // 'id' => 'Wrap',
+    // 'cssOiBar' => 'skimp-size_Aside x-asideClose',
+    // 'cssOi' => 'HWin skimp-size_Aside',
+    // 'cssKIRA' => 'KIRA -aside'
 ]
 ?>
 @extends('_schema.Aside', [
-    'arrCSS' => $arrCSS,
     'preloadCss' => false,
     'linkCssMin' => '/css/minAdmin.css',
     'linkCssApp' => '/css/appAdmin.css',
-    'cssMilk' => 'skimp-size_Aside'
+    // 'cssMilk' => 'skimp-size_Aside5325325'
 ])
 
-{{-- @push('head',)
-<base href="http://detectives.su/" />
-@endpush --}}
-
-@push('css-body', 'schema-aside Design x-Admin role-'.auth()->user()->role.' user-id-'.auth()->user()->id.' ')
+{{-- @push('head',) <base href="http://detectives.su/" /> @endpush --}}
+@push('css-body', 'schema-aside 55aside-sticky / skimp-size_Aside / Design x-Admin role-'.auth()->user()->role.' user-id-'.auth()->user()->id.' ')
 
 @section('Fon')
-    <div id="Fon" class="Abs -all Fix skimp-size_Aside "></div>
+    <div id="Fon" class="Abs -all Fix skimp-size_Aside ">
+        @stack('fon')
+    </div>
 @endsection
-
 @include('zADMIN._schema._brick.src')
-@include('zADMIN._schema._brick.style')
+{{-- @include('zADMIN._schema._brick.style') --}}
 @include('zADMIN.zTHIS._schema.INDEX_')
 
 @push('css-body', 'x-aside Design x-Admin ')
@@ -48,21 +44,7 @@ $arrCSS = [
 @endpush
 
 @section('pre_wrap')
-<div id="Top" class="Top -h / flex bC cI space-left / Goo -t / bg _indexMax666 relative" style="z-index: 10">
-    <div class="_l">
-        <ul class="Bread vol-dot / flex / Grey -c30">
-            <li>
-                <a href="/admin">
-                    <span class="content-xs">Главная</span>
-                </a>
-            </li>
-            @stack('addBread')
-        </ul>
-    </div>
-    <div class="_r / edge-rightS_PC">
-        @include('zADMIN._skeleton.manager.Top')
-    </div>
-</div>
+    @include('zADMIN._skeleton.Top')
 @endsection
 
 
