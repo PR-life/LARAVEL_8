@@ -1,11 +1,24 @@
 @if($Var->parentCategory)
+    @if($Var->parentCategory->slug != 'tehnicheskie-gazy-i-oborydovanie')
     @include('mod.Bread.parent-categories', ['Var' => $Var->parentCategory])
+    @else
+        <li>
+            <a href="/catalog">Каталог 22</a>
+        </li>
+    @endif
 @endif
 
+@if($Var->slug != 'catalog')
 <li class="x-parent {{$Var->slug}}">
-    <a href="{{ url($Var->full_slug) }}">{{ $Var->bread_name ?? $Var->name }}</a>
+    <a href="/catalog/{{ $Var->slug }}">{{ $Var->bread_name ?? $Var->name }}</a>
+    {{-- <a href="{{ url($Var->full_slug) }}">{{ $Var->bread_name ?? $Var->name }}</a> --}}
 </li>
-
+@else
+<li class="x-parent">
+    <a href="/catalog">Каталог 33</a>
+    {{-- <a href="{{ url($Var->full_slug) }}">{{ $Var->bread_name ?? $Var->name }}</a> --}}
+</li>
+@endif
 
 {{-- @if($Var->parentCategory)
     @include('mod.Bread.parent-categories', ['Var' => $Var->parentCategory])

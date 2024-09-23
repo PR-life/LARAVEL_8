@@ -24,7 +24,9 @@
 
 	<div class="W-100 / index relative">
 
+		@stack('beeBefore')
 		@yield('bee')
+		@stack('beeAfter')
 
 		@stack('topBefore')
 		@yield('top')

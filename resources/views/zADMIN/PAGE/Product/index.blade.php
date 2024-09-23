@@ -13,7 +13,6 @@
 @include('zADMIN.PAGE.Product.lego.index.manager')
 
 @section('content')
-
     @component('zADMIN.PAGE.Product.wrap.index')
         @foreach($products as $_product)     
         
@@ -28,6 +27,4 @@
             @endif
         @endforeach
     @endcomponent
-
-
 @endsection

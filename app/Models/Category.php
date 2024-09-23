@@ -182,6 +182,15 @@ class Category extends Model
     }
 
 
+    public function categories() {
+        return $this->belongsToMany(
+            Category::class,
+            'category_categories',
+            'category_id',
+            'categories_id'
+        );
+    }
+
     public function tags() {
 
         return $this->belongsToMany(
