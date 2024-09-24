@@ -12,10 +12,10 @@
 	margin-right: 0;
 	max-width: 100%;
 }
+
  
 
 @media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
-
 
 	.edge-left_PC {
 		padding-left: var(--Edge);
@@ -163,13 +163,20 @@
 
 @media (min-width:@w-menu-2-plus) and (max-width:1260px + 80px * 2 + 16px) {
 
-	.Box.Edge.-PC {
+	.Box.Edge {
 		.EDGE;
+	}
+
+	.Box.Edge.-PC {
 		padding-left: var(--Edge);
 		padding-right: var(--Edge);
-
-		// background-color: blue;
 	}
+
+	.Box.Edge.-SPC {
+		padding-left: calc(var(--Edge)*.5);
+		padding-right: calc(var(--Edge)*.5);
+	}
+
 	.Box.Edge.-PC.only-right {
 		padding-left: 0;
 	}
