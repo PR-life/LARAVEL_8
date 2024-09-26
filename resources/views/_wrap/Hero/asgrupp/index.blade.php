@@ -1,4 +1,4 @@
-<div class="Box aura / Edge -SPC edge-s">
+<div class="Box aura {{$css ?? ''}} / Edge -SPC edge-s">
     <div id="Hero">
         <div class="Hero / index relative">
             <div class="_bg Abs -all / x-bg bg-dark / Tape Tape_PC -M / none_mbl"></div>

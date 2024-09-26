@@ -23,12 +23,12 @@
         @slot('name', 'шаблон')
 
         <div class="content-xxs Grey">Тизер</div>
-        @include('zADMIN.PAGE._lego.edit.shema.teaser', ['Var' => $product])
+        @include('zADMIN.PAGE._lego.edit.schema.teaser', ['Var' => $product])
 
         <div class="paragraph"></div>
 
         {{-- <div class="content-xxs Grey">Full</div> --}}
-        {{-- @include('zADMIN.PAGE._lego.edit.shema.full') --}}
+        {{-- @include('zADMIN.PAGE._lego.edit.schema.full') --}}
 
     @endcomponent
     @component('_wrap.__.summary')

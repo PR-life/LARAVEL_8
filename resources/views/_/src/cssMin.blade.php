@@ -527,13 +527,20 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.Abs_mbl{
 		position: absolute;
 	}
-	.Abs_mbl.-lt{
-		left:0;
+
+	.Abs_mbl.-lt,
+	.Abs_mbl.-rt{
 		top:0;
 	}
+
+	.Abs_mbl.-l,
+	.Abs_mbl.-lt{
+		left:0;
+	}
+
+	.Abs_mbl.-r,
 	.Abs_mbl.-rt{
 		right:0;
-		top:0;
 	}
 }
 @media (min-width:481px) and (max-width:799px){

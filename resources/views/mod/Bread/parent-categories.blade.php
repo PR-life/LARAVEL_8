@@ -12,11 +12,11 @@
 
 
 @if($Var->slug != 'catalog')
-        @if($Var->slug != 'tehnicheskie-gazy-i-oborydovanie')
+        {{-- @if($Var->slug != 'tehnicheskie-gazy-i-oborydovanie') --}}
             <li class="x-parent {{$Var->slug}}">
                 <a href="/catalog/{{ $Var->slug }}">{{ $Var->bread_name ?? $Var->name }}</a>
             </li>
-        @endif
+        {{-- @endif --}}
     @else
     <li class="x-parent">
         <a href="/catalog">Каталог 

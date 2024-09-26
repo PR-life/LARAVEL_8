@@ -16,7 +16,7 @@ class UpdateRequest extends StoreRequest
     public function rules()
     {
         return array_merge(parent::rules(), [
-
+            'delete_image' => 'nullable|integer',
         ]);
     }
 }

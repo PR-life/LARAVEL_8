@@ -5,8 +5,9 @@ namespace App\Services\ADMIN\Category;
 use Exception;
 use Illuminate\Support\Facades\DB;
 use App\Services\ADMIN\BaseService;
-
-// use App\Models\Category;
+//
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
 
 class Service extends BaseService{
 
@@ -15,7 +16,77 @@ class Service extends BaseService{
 		try {
 			DB::beginTransaction();
 
-			
+
+			// Проверка, нужно ли удалить изображение
+			if (isset($param['delete_image']) && $param['delete_image'] == '1') {
+				// Удаляем текущее изображение, если оно существует
+				if ($category->image) {
+					// Удаляем основное изображение
+					Storage::disk('public')->delete($category->image);
+
+					// Удаляем файл иконки
+					$iconFilename = 'ico_100x100_' . $category->id . '.png';
+					Storage::disk('public')->delete('ico/category/' . $iconFilename);
+
+					// Удаляем файл иконки
+					$iconFilename = 'ico_200x200_' . $category->id . '.png';
+					Storage::disk('public')->delete('ico/category/' . $iconFilename);
+
+					// Удаляем файл в формате PNG (если используется)
+					$pngFilename = 'category_images/' . $category->slug . '.png';
+					Storage::disk('public')->delete($pngFilename);
+
+					// Обнуляем поле image
+					$param['image'] = null;
+				}
+			}
+			unset($param['delete_image']);
+
+
+            // Проверка и обработка изображения
+            if (isset($param['image']) && $param['image'] instanceof \Illuminate\Http\UploadedFile) {
+
+
+				// Удаляем старое изображение, если оно существует
+				if ($category->image) {
+					Storage::disk('public')->delete($category->image);
+				}
+
+				// Загружаем новое изображение
+				$image = $param['image'];
+
+				// Сохраняем исходник
+				$originalFilename = $category->slug . '.' . $image->getClientOriginalExtension();
+				$storagePath = public_path('storage/category_images/bd/');
+				$image->move($storagePath, $originalFilename);
+
+				// Путь к сохранённому исходному файлу
+				$savedOriginalPath = $storagePath . $originalFilename;
+
+				// Повторно загружаем изображение для дальнейшей обработки
+				$imageResized = Image::make($savedOriginalPath)->encode('png'); // Преобразуем в PNG
+
+				// Генерируем имя файла для сохранения в формате PNG
+				$filename = time() . '_' . $category->id . '.png';
+				$imageResized->save(public_path('storage/category_images/' . $filename));
+
+				// Создание иконки (100x100) и её сохранение
+				$iconFilename = 'ico_100x100_' . $category->id . '.png';
+				$iconImage = Image::make($savedOriginalPath)->resize(100, 100)->encode('png');
+				$iconImage->save(public_path('storage/ico/category/' . $iconFilename));
+
+				// Создание иконки (200x200) и её сохранение
+				$iconFilename = 'ico_200x200_' . $category->id . '.png';
+				$iconImage = Image::make($savedOriginalPath)->resize(200, 200)->encode('png');
+				$iconImage->save(public_path('storage/ico/category/' . $iconFilename));
+
+				// Сохраняем путь к новому изображению в параметрах
+				$param['image'] = 'category_images/' . $filename;
+            }
+
+
+
+
 			if($param['canonical'] == "/") unset($param['canonical']);
 			// dd($param);
 
@@ -42,6 +113,8 @@ class Service extends BaseService{
 			isset($param['published']) ? '' : $param['published'] = '0';
 
 			// dd($itemIds);
+
+
 			//
 			$category->update($param);
 			$category->categories()->sync($categoryIds);
@@ -49,12 +122,11 @@ class Service extends BaseService{
 			$category->lego()->sync($legoIds);
 			$category->thisItemsPivot()->sync($itemIds);
 			$category->thisServicesPivot()->sync($serviceIds);
-			$tagIds = [];
+			// $tagIds = [];
 
 
-			$category->update($param);
 			$category->faqs()->sync($faqIds);
-			$faqIds = [];
+			// $faqIds = [];
 
 
 			DB::commit();

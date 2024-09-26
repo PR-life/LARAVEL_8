@@ -37,6 +37,11 @@ class CreateCategoriesTable extends Migration
 			$table->string('prev_p')->nullable();
             $table->string('prev_url')->nullable();
 
+
+            //
+            $table->string('image')->nullable();
+
+
 			//
 
             $table->foreignId('group_id')

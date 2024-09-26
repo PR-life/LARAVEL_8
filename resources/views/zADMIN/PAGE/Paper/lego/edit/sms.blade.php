@@ -58,7 +58,7 @@
         @slot('name', 'шаблон')
 
         <div class="content-xxs Grey">Тизер</div>
-        @include('zADMIN.PAGE._lego.edit.shema.teaser', ['Var' => $paper])
+        @include('zADMIN.PAGE._lego.edit.schema.teaser', ['Var' => $paper])
 
         <div class="paragraph"></div>
 
@@ -116,12 +116,12 @@
         @slot('name', 'шаблон')
 
         <div class="content-xxs Grey">Тизер</div>
-        @include('zADMIN.PAGE._lego.edit.shema.teaser', ['Var' => $paper])
+        @include('zADMIN.PAGE._lego.edit.schema.teaser', ['Var' => $paper])
 
         <div class="paragraph"></div>
 
         <div class="content-xxs Grey">Full</div>
-        @include('zADMIN.PAGE._lego.edit.shema.full')
+        @include('zADMIN.PAGE._lego.edit.schema.full')
 
     @endcomponent --}}
 

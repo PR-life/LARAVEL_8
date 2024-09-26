@@ -100,6 +100,7 @@ return [
 
         //
         // Intervention\Image\ImageServiceProvider::class,
+        Intervention\Image\ImageServiceProvider::class,
 
 
     ],
@@ -159,6 +160,8 @@ return [
 
         //
         // 'Image' => Intervention\Image\Facades\Image::class, // Добавляем фасад Intervention Image
+        'Image' => Intervention\Image\Facades\Image::class,
+        
 
 
     ],

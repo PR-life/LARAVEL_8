@@ -7,12 +7,12 @@
     @slot('name', 'шаблон')
 
     <div class="content-xxs Grey">Тизер</div>
-    @include('zADMIN.PAGE._lego.edit.shema.teaser', ['Var' => $category])
+    @include('zADMIN.PAGE._lego.edit.schema.teaser', ['Var' => $category])
 
     <div class="paragraph"></div>
 
     <div class="content-xxs Grey">Full</div>
-    @include('zADMIN.PAGE._lego.edit.shema.full', ['Var' => $category])
+    @include('zADMIN.PAGE._lego.edit.schema.full', ['Var' => $category])
 
 @endcomponent
 
