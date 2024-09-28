@@ -19,15 +19,25 @@
 	width: 0;
 }
 
-
-
-@media (min-width:@w-menu-2-plus) and (max-width:@w-Box + 80px + 16px) {
+@media (min-width:@metrika-70-plus) and (max-width:@w-Box + 80px + 16px) {
 
 	.Box.Roll_PC.-edge,
 	.Box.Roll_PC.-edgePC {
 		max-width: 100%;
-		padding-left: calc(var(--Edge)*.75);
+		padding-left: calc(var(--Edge)*2);
 	}
+}
+
+@media (min-width:@w-menu-2-plus) and (max-width:@metrika-70) {
+
+	.Box.Roll_PC.-edge,
+	.Box.Roll_PC.-edgePC {
+		max-width: 100%;
+		padding-left: calc(var(--Edge));
+	}
+}
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-Box + 80px + 16px) {
 
 	.Box.Roll_PC.-edgeS,
 	.Box.Roll_PC.-edge-S_PC {

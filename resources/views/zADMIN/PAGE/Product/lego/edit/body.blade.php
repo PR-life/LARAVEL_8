@@ -13,13 +13,14 @@
 	<div class="hill-s"></div>
 
 	@component('zADMIN._wrap.Tab.edit.body')
-		@slot('nameTab1', 'name-calling')
-		@slot('nameTab3', 'Медиа')
-		@slot('nameTab4', 'Фильтр')
+		@slot('nameTab1', 'Заголовки')
+		@slot('nameTab3', 'Тизер')
+		@slot('nameTab4', 'Медиа')
+		@slot('nameTab5', 'Фильтр')
 
 		@slot('tab_1')
 			<div class="paragraphX2 / net"></div>
-			@include('zADMIN.PAGE.Product.lego.edit.lego.teaser')
+			@include('zADMIN.PAGE.Product.lego.edit.lego.names')
 		@endslot
 		@slot('tab_2')
 			<div class="paragraphX2 / net"></div>
@@ -27,9 +28,12 @@
 		@endslot
 		@slot('tab_3')
 			<div class="paragraphX2 / net"></div>
-			@include('zADMIN.PAGE._lego.edit.media.index', ['Var' => $product])
+			@include('zADMIN.PAGE.Product.lego.edit.lego.teaser')
 		@endslot
 		@slot('tab_4')
+			@include('zADMIN.PAGE._lego.edit.media.index', ['Var' => $product])
+		@endslot
+		@slot('tab_5')
 			<div class="paragraph / net"></div>
 			@include('zADMIN.PAGE.Product.lego.edit.lego.filter')
 		@endslot

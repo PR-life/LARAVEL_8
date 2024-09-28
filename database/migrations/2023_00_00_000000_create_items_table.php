@@ -21,12 +21,9 @@ class CreateItemsTable extends Migration
             $table->string('shema_teaser')->default('default');
             $table->string('css')->nullable();
 
-            // $table->string('type')->nullable();
-            // $table->string('action')->nullable();
-            // $table->string('face')->nullable();
-
             $table->string('name_tag')->nullable();
             $table->string('name_seo')->nullable();
+            $table->string('bread_name')->nullable();
 
             $table->string('h1')->nullable();
             $table->string('h2')->nullable();
@@ -35,17 +32,18 @@ class CreateItemsTable extends Migration
 			$table->text('details_1')->nullable();
 			$table->text('details_2')->nullable();
 
-            $table->string('bread_name')->nullable();
-            
             $table->string('prev_h1')->nullable();
             $table->string('prev_h2')->nullable();
             $table->string('prev_p')->nullable();
-            $table->string('prev_image')->nullable();
             $table->string('prev_url')->nullable();
+            
+            //
+            $table->string('image')->nullable();
+            $table->string('image_original')->nullable();
+            $table->string('image_prev')->nullable();
 
-            $table->string('foto_main')->nullable();
 
-			$table->text('menu_kite')->nullable();
+			// $table->text('menu_kite')->nullable();
 
 			// vars
 			$table->string('param_price')->nullable();

@@ -17,6 +17,7 @@ class Service extends BaseService{
 			DB::beginTransaction();
 
 
+
 			// Проверка, нужно ли удалить изображение
 			if (isset($param['delete_image']) && $param['delete_image'] == '1') {
 				// Удаляем текущее изображение, если оно существует
@@ -58,6 +59,9 @@ class Service extends BaseService{
 				// Сохраняем исходник
 				$originalFilename = $category->slug . '.' . $image->getClientOriginalExtension();
 				$storagePath = public_path('storage/category_images/bd/');
+				$param['image_original'] = $originalFilename;
+				// $param['image_original'] = '/storage/category_images/bd/svarochnye-apparaty.webp';
+
 				$image->move($storagePath, $originalFilename);
 
 				// Путь к сохранённому исходному файлу

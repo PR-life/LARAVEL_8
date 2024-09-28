@@ -40,6 +40,7 @@ class CreateCategoriesTable extends Migration
 
             //
             $table->string('image')->nullable();
+            $table->string('image_original')->nullable();
 
 
 			//

@@ -15,9 +15,10 @@
             </div>
         </div>
     </div>
+    @if($Var->image_original)
     <div class="paragraph"></div>
-    <input type="text" name="image" value="{{$Var->image}}" placeholder="image">
-
+    <em class="content-min Grey">{{Request::root()}}/storage/category_images/bd/{{$Var->image_original}}</em>
+    @endif
 
     <div class="paragraphX2"></div>
     <input id="inputImage" type="file" name="image" value="{{$Var->image}}" placeholder="image">

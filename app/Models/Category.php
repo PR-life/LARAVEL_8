@@ -117,6 +117,8 @@ class Category extends Model
     public function products() {
         return $this->hasMany(Product::class)->orderBy('order', 'asc');
     }
+
+
     public function items() {
         return $this->hasMany(Item::class)->orderBy('order', 'asc');
     }

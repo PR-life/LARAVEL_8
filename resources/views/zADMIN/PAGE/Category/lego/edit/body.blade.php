@@ -28,7 +28,6 @@
 			@include('zADMIN.PAGE.Category.lego.edit.lego.teaser')
 		@endslot
 		@slot('tab_4')
-			{{-- <div class="paragraphX2 / net"></div> --}}
 			@include('zADMIN.PAGE._lego.edit.media.index', ['Var' => $category])
 		@endslot
 	@endcomponent
