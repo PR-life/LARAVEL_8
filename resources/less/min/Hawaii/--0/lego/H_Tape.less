@@ -8,6 +8,7 @@
  
 
 @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+    
     .Tape_PC {
         --TapeMin:220px;
         --TapeMax:var(--h)*.33;
@@ -17,19 +18,22 @@
     }
 }
 @media (min-width: @w-beyond-plus) and (max-width:@w-max) {
-    .Tape {
+    .Tape_PC,
+    .Tape.vol-def {
         --Tape: 300px;
     }
 }
 @media (min-width: @w-menu-2-plus) and (max-width:@w-beyond) {
-    .Tape {
+    .Tape_PC,
+    .Tape.vol-def {
         --Tape: 260px;
     }
 }
 
 @media screen and (max-width:@w-menu-2) {
 
-    .Tape {
+    .Tape_mbl,
+    .Tape.vol-def {
         --Tape: 240px;
     }
 

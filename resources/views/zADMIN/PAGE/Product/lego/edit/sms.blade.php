@@ -27,8 +27,8 @@
 
         <div class="paragraph"></div>
 
-        {{-- <div class="content-xxs Grey">Full</div> --}}
-        {{-- @include('zADMIN.PAGE._lego.edit.schema.full') --}}
+        <div class="content-xxs Grey">Full</div>
+        @include('zADMIN.PAGE._lego.edit.schema.full', ['Var' => $product])
 
     @endcomponent
     @component('_wrap.__.summary')

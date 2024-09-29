@@ -310,4 +310,13 @@ class Category extends Model
     {
         return 'slug';
     }
+
+
+    //
+    public static function findBySlug($slug)
+    {
+        return static::whereSlug($slug)->first();
+    }
+
+
 }

@@ -85,7 +85,7 @@ class Service extends BaseService{
 				$iconImage->save(public_path('storage/ico/category/' . $iconFilename));
 
 				// Сохраняем путь к новому изображению в параметрах
-				$param['image'] = 'category_images/' . $filename;
+				$param['image'] = $filename;
             }
 
 

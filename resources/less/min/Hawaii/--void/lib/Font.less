@@ -13,8 +13,24 @@
 }
 
 
-.Font.-void {
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.Font.-void_PC {
+		> ._void,
+		> ._h4,
+		> ._p {
+			margin-top: var(--x-Font-void);
+		}
+		> ._btn {
+			margin-top: calc((var(--x-Font-void)*.5));
+		}
+	
+		>.net {margin-top: 0;}
+	}
+	
+}
 
+
+.Font.-void {
 	> ._void,
 	> ._h4,
 	> ._p {

@@ -17,7 +17,7 @@
     </div>
     @if($Var->image_original)
     <div class="paragraph"></div>
-    <em class="content-min Grey">{{Request::root()}}/storage/category_images/bd/{{$Var->image_original}}</em>
+    <em class="content-min Grey">{{Request::root()}}/storage/{{strtolower(basename(str_replace('\\', '/', get_class($Var))))}}_images/bd/{{$Var->image_original}}</em>
     @endif
 
     <div class="paragraphX2"></div>
@@ -26,7 +26,11 @@
     @if($Var->image)
         <div class="_shell / void-s space">
             <div class="content">Текущее изображение:</div>
-            <img src="{{ asset('storage/' . $Var->image) }}" alt="Category Image" style="max-width: 200px;">
+            <img src="{{ asset('storage/'.strtolower(basename(str_replace('\\', '/', get_class($Var)))).'_images/'. $Var->image) }}" alt="Category Image" style="max-width: 200px;">
         </div>
     @endif
 </div>
+
+
+
+

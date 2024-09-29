@@ -74,6 +74,12 @@ class Service extends BaseService {
 				$filename = time() . '_' . $product->id . '.png';
 				$imageResized->save(public_path('storage/product_images/' . $filename));
 
+				// Создание превью изображения (300x300) и его сохранение
+				$previewImage = Image::make($savedOriginalPath)->resize(300, 300)->encode('png');
+				$previewImage->save(public_path('storage/product_images/teaser/' . $filename));
+
+
+
 				// Создание иконки (100x100) и её сохранение
 				$iconFilename = 'ico_100x100_' . $product->id . '.png';
 				$iconImage = Image::make($savedOriginalPath)->resize(100, 100)->encode('png');
@@ -85,7 +91,7 @@ class Service extends BaseService {
 				$iconImage->save(public_path('storage/ico/product/' . $iconFilename));
 
 				// Сохраняем путь к новому изображению в параметрах
-				$param['image'] = 'product_images/' . $filename;
+				$param['image'] = $filename;
             }
 
 
