@@ -18,6 +18,7 @@ class IndexController extends Controller
 			'Paper',
 			// 'Faq',
 			// 'Item',
+			'Product',
 			// 'Module',
 			// 'Course',
 			// 'Distributor',

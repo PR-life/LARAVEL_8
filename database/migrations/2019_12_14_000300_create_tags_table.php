@@ -33,7 +33,7 @@ class CreateTagsTable extends Migration
 
 			$table->unsignedInteger('order')->default(50);
             $table->unsignedInteger('status')->default(1);
-            $table->unsignedInteger('pin')->nullable()->default(0);
+            $table->unsignedInteger('pin')->nullable();
             $table->unsignedInteger('published')->default(1);
 
             $table->timestamps();

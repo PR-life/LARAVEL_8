@@ -89,11 +89,7 @@ class Service extends BaseService{
             }
 
 
-
-
 			if($param['canonical'] == "/") unset($param['canonical']);
-			// dd($param);
-
 
 			isset($param['category_ids']) ? $categoryIds = $param['category_ids'] : $categoryIds = [];
 			unset($param['category_ids']);

@@ -44,10 +44,12 @@ class StoreRequest extends BaseRelationsRequest
             'prev_url' => 'nullable|file',
 
             //
-            'param_report' => 'nullable|string',
-            'param_duration' => 'nullable|string',
-            'param_geo' => 'nullable|string',
-            'param_price' => 'nullable|string',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp,avif|max:2048',
+            'image_original' => 'nullable|string',
+            'image_prev' => 'nullable|image|mimes:jpeg,png,jpg,webp,avif|max:2048',
+
+            //
+            'price' => 'nullable|string',
 
 			//
 			'mafia' => 'nullable|integer',

@@ -50,7 +50,7 @@ class CreateItemmodulesTable extends Migration
             $table->unsignedInteger('published')->default(1);
 			
 			//
-            $table->unsignedInteger('mafia')->default('0');
+            $table->unsignedInteger('mafia')->nullable();
 
 
 			//

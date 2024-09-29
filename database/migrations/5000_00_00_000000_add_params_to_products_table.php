@@ -10,13 +10,18 @@ class AddParamsToProductsTable extends Migration
     public function up()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->after('details_2', function ($table) {
-                $table->string('price')->nullable();
-                $table->string('price_old')->nullable();
+            $table->after('price', function ($table) {
+                $table->integer('price_old')->nullable();
                 $table->string('price_name')->nullable();
                 $table->string('discount_percentage')->nullable();
                 //
-                $table->string('param_liters')->nullable();
+                $table->integer('stock_quantity')->default(0); // Количество на складе
+                $table->integer('reserved_quantity')->default(0); // Зарезервированные товары
+                $table->integer('threshold_quantity')->default(0); // Минимальное количество для пополнения
+                $table->boolean('in_stock')->default(false); // Наличие товара
+                //
+                $table->integer('param_liters')->nullable();
+
             });
         });
     }
@@ -24,10 +29,8 @@ class AddParamsToProductsTable extends Migration
     public function down()
     {
         Schema::table('products', function (Blueprint $table) {
-            $table->dropColumn('price');
-            $table->dropColumn('price_old');
-            $table->dropColumn('price_name');
-            $table->dropColumn('discount_percentage');
+            $table->dropColumn(['price_old', 'price_name', 'discount_percentage']);
+            $table->dropColumn(['stock_quantity', 'reserved_quantity', 'threshold_quantity', 'in_stock']);
             $table->dropColumn('param_liters');
         });
     }

@@ -20,8 +20,8 @@ class CreatePapersEnTable extends Migration
             $table->string('name')->nullable();
 			$table->string('slug')->unique();
 			
-            $table->string('shema')->default('default');
-            $table->string('shema_teaser')->default('default');
+            $table->string('shema')->nullable();
+            $table->string('shema_teaser')->nullable();
             $table->string('css')->nullable();
             // $table->string('filter_par_1')->nullable();
 
@@ -61,7 +61,7 @@ class CreatePapersEnTable extends Migration
             $table->unsignedInteger('featured')->default('0');
             $table->unsignedInteger('published')->default('0');
 
-            $table->unsignedInteger('mafia')->default('0');
+            $table->unsignedInteger('mafia')->nullable();
 
 			//
 

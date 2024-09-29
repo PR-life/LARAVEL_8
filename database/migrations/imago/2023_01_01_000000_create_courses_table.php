@@ -43,7 +43,7 @@ class CreateCoursesTable extends Migration
             $table->unsignedInteger('featured')->default('0');
             $table->unsignedInteger('published')->default(1);
 
-			$table->unsignedInteger('mafia')->default('0');
+			$table->unsignedInteger('mafia')->nullable();
 
 			//
 			$table->unsignedInteger('tag_id')->nullable();
