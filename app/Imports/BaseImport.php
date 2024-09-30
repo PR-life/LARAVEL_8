@@ -20,20 +20,35 @@ abstract class BaseImport implements ToCollection, WithHeadingRow
      */
     public function applyDefaults(&$params)
     {
+
+        if (!filled($params['stock_quantity'])) {
+            $params['stock_quantity'] = 0;
+        }
+        if (!filled($params['reserved_quantity'])) {
+            $params['reserved_quantity'] = 0;
+        }
+        if (!filled($params['threshold_quantity'])) {
+            $params['threshold_quantity'] = 0;
+        }
+        if (!filled($params['in_stock'])) {
+            $params['in_stock'] = false;
+        }
+
+        //
         if (!filled($params['order'])) {
-            $params['order'] = '50';
+            $params['order'] = 50;
         }
         if (!filled($params['status'])) {
-            $params['status'] = '1';
+            $params['status'] = 1;
         }
         if (!filled($params['views'])) {
-            $params['views'] = '1';
+            $params['views'] = 1;
         }
         if (!filled($params['featured'])) {
-            $params['featured'] = '0';
+            $params['featured'] = 0;
         }
         if (!filled($params['published'])) {
-            $params['published'] = '0';
+            $params['published'] = 0;
         }
         if (!filled($params['created_at'])) {
             $params['created_at'] = now();

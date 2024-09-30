@@ -15,13 +15,14 @@ class AddParamsToProductsTable extends Migration
                 $table->string('price_name')->nullable();
                 $table->string('discount_percentage')->nullable();
                 //
+                $table->integer('param_liters')->nullable();
+
+            });
+            $table->after('mafia', function ($table) {
                 $table->integer('stock_quantity')->default(0); // Количество на складе
                 $table->integer('reserved_quantity')->default(0); // Зарезервированные товары
                 $table->integer('threshold_quantity')->default(0); // Минимальное количество для пополнения
                 $table->boolean('in_stock')->default(false); // Наличие товара
-                //
-                $table->integer('param_liters')->nullable();
-
             });
         });
     }
