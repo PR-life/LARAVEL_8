@@ -20,7 +20,7 @@ class EditController extends BaseController
 		$tags = Tag::all();
         $categories = Category::orderBy('order')->get();
 		$faqs = Faq::all();
-		$Lego = Lego::all();
+		$Lego = Lego::orderBy('name')->get();
 		$papers = Paper::all();
 		$roles = User::getRoles();
 		//
