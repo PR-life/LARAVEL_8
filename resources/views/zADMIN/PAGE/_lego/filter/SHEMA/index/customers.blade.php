@@ -1,4 +1,4 @@
-@component('zADMIN.PAGE._lego.filter.SHEMA.index.wrap.index')
+@component('zADMIN.PAGE._lego.filter.SCHEMA.index.wrap.index')
     @slot('cssModel', '-face')
 
     <div class="Abs -left">

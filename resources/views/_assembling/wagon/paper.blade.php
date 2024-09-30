@@ -7,7 +7,7 @@
 {{-- vol-QA Family-OpenSans round-l
 x-30012123 Wagon -w -wL -hS / Bone / space-m / relative555 index555 --}}
 
-@component('_assembling.wagon.shema.index',['css03051331'=>'Bone','cssWagon' => '-h'])
+@component('_assembling.wagon.schema.index',['css03051331'=>'Bone','cssWagon' => '-h'])
  
 
 	<div class="_head / space">

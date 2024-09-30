@@ -12,7 +12,7 @@
 
 @push('bee')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Категории', 'add' => route('admin.category.create'), 'Model' => 'Category'])
-    @include('zADMIN.PAGE._lego.filter.SHEMA.index.categories')
+    @include('zADMIN.PAGE._lego.filter.SCHEMA.index.categories')
 @endpush
     
 @component('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Category', 'model' => 'category'])

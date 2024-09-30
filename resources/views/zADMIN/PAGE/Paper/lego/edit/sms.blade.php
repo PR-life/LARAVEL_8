@@ -54,7 +54,7 @@
     @component('_wrap.__.summary')
         @slot('cssContent', 'space-s space-zeroRight round-s / void-s')
         @slot('icoCloseName', 'closeRoll')
-        @slot('id', 'shema')
+        @slot('id', 'schema')
         @slot('name', 'шаблон')
 
         <div class="content-xxs Grey">Тизер</div>
@@ -112,7 +112,7 @@
 
     
     {{-- @component('zADMIN._wrap._open.tool_FlaberSms')
-        @slot('id', 'shema')
+        @slot('id', 'schema')
         @slot('name', 'шаблон')
 
         <div class="content-xxs Grey">Тизер</div>

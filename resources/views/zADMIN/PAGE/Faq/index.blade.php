@@ -14,7 +14,7 @@
 
 @push('bee')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Faq', 'add' => route('admin.faq.create'), 'Model' => 'Faq'])
-    @include('zADMIN.PAGE._lego.filter.SHEMA.index.faqs')
+    @include('zADMIN.PAGE._lego.filter.SCHEMA.index.faqs')
 @endpush
 
 @include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Faq', 'model' => 'faq'])

@@ -13,7 +13,7 @@
 
 @push('bee')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Landing', 'add' => route('admin.landing.create'), 'Model' => 'Landing'])
-    {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.posts') --}}
+    {{-- @include('zADMIN.PAGE._lego.filter.SCHEMA.index.posts') --}}
 @endpush
 
 @include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Landing', 'model' => 'landing'])

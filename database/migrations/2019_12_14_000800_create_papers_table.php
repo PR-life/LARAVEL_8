@@ -21,8 +21,8 @@ class CreatePapersTable extends Migration
 			$table->string('slug')->unique();
 			
             $table->string('mockup')->nullable();
-            $table->string('shema')->nullable();
-            $table->string('shema_teaser')->nullable();
+            $table->string('schema')->nullable();
+            $table->string('schema_teaser')->nullable();
             $table->string('css')->nullable();
 
             $table->string('name_tag')->nullable();

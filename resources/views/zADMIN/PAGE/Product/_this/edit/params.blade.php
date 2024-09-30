@@ -48,5 +48,22 @@ $arr_17062153 = [
         </dd>
  
         @endforeach
+
+    </dl>
+ 
+@endcomponent
+
+ 
+@component('_wrap.__.summary')
+@slot('icoCloseName', 'closeRoll')
+@slot('id', 'stock')
+@slot('name', 'Склад')
+
+    <dl class="-dot -rightS Void">
+        <dt class="content-xs Grey"><label for="stock_quantity">количество</label></dt>
+        <dd>
+            <input id="stock_quantity" type="text" name="stock_quantity" value="{{$product->stock_quantity}}" placeholder="...">
+        </dd>
+    </dl>
  
 @endcomponent

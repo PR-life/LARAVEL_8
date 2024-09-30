@@ -3,7 +3,7 @@
 
 @component('_wrap.__.summary')
     @slot('icoCloseName', 'closeRoll')
-    @slot('id', 'shema')
+    @slot('id', 'schema')
     @slot('name', 'шаблон')
 
     <div class="content-xxs Grey">Тизер</div>

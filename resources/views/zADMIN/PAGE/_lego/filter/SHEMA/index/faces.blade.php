@@ -1,4 +1,4 @@
-@component('zADMIN.PAGE._lego.filter.SHEMA.index.wrap.Filter')
+@component('zADMIN.PAGE._lego.filter.SCHEMA.index.wrap.Filter')
     @slot('triggerShow','')
     @slot('Model','Face')
     @slot('cssForm','-L')

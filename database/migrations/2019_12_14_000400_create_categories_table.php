@@ -20,8 +20,8 @@ class CreateCategoriesTable extends Migration
             $table->string('name');
             $table->string('slug')->unique();
 			
-            $table->string('shema')->nullable();
-            $table->string('shema_teaser')->nullable();
+            $table->string('schema')->nullable();
+            $table->string('schema_teaser')->nullable();
             $table->string('css')->nullable();
 
             $table->string('name_tag')->nullable();

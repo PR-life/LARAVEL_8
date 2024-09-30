@@ -1,7 +1,7 @@
-<div class="Teaser vol-{{$Var->shema_teaser}} / Void / space-hL Edge">
+<div class="Teaser vol-{{$Var->schema_teaser}} / Void / space-hL Edge">
 
 
-	@switch($Var->shema_teaser ?? '')
+	@switch($Var->schema_teaser ?? '')
 		@case('service')
 			<div class="edge-s">
 				@include('_wrap._teaser._lego.service',['Var' => $Var, 'link' => route($routeName, $Var->slug)])

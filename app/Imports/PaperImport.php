@@ -37,11 +37,11 @@ class PaperImport implements ToCollection, WithHeadingRow
 
             
 
-            if(!$params['shema']) {
-                $params['shema'] = 'default';
+            if(!$params['schema']) {
+                $params['schema'] = 'default';
             }
-            if(!$params['shema_teaser']) {
-                $params['shema_teaser'] = 'default';
+            if(!$params['schema_teaser']) {
+                $params['schema_teaser'] = 'default';
             }
             if(!$params['user_id']) {
                 $params['user_id'] = '1';

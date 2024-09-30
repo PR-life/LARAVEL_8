@@ -13,7 +13,7 @@ class PaperFilter extends AbstractFilter {
     public const NAME = 'name';
     public const TAG = 'tag_id';
     public const ANSWER = 'answer';
-    public const SHEMA = 'shema';
+    public const SCHEMA = 'schema';
     public const STATUS = 'status';
     public const CATEGORY_ID = 'category_id';
 
@@ -23,7 +23,7 @@ class PaperFilter extends AbstractFilter {
             self::NAME => [$this, 'name'],
             self::TAG => [$this, 'tag_id'],
             self::ANSWER => [$this, 'answer'],
-            self::SHEMA => [$this, 'shema'],
+            self::SCHEMA => [$this, 'schema'],
             self::STATUS => [$this, 'status'],
             self::CATEGORY_ID => [$this, 'category_id'],
         ];
@@ -37,9 +37,9 @@ class PaperFilter extends AbstractFilter {
     {
         $builder->where('answer', '!=', null);
     }
-    public function shema(Builder $builder, $value)
+    public function schema(Builder $builder, $value)
     {
-        $builder->where('shema', $value);
+        $builder->where('schema', $value);
     }
     public function status(Builder $builder, $value)
     {

@@ -1,6 +1,6 @@
 @push('bee')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Товары', 'add' => route('admin.product.create'), 'Model' => 'Product'])
-    @include('zADMIN.PAGE._lego.filter.SHEMA.index.products')
+    @include('zADMIN.PAGE._lego.filter.SCHEMA.index.products')
 @endpush
 
 @component('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Product', 'model' => 'product'])

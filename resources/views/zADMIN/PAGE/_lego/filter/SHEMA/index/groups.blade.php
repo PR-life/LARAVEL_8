@@ -1,4 +1,4 @@
-@component('zADMIN.PAGE._lego.filter.SHEMA.index.wrap.Filter')
+@component('zADMIN.PAGE._lego.filter.SCHEMA.index.wrap.Filter')
     @slot('cssModel','-group')
 
     <div class="{{ ($_GET != [] || request()->routeIs('admin.group.trash')) ? '' : 'notActive noEvents' }}">

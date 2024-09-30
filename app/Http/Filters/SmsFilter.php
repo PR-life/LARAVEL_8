@@ -13,7 +13,7 @@ class SmsFilter extends AbstractFilter {
     public const SMS = 'textsms';
     public const NAME = 'name';
     public const CATEGORY_ID = 'category_id';
-    public const SHEMA = 'shema';
+    public const SCHEMA = 'schema';
     public const STATUS = 'status';
 
     protected function getCallbacks(): array
@@ -23,7 +23,7 @@ class SmsFilter extends AbstractFilter {
             self::NAME => [$this, 'textsms'],
             // self::ANSWER => [$this, 'answer'],
             self::CATEGORY_ID => [$this, 'category_id'],
-            self::SHEMA => [$this, 'shema'],
+            self::SCHEMA => [$this, 'schema'],
             self::STATUS => [$this, 'status'],
             // self::CATEGORY_ID => [$this, 'category_id'],
         ];
@@ -42,9 +42,9 @@ class SmsFilter extends AbstractFilter {
         // dd(222);
         $builder->where('category_id', $value);
     }
-    public function shema(Builder $builder, $value)
+    public function schema(Builder $builder, $value)
     {
-        $builder->where('shema', $value);
+        $builder->where('schema', $value);
     }
     public function status(Builder $builder, $value)
     {

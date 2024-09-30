@@ -1,6 +1,6 @@
 <a class="flex -wrap / h / cross-xs" href="{{ 
 
-route('admin.'.mb_strtolower(class_basename($tag)).'.edit', ['tag' => $tag->id, 'shema' => $shema ?? null])
+route('admin.'.mb_strtolower(class_basename($tag)).'.edit', ['tag' => $tag->id, 'schema' => $schema ?? null])
 
 }}">
 

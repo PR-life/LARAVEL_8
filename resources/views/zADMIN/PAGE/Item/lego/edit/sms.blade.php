@@ -19,7 +19,7 @@
         {{-- @slot('cssWrap', '') --}}
         {{-- @slot('cssContent', '') --}}
         @slot('icoCloseName', 'closeRoll')
-        @slot('id', 'shema')
+        @slot('id', 'schema')
         @slot('name', 'шаблон')
 
         <div class="content-xxs Grey">Тизер</div>

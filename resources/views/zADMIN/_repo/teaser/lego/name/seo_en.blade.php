@@ -38,7 +38,7 @@
     </a>
 
     @if($Var->surrogate)
-    <a class="none D-Relation -on / flex cI {{$Var->id == $Var->surrogate->surrogate->id ? 'Green' : ''}}" href="{{ route(strtolower('admin.' . (class_basename($Var)) . '.edit'), [mb_strtolower(class_basename($Var->surrogate)) => $Var->surrogate->id])}}">
+    <a class="none D-Relation -on / flex cI {{$Var->id == $Var->surrogate->surrogate?->id ? 'Green' : ''}}" href="{{ route(strtolower('admin.' . (class_basename($Var)) . '.edit'), [mb_strtolower(class_basename($Var->surrogate)) => $Var->surrogate->id])}}">
         <svg viewBox="0 0 27.7 27.7">
             <g fill="currentColor">
                 <path d="M25.899,5.935h-15.81c-0.991,0-1.801,0.771-1.801,1.721v1.639h15.81v0.45v4.128v0.314H8.288v1.845 c0,0.95,0.81,1.722,1.801,1.722h15.81c0.996,0,1.801-0.771,1.801-1.722V7.656C27.7,6.706,26.895,5.935,25.899,5.935z"/>

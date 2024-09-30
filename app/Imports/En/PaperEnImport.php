@@ -42,8 +42,8 @@ class PaperEnImport implements ToCollection, WithHeadingRow
                     'name' => $item['name'],
                     'slug' => $x,
 
-                    'shema' => $item['shema'],
-                    'shema_teaser' => $item['shema_teaser'],
+                    'schema' => $item['schema'],
+                    'schema_teaser' => $item['schema_teaser'],
                     'css' => $item['css'],
 
                     'h1' => $item['h1'],

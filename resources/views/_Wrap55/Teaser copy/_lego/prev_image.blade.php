@@ -1,4 +1,4 @@
-@if($Var->shema_teaser == 'default' && ($Var->prev_image != '' || $Var->prev_image != null))
+@if($Var->schema_teaser == 'default' && ($Var->prev_image != '' || $Var->prev_image != null))
 <div class="paragraph"></div>
 <a class="block edge-s" href="{{$VarRoute}}">
 	<div class="inline relative">

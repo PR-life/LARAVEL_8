@@ -16,7 +16,7 @@
 
 	@if(isset($Var->text))
 		<div class="{{$cssContent ?? 'content-m -lineHeight'}}">
-			{{-- @if ($Var->shema_teaser == 'poster') --}}
+			{{-- @if ($Var->schema_teaser == 'poster') --}}
 				{!!\Illuminate\Support\Str::words(strip_tags($Var->text), 20, $end="...")!!}
 			{{-- @else --}}
 				{{-- {!!\Illuminate\Support\Str::words(strip_tags($Var->text), 50, $end="...")!!} --}}

@@ -11,7 +11,7 @@ class BaseService {
 					'group_id' => request()->get('group_id'),
 					'textsms' => request()->get('textsms'),
 					'name' => request()->get('name'),
-					'shema' => request()->get('shema'),
+					'schema' => request()->get('schema'),
 				];
 	}
 

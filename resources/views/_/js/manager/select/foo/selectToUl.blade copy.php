@@ -113,7 +113,7 @@ function selectToUl(parent) {
         li.classList.add('_item')
 
  
-        li.classList.add(item.getAttribute('shema-teaser') ?? '532523')
+        li.classList.add(item.getAttribute('schema-teaser') ?? '532523')
   
 
 

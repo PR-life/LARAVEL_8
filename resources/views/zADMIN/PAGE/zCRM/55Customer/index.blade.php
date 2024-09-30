@@ -16,7 +16,7 @@
 
 @push('bee')
     {{-- @include('zADMIN._lego.Bee.nameIndex',['name' => 'Клиенты', 'add33' => route('admin.crm.customer.create'), 'ico' => 'barMenu_custome333r']) --}}
-    {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.customers') --}}
+    {{-- @include('zADMIN.PAGE._lego.filter.SCHEMA.index.customers') --}}
 @endpush
 
 

@@ -73,7 +73,7 @@
 
 
         <div class="_2 / Min Max -w2">      
-            <span class="content-s">{{$Var->shema}}</span>
+            <span class="content-s">{{$Var->schema}}</span>
         </div>
 
         {{-- <div class="_3 / Min Max -w2">

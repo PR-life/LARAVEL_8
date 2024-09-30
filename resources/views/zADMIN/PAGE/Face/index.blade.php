@@ -18,7 +18,7 @@
     <div id="wrap_filter" class="space">
 
         <div class="_wrap flex bC / cross space round">
-            @include('zADMIN.PAGE._lego.filter.SHEMA.index.faces')
+            @include('zADMIN.PAGE._lego.filter.SCHEMA.index.faces')
     
             <div class="flex cross / ">
                 <a href="{{ route('admin.crm.face.index', ['sort' => 'date']) }}" class="Btn cC">Сортировать по дате</a>
@@ -26,7 +26,7 @@
             </div>
         </div>
     </div>
-    {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.customers') --}}
+    {{-- @include('zADMIN.PAGE._lego.filter.SCHEMA.index.customers') --}}
 @endpush
 
 {{-- @include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Face', 'model' => 'face']) --}}

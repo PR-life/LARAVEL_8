@@ -22,9 +22,9 @@ trait HasSlug
         $count = 1;
 
         // Проверяем уникальность slug, если такой уже существует, добавляем число в конец
-        while ($modelClass::where('slug', $slug)->exists()) {
-            $slug = $originalSlug . '-' . $count++;
-        }
+        // while ($modelClass::where('slug', $slug)->exists()) {
+        //     $slug = $originalSlug . '-' . $count++;
+        // }
 
         return $slug;
     }
