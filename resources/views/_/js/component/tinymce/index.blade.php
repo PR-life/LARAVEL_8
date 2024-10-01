@@ -14,7 +14,7 @@
 <script>
 
     tinymce.init({
-      selector: '#tinymce_1, #tinymce_2, #tinymce_3, #tinymce_4',
+      selector: '#tinymce_1, #tinymce_2, #tinymce_3, #tinymce_4, #tinymce_5',
       content_css: "{{Request::root() . mix('/css/env/tinymce.css')}}",
       language: 'ru',
       height: parseInt(document.documentElement.clientHeight) * .8,

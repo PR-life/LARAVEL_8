@@ -10,7 +10,8 @@ use Carbon\Carbon;
 //
 use App\Models\_child\Service;
 
-class Category extends Model
+// class Category extends Model
+class Category extends BaseContent
 {
     use HasFactory;
     use SoftDeletes;
@@ -31,6 +32,37 @@ class Category extends Model
 
 
 
+
+    public function serviceDelivery() 
+    {
+        return $this->belongsTo(
+            Service::class,
+            'service_delivery_id',
+			'id',
+        );
+    }
+    public function paperPayment() 
+    {
+        return $this->belongsTo(
+            Paper::class,
+            'paper_payment_id',
+			'id',
+        );
+    }
+    public function paperWarranty() 
+    {
+        return $this->belongsTo(
+            Paper::class,
+            'paper_payment_id',
+			'id',
+        );
+    }
+
+
+
+
+    //
+
     public function categoryService() {
         return $this->belongsTo(
             Category::class,
@@ -48,23 +80,23 @@ class Category extends Model
         );
     }
 
-    public function thisLegoPivot() {
-        return $this->belongsToMany(
-            Lego::class,
-            'category_lego',
-            'category_id',
-            'lego_id'
-        );
-    }
+    // public function thisLegoPivot() {
+    //     return $this->belongsToMany(
+    //         Lego::class,
+    //         'category_lego',
+    //         'category_id',
+    //         'lego_id'
+    //     );
+    // }
 
-    public function thisItemsPivot() {
-        return $this->belongsToMany(
-            Item::class,
-            'category_items',
-            'category_id',
-            'item_id'
-        );
-    }
+    // public function thisItemsPivot() {
+    //     return $this->belongsToMany(
+    //         Item::class,
+    //         'category_items',
+    //         'category_id',
+    //         'item_id'
+    //     );
+    // }
 
      
     public function servicesPivot() {
@@ -123,13 +155,13 @@ class Category extends Model
         return $this->hasMany(Item::class)->orderBy('order', 'asc');
     }
 
-    public function faq() {
-        return $this->hasMany(
-            Faq::class,
-            'category_id',
-            'id',
-        )->orderBy('order', 'asc');
-    }
+    // public function faq() {
+    //     return $this->hasMany(
+    //         Faq::class,
+    //         'category_id',
+    //         'id',
+    //     )->orderBy('order', 'asc');
+    // }
 
     public function posts() {
         return $this->hasMany(
@@ -153,91 +185,91 @@ class Category extends Model
             // )->orderBy('created_at', 'desc');
     }
 
-    public function tagsMain() {
+    // public function tagsMain() {
 
-        return $this->hasMany(
-            Tag::class,
-            'category_id',
-            'id'
-        );
+    //     return $this->hasMany(
+    //         Tag::class,
+    //         'category_id',
+    //         'id'
+    //     );
 
-		// return $this->belongsToMany(Tag::class,'post_tags');
-			// !!! не сошлось с видео
-			// запись по конвенции Laravel, тут важно соблюдать имена в атрибутах
-			// https://www.youtube.com/watch?v=c0yuY_Ugacg
-    }
-
-
-    public function lego() {
-
-        return $this->belongsToMany(
-            Lego::class,
-            'category_lego',
-            'category_id',
-            'lego_id'
-        );
-
-		// return $this->belongsToMany(Tag::class,'post_tags');
-			// !!! не сошлось с видео
-			// запись по конвенции Laravel, тут важно соблюдать имена в атрибутах
-			// https://www.youtube.com/watch?v=c0yuY_Ugacg
-    }
+	// 	// return $this->belongsToMany(Tag::class,'post_tags');
+	// 		// !!! не сошлось с видео
+	// 		// запись по конвенции Laravel, тут важно соблюдать имена в атрибутах
+	// 		// https://www.youtube.com/watch?v=c0yuY_Ugacg
+    // }
 
 
-    public function categories() {
-        return $this->belongsToMany(
-            Category::class,
-            'category_categories',
-            'category_id',
-            'categories_id'
-        );
-    }
+    // public function lego() {
 
-    public function tags() {
+    //     return $this->belongsToMany(
+    //         Lego::class,
+    //         'category_lego',
+    //         'category_id',
+    //         'lego_id'
+    //     );
 
-        return $this->belongsToMany(
-            Tag::class,
-            'category_tags', // через какую тбл свзяь
-            'category_id', // foreignKey этой модели в указанной таблице
-            'tag_id' // relatedPivotKey, с кем foreignKey имеет взаимоотношение
-        );
-
-		// return $this->belongsToMany(Tag::class,'post_tags');
-			// !!! не сошлось с видео
-			// запись по конвенции Laravel, тут важно соблюдать имена в атрибутах
-			// https://www.youtube.com/watch?v=c0yuY_Ugacg
-    }
+	// 	// return $this->belongsToMany(Tag::class,'post_tags');
+	// 		// !!! не сошлось с видео
+	// 		// запись по конвенции Laravel, тут важно соблюдать имена в атрибутах
+	// 		// https://www.youtube.com/watch?v=c0yuY_Ugacg
+    // }
 
 
+    // public function categories() {
+    //     return $this->belongsToMany(
+    //         Category::class,
+    //         'category_categories',
+    //         'category_id',
+    //         'categories_id'
+    //     );
+    // }
 
-    public function faqs() {
-        return $this->belongsToMany(
-            Faq::class,
-            'category_faqs',
-            'category_id',
-            'faq_id'
-        )->orderBy('order', 'asc');
-    }
+    // public function tags() {
+
+    //     return $this->belongsToMany(
+    //         Tag::class,
+    //         'category_tags', // через какую тбл свзяь
+    //         'category_id', // foreignKey этой модели в указанной таблице
+    //         'tag_id' // relatedPivotKey, с кем foreignKey имеет взаимоотношение
+    //     );
+
+	// 	// return $this->belongsToMany(Tag::class,'post_tags');
+	// 		// !!! не сошлось с видео
+	// 		// запись по конвенции Laravel, тут важно соблюдать имена в атрибутах
+	// 		// https://www.youtube.com/watch?v=c0yuY_Ugacg
+    // }
 
 
 
-    public function category() {
-        return $this->belongsTo(
-            Category::class,
-            'category_id',
-			'id',
-        );
-    }
+    // public function faqs() {
+    //     return $this->belongsToMany(
+    //         Faq::class,
+    //         'category_faqs',
+    //         'category_id',
+    //         'faq_id'
+    //     )->orderBy('order', 'asc');
+    // }
 
 
 
-    public function group() {
-        return $this->belongsTo(
-            Group::class,
-            'group_id',
-            'id'
-        );
-    }
+    // public function category() {
+    //     return $this->belongsTo(
+    //         Category::class,
+    //         'category_id',
+	// 		'id',
+    //     );
+    // }
+
+
+
+    // public function group() {
+    //     return $this->belongsTo(
+    //         Group::class,
+    //         'group_id',
+    //         'id'
+    //     );
+    // }
 
 
 
@@ -272,6 +304,9 @@ class Category extends Model
     }
 
 
+
+
+    //
     public function getFullSlugAttribute()
     {
         // Собираем все родительские категории
@@ -289,10 +324,26 @@ class Category extends Model
     }
 
 
+    public function getRecursiveAttribute($attribute) {
+        $category = $this;
+    
+        // Рекурсивно проверяем категорию и её родителей
+        while ($category) {
+            if (!empty($category->$attribute)) {
+                return $category->$attribute;
+            }
+    
+            // Переходим к родительской категории
+            $category = $category->parentCategory;
+        }
+    
+        // Если не найдено значение, можно вернуть null или дефолтное значение
+        return null;
+    }
 
 
 
-
+    //
 	public function getDateAsCarbonAttribute(){
 		return Carbon::parse($this->created_at);
 	}
@@ -317,6 +368,29 @@ class Category extends Model
     {
         return static::whereSlug($slug)->first();
     }
+
+
+
+
+    //// Пивотные таблицы
+
+ 
+    protected function getFaqPivotTable(){
+        return 'category_faqs';
+    }
+    protected function getTagPivotTable(){
+        return 'category_tags';
+    }
+    protected function getCategoryPivotTable(){
+        return 'category_categories';
+    }
+    protected function getItemPivotTable(){
+        return 'category_items';
+    }
+    protected function getLegoPivotTable(){
+        return 'category_lego';
+    }
+
 
 
 }

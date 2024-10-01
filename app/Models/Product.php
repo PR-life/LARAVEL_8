@@ -6,6 +6,7 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Traits\Filterable;
 //
+use App\Models\_child\Service;
 
 class Product extends BaseContent
 {
@@ -16,7 +17,33 @@ class Product extends BaseContent
     protected $table = 'products';
     protected $guarded = false;
 
+    
+    public function serviceDelivery() 
+    {
+        return $this->belongsTo(
+            Service::class,
+            'service_delivery_id',
+			'id',
+        );
+    }
+    public function paperPayment() 
+    {
+        return $this->belongsTo(
+            Paper::class,
+            'paper_payment_id',
+			'id',
+        );
+    }
+    public function paperWarranty() 
+    {
+        return $this->belongsTo(
+            Paper::class,
+            'paper_payment_id',
+			'id',
+        );
+    }
 
+    //
     public function serviceCategory() 
     {
         return $this->belongsTo(
@@ -25,6 +52,7 @@ class Product extends BaseContent
 			'id',
         );
     }
+ 
 
     //
     public function surrogate() 
@@ -64,14 +92,21 @@ class Product extends BaseContent
     }
 
  
-
-
-    // Универсальный метод для получения свойств родительской категории
-    public function getParentCategoryAttribute($property)
-    {
-        return $this->parent?->category?->{$property};
-        // return optional(optional($this->parent)->category)->{$property};
+    public function getCategoryAttributeRecursive($attribute) {
+        // Проверяем категорию товара
+        if ($this->category) {
+            return $this->category->getRecursiveAttribute($attribute);
+        }
+    
+        return null;
     }
+
+    // // Универсальный метод для получения свойств родительской категории
+    // public function getParentCategoryAttribute($property)
+    // {
+    //     return $this->parent?->category?->{$property};
+    //     // return optional(optional($this->parent)->category)->{$property};
+    // }
 
     // public function __get($name)
     // {

@@ -120,7 +120,7 @@ class Service extends BaseService{
 			$category->categories()->sync($categoryIds);
 			$category->tags()->sync($tagIds);
 			$category->lego()->sync($legoIds);
-			$category->thisItemsPivot()->sync($itemIds);
+			// $category->items()->sync($itemIds);
 			$category->thisServicesPivot()->sync($serviceIds);
 			// $tagIds = [];
 

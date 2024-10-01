@@ -51,9 +51,9 @@
 
 	<div class="Details transparent">
 		<details>
-			<summary><span>text_top</span><i></i></summary>
+			<summary><span>text_global</span><i></i></summary>
 			<div class="_shell Article aura / Note -lite">
-				<textarea id="tinymce_1" name="text_top" placeholder='текст...'>{{$category->text_top}}</textarea>
+				<textarea id="tinymce_1" name="text_global" placeholder='текст...'>{{$category->text_global}}</textarea>
 			</div>
 		</details>
 		<details>
@@ -63,9 +63,15 @@
 			</div>
 		</details>
 		<details>
+			<summary><span>text_top</span><i></i></summary>
+			<div class="_shell Article aura / Note -lite">
+				<textarea id="tinymce_2" name="text_top" placeholder='текст...'>{{$category->text_top}}</textarea>
+			</div>
+		</details>
+		<details>
 			<summary><span>text_bottom</span><i></i></summary>
 			<div class="_shell Article aura / Note -lite">
-				<textarea id="tinymce_2" name="text_bottom" placeholder='текст...'>{{$category->text_bottom}}</textarea>
+				<textarea id="tinymce_5" name="text_bottom" placeholder='текст...'>{{$category->text_bottom}}</textarea>
 			</div>
 		</details>
  

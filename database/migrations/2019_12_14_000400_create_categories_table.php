@@ -28,8 +28,9 @@ class CreateCategoriesTable extends Migration
 			$table->string('name_seo')->nullable();
             $table->string('h1')->nullable();
             $table->text('intro')->nullable();
+            $table->text('text_global')->nullable();
             $table->text('text')->nullable();
-            
+
             $table->string('bread_name')->nullable();
 
             $table->string('prev_h1')->nullable();
