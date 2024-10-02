@@ -10,18 +10,18 @@ class CreateCategoryCategoriesTable extends Migration
     {
         Schema::create('category_categories', function (Blueprint $table) {
             $table->unsignedBigInteger('category_id');
-            $table->unsignedBigInteger('categories_id');
+            $table->unsignedBigInteger('related_category_id'); // Переименовываем для ясности
 
             // Индексы для ускорения запросов
             $table->index('category_id', 'category_categories_category_idx');
-            $table->index('categories_id', 'category_categories_categories_idx');
+            $table->index('related_category_id', 'category_categories_related_category_idx');
 
             // Внешние ключи с каскадным удалением
             $table->foreign('category_id', 'category_categories_category_fk')->references('id')->on('categories')->onDelete('cascade');
-            $table->foreign('categories_id', 'category_categories_categories_fk')->references('id')->on('categories')->onDelete('cascade');
+            $table->foreign('related_category_id', 'category_categories_related_category_fk')->references('id')->on('categories')->onDelete('cascade');
 
-            // Уникальная пара category_id и categories_id
-            $table->unique(['category_id', 'categories_id']);
+            // Уникальная пара category_id и related_category_id
+            $table->unique(['category_id', 'related_category_id']);
             
             $table->timestamps();
         });
@@ -32,4 +32,3 @@ class CreateCategoryCategoriesTable extends Migration
         Schema::dropIfExists('category_categories');
     }
 }
-

@@ -2,20 +2,21 @@
 
 namespace App\Http\Controllers\ADMIN\xTraits;
 
-use App\Models\{Tag, Group, Faq, Item, Lego};
+use App\Models\{Group,Tag, Lego,Faq, Item,Paper};
 use App\Models\_child\Service;
 
 trait CommonDataTrait
 {
     protected function getCommonData()
     {
-        $tags = Tag::all();
         $groups = Group::all();
+        $tags = Tag::all();
+        $Lego = Lego::orderBy('name')->get();
         $faqs = Faq::all();
         $items = Item::all();
-        $Lego = Lego::orderBy('name')->get();
+        $papers = Paper::all();
         $services = Service::all();
 
-        return compact('tags', 'groups', 'faqs', 'items', 'Lego', 'services');
+        return compact('groups', 'tags', 'Lego', 'faqs', 'items', 'papers', 'services');
     }
 }

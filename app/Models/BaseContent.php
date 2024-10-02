@@ -5,9 +5,142 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Model;
 
 use Carbon\Carbon;
+//
+use App\Models\_child\Service;
 
 class BaseContent extends Model
 {
+
+    // getForeignKey() ---> {имя_модели}_id
+    // В Laravel метод getForeignKey() возвращает имя внешнего ключа (foreign key) для текущей модели в отношениях Eloquent.
+ 
+
+    public static function findBySlug($slug)
+    {
+        return static::whereSlug($slug)->first();
+    }
+ 
+
+
+    // LIB
+    public function serviceCategory() 
+    {
+        return $this->relatedEntity(Category::class, 'category_services_id');
+    }
+    public function serviceDelivery() 
+    {
+        return $this->relatedEntity(Service::class, 'service_delivery_id');
+    }
+    public function paperPayment() 
+    {
+        return $this->relatedEntity(Paper::class, 'paper_payment_id');
+    }
+    public function paperWarranty() 
+    {
+        return $this->relatedEntity(Paper::class, 'paper_warranty_id');
+    }
+                //TODO Улучшение через использование массива конфигураций
+                // Если у тебя есть много однотипных связей, можно пойти ещё дальше и использовать массив для хранения информации о связях, а затем динамически строить методы:
+                // protected $relations = [
+                //     'serviceCategory' => [Category::class, 'category_services_id'],
+                //     'paperPayment' => [Paper::class, 'paper_payment_id'],
+                //     'paperWarranty' => [Paper::class, 'paper_warranty_id'],
+                //     'serviceDelivery' => [Service::class, 'service_delivery_id'],
+                // ];
+                
+                // public function __call($method, $parameters)
+                // {
+                //     if (isset($this->relations[$method])) {
+                //         return $this->relatedEntity($this->relations[$method][0], $this->relations[$method][1]);
+                //     }
+                
+                //     return parent::__call($method, $parameters);
+                // }
+
+    // LVL 4
+    public function pivotPapers() {
+
+        return $this->belongsToMany(
+            Paper::class,
+            $this->getPivotPaperTable(),
+            $this->getForeignKey(),
+            'paper_id'
+        );
+    }
+    public function pivotServices() {
+
+        return $this->belongsToMany(
+            Service::class,
+            $this->getPivotServiceTable(),
+            $this->getForeignKey(),
+            'service_id'
+        );
+    }
+
+    public function pivotItems() {
+
+        return $this->belongsToMany(
+            Item::class,
+            $this->getPivotItemTable(),
+            $this->getForeignKey(),
+            'item_id'
+        );
+    }
+
+
+
+    // LVL 3
+    public function items()
+    {
+        return $this->belongsToMany(
+            Item::class,
+            $this->getItemPivotTable(),
+            $this->getForeignKey(),
+            'item_id'
+        );
+    }
+
+    public function services()
+    {
+        return $this->belongsToMany(
+            Service::class,
+            $this->getServicePivotTable(),
+            $this->getForeignKey(),
+            'service_id'
+        );
+    }
+
+    public function papers() {
+
+        return $this->belongsToMany(
+            Paper::class,
+            $this->getPaperPivotTable(),
+            $this->getForeignKey(),
+            'paper_id'
+        );
+    }
+
+    // LVL 2
+    public function lego()
+    {
+        return $this->belongsToMany(
+            Lego::class,
+            $this->getLegoPivotTable(),
+            $this->getForeignKey(),
+            'lego_id'
+        )->orderBy('order', 'asc');
+    }
+
+    public function details()
+    {
+        return $this->belongsToMany(
+            Detail::class,
+            $this->getDetailPivotTable(),
+            $this->getForeignKey(),
+            'detail_id'
+        );
+    }
+
 
     public function faqs()
     {
@@ -19,26 +152,12 @@ class BaseContent extends Model
         );
     }
 
-    public function items()
-    {
-        return $this->belongsToMany(
-            Item::class,
-            $this->getItemPivotTable(),
-            $this->getForeignKey(),
-            'item_id'
-        );
-    }
 
-    public function lego()
-    {
-        return $this->belongsToMany(
-            Lego::class,
-            $this->getLegoPivotTable(),
-            $this->getForeignKey(),
-            'lego_id'
-        )->orderBy('order', 'asc');
-    }
+    
 
+
+
+    // LVL 1
     public function tags()
     {
         return $this->belongsToMany(
@@ -103,6 +222,7 @@ class BaseContent extends Model
         );
     }
 
+
     //
     // Аксессор для получения даты обновления как объекта Carbon
 	public function getDateUpdateAsCarbonAttribute(){
@@ -138,5 +258,17 @@ class BaseContent extends Model
     // {
     //     return 'id';
     // }
+
+
+    // универсальный метод для построения отношения belongsTo
+    public function relatedEntity($relatedClass, $foreignKey)
+    {
+        return $this->belongsTo(
+            $relatedClass,
+            $foreignKey,
+            'id' // Владеющий ключ остается неизменным
+        );
+    }
+
  
 }
