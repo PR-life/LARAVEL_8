@@ -74,6 +74,11 @@ class Category extends BaseContent
     ////
     ////
 
+    public function products() {
+        return $this->hasMany(Product::class)->orderBy('order', 'asc');
+    }
+
+
     public function categoryServices() {
         return $this->belongsTo(
             Category::class,

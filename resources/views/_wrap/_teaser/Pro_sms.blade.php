@@ -1,4 +1,4 @@
-<div class="Teaser / Void -slim / space-hL Edge">
+<div class="Teaser / Void void-slim / space-hL Edge">
 
 	<div class="_edge / Edge">
 		@include('_wrap.Preamble.Teaser.sms', ['Var' => $Var, 'link' => route($routeName, $Var->id)])

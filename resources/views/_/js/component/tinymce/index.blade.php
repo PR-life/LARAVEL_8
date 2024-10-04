@@ -101,7 +101,9 @@
         });
       },
 
-      extended_valid_elements: 'b,strong,i[*], summary[*], blockquote[*]',  // Разрешаем все атрибуты для i, summary, blockquote
+      extended_valid_elements: 'svg[*],b,strong,i[*], summary[*], blockquote[*]',  // Разрешаем все атрибуты для i, summary, blockquote
+      // extended_valid_elements: 'svg[*],use[*],a[*],strong[*],p[class],svg[class],use[xlink|href],a[class|href|target],b,strong,i[*], summary[*], blockquote[*]',
+
 
     });
  

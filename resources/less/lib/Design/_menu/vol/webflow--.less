@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.menu.-tag.vol-webflow {
+		--fontMenuTag:clamp(var(--rem-p),2vw,24px);
+		--x-menu-margin-li:1.25rem;
+		--x-menu-padding-li--left:0;
+
+	}
+}
+@media screen and (max-width: @w-menu-2) {
+	.menu.-tag.vol-webflow {
+		--fontMenuTag:18px;
+		--x-menu-margin-li:0;
+		--x-menu-padding-li--left:0;
+	}
+}
+
