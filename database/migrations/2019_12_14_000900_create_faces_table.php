@@ -48,7 +48,6 @@ class CreateFacesTable extends Migration
             $table->string('face_par_2')->nullable();
             $table->string('face_par_3')->nullable();
 
-            $table->text('knot_1')->nullable();
             $table->text('note')->nullable();
 
             //

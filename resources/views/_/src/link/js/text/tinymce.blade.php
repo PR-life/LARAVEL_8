@@ -10,8 +10,8 @@
 
 
 {{-- kyutinen@gmail.com --}}
-<script src="https://cdn.tiny.cloud/1/36d4nsh122to6pnw06sup1q9zed9yjsl9vlwhqksdrpzhxqb/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+{{-- <script src="https://cdn.tiny.cloud/1/36d4nsh122to6pnw06sup1q9zed9yjsl9vlwhqksdrpzhxqb/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> --}}
 
 {{-- prlife.advertising@gmail.com --}}
-{{-- <script src="https://cdn.tiny.cloud/1/l3gfn7v6sb1j8h4nhnn07je4ruecnr8lkmsg4lbkyvq37o5p/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script> --}}
+<script src="https://cdn.tiny.cloud/1/l3gfn7v6sb1j8h4nhnn07je4ruecnr8lkmsg4lbkyvq37o5p/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
 @endisset

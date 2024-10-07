@@ -53,6 +53,7 @@ $arr_17062153 = [
  
 @endcomponent
 
+
  
 @component('_wrap.__.summary')
 @slot('icoCloseName', 'closeRoll')
@@ -66,4 +67,25 @@ $arr_17062153 = [
         </dd>
     </dl>
  
+@endcomponent
+
+
+@component('_wrap.__.summary')
+@slot('icoCloseName', 'closeRoll')
+@slot('id', 'plus')
+@slot('name', 'Plus +')
+@slot('cssContent', 'void')
+
+    <div class="paragraph net"></div>
+
+    <div class="_shell x-hr Form -S / vol-Abs net">
+        <input id="price_h" type="text" name="price_h" value="{{$product->price_h}}" placeholder="...">
+        <label class="Abs familySamolet" for="price_h"><svg><use xlink:href="#svg-plus"></use></svg>price_h</label>
+    </div>
+
+
+    <div class="_shell">
+        <textarea class="content-xs" name="price_p" placeholder="price_p..." style="min-height: 140px">{{$product->price_p}}</textarea>
+    </div>
+
 @endcomponent

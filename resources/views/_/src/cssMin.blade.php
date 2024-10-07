@@ -150,6 +150,9 @@ svg.-auto{
 .floatR{
 	float:right
 }
+.clear {
+	clear: both;
+}
 .lie>*,.inline{
 	display:inline-block;
 	vertical-align:top

@@ -3,7 +3,7 @@
         <span class="_name / flex cI / b500">{!!$name!!}</span>
         <span class="Ico -XS">@svg('arrowNote')</span>
     </span>
-    <span class="_text / none on">
+    <span class="_text Family-OpenSans / none on">
         {!!$slot!!}
     </span>
 </li>

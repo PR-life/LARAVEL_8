@@ -87,7 +87,7 @@ class CreateItemsTable extends Migration
 
 
 			//
-			$table->text('knot_1')->nullable();
+ 
 
 
 			$table->unsignedInteger('order')->default(50);

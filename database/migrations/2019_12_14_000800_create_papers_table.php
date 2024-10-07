@@ -65,7 +65,7 @@ class CreatePapersTable extends Migration
             $table->string('price')->nullable();
 
             //
-            $table->string('knot_1')->nullable();
+            $table->string('note')->nullable();
 
             //
             $table->unsignedInteger('mafia')->nullable();

@@ -29,8 +29,10 @@ class CreateItemsTable extends Migration
             $table->string('h2')->nullable();
             $table->text('intro')->nullable();
             $table->text('article')->nullable();
-			$table->text('details_1')->nullable();
-			$table->text('details_2')->nullable();
+			// $table->text('details_1')->nullable();
+			// $table->text('details_2')->nullable();
+            $table->text('text_global')->nullable();
+            $table->text('text_global_supporting')->nullable();
             
 			// vars
 			$table->string('price')->nullable();
@@ -48,7 +50,7 @@ class CreateItemsTable extends Migration
 
 
 			//
-			$table->text('knot_1')->nullable();
+			$table->text('note')->nullable();
 
 
             //

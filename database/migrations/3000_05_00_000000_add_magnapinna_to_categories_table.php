@@ -10,7 +10,7 @@ class AddMagnapinnaToCategoriesTable extends Migration
      public function up()
      {
          Schema::table('categories', function (Blueprint $table) {
-             $table->after('knot_1', function ($table) {
+             $table->after('note', function ($table) {
 
                 $table->unsignedBigInteger('category_services_id')->nullable();
                 $table->foreign('category_services_id')->references('id')->on('categories');

@@ -53,7 +53,7 @@ class CreatePapersEnTable extends Migration
             $table->string('demon_par_2')->nullable();
             $table->string('demon_par_3')->nullable();
 
-            $table->string('knot_1')->nullable();
+ 
 
 			$table->unsignedInteger('order')->default(50);
             $table->unsignedInteger('status')->default(1);

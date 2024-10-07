@@ -57,6 +57,12 @@
 			</div>
 		</details>
 		<details>
+			<summary><span>text_global_supporting</span><i></i></summary>
+			<div class="_shell Article aura / Note -lite">
+				<textarea name="text_global_supporting" placeholder='текст...'>{{$category->text_global_supporting}}</textarea>
+			</div>
+		</details>
+		<details>
 			<summary><span>text</span><i></i></summary>
 			<div class="_shell Article aura / Note -lite">
 				<textarea id="tinymce_3" name="text" placeholder='текст...'>{{$category->text}}</textarea>
@@ -75,18 +81,17 @@
 			</div>
 		</details>
  
-		<details>
-			<summary><span>knot_1</span><i></i></summary>
-			<div class="_shell Article aura / Note -lite">
-				<textarea id="tinymce_lite_2" name="knot_1" placeholder='текст...'>{{$category->knot_1}}</textarea>
-			</div>
-		</details>
 	</div>
 
 
+	<div class="paragraph"></div>
+	@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Note'])
+	<div class="paragraph"></div>
+	<div class="_shell Article aura / Note -lite">
+		<textarea id="tinymce_lite_2" name="knonotet_1" placeholder='текст...'>{{$category->note}}</textarea>
+	</div>
 
-
-
+ 
 	
 
 </div>

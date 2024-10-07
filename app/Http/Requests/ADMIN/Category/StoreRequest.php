@@ -30,7 +30,6 @@ class StoreRequest extends BaseRelationsRequest
             'name_seo' => 'nullable|string',
             'h1' => 'nullable|string',
             'intro' => 'nullable|string',
-            'text_global' => 'nullable|string',
             'text' => 'nullable|string',
 
             //
@@ -50,9 +49,10 @@ class StoreRequest extends BaseRelationsRequest
             'image_prev' => 'nullable|image|mimes:jpeg,png,jpg,webp,avif|max:2048',
  
 			//
+            'text_global' => 'nullable|string',
+            'text_global_supporting' => 'nullable|string',
             'text_top' => 'nullable|string',
             'text_bottom' => 'nullable|string',
-            'string_1' => 'nullable|string',
 
             //
 			'en_name' => 'nullable|string',

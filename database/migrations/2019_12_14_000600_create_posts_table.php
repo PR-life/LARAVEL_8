@@ -45,7 +45,7 @@ class CreatePostsTable extends Migration
 			// $table->string('prev_image')->nullable();
 			// $table->string('main_image')->nullable();
 
-			$table->text('knot_1')->nullable();
+            $table->text('note')->nullable();
 
             //
             $table->unsignedBigInteger('post_id')->nullable();

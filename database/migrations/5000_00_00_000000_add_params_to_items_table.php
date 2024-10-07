@@ -10,7 +10,7 @@ class AddParamsToItemsTable extends Migration
      public function up()
      {
          Schema::table('items', function (Blueprint $table) {
-             $table->after('knot_1', function ($table) {
+             $table->after('note', function ($table) {
                 $table->foreignId('style_id')
                     ->nullable()
                     ->references('id')

@@ -29,7 +29,7 @@ class CreateFaqsTable extends Migration
 
             $table->string('route_name')->nullable();
 
-			$table->text('knot_1')->nullable();
+            $table->text('note')->nullable();
 
 
             //

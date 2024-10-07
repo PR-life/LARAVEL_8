@@ -70,15 +70,15 @@
 
 <div class="Details transparent">
 	<details>
-		<summary><span>details_1</span><i></i></summary>
+		<summary><span>text_global</span><i></i></summary>
 		<div class="_shell Article aura / Note -lite">
-			<textarea id="tinymce_2" name="details_1" placeholder='текст...'>{{$product->details_1}}</textarea>
+			<textarea id="tinymce_2" name="text_global" placeholder='текст...'>{{$product->text_global}}</textarea>
 		</div>
 	</details>
 	<details>
-		<summary><span>details_2</span><i></i></summary>
+		<summary><span>text_global_supporting</span><i></i></summary>
 		<div class="_shell Article aura / Note -lite">
-			<textarea id="tinymce_3" name="details_2" placeholder='текст...'>{{$product->details_2}}</textarea>
+			<textarea id="tinymce_3" name="text_global_supporting" placeholder='текст...'>{{$product->text_global_supporting}}</textarea>
 		</div>
 	</details>
 </div>
@@ -92,10 +92,10 @@
 
 
 
-@include('zADMIN._wrap.text.nameTextarea', ['name' => 'knot_1'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Note'])
 <div class="paragraph"></div>
 <div class="_shell Article aura / Note -lite">
-	<textarea id="tinymce_lite_2" name="knot_1" placeholder='knot...'>{{$product->knot_1}}</textarea>
+	<textarea id="tinymce_lite_2" name="note" placeholder='note...'>{{$product->note}}</textarea>
 </div>
 @endif
  
