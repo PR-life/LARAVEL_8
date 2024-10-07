@@ -21,7 +21,7 @@
                 'css03091324' => $_product->product_id ? ' x-children' : ' x-solo'])
 
             @if($_product->childrenProducts->isNotEmpty())
-                <div class="children -lvl_{{ $_level ?? 1 }} / round">
+                <div class="children -lvl_{{ $_level ?? 1 }} {{$_product->product_id ? ' x-children' : ' x-solo'}} / round">
                     @include('zADMIN._repo.product-tree', ['Products' => $_product->childrenProducts, '_level' => ($_level ?? 1) + 1])
                 </div>
             @endif

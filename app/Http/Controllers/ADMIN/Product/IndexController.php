@@ -47,7 +47,7 @@ class IndexController extends BaseController
 			// }
 
 	   } else {
-			$products = Product::whereNull('product_id')->with('childrenProducts')->get();
+			$products = Product::whereNull('product_id')->with('childrenProducts')->orderBy('created_at', 'DESC')->get();
 	   }
 
 

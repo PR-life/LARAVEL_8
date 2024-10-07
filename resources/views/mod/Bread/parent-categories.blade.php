@@ -2,7 +2,7 @@
     @if($Var->parentCategory->slug != 'tehnicheskie-gazy-i-oborydovanie')
         @include('mod.Bread.parent-categories', ['Var' => $Var->parentCategory])
     @else
-        <li>
+        <li class="x-catalog">
             <a href="/catalog">Каталог 
                 {{-- 22 ({{$Var->name}}) --}}
             </a>

@@ -5,7 +5,7 @@
 @push('addBread')
     <li>
         <span>
-            <span class="content-xs">Связи</span>
+            <span class="content-xs">Категории</span>
         </span>
     </li>
 @endpush

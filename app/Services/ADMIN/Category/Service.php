@@ -5,9 +5,7 @@ namespace App\Services\ADMIN\Category;
 use Exception;
 use Illuminate\Support\Facades\DB;
 use App\Services\ADMIN\BaseService;
-//
-use Illuminate\Support\Facades\Storage;
-use Intervention\Image\Facades\Image;
+
 
 class Service extends BaseService{
 
@@ -15,24 +13,35 @@ class Service extends BaseService{
 
 		try {
 			DB::beginTransaction();
-			// dd($param);
-
-			// Проверка, нужно ли удалить изображение
-			if (isset($param['delete_image']) && $param['delete_image'] == '1') {
-				// Удаляем все связанные изображения
-				$this->deleteCategoryImages($category);
-	
-				// Обнуляем поле image
-				$param['image'] = null;
-			}
-			unset($param['delete_image']);
 
 
-			// Проверка и обработка нового изображения
-			if (isset($param['image']) && $param['image'] instanceof \Illuminate\Http\UploadedFile) {
-				$this->deleteCategoryImages($category);  // Удаляем старое изображение
-				$param['image'] = $this->processCategoryImages($category, $param['image']);  // Обрабатываем новое изображение
-			}
+            // Проверка на удаление изображения
+            if (isset($param['delete_image']) && $param['delete_image'] == '1') {
+				// Удаляем старое изображение
+                $this->deleteImages($category->image, 'category', $category->id);
+                $param['image'] = null;
+            }
+            unset($param['delete_image']);
+
+            // Обработка нового изображения
+            if (isset($param['image']) && $param['image'] instanceof \Illuminate\Http\UploadedFile) {
+				// Сохраняем исходник
+				$image = $param['image'];
+				$originalFilename = $category->slug . '.' . $image->getClientOriginalExtension();
+				$storagePath = public_path('storage/category_images/bd/');
+				$param['image_original'] = $originalFilename;
+				$image->move($storagePath, $originalFilename);
+				// Путь к сохранённому исходному файлу
+				$savedOriginalPath = $storagePath . $originalFilename;
+				
+				// Удаляем старое изображение
+                $this->deleteImages($category->image, 'category', $category->id);
+                // Обрабатываем и сохраняем новое изображение
+				$param['image'] = $this->processImages($savedOriginalPath, $category->id, 'category');
+            }
+
+
+			// dd($param['image']);
 
 
 			if($param['canonical'] == "/") unset($param['canonical']);
@@ -102,55 +111,55 @@ class Service extends BaseService{
 
 	//
 	//
-	private function deleteCategoryImages($category) {
-		if ($category->image) {
-			// Удаляем основное изображение
-			Storage::disk('public')->delete($category->image);
+	// private function deleteCategoryImages($category) {
+	// 	if ($category->image) {
+	// 		// Удаляем основное изображение
+	// 		Storage::disk('public')->delete($category->image);
 	
-			// Удаляем файл иконки (100x100)
-			$icon100Filename = 'ico_100x100_' . $category->id . '.png';
-			Storage::disk('public')->delete('ico/category/' . $icon100Filename);
+	// 		// Удаляем файл иконки (100x100)
+	// 		$icon100Filename = 'ico_100x100_' . $category->id . '.png';
+	// 		Storage::disk('public')->delete('ico/category/' . $icon100Filename);
 	
-			// Удаляем файл иконки (200x200)
-			$icon200Filename = 'ico_200x200_' . $category->id . '.png';
-			Storage::disk('public')->delete('ico/category/' . $icon200Filename);
+	// 		// Удаляем файл иконки (200x200)
+	// 		$icon200Filename = 'ico_200x200_' . $category->id . '.png';
+	// 		Storage::disk('public')->delete('ico/category/' . $icon200Filename);
 	
-			// Удаляем файл в формате PNG
-			$pngFilename = 'category_images/' . $category->slug . '.png';
-			Storage::disk('public')->delete($pngFilename);
-		}
-	}
-	private function processCategoryImages($category, $image) {
-		// Преобразуем изображение в PNG и сохраняем
-		$filename = $this->saveImage($image, $category);
+	// 		// Удаляем файл в формате PNG
+	// 		$pngFilename = 'category_images/' . $category->slug . '.png';
+	// 		Storage::disk('public')->delete($pngFilename);
+	// 	}
+	// }
+	// private function processCategoryImages($category, $image) {
+	// 	// Преобразуем изображение в PNG и сохраняем
+	// 	$filename = $this->saveImage($image, $category);
 	
-		// Создание иконок
-		$this->createCategoryIcons($image, $category->id);
+	// 	// Создание иконок
+	// 	$this->createCategoryIcons($image, $category->id);
 	
-		return $filename;
-	}
+	// 	return $filename;
+	// }
 	
-	private function saveImage($image, $category) {
-		// Генерация имени файла и сохранение изображения в формате PNG
-		$filename = time() . '_' . $category->id . '.png';
-		$imageResized = Image::make($image)->encode('png');
-		$imageResized->save(public_path('storage/category_images/' . $filename));
+	// private function saveImage($image, $category) {
+	// 	// Генерация имени файла и сохранение изображения в формате PNG
+	// 	$filename = time() . '_' . $category->id . '.png';
+	// 	$imageResized = Image::make($image)->encode('png');
+	// 	$imageResized->save(public_path('storage/category_images/' . $filename));
 	
-		return $filename;
-	}
-	private function createCategoryIcons($image, $categoryId) {
-		$sizes = [100, 200];
-		foreach ($sizes as $size) {
-			$this->createCategoryIcon($image, $categoryId, $size);
-		}
-	}
-	private function createCategoryIcon($image, $categoryId, $size) {
-		// Генерация имени файла для иконки
-		$iconFilename = 'ico_' . $size . 'x' . $size . '_' . $categoryId . '.png';
+	// 	return $filename;
+	// }
+	// private function createCategoryIcons($image, $categoryId) {
+	// 	$sizes = [100, 200];
+	// 	foreach ($sizes as $size) {
+	// 		$this->createCategoryIcon($image, $categoryId, $size);
+	// 	}
+	// }
+	// private function createCategoryIcon($image, $categoryId, $size) {
+	// 	// Генерация имени файла для иконки
+	// 	$iconFilename = 'ico_' . $size . 'x' . $size . '_' . $categoryId . '.png';
 		
-		// Изменение размера изображения и его сохранение
-		$iconImage = Image::make($image)->resize($size, $size)->encode('png');
-		$iconImage->save(public_path('storage/ico/category/' . $iconFilename));
-	}
+	// 	// Изменение размера изображения и его сохранение
+	// 	$iconImage = Image::make($image)->resize($size, $size)->encode('png');
+	// 	$iconImage->save(public_path('storage/ico/category/' . $iconFilename));
+	// }
 
 }

@@ -18,81 +18,113 @@ class Service extends BaseService {
 		try {
 			DB::beginTransaction();
 
+            // Проверка, нужно ли удалить изображение
+            if (isset($param['delete_image']) && $param['delete_image'] == '1') {
+                // Удаляем старое изображение
+                $this->deleteImages($product->image, 'product', $product->id);
+                $param['image'] = null;
+            }
+            unset($param['delete_image']);
 
-			// Проверка, нужно ли удалить изображение
-			if (isset($param['delete_image']) && $param['delete_image'] == '1') {
-				// Удаляем текущее изображение, если оно существует
-				if ($product->image) {
-					// Удаляем основное изображение
-					Storage::disk('public')->delete($product->image);
-
-					// Удаляем файл иконки
-					$iconFilename = 'ico_100x100_' . $product->id . '.png';
-					Storage::disk('public')->delete('ico/product/' . $iconFilename);
-
-					// Удаляем файл иконки
-					$iconFilename = 'ico_200x200_' . $product->id . '.png';
-					Storage::disk('public')->delete('ico/product/' . $iconFilename);
-
-					// Удаляем файл в формате PNG (если используется)
-					$pngFilename = 'product_images/' . $product->slug . '.png';
-					Storage::disk('public')->delete($pngFilename);
-
-					// Обнуляем поле image
-					$param['image'] = null;
-				}
-			}
-			unset($param['delete_image']);
-
-
-            // Проверка и обработка изображения
+            // Проверка и обработка нового изображения
             if (isset($param['image']) && $param['image'] instanceof \Illuminate\Http\UploadedFile) {
 
 
-				// Удаляем старое изображение, если оно существует
-				if ($product->image) {
-					Storage::disk('public')->delete($product->image);
-				}
-
-				// Загружаем новое изображение
-				$image = $param['image'];
-
 				// Сохраняем исходник
+				$image = $param['image'];
 				$originalFilename = $product->slug . '.' . $image->getClientOriginalExtension();
 				$storagePath = public_path('storage/product_images/bd/');
 				$param['image_original'] = $originalFilename;
-
 				$image->move($storagePath, $originalFilename);
-
 				// Путь к сохранённому исходному файлу
 				$savedOriginalPath = $storagePath . $originalFilename;
 
-				// Повторно загружаем изображение для дальнейшей обработки
-				$imageResized = Image::make($savedOriginalPath)->encode('png'); // Преобразуем в PNG
+				
+                // Удаляем старое изображение
+                $this->deleteImages($product->image, 'product', $product->id);
+                // Обрабатываем и сохраняем новое изображение
+                $param['image'] = $this->processImages($savedOriginalPath, $product->id, 'product');
 
-				// Генерируем имя файла для сохранения в формате PNG
-				$filename = time() . '_' . $product->id . '.png';
-				$imageResized->save(public_path('storage/product_images/' . $filename));
-
-				// Создание превью изображения (300x300) и его сохранение
-				$previewImage = Image::make($savedOriginalPath)->resize(300, 300)->encode('png');
-				$previewImage->save(public_path('storage/product_images/teaser/' . $filename));
-
-
-
-				// Создание иконки (100x100) и её сохранение
-				$iconFilename = 'ico_100x100_' . $product->id . '.png';
-				$iconImage = Image::make($savedOriginalPath)->resize(100, 100)->encode('png');
-				$iconImage->save(public_path('storage/ico/product/' . $iconFilename));
-
-				// Создание иконки (200x200) и её сохранение
-				$iconFilename = 'ico_200x200_' . $product->id . '.png';
-				$iconImage = Image::make($savedOriginalPath)->resize(200, 200)->encode('png');
-				$iconImage->save(public_path('storage/ico/product/' . $iconFilename));
-
-				// Сохраняем путь к новому изображению в параметрах
-				$param['image'] = $filename;
             }
+
+
+
+			
+
+			// // Проверка, нужно ли удалить изображение
+			// if (isset($param['delete_image']) && $param['delete_image'] == '1') {
+			// 	// Удаляем текущее изображение, если оно существует
+			// 	if ($product->image) {
+			// 		// Удаляем основное изображение
+			// 		Storage::disk('public')->delete($product->image);
+
+			// 		// Удаляем файл иконки
+			// 		$iconFilename = 'ico_100x100_' . $product->id . '.png';
+			// 		Storage::disk('public')->delete('ico/product/' . $iconFilename);
+
+			// 		// Удаляем файл иконки
+			// 		$iconFilename = 'ico_200x200_' . $product->id . '.png';
+			// 		Storage::disk('public')->delete('ico/product/' . $iconFilename);
+
+			// 		// Удаляем файл в формате PNG (если используется)
+			// 		$pngFilename = 'product_images/' . $product->slug . '.png';
+			// 		Storage::disk('public')->delete($pngFilename);
+
+			// 		// Обнуляем поле image
+			// 		$param['image'] = null;
+			// 	}
+			// }
+			// unset($param['delete_image']);
+
+
+            // // Проверка и обработка изображения
+            // if (isset($param['image']) && $param['image'] instanceof \Illuminate\Http\UploadedFile) {
+
+
+			// 	// Удаляем старое изображение, если оно существует
+			// 	if ($product->image) {
+			// 		Storage::disk('public')->delete($product->image);
+			// 	}
+
+			// 	// Загружаем новое изображение
+			// 	$image = $param['image'];
+
+			// 	// Сохраняем исходник
+			// 	$originalFilename = $product->slug . '.' . $image->getClientOriginalExtension();
+			// 	$storagePath = public_path('storage/product_images/bd/');
+			// 	$param['image_original'] = $originalFilename;
+
+			// 	$image->move($storagePath, $originalFilename);
+
+			// 	// Путь к сохранённому исходному файлу
+			// 	$savedOriginalPath = $storagePath . $originalFilename;
+
+			// 	// Повторно загружаем изображение для дальнейшей обработки
+			// 	$imageResized = Image::make($savedOriginalPath)->encode('png'); // Преобразуем в PNG
+
+			// 	// Генерируем имя файла для сохранения в формате PNG
+			// 	$filename = time() . '_' . $product->id . '.png';
+			// 	$imageResized->save(public_path('storage/product_images/' . $filename));
+
+			// 	// Создание превью изображения (300x300) и его сохранение
+			// 	$previewImage = Image::make($savedOriginalPath)->resize(300, 300)->encode('png');
+			// 	$previewImage->save(public_path('storage/product_images/teaser/' . $filename));
+
+
+
+			// 	// Создание иконки (100x100) и её сохранение
+			// 	$iconFilename = 'ico_100x100_' . $product->id . '.png';
+			// 	$iconImage = Image::make($savedOriginalPath)->resize(100, 100)->encode('png');
+			// 	$iconImage->save(public_path('storage/ico/product/' . $iconFilename));
+
+			// 	// Создание иконки (200x200) и её сохранение
+			// 	$iconFilename = 'ico_200x200_' . $product->id . '.png';
+			// 	$iconImage = Image::make($savedOriginalPath)->resize(200, 200)->encode('png');
+			// 	$iconImage->save(public_path('storage/ico/product/' . $iconFilename));
+
+			// 	// Сохраняем путь к новому изображению в параметрах
+			// 	$param['image'] = $filename;
+            // }
 
 
 
