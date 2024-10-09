@@ -329,11 +329,15 @@
 	.Roll_mbl.vol-table {
 		> table {
 			tr > *:first-child {
-				min-width: clamp(180px,calc(var(--w)*.55),220px);
+				min-width: clamp(180px,calc(var(--w)*.5),220px);
+				padding-left: 10px;
+				padding-right: 10px;
 			}
 		}
 	}
 
+
+	.Roll_mbl.Product,
 	.Roll_mbl.vol-Wagon {
 		> *{
 			min-width: clamp(180px,calc(var(--w)*.6),220px);

@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+
+.Ef.-S {
+	--x-Ef-hMin: 4rem;
+}
+
+.Ef.-M {
+	--x-Ef-hMin: 7rem;
+}
+
+.Ef {
+	--x-Ef-hMin: 6rem;
+	--x-Ef-marginAll: 2px;
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+    /* Содержимое медиазапроса */
+}
+
+@media screen and (max-width: @w-menu-2) {
+    .Ef.Roll_mbl {
+        --x-Ef-hMin:140px;
+
+        > ._ef {
+            // min-width: 200px;
+            min-width: clamp(160px,calc(var(--w)*.4),200px);
+        }
+    }
+}
+//
+.Ef {
+
+	.Ef-height {
+		height: var(--x-Ef-hMin);
+	}
+
+}

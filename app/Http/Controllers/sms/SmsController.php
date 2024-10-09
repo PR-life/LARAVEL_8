@@ -9,6 +9,7 @@ use App\Http\Requests\Sms\StoreRequest;
 use App\Http\Requests\Sms\PhoneRequest;
 use App\Http\Requests\Sms\PhoneNameRequest;
 use App\Http\Requests\Sms\AskRequest;
+use App\Http\Requests\Sms\OrderRequest;
 
 //
 use App\Models\Post;
@@ -19,6 +20,29 @@ use App\Models\En\SmsEn;
 class SmsController extends BaseController
 {
 
+
+     
+    public function storeOrder(OrderRequest $request) {
+
+        // dd($request);
+        $param = $request->validated();
+        $reachGoalFromController = $param['reachgoal_id'];
+        // dd($param);
+        
+        try {
+            $sms = $this->service->create($param);
+
+            return view('zPAGE.Thanks', compact('sms','reachGoalFromController'));
+
+        } catch (Exception $e) {
+            dd($e);
+            return redirect()->back()->with([
+                'status' => 'danger',
+                'message' => $e->getMessage(),
+            ]);
+        }
+    }
+    //
  
     public function storeAsk(AskRequest $request) {
 

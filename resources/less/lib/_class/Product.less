@@ -11,7 +11,7 @@
 
 .Product.vol-popular {
     --Product-bg: #f3f3f3;
-    --Product-bg-param: #fff;
+    --Product-bg-param: rgba(255, 255, 255,.9);
 }
 .Product.vol-index {
     --Product-bg: #fff;
@@ -30,8 +30,10 @@
 
     .x-measure {
         .x-long {
-            padding-left: 7px;
-            padding-right: 7px;
+            // padding-left: 7px;
+            // padding-right: 7px;
+            min-width: clamp(35px,7vw,50px);
+            max-width: clamp(35px,7vw,50px);
         }
     }
 

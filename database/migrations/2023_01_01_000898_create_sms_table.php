@@ -6,11 +6,7 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateSmsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+
     public function up()
     {
         Schema::create('sms', function (Blueprint $table) {
@@ -56,32 +52,57 @@ class CreateSmsTable extends Migration
             $table->unsignedInteger('go_mod_talk')->default('0');
 
             //
+            // $table->foreignId('group_id')
+            //     ->nullable()
+            //     ->references('id')
+            //     ->on('groups');
+
             $table->foreignId('group_id')
                 ->nullable()
-                ->references('id')
-                ->on('groups');
+                ->constrained('groups')
+                ->onDelete('set null');
+
+            // $table->foreignId('tag_id')
+            //     ->nullable()
+            //     ->references('id')
+            //     ->on('tags');
 
             $table->foreignId('tag_id')
                 ->nullable()
-                ->references('id')
-                ->on('tags');
+                ->constrained('tags')
+                ->onDelete('set null');
 
-            $table->unsignedBigInteger('category_id')->nullable();          
-            $table->foreign('category_id', 'sms_category_fk')->on('categories')->references('id');
+            // $table->unsignedBigInteger('category_id')->nullable();          
+            // $table->foreign('category_id', 'sms_category_fk')->on('categories')->references('id');
+            $table->foreignId('category_id')
+                ->nullable()
+                ->constrained('categories')
+                ->onDelete('set null');
 
-			$table->unsignedBigInteger('landing_id')->nullable();          
-            $table->foreign('landing_id')->references('id')->on('landings');
+            $table->foreignId('item_id')
+                ->nullable()
+                ->constrained('items')
+                ->onDelete('set null');
 
+            $table->foreignId('product_id')
+                ->nullable()
+                ->constrained('products')
+                ->onDelete('set null');
+
+            $table->foreignId('landing_id')
+                ->nullable()
+                ->constrained('landings')
+                ->onDelete('set null');
             //
             $table->unsignedInteger('mafia')->nullable();
 
-			$table->integer('views')->default('1');
 			$table->unsignedInteger('order')->default(50);
             $table->unsignedInteger('status')->default(1);
+			$table->integer('views')->default(1);
 
             $table->unsignedInteger('pin')->nullable();
-            $table->unsignedInteger('featured')->default('0');
-            $table->unsignedInteger('published')->default('0');
+            $table->unsignedInteger('featured')->default(1);
+            $table->unsignedInteger('published')->default(0);
 			
             $table->timestamps();
 			$table->softDeletes();

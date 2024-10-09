@@ -7,9 +7,9 @@
 #Milk > .Fix.on {
 	top: 0;
 	left: calc( var(--x-milk-left) + var(--Aside-space) * 2.5 );
-
-	// left: var(--x-milk-left);
 }
+
+
 
 #Milk {
 	--x-milk-left: var(--Aside);
@@ -116,7 +116,13 @@
 	.FIX {
 		--FIX-edge:1rem;
 	}
-
+	
+	#Milk > .FIX.On,
+	#Milk > .FIX.on {
+		.Form {
+			min-height: calc(var(--h)*.4);
+		}
+	}
 	// .FIX.on > .fix {
 	// 	justify-content: center;
 	// 	align-items: flex-end;

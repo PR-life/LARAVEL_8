@@ -5,11 +5,15 @@
         <div class="_name {{$cssName ?? 'content-s'}}"><span class="noEvents slctn">{!!$name!!}</span></div>
     </div>
 
-    <div class="{{$cssWrap ?? 'space-s'}} _open" data-stopclick>
-        {{-- <div class="paragraph-s"></div> --}}
-        <div class="_content {{$cssContent ?? 'space round-s / void-s'}}">
-            {!!$slot!!}
+    <div class="_open" data-stopclick>
+        <div class="{{$cssWrap ?? 'space'}}">
+            {{-- <div class="paragraph-s"></div> --}}
+            <div class="_content {{$cssContent ?? 'void-s'}}">
+                {!!$slot!!}
+            </div>
+        </div>
+        <div data-stopclick>
+            {!!$plus ?? ''!!}
         </div>
     </div>
-
 </div>
