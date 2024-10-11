@@ -3,46 +3,45 @@
 namespace App\Http\Controllers\sms;
 
 use Exception;
-
-use Illuminate\Http\Request;
-use App\Http\Requests\Sms\StoreRequest;
+use Illuminate\Support\Facades\Log;
+// use Illuminate\Http\Request;
+//
 use App\Http\Requests\Sms\PhoneRequest;
 use App\Http\Requests\Sms\PhoneNameRequest;
 use App\Http\Requests\Sms\AskRequest;
 use App\Http\Requests\Sms\OrderRequest;
+// use App\Http\Requests\Sms\StoreRequest;
 
 //
 use App\Models\Post;
-use App\Models\Sms;
-use App\Models\En\SmsEn;
+// use App\Models\Sms;
+// use App\Models\En\SmsEn;
 
 
 class SmsController extends BaseController
 {
 
 
-     
     public function storeOrder(OrderRequest $request) {
 
         // dd($request);
-        $param = $request->validated();
-        $reachGoalFromController = $param['reachgoal_id'];
-        // dd($param);
+        $validatedData = $request->validated();
+        $reachGoalFromController = $validatedData['reachgoal_id'] ?? 'error_11101646';
+        // dd($validatedData);
         
         try {
-            $sms = $this->service->create($param);
+            $sms = $this->service->create($validatedData);
 
-            return view('zPAGE.Thanks', compact('sms','reachGoalFromController'));
+            return view('zPAGE.vol.Thanks.index', compact('sms','reachGoalFromController'));
 
         } catch (Exception $e) {
-            dd($e);
+            Log::error('Ошибка при создании SMS (storeOrder): ' . $e->getMessage());
             return redirect()->back()->with([
                 'status' => 'danger',
                 'message' => $e->getMessage(),
             ]);
         }
     }
-    //
  
     public function storeAsk(AskRequest $request) {
 

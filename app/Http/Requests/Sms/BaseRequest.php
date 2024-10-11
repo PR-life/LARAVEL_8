@@ -41,9 +41,13 @@ class BaseRequest extends FormRequest
             'type'=>'nullable|string',
             'label'=>'nullable|string',
 
-            'id_item'=>'nullable|string',
-            'from_page'=>'nullable|string',
             'reachgoal_id'=>'nullable|string',
+            'from_page'=>'nullable|string',
+
+            'product_id'=>'nullable|integer',
+            'item_id'=>'nullable|integer',
+            'landing_id'=>'nullable|integer',
+
 
 			//
             'title'=>'nullable|string',

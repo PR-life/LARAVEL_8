@@ -10,24 +10,20 @@ $arrCSS = [
     'preloadCss' => false,
     'linkCssMin' => '/css/minAdmin.css',
     'linkCssApp' => '/css/appAdmin.css',
-    // 'cssMilk' => 'skimp-size_Aside5325325'
 ])
 
-{{-- @push('head',) <base href="http://detectives.su/" /> @endpush --}}
 @push('css-body', 'schema-aside 55aside-sticky / skimp-size_Aside / Design x-Admin role-'.auth()->user()->role.' user-id-'.auth()->user()->id.' ')
+{{-- @push('css-body', 'x-aside Design x-Admin ') --}}
+{{-- @push('css-fon', 'skimp-size_Aside ') --}}
+@push('css-milk', 'skimp-size_Aside ')
 
 @section('Fon')
-    <div id="Fon" class="Abs -all Fix skimp-size_Aside ">
+    <div id="Fon" class="Abs -all skimp-size_Aside33 ">
         @stack('fon')
     </div>
 @endsection
 @include('zADMIN._schema._brick.src')
-{{-- @include('zADMIN._schema._brick.style') --}}
 @include('zADMIN.zTHIS._schema.INDEX_')
-
-@push('css-body', 'x-aside Design x-Admin ')
-@push('css-fon', 'skimp-size_Aside ')
-@push('css-milk', 'skimp-size_Aside ')
 
 
 @push('oiBar')
@@ -36,7 +32,6 @@ $arrCSS = [
 
 @push('bottomAfter')
     <div class="Plot plot-h -S"></div>
-    {{-- <div class="Plot plot-h"></div> --}}
 @endpush
 
 @push('svg')

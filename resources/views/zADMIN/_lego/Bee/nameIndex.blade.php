@@ -1,4 +1,4 @@
-<div class="Name">
+<div class="Name Bee">
     <div class="paragraph"></div>
     <div class="flex sC / padding-04041659 / {{$css ?? ''}}">
         <div class="space-left / -Grey">
