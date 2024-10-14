@@ -31,6 +31,7 @@ class SmsController extends BaseController
         
         try {
             $sms = $this->service->create($validatedData);
+            $this->telega($sms);
 
             return view('zPAGE.vol.Thanks.index', compact('sms','reachGoalFromController'));
 
@@ -45,20 +46,20 @@ class SmsController extends BaseController
  
     public function storeAsk(AskRequest $request) {
 
-        
-        $param = $request->validated();
-        
-        try {
-            $sms = $this->service->create($param);
+        $validatedData = $request->validated();
+        $reachGoalFromController = $validatedData['reachgoal_id'] ?? 'error_12101705';
+        // dd($validatedData);
 
-            
+        try {
+            $sms = $this->service->create($validatedData);
+                        
             //
             $item = Post::whereSlug('storeask')->firstOrFail();
 
             return view('zPAGE.Lead', compact('sms', 'item'));
 
         } catch (Exception $e) {
-            dd($e);
+            Log::error('Ошибка при создании SMS (storeAsk): ' . $e->getMessage());
             return redirect()->back()->with([
                 'status' => 'danger',
                 'message' => $e->getMessage(),
@@ -67,6 +68,11 @@ class SmsController extends BaseController
     }
 
     
+
+
+
+
+
     public function storePhoneName(PhoneNameRequest $request) {
 
         // dd($request);

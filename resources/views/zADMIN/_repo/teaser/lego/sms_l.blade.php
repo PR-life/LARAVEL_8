@@ -6,7 +6,11 @@
 
    @include('zADMIN._repo.teaser.brick.a_openTag',['css16041455' => 'cross-l'])
         <span class="content / Min Max -w7">
+            @if($Var->sms)
             {!!Str::limit(strip_tags($Var->sms),100)!!}
+            @else
+            {{$Var->label}}
+            @endif
         </span>
     </a>
 

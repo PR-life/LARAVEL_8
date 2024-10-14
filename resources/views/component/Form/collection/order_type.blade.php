@@ -1,2 +1,0 @@
-<input class="none" id="order_type_1" type="radio" name="{{$name_bd_11101311}}" value="доставка" checked>
-<input class="none" id="order_type_2" type="radio" name="{{$name_bd_11101311}}" value="самовывоз">

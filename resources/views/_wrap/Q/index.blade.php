@@ -8,10 +8,12 @@
         <div class="Wings net / noEvents">
             <div class="_win padding-26071907">
                 <div class="flex / content-s Grey">
+                    @if(!in_array($Var->name, ['Аноним', 'форма без имени', 'без имени']))
                     <span itemprop="author" itemscope itemtype="https://schema.org/Person">
-                        <span itemprop="name">{{$Var->name ?? 'аноним'}}</span>                        
+                        <span itemprop="name">{{$Var->name ?? 'аноним'}}</span>  
                     </span>
                     @include('_.elem.dot',['separator'=>'___'])
+                    @endif              
                     <span class="Ellipsis line-1">{{$Var->dateAsCarbon->diffForHumans()}}</span>
                 </div>
             </div>

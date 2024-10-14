@@ -40,6 +40,7 @@ class BaseRequest extends FormRequest
 
             'type'=>'nullable|string',
             'label'=>'nullable|string',
+            'delivery_method'=>'nullable|integer',
 
             'reachgoal_id'=>'nullable|string',
             'from_page'=>'nullable|string',

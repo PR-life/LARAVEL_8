@@ -3,8 +3,8 @@
 
 	@guest()
 	<ul class="menu">
-		<li><a href="">войти</a></li>
-		<li><a href="">регистрация</a></li>
+		<li><a href="{{route('login')}}">войти</a></li>
+		<li><a href="{{route('register')}}">регистрация</a></li>
 	</ul>
 	 
 	@endguest
@@ -14,7 +14,7 @@
 	<div class="void Contact">
 		{{-- @include('zAsgrupp._lego.contact.Geek') --}}
 		<div class="Edge-right_PC edge-right">
-			<a href="" class="Btn cC round">только спросить</a>
+			<span class="Btn cC round" @include('xAsgrupp._brick.btn._js.ask.index')>только спросить</span>
 		</div>
 	</div>
 </div>

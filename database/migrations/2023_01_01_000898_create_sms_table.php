@@ -26,6 +26,7 @@ class CreateSmsTable extends Migration
             $table->string('city')->nullable();
             $table->string('area')->nullable();
 
+            $table->string('h')->nullable();
             $table->text('sms')->nullable();
             $table->text('answer')->nullable();
             $table->text('answer_user_name')->nullable();
@@ -42,6 +43,7 @@ class CreateSmsTable extends Migration
             //
             $table->string('type')->default('lead'); // callback ask
             $table->string('label')->default('email');
+            $table->unsignedTinyInteger('delivery_method')->nullable()->comment('1: Самовывоз, 2: Доставка');
             $table->string('reachgoal_id')->nullable();
 
             //
@@ -101,7 +103,7 @@ class CreateSmsTable extends Migration
 			$table->integer('views')->default(1);
 
             $table->unsignedInteger('pin')->nullable();
-            $table->unsignedInteger('featured')->default(1);
+            $table->unsignedInteger('featured')->default(0);
             $table->unsignedInteger('published')->default(0);
 			
             $table->timestamps();

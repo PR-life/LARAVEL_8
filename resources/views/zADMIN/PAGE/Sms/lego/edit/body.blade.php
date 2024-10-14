@@ -7,11 +7,11 @@
 
 <div class="paragraphX2"></div>
 
-<div class="_shell _name @error('param_1') Error @enderror / vol-Abs label-insideInput / net">
-	<input id="inputParam_1" type="text" name="param_1" value="{{$sms->param_1 ?? old('param_1')}}" placeholder=".">
+<div class="_shell _name @error('h') Error @enderror / vol-Abs label-insideInput / net">
+	<input id="inputH" type="text" name="h" value="{{$sms->h ?? old('h')}}" placeholder=".">
 	<label class="Abs" for="inputName">@svg('plus')заголовок для вопроса</label>
-	@error('param_1')
-		<div class="Abs / Nameplate -rt">{{ $errors->first('param_1') }}</div>
+	@error('h')
+		<div class="Abs / Nameplate -rt">{{ $errors->first('h') }}</div>
 	@enderror
 </div>
 

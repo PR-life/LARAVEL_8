@@ -8,7 +8,7 @@
         @break
 
     @case('ask')
-        {{-- @include('zTHIS.PAGE.Thanks.head.index') --}}
+        @include('zTHIS.PAGE.Thanks.head.ask')
         @break
 
     @default

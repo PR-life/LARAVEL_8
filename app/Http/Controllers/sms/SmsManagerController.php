@@ -34,7 +34,7 @@ class SmsManagerController extends BaseController
 
         // dd($sms->reachgoal_id);
 
-        return view('zPAGE.Thanks', compact('sms','reachGoalFromController'));
+        return view('zPAGE.vol.Thanks.index', compact('sms','reachGoalFromController'));
         // return view('_.Thanks', compact('sms'));
     }
 

@@ -17,7 +17,17 @@ class Product extends BaseContent
     protected $table = 'products';
     protected $guarded = false;
 
-    
+
+
+    public function sms() 
+    {
+        return $this->hasMany(
+            Sms::class,
+            'product_id',
+			'id',
+        )->orderBy('created_at', 'asc');
+    }
+
     public function serviceDelivery() 
     {
         return $this->belongsTo(
