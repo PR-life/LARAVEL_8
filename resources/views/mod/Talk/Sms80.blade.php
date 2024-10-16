@@ -5,7 +5,7 @@
         @include('manager.scroll.Name.left', ['name_mbl' => $name_Roll ?? null, 'name' => $name ?? null])
     </div>
     <div class="_head space content / none_80">
-        <em>{{$name}}</em>
+        <em>{{$name ?? ''}}</em>
     </div>
     <div class="Scroll_80">
         <div class="_scr">

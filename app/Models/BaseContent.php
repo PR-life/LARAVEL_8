@@ -87,7 +87,15 @@ class BaseContent extends Model
         );
     }
 
+    public function pivotProducts() {
 
+        return $this->belongsToMany(
+            Product::class,
+            $this->getPivotProductTable(),
+            $this->getForeignKey(),
+            'product_id'
+        );
+    }
 
     // LVL 3
     public function items()
@@ -141,7 +149,6 @@ class BaseContent extends Model
         );
     }
 
-
     public function faqs()
     {
         return $this->belongsToMany(
@@ -154,8 +161,6 @@ class BaseContent extends Model
 
 
     
-
-
 
     // LVL 1
     public function tags()

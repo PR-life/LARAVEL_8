@@ -4,6 +4,8 @@ namespace App\Http\Controllers\sms;
 
 use Exception;
 use Illuminate\Support\Facades\Log;
+use GuzzleHttp\Client;
+use App\Services\Sms\Service;
 // use Illuminate\Http\Request;
 //
 use App\Http\Requests\Sms\PhoneRequest;
@@ -21,6 +23,10 @@ use App\Models\Post;
 class SmsController extends BaseController
 {
 
+    public function __construct(Service $service, Client $httpClient)
+    {
+        parent::__construct($service, $httpClient);
+    }
 
     public function storeOrder(OrderRequest $request) {
 
@@ -68,57 +74,49 @@ class SmsController extends BaseController
     }
 
     
-
-
-
-
-
     public function storePhoneName(PhoneNameRequest $request) {
 
         // dd($request);
-        $param = $request->validated();
-        // dd($param);
-
-        $reachGoalFromController = $param['reachgoal_id'];
-        // dd($reachGoalFromController);
+        $validatedData = $request->validated();
+        $reachGoalFromController = $validatedData['reachgoal_id'] ?? 'error_14101545';
+        // dd($validatedData);
 
         try {
-
-            $sms = $this->service->create($param);
+            $sms = $this->service->create($validatedData);
             $this->telega($sms);
 
-
-            return view('zPAGE.Thanks', compact('sms','reachGoalFromController'));
+            return view('zPAGE.vol.Thanks.index', compact('sms','reachGoalFromController'));
 
         } catch (Exception $e) {
-            dd($e);
+            Log::error('Ошибка при создании SMS (storePhoneName): ' . $e->getMessage());
             return redirect()->back()->with([
                 'status' => 'danger',
                 'message' => $e->getMessage(),
             ]);
         }
+
     }
 
-    public function storePhone(PhoneRequest $request) {
+    // public function storePhone(PhoneRequest $request) {
 
-        // dd($request);
-        $param = $request->validated();
-        // dd($param);
+    //     // dd($request);
+    //     $param = $request->validated();
+    //     // dd($param);
 
-        try {
+    //     try {
 
-            $sms = $this->service->create($param);
-            $this->telega($sms);
+    //         $sms = $this->service->create($param);
+    //         $this->telega($sms);
 
-            return view('zPAGE.Thanks', compact('sms'));
+    //         return view('zPAGE.Thanks', compact('sms'));
 
-        } catch (Exception $e) {
-            dd($e);
-            return redirect()->back()->with([
-                'status' => 'danger',
-                'message' => $e->getMessage(),
-            ]);
-        }
-    }
+    //     } catch (Exception $e) {
+    //         dd($e);
+    //         return redirect()->back()->with([
+    //             'status' => 'danger',
+    //             'message' => $e->getMessage(),
+    //         ]);
+    //     }
+    // }
 
 }

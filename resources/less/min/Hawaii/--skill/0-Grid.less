@@ -10,18 +10,20 @@
 	.Grid {
 	    display: grid;
 	}
+	.Grid.grid-tag{
+		--Grid-w:240px;
+	}
+
+	.Grid.grid-product {
+		--Grid-w:200px;
+	}
+
 
 	.Grid.grid-tag,
 	.Grid.grid-product {
-		--Grid-w:240px;
-
-		//
 		// grid-template-columns: repeat(auto-fit, minmax(var(--Grid-w), 1fr));
 		grid-template-columns: repeat(auto-fill, minmax(var(--Grid-w), 1fr));
-		// justify-content: start; /* Выравнивание элементов к началу */
-		// align-items: start; /* Выравнивание элементов по вертикали к началу */
 	}
-
 	.Grid.grid-menu {
 		--Grid-w:208px;
 

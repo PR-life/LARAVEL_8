@@ -5,11 +5,9 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\SoftDeletes;
 use App\Models\Traits\Filterable;
-//
-use App\Models\_child\Service;
 
 
-class Category extends BaseContent
+class CategoryTest extends BaseContent
 {
     use HasFactory;
     use SoftDeletes;
@@ -40,14 +38,13 @@ class Category extends BaseContent
         return $this->hasMany(Product::class)->orderBy('order', 'asc');
     }
     
-    public function service() 
-    {
-        return $this->hasMany(Service::class)->orderBy('order', 'asc');
-    }
-
     public function paper() 
     {
-        return $this->hasMany(Paper::class)->orderBy('order', 'asc');
+        return $this->belongsTo(
+            Paper::class,
+            'category_id',
+			'id',
+        );
     }
 
     public function getAllParents() 

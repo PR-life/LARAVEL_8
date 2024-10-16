@@ -9,7 +9,7 @@ use App\Models\Traits\Filterable;
 use App\Models\_child\Service;
 
 
-class Category extends BaseContent
+class Category754745 extends BaseContent
 {
     use HasFactory;
     use SoftDeletes;
@@ -33,55 +33,6 @@ class Category extends BaseContent
     {
         return 'slug';
     }
-
-    // THIS
-
-    public function products() {
-        return $this->hasMany(Product::class)->orderBy('order', 'asc');
-    }
-    
-    public function service() 
-    {
-        return $this->hasMany(Service::class)->orderBy('order', 'asc');
-    }
-
-    public function paper() 
-    {
-        return $this->hasMany(Paper::class)->orderBy('order', 'asc');
-    }
-
-    public function getAllParents() 
-    {
-        $parents = collect();
-        $category = $this;
-
-        while ($category->parentCategory) {
-            $parents->push($category->parentCategory);
-            $category = $category->parentCategory;
-        }
-
-        return $parents;
-    }
-
-    public function parentCategory() 
-    {
-        return $this->belongsTo(Category::class, 'category_id')->whereNull('deleted_at');
-    }
-
-    public function childrenCategories()
-    {
-        return $this->hasMany(Category::class, 'category_id', 'id')->whereNull('deleted_at')->orderBy('order', 'asc');
-    }
-
-
-    // LIB
-    public function categoryServices() {
-        return $this->belongsTo(Category::class, 'category_services_id', 'id');
-    }
-
-
-    //TODO Кэширование Рекурсивных Запросов:
-    // Для методов, таких как getAllParents(), getRecursiveAttribute(), и getFullSlugAttribute(), которые выполняют рекурсивные запросы, стоит рассмотреть возможность кэширования. Это особенно полезно, если дерево категорий имеет много уровней или часто запрашивается.
 
     public function getRecursiveAttribute($attribute) 
     {
@@ -117,7 +68,47 @@ class Category extends BaseContent
         return $slugs->implode('/');
     }
 
+    ////
+    ////
 
+    public function products() {
+        return $this->hasMany(Product::class)->orderBy('order', 'asc');
+    }
+
+
+    public function categoryServices() {
+        return $this->belongsTo(
+            Category::class,
+            'category_services_id',
+			'id',
+        );
+    }
+
+
+    public function childrenCategories()
+    {
+        return $this->hasMany(Category::class, 'category_id', 'id')->orderBy('order', 'asc');
+    }
+    public function parentCategory() 
+    {
+        return $this->belongsTo(Category::class, 'category_id');
+    }
+
+    public function getAllParents() 
+    {
+        $parents = collect();
+        $category = $this;
+
+        while ($category->parentCategory) {
+            $parents->push($category->parentCategory);
+            $category = $category->parentCategory;
+        }
+
+        return $parents;
+    }
+
+    //
+    //
     // LVL 4
     protected function getPivotPaperTable(){
         return 'paper_categories';
@@ -128,9 +119,6 @@ class Category extends BaseContent
     protected function getPivotItemTable(){
         return 'item_categories';
     }
-    protected function getPivotProductTable(){
-        return 'product_categories';
-    }
 
 
     // LVL 3
@@ -140,15 +128,15 @@ class Category extends BaseContent
     protected function getServicePivotTable(){
         return 'category_services';
     }
-    // papers()
-    
 
 
     // LVL 2
     protected function getLegoPivotTable(){
         return 'category_lego';
     }
-
+    // protected function getDetailPivotTable(){
+    //     return 'category_details';
+    // }
     protected function getFaqPivotTable(){
         return 'category_faqs';
     }
@@ -158,10 +146,10 @@ class Category extends BaseContent
         return 'category_tags';
     }
 
-    protected function getCategoryPivotTable(){
-        return 'category_categories';
+    public function categories()
+    {
+        return $this->belongsToMany(Category::class, 'category_categories', 'category_id', 'related_category_id');
     }
-
 
     //
     // вроде для EN
@@ -173,13 +161,4 @@ class Category extends BaseContent
         }
         return $default;
     }
-    // TODO
-    // Метод getAttribute($key) переопределен для обработки мультиязычных полей. Это хороший подход. Но можно упростить обработку значений по умолчанию:
-    // public function getAttribute($key) {
-    //     $default = parent::getAttribute($key);
-    //     if (app()->getLocale() !== 'ru' && in_array($key, $this->lang_fields)) {
-    //         return parent::getAttribute($key . '_' . app()->getLocale()) ?? $default;
-    //     }
-    //     return $default;
-    // }
 }
