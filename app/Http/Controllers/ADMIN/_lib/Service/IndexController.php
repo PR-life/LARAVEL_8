@@ -39,7 +39,7 @@ class IndexController extends BaseController
 
 		if($_request['category_id']) {
 			$category = Category::findOrFail($_request['category_id']);
-			$categoryPivotServices = $category->servicesPivot()->get();
+			$categoryPivotServices = $category->pivotServices()->get();
 		}
 
 

@@ -1,7 +1,7 @@
 <div class="Preamble x-{{class_basename($Var)}} / face face-out face-ghost face-edge / user-{{$Var->user->id}} {{$Var->css}}">
 	<a class="author / flex / relative" href="{{$Var->canonical ?? $link}}">
 		<span class="Abs -left -t / face-paddingImg">
-			<img class="Ava" src="{{$Var->user->avatar2 ?? '/images-0/ava/blank.png'}}" alt="автор материала: {{$Var->user->name}}">
+			<img class="Ava" src="{{$Var->user->avatar ?? '/images-0/ava/blank.png'}}" alt="автор материала: {{$Var->user->name}}">
 		</span>
 		<span class="b500 / nowrap">
 			@isset($Var->demon_name)
