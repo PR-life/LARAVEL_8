@@ -40,15 +40,19 @@ class BaseService {
 
     public function processImages($image, $id, $imagePrefix)
     {
+
+        // Генерация одного имени файла
+        $filename = $id . '_' . time() . '.png';
+
         // Преобразуем изображение в PNG и сохраняем
-        $filename = $this->saveImage($image, $id, $imagePrefix);
+        $filename = $this->saveImage($image, $filename, $imagePrefix);
     
         // Создаем иконки
         $this->createIcons($image, $id, $imagePrefix);
     
 
         // Создаем превью изображения
-        $this->createPreviewImage($image, $id, $imagePrefix);
+        $this->createPreviewImage($image, $filename, $imagePrefix);
 
 
         return $filename;
@@ -58,12 +62,10 @@ class BaseService {
 
 
 
-
-    
-    protected function saveImage($image, $id, $imagePrefix)
+    protected function saveImage($image, $filename, $imagePrefix)
     {
         // Генерация имени файла и сохранение изображения в формате PNG
-        $filename = time() . '_' . $id . '.png';
+        // $filename = time() . '_' . $id . '.png';
         $imageResized = Image::make($image)->encode('png');
         $imageResized->save(public_path('storage/' . $imagePrefix . '_images/' . $filename));
     
@@ -98,13 +100,27 @@ class BaseService {
     }
 
 
-    protected function createPreviewImage($image, $id, $imagePrefix)
+    protected function createPreviewImage($image, $filename, $imagePrefix)
     {
         // Генерация имени файла для превью
-        $filename = time() . '_' . $id . '.png';
+        // $filename = time() . '_' . $id . '.png';
         
         // Создание превью изображения (300x300) с сохранением пропорций
-        $previewImage = Image::make($image)->fit(300, 300)->encode('png');
+
+        // dd($imagePrefix);
+
+        switch($imagePrefix) {
+            case 'paper':
+                $width = 560;
+                $height = 315;
+                break;
+            default:
+                $width = 300; // Значение по умолчанию
+                $height = 300;
+                break;
+        }
+        $previewImage = Image::make($image)->fit($width, $height)->encode('png');
+
         $previewImage->save(public_path('storage/' . $imagePrefix . '_images/teaser/' . $filename));
     }
     

@@ -41,11 +41,14 @@ class CreatePapersTable extends Migration
 			$table->string('prev_h1')->nullable();
 			$table->string('prev_h2')->nullable();
 			$table->string('prev_p')->nullable();
-			$table->string('prev_image')->nullable();
             $table->string('prev_url')->nullable();
 			$table->string('prev_veil')->nullable();
             
 			//Media
+            $table->string('image')->nullable();
+            $table->string('image_original')->nullable();
+            $table->string('image_prev')->nullable();
+
 			$table->string('foto_count_teaser')->nullable();
 			$table->string('foto_count_full')->nullable();
             $table->string('url_foto')->nullable();

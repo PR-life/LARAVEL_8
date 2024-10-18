@@ -1,0 +1,1 @@
+@include('zADMIN.PAGE._brick.param.schema.teaser')

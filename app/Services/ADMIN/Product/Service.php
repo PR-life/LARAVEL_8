@@ -6,9 +6,10 @@ use Exception;
 use Illuminate\Support\Facades\DB;
 use App\Services\ADMIN\BaseService;
 //
-use App\Models\Product;
 use Illuminate\Support\Facades\Storage;
 use Intervention\Image\Facades\Image;
+//
+use App\Models\Product;
 
 class Service extends BaseService {
 
@@ -28,7 +29,6 @@ class Service extends BaseService {
 
             // Проверка и обработка нового изображения
             if (isset($param['image']) && $param['image'] instanceof \Illuminate\Http\UploadedFile) {
-
 
 				// Сохраняем исходник
 				$image = $param['image'];
@@ -205,15 +205,8 @@ class Service extends BaseService {
 		try {
 			DB::beginTransaction();
 
-			// isset($param['tag_ids']) ? $tagIds=$param['tag_ids'] : $tagIds=[];
-			// unset($param['tag_ids']);
-
         	$product = Product::firstOrCreate($param);
-			
-			// $paper->tags()->attach($tagIds);
-				// attach: Присоединение / Отсоединение отношений Многие ко многим
-			// $tagIds = [];
-			
+						
 			DB::commit();
 		} catch (Exception $exception) {
 			DB::rollBack();

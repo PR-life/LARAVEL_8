@@ -28,3 +28,8 @@
     <input id="inputPrev_p" type="text" name="prev_p" value="{{$paper->prev_p ?? old('prev_p')}}" placeholder=".">
     <label class="Abs" for="inputPrev_p">@svg('plus')prev_p</label>
 </div>
+
+<div class="_shell x-hr Form -S / vol-Abs">
+    <input id="inputPrev_veil" type="text" name="prev_veil" value="{{$paper->prev_veil ?? old('prev_veil')}}" placeholder=".">
+    <label class="Abs" for="inputPrev_veil">@svg('plus')prev_veil</label>
+</div>
