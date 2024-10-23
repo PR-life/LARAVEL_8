@@ -1,5 +1,6 @@
 # *
 # !.gitignore
+/_schema
 /analytica
 /PAGE
 /style

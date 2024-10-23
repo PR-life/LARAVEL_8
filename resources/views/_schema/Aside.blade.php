@@ -15,7 +15,7 @@
 @yield('breadBack')
 @yield('head')
 
-@component('_wrap.oiBar', ['arrCSS'=>$arrCSS])
+@component('_wrap.oiBar', ['arrCSS'=>$arrCSS ?? []])
 
 	@slot('pre_wrap')
 		@yield('pre_wrap')
