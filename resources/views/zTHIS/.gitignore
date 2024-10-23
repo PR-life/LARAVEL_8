@@ -1,6 +1,3 @@
-# *
-# !.gitignore
-/_schema
-/analytica
-/PAGE
-/style
+*
+!.gitignore
+!/_lego
