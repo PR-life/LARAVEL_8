@@ -5,7 +5,7 @@
                 @include('_brick.btn.menu.btnMenuAside')
             </div>
             <a class="Logo / op-1709" href="/">
-                <img src="/images/logo/logo.jpg" alt="">
+                <img src="/images/logo/asgrupp.jpg" alt="">
             </a>
         </div>
     </div>

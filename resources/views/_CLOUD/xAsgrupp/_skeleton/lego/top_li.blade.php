@@ -1,5 +1,4 @@
 <div class="none_mbl none_beyond / flex cross-m / Family-OpenSans -Grey">
-    @include('_CLOUD.xAsgrupp._skeleton.brick.btn_search')
     <a class="content-xxs / flex cI / none_beyond" rel="nofollow" href="{{__('_const/this.emailLink')}}" onclick="ym(97704993,'reachGoal','click_contact_email')">
         <span class="Ico -S / mr-1">@svg('email')</span>
         <span>{{__('_const/this.emailView')}}</span>
