@@ -6,11 +6,11 @@
 		</div>
 		<div class="Preamble dC eI / {{$cssPreamble ?? ''}}">
 			<div class="author / flex" itemprop="author" itemscope itemtype="https://schema.org/Organization">
-				<span class="Grey" itemprop="name">{{__('this.LLC')}}</span>
+				<span class="Grey" itemprop="name">{{__('_const/this.LLC')}}</span>
 			</div>
-			<div class="author / flex">
+			{{-- <div class="author / flex">
 				<span class="content-xs / Grey">{{$Var->answer_user_name ?? __('_const/zTHIS.answer_user_name')}}</span>
-			</div>
+			</div> --}}
 		</div>
 	</div>
 </div>

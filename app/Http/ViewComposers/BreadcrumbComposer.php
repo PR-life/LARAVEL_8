@@ -100,7 +100,7 @@ class BreadcrumbComposer
         // Логика для формирования хлебных крошек для услуг
         $breadcrumbs[] = ['name' => 'Услуги', 'url' => '/uslugi', 'slug' => 'uslugi'];
         $breadcrumbs[] = [
-            'name' => $service->title,
+            'name' => $service->bread_name ?? $service->name,
             'url' => route('asgrupp.uslugi.show', $service->slug),
             'slug' => $service->slug
         ];
