@@ -42,6 +42,10 @@
 	}
 }
 
+.Bread.lie {
+	--Bread-margin:0px;
+}
+
 //
 .Bread {
 	--Bread-margin:10px;
@@ -49,15 +53,18 @@
 	--Bread-ico-radius: 7px;
 	--Bread-h-sep:4px;
 	--ulol-padding-left:0;
+
+	> * {
+		padding-left: var(--Bread-margin);
+		padding-right: var(--Bread-margin);
+	}
+
+	> *:first-child {
+		padding-left: 0;
+	}
 }
 
-#Bread > * {
-	padding-left: var(--Bread-margin);
-	padding-right: var(--Bread-margin);
-}
-#Bread > *:first-child {
-	padding-left: 0;
-}
+
 
 
 
