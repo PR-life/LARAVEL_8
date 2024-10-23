@@ -2,7 +2,7 @@
 $link = route($routeName, [
 	'sms' => request()->get('sms'),
 	'name' => request()->get('name'),
-	'shema' => request()->get('shema'),
+	'schema' => request()->get('schema'),
 	'tag_id' => request()->get('tag_id'),
 	'page' => request()->get('page'),
 	'category_id' => request()->get('category_id'),

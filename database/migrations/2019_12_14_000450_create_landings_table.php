@@ -34,7 +34,7 @@ class CreateLandingsTable extends Migration
 
 
             //
-			$table->text('knot_1')->nullable();
+            $table->text('note')->nullable();
 
             //
             $table->foreignId('group_id')

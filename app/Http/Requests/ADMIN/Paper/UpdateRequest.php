@@ -17,6 +17,7 @@ class UpdateRequest extends StoreRequest
     {
         return array_merge(parent::rules(), [
 
+            'delete_image' => 'nullable|integer',
         ]);
 
     }

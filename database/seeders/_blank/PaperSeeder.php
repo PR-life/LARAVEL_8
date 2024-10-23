@@ -24,7 +24,6 @@ class PaperSeeder extends Seeder
         //     'prev_h2' => '5555555',
         //     'prev_p' => '5555555',
         //     // 'prev_image' => '5555555',
-        //     'knot_1' => '5555555',
         //     'created_at' => '2023-08-17 07:00:25',
         //     'updated_at' => '2023-08-22 07:00:25',
         // ]);

@@ -1,0 +1,33 @@
+@charset "UTF-8";
+
+
+.menu.-tag.vol-webflow {
+	// --fontMenuTag:24px;
+	// --x-menu-padding-li--left:0;
+	// --x-menu-margin-li:1rem;
+
+	--bg-menu: transparent;
+	--bg-menu-hover: transparent;
+	--bg-menu-active: transparent;
+	--c-menu-border: transparent;
+	--c-menu-border-active: #146ef5;
+
+	li {
+		font-weight: 500;
+	}
+
+	li.active a,
+	li.active .a {
+		border-left-color: transparent !important;
+		border-top-color: transparent !important;
+		border-right-color: transparent !important;
+		border-bottom: 3px solid #146ef5;
+	}
+
+
+	border-bottom: 1px solid #eaeaea;
+
+}
+
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {}
+@media screen and (max-width: @w-menu-2) {}

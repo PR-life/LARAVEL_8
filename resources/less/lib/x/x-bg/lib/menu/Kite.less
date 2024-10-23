@@ -12,6 +12,27 @@
 	background-color: var(--bg-menu-kite)
 }
 
+.menu.-tag.Kite.kite-round {
+	--bg-menu:transparent !important;
+}
+
+
+.menu.-tag.vol-black.Kite {
+	--c-menu: #fff;
+	--c-menu-active: #000;
+	--bg-menu:#2d2c33;
+	--bg-menu-hover:#000;
+	--bg-menu-kite: #000; // #f7f7f7;
+	--bg-menu-kite-active: #fff;
+	
+	li.active > * {
+		box-shadow: inset 0px 1px 3px 0px rgba(0, 0, 0, .05);
+	}
+}
+
+
+
+
 
 .menu.-tag.vol-dark.Kite {
 	--c-menu: #ccc;
@@ -46,8 +67,8 @@
 }
 
 
-.menu.-tag.Kite li.active {
-	> * > {background-color: var(--bg-menu-kite-active);}
+.menu.-tag.Kite .active {
+	.a,a {background-color: var(--bg-menu-kite-active);}
 }
 
 

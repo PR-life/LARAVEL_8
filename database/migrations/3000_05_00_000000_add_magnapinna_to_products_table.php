@@ -10,7 +10,7 @@ class AddMagnapinnaToProductsTable extends Migration
      public function up()
      {
          Schema::table('products', function (Blueprint $table) {
-             $table->after('knot_1', function ($table) {
+             $table->after('note', function ($table) {
 
                 $table->foreignId('group_id')
                     ->nullable()
@@ -63,41 +63,42 @@ class AddMagnapinnaToProductsTable extends Migration
         Schema::table('products', function (Blueprint $table) {
 
             $table->dropForeign('products_group_id_foreign');
-			$table->dropColumn('group_id');
+            $table->dropColumn('group_id');
 
             $table->dropForeign('products_tag_id_foreign');
-			$table->dropColumn('tag_id');
+            $table->dropColumn('tag_id');
 
             $table->dropForeign('products_category_id_foreign');
-			$table->dropColumn('category_id');
+            $table->dropColumn('category_id');
 
             $table->dropForeign('products_feature_id_foreign');
-			$table->dropColumn('feature_id');
+            $table->dropColumn('feature_id');
 
             $table->dropForeign('products_product_id_foreign');
-			$table->dropColumn('product_id');
+            $table->dropColumn('product_id');
 
             $table->dropForeign('products_product_surrogate_id_foreign');
             $table->dropColumn('product_surrogate_id');
 
             $table->dropForeign('products_service_delivery_id_foreign');
-			$table->dropColumn('service_delivery_id');
+            $table->dropColumn('service_delivery_id');
 
             $table->dropForeign('products_paper_payment_id_foreign');
-			$table->dropColumn('paper_payment_id');
+            $table->dropColumn('paper_payment_id');
 
-            $table->dropForeign('products_paper_warranty_foreign');
-			$table->dropColumn('paper_warranty_id');
+            // Исправлено имя внешнего ключа
+            $table->dropForeign('products_paper_warranty_id_foreign');
+            $table->dropColumn('paper_warranty_id');
 
-            $table->dropForeign('products_paper_one_foreign');
-			$table->dropColumn('paper_one_id');
+            $table->dropForeign('products_paper_one_id_foreign');
+            $table->dropColumn('paper_one_id');
 
-            $table->dropForeign('products_paper_two_foreign');
-			$table->dropColumn('paper_two_id');
+            $table->dropForeign('products_paper_two_id_foreign');
+            $table->dropColumn('paper_two_id');
 
-            //
             $table->dropForeign('products_category_services_id_foreign');
-			$table->dropColumn('category_services_id');
-		});
+            $table->dropColumn('category_services_id');
+        });
     }
+
 }

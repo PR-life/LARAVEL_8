@@ -4,7 +4,7 @@
     @component('_wrap._menu.li_open')
     @slot('name','Технические газы')
     <ul class="none">
-        <li class=""><a href="#">Углекислота</a></li>
+        <li class="{{request()->is('*/yglekislota*') ? 'active' : ''}}"><a href="#">Углекислота</a></li>
         <li class=""><a href="#">Сварочная смесь</a></li>
         <li class=""><a href="#">Кислород</a></li>
         <li class=""><a href="#">Аргон</a></li>

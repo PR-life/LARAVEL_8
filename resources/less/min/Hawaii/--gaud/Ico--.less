@@ -16,6 +16,7 @@
 
 //
 
+//
 .Ico.-XXL {
 	--x-Ico: ~"calc(var(--Ico)*3)";
 }
@@ -75,14 +76,20 @@
 
 
 @media (min-width:@w-menu-2-plus) and (max-width:@w-max){
-
+	.Ico.vol-phone {
+		--x-Ico: 80px;
+	}
+	//
 	.Ico.-vw {
 		--Ico-w: clamp(2rem,5vw,var(--x-Ico));
 	}
 }
 
 @media screen and (max-width:@w-menu-2){
-
+	.Ico.vol-phone {
+		--x-Ico: 65px;
+	}
+	//
     .Ico.long {
         width: 7rem;
     }

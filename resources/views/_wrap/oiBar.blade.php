@@ -4,7 +4,8 @@
 			@stack('oiBar-before')
 			<div class="_wrap W-100 / relative index">
 				@stack('oiBar_before')
-				<div class="_main _hidden {{ $cssOiBarMain ?? '' }} / Abs -all / index">
+				{{-- <div class="_main {{ $cssOiBarMain ?? 'flex dC bC' }} / Abs -all / index"> --}}
+				<div class="Abs -all / index">
 					<!--googleoff: all-->
 					<!--noindex-->
 					@stack('oiBar')
@@ -17,7 +18,6 @@
 			</div>
 			@stack('oiBar-after')
 		</div>
-				
 		<div id="oi" class="oi W-100 {{ $cssOi ?? '' }} @stack('css-Oi')">
 			{{ $pre_wrap ?? '' }}
 			<div id="wrap" class="wrap W-100 / index relative {{ $cssOi ?? '' }} @stack('css-wrap')" data-localstorage localstorage-id>

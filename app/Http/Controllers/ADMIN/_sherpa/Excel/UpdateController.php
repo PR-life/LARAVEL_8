@@ -9,6 +9,7 @@ use Maatwebsite\Excel\Facades\Excel;
 //
 // use App\Imports\PostUpdate;
 use App\Updates\PaperUpdate;
+use App\Updates\ProductUpdate;
 // use App\Imports\TagUpdate;
 
 
@@ -24,7 +25,10 @@ class UpdateController extends Controller
 
 		switch ($file->getClientOriginalName()) {
 			case 'Papers.xlsx':
-				Excel::import( new PaperUpdate(), $file);
+				// Excel::import( new PaperUpdate(), $file);
+				break;
+			case 'Products.xlsx':
+				Excel::import( new ProductUpdate(), $file);
 				break;
 			case 'Tags.xlsx':
 				// Excel::import( new TagUpdate(), $file);

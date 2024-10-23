@@ -14,13 +14,16 @@
 		<label class="Abs" for="inputH">@svg('plus')Заголовок h</label>
 	</div>
 
+ 
+	<div class="_shell _h1 / vol-Abs label-insideInput">
+		<input id="inputBladeName" type="text" name="blade_name" value="{{$lego->blade_name ?? old('blade_name')}}" placeholder=".">
+		<label class="Abs" for="inputBladeName">@svg('plus')name Blade</label>
+	</div>
+
 </div>
 
-<div class="paragraph"></div>
+ 
 
-<div class="_shell _h1 / net">
-	<input id="inputBladeName" type="text" name="blade_name" value="{{$lego->blade_name ?? old('blade_name')}}" placeholder="blade_name">
-</div>
 
 
 @if(!$lego->blade_name)

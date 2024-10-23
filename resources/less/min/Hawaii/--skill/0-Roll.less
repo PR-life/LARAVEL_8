@@ -19,15 +19,25 @@
 	width: 0;
 }
 
-
-
-@media (min-width:@w-menu-2-plus) and (max-width:@w-Box + 80px + 16px) {
+@media (min-width:@metrika-70-plus) and (max-width:@w-Box + 80px + 16px) {
 
 	.Box.Roll_PC.-edge,
 	.Box.Roll_PC.-edgePC {
 		max-width: 100%;
-		padding-left: calc(var(--Edge)*.75);
+		padding-left: calc(var(--Edge)*1.25);
 	}
+}
+
+@media (min-width:@w-menu-2-plus) and (max-width:@metrika-70) {
+
+	.Box.Roll_PC.-edge,
+	.Box.Roll_PC.-edgePC {
+		max-width: 100%;
+		padding-left: calc(var(--Edge));
+	}
+}
+
+@media (min-width:@w-menu-2-plus) and (max-width:@w-Box + 80px + 16px) {
 
 	.Box.Roll_PC.-edgeS,
 	.Box.Roll_PC.-edge-S_PC {
@@ -84,24 +94,23 @@
 		order: 2;
 	}
 
-	._roll {
-		display: flex;
-		align-items: flex-start;
-		flex-wrap: nowrap !important;
-	}
+	// ._roll {
+	// 	display: flex;
+	// 	align-items: flex-start;
+	// 	flex-wrap: nowrap !important;
+	// }
 
 
-    ._roll > * {
-        order: 5;
-        //
-        margin-top: 0 !important;
-        margin-bottom: 0 !important;
-        margin-left: 0 !important;
-    }
-	._roll > .first {
-		order: 2;
-	}
-
+    // ._roll > * {
+    //     order: 5;
+    //     //
+    //     margin-top: 0 !important;
+    //     margin-bottom: 0 !important;
+    //     margin-left: 0 !important;
+    // }
+	// ._roll > .first {
+	// 	order: 2;
+	// }
 
 
 	.Preamble *,
@@ -114,11 +123,11 @@
 	p {
 		white-space: normal;
 	}
+
 	.nowrap,
 	.nowrap_mbl {
 		white-space: nowrap;
 	}	
-
 
 	.Gstrm {
 		display: block;
@@ -228,8 +237,8 @@
 
 @media screen and (max-width:@w-menu-2) {
 
-	.Roll_mbl.menu,
-	.Roll_mbl.Tool {
+	// .Roll_mbl.Tool
+	.Roll_mbl.menu {
 		padding-left: calc(var(--edge) * .75);
 	}
 
@@ -281,7 +290,7 @@
 	}
 
 	.Roll_mbl.-controlH {
-		align-items:  stretch;
+		align-items: stretch;
 	}
 
 	.Roll_mbl.cI {
@@ -293,6 +302,8 @@
 		> * {margin-right: 2rem;}
 	}
 
+	.Roll_mbl.Product,
+	.Roll_mbl.menu,
 	.Roll_mbl.-crossS {
 		> * {margin-right: 1rem;}
 	}
@@ -318,11 +329,15 @@
 	.Roll_mbl.vol-table {
 		> table {
 			tr > *:first-child {
-				min-width: clamp(180px,calc(var(--w)*.55),220px);
+				min-width: clamp(180px,calc(var(--w)*.5),220px);
+				padding-left: 10px;
+				padding-right: 10px;
 			}
 		}
 	}
 
+
+	.Roll_mbl.Product,
 	.Roll_mbl.vol-Wagon {
 		> *{
 			min-width: clamp(180px,calc(var(--w)*.6),220px);

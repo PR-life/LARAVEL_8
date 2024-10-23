@@ -15,7 +15,7 @@ class IndexController extends BaseController
 
         $_request = $this->service->_request($request);
 
-        if($_request['shema'] == 'group')
+        if($_request['schema'] == 'group')
         {
             return view('zADMIN.PAGE.Group.indexGroup', compact('groups','_request'));
         }

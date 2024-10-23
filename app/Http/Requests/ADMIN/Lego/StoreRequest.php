@@ -22,7 +22,7 @@ class StoreRequest extends BaseRelationsRequest
 			'name' => 'nullable|string',
 
 			'blade_name' => 'nullable|string',
-			'shema' => 'nullable|string',
+			'schema' => 'nullable|string',
 
 			'css' => 'nullable|string',
 			'add_to_contents' => 'nullable|string',

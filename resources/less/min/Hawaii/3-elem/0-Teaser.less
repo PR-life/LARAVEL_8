@@ -1,7 +1,17 @@
 @charset "UTF-8";
 
+
+.teaser.vol-QA.On {
+    --x-vol-QA-padding-bottom:7px;
+}
+
 .teaser.vol-QA {
     --x-vol-QA-padding:3rem;
+    --x-vol-QA-padding-bottom:0;
+
+    > ._wrap {
+        padding-bottom: var(--x-vol-QA-padding-bottom);
+    }
 
     .Axon > .off {
         .content {
@@ -9,14 +19,10 @@
         }
     }
 
-    .A ._wrap {
-        padding-left: 1rem;
+    .A {
+        padding: 0 1px 0px 1px;
+        > ._wrap {
+            padding-left: 1rem;
+        }
     }
 }
-
-@media (min-width:@metrika-80-plus) and (max-width: @w-max) {
-    .Talk .teaser.vol-QA {
-        --x-vol-QA-padding:1rem;
-    }
-}
-

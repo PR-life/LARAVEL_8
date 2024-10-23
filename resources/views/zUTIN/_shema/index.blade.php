@@ -1,1 +1,1 @@
-@extends('zUTIN._shema.INDEX')
+@extends('zUTIN._schema.INDEX')

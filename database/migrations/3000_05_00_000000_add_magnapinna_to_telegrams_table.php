@@ -10,7 +10,7 @@ class AddMagnapinnaToTelegramsTable extends Migration
      public function up()
      {
          Schema::table('telegrams', function (Blueprint $table) {
-             $table->after('knot_1', function ($table) {
+             $table->after('note', function ($table) {
 
                 $table->foreignId('user_id')
                     ->default('1')

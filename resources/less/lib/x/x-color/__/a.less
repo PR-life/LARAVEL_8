@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .c-inherit {
-	color: inherit;
+	color: inherit !important;
 }
 a, .a {
 	strong,
@@ -37,9 +37,9 @@ ul.-menu li {
 	}
 }
 
-.menu li {
-	.a, a,
-	a:visited {
+.menu {
+	.a, li a,
+	li a:visited {
 		color: var(--c-menu);
 	}
 
@@ -66,6 +66,14 @@ a:hover {
 .Pagination {
     a:visited {
         color: inherit;
+    }
+}
+
+
+.Bread {
+	a,
+    a:visited {
+        color: @c-a
     }
 }
 

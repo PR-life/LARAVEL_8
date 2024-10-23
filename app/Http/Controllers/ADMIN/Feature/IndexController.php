@@ -18,9 +18,9 @@ class IndexController extends BaseController
         $_request = $this->service->_request($request);
 
 
-        if($_request['shema'] == 'group')
+        if($_request['schema'] == 'group')
         {
-            return view('zADMIN.PAGE.Feature.indexGroup', compact('features','categories','shema'));
+            return view('zADMIN.PAGE.Feature.indexGroup', compact('features','categories','schema'));
         }
 
         $categories = Category::orderBy('order')->get();

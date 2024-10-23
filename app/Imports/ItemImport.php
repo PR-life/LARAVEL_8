@@ -29,12 +29,12 @@ class ItemImport implements ToCollection, WithHeadingRow
                 $params[$_name] = $item[$_name] ?? null;
             };
  
-            if(!$params['shema']) {
-                $params['shema'] = 'default';
+            if(!$params['schema']) {
+                $params['schema'] = 'default';
             }
  
-            if(!$params['shema_teaser']) {
-                $params['shema_teaser'] = 'default';
+            if(!$params['schema_teaser']) {
+                $params['schema_teaser'] = 'default';
             }
             // if(!$params['status']) {
             //     $params['status'] = '1';

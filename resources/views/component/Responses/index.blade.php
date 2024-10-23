@@ -49,9 +49,9 @@
         </div>
         <div class="hill-m"></div>
     @else
-        <div class="h b500 center-text">{{__('z/mod/Responses.nameOff')}}</div>
+        <div class="h b500 center-text">{{__('lib/mod/Responses.nameOff')}}</div>
         <div class="paragraph-s"></div>
-        <div class="content-s center-text Grey">{{__('z/mod/Responses.startComment')}}</div>
+        <div class="content-s center-text Grey">{{__('lib/mod/Responses.startComment')}}</div>
         <div class="paragraph"></div>
     @endif --}}
 

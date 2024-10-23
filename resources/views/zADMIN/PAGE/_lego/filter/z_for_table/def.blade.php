@@ -52,10 +52,10 @@
             </div>
             @isset($var)
             <div class="flex cross-xs op / color-23101932">
-                <a class="Ico -XS / round-xs {{ request()->has('shema') ? '' : 'active' }}" href="{{route('admin.'.$var.'.index')}}">
+                <a class="Ico -XS / round-xs {{ request()->has('schema') ? '' : 'active' }}" href="{{route('admin.'.$var.'.index')}}">
                     <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 13" fill="currentColor"><path d="M0 10h3v3H0zm5 0h8v3H5zM0 5h3v3H0zm5 0h8v3H5zM0 0h3v3H0zm5 0h8v3H5z"/></svg>
                 </a>
-                <a class="Ico -XS / round-xs {{ request()->query('shema') == 'group' ? 'active' : '' }}" href="{{route('admin.'.$var.'.index', ['shema' => 'group'])}}">
+                <a class="Ico -XS / round-xs {{ request()->query('schema') == 'group' ? 'active' : '' }}" href="{{route('admin.'.$var.'.index', ['schema' => 'group'])}}">
                     <svg xmlns="http://www.w3.org/2000/svg" viewbox="0 0 13 13" fill="currentColor"><path d="M0 0h6v6H0zm7 0h6v6H7zm0 7h6v6H7zM0 7h6v6H0z"/></svg>
                 </a>
             </div>

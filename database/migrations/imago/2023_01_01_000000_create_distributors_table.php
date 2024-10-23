@@ -41,7 +41,7 @@ class CreateDistributorsTable extends Migration
 			$table->text('text')->nullable();
             $table->text('media')->nullable();
 			
-			$table->text('knot_1')->nullable();
+ 
 
 			$table->unsignedInteger('order')->default(50);
             $table->unsignedInteger('status')->default(1);

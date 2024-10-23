@@ -23,6 +23,12 @@
 		height: calc(var(--h) - 4rem - var(--h-head));
 		max-height: 680px;
 
+
+		.teaser.vol-QA {
+			--x-vol-QA-padding:1rem;
+		}
+
+		//
 		.SOMA.On > .Axon > .off {
 			display: block;
 			// background-color: green;
@@ -67,12 +73,20 @@
 		// 	.x-Talk {display: none;}
 		// }
 
+		.author {
+			font-size: var(--font-min);
+		}
+
 		.space-left,
 		.Preamble {
 			--space:0px;
 		}
 
-		.A ._wrap {padding-left: 1rem;}
+		.A {
+			padding: 0;
+			> ._wrap {padding-left: 1rem;}
+		}
+ 
 
 		// .paragraph.x-Talk {display: block;}
 
@@ -96,7 +110,14 @@
 @media screen and (max-width:@metrika-80) {
 	.Talk.-w80.Sms.-w {
 		width: 100%;
+
+		.A {
+			> ._wrap > .content {
+				min-height: 100px;
+			}
+		}
 	}
+	
 }
 
 //

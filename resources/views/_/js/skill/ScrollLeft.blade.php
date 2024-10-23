@@ -1,12 +1,12 @@
 <script>
 class ScrollLeft {
     constructor(selector){
-        console.log(document.getElementById(selector))
+        // console.log(document.getElementById(selector))
         this.rootElem = document.getElementById(selector)
         this.Track = this.rootElem.querySelector('[data-scroll]')
 
-        let btnLeft = this.rootElem.querySelector('._btn.left')
-        let btnRight = this.rootElem.querySelector('._btn.right')
+        let btnLeft = this.rootElem.querySelector('._btn.x-left')
+        let btnRight = this.rootElem.querySelector('._btn.x-right')
 
         btnLeft.addEventListener('click', () => this.scrollClick('left'))
         btnRight.addEventListener('click', () => this.scrollClick('right'))

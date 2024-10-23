@@ -4,6 +4,10 @@
 @section('css-body', '-create ')
 
 
+@push('beeBefore')
+<div class="Bee"></div>
+@endpush
+
 @section('content')
 <div class="I aura">
 	@component('zADMIN._wrap.form.create', ['route' => route('admin.category.store'), 'css' => '-category'])

@@ -2,9 +2,9 @@
 
 namespace App\Http\Requests\Sms;
 
-use Illuminate\Foundation\Http\FormRequest;
+use App\Http\Requests\Sms\BaseRequest;
 
-class AskRequest extends FormRequest
+class AskRequest extends BaseRequest
 {
 
     protected $errorBag = 'newAsk';
@@ -16,38 +16,13 @@ class AskRequest extends FormRequest
 
     public function rules()
     {
-        return [
-
-            'name' => 'nullable|min:2',
-            'sms'=>'required|min:6',
-
-            //
-            'param_1'=>'nullable|string',
-            'param_2'=>'nullable|string',
-            'param_3'=>'nullable|string',
-
-            'question_1'=>'nullable|string',
-            'question_2'=>'nullable|string',
-            'question_3'=>'nullable|string',
-            'question_4'=>'nullable|string',
-
-            'type'=>'nullable|string',
-            'label'=>'nullable|string',
-
-            'id_item'=>'nullable|string',
-            'from_page'=>'nullable|string',
-            'reachgoal_id'=>'nullable|string',
-
-			//
-            'title'=>'nullable|string',
-            'lang'=>'nullable|string',
-        ];
+        return array_merge(parent::rules(), [
+            'sms' => 'required|min:6',
+        ]);
     }
 
 	public function messages() {
 		return [
-			'name.min' => 'Имя короче 2 символов',
-            //
 			'sms.required' => 'Ваш вопрос',
 			'sms.min' => 'Ваш вопрос слишком короткий, минимум 6 символов',
 		];

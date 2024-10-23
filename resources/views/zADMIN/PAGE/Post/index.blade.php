@@ -12,7 +12,7 @@
 
 @push('bee')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Материалы', 'add' => route('admin.post.create'), 'Model' => 'Post'])
-    @include('zADMIN.PAGE._lego.filter.SHEMA.index.posts')
+    @include('zADMIN.PAGE._lego.filter.SCHEMA.index.posts')
 @endpush
 
 @include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Post', 'model' => 'post'])
@@ -54,7 +54,7 @@
 
 @push('bee')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Материалы', 'add' => route('admin.post.create'), 'ico' => 'barMenu_editorial'])
-    @include('zADMIN.PAGE._lego.filter.SHEMA.index.posts')
+    @include('zADMIN.PAGE._lego.filter.SCHEMA.index.posts')
 @endpush
 
 @push('beeAfter')

@@ -2,6 +2,22 @@
 
 
 
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	img.-Blog {
+		max-width: 50vw;
+	}
+}
+
+.-Blog {
+	.Teaser {
+		._description,
+		.Preamble {
+			max-width: var(--Blog);
+		}
+	}
+}
+
+
 .Blog.-video video {
 	max-width: calc(var(--Blog) - 4rem - 3rem);
 }
@@ -9,3 +25,4 @@
 .Blog .Grid.x4 {
 	max-width: calc(var(--Blog) - 10rem);
 }
+

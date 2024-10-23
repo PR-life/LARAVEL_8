@@ -75,12 +75,17 @@ class Tag extends Model
 	}
 
 
-	public function magnetSms(){
-		return $this->hasMany(
-			Sms::class,
-			'tag_id',
+	public function sms(){
+		// return $this->hasMany(
+		// 	Sms::class,
+		// 	'tag_id',
+		// 	'id',
+		// )->where('published', 1)->orderBy('created_at', 'desc');   
+        return $this->hasMany(
+            Sms::class,
+            'tag_id',
 			'id',
-		)->where('published', 1)->orderBy('created_at', 'desc');   
+        )->orderBy('created_at', 'desc');
 	}
 	
 

@@ -42,8 +42,8 @@ class PaperEnImport implements ToCollection, WithHeadingRow
                     'name' => $item['name'],
                     'slug' => $x,
 
-                    'shema' => $item['shema'],
-                    'shema_teaser' => $item['shema_teaser'],
+                    'schema' => $item['schema'],
+                    'schema_teaser' => $item['schema_teaser'],
                     'css' => $item['css'],
 
                     'h1' => $item['h1'],
@@ -70,8 +70,6 @@ class PaperEnImport implements ToCollection, WithHeadingRow
                     'demon_par_1' => $item['demon_par_1'],
                     'demon_par_2' => $item['demon_par_2'],
                     'demon_par_3' => $item['demon_par_3'],
-
-                    'knot_1' => $item['knot_1'],
 
                     'order' => $item['order'],
                     'status' => $item['status'],

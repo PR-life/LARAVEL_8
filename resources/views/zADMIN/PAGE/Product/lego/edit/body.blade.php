@@ -13,13 +13,14 @@
 	<div class="hill-s"></div>
 
 	@component('zADMIN._wrap.Tab.edit.body')
-		@slot('nameTab1', 'name-calling')
-		@slot('nameTab3', 'Медиа')
-		@slot('nameTab4', 'Фильтр')
+		@slot('nameTab1', 'Заголовки')
+		@slot('nameTab3', 'Тизер')
+		@slot('nameTab4', 'Медиа')
+		@slot('nameTab5', 'Фильтр')
 
 		@slot('tab_1')
 			<div class="paragraphX2 / net"></div>
-			@include('zADMIN.PAGE.Product.lego.edit.lego.teaser')
+			@include('zADMIN.PAGE.Product.lego.edit.lego.names')
 		@endslot
 		@slot('tab_2')
 			<div class="paragraphX2 / net"></div>
@@ -27,9 +28,12 @@
 		@endslot
 		@slot('tab_3')
 			<div class="paragraphX2 / net"></div>
-			@include('zADMIN.PAGE._lego.edit.media.index', ['Var' => $product])
+			@include('zADMIN.PAGE.Product.lego.edit.lego.teaser')
 		@endslot
 		@slot('tab_4')
+			@include('zADMIN.PAGE._lego.edit.media.index', ['Var' => $product])
+		@endslot
+		@slot('tab_5')
 			<div class="paragraph / net"></div>
 			@include('zADMIN.PAGE.Product.lego.edit.lego.filter')
 		@endslot
@@ -66,15 +70,15 @@
 
 <div class="Details transparent">
 	<details>
-		<summary><span>details_1</span><i></i></summary>
+		<summary><span>text_global</span><i></i></summary>
 		<div class="_shell Article aura / Note -lite">
-			<textarea id="tinymce_2" name="details_1" placeholder='текст...'>{{$product->details_1}}</textarea>
+			<textarea id="tinymce_2" name="text_global" placeholder='текст...'>{{$product->text_global}}</textarea>
 		</div>
 	</details>
 	<details>
-		<summary><span>details_2</span><i></i></summary>
+		<summary><span>text_global_supporting</span><i></i></summary>
 		<div class="_shell Article aura / Note -lite">
-			<textarea id="tinymce_3" name="details_2" placeholder='текст...'>{{$product->details_2}}</textarea>
+			<textarea id="tinymce_3" name="text_global_supporting" placeholder='текст...'>{{$product->text_global_supporting}}</textarea>
 		</div>
 	</details>
 </div>
@@ -88,10 +92,10 @@
 
 
 
-@include('zADMIN._wrap.text.nameTextarea', ['name' => 'knot_1'])
+@include('zADMIN._wrap.text.nameTextarea', ['name' => 'Note'])
 <div class="paragraph"></div>
 <div class="_shell Article aura / Note -lite">
-	<textarea id="tinymce_lite_2" name="knot_1" placeholder='knot...'>{{$product->knot_1}}</textarea>
+	<textarea id="tinymce_lite_2" name="note" placeholder='note...'>{{$product->note}}</textarea>
 </div>
 @endif
  

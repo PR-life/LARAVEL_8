@@ -13,7 +13,7 @@
 
 @push('bee')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Контакт с клиентом','Model' => 'Sms','ico' => 'emailBg'])
-    @include('zADMIN.PAGE._lego.filter.SHEMA.index.sms')
+    @include('zADMIN.PAGE._lego.filter.SCHEMA.index.sms')
 @endpush
  
 @include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Sms', 'model' => 'sms'])

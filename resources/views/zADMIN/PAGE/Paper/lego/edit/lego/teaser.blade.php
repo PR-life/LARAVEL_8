@@ -28,3 +28,17 @@
     <input id="inputPrev_p" type="text" name="prev_p" value="{{$paper->prev_p ?? old('prev_p')}}" placeholder=".">
     <label class="Abs" for="inputPrev_p">@svg('plus')prev_p</label>
 </div>
+<div class="_shell x-hr Form -S / vol-Abs">
+    <input id="inputBread_name" type="text" name="bread_name" value="{{$paper->bread_name ?? old('bread_name')}}" placeholder=".">
+    <label class="Abs" for="inputBread_name">@svg('plus')bread_name</label>
+</div>
+
+
+<div class="net">
+    <div class="content-s Grey">св-ва</div>
+    <div class="paragraphX2"></div>
+    <div class="_shell x-hr Form -S / vol-Abs">
+        <input id="inputPrev_veil" type="text" name="prev_veil" value="{{$paper->prev_veil ?? old('prev_veil')}}" placeholder=".">
+        <label class="Abs" for="inputPrev_veil">@svg('plus')prev_veil</label>
+    </div>
+</div>

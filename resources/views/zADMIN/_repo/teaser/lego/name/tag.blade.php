@@ -6,7 +6,7 @@
 
 
 {{-- <a class="flex -wrap / h / cloud cross-xs" href="{{ 
-    route('admin.'.mb_strtolower(class_basename($Var)).'.edit', ['tag' => $Var->id, 'shema' => $shema ?? null])
+    route('admin.'.mb_strtolower(class_basename($Var)).'.edit', ['tag' => $Var->id, 'schema' => $schema ?? null])
     }}"> --}}
     
         <span class="flex / cross-xxs">

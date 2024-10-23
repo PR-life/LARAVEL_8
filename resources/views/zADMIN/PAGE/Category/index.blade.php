@@ -5,14 +5,14 @@
 @push('addBread')
     <li>
         <span>
-            <span class="content-xs">Связи</span>
+            <span class="content-xs">Категории</span>
         </span>
     </li>
 @endpush
 
 @push('bee')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Категории', 'add' => route('admin.category.create'), 'Model' => 'Category'])
-    @include('zADMIN.PAGE._lego.filter.SHEMA.index.categories')
+    @include('zADMIN.PAGE._lego.filter.SCHEMA.index.categories')
 @endpush
     
 @component('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Category', 'model' => 'category'])
@@ -37,6 +37,13 @@
         @slot('nodeName','Table_index')
         @slot('toggleCss','y-childrenLevel_3_off')
         @slot('name','lvl 4')
+    @endcomponent
+    @component('zADMIN._wrap.manager.btn.localStorage_toggle',['css' => 'x-exclude'])
+        @slot('localstorageName','filter_btn_table_level_4')
+        @slot('dataCheck','y-childrenLevel_4_off')
+        @slot('nodeName','Table_index')
+        @slot('toggleCss','y-childrenLevel_4_off')
+        @slot('name','lvl 5')
     @endcomponent
     @component('zADMIN._wrap.manager.btn.localStorage_toggle',['css' => 'x-exclude'])
         @slot('localstorageName','filter_btn_table_childrenLevel')

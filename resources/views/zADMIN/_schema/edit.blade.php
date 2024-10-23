@@ -10,7 +10,7 @@
 @endpush
 
 
-@section('Bee')
+@section('bee')
 <div class="Bee">
 	@stack('bee')
 </div>

@@ -12,7 +12,7 @@
 
 @push('bee')
     @include('zADMIN._lego.Bee.nameIndex',['name' => $envData['name_28051841'] ?? 'Paper', 'add' => route(strtolower('admin.' . ($envData['nameRoute'] ?? 'paper') . '.create')), 'Model' => 'Paper'])
-    @include('zADMIN.PAGE._lego.filter.SHEMA.index.papers',['Model' => $envData['Model'] ?? 'Paper', 'model' => strtolower($envData['Model']) ?? 'paper'])
+    @include('zADMIN.PAGE._lego.filter.SCHEMA.index.papers',['Model' => $envData['Model'] ?? 'Paper', 'model' => strtolower($envData['Model']) ?? 'paper'])
 @endpush
 
 @include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => $envData['Model'] ?? 'Paper', 'model' => strtolower($envData['Model']) ?? 'paper'])

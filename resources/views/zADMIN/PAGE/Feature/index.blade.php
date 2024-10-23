@@ -12,7 +12,7 @@
 
 @push('bee')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Особенности', 'add' => route('admin.feature.create'), 'Model' => 'Feature'])
-    {{-- @include('zADMIN.PAGE._lego.filter.SHEMA.index.tags') --}}
+    {{-- @include('zADMIN.PAGE._lego.filter.SCHEMA.index.tags') --}}
 @endpush
 
 

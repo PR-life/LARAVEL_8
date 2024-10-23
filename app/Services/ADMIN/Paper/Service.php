@@ -4,11 +4,12 @@ namespace App\Services\ADMIN\Paper;
 
 use Exception;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Storage;
-//
-
-use App\Models\Paper;
 use App\Services\ADMIN\BaseService;
+//
+use Illuminate\Support\Facades\Storage;
+use Intervention\Image\Facades\Image;
+//
+use App\Models\Paper;
 
 
 class Service extends BaseService {
@@ -18,6 +19,42 @@ class Service extends BaseService {
 
 		try {
 			DB::beginTransaction();
+
+
+            // Проверка, нужно ли удалить изображение
+            if (isset($param['delete_image']) && $param['delete_image'] == '1') {
+                // Удаляем старое изображение
+                $this->deleteImages($paper->image, 'paper', $paper->id);
+                $param['image'] = null;
+            }
+            unset($param['delete_image']);
+
+            // Проверка и обработка нового изображения
+            if (isset($param['image']) && $param['image'] instanceof \Illuminate\Http\UploadedFile) {
+
+
+				// Сохраняем исходник
+				$image = $param['image'];
+				$originalFilename = $paper->slug . '.' . $image->getClientOriginalExtension();
+
+				// dd($originalFilename);
+				$storagePath = public_path('storage/paper_images/bd/');
+				$param['image_original'] = $originalFilename;
+				$image->move($storagePath, $originalFilename);
+				// Путь к сохранённому исходному файлу
+				$savedOriginalPath = $storagePath . $originalFilename;
+
+				
+                // Удаляем старое изображение
+                $this->deleteImages($paper->image, 'paper', $paper->id);
+                // Обрабатываем и сохраняем новое изображение
+                $param['image'] = $this->processImages($savedOriginalPath, $paper->id, 'paper');
+
+            }
+
+
+
+
 
 			isset($param['category_ids']) ? $categoryIds = $param['category_ids'] : $categoryIds = [];
 			unset($param['category_ids']);
@@ -84,16 +121,8 @@ class Service extends BaseService {
 		try {
 			DB::beginTransaction();
 
-			// isset($param['tag_ids']) ? $tagIds=$param['tag_ids'] : $tagIds=[];
-			// unset($param['tag_ids']);
-
-			// dd($param);
         	$paper = Paper::firstOrCreate($param);
-			
-			// $paper->tags()->attach($tagIds);
-				// attach: Присоединение / Отсоединение отношений Многие ко многим
-			// $tagIds = [];
-			
+						
 			DB::commit();
 		} catch (Exception $exception) {
 			DB::rollBack();

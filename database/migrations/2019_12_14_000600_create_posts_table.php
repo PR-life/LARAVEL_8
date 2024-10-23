@@ -22,8 +22,8 @@ class CreatePostsTable extends Migration
 			$table->string('slug')->unique();
 
             $table->string('mockup')->nullable();
-            $table->string('shema')->default('default');
-            $table->string('shema_teaser')->default('default');
+            $table->string('schema')->nullable();
+            $table->string('schema_teaser')->nullable();
             $table->string('css')->nullable();
 
 			$table->string('h1')->nullable();
@@ -45,7 +45,7 @@ class CreatePostsTable extends Migration
 			// $table->string('prev_image')->nullable();
 			// $table->string('main_image')->nullable();
 
-			$table->text('knot_1')->nullable();
+            $table->text('note')->nullable();
 
             //
             $table->unsignedBigInteger('post_id')->nullable();
@@ -73,12 +73,12 @@ class CreatePostsTable extends Migration
 
 
             //
-            $table->unsignedInteger('mafia')->default('0');
+            $table->unsignedInteger('mafia')->nullable();
 
 			$table->unsignedInteger('order')->default(50);
             $table->unsignedInteger('status')->default(1);
             $table->unsignedInteger('views')->default('1');
-            $table->unsignedInteger('pin')->nullable()->default(0);
+            $table->unsignedInteger('pin')->nullable();
             $table->unsignedInteger('featured')->default('0');
             $table->unsignedInteger('published')->default(1);
 			

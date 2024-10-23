@@ -5,9 +5,9 @@
 
 	@include('_._brick.img.teaser')
 
-	@if(isset($prev_image))
+	@if(isset($image))
 	<div class="Abs -all / hidden">
-		<img src="{{$prev_image}}">
+		<img src="{{$image}}">
 	</div>
 	@endif
 
@@ -20,14 +20,19 @@
 		@case('left')
 			<div class="_left"></div>
 			@break
+		@case('mid')
+			<div class="_mid"></div>
+			@break
 		@default
 			{{-- Default case... --}}
 	@endswitch
 	</div>
 	@endisset
 
+	<div class="_dot / Abs -all"></div>
+
 	<div class="Poster -center vol-yota {{$css ?? '-Black round'}} / _indexMax index">
-		<div class="Font -S / space">
+		<div class="Font -S / space relative">
 			<div class="paragraph"></div>
 			@isset($Var->prev_h1)
 			<div class="_h -vw / b500 center-text">{!!$Var->prev_h1!!}</div>

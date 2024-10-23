@@ -1,5 +1,6 @@
 <div class="_r W-100 / flex sI eC / cross-s">
     
+    @include('zADMIN._repo.teaser.lego.cell.media')
     @include('zADMIN._repo.teaser.lego.cell.relation', ['param_seo' => true])
 
     <div class="x-HMin flex cI / Max -w6">

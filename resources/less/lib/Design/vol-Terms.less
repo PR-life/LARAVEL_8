@@ -5,7 +5,9 @@
 
     #body.vol-Terms {
         --Aside:clamp(220px,380px,25vw);
-        #oiBar > ._wrap ._hidden {
+        #oiBar > ._wrap > * {
+            // ранее был _hidden
+            background-color: red;
             padding: 40px clamp(2rem,4vw,50px) 0 clamp(1rem,2vw,35px);
         }
     }

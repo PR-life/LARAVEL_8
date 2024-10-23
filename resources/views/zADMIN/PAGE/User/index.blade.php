@@ -12,7 +12,7 @@
 
 @push('bee')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Пользователи', 'add' => route('admin.user.create'), 'Model' => 'User'])
-    @include('zADMIN.PAGE._lego.filter.SHEMA.index.users')
+    @include('zADMIN.PAGE._lego.filter.SCHEMA.index.users')
 @endpush
 
 @include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['model' => 'user', 'Model' => 'User'])

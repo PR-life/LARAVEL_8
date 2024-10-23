@@ -1,11 +1,10 @@
 <?php
 
 namespace App\Http\Requests\Sms;
-
-use App\Http\Requests\Sms\StoreRequest;
+//
 use Illuminate\Validation\Rule;
 
-class UpdateRequest extends StoreRequest
+class UpdateRequest extends BaseRequest
 {
 
     public function authorize()
@@ -18,6 +17,11 @@ class UpdateRequest extends StoreRequest
 
         return array_merge(parent::rules(), [
             'id' => 'nullable|string',
+            'email' => 'nullable|email',
+            'phone' => 'nullable|regex:/^([0-9\s\-\+\(\)]*)$/|min:9',
+			'whatsapp' => 'nullable|string',
+			'telegram' => 'nullable|string',
+			'viber' => 'nullable|string',
             //     'id' => [
             //     'required',
             //     Rule::unique('sms')->ignore($this->route('sms'))

@@ -16,7 +16,7 @@ class CreateLegoTable extends Migration
             $table->string('name');
 
             $table->string('blade_name')->nullable();
-            $table->string('shema')->default('default');
+            $table->string('schema')->nullable();
 
             $table->string('css')->nullable();
  
@@ -33,7 +33,7 @@ class CreateLegoTable extends Migration
             //
 			$table->unsignedInteger('order')->default(50);
             $table->unsignedInteger('status')->default(1);
-            $table->unsignedInteger('pin')->nullable()->default(0);
+            $table->unsignedInteger('pin')->nullable();
             $table->unsignedInteger('featured')->default('0');
             $table->unsignedInteger('published')->default('0');
 			

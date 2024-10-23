@@ -14,6 +14,8 @@ use App\Exports\PostExport;
 use App\Exports\PaperExport;
 use App\Exports\SmsExport;
 use App\Exports\FaqExport;
+use App\Exports\ItemExport;
+use App\Exports\ProductExport;
 
 
 class DownloadController extends Controller
@@ -47,12 +49,12 @@ class DownloadController extends Controller
 			case 'Sms':
 				return Excel::download( new SmsExport(), 'Sms.xlsx');
 				break;
-			// case 'SmsCourse':
-			// 	return Excel::download( new SmsCourseExport(), 'SmsCourse.xlsx');
-			// 	break;
-			// case 'Item':
-			// 	return Excel::download( new zItemExport(), 'Items.xlsx');
-			// 	break;
+			case 'Item':
+				return Excel::download( new ItemExport(), 'Items.xlsx');
+				break;
+			case 'Product':
+				return Excel::download( new ProductExport(), 'Products.xlsx');
+				break;
 			// case 'Module':
 			// 	return Excel::download( new zModuleExport(), 'Modules.xlsx');
 			// 	break;

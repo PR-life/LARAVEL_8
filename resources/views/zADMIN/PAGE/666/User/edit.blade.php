@@ -27,7 +27,7 @@
 	@component('zADMIN._wrap.form.edit', ['route' => route('admin.user.update', $user->id), 'css' => '-user'])
 
 
-		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.post.index', ['shema' => request()->get('shema')])]) --}}
+		{{-- @include('zADMIN._brick.bar.v.edit', ['route' => route('admin.post.index', ['schema' => request()->get('schema')])]) --}}
 		@include('zADMIN._brick.bar.v.edit',['routeName' => 'admin.user.index'])
 
 

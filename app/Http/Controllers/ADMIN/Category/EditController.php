@@ -7,23 +7,27 @@ use App\Http\Controllers\Controller;
 use App\Models\Category;
 use App\Models\{Tag,Group,Faq,Item,Lego};
 use App\Models\_child\Service;
+use App\Http\Controllers\ADMIN\xTraits\CommonDataTrait;
 
 class EditController extends BaseController
 {
+
+    use CommonDataTrait;
+
+
     public function __invoke($id){
 
         $category = Category::findOrFail($id);
 
         $categories = $this->getCategories();
 
-        $tags = Tag::all();
-        $groups = Group::all();
-        $faqs = Faq::all();
-        $items = Item::all();
-        $lego = Lego::all();
-        $services = Service::all();
+        // Получаем общие данные из трейта
+        $commonData = $this->getCommonData();
 
 
-        return view('zADMIN.PAGE.Category.edit', compact('category','categories','tags','faqs','groups','items','lego','services'));
+        return view('zADMIN.PAGE.Category.edit', array_merge(
+            compact('category', 'categories'),
+            $commonData
+        ));
     }
 }

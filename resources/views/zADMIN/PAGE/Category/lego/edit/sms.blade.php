@@ -1,13 +1,24 @@
-<div class="Form -S">
+<div class="void / Form -S">
+
+
+@component('_wrap.__.summary')
+    @slot('icoCloseName', 'closeRoll')
+    @slot('id', 'schema')
+    @slot('name', 'шаблон')
+
+    <div class="content-xxs Grey">Тизер</div>
+    @include('zADMIN.PAGE._lego.edit.schema.teaser', ['Var' => $category])
+
+    <div class="paragraph"></div>
+
+    <div class="content-xxs Grey">Full</div>
+    @include('zADMIN.PAGE._lego.edit.schema.full', ['Var' => $category])
+
+@endcomponent
 
 
 
-<div class="space / void">
-	<div class="_shell vol-Abs / net">
-		<input id="inputString1" type="text" name="string_1" value="{{$category->string_1 ?? old('string_1')}}" placeholder=".">
-		<label class="Abs" for="inputName">@svg('plus')string_1</label>
-	</div>
-</div>
+
 
     {{-- @component('zADMIN.PAGE._wrap.skill_open.tool_FlaberSms')
         @slot('id', 'category')

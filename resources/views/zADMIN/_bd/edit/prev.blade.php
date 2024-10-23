@@ -43,7 +43,7 @@
 		<div class="_edge / Edge / inline">
 			@include('_pattern.Preamble.Teaser.news', ['Var' => $Var])
 		</div>
-		@if ($Var->shema == 'news')
+		@if ($Var->schema == 'news')
 			@include('_pattern.Teaser._lego.PosterADMIN', ['Var' => $Var,'Route' => 'imago.morda'])
 		@else
 			<div class="Info content -ico -center -space">

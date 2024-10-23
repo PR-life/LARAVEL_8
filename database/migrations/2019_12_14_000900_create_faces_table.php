@@ -48,7 +48,6 @@ class CreateFacesTable extends Migration
             $table->string('face_par_2')->nullable();
             $table->string('face_par_3')->nullable();
 
-            $table->text('knot_1')->nullable();
             $table->text('note')->nullable();
 
             //
@@ -92,10 +91,10 @@ class CreateFacesTable extends Migration
 
 
             //
-            $table->unsignedInteger('mafia')->default('0');
+            $table->unsignedInteger('mafia')->nullable();
             $table->unsignedInteger('order')->default(50);
             $table->unsignedInteger('status')->default(1);
-            $table->unsignedInteger('pin')->nullable()->default(0);
+            $table->unsignedInteger('pin')->nullable();
             $table->unsignedInteger('published')->default(1);
             
 

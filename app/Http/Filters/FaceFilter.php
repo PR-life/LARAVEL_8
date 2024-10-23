@@ -20,8 +20,6 @@ class FaceFilter extends AbstractFilter {
             self::NAME => [$this, 'name'],
             self::SURNAME => [$this, 'surname'],
             self::CATEGORY_ID => [$this, 'category_id'],
-            // self::SHEMA => [$this, 'shema'],
-            // self::STATUS => [$this, 'status'],
         ];
     }
 	
@@ -38,12 +36,4 @@ class FaceFilter extends AbstractFilter {
     {
         $builder->where('category_id', $value);
     }
-    // public function shema(Builder $builder, $value)
-    // {
-    //     $builder->where('shema', $value);
-    // }
-    // public function status(Builder $builder, $value)
-    // {
-    //     $builder->where('status', $value);
-    // }
 }

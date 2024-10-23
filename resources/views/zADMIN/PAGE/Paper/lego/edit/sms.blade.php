@@ -54,11 +54,11 @@
     @component('_wrap.__.summary')
         @slot('cssContent', 'space-s space-zeroRight round-s / void-s')
         @slot('icoCloseName', 'closeRoll')
-        @slot('id', 'shema')
+        @slot('id', 'schema')
         @slot('name', 'шаблон')
 
         <div class="content-xxs Grey">Тизер</div>
-        @include('zADMIN.PAGE._lego.edit.shema.teaser', ['Var' => $paper])
+        @include('zADMIN.PAGE._lego.edit.schema.teaser', ['Var' => $paper])
 
         <div class="paragraph"></div>
 
@@ -112,16 +112,16 @@
 
     
     {{-- @component('zADMIN._wrap._open.tool_FlaberSms')
-        @slot('id', 'shema')
+        @slot('id', 'schema')
         @slot('name', 'шаблон')
 
         <div class="content-xxs Grey">Тизер</div>
-        @include('zADMIN.PAGE._lego.edit.shema.teaser', ['Var' => $paper])
+        @include('zADMIN.PAGE._lego.edit.schema.teaser', ['Var' => $paper])
 
         <div class="paragraph"></div>
 
         <div class="content-xxs Grey">Full</div>
-        @include('zADMIN.PAGE._lego.edit.shema.full')
+        @include('zADMIN.PAGE._lego.edit.schema.full')
 
     @endcomponent --}}
 

@@ -19,16 +19,16 @@
         {{-- @slot('cssWrap', '') --}}
         {{-- @slot('cssContent', '') --}}
         @slot('icoCloseName', 'closeRoll')
-        @slot('id', 'shema')
+        @slot('id', 'schema')
         @slot('name', 'шаблон')
 
         <div class="content-xxs Grey">Тизер</div>
-        @include('zADMIN.PAGE._lego.edit.shema.teaser', ['Var' => $product])
+        @include('zADMIN.PAGE._lego.edit.schema.teaser', ['Var' => $product])
 
         <div class="paragraph"></div>
 
-        {{-- <div class="content-xxs Grey">Full</div> --}}
-        {{-- @include('zADMIN.PAGE._lego.edit.shema.full') --}}
+        <div class="content-xxs Grey">Full</div>
+        @include('zADMIN.PAGE._lego.edit.schema.full', ['Var' => $product])
 
     @endcomponent
     @component('_wrap.__.summary')

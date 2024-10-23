@@ -22,6 +22,9 @@
 
 		//
 		width: 100%;
+		> .inline {
+			display: block;
+		}
 		> * {
 			max-width: var(--Medium);
 			margin-left: auto;
@@ -30,6 +33,8 @@
 	}
 
 	.Medium.text {
+
+	
 		> * {
 			max-width: calc(var(--Medium) + 5rem);
 			padding-left: calc(var(--x-Medium-padding)*2);
@@ -37,18 +42,23 @@
 		}
 
 
-		> .Citation.-mbl_PC {
+		> .Citation {
 			max-width: calc(var(--Medium) + 5rem - var(--x-Medium-padding)*3);
 		}
 
+		> table,
 		> .Citation,
 		> ._100 {
 			padding-right: 0;
 		}
 		
+		> table,
+		> ._100 {
+			padding-left: 0;
+		}
+
 		> ._100 {
 			max-width: 100%;
-			padding-left: 0;
 		}
 
 		> ._edge {
@@ -67,6 +77,13 @@
 		}
 
 
+		> table,
+		._100 table {
+			tr > :first-child {
+				padding-left: 2rem;
+			}
+		}
+
 		// > ._header {
 		// 	--x-Medium-padding:0;
 
@@ -78,6 +95,23 @@
 
 }
 
+
+@media (min-width: @metrika-80-plus) and (max-width: @w-max) {
+
+	.Reg.reg-m80 {
+		.Medium {
+			padding-left: 4px;
+			padding-right: 4px;
+		}
+	}
+
+}
+
+@media screen and (max-width:@metrika-80) {
+	.Reg.reg-m80 {
+		--Medium:var(--Article);
+	}
+}
 // @media (min-width: @w-menu-2-plus) and (max-width: @metrika-80) {
 // 	.-m80 {
 // 		.Medium.text {

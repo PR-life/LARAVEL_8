@@ -30,6 +30,9 @@ Route::group(['prefix' => 'asnone'], function(){
         Route::post('/storephonename', [App\Http\Controllers\sms\SmsController::class, 'storephonename'])->name('sms.storephonename');
 
 
+        Route::post('/storeorder', [App\Http\Controllers\sms\SmsController::class, 'storeOrder'])->name('sms.storeorder');
+
+
         Route::get('/manager', [App\Http\Controllers\sms\SmsManagerController::class, 'manager'])->name('sms.manager');
         Route::post('/update', [App\Http\Controllers\sms\SmsManagerController::class, 'update'])->name('sms.update');
         // Route::patch('/asnone/sms/update', [App\Http\Controllers\sms\SmsController::class, 'update'])->name('sms.update');

@@ -13,7 +13,7 @@
 
 @push('bee')
     @include('zADMIN._lego.Bee.nameIndex',['name' => 'Группы', 'add' => route('admin.group.create'), 'Model' => 'Group'])
-    @include('zADMIN.PAGE._lego.filter.SHEMA.index.groups')
+    @include('zADMIN.PAGE._lego.filter.SCHEMA.index.groups')
 @endpush
 
 @include('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Group', 'model' => 'group','hidden_btn_full' => true])

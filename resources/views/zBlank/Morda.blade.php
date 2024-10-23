@@ -1,4 +1,4 @@
-@extends('zBlank._shema.index')
+@extends('zBlank._schema.index')
 
 {{-- @section('title')Admin @endsection --}}
 

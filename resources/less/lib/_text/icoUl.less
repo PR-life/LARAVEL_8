@@ -50,6 +50,26 @@ ol.vol-fermer {
 
 //
 
+ 
+
+// ul.vol-note>li {
+// 	padding: 15px 19px 13px;
+// }
+
+ul.vol-note>li ._name::before {
+	content: '';
+	display: block;
+	width: var(--x-wh);
+	height: var(--x-wh);
+	margin-right: 1rem;
+	background-color: transparent;
+	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 18 18' xmlns='http://www.w3.org/2000/svg'%3e%3cg fill='none' stroke='%23000'%3e%3cpolyline points='17,4 7,14 1,8 '/%3e%3c/g%3e%3c/svg%3e ");
+}
+ul.vol-note>li::before  {
+	display: none;
+}
+
+
 ul.vol-check {
 	--x-wh: var(--ulol-line);
 	--x-padding-left: var(--ulol-padding-left);

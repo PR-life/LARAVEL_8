@@ -58,17 +58,26 @@
 
  
     .active {
+        .x-include,
         .x-exclude {
             position: relative;
 
             .content-xxs{ opacity: .5;}
         }
+
+        .x-include {
+            --c-btn:#000 !important;
+            --bg-btn:rgba(224, 189, 52,.5) !important;
+        }
+         
         
+        // .x-include::before,
         .x-exclude::before {
             content: '';
         }
     }
 
+    // .x-include::before,
     .x-exclude::before {        
         left: -3px;
         right: -3px;
@@ -76,9 +85,11 @@
         height: 1px;
         // transform: rotate(10deg);
         position: absolute;
-        background-color: #d54041;
         opacity: .5;
     }
 
- 
+
+    .x-exclude::before {        
+        background-color: #d54041;
+    }
 }

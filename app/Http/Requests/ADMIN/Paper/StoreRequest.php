@@ -20,15 +20,15 @@ class StoreRequest extends BaseRelationsRequest
             'name' => 'nullable|string',
 			'slug' => 'string',
 
+			//
 			'mockup' => 'nullable|string',
-			'shema' => 'nullable|string',
-			'shema_teaser' => 'nullable|string',
+			'schema' => 'nullable|string',
+			'schema_teaser' => 'nullable|string',
 			'css' => 'nullable|string',
 
+			//
 			'name_tag' => 'nullable|string',
 			'name_seo' => 'nullable|string',
-
-			//
             'h1' => 'nullable|string',
             'text' => 'nullable|string',
             'article' => 'nullable|string',
@@ -41,14 +41,16 @@ class StoreRequest extends BaseRelationsRequest
 			//
 			'bread_name' => 'nullable',
 
-			//
 			'prev_h1' => 'nullable|string',
 			'prev_h2' => 'nullable|string',
 			'prev_p' => 'nullable|string',
-            'prev_image' => 'nullable',
-            // 'prev_image' => 'nullable|file',
 			'prev_url' => 'nullable|string',
 			'prev_veil' => 'nullable|string',
+
+			//
+			'image' => 'nullable|image|mimes:jpeg,png,jpg,webp,avif|max:2048',
+			'image_original' => 'nullable|string',
+			'image_prev' => 'nullable|image|mimes:jpeg,png,jpg,webp,avif|max:2048',
 
             //
 			'foto_count_teaser' => 'nullable|integer',

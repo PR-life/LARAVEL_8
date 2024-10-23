@@ -156,6 +156,9 @@ svg.-auto{
 .floatR{
 	float:right
 }
+.clear {
+	clear: both;
+}
 .lie>*,.inline{
 	display:inline-block;
 	vertical-align:top
@@ -373,6 +376,9 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.shift-left_SPC{
 		margin-left:-5px;
 	}
+	.b600_PC{
+		font-weight:600 !important
+	}
 }
 @media (min-width:1361px) and (max-width:6000px){
 	.stop_80{
@@ -532,14 +538,22 @@ hr,.ghost,.visible,.Op,.opVersa{
 	.Abs_mbl{
 		position: absolute;
 	}
+
+	.Abs_mbl.-lt,
+	.Abs_mbl.-rt{
+		top:0;
+	}
+
+	.Abs_mbl.-l,
 	.Abs_mbl.-lt{
 		left:0;
-		top:0;
 	}
+
+	.Abs_mbl.-r,
 	.Abs_mbl.-rt{
 		right:0;
-		top:0;
 	}
+	
 }
 @media (min-width:481px) and (max-width:799px){
 	.gstrm.var-480{

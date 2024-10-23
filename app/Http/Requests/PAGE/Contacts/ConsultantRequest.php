@@ -27,8 +27,8 @@ class ConsultantRequest extends FormRequest
         return [
             'name' => 'nullable',
             // 'answer' => 'nullable',
-            // 'shema' => 'nullable',
-            // 'shema_teaser' => 'nullable',
+            // 'schema' => 'nullable',
+            // 'schema_teaser' => 'nullable',
             // 'status' => 'nullable',
             // 'tag' => 'nullable',
             // 'reviews' => 'nullable',

@@ -22,8 +22,8 @@ class StoreRequest extends BaseRelationsRequest
 
             //
             'mockup' => 'nullable|string',
-            'shema' => 'nullable|string',
-			'shema_teaser' => 'nullable|string',
+            'schema' => 'nullable|string',
+			'schema_teaser' => 'nullable|string',
 			'css' => 'nullable|string',
 
     		//

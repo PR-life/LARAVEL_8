@@ -40,7 +40,7 @@ class CreateItemmodulesTable extends Migration
 			$table->text('menu_kite')->nullable();
 
 			//
-			$table->text('knot_1')->nullable();
+ 
 
 
 			$table->unsignedInteger('order')->default(50);
@@ -50,7 +50,7 @@ class CreateItemmodulesTable extends Migration
             $table->unsignedInteger('published')->default(1);
 			
 			//
-            $table->unsignedInteger('mafia')->default('0');
+            $table->unsignedInteger('mafia')->nullable();
 
 
 			//

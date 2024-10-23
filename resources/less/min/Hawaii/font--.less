@@ -75,13 +75,23 @@ summary {
 	line-height: calc(var(--rem-p) + 8px);
 }
 
+.p.widest {
+	line-height: calc(var(--rem-p) * 1.8);
+}
+
 .p.-text,
 .text {
 	line-height: calc(var(--rem-p)*1.6);
 }
 
 .text-s {
-	--rem-p:calc(var(--font) + 1px);
+	--rem-p:calc(var(--font) + 1px) !important;
+	--rem-li:calc(var(--font) + 1px) !important;
+	--rem-h2:calc(var(--font) + 6px) !important;
+	// --rem-p:calc(var(--font) + 1px) !important;
+	// --rem-p:calc(var(--font) + 1px) !important;
+
+
 }
 
 
@@ -234,6 +244,14 @@ legend,
 }
 .content-m.widest {
 	line-height:calc(var(--rem-p) * 2);
+}
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+	.content-m.wide_PC {
+		line-height:calc(var(--rem-p) * 1.75);
+	}
+	.content-m.widest_PC {
+		line-height:calc(var(--rem-p) * 2);
+	}
 }
 
 .content-l.-lineHeight {

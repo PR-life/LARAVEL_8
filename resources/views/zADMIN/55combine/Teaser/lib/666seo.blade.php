@@ -62,7 +62,7 @@ if ($Var->name) {
     
 
                         <span class="flex / cross">
-                        @if($Var->shema_teaser == 'shema-link')
+                        @if($Var->schema_teaser == 'schema-link')
                             @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $Var->slug, 'h2' => $Var->name ?? null, 'css' => 'x-name'])
                         @else
                             @include('zADMIN.combine.Teaser._wrap.ellipsis.name_plus_h2',['Var' => $NAME, 'h2' => $Var->h2 ?? null, 'css' => 'x-name'])

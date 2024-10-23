@@ -12,13 +12,13 @@ class PostSeeder extends Seeder
     public function run()
     {
 
-        DB::table('posts')->insert([
-            'id' => '1',
-            'sku' => 'morda',
-            'name' => 'Главная',
-            'slug' => 'morda',
-            'created_at' => '2024-01-01 00:00:00',
-        ]);
+        // DB::table('posts')->insert([
+        //     'id' => '1',
+        //     'sku' => 'morda',
+        //     'name' => 'Главная',
+        //     'slug' => 'morda',
+        //     'created_at' => '2024-01-01 00:00:00',
+        // ]);
      
         DB::table('posts')->insert([
             'id' => '19',

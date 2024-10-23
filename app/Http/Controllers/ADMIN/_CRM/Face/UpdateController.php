@@ -27,7 +27,6 @@ class UpdateController extends BaseController
             
             
             'note' => 'nullable',
-            'knot_1' => 'nullable',
 
 
             //

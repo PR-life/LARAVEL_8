@@ -20,12 +20,14 @@
 
 <div class="I aura">
 	@component('zADMIN._wrap.form.edit', ['route' => route('admin.product.update', $product->id), 'css' => '-product'])
+
 		@include('zADMIN._brick.bar.v.edit',['routeName' => strtolower('admin.' . ($envData['nameRoute'] ?? 'product') . '.index'),'link_create' => route(strtolower('admin.' . ($envData['nameRoute'] ?? 'product') . '.create'))])
 
 		<div class="_shell / net">
 			@include('zADMIN._bd.edit.min',['Var'=> $product])
 		</div>
- 
+
+
 		@include('zADMIN.PAGE.Product.lego.edit.lego.Relationships')
 		<div class="paragraph"></div>
  

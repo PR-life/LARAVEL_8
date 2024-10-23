@@ -37,7 +37,7 @@ class PaperFactory extends Factory
         return [
             'name' => substr($this->faker->sentence(random_int(3,5)),0,-1),
             'slug' => $this->faker->unique()->word,
-            'shema_teaser' => $this->faker->randomElement($array = array (
+            'schema_teaser' => $this->faker->randomElement($array = array (
                 'default',
                 'default',
                 'yota',

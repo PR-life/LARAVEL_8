@@ -14,17 +14,21 @@ table.-zebra {
 	--table-c-border:#e0e0e0;
 }
 
+table.zebra-lite {
+	--table-bg-1:transparent;
+}
+
 //
-table.-zebra tr td {
+table.-zebra tbody tr td {
     background-color: var(--table-bg-1);
 }
 
-table.-zebra tr:nth-child(2n) td {
+table.-zebra tbody tr:nth-child(2n) td {
     background-color: var(--table-bg-2);
 }
 
 
-table.-line tr td{
+table.-line tbody tr td{
 	border-bottom: 1px solid var(--table-c-border);
 }
 

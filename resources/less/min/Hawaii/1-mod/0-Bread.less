@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
 
+.Bread.-nowrap {
+	> li {
+		white-space: nowrap;
+	}
+}
 .Bread.control-w {
 	li > * {
 		display: block;
@@ -19,6 +24,10 @@
 	}
 }
 
+.Bread {
+	--ulol-line:var(--ulol-font);
+}
+
 @media screen and (max-width:@w-menu-2) {
 
 	#Bread.Back {
@@ -28,7 +37,7 @@
 
 		position: absolute;
 		left: 1rem;
-		top: calc(var(--h-Top)*.5);
+		top: calc(var(--h-Top)*.25);
 
 
 		width: calc(var(--Ico)*2);
@@ -65,4 +74,11 @@
     //     --Back-edge: 7px;
     // }
  
+}
+
+
+.Bread.menu.vol-tag {
+	.x-catalog {
+		display: none;
+	}
 }

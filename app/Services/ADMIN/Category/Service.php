@@ -6,7 +6,6 @@ use Exception;
 use Illuminate\Support\Facades\DB;
 use App\Services\ADMIN\BaseService;
 
-// use App\Models\Category;
 
 class Service extends BaseService{
 
@@ -15,42 +14,74 @@ class Service extends BaseService{
 		try {
 			DB::beginTransaction();
 
-			
+
+            // Проверка на удаление изображения
+            if (isset($param['delete_image']) && $param['delete_image'] == '1') {
+				// Удаляем старое изображение
+                $this->deleteImages($category->image, 'category', $category->id);
+                $param['image'] = null;
+            }
+            unset($param['delete_image']);
+
+            // Обработка нового изображения
+            if (isset($param['image']) && $param['image'] instanceof \Illuminate\Http\UploadedFile) {
+				// Сохраняем исходник
+				$image = $param['image'];
+				$originalFilename = $category->slug . '.' . $image->getClientOriginalExtension();
+				$storagePath = public_path('storage/category_images/bd/');
+				$param['image_original'] = $originalFilename;
+				$image->move($storagePath, $originalFilename);
+				// Путь к сохранённому исходному файлу
+				$savedOriginalPath = $storagePath . $originalFilename;
+				
+				// Удаляем старое изображение
+                $this->deleteImages($category->image, 'category', $category->id);
+                // Обрабатываем и сохраняем новое изображение
+				$param['image'] = $this->processImages($savedOriginalPath, $category->id, 'category');
+            }
+
+
+			// dd($param['image']);
+
+
 			if($param['canonical'] == "/") unset($param['canonical']);
-			// dd($param);
-
-
-			isset($param['lego_ids']) ? $legoIds = $param['lego_ids'] : $legoIds = [];
-			unset($param['lego_ids']);
-
-			isset($param['tag_ids']) ? $tagIds = $param['tag_ids'] : $tagIds = [];
-			unset($param['tag_ids']);
-
-			isset($param['faq_ids']) ? $faqIds = $param['faq_ids'] : $faqIds = [];
-			unset($param['faq_ids']);
-
-			isset($param['item_ids']) ? $itemIds = $param['item_ids'] : $itemIds = [];
-			unset($param['item_ids']);
-
-			isset($param['service_ids']) ? $serviceIds = $param['service_ids'] : $serviceIds = [];
-			unset($param['service_ids']);
-			
-			//
 			isset($param['published']) ? '' : $param['published'] = '0';
 
-			// dd($itemIds);
+
 			//
-			$category->update($param);
-			$category->tags()->sync($tagIds);
-			$category->lego()->sync($legoIds);
-			$category->thisItemsPivot()->sync($itemIds);
-			$category->thisServicesPivot()->sync($serviceIds);
-			$tagIds = [];
+			// if (isset($param['category_ids'])) {
+				$category->categories()->sync($param['category_ids'] ?? []);
+				unset($param['category_ids']);
+			// }
+			// if (isset($param['faq_ids'])) {
+				$category->faqs()->sync($param['faq_ids'] ?? []);
+				unset($param['faq_ids']);
+			// }
+			// if (isset($param['item_ids'])) {
+				$category->items()->sync($param['item_ids'] ?? []);
+				unset($param['item_ids']);
+			// }
+			// if (isset($param['lego_ids'])) {
+				$category->lego()->sync($param['lego_ids'] ?? []);
+				unset($param['lego_ids']);
+			// }
+			// if (isset($param['service_ids'])) {
+				$category->services()->sync($param['service_ids'] ?? []);
+				unset($param['service_ids']);
+			// }
+			// if (isset($param['tag_ids'])) {
+				$category->tags()->sync($param['tag_ids'] ?? []);
+				unset($param['tag_ids']);
+			// }
+ 
+ 
+ 
+ 
+ 
 
 
+
 			$category->update($param);
-			$category->faqs()->sync($faqIds);
-			$faqIds = [];
 
 
 			DB::commit();
@@ -68,14 +99,6 @@ class Service extends BaseService{
     public function store($param) {
 		try {
 			DB::beginTransaction();
-
-			// isset($param['tag_ids']) ? $tagIds=$param['tag_ids'] : $tagIds=[];
-			// unset($param['tag_ids']);
-
-        	// $post = Post::firstOrCreate($param);
-			// $post->tags()->attach($tagIds);
-			// 	// attach: Присоединение / Отсоединение отношений Многие ко многим
-			// $tagIds = [];
 			
 			DB::commit();
 		} catch (Exception $exception) {
@@ -84,7 +107,59 @@ class Service extends BaseService{
             abort(500);
 		}
 
-		// return $post;
-
     }
+
+	//
+	//
+	// private function deleteCategoryImages($category) {
+	// 	if ($category->image) {
+	// 		// Удаляем основное изображение
+	// 		Storage::disk('public')->delete($category->image);
+	
+	// 		// Удаляем файл иконки (100x100)
+	// 		$icon100Filename = 'ico_100x100_' . $category->id . '.png';
+	// 		Storage::disk('public')->delete('ico/category/' . $icon100Filename);
+	
+	// 		// Удаляем файл иконки (200x200)
+	// 		$icon200Filename = 'ico_200x200_' . $category->id . '.png';
+	// 		Storage::disk('public')->delete('ico/category/' . $icon200Filename);
+	
+	// 		// Удаляем файл в формате PNG
+	// 		$pngFilename = 'category_images/' . $category->slug . '.png';
+	// 		Storage::disk('public')->delete($pngFilename);
+	// 	}
+	// }
+	// private function processCategoryImages($category, $image) {
+	// 	// Преобразуем изображение в PNG и сохраняем
+	// 	$filename = $this->saveImage($image, $category);
+	
+	// 	// Создание иконок
+	// 	$this->createCategoryIcons($image, $category->id);
+	
+	// 	return $filename;
+	// }
+	
+	// private function saveImage($image, $category) {
+	// 	// Генерация имени файла и сохранение изображения в формате PNG
+	// 	$filename = time() . '_' . $category->id . '.png';
+	// 	$imageResized = Image::make($image)->encode('png');
+	// 	$imageResized->save(public_path('storage/category_images/' . $filename));
+	
+	// 	return $filename;
+	// }
+	// private function createCategoryIcons($image, $categoryId) {
+	// 	$sizes = [100, 200];
+	// 	foreach ($sizes as $size) {
+	// 		$this->createCategoryIcon($image, $categoryId, $size);
+	// 	}
+	// }
+	// private function createCategoryIcon($image, $categoryId, $size) {
+	// 	// Генерация имени файла для иконки
+	// 	$iconFilename = 'ico_' . $size . 'x' . $size . '_' . $categoryId . '.png';
+		
+	// 	// Изменение размера изображения и его сохранение
+	// 	$iconImage = Image::make($image)->resize($size, $size)->encode('png');
+	// 	$iconImage->save(public_path('storage/ico/category/' . $iconFilename));
+	// }
+
 }

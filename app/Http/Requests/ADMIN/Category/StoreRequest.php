@@ -20,6 +20,12 @@ class StoreRequest extends BaseRelationsRequest
 			'name' => 'required|string',
             'slug' => 'required',
             
+            //
+            'schema' => 'nullable|string',
+			'schema_teaser' => 'nullable|string',
+			'css' => 'nullable|string',
+
+
             'name_tag' => 'nullable|string',
             'name_seo' => 'nullable|string',
             'h1' => 'nullable|string',
@@ -36,11 +42,17 @@ class StoreRequest extends BaseRelationsRequest
             'prev_h2' => 'nullable',
             'prev_p' => 'nullable',
             'prev_url' => 'nullable',
+
+            //
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp,avif|max:2048',
+            'image_original' => 'nullable|string',
+            'image_prev' => 'nullable|image|mimes:jpeg,png,jpg,webp,avif|max:2048',
  
 			//
+            'text_global' => 'nullable|string',
+            'text_global_supporting' => 'nullable|string',
             'text_top' => 'nullable|string',
             'text_bottom' => 'nullable|string',
-            'string_1' => 'nullable|string',
 
             //
 			'en_name' => 'nullable|string',

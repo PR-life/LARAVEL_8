@@ -27,7 +27,7 @@ class AddParamToUsersTable extends Migration
 				$table->unsignedInteger('status')->default(1);
 				$table->unsignedInteger('published')->default(1);
 				
-				$table->unsignedInteger('mafia')->default('0');
+				$table->unsignedInteger('mafia')->nullable();
 			});
 
 

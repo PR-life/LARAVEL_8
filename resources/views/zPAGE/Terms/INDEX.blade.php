@@ -39,7 +39,7 @@
 					</div>
 				</div>
 				<div id="btn_17091301" class="none / Burger vol-def / pointer" 
-					data-click data-node='body' data-css data-remove='shema-aside aside-on fix -veil' data-loop>
+					data-click data-node='body' data-css data-remove='schema-aside aside-on fix -veil' data-loop>
 					@svg('close')
 				</div>
 			</div> --}}

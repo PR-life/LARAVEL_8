@@ -12,7 +12,7 @@ $arrCSS = [
     'preloadCss' => 'stylesheet',
     'linkCssMin' => '/css/minAdmin.css',
     'linkCssApp' => '/css/appAdmin.css',
-    'cssMilk' => 'skimp-size_Aside'
+    // 'cssMilk' => 'skimp-size_Aside'
 ])
 
 {{-- @push('head',)

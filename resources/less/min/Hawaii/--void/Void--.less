@@ -28,7 +28,7 @@ ul.slim-s, ol.slim-s {
 
  
 .Message.void,
-.Void.-slim {
+.Void.void-slim {
 	--x-void:7px;
 }
 
@@ -47,20 +47,16 @@ ul.slim-s, ol.slim-s {
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
 
-	.void {
-		--x-void:var(--void);
-	}
-
 	.void.menu.-footer {
 		--x-void:1rem;
 	}
-
 
 	.Golden.Void,
 	.Grid.Void {
 		--x-void: 0;
 	}
 
+	.void-m_PC,
 	.Void.-M,
 	.void-m{
 		--x-void:2rem;
@@ -79,6 +75,7 @@ ul.slim-s, ol.slim-s {
 		--x-void:7px;
 	}
 
+	.Void.Chat,
 	.void.x-def {
 		--x-void:1rem;
 	}
@@ -88,13 +85,25 @@ ul.slim-s, ol.slim-s {
 		margin-bottom:  0 !important;
 	}
 
+	.void-m_PC,
+	.void_PC {
+		> * {
+			margin-bottom: var(--x-void);
+			margin-top: var(--x-void);
+		  }
+	}
+
 }
 
 @media screen and (max-width: @w-menu-2) {
 
-
+	.Void.Chat,
 	.void_mbl {
 		--x-void:1rem;
+	}
+
+	.void-m_mbl {
+		--x-void:2rem;
 	}
 
 	//
@@ -112,7 +121,8 @@ ul.slim-s, ol.slim-s {
 		--x-void:7px;
 	}
 
-	.void_mbl > {
+	.void-m_mbl,
+	.void_mbl {
 		> * {
 			margin-bottom: var(--x-void);
 			margin-top: var(--x-void);
@@ -124,8 +134,8 @@ ul.slim-s, ol.slim-s {
 
 ///
 
-.void-1 {
-	--x-void: 1rem !important;
+.void {
+	--x-void:var(--void);
 }
 
 .void,
@@ -229,6 +239,7 @@ ul.slim-s, ol.slim-s {
 .paragraph {height: var(--font);}
 .paragraphX2 {height: calc(var(--font)*2);}
 .paragraph-s {height: calc(var(--font)*.25);}
+.paragraph-sX2 {height: calc(var(--font)*.5);}
 .paragraph-m {height: calc(var(--font)*1.75);}
 
 

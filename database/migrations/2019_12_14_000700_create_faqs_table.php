@@ -29,7 +29,7 @@ class CreateFaqsTable extends Migration
 
             $table->string('route_name')->nullable();
 
-			$table->text('knot_1')->nullable();
+            $table->text('note')->nullable();
 
 
             //
@@ -50,12 +50,12 @@ class CreateFaqsTable extends Migration
             $table->foreign('faq_id')->references('id')->on('faqs')->onDelete('cascade');
 
             //
-            $table->unsignedInteger('mafia')->default('0');
+            $table->unsignedInteger('mafia')->nullable();
 
 			$table->unsignedInteger('order')->default(50);
             $table->unsignedInteger('status')->default(1);
 
-            $table->unsignedInteger('pin')->nullable()->default(0);
+            $table->unsignedInteger('pin')->nullable();
             $table->unsignedInteger('featured')->default('0');
             $table->unsignedInteger('published')->default(1);
 			

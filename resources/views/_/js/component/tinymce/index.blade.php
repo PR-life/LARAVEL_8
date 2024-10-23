@@ -14,7 +14,7 @@
 <script>
 
     tinymce.init({
-      selector: '#tinymce_1, #tinymce_2, #tinymce_3, #tinymce_4',
+      selector: '#tinymce_1, #tinymce_2, #tinymce_3, #tinymce_4, #tinymce_5',
       content_css: "{{Request::root() . mix('/css/env/tinymce.css')}}",
       language: 'ru',
       height: parseInt(document.documentElement.clientHeight) * .8,
@@ -101,7 +101,9 @@
         });
       },
 
-      extended_valid_elements: 'b,strong,i[*], summary[*], blockquote[*]',  // Разрешаем все атрибуты для i, summary, blockquote
+      extended_valid_elements: 'svg[*],b,strong,i[*], summary[*], blockquote[*]',  // Разрешаем все атрибуты для i, summary, blockquote
+      // extended_valid_elements: 'svg[*],use[*],a[*],strong[*],p[class],svg[class],use[xlink|href],a[class|href|target],b,strong,i[*], summary[*], blockquote[*]',
+
 
     });
  
