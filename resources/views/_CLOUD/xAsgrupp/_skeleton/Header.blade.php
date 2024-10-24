@@ -3,7 +3,7 @@
 		<div class="Article W-100 / flex cI cC_mbl / cross_PC">
 			<a class="x-ava flex none_mbl block_morda / relative" href="/">
 				<span class="Abs -left / pr-2 x-opVersa none_Beyond none_mbl">
-					<span class="block Ico -L"></span>
+					<span class="block Ico -M"></span>
 				</span>
 				<span class="h b500 nowrap / none_beyond block_morda">Арт Сити Групп</span>
 			</a>

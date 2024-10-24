@@ -12,12 +12,12 @@
 </div>
 
 <style>
-  .Logo {
+  /* .Logo {
     --Logo:40px;
     min-width: 40px !important;
   }
 
   #body.schema-aside #wrapLogoGoo {
     display: none
-  }
+  } */
 </style>
