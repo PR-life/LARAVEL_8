@@ -10,8 +10,10 @@
 </a>
 <div class="none_mbl / Min -w1">
     @guest()
-        <a href="{{route('login')}}" class="Btn -auto -shadow slimS vol-white round-m / Shift -right -step / none_beyond">войти</a>
-        <a href="{{route('login')}}" class="content / none Beyond">войти</a>
+        <a href="{{route('login')}}" class="Btn -autoS -shadow vol-white round-m slim-xs / Shift555 -right -step / none_beyond55">
+            <span class="content-min">войти</span>
+        </a>
+        {{-- <a href="{{route('login')}}" class="content / none Beyond">войти</a> --}}
     @endguest
     @auth()
         <div class="flex eC">
