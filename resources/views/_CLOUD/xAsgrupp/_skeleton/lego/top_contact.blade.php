@@ -10,7 +10,7 @@
 </a>
 <div class="none_mbl / Min -w1">
     @guest()
-        <a href="{{route('login')}}" class="Btn -autoS -shadow22 vol-white round-m slim-xs / Shift555 -right -step / none_beyond55">
+        <a href="{{route('login')}}" class="Btn -autoS -shadow555 vol-white round-m slim-xs / Shift555 -right -step / none_beyond55">
             <span class="content-min">войти</span>
         </a>
         {{-- <a href="{{route('login')}}" class="content / none Beyond">войти</a> --}}
