@@ -1,7 +1,7 @@
 <div class="Scroll">
 
 
-    <div class="Abs -right / pointer" data-click data-css data-node='body' data-localstorage localstorage-name='body' data-toggle="schema-aside">
+    <div class="Abs -right / pointer none_mbl" data-click data-css data-node='body' data-localstorage localstorage-name='body' data-toggle="schema-aside">
         <svg class="ico24101019 noEvents" viewBox="0 0 42 142" fill="none">
             <g clip-path="url(#clip24101019)">
                 <g filter="url(#filter24101019)">

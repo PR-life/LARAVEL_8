@@ -2,12 +2,12 @@
 
 	<div class="Box edge-20090815 / Top -h / flex bC_PC eI_beyond555 / bC_mbl cI_mbl">
 		<div class="none_mbl / flex cI">
-			<ul class="menu x-top / lie cross">
+			{{-- <ul class="menu x-top / lie cross">
 				<li><a href="">Доставка</a></li>
 				<li><a href="">Акции</a></li>
 				<li><a href="">О компании</a></li>
 				<li><a href="">Блог</a></li>
-			</ul>
+			</ul> --}}
 		</div>
 		<div class="_left none_mbl flex_morda5555 / flex cI_PC cross-m">
 			@include('_CLOUD.xAsgrupp._skeleton.lego.top_contact')
@@ -30,12 +30,5 @@
 
 <style>
 /* new css */
-#Top {
-	background-color: #f1f1f1;
-}
 
-.menu.x-top {
-	--c-menu:#868686;
-	--c-menu-hover:#5073a2;
-}
 </style>

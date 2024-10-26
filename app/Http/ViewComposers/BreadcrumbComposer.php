@@ -35,7 +35,7 @@ class BreadcrumbComposer
         } elseif ($category->parentCategory) {
             $this->addParentCategories($breadcrumbs, $category->parentCategory);
             $breadcrumbs[] = [
-                'name' => $category->name,
+                'name' => $category->bread_name ?? $category->name,
                 'url' => $category->canonical ?? "/catalog/{$category->slug}",
                 'slug' => $category->slug
             ];
@@ -118,7 +118,7 @@ class BreadcrumbComposer
         }
 
         $breadcrumbs[] = [
-            'name' => $category->name,
+            'name' => $category->bread_name ?? $category->name,
             'url' => $category->canonical ?? "/catalog/{$category->slug}",
             'slug' => $category->slug
         ];

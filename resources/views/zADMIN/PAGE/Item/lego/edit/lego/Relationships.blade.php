@@ -1,4 +1,6 @@
 @component('zADMIN._wrap.Relationships.index')
+
+    {{-- Главные связи --}}
     @component('zADMIN._wrap.Relationships.line')
         @slot('id','22071757')
         @slot('name22071756','Главные связи')
@@ -13,15 +15,6 @@
                     ])
             @endcomponent
         </div>
-
-        <div class="Min -w5 / wrap-relationship -solo / round">
-            @include('zADMIN._wrap.select.name',['Var' => 'СТИЛЬ'])
-            @component('zADMIN._wrap.select.xStyle.index')
-                @include('_._brick.select.tag.edit.index',['Tags' => $tagsStyle ?? [], 'Var' => $item->style_id])
-            @endcomponent
-        </div>
-
-
         <div class="Min -w5 / wrap-relationship -solo / round">
             @include('zADMIN._wrap.select.name',['Var' => 'Тег'])
             @component('zADMIN._wrap.select.tag.index')
@@ -34,31 +27,12 @@
                 @include('_._brick.select.group.edit.index',['Groups' => $groups, 'Var' => $item->group_id])
             @endcomponent
         </div>
+
+        @includeIf('zADMIN.PAGE.Item._this.edit.Relationships.main')
     @endcomponent
 
-    @component('zADMIN._wrap.Relationships.line')
-        @slot('id','22071758')
-        @slot('name22071756','Многие связи')
-        <div class="flex cross">
-            <div class="Min -w5">
-                @include('zADMIN._wrap.select.name',['Var' => 'Теги'])
-                <div class="wrap-relationship -multiple">
-                    @component('zADMIN._wrap.select.tags.index')
-                        @include('_._brick.select.tags.edit.index',['Tags' => $tags, 'arr' => $item->tags->pluck('id')->toArray()])
-                    @endcomponent
-                </div>
-            </div>
-            <div class="Min -w5">
-                @include('zADMIN._wrap.select.name',['Var' => 'Категории'])
-                <div class="wrap-relationship -multiple">
-                    @component('zADMIN._wrap.select.categories.index')
-                        @include('_._brick.select.categories.edit.index',['Categories' => $categories,'arr' => $item->categories->pluck('id')->toArray()])
-                    @endcomponent
-                </div>
-            </div>
-        </div>
-    @endcomponent
 
+    {{-- Solo связи --}}
     @component('zADMIN._wrap.Relationships.line')
         @slot('id','22071700')
         @slot('name22071756','Solo связи')
@@ -77,6 +51,35 @@
         </div>
 
     @endcomponent
+
+
+    {{-- Многие связи --}}
+    @component('zADMIN._wrap.Relationships.line')
+        @slot('id','22071758')
+        @slot('name22071756','Многие связи')
+        <div class="flex cross">
+            <div class="Min -w5">
+                @include('zADMIN._wrap.select.name',['Var' => 'Теги'])
+                <div class="wrap-relationship -multiple">
+                    @component('zADMIN._wrap.select.tags.index')
+                        @include('_._brick.select.tags.edit.index',['Tags' => $tags, 'arr' => $item->tags->pluck('id')->toArray()])
+                    @endcomponent
+                </div>
+            </div>
+            {{-- <div class="Min -w5">
+                @include('zADMIN._wrap.select.name',['Var' => 'Категории'])
+                <div class="wrap-relationship -multiple">
+                    @component('zADMIN._wrap.select.categories.index')
+                        @include('_._brick.select.categories.edit.index',['Categories' => $categories,'arr' => $item->categories->pluck('id')->toArray()])
+                    @endcomponent
+                </div>
+            </div> --}}
+        </div>
+
+        {{-- @dd($item->categories->pluck('id')->toArray()) --}}
+    @endcomponent
+
+ 
 
 
     @component('zADMIN._wrap.Relationships.line')

@@ -22,6 +22,9 @@ class BaseService {
     public function deleteImages($imagePath, $imagePrefix, $id)
     {
         if ($imagePath) {
+
+            // dd($imagePath);
+
             // Удаляем основное изображение
             Storage::disk('public')->delete($imagePath);
     
@@ -33,8 +36,9 @@ class BaseService {
             }
     
             // Удаляем основной PNG файл
-            $pngFilename = $imagePrefix . '_images/' . $id . '.png';
-            Storage::disk('public')->delete($pngFilename);
+            // $pngFilename = $imagePrefix . '_images/' . $id . '.png';
+            
+            // Storage::disk('public')->delete($pngFilename);
         }
     }
 
@@ -113,6 +117,14 @@ class BaseService {
             case 'paper':
                 $width = 560;
                 $height = 315;
+                break;
+            case 'item':
+                $width = 560;
+                $height = 315;
+
+                $previewImage = Image::make($image)->fit(480, 480)->encode('png');
+                $previewImage->save(public_path('storage/' . $imagePrefix . '_images/teaser/square/' . $filename));
+
                 break;
             default:
                 $width = 300; // Значение по умолчанию
