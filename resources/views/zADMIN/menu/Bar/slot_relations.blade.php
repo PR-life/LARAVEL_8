@@ -24,7 +24,15 @@
         <span class="block / Ico -XS">
             @svg('plus')
         </span>
-    @endcomponent 
+    @endcomponent
+    @component('_wrap.Chunk.Aside.index')
+        @slot('routeName', 'admin.collection.index')
+        @slot('linkAdd', route('admin.collection.create'))
+        @slot('name', 'Коллекции')
+        <span class="block / Ico -XS">
+            @svg('plus')
+        </span>
+    @endcomponent
     @component('_wrap.Chunk.Aside.index')
         @slot('routeName', 'admin.feature.index')
         @slot('linkAdd', route('admin.feature.create'))

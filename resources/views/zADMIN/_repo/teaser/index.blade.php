@@ -17,14 +17,14 @@ if(isset($css)) {
 
 
     @slot('cell_2')
-        @if($Var->tags->count())
+        {{-- @if($Var->tags->count())
             <div class="paragraphX2"></div>
             <ul class="menu -tag -XS / lie cloud">
                 @foreach($Var->tags as $tagForeach)
                     <li><a class="content-xxxs round-xs" href="{{route('admin.tag.edit', $tagForeach->id)}}" target="_blank">{{$tagForeach->name}}</a></li>
                 @endforeach
             </ul>
-        @endif
+        @endif --}}
     @endslot
 
     <div class="flex bC">
@@ -65,7 +65,7 @@ if(isset($css)) {
 
 
         <div class="_r / flex sI / cross-s">
-            @include('zADMIN._repo.teaser.lego.cell.relation', ['param_seo' => null])
+            {{-- @include('zADMIN._repo.teaser.lego.cell.relation', ['param_seo' => null]) --}}
 
             <div class="x-HMin flex cI">
                 @include('zADMIN._repo.teaser.lego.cell.bd.date')
