@@ -29,12 +29,3 @@
  
 @includeIf('xAsgrupp.mod.Bread.index')
 {{-- @includeIf('zTHIS.honeycomb.Bread.demo') --}}
-
-
-
-<style>
-	/* new css */
-	#Header {
-		border-bottom: 1px solid #ebebeb;
-	}
-</style>

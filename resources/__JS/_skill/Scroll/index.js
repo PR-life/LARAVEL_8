@@ -1,4 +1,4 @@
-import { easeInOutCubic } from '../easing.js';
+import { easeInOutCubic } from '../easeFunctions.js';
 // import { delegate } from '../../_sherpa/delegate.js';
 
 let links = document.querySelectorAll(".JsScroll.-link a");
