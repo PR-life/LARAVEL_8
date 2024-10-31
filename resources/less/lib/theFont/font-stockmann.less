@@ -1,0 +1,29 @@
+@charset "UTF-8";
+
+
+//CoFoSan
+
+html {
+    --family-Stockmann:'stockmann';
+}
+
+.familyStockmann,
+.Family-Stockmann * {
+	font-family: var(--family-Stockmann) !important;
+}
+
+
+@font-face {
+    font-family: 'stockmann';
+    font-style: normal;
+    font-weight: 400;
+    src: local('stockmann'), url(/font/stockmann/400.woff2) format('woff2');
+    font-display: swap;
+}
+@font-face {
+    font-family: 'stockmann';
+    font-style: normal;
+    font-weight: 700;
+    src: local('stockmann'), url(/font/stockmann/700.woff2) format('woff2');
+    font-display: swap;
+}

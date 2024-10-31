@@ -2,20 +2,6 @@
 
 @section('title')edit. Product - {{$product->name}} @endsection
 
-@push('addBread')
-	<li>
-		<span>
-			<span class="content-xs">Контент</span>
-		</span>
-	</li>
-	<li>
-		<span>
-			<span class="content-xs">Товар</span>
-		</span>
-	</li>
-@endpush
-
-
 @section('content')
 
 <div class="I aura">
@@ -26,7 +12,6 @@
 		<div class="_shell / net">
 			@include('zADMIN._bd.edit.min',['Var'=> $product])
 		</div>
-
 
 		@include('zADMIN.PAGE.Product.lego.edit.lego.Relationships')
 		<div class="paragraph"></div>

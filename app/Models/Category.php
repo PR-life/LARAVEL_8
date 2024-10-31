@@ -50,6 +50,11 @@ class Category extends BaseContent
         return $this->hasMany(Paper::class)->orderBy('order', 'asc');
     }
 
+    public function item() 
+    {
+        return $this->hasMany(Item::class)->orderBy('order', 'asc');
+    }
+
     public function getAllParents() 
     {
         $parents = collect();

@@ -1,7 +1,7 @@
 <div class="edge-leftS / Edge">
 	@include('_wrap.Preamble.Teaser.blog.face_out', ['Var' => $Var, 'link' => $routeName])
 </div>
-<div class="x-wrap--a relative">
+<div class="relative">
 	@if ($Var->schema_teaser == 'poster')
 		<div class="paragraph"></div>
 		@include('_wrap._teaser._brick.descriptionMin', ['Var' => $Var, 'link' => $routeName])

@@ -1,4 +1,6 @@
 @component('zADMIN._wrap.Relationships.index')
+
+    {{-- Главные связи --}}
     @component('zADMIN._wrap.Relationships.line')
         @slot('id','22071757')
         @slot('name22071756','Главные связи')
@@ -13,15 +15,6 @@
                     ])
             @endcomponent
         </div>
-
-        <div class="Min -w5 / wrap-relationship -solo / round">
-            @include('zADMIN._wrap.select.name',['Var' => 'СТИЛЬ'])
-            @component('zADMIN._wrap.select.xStyle.index')
-                @include('_._brick.select.tag.edit.index',['Tags' => $tagsStyle ?? [], 'Var' => $item->style_id])
-            @endcomponent
-        </div>
-
-
         <div class="Min -w5 / wrap-relationship -solo / round">
             @include('zADMIN._wrap.select.name',['Var' => 'Тег'])
             @component('zADMIN._wrap.select.tag.index')
@@ -34,8 +27,33 @@
                 @include('_._brick.select.group.edit.index',['Groups' => $groups, 'Var' => $item->group_id])
             @endcomponent
         </div>
+
+        @includeIf('zADMIN.PAGE.Item._this.edit.Relationships.main')
     @endcomponent
 
+
+    {{-- Solo связи --}}
+    @component('zADMIN._wrap.Relationships.line')
+        @slot('id','22071700')
+        @slot('name22071756','Solo связи')
+        <div class="Min -w5 / wrap-relationship -solo / round">
+            @include('zADMIN._wrap.select.name',['Var' => 'Родитель'])
+            @component('zADMIN._wrap.select.item.main', ['id' => 'item'])
+                @include('_._brick.select.item.edit.main',['Items' => $items, 'Var' => $item->item_id])
+            @endcomponent
+        </div>
+        
+        <div class="Min -w5 / wrap-relationship -solo / round">
+            @include('zADMIN._wrap.select.name',['Var' => 'Surrogate'])
+            @component('zADMIN._wrap.select.item.surrogate', ['id' => 'surrogate'])
+                @include('_._brick.select.item.edit.surrogate',['Items' => $items, 'Var' => $item->item_surrogate_id])
+            @endcomponent
+        </div>
+
+    @endcomponent
+
+
+    {{-- Многие связи --}}
     @component('zADMIN._wrap.Relationships.line')
         @slot('id','22071758')
         @slot('name22071756','Многие связи')
@@ -56,27 +74,20 @@
                     @endcomponent
                 </div>
             </div>
-        </div>
-    @endcomponent
-
-    @component('zADMIN._wrap.Relationships.line')
-        @slot('id','22071700')
-        @slot('name22071756','Solo связи')
-        <div class="Min -w5 / wrap-relationship -solo / round">
-            @include('zADMIN._wrap.select.name',['Var' => 'Родитель'])
-            @component('zADMIN._wrap.select.item.main', ['id' => 'item'])
-                @include('_._brick.select.item.edit.main',['Items' => $items, 'Var' => $item->item_id])
-            @endcomponent
-        </div>
-        
-        <div class="Min -w5 / wrap-relationship -solo / round">
-            @include('zADMIN._wrap.select.name',['Var' => 'Surrogate'])
-            @component('zADMIN._wrap.select.item.surrogate', ['id' => 'surrogate'])
-                @include('_._brick.select.item.edit.surrogate',['Items' => $items, 'Var' => $item->item_surrogate_id])
-            @endcomponent
+            <div class="Min -w5">
+                @include('zADMIN._wrap.select.name',['Var' => 'Коллекции'])
+                <div class="wrap-relationship -multiple">
+                    @component('zADMIN._wrap.select.collections.index')
+                        @include('_._brick.select.collections.edit.index',['Collections' => $collections,'arr' => $item->collections->pluck('id')->toArray()])
+                    @endcomponent
+                </div>
+            </div>
         </div>
 
+        {{-- @dd($item->categories->pluck('id')->toArray()) --}}
     @endcomponent
+
+ 
 
 
     @component('zADMIN._wrap.Relationships.line')

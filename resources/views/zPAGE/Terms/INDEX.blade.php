@@ -3,7 +3,7 @@
 	$arrCSS = [];
 ?>
 
-@extends('zTHIS._schema.ASIDE')
+@extends('zTHIS._schema.ASIDE.asgrupp')
  
 @push('css-body', 'Design schema-aside aside-AR aside-sticky aside-wide / vol-Terms x-Terms / x-Dark / skimp-size_Aside ')
 @push('style_mbl')

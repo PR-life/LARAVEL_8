@@ -3,9 +3,9 @@
 		<div class="Article W-100 / flex cI cC_mbl / cross_PC">
 			<a class="x-ava flex none_mbl block_morda / relative" href="/">
 				<span class="Abs -left / pr-2 x-opVersa none_Beyond none_mbl">
-					<span class="block Ico -L"></span>
+					<span class="block Ico -M"></span>
 				</span>
-				<span class="content-m b500 nowrap / none_beyond block_morda">Арт Сити Групп</span>
+				<span class="h b500 nowrap / none_beyond block_morda">Арт Сити Групп</span>
 			</a>
 			<div class="W-100 / flex cI / none_morda">
 				<div class="x-line"></div>
@@ -14,7 +14,7 @@
 		<div class="none Beyond none_mbl x-01091746 / ml-2">
 			@include('_CLOUD.xAsgrupp._skeleton.brick.btn_search')
 			<div class="content ghost">_</div>
-			<div class="Btn -auto -shadow slimS vol-white round-m / Shift -right -step">
+			<div class="Btn -auto -shadow slim-s vol-white round-m / Shift -right -step">
 				Контакты
 			</div>
 		</div>

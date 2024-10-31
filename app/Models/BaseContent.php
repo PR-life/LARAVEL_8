@@ -6,7 +6,7 @@ use Illuminate\Database\Eloquent\Model;
 
 use Carbon\Carbon;
 //
-use App\Models\_child\Service;
+use App\Models\_child\{Collection,Service};
 
 class BaseContent extends Model
 {
@@ -179,6 +179,16 @@ class BaseContent extends Model
             Tag::class,
             'tag_id',
 			'id',
+        );
+    }
+
+    public function collections()
+    {
+        return $this->belongsToMany(
+            Collection::class,
+            $this->getCollectionPivotTable(),
+            $this->getForeignKey(),
+            'collection_id'
         );
     }
 

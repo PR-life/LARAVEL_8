@@ -1,5 +1,3 @@
-# *
-# !.gitignore
-/analytica
-/PAGE
-/style
+*
+!.gitignore
+!/_lego

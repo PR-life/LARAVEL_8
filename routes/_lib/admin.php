@@ -5,6 +5,17 @@ use Illuminate\Support\Facades\Route;
 Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']], function () {
     Route::group(['namespace' => '_lib'], function(){
         
+
+        Route::group(['namespace' => 'Collection', 'prefix' => 'collections'], function(){
+            Route::get('/', 'IndexController')->name('collection.index');
+            Route::get('/create', 'CreateController')->name('collection.create');
+            Route::patch('/{collection}', 'UpdateController')->name('collection.update');
+            Route::post('/', 'StoreController')->name('collection.store');
+            Route::get('/{collection}/edit', 'EditController')->name('collection.edit');
+            Route::delete('/{collection}', 'DeleteController')->name('collection.delete');
+        });
+
+
         Route::group(['namespace' => 'Service', 'prefix' => 'services'], function(){
             Route::get('/', 'IndexController')->name('service.index');
             Route::get('/create', 'CreateController')->name('service.create');
@@ -13,6 +24,7 @@ Route::group(['namespace' => 'ADMIN','middleware' => ['auth','admin','verified']
             Route::get('/{service}/edit', 'EditController')->name('service.edit');
             Route::delete('/{service}', 'DeleteController')->name('service.delete');
         });
+        
         Route::group(['namespace' => 'Telegram', 'prefix' => 'telegram'], function(){
             Route::get('/', 'IndexController')->name('telegram.index');
             Route::get('/create', 'CreateController')->name('telegram.create');

@@ -2,20 +2,7 @@
 
 @section('title')edit. Item - {{$item->name}} @endsection
 
-@push('addBread')
-	<li>
-		<span>
-			<span class="content-xs">Контент</span>
-		</span>
-	</li>
-	<li>
-		<span>
-			<span class="content-xs">Статьи</span>
-		</span>
-	</li>
-@endpush
-
-
+ 
 @section('content')
 
 <div class="I aura">

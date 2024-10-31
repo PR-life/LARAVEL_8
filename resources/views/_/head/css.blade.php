@@ -8,5 +8,5 @@
 <link href="{{ mix('/css/solo/Start.css') }}" rel="stylesheet">
 
 <noscript><link href="{{ mix($linkCssApp ?? '/css/app.css') }}" rel="stylesheet"></noscript>
-{{-- @yield('linkCss') --}}
-{{-- @stack('linkCss') --}}
+@yield('linkCss')
+@stack('linkCss')

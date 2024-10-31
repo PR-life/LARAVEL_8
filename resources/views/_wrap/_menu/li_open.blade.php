@@ -1,10 +1,12 @@
 <li class="{{$css ?? ''}} {{$open ?? ''}}">
 {{-- <li class="{{isset($open) ? 'open' : ''}}"> --}}
-    <span class="a lvl-{{$lvl ?? ''}} / flex cI" data-click data-css data-toggle='open' data-node='parent'>
+    @component('_wrap._menu._wrap.li_open.name_ico',['lvl' => $lvl ?? ''])
         @isset($ico)
-        {!!$ico!!}
+        <span class="_ico / flex cI cC">
+            {!!$ico!!}
+        </span>
         @endisset
-        {!!$name!!}
-    </span>
+        <span>{!!$name!!}</span>
+    @endcomponent
     {!!$slot!!}
 </li>

@@ -50,6 +50,7 @@
         </div>
     @endcomponent --}}
 
+    {{-- Solo связи --}}
     @component('zADMIN._wrap.Relationships.line')
         @slot('id','22071700')
         @slot('name22071756','Solo связи')
@@ -70,6 +71,7 @@
     @endcomponent
 
 
+    {{-- Дополнительные связи --}}
     @component('zADMIN._wrap.Relationships.line')
         @slot('id','22071759')
         @slot('name22071756','Дополнительные связи')

@@ -1,6 +1,6 @@
 import { listNext } from '../_sherpa/listNext.js';
 import { listPrev } from '../_sherpa/listPrev.js';
-import { cssSwitch } from '../_skill/cssSwitch.js';
+import { cssSwitch } from '../_skill/debounce.js';
 
 export default class Slider {
 	constructor(selector){

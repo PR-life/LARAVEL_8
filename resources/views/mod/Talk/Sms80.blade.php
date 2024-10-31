@@ -1,11 +1,10 @@
-<div id="Sms_13041005" class="Sms -w -wMin / Talk -w80 {{$css_wrap_14061200 ?? ''}} / Bone / index relative">
-    {{-- <meta itemprop="headline" content="{{$headline ?? ''}}" /> --}}
+<div id="Sms_13041005" class="Sms -w -wMin / Talk -w80 {{$css14061200 ?? ''}} / Bone / index relative">
     <div class="padding top / stop_80"></div>
     <div class="I Edge -PC / stop_80">
         @include('manager.scroll.Name.left', ['name_mbl' => $name_Roll ?? null, 'name' => $name ?? null])
     </div>
     <div class="_head space content / none_80">
-        <em>{{$name ?? ''}}</em>
+        <em>{{$name14061200 ?? 'Популярные вопросы'}}</em>
     </div>
     <div class="Scroll_80">
         <div class="_scr">

@@ -202,7 +202,12 @@
 
 }
 
-
+@media (min-width:@w-menu-2-plus) and (max-width:@metrika-80) {
+	.edge-Medium {
+		padding-left: var(--Edge);
+		padding-right: var(--Edge);
+	}
+}
 
 @media (min-width:@w-menu-2-plus) and (max-width:@Edge0305) {
 	// #body.schema-aside {
@@ -545,12 +550,17 @@
 @media screen and (max-width:@w-menu-2) {
 
 
-	.Blog .Teaser .teaser-edge {
-		padding-left: var(--edge);
-		padding-right: 7px;
-
-		margin-left: 0;
+	.-Blog,
+	.Blog {
+		.Teaser .teaser-edge {
+			padding-left: var(--edge);
+			padding-right: 7px;
+	
+			margin-left: 0;
+		}
 	}
+	
+ 
 
 
 
