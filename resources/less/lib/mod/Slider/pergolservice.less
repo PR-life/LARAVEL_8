@@ -1,0 +1,66 @@
+@charset "UTF-8";
+
+
+
+#Slider_prglsrvc.Anime {
+	.Sms.x-wrap {
+		--Sms-w:calc(var(--Sms));
+	
+		min-width: var(--Sms-w);
+	}
+
+	.Track {
+		opacity: 1;
+	}
+}
+
+
+#Slider_prglsrvc {
+
+	.Sms.x-wrap{
+		--Sms-w:0px;
+		
+		min-width: 0px;
+		width: 0px;
+		transition:min-width linear .8s;
+		
+	}
+
+	// .Plot {
+	// 	background-image: url(/images/slider/prev.png);
+	// 	background-position: center;
+	// 	background-size: cover;
+	// }
+
+	// .Plot::before {
+	// 	content: '';
+	// 	position: absolute;
+	// 	inset:0;
+	// 	background: linear-gradient(to bottom,#fff,transparent);
+	// }
+
+	// .Track {
+	// 	opacity: 0;
+	// 	transition:opacity linear .2s;
+	// }
+
+	.Plot .Bg{
+		background-image: url(/images/hero/11.jpg);
+		background-size: cover;
+	}
+}
+
+
+#Slider_prglsrvc.Anime::before {
+	opacity: 0;
+}
+
+#Slider_prglsrvc::before {
+	content: '';
+	z-index: 10;
+	position: absolute;
+	inset:0;
+	background: linear-gradient(to bottom,#fff,transparent);
+}
+
+
