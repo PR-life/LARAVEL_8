@@ -1,4 +1,4 @@
-<div id="Slider_prglsrvc" class="Box aura / Edge -SPC" style="opacity:0">
+<div id="Slider_prglsrvc" class="Box aura / Edge -SPC" style="opacity:1">
     <div class="flex">
         @include('_CLOUD.xPergola.honeycomb.lego.Slider.aside')
         <div class="Pente aura / Plot plot-h / relative">
