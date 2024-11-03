@@ -48,6 +48,10 @@ export default class Slider {
         this.visibleItems = visibleItems;
         this.itemWidth = itemWidth;
 
+        // console.log('visibleItems / itemWidth')
+        // console.log( this.visibleItems)
+        // console.log(this.itemWidth)
+
         this.Go(this.getCurrent() - 1); // Обновляем текущий индекс для правильного отображения
     }
 
@@ -56,27 +60,46 @@ export default class Slider {
         if (!this.items || this.items.length === 0) return;
         this.updateVisibleItems(); // Обновляем количество отображаемых элементов
         this.itemWidth = this.items[0].clientWidth;
+
+        // console.log('updateItemWidth')
+        // console.log(this.itemWidth)
     }
 
     // Движение слайдера к заданному индексу
     Go(index) {
+        // Проверка, что элемент видим и itemWidth не равен 0
+        const isVisible = this.rootElem.getBoundingClientRect().width > 0;
+        let attempts = 0;
+        const maxAttempts = 10;
+
+        while (this.itemWidth === 0 && attempts < maxAttempts) {
+            if (isVisible) {
+                this.updateItemWidth();
+            }
+            attempts++;
+        }
+
+        if (attempts === maxAttempts) {
+            console.warn("Не удалось установить ширину элемента, возможно элемент скрыт.");
+            return;
+        }
+    
+        // Продолжаем движение только если индекс допустим
         if (index < 0 || index >= this.count) return;
         this.move(index);
-
-        // Обновляем активный класс
+    
+        // Обновляем активный класс для элементов и индикаторов
         this.items.forEach((item, i) => {
             this.toggleActiveClass(item, 'active', i === index);
         });
-
-        // Обновляем активный класс индикаторов
+    
         this.indicators.forEach((indicator, i) => {
             this.toggleActiveClass(indicator, 'active', i === index);
         });
-
+    
         // Разрешаем взаимодействие после завершения движения
         this.trigger = true;
     }
-
 
     // Обработка клика по слайдеру с блокировкой
     handleSliderClick(param) {

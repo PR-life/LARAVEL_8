@@ -51,26 +51,35 @@
 	height: var(--x-Close-h);
 }
 
+//
 
+.Close.vol-black {
+	--x-Close-bg-an:rgba(255,255,255,.5);
+}
 
+.Close.vol-white {
+	--x-Close-bg-an:rgba(0,0,0,.25);
+}
+//
 
-
-
-.Close.-white::before {
+.Close.vol-white::before {
 	content: '';
 	opacity: 1;
 	background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3e%3cpath fill='%23fff' fill-rule='evenodd' clip-rule='evenodd' d='m11.9997 13.4149 4.9498 4.9497 1.4142-1.4142-4.9498-4.9497 4.9498-4.9498-1.4142-1.4142-4.9498 4.9498L7.05 5.6367 5.6357 7.051l4.9498 4.9498-4.9497 4.9497L7.05 18.3646l4.9497-4.9497z'%3e%3c/path%3e%3c/svg%3e ");
 	// background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.586 8L.793 2.207A1 1 0 1 1 2.207.793L8 6.586 13.793.793a1 1 0 1 1 1.414 1.414L9.414 8l5.793 5.793a1 1 0 1 1-1.414 1.414L8 9.414l-5.793 5.793a1 1 0 1 1-1.414-1.414z' fill='%23fff' %3e%3c/path%3e%3c/svg%3e");
 	//background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2224%22%20viewBox%3D%22216%208%2024%2024%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m223%2025%2010-10m0%2010-10-10%22%20stroke%3D%22%23fff%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%221.6%22%2F%3E%3C%2Fsvg%3E) no-repeat center;
 }
+.Close.-an.vol-white:hover {
+	background-color: #333;
+}
 
-.Close.-grey::before {
+.Close.vol-grey::before {
 	content: '';
 	opacity: 1;
 	background: url(data:image/svg+xml;charset=utf-8,%3Csvg%20height%3D%2224%22%20viewBox%3D%22216%208%2024%2024%22%20width%3D%2224%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%3E%3Cpath%20d%3D%22m223%2025%2010-10m0%2010-10-10%22%20stroke%3D%22%2398a3b3%22%20stroke-linecap%3D%22round%22%20stroke-width%3D%221.6%22%2F%3E%3C%2Fsvg%3E) no-repeat center;
 }
 
-.Close.-black::before {
+.Close.vol-black::before {
 	content: '';
 	opacity: 1;
 	// background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg viewBox='0 0 16 16' xmlns='http://www.w3.org/2000/svg'%3e%3cpath d='M6.586 8L.793 2.207A1 1 0 1 1 2.207.793L8 6.586 13.793.793a1 1 0 1 1 1.414 1.414L9.414 8l5.793 5.793a1 1 0 1 1-1.414 1.414L8 9.414l-5.793 5.793a1 1 0 1 1-1.414-1.414z'%3e%3c/path%3e%3c/svg%3e");
@@ -90,10 +99,7 @@
 	background-color:var(--x-Close-bg-an);
 }
 
-.Close.-an.-white:hover {
-	background-color: #333;
-}
-
+ 
 //
 .Close.-radius {
 	border-radius: 50%;

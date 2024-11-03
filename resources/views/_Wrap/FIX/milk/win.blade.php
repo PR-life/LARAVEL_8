@@ -2,7 +2,7 @@
 <div class="fix / flex / {{$fix_css ?? ''}}" data-close>
     <div class="_fix {{$_fix_css ?? ''}} / relative index">
         <div class="Wings -mbl / _indexMax">
-            <div class="_win / flex eC / noEvents / edge-Close">
+            <div class="_win / flex eC / noEvents / x-Close edge-Close">
                 <div class="Close {{$css_Close ?? '-scroll -black -an'}} / yesEvents" data-close></div>
             </div>
         </div>

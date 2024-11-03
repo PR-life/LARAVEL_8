@@ -1,5 +1,8 @@
 export function toggleActiveClass(element, className, add = true) {
     if (!element) return;
+    if (element.classList.contains('active')) {
+        element.classList.add('done');
+    }
     element.classList.toggle(className, add);
 }
 

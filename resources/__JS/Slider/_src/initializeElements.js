@@ -7,6 +7,7 @@ export function initializeElements() {
 
     this.count = this.items.length;
     this.itemWidth = this.items[0].clientWidth; // Кэшируем ширину элемента
+    // console.log(this.itemWidth)
 
     this.sherpa = this.rootElem.querySelector('.sherpaSlider');
     if (!this.sherpa) throw new Error(`Sherpa element not found in ${this.rootElem.id}`);
