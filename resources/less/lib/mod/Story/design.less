@@ -1,6 +1,14 @@
 @charset "UTF-8";
 
+.Story.vol-asgrupp {
+    --Story-bg:#1c1c1e;
+    --Story-bg-wrap:#2c2c2e;
+    --Story-bg-text:transparent;
+}
+
+//
 .-Stories {
+    --Story-bg:#fff;
     --Story-bg-text:rgba(0,0,0,.75);
 
     .Story {
@@ -14,4 +22,14 @@
 .story-bg_text {
     padding-bottom: 100px;
     background:linear-gradient(to bottom,var(--Story-bg-text) 0%,var(--Story-bg-text) 75%, transparent);
+}
+
+//
+
+.Story {
+    background: var(--Story-bg);
+
+    .story-wrap {
+        background: var(--Story-bg-wrap);
+    }
 }
