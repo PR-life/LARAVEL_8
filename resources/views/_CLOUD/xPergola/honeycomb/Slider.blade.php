@@ -1,75 +1,85 @@
-<div id="Slider_prglsrvc" class="Pente aura / Edge -SPC">
-	<div class="Font -S / width-04111014">
-		<div class="content">Биоклиматические перголы</div>
-		<div class="paragraph"></div>
-		<div class="_h b500 / pergolservice-lineHeight">
-			Тень и уют <br />
-			в любой зоне.
-		</div>
-	</div>
-    <div class="hill-s"></div>
-	<div class="flex dC">
-		<div class="_tabs">
-			<div class="_wrap">
-				<div class="void-m">
-					<div class="_wrap">
-						<div class="void">
-							<div class="hMin b500">Частный дом и террасы</div>
-							{{-- <div class="content-s">Защитят от палящего солнца и дождя, позволяя быть на свежем воздухе в любую погоду.</div> --}}
-						</div>
-					</div>
-					<div class="_wrap">
-						<div class="void">
-							<div class="hMin b500">Кафе и рестораны</div>
-							{{-- <div class="content-s">Идеальное решение для создания комфортных зон отдыха на открытом воздухе.</div> --}}
-						</div>
-					</div>
-					<div class="_wrap">
-						<div class="void">
-							<div class="hMin b500">Гостиницы и курорты</div>
-							{{-- <div class="content-s">Идеально подходят для открытых террас, бассейнов и зон для завтраков на свежем воздухе.</div> --}}
-						</div>
-					</div>
-					<div class="_wrap">
-						<div class="void">
-							<div class="hMin b500">Общественные пространства</div>
-							{{-- <div class="content-s">Перголы могут использоваться в зонах отдыха парков и общественных мест.</div> --}}
-						</div>
-					</div>
-				</div>
-			</div>
-		</div>
+@push('js-bottom-solo')
+@include('_.js.skill.ScrollLeft')
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        new ScrollLeft('scroll_05111044')
+        new ScrollLeft('scroll_05111045')
+        new ScrollLeft('scroll_05111046')
+        new ScrollLeft('scroll_05111047')
 
-		<div class="_slider / Abs / round-s"></div>
+    });
+</script>
+@endpush
+
+
+<div id="Slider_prglsrvc" class="jsSlider Slider visible-1 / Anime">
+ 
+	@include('_CLOUD.xPergola.honeycomb.lego.Slider.name')
+    <div class="hill-s / none_mbl"></div>
+    <div class="paragraph / none_PC"></div>
+	<div class="flex dC / height-051100936">
+		@include('_CLOUD.xPergola.honeycomb.lego.Slider.tabs')
+ 
+
+		<div class="_slider / Abs_PC relative_mbl / round-s">
+			@include('_._brick.img.squere')
+		
+			<div class="Shell / _indexMin / hidden">
+                <div class="Track -solo" data-carousel="true">
+                    <div class="item">
+
+                        <div class="space-05111042">
+                            <div class="h b500">Проекты для <br>частного дома</div>
+                        </div>
+                        <div class="paragraphX2"></div>
+	 
+						@include('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.home')
+			 
+                    </div>
+                    <div class="item / relative">
+                        <div class="space-05111042">
+                            <div class="h b500">Проекты под <br>кафе</div>
+                        </div>
+                        <div class="paragraphX2"></div>
+	 
+						@include('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.caffe')
+                    </div>
+                    <div class="item">
+                        <div class="space-05111042">
+                            <div class="h b500">Проекты для <br>гостиниц</div>
+                        </div>
+                        <div class="paragraphX2"></div>
+	 
+						@include('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.hostel')
+                    </div>
+                    <div class="item">
+                        <div class="space-05111042">
+                            <div class="h b500">Проекты для <br>города</div>
+                        </div>
+                        <div class="paragraphX2"></div>
+	 
+						@include('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.city')
+                    </div>    
+                </div>
+                <div class="sherpaSlider"></div>
+
+       
+
+
+
+            {{-- <div class="Slider / index -move / relative">
+                <div class="Shell / _indexMin / hidden"></div>
+            </div>
+            <img class="Img -cover / H-100 4W-100" src="/images/hero/slider/slaid_5.png" alt="">
+            <img class="Img -cover / H-100" src="/images/hero/slider/slaid_2.png" alt=""> --}}
+        </div>
+		
+		
+		</div>
 	</div>
 </div>
 
-
-
-<style>
-
-._tabs {
-    max-width: 500px;
-}
-
-
- ._slider {
-    top: 0;
-    right: 0;
-    bottom: 0;
-    width: 50%;
-    background: #fafafc;
- }
-    .width-04111014 {
-        max-width: 460px;
-    }
  
-    .pergolservice-lineHeight {
-        --Font-lineHeight:0px;
-
-    }
-</style>
-
 
 
 

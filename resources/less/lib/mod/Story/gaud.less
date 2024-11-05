@@ -15,27 +15,22 @@
 
 .-Story {
 
+
+
+    .Story.vol-dark {
+        --Story-bg:#1c1c1e;
+        --Story-bg-wrap:#2c2c2e;
+        --Story-bg-text:transparent;
+    }
+    
+
+
     .vol-yellow {
         --Story-bg:radial-gradient(at left top, #FFF4BE, #FEE040);
 
         background: #FFF4BE;
     }
-    .vol-velkom {
-        --Story-bg:linear-gradient(to bottom, #76bbe4, #1156b3);
 
-        background: #76bbe4;
-
-        .Grey {
-            --x-color-1: #f5f5f5;
-        }
-
-        .Citation {
-            .author {
-                --c-text:#f5f5f5;
-            }
-        }
-
-    }
 
     .story-bg {
         background: var(--Story-bg);
@@ -43,15 +38,45 @@
 
 }
  
-
-
-.Stories {
+.-Stories {
     --Stories-c-border:var(--bg);
     --Stories-border-c1:#2d4a95;
     --Stories-border-c2:#ffaa00;
     --Stories-bg:radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
     --Stories-abs-shift: -2px;
+    //
+    --Story-bg:#fff;
+    --Story-bg-text:rgba(0,0,0,.75);
 
+    .Btn {
+        pointer-events: all;
+    }
+}
+
+
+ 
+
+//
+
+.Story {
+    background: var(--Story-bg);
+
+    .story-wrap {
+        background: var(--Story-bg-wrap);
+    }
+
+    .story-bg_text {
+        padding-bottom: 100px;
+        background:linear-gradient(to bottom,var(--Story-bg-text) 0%,var(--Story-bg-text) 75%, transparent);
+    }
+
+    ._footer {
+        background: linear-gradient(to top,var(--Story-bg-text), transparent);
+    }
+}
+
+//
+.Stories {
 
     .x-done {
         --Stories-bg: #ccc;

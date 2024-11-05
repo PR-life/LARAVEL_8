@@ -1,8 +1,19 @@
 @charset "UTF-8";
 
-.Time.done:not(.active) {
+.-Stories .Time.done:not(.active),
+.Time.x-done.done:not(.active) {
 	--x-Time-bg:var(--x-Time-bg-active);
 }
+
+
+.-Stories .Time,
+.Time.-M {
+	--x-Time-h:3px;
+}
+.Time.-S {
+	--x-Time-h:1px;
+}
+
 .Time {
 	// --x-Time-100:100%;
 	--x-Time-abs-time:4s;
@@ -14,7 +25,7 @@
 	--x-Time-right:0rem;
 	--x-Time-space-click-top:0px;
 	--x-Time-space-click-bottom:0px;
-	--x-Time-h:3px;
+	--x-Time-h:2px;
 	// --x-Time-w:calc(var(--x-Time-left) + var(--x-Time-right) + var(--x-Time-100));
 	--x-Time-position:50%;
 	--x-Time-bg-active:rgba(255,255,255,.9);
@@ -25,6 +36,10 @@
 }
 
 
+.Time.vol-dark {
+	--x-Time-bg-active:rgba(0,0,0,.9);
+	--x-Time-bg: rgba(0,0,0,.25); //rgba(88, 89, 104,.5);
+}
 
 //
 .Time {
@@ -46,7 +61,7 @@
 			var(--x-Time-bg) 100%);
 		//
 		background-size: 202% 100%;
-		background-position:calc(var(--x-Time-position)*2 - 1%) 0%;
+		background-position:calc(var(--x-Time-position)*2 + 5%) 0%;
 		background-repeat: no-repeat;
 
 	}
@@ -61,10 +76,23 @@
 
 
 // .Time.-bg .active > ._line,
-.Time.active ._line {
+
+.Anime .Time.active ._line,
+.FIX.on .Time.active ._line {
 	animation: TimeGradient var(--x-Time-abs-time) linear;
 	animation-fill-mode: forwards;
 }
+
+
+// .FIX .Time.active ._line {
+// 	animation-delay: 200s !important;
+// }
+
+// .FIX.on .Time.active ._line {
+// 	animation-delay: 0s !important;
+// }
+
+
 
 
 // .Time.-style {

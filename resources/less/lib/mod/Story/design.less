@@ -6,30 +6,20 @@
     --Story-bg-text:transparent;
 }
 
-//
-.-Stories {
-    --Story-bg:#fff;
-    --Story-bg-text:rgba(0,0,0,.75);
+.Story.vol-velkom {
+    --Story-bg:linear-gradient(to bottom, #76bbe4, #1156b3);
 
-    .Story {
-        ._footer {
-            background: linear-gradient(to top,var(--Story-bg-text), transparent);
+    background: #76bbe4;
+
+    .Grey {
+        --x-color-1: #f5f5f5;
+    }
+
+    .Citation {
+        .author {
+            --c-text:#f5f5f5;
         }
     }
+
 }
-
-
-.story-bg_text {
-    padding-bottom: 100px;
-    background:linear-gradient(to bottom,var(--Story-bg-text) 0%,var(--Story-bg-text) 75%, transparent);
-}
-
 //
-
-.Story {
-    background: var(--Story-bg);
-
-    .story-wrap {
-        background: var(--Story-bg-wrap);
-    }
-}

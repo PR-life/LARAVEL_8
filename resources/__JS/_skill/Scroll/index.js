@@ -10,6 +10,32 @@ function linkClick(e) {
 
 function smoothScroll(e) {
 	e.preventDefault();
+
+	if(e.currentTarget.hasAttribute("data-close")) {
+		// param.setAttribute('data-fix', '')
+		// param.classList.remove('on');
+		
+		e.currentTarget.closest('.FIX').click();
+
+		console.log(e.currentTarget.closest('.FIX').querySelector('.Close').click());
+
+		// if(param.hasAttribute('css-off')) {
+		// 	param.classList.add('off');
+		// }
+
+		// if(param.hasAttribute('data-add')) {
+		// 	param.setAttribute('data-add', 'on')
+		// }
+
+		// if(param.hasAttribute('data-trash')) {
+		// 	trash(param)
+		// }
+	}
+
+
+
+
+
 	let targetId = e.currentTarget.getAttribute("href");
 	let targetPosition = Math.trunc(document.querySelector(targetId).getBoundingClientRect().y);
 		// let targetPosition = document.querySelector(targetId).offsetTop;

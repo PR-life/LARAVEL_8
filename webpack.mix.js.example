@@ -30,7 +30,7 @@ mix.js('resources/__JS/app.js', 'public/js')
 	.js('resources/__JS/_skill/OXOY.js', 'public/js/skill/OXOY.js')
 	//
 	//
-	.js('resources/__JS/Slider/dt/main.js', 'public/js/Slider/main.js')
+	.js('resources/__JS/Slider/_this/main.js', 'public/js/Slider/main.js')
 
 mix.combine([
 		'public/js/app.js',

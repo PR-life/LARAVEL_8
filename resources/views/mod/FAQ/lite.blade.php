@@ -1,11 +1,5 @@
-<div class="{{$css_wrap_content ?? 'I aura / Edge -SPC'}}" itemscope itemtype="https://schema.org/FAQPage">
-    <meta itemprop="name" content="Часто задаваемые вопросы">
-	<div class="all">
-		<div class="Ef -list / -Details">
-            @foreach($Var as $_faq)
-                @include('mod.FAQ.lego.item.ef',['css' => 'x-'.$loop->iteration])
-             @endforeach
-		</div>
-	</div>
+<div class="-Details Details -M -line -bg -bgMbl -shiftLeftI -edgeI -edge_mbl transparent">
+    @foreach($Var as $_faq)
+        @include('mod.FAQ.lego.item.def',['css' => 'x-'.$loop->iteration,'cssSummary'=>'-M'])
+     @endforeach
 </div>
-<div class="margin top S / none_PC"></div>
