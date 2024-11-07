@@ -1,0 +1,165 @@
+@charset "UTF-8";
+
+@import "./_ol.less";
+
+
+
+// .-Quiz {
+    // .bg-pop {
+    //     background-color: #000;
+    // }
+
+    // .Time {
+    //     --x-Time-abs-time:10s;
+    // }
+
+// }
+
+ 
+
+// .-Quiz {
+
+
+
+//     .Quiz.vol-dark {
+//         --Quiz-bg:#1c1c1e;
+//         --Quiz-bg-wrap:#2c2c2e;
+//         --Quiz-bg-text:transparent;
+//     }
+    
+
+
+//     .vol-yellow {
+//         --Quiz-bg:radial-gradient(at left top, #FFF4BE, #FEE040);
+
+//         background: #FFF4BE;
+//     }
+
+
+//     .Quiz-bg {
+//         background: var(--Quiz-bg);
+//     }
+
+// }
+ 
+.-Quiz {
+    // --Quiz-c-border:var(--bg);
+    // --Quiz-border-c1:#2d4a95;
+    // --Quiz-border-c2:#ffaa00;
+    // --Quiz-bg:radial-gradient(circle at 33% 100%, #fed373 4%, #f15245 30%, #d92e7f 62%, #9b36b7 85%, #515ecf);
+    // --Quiz-abs-shift: -2px;
+    //
+    --Quiz-bg:#fff;
+    --Quiz-bg-text:rgba(0,0,0,.75);
+}
+
+
+ 
+
+//
+
+.Quiz {
+    background: var(--Quiz-bg);
+
+    // .quiz-wrap {
+    //     background: var(--Quiz-bg-wrap);
+    // }
+
+    // .quiz-bg_text {
+    //     padding-bottom: 100px;
+    //     background:linear-gradient(to bottom,var(--Quiz-bg-text) 0%,var(--Quiz-bg-text) 75%, transparent);
+    // }
+
+    // ._footer {
+    //     background: linear-gradient(to top,var(--Quiz-bg-text), transparent);
+    // }
+}
+
+.Quiz::before {
+    content: '';
+    top:0;
+    left: 0;
+    right: 0;
+    height: 140px;
+    position: absolute;
+    //
+    // opacity: .5;
+    background:linear-gradient(to bottom,var(--Quiz-bg-text) 0%,transparent);
+
+}
+
+//
+.-Quiz {
+
+    .x-done {
+        --Quiz-bg: #ccc;
+    }
+
+    .slider-dots {
+        --c-text:#fff;
+    }
+
+    // ._border.round::before {
+    //     border-radius: var(--round);
+    // }
+
+    //
+    // .Ava ._border::before,
+    // .Ava ._border::after {
+    //     border-radius: 50%;
+    // }
+    
+    // ._border::before {
+    //     z-index: 0;
+    //     left: var(--Quiz-abs-shift);
+    //     right: var(--Quiz-abs-shift);
+    //     top: var(--Quiz-abs-shift);
+    //     bottom: var(--Quiz-abs-shift);
+    // } 
+    // ._border {
+    //     top: 0;
+    //     left: 0;
+    //     right: 0;
+    //     bottom: 0;
+    // }
+    // ._border::after {
+    //     z-index: 1;
+    //     left: 0;
+    //     right: 0;
+    //     top: 0;
+    //     bottom: 0;
+    // }
+    
+    // .Ico {
+    
+    //     ._border::before {
+    //         // background: linear-gradient(to right, var(--Quiz-border-c1),var(--Quiz-border-c2));
+    //         background: var(--Quiz-bg);
+    //     }
+    
+    //     .Bone {
+    //         border:4px solid var(--Quiz-c-border);
+    //    }
+    // }
+    
+    // .Ava {
+    
+    //     ._border::before {
+    //         background: var(--Quiz-bg);
+    //         // background: linear-gradient(-45deg, var(--Quiz-border-c1), var(--Quiz-border-c1) 49%, white 49%, white 51%, var(--Quiz-border-c2) 51%);
+    //     }
+    
+    //     ._foto {
+    //          border:4px solid var(--Quiz-c-border);
+    //     }
+    // }
+    
+    // ._border::after, 
+    // ._border::before {
+    //     content: '';
+    //     position: absolute;
+    // }
+
+}
+
+

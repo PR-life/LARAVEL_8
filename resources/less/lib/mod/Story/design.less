@@ -1,24 +1,50 @@
 @charset "UTF-8";
 
-.Story.vol-asgrupp {
+
+
+.Story.x-bgText {
+    --Story-bg-text:rgba(0,0,0,.75) !important;
+}
+
+
+
+.Story.vol-asgrupp,
+.Story.vol-dark {
     --Story-bg:#1c1c1e;
     --Story-bg-wrap:#2c2c2e;
     --Story-bg-text:transparent;
+    //
+    --c-h:#fff;
+    --c-text:#fff;
+
 }
 
 .Story.vol-velkom {
     --Story-bg:linear-gradient(to bottom, #76bbe4, #1156b3);
+    //
+    --c-h:#fff;
+    --c-text:#fff;
 
-    background: #76bbe4;
+    // background: #76bbe4;
+
+    .story-bg_text {
+        --Story-bg-text: transparent;
+    }
 
     .Grey {
         --x-color-1: #f5f5f5;
     }
 
     .Citation {
+        --c-text:#000;
         .author {
             --c-text:#f5f5f5;
         }
+    }
+
+    .Btn {
+        --c-btn:#000;
+        --bg-btn:#fff;
     }
 
 }

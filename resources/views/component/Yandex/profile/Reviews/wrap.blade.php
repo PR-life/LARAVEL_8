@@ -1,6 +1,6 @@
 <div class="{{$css04081325 ?? ''}}">
     <div class="flex cI / cross-xxs">
-        <div class="Ava" style="{!!$ava!!}"></div>
+        <div class="Ava" style="{!!$ava ?? "background-image: url('/images-0/ava/blank.png');"!!}"></div>
         <div class="flex dC">
             <div class="content">{{$name}}</div>
             <div class="flex cI / cross-xxs">

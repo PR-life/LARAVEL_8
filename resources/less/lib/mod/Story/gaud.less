@@ -16,6 +16,7 @@
 .-Story {
 
 
+    background-color: #542222 !important;
 
     .Story.vol-dark {
         --Story-bg:#1c1c1e;
@@ -73,6 +74,19 @@
     ._footer {
         background: linear-gradient(to top,var(--Story-bg-text), transparent);
     }
+}
+
+.Story::before {
+    content: '';
+    top:0;
+    left: 0;
+    right: 0;
+    height: 60px;
+    position: absolute;
+    //
+    opacity: .5;
+    background:linear-gradient(to bottom,var(--Story-bg-text) 0%,transparent);
+
 }
 
 //

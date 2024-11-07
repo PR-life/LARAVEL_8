@@ -1,7 +1,6 @@
 @push('style')
-	{{-- .about > .Ef.-Details > ._ef.slug-detektivnoe-agentstvo,
-	.price > .Ef.-Details > ._ef.tag-price,
-	.profession > .Ef.-Details > ._ef.slug-detektiv  {
+	{{--
+	.555555 > .Ef.-Details > ._ef.slug-555555  {
 		height: auto;
 		min-height: var(--x-Ef-hMin);
 		opacity: 1;
@@ -9,7 +8,7 @@
 	} --}}
 @endpush
 
-<div class="{!!$css_wrap_menu ?? ''!!}" itemscope itemtype="https://schema.org/WPSideBar">
+<div class="{!!$css_menu_wrap ?? ''!!}" itemscope itemtype="https://schema.org/WPSideBar">
     <meta itemprop="name" content="навигация по FAQ">
     <div role="navigation" aria-label="навигация по FAQ">
         <ul class="menu -tag {{$css_menu ?? '-roundS edge-left'}} / flex -wrap cloud / Pointer" data-click data-switch data-package="{{$id_package}}" data-stop>

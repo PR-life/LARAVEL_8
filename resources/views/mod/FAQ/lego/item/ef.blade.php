@@ -1,4 +1,12 @@
-<div class="_ef -an {{$css ?? ''}} / Details {{$css_Details ?? ''}} / category-{{$_faq->category->slug ?? ''}} category-{{$_faq->category->category->slug ?? ''}} {{$_faq->featured ? 'featured' : ''}} @foreach($_faq->tags as $param) tag-{{$param->slug}}@endforeach @foreach($_faq->categories as $param) category-{{$param->slug}}@endforeach">
+<div class="_ef -an {{$css ?? ''}} / 
+    Details {{$css_Details ?? ''}} / 
+    category-{{$_faq->category->slug ?? ''}} 
+    category-{{$_faq->category->category->slug ?? ''}} 
+    {{$_faq->featured ? 'featured' : ''}} 
+    {{$_faq->tag_id ? 'tag-'.$_faq->tag->slug : ''}} 
+    @foreach($_faq->tags as $param) tag-{{$param->slug}}@endforeach 
+    @foreach($_faq->categories as $param) category-{{$param->slug}}@endforeach
+">
     <details class="_details" itemprop="mainEntity" itemscope itemtype="http://schema.org/Question">
         @include('mod.FAQ.brick.summary_schema')
         <div class="_edge net void">

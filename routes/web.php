@@ -27,11 +27,13 @@ Route::group(['prefix' => 'asnone'], function(){
         Route::get('/storeask', [App\Http\Controllers\sms\SmsController::class, 'storeAskGet']);
 
         Route::post('/storephone', [App\Http\Controllers\sms\SmsController::class, 'storePhone'])->name('sms.storephone');
-        Route::post('/storephonename', [App\Http\Controllers\sms\SmsController::class, 'storephonename'])->name('sms.storephonename');
+        Route::post('/storephonename', [App\Http\Controllers\sms\SmsController::class, 'storePhoneName'])->name('sms.storephonename');
+        Route::post('/storecallback', [App\Http\Controllers\sms\SmsController::class, 'storeCallBack'])->name('sms.storecallback');
 
 
         Route::post('/storeorder', [App\Http\Controllers\sms\SmsController::class, 'storeOrder'])->name('sms.storeorder');
 
+        Route::post('/storequiz', [App\Http\Controllers\sms\SmsController::class, 'storeQuiz'])->name('sms.storequiz');
 
         Route::get('/manager', [App\Http\Controllers\sms\SmsManagerController::class, 'manager'])->name('sms.manager');
         Route::post('/update', [App\Http\Controllers\sms\SmsManagerController::class, 'update'])->name('sms.update');

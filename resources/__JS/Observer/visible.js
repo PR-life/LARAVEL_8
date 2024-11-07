@@ -1,103 +1,77 @@
-const options = {
-	root: null,
-	rootMargin: '-100px',
-	threshold: 0.0,
-}
-//
-// document.addEventListener('DOMContentLoaded', function(){
-let arr = document.querySelectorAll('.Visible');
-let observer = new IntersectionObserver(callback, options)
-
-// console.log(arr)
-
-arr.forEach( arr => observer.observe(arr))
-
-function callback(entries,observer) {
-	entries.forEach(entry => {
-
-		// isIntersecting — булево значение. true если есть пересечение элемента и наблюдаемой области.
-		// intersectionRatio — доля пересечения от 0 до 1. Если элемент полностью в наблюдаемой области, то значение будет 1, а если наполовину, то — 0.5.
-		// target — сам наблюдаемый элемент для дальнейших манипуляций. Например, для добавления классов.
-	
-		// console.log(arr);
-
-		// if (intersectionRatio === 1) {
-		// 	console.log('Элемент полностью в области наблюдения')
-		//   }
-
-
-		if (entry.isIntersecting){
-
-			if(entry.target.classList.contains('Visible') ) {
-
-				entry.target.classList.remove('visibleOff')
-				entry.target.classList.add('visibleOn')
-				if(entry.target.hasAttribute('visible-click')) {
-					setTimeout(() => entry.target.click(), 200);
-				}
-				if(!entry.target.hasAttribute('visible-loop')) {
-					entry.target.classList.remove('Visible')
-				}
-
-			}
-
-			if(entry.target.hasAttribute('visible-node')) {
-				// console.log(entry.target)
-				let div;
-
-				if(entry.target.getAttribute('visible-node')) {
-
-					param = entry.target;
-
-					switch (param.getAttribute('visible-node')) {
-						case 'body':
-							div = document.getElementById('body');
-							break;
-						case 'self':
-							div = param;
-							break;
-						case 'parent':
-							div = param.parentNode;
-							break;
-						case 'parentParent':
-							div = param.parentNode.parentNode
-							break;
-						default:
-							div = document.getElementById(param.getAttribute('visible-node'))	
-							
-						}
-
-				} else {
-					div = entry.target;
-				}
-
-				// console.log(div)
-
-				div.classList.add(entry.target.getAttribute('visible-param'))
-				entry.target.removeAttribute('visible-node')
-			}
-		} else {
-			if(entry.target.classList.contains('Visible')) {
-				entry.target.classList.remove('visibleOn')
-				entry.target.classList.add('visibleOff')
-			}
-		}
-	})
-}
-
-
-// })
-
-
-// другая форма записи
-/*
-new IntersectionObserver((entries,observer) => {
-	entries.foreach(
-		entry => {
-			if(entry.isIntersecting){
-				console.log('isIntersecting')
-			}
-		}
-	)
-}, {threshold: 1})
-*/
+document.addEventListener('DOMContentLoaded', function() {
+	const options = {
+	   root: null,
+	   rootMargin: '-100px',
+	   threshold: 0.0,
+	};
+	const elements = document.querySelectorAll('.Visible');
+	const observer = new IntersectionObserver(callback, options);
+ 
+	elements.forEach(element => observer.observe(element));
+ 
+	function callback(entries, observer) {
+	   entries.forEach(entry => {
+		  const target = entry.target;
+		  const isIntersecting = entry.isIntersecting;
+		  
+		  if (isIntersecting) {
+			 handleVisibility(target);
+			 if (!target.hasAttribute('visible-loop')) {
+				observer.unobserve(target); // Остановить наблюдение после одной активации
+			 }
+		  } else {
+			 toggleVisibility(target, false);
+		  }
+	   });
+	}
+ 
+	function handleVisibility(target) {
+	   toggleVisibility(target, true);
+ 
+	   if (target.hasAttribute('visible-click')) {
+		  setTimeout(() => target.click(), 200);
+	   }
+ 
+	   if (target.hasAttribute('visible-node')) {
+		  applyNodeClass(target);
+		  target.removeAttribute('visible-node');
+	   }
+	}
+ 
+	function toggleVisibility(element, isVisible) {
+	   if (isVisible) {
+		  element.classList.remove('visibleOff');
+		  element.classList.add('visibleOn');
+	   } else {
+		  element.classList.remove('visibleOn');
+		  element.classList.add('visibleOff');
+	   }
+	}
+ 
+	function applyNodeClass(element) {
+	   let div;
+	   const nodeTarget = element.getAttribute('visible-node');
+	   
+	   switch (nodeTarget) {
+		  case 'body':
+			 div = document.body;
+			 break;
+		  case 'self':
+			 div = element;
+			 break;
+		  case 'parent':
+			 div = element.parentNode;
+			 break;
+		  case 'parentParent':
+			 div = element.parentNode.parentNode;
+			 break;
+		  default:
+			 div = document.getElementById(nodeTarget);
+	   }
+ 
+	   if (div) {
+		  div.classList.add(element.getAttribute('visible-param'));
+	   }
+	}
+ });
+ 

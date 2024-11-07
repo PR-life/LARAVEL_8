@@ -48,9 +48,9 @@ export default class Slider {
         this.visibleItems = visibleItems;
         this.itemWidth = itemWidth;
 
-        // console.log('visibleItems / itemWidth')
-        // console.log( this.visibleItems)
-        // console.log(this.itemWidth)
+        console.log('visibleItems / itemWidth')
+        console.log( this.visibleItems)
+        console.log(this.itemWidth)
 
         this.Go(this.getCurrent() - 1); // Обновляем текущий индекс для правильного отображения
     }
@@ -72,12 +72,17 @@ export default class Slider {
         let attempts = 0;
         const maxAttempts = 10;
 
+        console.log(this.itemWidth)
+
         while (this.itemWidth === 0 && attempts < maxAttempts) {
             if (isVisible) {
                 this.updateItemWidth();
+                console.log('updateItemWidth')
+                
             }
             attempts++;
         }
+ 
 
         if (attempts === maxAttempts) {
             console.warn("Не удалось установить ширину элемента, возможно элемент скрыт.");
