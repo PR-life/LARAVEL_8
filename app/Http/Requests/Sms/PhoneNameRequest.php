@@ -20,6 +20,7 @@ class PhoneNameRequest extends FormRequest
 
             'name' => 'nullable|min:2',
             'phone' => 'nullable|regex:/^([0-9\s\-\+\(\)]*)$/|min:9',
+            'area'=>'nullable|string',
 
             //
             'param_1'=>'nullable|string',

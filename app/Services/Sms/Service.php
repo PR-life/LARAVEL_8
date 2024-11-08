@@ -46,6 +46,9 @@ class Service {
             case 'order':
                 $param['name'] ?? ($param['name'] = 'без имени');
                 break;
+            case 'quiz':
+                $param['name'] ?? ($param['name'] = 'не заполнили');
+                break;
             case 'callback':
                 $param['name'] ?? ($param['name'] = 'без имени');
                 break;

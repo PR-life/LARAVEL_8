@@ -8,6 +8,7 @@
 	} --}}
 @endpush
 
+@isset($menu_li)
 <div class="{!!$css_menu_wrap ?? ''!!}" itemscope itemtype="https://schema.org/WPSideBar">
     <meta itemprop="name" content="навигация по FAQ">
     <div role="navigation" aria-label="навигация по FAQ">
@@ -17,7 +18,7 @@
        </ul>
     </div>
 </div>
-
+@endisset
 <div class="paragraph / none_mbl"></div>
 
 <div class="{{$css_wrap_content ?? 'I aura / Edge -SPC'}}" itemscope itemtype="https://schema.org/FAQPage">

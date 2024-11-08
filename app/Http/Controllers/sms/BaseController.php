@@ -27,6 +27,7 @@ class BaseController extends Controller
     public function telega($sms)
     {
         if ($sms['status'] < 10) {
+
             $message = $this->buildTelegramMessage($sms);
 
             try {
@@ -49,6 +50,13 @@ class BaseController extends Controller
         // Блок доставки
         $messageParts[] = $this->getDeliveryInfo($sms);
 
+        // Квиз
+        $quiz = $this->buildQuiz($sms);
+        // dd($quiz);
+        if (!empty($quiz)) {
+            $messageParts[] = "---Опрос---\n" . implode("\n", $quiz);
+        }
+
         // Блок контактов
         $contacts = $this->buildContactsBlock($sms);
         if (!empty($contacts)) {
@@ -68,6 +76,8 @@ class BaseController extends Controller
         switch ($label) {
             case 'callback':
                 return "~~~ форма: ОБРАТНЫЙ ЗВОНОК ~~~";
+            case 'quiz':
+                return "~~~ форма: КВИЗ ~~~";
             case 'ask':
                 return "~~~ форма: ВОПРОС ~~~";
             case 'order':
@@ -90,6 +100,23 @@ class BaseController extends Controller
             }            
         }
         return '';
+    }
+    private function buildQuiz($sms)
+    {
+        $quiz = [];
+
+        if (!empty($sms->question_1)) {
+            $quiz[] = "<b>question_1:</b> {$sms->question_1}";
+        }
+        if (!empty($sms->question_2)) {
+            $quiz[] = "<b>question_2:</b> {$sms->question_2}";
+        }
+        if (!empty($sms->question_3)) {
+            $quiz[] = "<b>question_3:</b> {$sms->question_3}";
+        }
+
+        // dd($quiz);
+        return $quiz;
     }
     private function buildContactsBlock($sms)
     {
@@ -120,9 +147,13 @@ class BaseController extends Controller
         if (!empty($sms->sms)) {
             $data[] = "<b>сообщение</b>\n{$sms->sms}";
         }
+        if (!empty($sms->area)) {
+            $data[] = "<b>адрес</b> {$sms->area}";
+        }
         if (!empty($sms->from_page) && $sms['label'] != 'availability_check') {
             $data[] = "\n\n<b>стр. на сайте:</b> {$sms->from_page}";
         }
+
 
         return $data;
     }

@@ -5,7 +5,7 @@
 
         <div class="Scroll">
             <div class="_scr">
-                    <div class="Bee"></div>
+                    <div class="Bee -S_mbl"></div>
                     {!!$slot!!}
             </div>
         </div>

@@ -8,4 +8,4 @@
         @endforeach
     </div>
 </div>
-{{-- @include('mod.Slider._brick.button.story') --}}
+@include('mod.Slider._brick.button.quiz')

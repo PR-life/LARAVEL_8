@@ -11,9 +11,14 @@
         @include('zTHIS.PAGE.Thanks.head.callback')
         @break
 
+    @case('quiz')
+        @include('zTHIS.PAGE.Thanks.head.callback')
+        @break
+
     @case('ask')
         @include('zTHIS.PAGE.Thanks.head.ask')
         @break
+
 
     @default
         @include('zTHIS.PAGE.Thanks.head.index')

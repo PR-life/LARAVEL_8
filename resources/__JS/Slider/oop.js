@@ -72,13 +72,12 @@ export default class Slider {
         let attempts = 0;
         const maxAttempts = 10;
 
-        console.log(this.itemWidth)
+        // console.log(this.itemWidth)
 
         while (this.itemWidth === 0 && attempts < maxAttempts) {
             if (isVisible) {
                 this.updateItemWidth();
-                console.log('updateItemWidth')
-                
+                // console.log('updateItemWidth')
             }
             attempts++;
         }

@@ -8,7 +8,7 @@ use App\Inspections\Spam;
 use App\Services\Sms\Service;
 
 
-class BaseController extends Controller {
+class gdrgdrBaseController extends Controller {
 
     public $service; 
 

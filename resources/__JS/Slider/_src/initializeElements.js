@@ -21,5 +21,5 @@ export function initializeElements() {
     this.indicators = this.rootElem.querySelectorAll('.slider-dot');
 
     // Добавляем плавную анимацию
-    this.track.style.transition = 'transform 0.5s ease-in-out';
+    // this.track.style.transition = 'transform 0.5s ease-in-out';
 }

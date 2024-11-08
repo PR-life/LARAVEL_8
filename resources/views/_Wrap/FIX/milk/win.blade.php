@@ -3,7 +3,7 @@
     <div class="_fix {{$_fix_css ?? ''}} / relative index">
         <div class="Wings -mbl / _indexMax">
             <div class="_win / flex eC / noEvents / x-Close edge-Close">
-                <div class="Close {{$css_Close ?? '-scroll -black -an'}} / yesEvents" data-close></div>
+                <div class="Close {{$css_Close ?? '-scroll vol-black -an'}} / yesEvents" data-close></div>
             </div>
         </div>
         <div class="Abs -all {{$css21061537 ?? ''}} {{$cssMin ?? 'bg-pop / Jolt -t / hidden'}} / _indexMin Index">

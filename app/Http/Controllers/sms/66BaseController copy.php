@@ -11,7 +11,7 @@ use Illuminate\Support\Facades\Log;
 use App\Services\Sms\Service;
 use App\Models\Product;
 
-class BaseController extends Controller {
+class rfsfseBaseController extends Controller {
 
     public $service; 
 

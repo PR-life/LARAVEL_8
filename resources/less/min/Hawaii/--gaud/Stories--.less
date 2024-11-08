@@ -1,6 +1,21 @@
 @charset "UTF-8";
 
+@media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
+    .Stories.-space {
+        padding-top: 5px;
+    }
+    .Stories {
+        padding-bottom: 3rem !important;
+        > .item {
+            min-width: 160px;
+            margin-right: 1vw;
+        }
+    }
+}
+
+//
 .Stories {
+
     .Ico,
     .Ava {
         --Ico: calc(9vw);
@@ -8,6 +23,8 @@
 
         min-width: 100px;
         min-height: 100px;
+        max-width: 140px;
+        max-height: 140px;
     }
 
  
