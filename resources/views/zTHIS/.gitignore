@@ -1,4 +1,7 @@
-*
-!.gitignore
-!/_lego
-!/_blank
+# *
+# !.gitignore
+# !/_lego
+# !/_blank
+
+/analytica
+/PAGE

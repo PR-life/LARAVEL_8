@@ -12,7 +12,7 @@ trait CommonDataTrait
         $groups = Group::all();
         $tags = Tag::all();
         $Lego = Lego::orderBy('name')->get();
-        $faqs = Faq::all();
+        $faqs = Faq::orderBy('created_at')->get();
         $items = Item::all();
         $papers = Paper::all();
         $services = Service::all();

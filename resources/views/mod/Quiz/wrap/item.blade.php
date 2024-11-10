@@ -5,8 +5,17 @@
 
         <div class="Scroll">
             <div class="_scr">
-                    <div class="Bee -S_mbl"></div>
+                <div class="Bee"></div>
+                <div class="hill none_mbl"></div>
+                <div class="space_PC"> 
+                    <div class="Wings -mbl">
+                        <div class="_win -t">
+                            <div class="h / b600 / edge-left">{!!$name ?? ''!!}</div>
+                        </div>
+                    </div>
+                    <div class="paragraph"></div>
                     {!!$slot!!}
+                </div>
             </div>
         </div>
 

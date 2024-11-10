@@ -4,9 +4,9 @@
 @section('css-body', '-create ')
 
 
-@push('beeBefore')
+{{-- @push('beeBefore')
 <div class="Bee"></div>
-@endpush
+@endpush --}}
 
 @section('content')
 <div class="I aura">

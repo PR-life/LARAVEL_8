@@ -29,7 +29,7 @@
                     <div class="item">
 
                         <div class="space-05111042">
-                            <div class="h b500">Проекты для <br>частного дома</div>
+                            <div class="h b500">Террасы и веранды</div>
                         </div>
                         <div class="paragraphX2"></div>
 	 
@@ -38,7 +38,7 @@
                     </div>
                     <div class="item / relative">
                         <div class="space-05111042">
-                            <div class="h b500">Проекты под <br>кафе</div>
+                            <div class="h b500">Кафе и рестораны</div>
                         </div>
                         <div class="paragraphX2"></div>
 	 
@@ -46,7 +46,7 @@
                     </div>
                     <div class="item">
                         <div class="space-05111042">
-                            <div class="h b500">Проекты для <br>гостиниц</div>
+                            <div class="h b500">Биоклиматические <br>перголы</div>
                         </div>
                         <div class="paragraphX2"></div>
 	 
@@ -54,7 +54,15 @@
                     </div>
                     <div class="item">
                         <div class="space-05111042">
-                            <div class="h b500">Проекты для <br>города</div>
+                            <div class="h b500">Тентовые <br>перголы</div>
+                        </div>
+                        <div class="paragraphX2"></div>
+	 
+						@include('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.city')
+                    </div>    
+                    <div class="item">
+                        <div class="space-05111042">
+                            <div class="h b500">ZIP-системы</div>
                         </div>
                         <div class="paragraphX2"></div>
 	 

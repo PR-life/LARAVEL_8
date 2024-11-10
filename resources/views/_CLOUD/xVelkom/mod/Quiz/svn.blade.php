@@ -14,9 +14,9 @@ $arr_navQuiz_001 = [
     @include('mod.Slider._lego.nav.quiz', ['arrTile' => $arr_navQuiz_001])
 @endslot
 
-@include('_CLOUD.xVelkom.mod.Quiz.brick.item_svn_1')
-@include('_CLOUD.xVelkom.mod.Quiz.brick.item_svn_2')
-@include('_CLOUD.xVelkom.mod.Quiz.brick.item_svn_3')
-@include('_CLOUD.xVelkom.mod.Quiz.brick.item_svn_data')
+@include('zPergola.mod.Quiz.brick.item_svn_1')
+@include('zPergola.mod.Quiz.brick.item_svn_2')
+@include('zPergola.mod.Quiz.brick.item_svn_3')
+@include('zPergola.mod.Quiz.brick.item_svn_data')
  
 @endcomponent

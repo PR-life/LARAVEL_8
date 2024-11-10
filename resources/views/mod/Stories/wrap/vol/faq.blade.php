@@ -1,6 +1,7 @@
-<div class="aura void / Max -w7 / edge">
-    <div class="paragraph"></div>
-    <div class="h c-h">{!!$name!!}</div>
+<div class="aura void / Max -{{$w ?? 'w7'}} / edge">
+    @isset($name)
+    <div class="{{$h ?? 'h2'}} -vw / b600">{!!$name!!}</div>
+    @endisset
     <div class="paragraphX2"></div>
     {!!$slot!!}
 </div>
