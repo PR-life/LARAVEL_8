@@ -6,6 +6,8 @@ export function animateMove(targetPosition) {
     const duration = 500; // Продолжительность анимации в миллисекундах
     let startTime = null;
 
+    // console.log('animateMove')
+
     const animate = (currentTime) => {
         if (!startTime) startTime = currentTime;
         const timeElapsed = currentTime - startTime;
@@ -25,6 +27,7 @@ export function animateMove(targetPosition) {
 }
 
 export function move(index) {
+    // console.log('move')
     const targetPosition = -index * this.itemWidth;
     this.animateMove(targetPosition);
 }

@@ -10,7 +10,7 @@
                 <div class="space_PC"> 
                     <div class="Wings -mbl">
                         <div class="_win -t">
-                            <div class="h / b600 / edge-left">{!!$name ?? ''!!}</div>
+                            <div class="h {{$cssName ?? ''}} / b600 / edge-left">{!!$name ?? ''!!}</div>
                         </div>
                     </div>
                     <div class="paragraph"></div>

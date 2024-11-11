@@ -35,6 +35,7 @@ export default class Slider {
 
         // Добавляем обработчики клика для индикаторов
         if (this.indicators) {
+            // console.log(this.indicators)
             this.indicators.forEach((indicator, index) => {
                 indicator.addEventListener('click', () => {
                     this.handleIndicatorClick(index);
@@ -48,9 +49,9 @@ export default class Slider {
         this.visibleItems = visibleItems;
         this.itemWidth = itemWidth;
 
-        console.log('visibleItems / itemWidth')
-        console.log( this.visibleItems)
-        console.log(this.itemWidth)
+        // console.log('visibleItems / itemWidth')
+        // console.log( this.visibleItems)
+        // console.log(this.itemWidth)
 
         this.Go(this.getCurrent() - 1); // Обновляем текущий индекс для правильного отображения
     }
@@ -125,11 +126,12 @@ export default class Slider {
 
     // Обработка клика по индикатору
     handleIndicatorClick(index) {
+        // console.log('handleIndicatorClick')
         if (!this.trigger) return; // Блокируем повторное нажатие, пока выполняется анимация
         this.trigger = false; // Блокируем дальнейшие клики
 
         this.dataUpdate(index);
-        this.move(index);
+        // this.move(index);
         updateSliderDot(this.indicators, this.getCurrent.bind(this));
         this.trigger = true;
     }

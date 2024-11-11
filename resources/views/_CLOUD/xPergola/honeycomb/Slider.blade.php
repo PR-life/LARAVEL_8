@@ -6,7 +6,6 @@
         new ScrollLeft('scroll_05111045')
         new ScrollLeft('scroll_05111046')
         new ScrollLeft('scroll_05111047')
-
     });
 </script>
 @endpush

@@ -5,11 +5,39 @@
     </div>
     
     <div class="Roll_mbl Roll_PC -edge -scrollBar -space / cross [ padding bottom ]" data-scroll>
-        @component('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.wrap.Wagon')
-            @slot('divCopyId','demo0511')
-            <img class="Img -cover / H-100 W-100" src="/images/catalog/24/house/11_a/a.jpg" alt="">
-        @endcomponent
-        @component('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.wrap.Wagon')
+
+
+
+
+@foreach($terrasaCases as $caseName => $_lib)
+    @php
+        // Ищем изображение с именем 'a.jpg'
+        $previewImage = null;
+        foreach ($_lib as $photo) {
+            if (strpos($photo, 'a.jpg') !== false) {
+                $previewImage = $photo;
+                break;
+            }
+        }
+        // Если 'a.jpg' не найдено, используем первое изображение
+        if ($previewImage === null) {
+            $previewImage = reset($_lib);
+        }
+    @endphp
+
+    @component('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.wrap.Wagon')
+        @slot('divCopyId',$caseName)
+        <div class="Abs -all">
+            <img class="Img -cover / H-100 W-100" src="{{ $previewImage }}" loading="lazy" alt="55555555">
+        </div>
+    @endcomponent
+@endforeach
+
+
+ 
+
+
+        {{-- @component('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.wrap.Wagon')
             @slot('divCopyId','demo0511')
             <img class="Img -cover / H-100 W-100" src="/images/catalog/24/house/11_b/a.jpg" alt="">
         @endcomponent
@@ -83,7 +111,7 @@
         @component('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.wrap.Wagon')
             @slot('divCopyId','demo0511')
             <img class="Img -cover / H-100 W-100" src="/images/catalog/24/house/12_o/a.jpg" alt="">
-        @endcomponent
+        @endcomponent --}}
 
         <div class="Gstrm"></div>
     </div>
