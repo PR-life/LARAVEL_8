@@ -6,6 +6,7 @@
         new ScrollLeft('scroll_05111045')
         new ScrollLeft('scroll_05111046')
         new ScrollLeft('scroll_05111047')
+        new ScrollLeft('scroll_05111048')
     });
 </script>
 @endpush
@@ -32,7 +33,7 @@
                         </div>
                         <div class="paragraphX2"></div>
 	 
-						@include('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.home')
+						@include('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.terrasa')
 			 
                     </div>
                     <div class="item / relative">
@@ -49,7 +50,7 @@
                         </div>
                         <div class="paragraphX2"></div>
 	 
-						@include('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.hostel')
+						@include('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.bio')
                     </div>
                     <div class="item">
                         <div class="space-05111042">
@@ -57,7 +58,7 @@
                         </div>
                         <div class="paragraphX2"></div>
 	 
-						@include('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.city')
+						@include('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.tent')
                     </div>    
                     <div class="item">
                         <div class="space-05111042">
@@ -65,7 +66,7 @@
                         </div>
                         <div class="paragraphX2"></div>
 	 
-						@include('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.city')
+						@include('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.zip')
                     </div>    
                 </div>
                 <div class="sherpaSlider"></div>

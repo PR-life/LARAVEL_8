@@ -1,12 +1,12 @@
-<div id="scroll_05111045" class="JsScroll -left">
+<div id="scroll_05111044" class="JsScroll -left">
 
     <div class="space-left">
         @include('manager.scroll.left.asgrupp')
     </div>
- 
+
     @component('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.wrap.Roll')
         
-        @foreach($casesWithPhotos['caffe'] as $caseFolder => $_lib)
+        @foreach($casesWithPhotos['terrasa'] as $caseFolder => $_lib)
             @php
                 // Ищем изображение с именем 'a.jpg'
                 $previewImage = null;
@@ -23,7 +23,7 @@
             @endphp
 
             @component('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.wrap.Wagon')
-                @slot('jsCategory','caffe')
+                @slot('jsCategory','terrasa')
                 @slot('jsFolder',$caseFolder)
 
                 <div class="Abs -all / Bg -gif">
@@ -34,5 +34,3 @@
 
     @endcomponent
 </div>
-
-
