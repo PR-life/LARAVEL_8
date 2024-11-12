@@ -1,7 +1,7 @@
 <div class="item Story vol-{{$cssVol ?? ''}} {{$css06112130 ?? ''}} / relative">
     @isset($img)
     <div class="Abs -all">
-        <img class="H-100 W-100 / Img -cover" src="{{$img}}" alt="55555">
+        <img class="H-100 W-100 / Img -cover" src="{{$img}}" alt="{{$alt ?? ''}}" loading="lazy">
     </div>
     @endisset
     @isset($video)

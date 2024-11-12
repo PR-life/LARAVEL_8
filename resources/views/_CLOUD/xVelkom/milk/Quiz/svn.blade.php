@@ -8,7 +8,7 @@
     </div>
 
     <div class="relative quiz-win">
-        <div class="Plot plot-h -S / none_mbl"></div>
+        <div class="Plot plot-h plot-quiz / none_mbl"></div>
         @include('_._brick.img.squere',['css09071611' => 'W-100 none_PC'])
         <div class="Abs -all / Bg -gif">
             @include('_CLOUD.xVelkom.mod.Quiz.svn',['id'=>'svn']) 

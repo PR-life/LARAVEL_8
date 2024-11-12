@@ -21,6 +21,10 @@
 
 	.MENUTILE;
 
+	> ._wrap {
+		text-align: left;
+	}
+
     // ._head {
 	// 	min-height: var(--x-tile-h);
 	// 	padding-top: 1rem;
@@ -55,6 +59,9 @@
 		display: inline-block;
 		vertical-align: top;
     }
+	> :last-child {
+		margin-right:0;
+	}
 }
 
 @media (min-width:@w-menu-2-plus) and (max-width:@metrika-80) {
