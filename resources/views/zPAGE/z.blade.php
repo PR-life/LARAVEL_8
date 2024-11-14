@@ -30,9 +30,9 @@
 @include('_._skeleton.bodyEnd')
 @include('_schema._lego.afterMilk')
 
-@if(config('AS.env') == 'production')
+{{-- @if(config('AS.env') == 'production') --}}
 	@include('zTHIS.analytica.add_footer')
-@endif
+{{-- @endif --}}
 
 @stack('metrika_events')
 
