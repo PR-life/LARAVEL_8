@@ -23,7 +23,7 @@
         @slot('name', 'шаблон')
 
         <div class="content-xxs Grey">Тизер</div>
-        @include('zADMIN.PAGE._lego.edit.schema.kovka', ['Var' => $item])
+        @includeIf('zADMIN.PAGE._lego.edit.schema.kovka', ['Var' => $item])
 
         <div class="paragraph"></div>
 

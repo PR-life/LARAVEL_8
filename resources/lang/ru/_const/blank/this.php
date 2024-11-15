@@ -1,0 +1,43 @@
+<?php
+
+return [
+    // 'LLC' => 'ООО "Арт Сити Групп"',
+    // 'title' => 'Мастерская Художественной Ковки и Сварки',
+    // 'whatsappLink' => 'https://wa.me/+79999195494/?text=asgrupp.ru/%20Ваш%20вопрос:%20',
+    // 'whatsappPhone' => '+7 999 919-54-94',
+    // 'viberLink' => 'viber://chat?number=+79031304050',
+    // 'viberPhone' => '+7 (903) 130-40-50',
+    // 'telegramName' => 'Artsitigrupp',
+    // 'telegramLink' => 'https://telegram.me/artsitigrupp',
+    // 'telegramNameNews' => 'detektivka',
+    // 'telegramLinkNews' => 'https://t.me/detektivka',
+    // 'linkVk' => 'https://vk.com/dtornado_grup',
+    // 'linkDzen' => 'https://dzen.ru/alfa_med',
+    // 'linkYoutube' => 'https://www.youtube.com/channel/UC-ULyDpWdPAu3HFn455Bb9g',
+    // 'linkUsligi' => 'https://uslugi.yandex.ru/profile/Tornado-240145',
+    // 'linkInst' => 'https://www.instagram.com/artsitigrupp/',
+    // 'phoneCode' => '+79999195494',
+    // 'phoneView' => '+7 (999) 919-54-94',
+    // 'phoneCode_gaz' => '+79999194995',
+    // 'phoneView_gaz' => '+7 (999) 919-49-95',
+    // 'phoneCode_kovka' => '+79850910166',
+    // 'phoneView_kovka' => '+7 (985) 091-01-66',
+    // 'emailLink' => 'mailto:zakaz@asgrupp.ru?subject=Арт%20Сити%20Групп.%20Вопрос%20с%20сайта',
+    // 'emailView' => 'zakaz@asgrupp.ru',
+    //
+    // 'addres' => 'Московская обл., г. Чехов, ул Новосельская д 2',
+    // 'addres_pickup' => 'Московская обл., г. Чехов, ул Новосельская д 2',
+    // 'addres_kovka' => 'Московская обл., г. Чехов, ул Новосельская д 2',
+    // 'addres_showroom' => 'Московская обл., Чехов, ул. Вишневый бульвар 3/1, офис 2',
+    // 'inn' => '5048058054',
+    // 'kpp' => '504801001',
+    // 'okpo' => '47691046',
+    // 'okogy' => '4210014',
+    // 'oktomo' => '46784000001',
+    // 'okved' => '25.50',
+
+    //
+    // 'btn_readmore' => 'подробнее',
+    // 'btn_consultation' => 'бесплатная консультация',
+    // 'def_price' => 'после консультации',
+];

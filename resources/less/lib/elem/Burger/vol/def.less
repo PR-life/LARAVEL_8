@@ -3,7 +3,7 @@
 
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
    .Burger.vol-def {
-      --Burger-line-h: 3px;
+      --Burger-line-h: 2px;
    }
 }
 @media (min-width: @w-beyond-plus) and (max-width: @w-max) {
@@ -13,7 +13,7 @@
 }
 @media screen and (max-width: @w-beyond) {
    .Burger.vol-def {
-      --Burger-w: clamp(25px,3.5vw,40px);
+      --Burger-w: clamp(25px,3vw,40px);
    }
 }
 
@@ -24,6 +24,7 @@
 }
 
 
+#body.menu-on .Burger.vol-def,
 #body.schema-aside .Burger.vol-def.x-aside {
    ._inner {
       --x-Burger-shift:4px;
@@ -36,7 +37,7 @@
 .Burger.vol-def {
     --x-Burger-radius: 4px;
     --x-Burger-bg: #333;
-    --x-Burger-height: 3px;
+    --x-Burger-height: 2px;
     --x-Burger-shift: 8px;
 
     // display: flex;

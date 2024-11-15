@@ -5,7 +5,7 @@
 // }
 
 .Badge,
-.Badge > ._font:first-child,
+.Badge > ._font,
 .Nameplate {
     font-size: var(--font-min);
 }
@@ -24,12 +24,15 @@
     line-height: ~"calc(var(--font-min) * 1)";
 }
 
-
-.Badge> :first-child {
-	// min-height: ~"calc(var(--font-min) * 1.4)";
-	line-height: var(--font-min);
+.Badge > ._font {
+	line-height: 120%;
 }
 
-.Badge.-lineHeight> :first-child {
-	height: ~"calc(var(--font-min) * 1)";
-}
+// .Badge> :first-child {
+// 	// min-height: ~"calc(var(--font-min) * 1.4)";
+// 	line-height: var(--font-min);
+// }
+
+// .Badge > ._font {
+// 	height: ~"calc(var(--font-min) * 1)";
+// }

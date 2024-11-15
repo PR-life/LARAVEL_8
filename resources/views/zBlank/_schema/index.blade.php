@@ -1,4 +1,4 @@
-@extends('zBlank._schema.INDEX')
+@extends('zBlank._schema.INDEX_')
 
 {{-- @push('css-body', 'role-' . auth()->user()->role . '-index ') --}}
 
