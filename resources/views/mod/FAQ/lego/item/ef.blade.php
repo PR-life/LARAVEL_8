@@ -9,7 +9,7 @@
 ">
     <details class="_details" itemprop="mainEntity" itemscope itemtype="http://schema.org/Question">
         @include('mod.FAQ.brick.summary_schema')
-        <div class="_edge net void">
+        <div class="_edge void {{$css18111250 ?? ''}}">
             @include('mod.FAQ.brick.name')
             <div class="x-text" itemprop="acceptedAnswer" itemscope itemtype="https://schema.org/Answer">
                 <div class="text void" itemprop="text">

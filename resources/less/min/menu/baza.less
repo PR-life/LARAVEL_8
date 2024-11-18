@@ -31,6 +31,12 @@
 
 @media (min-width:@w-menu-2-plus) and (max-width:@w-beyond) {
 
+	#inputMenuMain:checked ~ #btnMenuMilkClose {
+		display: flex;
+		z-index: 999;
+	}
+	//
+
 	.menuBeyond {
 		--x-translateX: calc(var(--edge) - var(--edge)*2);
 
@@ -38,7 +44,7 @@
 		> * {position: relative;}
 
 
-		.x-aside {
+		.wrap_beyond {
 			min-width: var(--Aside);
 		}
 

@@ -1,7 +1,7 @@
 @charset "UTF-8";
 
 .Shift {
-	--x-Shift:0;
+	--Shift:0;
 }
 
 
@@ -9,35 +9,35 @@
 
 	
 	.Shift.-step{
-		--x-Shift:-1rem;
+		--Shift:-1rem;
 	}
 
 	.Shift.-stepM{
-		--x-Shift:-2rem;
+		--Shift:-2rem;
 	}
 
 	.Shift.-stepS{
-		--x-Shift:-.5rem;
+		--Shift:-.5rem;
 	}
 	.Shift.-stepXS{
-		--x-Shift:-.25rem;
+		--Shift:-.25rem;
 	}
 	.Shift.-stepScroll{
-		--x-Shift:13px;
+		--Shift:13px;
 	}
 }
 
 
 @media screen and (max-width:@w-menu-2) {
 	.Shift.-step.shift-mbl{
-		--x-Shift:-.75rem;
+		--Shift:-.75rem;
 	}
 
 	.Shift.-stepS.shift-mbl{
-		--x-Shift:-.4rem;
+		--Shift:-.4rem;
 	}
 	.Shift.-stepXS.shift-mbl{
-		--x-Shift:-.2rem;
+		--Shift:-.2rem;
 	}
 }
 
@@ -45,19 +45,19 @@
 //
 
 .Shift.-stepScroll.shift-space {
-	padding-right: calc(var(--x-Shift)*.75);
+	padding-right: calc(var(--Shift)*.75);
 }
 
 
 //
 
 .Shift.-left {
-	transform: translateX(var(--x-Shift));
+	transform: translateX(var(--Shift));
 }
 .Shift.-right {
-	transform: translateX(calc(0rem - var(--x-Shift)));
+	transform: translateX(calc(0rem - var(--Shift)));
 }
 
 .Shift.-top {
-	transform: translateY(var(--x-Shift));
+	transform: translateY(var(--Shift));
 }
