@@ -3,8 +3,6 @@
 <script async src="{{ mix('/js/Observer/visible.js') }}"></script>
 <script async src="{{ mix('/js/skill/Scroll.js') }}"></script>
 @stack('js-bottom-link')
-
-
 <script>
 	@stack('js-bottom')
 </script>

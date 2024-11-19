@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
-.Form{
+.Status input:invalid {
+	color:var(--c-input-invalid);
+}
+
+
+.Form {
 
 	._shell.vol-Abs {
 		input:focus~label,
@@ -53,7 +58,7 @@
 		color:var(--c-input-disabled);
 	}
 
-	input:invalid,
+
 	input:out-of-range {
 		color:var(--c-input-invalid);
 	}

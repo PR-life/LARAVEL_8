@@ -2,7 +2,7 @@
     <div id="Logo" class="Abs -lt / LOGO / _indexMax">
         <div class="flex cC cI / Header -h">
             <div class="_btn space">
-                @include('_brick.btn.menu.btnMenuAside')
+                @include('_brick.btn.menu.volAsgrupp')
             </div>
             <a class="Logo / op-1709" href="/">
                 <img src="/images/logo/asgrupp.jpg" alt="">
@@ -10,13 +10,3 @@
         </div>
     </div>
 </div>
-
-<style>
-    /* css new */
-  #body.schema-aside #wrapLogoGoo .Logo {
-    display: none;
-  }
-  #body.schema-aside #wrapLogoGoo {
-    position: relative;
-  }
-</style>

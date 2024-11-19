@@ -1,7 +1,7 @@
 <div id="scroll_05111048" class="JsScroll -left">
 
     <div class="space-left">
-        @include('manager.scroll.left.asgrupp')
+        @include('manager.scroll.left.vol.asgrupp')
     </div>
  
     @component('_CLOUD.xPergola.honeycomb._wrap.Slider.slides.wrap.Roll')
