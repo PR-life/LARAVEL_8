@@ -1,13 +1,13 @@
 @charset "UTF-8";
 
 @media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
-    .Stories.-space {
+    .Stories.Roll_PC.-space {
         padding-top: 5px;
     }
     .Stories {
         padding-bottom: 3rem !important;
         > .item {
-            min-width: 160px;
+            min-width: clamp(120px,10vw,160px);
             margin-right: 1vw;
         }
     }
