@@ -21,7 +21,7 @@
 @endisset
 <div class="paragraph / none_mbl"></div>
 
-<div class="{{$css_wrap_content ?? 'I aura / Edge -SPC'}} hidden" itemscope itemtype="https://schema.org/FAQPage">
+<div class="{{$css_wrap_content ?? 'I aura / Edge -SPC'}}" itemscope itemtype="https://schema.org/FAQPage">
     <meta itemprop="name" content="Часто задаваемые вопросы">
 	<div id="{{$id_package}}" class="{{$id_package_css ?? 'featured first'}}">
 		<div class="Ef -list -first / -Details">

@@ -65,7 +65,7 @@ if(isset($css)) {
 
 
         <div class="_r / flex sI / cross-s">
-            {{-- @include('zADMIN._repo.teaser.lego.cell.relation', ['param_seo' => null]) --}}
+            @include('zADMIN._repo.teaser.lego.cell.relation', ['param_seo' => null])
 
             <div class="x-HMin flex cI">
                 @include('zADMIN._repo.teaser.lego.cell.bd.date')
