@@ -1,0 +1,30 @@
+@charset "UTF-8";
+
+
+@media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
+    
+    .Grid.Henge {
+        --gap: clamp(1rem, 148px, 10vw);
+        --cols: calc(100% - var(--gaps));
+        --gaps: calc(3 * var(--gap));
+        --size: calc(var(--cols) / 3);
+        --space: calc(var(--size) + var(--gap));
+    
+        grid-gap: var(--gap);
+        grid-template-columns: repeat(3, 1fr);
+        // > ._wrap {
+        //     --col: 1;
+
+        //     flex: 0 0 calc(var(--col) * var(--space) - var(--gap));
+        //     width: calc(var(--col) * var(--space) - var(--gap));
+        //     margin: 0 calc(var(--gap) * .5);
+        // }
+
+        > .text {
+            padding-bottom: 180px;
+        }
+    }
+
+    
+ 
+}
