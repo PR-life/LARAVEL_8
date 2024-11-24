@@ -82,21 +82,30 @@
 	// 	max-width: calc(100% - var(--KIRA));
 	// }
 
-	#body.schema-aside.aside-abs {
-		#Oi {
-			padding-left: var(--Aside-abs);
-
-			// .oi-100 {
-			// 	max-width: calc(var(--w) - var(--Aside-abs));
-			// }
-		}
-	}
-
 
 	.Henge {
+		max-width: 1680px;
 		padding-left:9vw;
 		padding-right:9vw;
 	}
+
+
+	//
+	//
+	#body.asideClose  {
+		.Henge {
+			padding-left:4vw;
+			padding-right:4vw;
+		}
+	}
+
+	#body.schema-aside.aside-abs {
+		#Oi {
+			background-color: red !important;
+			padding-left: var(--Aside-abs);
+		}
+	}
+
 
 }
 
