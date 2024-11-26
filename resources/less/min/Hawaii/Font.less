@@ -2,29 +2,10 @@
 
 @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
 
-	.Font {
-		--Font-h1:4vw;
-		--Font-h1-max:68px;
-
-		//
-		--Font-h2-max: 28px;
-		--Font-h2:3vw;
-	
-		//
-		--Font-min:28px;
-		--Font-min-lineHeight:calc(var(--Font-min) + 4px);
-
-	}
-
 	.Font.-XS {
 		--Font-h1:2.5vw;
 		--Font-h1-max: calc(48px - 1rem);
 		--Font-min: calc(var(--rem-h) + 8px);
-	}
-
-	.Font.-S {
-		--Font-h1:3vw;
-		--Font-h1-max: 40px;
 	}
 
 	.Font.-M {
@@ -42,6 +23,22 @@
 		--Font-h1:6vw;
 		--Font-h1-max: 120px;
 	}
+
+	.Font {
+		--Font-h1:4vw;
+		--Font-h1-max:68px;
+
+		//
+		--Font-h2-max: 36px;
+		--Font-h2:2.5vw;
+	
+		//
+		--Font-min:28px;
+		--Font-min-lineHeight:calc(var(--Font-min) + 4px);
+
+	}
+
+	////
 
 	.Font {
 		._p {
@@ -140,7 +137,7 @@
         line-height: calc(var(--Font-h2) + var(--Font-lineHeight));
     }
 
-	._h2.-vw {
+	._h2.-max {
 		font-size: var(--Font-CALC-h2);
 		line-height: var(--Font-CALC-h2-height);
 	}
