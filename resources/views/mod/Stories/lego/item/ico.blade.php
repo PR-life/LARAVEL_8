@@ -1,4 +1,4 @@
-<div class="item Ico / storie-{{$css01111242 ?? $goto}} / space-s pointer index relative" data-click data-goto='{{$goto}}' data-foo='click' data-css data-add='x-done'>
+<div class="item Ico / storie-{{$css01111242 ?? $goto}} / space-s pointer index relative" data-click data-goto='{{$goto}}' data-foo='click' data-css data-add='x-done' @isset($ymId) onclick="ym({{$ymId}},'reachGoal','click_btn_story')"@endisset>
     <div class="_foto Abs -all / Bg -gif / Bone / -Black / round index">
         <div class="Veil">
             <div class="_bottom round"></div>
