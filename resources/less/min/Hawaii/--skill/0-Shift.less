@@ -8,12 +8,18 @@
 @media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
 
 	
-	.Shift.-step{
-		--Shift:-1rem;
+ 
+
+	.Shift.-stepL{
+		--Shift:-3rem;
 	}
 
 	.Shift.-stepM{
 		--Shift:-2rem;
+	}
+
+	.Shift.-step{
+		--Shift:-1rem;
 	}
 
 	.Shift.-stepS{
@@ -57,7 +63,9 @@
 .Shift.-right {
 	transform: translateX(calc(0rem - var(--Shift)));
 }
-
 .Shift.-top {
 	transform: translateY(var(--Shift));
+}
+.Shift.-bottom {
+	transform: translateY(calc(0px - var(--Shift)));
 }

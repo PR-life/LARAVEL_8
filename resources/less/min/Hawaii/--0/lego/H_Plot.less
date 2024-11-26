@@ -23,20 +23,20 @@
     // }
 
     .Plot.-XS {
-        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2 - 2vh);
+        --Plot-precise:calc(0px - var(--h-Top,0px)*2 - var(--h-Header,0px)*2 - 2vh);
     }
 
     .Plot.-S {
-        --Plot-precise:calc(0px - var(--h-Top)*2 - var(--h-Header)*2);
+        --Plot-precise:calc(0px - var(--h-Top,0px)*2 - var(--h-Header,0px)*2);
     }
 
     .Plot.-M {
-        --Plot-precise:calc(0px - var(--h-Top) - var(--h-Header));
+        --Plot-precise:calc(0px - var(--h-Top,0px) - var(--h-Header,0px));
     }
 
     //
     .Plot.plot-quiz {
-        --Plot-precise:calc(0px - var(--h-Top) - var(--h-Header));
+        --Plot-precise:calc(0px - var(--h-Top,0px) - var(--h-Header,0px));
     }
 
 
@@ -69,11 +69,11 @@
 
 .Plot.plot-h,
 .Plot.-L {
-    --Plot:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
+    --Plot:calc(var(--h) - var(--h-Top,0px) - var(--h-Header,0px) + var(--Plot-precise));
 }
 
 .Plot {
-    --PlotMin:calc(var(--h) - var(--h-Top) - var(--h-Header) + var(--Plot-precise));
+    --PlotMin:calc(var(--h) - var(--h-Top,0px) - var(--h-Header,0px) + var(--Plot-precise));
 }
 
 

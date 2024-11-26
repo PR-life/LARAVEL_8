@@ -5,7 +5,7 @@
                 @include('_brick.btn.menu.volAsgrupp')
             </div>
             <a class="Logo / op-1709" href="/">
-                <img src="/images/logo/asgrupp.jpg" alt="">
+                <img src="https://asgrupp.ru/images/logo/asgrupp.jpg" alt="Арт Сити Групп">
             </a>
         </div>
     </div>

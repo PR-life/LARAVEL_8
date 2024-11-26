@@ -4,7 +4,32 @@
 @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
     
 
+    
+    #body.SATIRA .Anime.On {
+        --Henge-translateY: 0;
 
+        .anime-25111311 {
+            ._wrap {
+                opacity: 1;
+            }
+        }
+    }
+
+    .Anime {
+        --Henge-translateY: 160px;
+
+        .anime-25111311 {
+            transform: translateY(var(--Henge-translateY));
+            transition:transform ease-out .4s;
+
+            ._wrap {
+                opacity: 0;
+                transition:opacity ease-in .6s;
+            }
+        }
+    }
+
+    //
     .Grid.Henge.henge-aab {
         grid-template-areas:"a1 b1";
         grid-template-columns: 2fr 1fr;
@@ -28,26 +53,33 @@
         }
     }
 
+    //
+    .Henge.henge-anime {
+        --Henge-space-b:0;
+    }
+
 
 
     .Grid.Henge {
-        --gap: clamp(1rem, 120px, 7vw);
-        --cols: calc(100% - var(--gaps));
-        --gaps: calc(3 * var(--gap));
-        --size: calc(var(--cols) / 3);
-        --space: calc(var(--size) + var(--gap));
-    
-        grid-gap: var(--gap);
-        // grid-template-columns: repeat(3, 1fr);
+        --Henge-gap: clamp(1rem, 120px, 7vw);
+        --Henge-cols: calc(100% - var(--Henge-gaps));
+        --Henge-gaps: calc(3 * var(--Henge-gap));
+        --Henge-size: calc(var(--Henge-cols) / 3);
+        --Henge-space: calc(var(--Henge-size) + var(--Henge-gap));
+
+        grid-gap: var(--Henge-gap);
 
         grid-template-areas:"a1 b1 c1";
         grid-template-columns: 1fr 1fr 1fr;
-
-        > .text {
-            padding-bottom: 180px;
-        }
     }
 
+
+    .Henge {
+        --Henge-space-b: 180px;
     
+        > .text {
+            padding-bottom: var(--Henge-space-b);
+        }
+    }
  
 }
