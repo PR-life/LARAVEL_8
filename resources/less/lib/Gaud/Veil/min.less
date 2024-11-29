@@ -1,0 +1,41 @@
+@charset "UTF-8";
+
+
+.Veil,
+.Veil::before,
+.Veil::after,
+.Veil>* {
+	position: absolute;
+}
+
+.Veil::before,
+.Veil::after,
+.Veil > ._bottom,
+.Veil > ._top,
+.Veil > ._left,
+.Veil > ._right,
+.Veil > ._mid,
+.Veil {
+	bottom: 0;
+	top: 0;
+}
+
+.Veil::before,
+.Veil::after,
+.Veil > ._bottom,
+.Veil > ._top,
+.Veil > ._left,
+.Veil > ._mid,
+.Veil {
+	left: 0;
+}
+
+.Veil::before,
+.Veil::after,
+.Veil > ._bottom,
+.Veil > ._top,
+.Veil > ._right,
+.Veil > ._mid,
+.Veil {
+	right: 0;
+}

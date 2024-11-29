@@ -50,8 +50,6 @@ class IndexController extends BaseController
 			$products = Product::whereNull('product_id')->with('childrenProducts')->orderBy('created_at', 'DESC')->get();
 	   }
 
-
-
 	   //
 		$roles = User::getRoles();
         $_request = $this->service->_request($request);

@@ -1,0 +1,48 @@
+@charset "UTF-8";
+
+
+.Veil.-sliderLeft {
+	left: 0;
+	top: 0;
+	bottom: 0;
+	width: 30px;
+}
+
+.Veil.-sliderRight {
+	right: 0;
+	top: 0;
+	bottom: 0;
+	width: 30px;
+}
+
+.-Veil[data-current="1"] .Veil.-sliderLeft {
+	opacity: 0;
+}
+
+
+
+.Veil.-sliderLeft::before {
+	content: '';
+	left: -25px;
+	border-radius: 50%;
+	height: 80%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 24px;
+	z-index: 1;
+	box-shadow: 0 0 30px -8px #232628;
+}
+
+.Veil.-sliderRight::before {
+	content: '';
+	right: -25px;
+	border-radius: 50%;
+	height: 80%;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 24px;
+	box-shadow: 0 0 30px -8px #232628;
+}
+

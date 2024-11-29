@@ -93,6 +93,7 @@
 	height: var(--hill-s);
 }
 
+
 .hill-m {
 	height: var(--hill-m);
 }
@@ -109,9 +110,14 @@
 	max-height: calc(var(--index) * 5);
 }
 
-
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+    .hill-m_PC {
+        height: var(--hill-m);
+    }
+}
 
 @media screen and (max-width:@w-menu-2) {
+    .hill-m_PC,
 	.hill_mbl {
 		min-height: var(--hill);
 	}

@@ -2,31 +2,34 @@
 
 @media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
     .h.-index_PC {
-        --rem-h:clamp(16px, calc(var(--index)*.8), 22px);
+        // --rem-h:clamp(16px, calc(var(--index)*.8), 22px);
+        background-color: red;
     }
 }
 
+
 .h1.-index,
 h1.-index {
-    --rem-h1:clamp(1rem, calc(var(--index)*2), 48px);
+    --this-font:clamp(1.5rem, calc(var(--index)*2), var(--rem-h1));
 }
-
-
+.h2.-index,
+h2.-index {
+    --this-font:clamp(1rem, calc(var(--index)*1.5), var(--rem-h2));
+}
 .h.-index {
-    --rem-h:clamp(12px, calc(var(--index)*.8), 22px);
+    --this-font:clamp(1rem, var(--rem-h), calc(var(--index)*.9));
 }
 
 .content.-index {
-    --font:clamp(10px, calc(var(--index)*.7), 16px);
+    // --font:clamp(10px, calc(var(--index)*.7), 16px);
+    background-color: red;
 }
 .content-m.-index {
-    --font:clamp(10px, calc(var(--index)*.7), 18px);
-    line-height: ~"calc(var(--font) * 1.5)";
+    // --font:clamp(10px, calc(var(--index)*.7), 18px);
+    // line-height: ~"calc(var(--font) * 1.5)";
+    background-color: red;
 }
 
 
 
-// .h2.-index,
-// h2.-index {
-//     --rem-h2:clamp(1rem, calc(var(--index)*1.5), 48px);
-// }
+

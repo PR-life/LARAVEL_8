@@ -1,9 +1,78 @@
 @charset "UTF-8";
 
-.Prev {
-    --x-h-Prev:100px;
+@import "./Prev/_ol.less";
+
+
+// .-Prev.prev-5,
+// .Prev.prev-5 {
+//     --Prev-x:20%;
+// }
+
+.-Prev.prev-gap,
+.Prev.prev-gap {
+    --Prev-gap:1rem;
 }
 
-// .Prev.plot-hMin {
-// 	min-height: var(--x-h-Prev);
-// }
+//
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+    .-Prev,
+    .Prev {
+        --Prev-w-min:140px;
+    }
+}
+@media screen and (max-width: @w-menu-2) {
+    .-Prev,
+    .Prev {
+        --Prev-w-min:180px;
+    }
+}
+
+.-Prev,
+.Prev {
+    --Prev-x:25%;
+    --Prev-w:calc(var(--Prev-x) - var(--Prev-gap));
+    --Prev-gap:0px;
+    --Prev-before:100%;
+}
+
+.-Prev .Teaser,
+.flex > .Prev {
+    min-width: var(--Prev-w-min);
+    width: var(--Prev-w);
+    flex-shrink: 0;
+}
+
+
+//
+.-Prev .teaser,
+.Prev {
+
+    picture {
+        position: relative;
+        display: block;
+        pointer-events: none;
+        z-index: 1;
+
+        img {
+            height: 100%;
+            width: 100%;
+            // object-fit: cover;
+        }
+    }
+    picture::before {
+        content: '';
+        display: block;
+        padding-bottom: var(--Prev-before);
+    }
+}
+
+.-Prev.prev-gap .teaser,
+.Prev.prev-gap {
+    margin-right: var(--Prev-gap);
+}
+
+
+.-Prev .flex.-wrap > .teaser,
+.flex.-wrap > .Prev.teaser {
+    margin-bottom: var(--Prev-gap);
+}

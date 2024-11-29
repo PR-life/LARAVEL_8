@@ -4,6 +4,19 @@
 @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
     
 
+	.Grid.vol-article {
+		grid-auto-columns: 1fr;
+		grid-column-gap: 80px;
+		grid-row-gap: 16px;
+		grid-template-rows: auto;
+		grid-template-columns: .75fr .5fr;
+	}
+
+
+
+
+
+
     
     #body.SATIRA .Anime.On {
         --Henge-translateY: 0;
@@ -20,11 +33,11 @@
 
         .anime-25111311 {
             transform: translateY(var(--Henge-translateY));
-            transition:transform ease-out .4s;
+            transition:transform ease-out var(--Anime-duration-translateY);
 
             ._wrap {
                 opacity: 0;
-                transition:opacity ease-in .6s;
+                transition:opacity ease-in var(--Anime-duration-opacity);
             }
         }
     }
