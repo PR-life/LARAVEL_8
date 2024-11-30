@@ -1,6 +1,4 @@
 <div class="_shell / space">
-
-
     <div class="flex eC">
         <div class="flex cI / cross-xs">
             <label class="content-xs Grey" for="deleteImage">очистить все фото</label>
@@ -29,6 +27,13 @@
             <img src="{{ asset('storage/'.strtolower(basename(str_replace('\\', '/', get_class($Var)))).'_images/'. $Var->image) }}" alt="Category Image" style="max-width: 200px;">
         </div>
     @endif
+
+
+
+    <div class="paragraphX2"></div>
+    <input id="inputImagePrev" type="text" name="image_prev" value="{{$Var->image_prev}}" placeholder="image_prev">
+
+
 </div>
 
 
