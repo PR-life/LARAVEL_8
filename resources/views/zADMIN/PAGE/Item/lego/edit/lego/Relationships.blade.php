@@ -74,14 +74,14 @@
                     @endcomponent
                 </div>
             </div>
-            {{-- <div class="Min -w5">
+            <div class="Min -w5">
                 @include('zADMIN._wrap.select.name',['Var' => 'Коллекции'])
                 <div class="wrap-relationship -multiple">
                     @component('zADMIN._wrap.select.collections.index')
                         @include('_._brick.select.collections.edit.index',['Collections' => $collections,'arr' => $item->collections->pluck('id')->toArray()])
                     @endcomponent
                 </div>
-            </div> --}}
+            </div>
         </div>
 
         {{-- @dd($item->categories->pluck('id')->toArray()) --}}

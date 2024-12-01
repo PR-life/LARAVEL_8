@@ -122,8 +122,11 @@ class BaseService {
                 $width = 560;
                 $height = 315;
 
-                $previewImage = Image::make($image)->fit(480, 480)->encode('png');
+                $previewImage = Image::make($image)->fit(600, 600)->encode('png');
                 $previewImage->save(public_path('storage/' . $imagePrefix . '_images/teaser/square/' . $filename));
+
+                $previewImage = Image::make($image)->fit(600, 800)->encode('png');
+                $previewImage->save(public_path('storage/' . $imagePrefix . '_images/teaser/portrait/' . $filename));
 
                 break;
             default:

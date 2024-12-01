@@ -44,9 +44,9 @@ class StoreRequest extends BaseRelationsRequest
             'prev_url' => 'nullable',
 
             //
-            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp,avif|max:2048',
+            'image' => 'nullable|image|mimes:jpeg,png,jpg,webp,avif|max:20048',
             'image_original' => 'nullable|string',
-            'image_prev' => 'nullable|image|mimes:jpeg,png,jpg,webp,avif|max:2048',
+            'image_prev' => 'nullable|image|mimes:jpeg,png,jpg,webp,avif|max:20048',
  
 			//
             'text_global' => 'nullable|string',

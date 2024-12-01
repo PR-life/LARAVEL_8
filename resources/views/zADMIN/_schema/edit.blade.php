@@ -3,7 +3,7 @@
 
 @include('zADMIN._bd._src.edit.min')
 
-@include('_.js.component.tinymce.index')
+{{-- @include('_.js.component.tinymce.index') --}}
 
 @push('linkJs')
 	@include('_.src.link.js.text.tinymce')

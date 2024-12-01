@@ -11,13 +11,13 @@
 @endpush
 
 @push('bee')
-    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Collections', 'add' => route('admin.collection.create'), 'Model' => 'Category'])
+    @include('zADMIN._lego.Bee.nameIndex',['name' => 'Collections', 'add' => route('admin.collection.create'), 'Model' => 'Collection'])
     {{-- @include('zADMIN.PAGE._lego.filter.SCHEMA.index.categories') --}}
 @endpush
     
-@component('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Collection', 'model' => 'collection'])
+{{-- @component('zADMIN.PAGE._lego.filter._lego.filter_for_table.index',['Model' => 'Collection', 'model' => 'collection'])
     @include('zADMIN.PAGE.Category.lego.index.filter_for_table')
-@endcomponent
+@endcomponent --}}
 
 
 @section('content')
@@ -30,8 +30,8 @@
             filter_btn_table_childrenLevel
             '])
 
-                @foreach($Collections as $_category)   
-                    @include('zADMIN._repo.teaser.index', ['Var' => $_category, 'css' => ' parent'])
+                @foreach($Collections as $_collection)   
+                    @include('zADMIN._repo.teaser.collection', ['Var' => $_collection, 'css' => ' parent'])
                     
                     {{-- @if($_category->childrenCategories->isNotEmpty())
                         <div class="children -lvl_{{ $_level ?? 1 }} / round">

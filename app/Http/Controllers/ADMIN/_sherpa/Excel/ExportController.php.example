@@ -21,6 +21,7 @@ use App\Exports\LegoExport;
 //
 use App\Exports\ProductExport;
 //
+use App\Exports\child\CollectionExport;
 use App\Exports\child\TelegramExport;
 use App\Exports\child\ServiceExport;
 //
@@ -70,7 +71,8 @@ use App\Exports\pivot\Product\ProductFeatureExport;
 use App\Exports\pivot\Product\ProductLegoExport;
 use App\Exports\pivot\Product\ProductProductExport;
 use App\Exports\pivot\Product\ProductTagExport;
- 
+
+
 // use App\Exports\pivot\SmsTagExport;
 // use App\Exports\pivot\SmsCategoryExport;
 //
@@ -93,6 +95,14 @@ class ExportController extends Controller
 		Excel::store(new TagExport, 'Excel/_old/'.$nameTag);
 		Excel::store(new TagExport, 'Excel/Tags.xlsx');
 
+		$nameFeature = 'Features' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new FeatureExport, 'Excel/_old/'.$nameFeature);
+		Excel::store(new FeatureExport, 'Excel/Features.xlsx');
+
+		$nameDetail = 'Details' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new DetailExport, 'Excel/_old/'.$nameDetail);
+		Excel::store(new DetailExport, 'Excel/Details.xlsx');
+
 		$nameCategory = 'Categories' . '_' . date('dm_Gi'). '.xlsx';
 		Excel::store(new CategoryExport, 'Excel/_old/'.$nameCategory);
 		Excel::store(new CategoryExport, 'Excel/Categories.xlsx');
@@ -109,7 +119,7 @@ class ExportController extends Controller
 		Excel::store(new PaperExport, 'Excel/_old/'.$namePaper);
 		Excel::store(new PaperExport, 'Excel/Papers.xlsx');
 
-		$nameItem = 'Item' . '_' . date('dm_Gi'). '.xlsx';
+		$nameItem = 'Items' . '_' . date('dm_Gi'). '.xlsx';
 		Excel::store(new ItemExport, 'Excel/_old/'.$nameItem);
 		Excel::store(new ItemExport, 'Excel/Items.xlsx');
 
@@ -121,8 +131,20 @@ class ExportController extends Controller
 		Excel::store(new FaqExport, 'Excel/_old/'.$nameFaq);
 		Excel::store(new FaqExport, 'Excel/Faq.xlsx');
 		
+		$nameLego = 'Lego' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new LegoExport, 'Excel/_old/'.$nameLego);
+		Excel::store(new LegoExport, 'Excel/Lego.xlsx');
+
+		//
+		$nameProduct = 'Products' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new ProductExport, 'Excel/_old/'.$nameProduct);
+		Excel::store(new ProductExport, 'Excel/Products.xlsx');
+		
 		
 		//
+		$nameCollection = 'Collection' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new CollectionExport, 'Excel/_old/child/'.$nameCollection);
+		Excel::store(new CollectionExport, 'Excel/child/Collection.xlsx');
 		$nameTelegram = 'Telegram' . '_' . date('dm_Gi'). '.xlsx';
 		Excel::store(new TelegramExport, 'Excel/_old/child/'.$nameTelegram);
 		Excel::store(new TelegramExport, 'Excel/child/Telegrams.xlsx');
@@ -146,15 +168,18 @@ class ExportController extends Controller
 		$nameCategoryFaq = 'CategoryFaq' . '_' . date('dm_Gi'). '.xlsx';
 		Excel::store(new CategoryFaqExport, 'Excel/_old/pivot/'.$nameCategoryFaq);
 		Excel::store(new CategoryFaqExport, 'Excel/pivot/CategoryFaqs.xlsx');
-		$nameCategoryTag = 'CategoryTag' . '_' . date('dm_Gi'). '.xlsx';
-		Excel::store(new CategoryTagExport, 'Excel/_old/pivot/'.$nameCategoryTag);
-		Excel::store(new CategoryTagExport, 'Excel/pivot/CategoryTags.xlsx');
 		$nameCategoryItem = 'CategoryItem' . '_' . date('dm_Gi'). '.xlsx';
 		Excel::store(new CategoryItemExport, 'Excel/_old/pivot/'.$nameCategoryItem);
 		Excel::store(new CategoryItemExport, 'Excel/pivot/CategoryItems.xlsx');
+		$nameCategoryLego = 'CategoryLego' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new CategoryLegoExport, 'Excel/_old/pivot/'.$nameCategoryLego);
+		Excel::store(new CategoryLegoExport, 'Excel/pivot/CategoryLego.xlsx');
 		$nameCategoryService = 'CategoryService' . '_' . date('dm_Gi'). '.xlsx';
 		Excel::store(new CategoryServiceExport, 'Excel/_old/pivot/'.$nameCategoryService);
 		Excel::store(new CategoryServiceExport, 'Excel/pivot/CategoryServices.xlsx');
+		$nameCategoryTag = 'CategoryTag' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new CategoryTagExport, 'Excel/_old/pivot/'.$nameCategoryTag);
+		Excel::store(new CategoryTagExport, 'Excel/pivot/CategoryTags.xlsx');
 
 		$nameFaqCategory = 'FaqCategories' . '_' . date('dm_Gi'). '.xlsx';
 		Excel::store(new FaqCategoryExport, 'Excel/_old/pivot/'.$nameFaqCategory);
@@ -181,6 +206,9 @@ class ExportController extends Controller
 		$nameItemTag = 'ItemTags' . '_' . date('dm_Gi'). '.xlsx';
 		Excel::store(new ItemTagExport, 'Excel/_old/pivot/'.$nameItemTag);
 		Excel::store(new ItemTagExport, 'Excel/pivot/ItemTags.xlsx');
+		$nameItemLego = 'ItemLego' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new ItemLegoExport, 'Excel/_old/pivot/'.$nameItemLego);
+		Excel::store(new ItemLegoExport, 'Excel/pivot/ItemLego.xlsx');
 
 
 		$nametLandingFaq = 'LandingFaqs' . '_' . date('dm_Gi'). '.xlsx';
@@ -218,11 +246,40 @@ class ExportController extends Controller
 		Excel::store(new ServiceCategoryExport, 'Excel/pivot/ServiceCategories.xlsx');
 
 
+ 		$LegoGroupExport = 'LegoGroups' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new LegoGroupExport, 'Excel/_old/pivot/'.$LegoGroupExport);
+		Excel::store(new LegoGroupExport, 'Excel/pivot/LegoGroups.xlsx');
+ 		$LegoTagExport = 'LegoTags' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new LegoTagExport, 'Excel/_old/pivot/'.$LegoTagExport);
+		Excel::store(new LegoTagExport, 'Excel/pivot/LegoTags.xlsx');
+ 		$LegoCategoryExport = 'LegoCategories' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new LegoCategoryExport, 'Excel/_old/pivot/'.$LegoCategoryExport);
+		Excel::store(new LegoCategoryExport, 'Excel/pivot/LegoCategories.xlsx');
+
+		
+		$nameProductCategory = 'ProductCategories' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new ProductCategoryExport, 'Excel/_old/pivot/'.$nameProductCategory);
+		Excel::store(new ProductCategoryExport, 'Excel/pivot/ProductCategories.xlsx');
+		$nameProductFaq = 'ProductFaqs' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new ProductFaqExport, 'Excel/_old/pivot/'.$nameProductFaq);
+		Excel::store(new ProductFaqExport, 'Excel/pivot/ProductFaqs.xlsx');
+		$nameProductFeature = 'ProductFeatures' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new ProductFeatureExport, 'Excel/_old/pivot/'.$nameProductFeature);
+		Excel::store(new ProductFeatureExport, 'Excel/pivot/ProductFeatures.xlsx');
+		$nameProductLego = 'ProductLego' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new ProductLegoExport, 'Excel/_old/pivot/'.$nameProductLego);
+		Excel::store(new ProductLegoExport, 'Excel/pivot/ProductLego.xlsx');
+		$nameProductProduct = 'ProductProducts' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new ProductProductExport, 'Excel/_old/pivot/'.$nameProductProduct);
+		Excel::store(new ProductProductExport, 'Excel/pivot/ProductProducts.xlsx');
+		$nameProductTag = 'ProductTags' . '_' . date('dm_Gi'). '.xlsx';
+		Excel::store(new ProductTagExport, 'Excel/_old/pivot/'.$nameProductTag);
+		Excel::store(new ProductTagExport, 'Excel/pivot/ProductTags.xlsx');
 
 
-		// $nametLandingTag = 'LandingTags' . '_' . date('dm_Gi'). '.xlsx';
-		// Excel::store(new LandingTagExport, 'Excel/_old/pivot/'.$nametLandingTag);
-		// Excel::store(new LandingTagExport, 'Excel/pivot/LandingTags.xlsx');
+
+
+
 
 
 		
