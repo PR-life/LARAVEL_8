@@ -4,7 +4,7 @@ namespace App\Http\Controllers\ADMIN\_lib\Telegram;
 
 use App\Http\Controllers\Controller;
 //
-use App\Services\ADMIN\Paper\Service;
+use App\Services\ADMIN\Telegram\Service;
 
 
 class BaseController extends Controller {

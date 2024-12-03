@@ -4,6 +4,6 @@
             @include('zADMIN._repo.teaser.brick.slug')
         @endif
         @include('zADMIN._repo.teaser.lego.name.seo_en')
-        @include('zADMIN._repo.teaser.lego.cell.seo')
+        {{-- @include('zADMIN._repo.teaser.lego.cell.seo') --}}
     </div>
 </div>

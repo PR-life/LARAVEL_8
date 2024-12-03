@@ -1,6 +1,11 @@
+
+@isset($Var->user)
 <div class="edge-leftS / Edge">
 	@include('_wrap.Preamble.Teaser.blog.face_out', ['Var' => $Var, 'link' => $routeName])
 </div>
+@endisset
+
+
 <div class="relative">
 	@if ($Var->schema_teaser == 'poster')
 		<div class="paragraph"></div>

@@ -24,8 +24,11 @@
 		<div class="_shell / net">
 			@include('zADMIN._bd.edit.min',['Var'=> $paper])
 		</div>
- 
+
+		
 		@include('zADMIN.PAGE.Paper.lego.edit.lego.Relationships')
+
+		 
 		<div class="paragraph"></div>
  
 		@component('_wrap.Flaber.admin.edit')

@@ -70,14 +70,22 @@
 	// > * {width: 100%;}
 }
 
-@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
-	// .Grid {
-	// 	.Wagon.-w {
-	// 		min-width: auto;
-	// 	}
-	// }
-}
+// @media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+// 	.Grid {
+// 		.Wagon.-w {
+// 			min-width: auto;
+// 		}
+// 	}
+// }
 
+@media screen and (max-width: @w-menu-2) {
+	.Wagon.-w_mbl {
+		min-width: var(--x-Wagon-w);
+		max-width: var(--x-Wagon-w);
+	
+		// > * {width: 100%;}
+	}
+}
 
 
 //
