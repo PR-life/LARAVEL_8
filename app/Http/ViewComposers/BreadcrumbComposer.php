@@ -88,11 +88,11 @@ class BreadcrumbComposer
             ];
         }
 
-        $breadcrumbs[] = [
-            'name' => $paper->name,
-            'url' =>  $paper->canonical ?? route('asgrupp.blog.show', $paper->slug),
-            'slug' => $paper->slug
-        ];
+        // $breadcrumbs[] = [
+        //     'name' => $paper->name,
+        //     'url' =>  $paper->canonical ?? route('asgrupp.blog.show', $paper->slug),
+        //     'slug' => $paper->slug
+        // ];
     }
 
     private function handleService(array &$breadcrumbs, $service)

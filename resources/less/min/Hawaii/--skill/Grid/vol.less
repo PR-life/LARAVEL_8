@@ -2,7 +2,21 @@
 
 
 @media (min-width: @w-menu-2-plus) and (max-width:@w-max) {
-    
+
+    .Grid.-Henge,
+    .Grid.Henge {
+        --Henge-gap: clamp(1rem, 120px, 7vw);
+        --Henge-cols: calc(100% - var(--Henge-gaps));
+        --Henge-gaps: calc(3 * var(--Henge-gap));
+        --Henge-size: calc(var(--Henge-cols) / 3);
+        --Henge-space: calc(var(--Henge-size) + var(--Henge-gap));
+
+        grid-gap: var(--Henge-gap);
+
+        grid-template-areas:"a1 b1 c1";
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    //
 
 	.Grid.vol-article {
 		grid-auto-columns: 1fr;
@@ -43,7 +57,7 @@
     }
 
     //
-    .Grid.Henge.henge-aab {
+    .Grid.henge-aab {
         grid-template-areas:"a1 b1";
         grid-template-columns: 2fr 1fr;
 
@@ -54,7 +68,7 @@
             grid-area: b1;
         }
     }
-    .Grid.Henge.henge-abb {
+    .Grid.henge-abb {
         grid-template-areas:"a1 b1";
         grid-template-columns: 1fr 2fr;
 
@@ -71,20 +85,6 @@
         --Henge-space-b:0;
     }
 
-
-
-    .Grid.Henge {
-        --Henge-gap: clamp(1rem, 120px, 7vw);
-        --Henge-cols: calc(100% - var(--Henge-gaps));
-        --Henge-gaps: calc(3 * var(--Henge-gap));
-        --Henge-size: calc(var(--Henge-cols) / 3);
-        --Henge-space: calc(var(--Henge-size) + var(--Henge-gap));
-
-        grid-gap: var(--Henge-gap);
-
-        grid-template-areas:"a1 b1 c1";
-        grid-template-columns: 1fr 1fr 1fr;
-    }
 
 
     .Henge {

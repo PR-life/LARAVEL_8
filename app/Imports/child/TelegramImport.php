@@ -70,15 +70,12 @@ class TelegramImport implements ToCollection, WithHeadingRow
                 
                 $params['slug'] = $to;
                 
-                // dd($params['slug']);
+                // dump($params['slug']);
 
             }
 
-
-
-
             Telegram::firstOrCreate([
-                'sku' => $params['sku'],
+                'id' => $params['id'],
                 ],$params);
         }
     }
