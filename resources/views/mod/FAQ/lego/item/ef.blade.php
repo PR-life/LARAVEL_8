@@ -6,7 +6,9 @@
     {{$_faq->tag_id ? 'tag-'.$_faq->tag->slug : ''}} 
     @foreach($_faq->tags as $param) tag-{{$param->slug}}@endforeach 
     @foreach($_faq->categories as $param) category-{{$param->slug}}@endforeach
-">
+"
+@isset($ymId) onclick="ym({{$ymId}},'reachGoal','click_faq')" @endisset
+>
     <details class="_details" itemprop="mainEntity" itemscope itemtype="http://schema.org/Question">
         @include('mod.FAQ.brick.summary_schema')
         <div class="_edge void {{$css18111250 ?? ''}}">

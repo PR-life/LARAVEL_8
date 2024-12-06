@@ -2,8 +2,16 @@
     @slot('cssVol','velkom')
     @slot('center',true)
     @slot('cssName','h b600 center-text')
-    @slot('name','Как с вами связаться')
+    {{-- @slot('name','Бесплатная консультация') --}}
 
+    @slot('description')
+    <div class="Max -w7 aura / center-text">
+        <div class="content-m space-s / Family-OpenSans">
+            <span class="b600 c-h">Бесплатная консультация.</span>
+            Вместе с ней мы отправим: Примеры работ, Персональную скидку, Расчет стоимости проекта
+        </div>
+    </div>
+    @endslot
     <div class="Form / Blog aura space-s / edge">
         @include('component.Form._inc.name',[
             'label' => 'Введите имя<b></b>',

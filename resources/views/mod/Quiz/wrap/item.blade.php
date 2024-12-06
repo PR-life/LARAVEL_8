@@ -8,6 +8,7 @@
                     <div class="Wings -mbl">
                         <div class="_win -t">
                             <div class="{{$cssName ?? 'h b600 edge-left'}} -lineHeight">{!!$name ?? ''!!}</div>
+                            {!!$description ?? ''!!}
                         </div>
                     </div>
                     <div class="paragraph"></div>
