@@ -1,5 +1,7 @@
 @charset "UTF-8";
 
+@import "./_lib/Copybook/vol-2.less";
+
 .Copybook {
     --Copybook-bg: #fff;
     --Copybook-shadow: 0px 5px 10px 2px rgba(34, 60, 80, .1);
@@ -8,8 +10,12 @@
     --Copybook-shadow-out: -.5rem .5rem 1rem rgba(0, 0, 0, .1); 
 
     position: relative;
-    background-color: var(--Copybook-bg);
-    box-shadow: var(--Copybook-shadow);
+ 
+
+    > ._wrap {
+        background-color: var(--Copybook-bg);
+        box-shadow: var(--Copybook-shadow);
+    }
 }
 
 .Copybook::before,
@@ -27,12 +33,12 @@
 
 .Copybook::before {
     transform: rotate(-2deg);
-    z-index: -1;
+    z-index: 1;
 }
 
 .Copybook::after {
     transform: rotate(2deg);
-    z-index: -2;
+    z-index: 2;
 }
 
 

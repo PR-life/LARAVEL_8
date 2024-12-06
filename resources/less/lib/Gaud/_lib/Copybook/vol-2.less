@@ -1,0 +1,38 @@
+@charset "UTF-8";
+
+.Copybook.vol-2 {
+    box-shadow: -0.5rem 0.5rem 1rem rgba(0, 0, 0, 0.3);
+
+
+    > ._wrap {
+        overflow: hidden;
+        background-position: 0% 1rem;
+        background-size: 100% 1rem;
+        background-repeat: repeat-y;
+        background-image: linear-gradient(to bottom, #fff calc(1rem - 1px), #ccc calc(1rem - 1px), #ccc 1rem, #fff 1rem);
+        
+        
+        // border-left: 1px dashed #ccc;
+        // background: repeating-linear-gradient(to bottom, transparent, transparent 10px, #f4f4f4 10px, #f4f4f4 11px), repeating-linear-gradient(to right, transparent, transparent 10px, #f4f4f4 10px, #f4f4f4 11px);
+        //   background-clip: border-box, border-box;
+        // background-clip: padding-box;
+
+
+        > * {
+            position: relative;
+            z-index: 5;
+        }
+    }
+
+    // https://code.mu/ru/php/framework/laravel/book/prime/blade/for-directive/?ysclid=m4csrrmi2e441109392
+
+
+
+    > ._wrap::before {
+        content: '';
+        position: absolute;
+        z-index: 2;
+        inset:0 0 0 0;
+        background: linear-gradient(to bottom, rgba(255,255,255,.6) 0,rgba(255,255,255,.8) 10%, rgba(255,255,255,.8) 50%, rgba(255,255,255,.9) 100%);
+    }
+}

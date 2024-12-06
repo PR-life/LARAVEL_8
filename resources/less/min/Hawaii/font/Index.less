@@ -24,10 +24,9 @@ h2.-index {
     // --font:clamp(10px, calc(var(--index)*.7), 16px);
     background-color: red;
 }
+
 .content-m.-index {
-    // --font:clamp(10px, calc(var(--index)*.7), 18px);
-    // line-height: ~"calc(var(--font) * 1.5)";
-    background-color: red;
+    --this-font:clamp(var(--font), calc(var(--index)*.75), var(--rem-p));
 }
 
 

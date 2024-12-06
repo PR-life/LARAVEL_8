@@ -2,6 +2,7 @@
 
 @import "./font/_ol.less";
 @import "./font/x-h.less";
+@import "./font/x-content.less";
 @import "./font/Index.less";
  
 
@@ -107,23 +108,9 @@ p {
 	font-size: inherit;
 }
 
-.content-xxxs,
-.content-xxs,
-.content-xs {
-	line-height: calc(var(--font-min) + 1px);
-	// background-color: red;
-}
-
-.content-xxs.wide,
-.content-xs.wide {
-	line-height: calc(var(--font-min) + 6px) !important;
-}
-
-
 // .Bread *,
 .Btn,
 .author,
-.content,
 legend,
 .Details.-summaryS > details > summary,
 table tr th,
@@ -141,41 +128,22 @@ dl.-M {
 }
 
 
-summary.-XS,
-.content-s {
+summary.-XS {
     font-size: calc(var(--font) - 1px);
     line-height: var(--font);
 }
 
 
 select,
-select option.default,
-.content-xs {
+select option.default {
     font-size: calc(var(--font-min)) !important;
 }
 
-.content-xxs {
-	font-size: calc(var(--font-min) - 1px) !important;
-}
 
-.content-xxxs {
-	font-size: calc(var(--font-min) - 2px) !important;
-}
-
-summary.-S,
-.content-m {
+summary.-S {
 	font-size: calc(var(--font) + 1px);
 }
 
-.content-m {
-    line-height: ~"calc(var(--rem-p) * 1.5)";
-}
-
-
-.content-l {
-	font-size: calc(var(--font) + 2px);
-    line-height: ~"calc(var(--rem-p) * 1.5)";
-}
 
 select {
 	font-size: var(--font);
@@ -187,27 +155,6 @@ option {
 	line-height: inherit;
 }
 
-
-.content.-vw {
-	font-size: clamp(var(--font-min),calc(var(--indexW)*1),var(--font));
-	line-height: clamp(calc(var(--font-min) + 4px),calc(var(--indexW)*1.4),calc(var(--font)*1.4));
-	// font-size: clamp(calc(var(--font-min)),calc(var(--indexW)*1.8),var(--font));
-	// line-height: clamp(calc(var(--font-min)*1.4),calc(var(--indexW)*1.8*1.4),calc(var(--font)*1.4));
-}
-
-
-.content.-vw.wide {
-	font-size: clamp(var(--font-min),calc(var(--indexW)*1),var(--font));
-	line-height: clamp(calc(var(--font-min) + 6px),calc(var(--indexW)*1.8),calc(var(--font)*1.8));
-	// font-size: clamp(calc(var(--font-min)),calc(var(--indexW)*1.8),var(--font));
-	// line-height: clamp(calc(var(--font-min)*1.4),calc(var(--indexW)*1.8*1.4),calc(var(--font)*1.4));
-}
-
-
-
-.content-xs,
-.content-s,
-.content,
 .author,
 .Details.-summaryS > details > summary,
 summary.-S,
@@ -215,47 +162,8 @@ input, textarea {
     line-height: ~"calc(var(--font) * 1.4)";
 }
 
-
-.content.wide {
- 	line-height: ~"calc(var(--font) * 1.8)";
-}
-
-// .Citation.slim .content,
-legend,
-// .Bread *,
-.content-s.slim {
+legend {
  	line-height: ~"calc(var(--font) * var(--line-spacing))";
- }
-
-
-.content.-lineHeight,
-.content-s.-lineHeight,
-.content-xs.-lineHeight {
-    line-height: calc(var(--font));
-}
-
-
-.content-m.-lineHeight {
-    line-height: calc(var(--font) + 1px + 5px);
-}
-
-.content-m.wide {
-	line-height:calc(var(--rem-p) * 1.75);
-}
-.content-m.widest {
-	line-height:calc(var(--rem-p) * 2);
-}
-@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
-	.content-m.wide_PC {
-		line-height:calc(var(--rem-p) * 1.75);
-	}
-	.content-m.widest_PC {
-		line-height:calc(var(--rem-p) * 2);
-	}
-}
-
-.content-l.-lineHeight {
-    line-height: calc(var(--font) + 2px + 5px);
 }
 
 figcaption,
@@ -265,7 +173,6 @@ table tr td {
     line-height: ~"calc(var(--font) * var(--line-spacing))";	
 }
 
-
 dl dt, dl dd {
     line-height: ~"calc(var(--font)*1.6)";
 }
@@ -274,9 +181,4 @@ dt.-lineHeight,
 dd.-lineHeight,
 dl.-lineHeight dt, dl.-lineHeight dd {
     line-height: calc(var(--font)*1.15);
-}
-
-.content-min {
-	font-size: var(--font-min);
-	line-height: calc(var(--font-min) + 1px);
 }

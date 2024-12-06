@@ -1,16 +1,25 @@
 @charset "UTF-8";
 
-.ONION {
+
+.Onion {
     > * {order: 5}
+}
+
+.ONION {
     > .onion-front {order: 7}
     > .onion-first {order: 1}
     > .onion-second {order: 2}
     > .onion-last {order: 10}
 }
 
-.OnionAll {
-    .ONION;
+@media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
+    .Onion {
+        > .onion-first_PC {
+            order: 1;
+        }
+    }
 }
+
 
 @media screen and (max-width:@w-beyond) {
     .Onion_beyond {
@@ -21,11 +30,7 @@
 
 @media screen and (max-width:@w-menu-2) {
 
-    .-ONION,
     .Onion {
-		  .ONION;
+		.ONION;
     }
-
-
-
 }
