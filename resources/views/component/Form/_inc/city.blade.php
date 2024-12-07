@@ -1,13 +1,18 @@
-<div class="_shell {{$css ?? ''}} @error('city') Error @enderror">
+<div class="_shell {{$css06121925 ?? ''}} {!!isset($label) ? 'vol-Abs placeholder-none' : ''!!} @error('city') Error @enderror">
 	@include('_._brick.text.input', [
-		'Form' => $Form ?? 'Demo',
+		'Form' => $formIdName ?? 'Demo',
 		'Var' => 'city',
-		'css' => null,
+		'css' => $cssInput ?? '',
+		'type' => 'text',
 		'value' => old('city'),
 		'placeholder' => 'city',
 		])
-	<div class="Abs Valid / none"></div>
-	@error('city')
+
+	@if(isset($label))
+		<label class="Abs Grey" for="city">{!!$label!!}</label>
+	@endif
+
+	@if($errors->has('city'))
 		<div class="Abs / Nameplate -rt">{{ $errors->first('city') }}</div>
-	@enderror
+	@endif
 </div>

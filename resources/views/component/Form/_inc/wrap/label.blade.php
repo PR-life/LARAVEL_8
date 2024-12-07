@@ -1,0 +1,1 @@
+<label class="Abs Grey" for="{{$Var}}">{!!$label!!} @isset($required) <sup>*</sup> @endisset</label>

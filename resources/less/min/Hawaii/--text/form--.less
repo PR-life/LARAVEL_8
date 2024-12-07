@@ -11,6 +11,7 @@ input.-S{
 }
 
 .Form.-S {
+	.form-name,
 	._shell._name {
 		--font:1rem;
 	}
@@ -39,9 +40,24 @@ input.-M{
 	}
 }
 
+@media (min-width: @w-menu-2-plus) and (max-width: @metrika-70) {
+
+	.Form.-L,
+	input.-L,
+	.Form.-M,
+	input.-M {
+			--x-Form-lineHeight: 4rem;
+	}
+
+	// .Form.-L input,
+	// input.-L {
+	// 	font-size: var(--rem-h);
+	// }
+
+}
+
 
 @media screen and (max-width: @w-menu-2) {
-
 	.Form.-M,
 	input.-M,
 	.Form.-L,
@@ -53,7 +69,6 @@ input.-M{
 	input.-L {
 		font-size: var(--rem-h);
 	}
-
 }
 
 
@@ -66,11 +81,6 @@ input.-M{
 	//
 	// --x-Form-h-input: calc(var(--x-Form-lineHeight)*1.2);
 
-	input.net {
-		--x-Form-edge: 0;
-	}
-
-	
 	._shell {
 		--x-Form-input-padding-top:0rem;
 		// --x-Form-input-padding-bottom:0rem;
@@ -81,16 +91,12 @@ input.-M{
 	}
 
 
-	//
-	// input {
-	// 	height: var(--x-Form-h-input);
+	// input.net {
+	// 	--x-Form-edge: 0;
 	// }
 
 
-	._shell > label {
-		line-height: var(--x-Form-label-lineHeight);
-	}
-
+	//
 	label > b::before {
 		content: '...';
 	}
@@ -100,25 +106,14 @@ input.-M{
 	}
 
 	fieldset {
+		border-width: 1px;
 		padding: 1.5rem 1rem 1rem 1rem;
 	}
-}
-
-
- 
-
-
-
-//
-
-.Form {
-    // position: relative;
 
     input {
         min-height: var(--x-Form-lineHeight);
 		line-height: calc(var(--x-Form-lineHeight)*.9);
         padding-top: var(--x-Form-input-padding-top);
-        // padding-bottom: var(--x-Form-input-padding-bottom);
         padding-left: var(--x-Form-edge);
     }
 
@@ -128,29 +123,20 @@ input.-M{
 	}
 
 
-    input,
-    textarea {
-        width: 100%;
-        border: 1px solid var(--c-input-border);
-    }
-
- 
-	input:focus {
-		border-color: var(--c-input-border-focus) !important;
+	input,
+	input[placeholder] {
+		text-overflow: ellipsis;
 	}
-
-	input:read-only:focus {
-		border-color: transparent !important;
-	}
-
-	.Error > input {
-		border-bottom: 1px solid var(--c-input-border-error);
-	}
-
 
     textarea {
         line-height: calc(var(--font) * 1.2);
-        // padding:.5rem;
+        padding:1.5rem .5rem 1rem 1rem;
+    }
+
+	//
+    input,
+    textarea {
+        width: 100%;
     }
 
 	.Error 	{
@@ -159,16 +145,10 @@ input.-M{
 		}
 	}
 
-	.edgeForm {
-		padding-left: var(--x-Form-edge);
-	}
-
     ._shell {
 		position: relative;
-
-		// input {
-		// 	padding-top: var(--x-Form-input-edge-top);
-		// }
+		> label {
+			line-height: var(--x-Form-label-lineHeight);
+		}
 	}
-
 }

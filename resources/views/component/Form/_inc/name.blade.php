@@ -1,19 +1,19 @@
-<div class="_shell {{$css ?? ''}} {!!isset($label) ? 'vol-Abs placeholder-none' : ''!!} @error('name') Error @enderror">
+<div class="_shell {{$css06121925 ?? ''}} {!!isset($label) ? 'vol-Abs placeholder-none' : ''!!} @error('name') Error @enderror">
 	@include('_._brick.text.input', [
-		'Form' => $Form ?? 'Demo',
+		'Form' => $formIdName ?? 'Demo',
 		'Var' => 'name',
-		'jsvalidate' => 'name',
 		'css' => $cssInput ?? '',
 		'type' => 'text',
-		'value' => old('name'),
+		'value' => old('name', $value ?? ''),
 		'placeholder' => 'name',
-		// 'required' => true,
+		'jsvalidate' => 'name',
+		// 'required' => $required ?? false,
 		// 'data' => 'minlength="3" autofocus'
 		// 'data' => 'minlength="2"'
 		])
 	
 	@if(isset($label))
-		<label class="Abs Grey" for="name">{!!$label!!}</label>
+		@include('component.Form._inc.wrap.label',['Var'=>'name'])
 	@endif
 
 	{{-- <div class="Abs Valid help / none" title="минимум 2 символа [обязательное поле]"></div> --}}

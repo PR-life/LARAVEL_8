@@ -1,11 +1,11 @@
-<div class="_shell {{$css ?? ''}} {!!isset($label) ? 'vol-Abs placeholder-none' : ''!!} @error('area') Error @enderror">
+<div class="_shell {{$css06121925 ?? ''}} {!!isset($label) ? 'vol-Abs placeholder-none' : ''!!} @error('area') Error @enderror">
 	@include('_._brick.text.input', [
-		'Form' => $Form ?? 'Demo',
+		'Form' => $formIdName ?? 'Demo',
 		'Var' => 'area',
 		'jsvalidate' => 'area',
 		'css' => $cssInput ?? '',
 		'type' => 'text',
-		'value' => old('area'),
+		'value' => old('area', $value ?? ''),
 		'placeholder' => 'area',
 		// 'required' => true,
 		// 'data' => 'minlength="3" autofocus'

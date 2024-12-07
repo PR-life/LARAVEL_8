@@ -1,4 +1,4 @@
-<div class="_shell {{$css ?? ''}} {!!isset($label) ? 'vol-Abs' : ''!!} @error('telegram') Error @enderror">
+<div class="_shell {{$css06121925 ?? ''}} {!!isset($label) ? 'vol-Abs' : ''!!} @error('telegram') Error @enderror">
 	@include('_._brick.text.input', [
 		'Var' => 'telegram',
 		'value' => old('telegram'),

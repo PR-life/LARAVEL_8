@@ -2,9 +2,9 @@
 $errorBag ?? $errorBag = 'newSms';
 ?>
 
-<div class="_shell {{$css ?? ''}} {!!isset($label) ? 'vol-Abs placeholder-none' : ''!!} @error('phone',$errorBag) Error @enderror">
+<div class="_shell {{$css06121925 ?? ''}} {!!isset($label) ? 'vol-Abs placeholder-none' : ''!!} @error('phone',$errorBag) Error @enderror">
 	@include('_._brick.text.input', [
-		'Form' => $Form ?? 'Demo',
+		'Form' => $formIdName ?? 'Demo',
 		'Var' => 'phone',
 		'type' => 'tel',
 		'value' => old('phone'),

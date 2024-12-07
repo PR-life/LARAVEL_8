@@ -59,6 +59,11 @@ class CreateSmsTable extends Migration
             //     ->references('id')
             //     ->on('groups');
 
+            $table->foreignId('user_id')
+                ->nullable()
+                ->constrained('users')
+                ->onDelete('set null');
+
             $table->foreignId('group_id')
                 ->nullable()
                 ->constrained('groups')

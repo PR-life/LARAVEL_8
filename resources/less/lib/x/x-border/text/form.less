@@ -1,0 +1,20 @@
+@charset "UTF-8";
+
+.Form {
+
+    input,
+    textarea {
+        border: 1px solid var(--c-input-border);
+    }
+
+    input:focus {
+		border-color: var(--c-input-border-focus) !important;
+	}
+	input:read-only:focus {
+		border-color: transparent !important;
+	}
+
+	fieldset {
+		border-color: var(--c-input-border);
+	}
+}

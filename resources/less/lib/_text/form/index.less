@@ -3,24 +3,40 @@
 
 .Form.transparent {
     --bg-input:transparent;
-	--bg-textarea:transparent;
 	//
 	--x-border-h:1px;
 	--x-c-border-1:#9b9b9b;
 
-
-	
 	._shell > input {
 		border: 0;
 		border-bottom: var(--x-border-h) solid var(--x-c-border-1);
 	}
-
 }
+
+.Form.-fontLabelUp {
+	._shell.vol-Abs.label-insideInput {
+		--x-Form-label-font-corrector:calc(var(--font-min)*.75);
+	}
+
+	._shell.vol-Abs {
+		>label,
+		>input {
+			font-size: calc(var(--x-Form-lineHeight) * .4);
+		}
+		>input {
+			padding-top: calc(var(--font-min)*2);
+			line-height: calc(var(--x-Form-lineHeight) - var(--font-min)*2 + 7px);
+		}
+	}
+}
+
+
 
 
 
 @media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
 	.Form {
+		.form-name,
 		._shell._name {
 			--font: var(--rem-h2);
 		}
@@ -29,6 +45,7 @@
 
 @media screen and (max-width: @w-menu-2) {
 	.Form {
+		.form-name,
 		._shell._name {
 			--font: var(--rem-h);
 		}
@@ -43,7 +60,7 @@
 
 // 	//
 // 	._shell.vol-Abs.label-insideInput {
-// 		--x-Form-label-corrector-transparent:calc(var(--font-min)*.75);
+// 		--x-Form-label-font-corrector:calc(var(--font-min)*.75);
 // 	}
 
 

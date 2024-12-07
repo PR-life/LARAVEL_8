@@ -1,5 +1,5 @@
 <?php
-	isset($Form) ? '' : $Form = 'Manager';
+	isset($formIdName) ? '' : $formIdName = 'Manager';
 ?>
 
 <form id="form_Manager" class="Form -L -shadow / Start" method="POST" action="{{route('sms.update')}}" enctype="multipart/form-data">
@@ -10,21 +10,22 @@
 
 	<div class="center-text / fade start-fade scene-3">
 		<div class="inline / start-joltLeft scene-2">
-			<ul class="menu -tag / Kite kite-space kite-round vol-dark / pointer" data-click data-switch data-package='tabForm' data-stop>
-				<li class="active" data-item='1' data-packagetype='css' data-packagefoo='radio' package='Tabs -x1' li-type='email'><span class="a nowrap noEvents">email</span></li>
-				<li data-item='2' data-packagetype='css' data-packagefoo='radio' package='Tabs -x2' li-type='phone'><span class="a nowrap noEvents">телефон</span></li>
-				<li data-item='3' data-packagetype='css' data-packagefoo='radio' package='Tabs -x3' li-type='whatsapp'><span class="a nowrap noEvents">whatsapp</span></li>
-				<li data-item='4' data-packagetype='css' data-packagefoo='radio' package='Tabs -x4' li-type='telegram'><span class="a nowrap noEvents">telegram</span></li>
-				<li data-item='5' data-packagetype='css' data-packagefoo='radio' package='Tabs -x5' li-type='viber'><span class="a nowrap noEvents">viber</span></li>
-			</ul>
+			<div class="menu -tag / Kite kite-space kite-round vol-dark / pointer" data-click data-switch data-package="tabForm" data-stop>
+				<label for='inputEmail_Manager' class="active" data-item='1' data-packagetype='css' data-packagefoo='radio' package='Tabs -x1'><span class="a nowrap noEvents">email</span></label>
+				<label for='inputPhone_Manager' data-item="2" data-packagetype='css' data-packagefoo='radio' package='Tabs -x2'><span class="a nowrap noEvents">телефон</span></label>
+				<label for='inputWhatsapp_Manager' data-item="3" data-packagetype='css' data-packagefoo='radio' package='Tabs -x3'><span class="a nowrap noEvents">whatsapp</span></label>
+				<label for='inputTelegram_Manager' data-item="4" data-packagetype='css' data-packagefoo='radio' package='Tabs -x4'><span class="a nowrap noEvents">telegram</span></label>
+				<label for='inputViber_Manager' data-item="5" data-packagetype='css' data-packagefoo='radio' package='Tabs -x5'><span class="a nowrap noEvents">viber</span></label>
+			</div>
 		</div>
 	</div>
 
-	<div class="paragraph"></div>
+ 
+	<div class="paragraphX2"></div>
 
 	<div id="tabForm" class="Tabs -x1">
 		<div class="_shell / _tab x1">
-			@include('component.Form._inc.email')
+			@include('component.Form._inc.email',['autofocus'=> true])
 		</div>
 		<div class="_shell / _tab x2">
 			@include('component.Form._inc.phone', ['placeholder' => 'менеджер перезвонит на...'])
@@ -40,6 +41,7 @@
 		</div>
 	</div>
 
+	<div class="paragraph"></div>
 	<div class="paragraphX2"></div>
 
 	<div class="center-text">
