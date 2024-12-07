@@ -20,6 +20,11 @@
         @break
 
 
+    @case('support')
+        @include('zTHIS.PAGE.Thanks.head.support')
+        @break
+
+
     @default
         @include('zTHIS.PAGE.Thanks.head.index')
 @endswitch

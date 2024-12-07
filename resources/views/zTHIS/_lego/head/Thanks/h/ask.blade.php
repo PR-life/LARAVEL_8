@@ -1,5 +1,5 @@
 @if(in_array($sms->name, ['Аноним', 'форма без имени', 'без имени']))
-    <div class="_h -vw / center-text b700">Ваш вопрос получен</div>
+    @include('zTHIS._brick.h.index',['var'=>'Ваш вопрос получен!'])
 @else
-    <div class="_h -vw / b700">{{$sms->name}}, мы получили ваш вопрос!</div>
+    @include('zTHIS._brick.h.index',['var'=> $sms->name. ', мы получили ваш вопрос!'])
 @endif

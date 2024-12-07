@@ -28,6 +28,7 @@ class BaseController extends Controller
     {
         if ($sms['status'] < 10) {
 
+            // dd($sms);
             $message = $this->buildTelegramMessage($sms);
 
             try {
@@ -52,15 +53,26 @@ class BaseController extends Controller
 
         // Квиз
         $quiz = $this->buildQuiz($sms);
-        // dd($quiz);
         if (!empty($quiz)) {
             $messageParts[] = "---Опрос---\n" . implode("\n", $quiz);
+        }
+
+        // Параметры
+        $params = $this->buildParam($sms);
+        if (!empty($params)) {
+            $messageParts[] = "---Параметры---\n" . implode("\n", $params);
         }
 
         // Блок контактов
         $contacts = $this->buildContactsBlock($sms);
         if (!empty($contacts)) {
             $messageParts[] = "---контакты---\n" . implode("\n", $contacts);
+        }
+
+        // Блок адреса
+        $data07122230 = $this->buildData07122230($sms);
+        if (!empty($params)) {
+            $messageParts[] = implode("\n", $data07122230);
         }
 
         // Блок данных
@@ -82,6 +94,8 @@ class BaseController extends Controller
                 return "~~~ форма: ВОПРОС ~~~";
             case 'order':
                 return "~~~ форма: ЗАКАЗ ~~~";
+            case 'support':
+                return "~~~ CRM ~~~";
             case 'availability_check':
                 $product = Product::find($productId);
                 $productName = $product->name ?? 'Неизвестный товар';
@@ -90,6 +104,8 @@ class BaseController extends Controller
                 return '';
         }
     }
+
+
     private function getDeliveryInfo($sms)
     {
         if($sms['label'] == 'order') {
@@ -100,6 +116,24 @@ class BaseController extends Controller
             }            
         }
         return '';
+    }
+
+
+    private function buildData07122230($sms)
+    {
+        $data07122230 = [];
+
+        if (!empty($sms->country)) {
+            $data07122230[] = "<b>country:</b> {$sms->country}";
+        }
+        if (!empty($sms->city)) {
+            $data07122230[] = "<b>city:</b> {$sms->city}";
+        }
+        if (!empty($sms->area)) {
+            $data07122230[] = "<b>area:</b> {$sms->area}";
+        }
+
+        return $data07122230;
     }
     private function buildQuiz($sms)
     {
@@ -115,9 +149,27 @@ class BaseController extends Controller
             $quiz[] = "<b>question_3:</b> {$sms->question_3}";
         }
 
-        // dd($quiz);
         return $quiz;
     }
+
+    private function buildParam($sms)
+    {
+        $params = [];
+
+        if (!empty($sms->param_1)) {
+            $params[] = "<b>param_1:</b> {$sms->param_1}";
+        }
+        if (!empty($sms->param_2)) {
+            $params[] = "<b>param_2:</b> {$sms->param_2}";
+        }
+        if (!empty($sms->param_3)) {
+            $params[] = "<b>param_3:</b> {$sms->param_3}";
+        }
+
+        return $params;
+    }
+
+
     private function buildContactsBlock($sms)
     {
         $contacts = [];
@@ -130,6 +182,9 @@ class BaseController extends Controller
         }
         if (!empty($sms->telegram)) {
             $contacts[] = "<b>Телеграм:</b> {$sms->telegram}";
+        }
+        if (!empty($sms->phone)) {
+            $contacts[] = "<b>Телефон:</b> {$sms->phone}";
         }
         if (!empty($sms->phone)) {
             $contacts[] = "<b>Телефон:</b> {$sms->phone}";
@@ -147,9 +202,9 @@ class BaseController extends Controller
         if (!empty($sms->sms)) {
             $data[] = "<b>сообщение</b>\n{$sms->sms}";
         }
-        if (!empty($sms->area)) {
-            $data[] = "<b>адрес</b> {$sms->area}";
-        }
+        // if (!empty($sms->area)) {
+        //     $data[] = "<b>адрес</b> {$sms->area}";
+        // }
         if (!empty($sms->from_page) && $sms['label'] != 'availability_check') {
             $data[] = "\n\n<b>стр. на сайте:</b> {$sms->from_page}";
         }

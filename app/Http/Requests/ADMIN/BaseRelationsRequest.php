@@ -16,6 +16,7 @@ class BaseRelationsRequest extends BaseRequest
     {
         return array_merge(parent::rules(), [
 
+            'user_id' => 'nullable|integer|exists:users,id',
             'group_id' => 'nullable|integer|exists:groups,id',
             'tag_id' => 'nullable|integer|exists:tags,id',
             'category_id' => 'nullable|integer|exists:categories,id', 

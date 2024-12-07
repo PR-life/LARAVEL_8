@@ -1,0 +1,1 @@
+<div class="h1 -index / b700 / fade start-fade">{!!$var!!}</div>

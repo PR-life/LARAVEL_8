@@ -1,6 +1,6 @@
 <div class="_shell {{$css06121925 ?? ''}} {!!isset($label) ? 'vol-Abs placeholder-none' : ''!!} @error('email') Error @enderror">
 	@include('_._brick.text.input', [
-		'Form' => $formIdName ?? 'Demo',
+		'Form' => $varId ?? 'Demo',
 		'Var' => 'email',
 		'type' => 'email',
 		'value' => old('email', $value ?? ''),

@@ -45,6 +45,7 @@ class BaseRequest extends FormRequest
             'reachgoal_id'=>'nullable|string',
             'from_page'=>'nullable|string',
 
+            'user_id'=>'nullable|integer',
             'product_id'=>'nullable|integer',
             'item_id'=>'nullable|integer',
             'landing_id'=>'nullable|integer',

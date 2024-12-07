@@ -42,6 +42,8 @@ class Service {
             unset($param['title']);
         }
 
+        // dd($param['label']);
+
         switch ($param['label']) {
             case 'order':
                 $param['name'] ?? ($param['name'] = 'без имени');
