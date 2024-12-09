@@ -1,4 +1,4 @@
-@component('_Wrap.FIX.wrap.FIX_on',['id' => $id, 'css_26071457' => $css_to_FIX ?? null])
+@component('_Wrap.FIX.wrap.FIX_on',['id' => $id, 'css' => $css_to_FIX ?? null, 'data' => $addData ?? ''])
     <div class="fix / space-m {{$fix_css ?? 'vol-def'}}" data-close>
         <div class="Scroll -scroll / noEvents">
             <div class="_scr / flex dC cC_PC eC_mbl / space-s_PC">

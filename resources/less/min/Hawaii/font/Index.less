@@ -1,6 +1,11 @@
 @charset "UTF-8";
 
 @media (min-width:@w-menu-2-plus) and (max-width: @w-max) {
+    h1.-index_PC,
+    .h1.-index_PC {
+        --this-font:clamp(1.5rem, calc(var(--index)*2), var(--rem-h1));
+    }
+    
     .h.-index_PC {
         // --rem-h:clamp(16px, calc(var(--index)*.8), 22px);
         --this-font:clamp(1rem, var(--rem-h), calc(var(--index)*.9));

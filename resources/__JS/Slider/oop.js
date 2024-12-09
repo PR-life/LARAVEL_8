@@ -66,45 +66,102 @@ export default class Slider {
         // console.log(this.itemWidth)
     }
 
+
+
+
+
+
+
     // Движение слайдера к заданному индексу
     Go(index) {
-        // Проверка, что элемент видим и itemWidth не равен 0
         const isVisible = this.rootElem.getBoundingClientRect().width > 0;
         let attempts = 0;
         const maxAttempts = 10;
-
-        // console.log(this.itemWidth)
-
+    
         while (this.itemWidth === 0 && attempts < maxAttempts) {
             if (isVisible) {
                 this.updateItemWidth();
-                // console.log('updateItemWidth')
             }
             attempts++;
         }
- 
-
+    
         if (attempts === maxAttempts) {
             console.warn("Не удалось установить ширину элемента, возможно элемент скрыт.");
             return;
         }
     
-        // Продолжаем движение только если индекс допустим
         if (index < 0 || index >= this.count) return;
+    
         this.move(index);
     
-        // Обновляем активный класс для элементов и индикаторов
+        // Обновление активных элементов
         this.items.forEach((item, i) => {
-            this.toggleActiveClass(item, 'active', i === index);
+            const isActive = i === index;
+            this.toggleActiveClass(item, 'active', isActive);
+    
+            // Проверка на <source data-src> внутри <video>
+            if (isActive) {
+                const video = item.querySelector('video');
+                if (video) {
+                    const source = video.querySelector('source[data-src]');
+                    if (source) {
+                        source.src = source.dataset.src; // Устанавливаем src
+                        source.removeAttribute('data-src'); // Удаляем data-src после установки
+                        video.load(); // Перезагружаем видео
+                    }
+                }
+            }
         });
     
         this.indicators.forEach((indicator, i) => {
             this.toggleActiveClass(indicator, 'active', i === index);
         });
     
-        // Разрешаем взаимодействие после завершения движения
         this.trigger = true;
     }
+    
+
+
+
+    
+    // Go(index) {
+    //     // Проверка, что элемент видим и itemWidth не равен 0
+    //     const isVisible = this.rootElem.getBoundingClientRect().width > 0;
+    //     let attempts = 0;
+    //     const maxAttempts = 10;
+
+    //     // console.log(this.itemWidth)
+
+    //     while (this.itemWidth === 0 && attempts < maxAttempts) {
+    //         if (isVisible) {
+    //             this.updateItemWidth();
+    //             // console.log('updateItemWidth')
+    //         }
+    //         attempts++;
+    //     }
+ 
+
+    //     if (attempts === maxAttempts) {
+    //         console.warn("Не удалось установить ширину элемента, возможно элемент скрыт.");
+    //         return;
+    //     }
+    
+    //     // Продолжаем движение только если индекс допустим
+    //     if (index < 0 || index >= this.count) return;
+    //     this.move(index);
+    
+    //     // Обновляем активный класс для элементов и индикаторов
+    //     this.items.forEach((item, i) => {
+    //         this.toggleActiveClass(item, 'active', i === index);
+    //     });
+    
+    //     this.indicators.forEach((indicator, i) => {
+    //         this.toggleActiveClass(indicator, 'active', i === index);
+    //     });
+    
+    //     // Разрешаем взаимодействие после завершения движения
+    //     this.trigger = true;
+    // }
 
     // Обработка клика по слайдеру с блокировкой
     handleSliderClick(param) {

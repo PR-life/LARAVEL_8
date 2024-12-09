@@ -186,10 +186,6 @@ class BaseController extends Controller
         if (!empty($sms->phone)) {
             $contacts[] = "<b>Телефон:</b> {$sms->phone}";
         }
-        if (!empty($sms->phone)) {
-            $contacts[] = "<b>Телефон:</b> {$sms->phone}";
-        }
-
         return $contacts;
     }
     private function buildDataBlock($sms)

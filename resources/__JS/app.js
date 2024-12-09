@@ -2,6 +2,7 @@ import { throttle } from './_skill/throttle.js';
 import { cssSwitch } from './_skill/cssSwitch.js';
 import { switchNode } from './_skill/switchNode.js';
 import { srcControl } from './_manager/srcControl.js';
+import { controlForm } from './_manager/controlForm.js';
 //
 import { checkEventClick } from './_check/eventClick.js';
 import { checkUpDown } from './_check/UpDown.js';
@@ -308,6 +309,10 @@ function fooListenerClick(param) {
 
 	if(c.hasAttribute('data-src')){
 		srcControl(c)
+	}
+
+	if(c.hasAttribute('control-form')){
+		controlForm(c)
 	}
 
     if(c.hasAttribute("data-fix")){

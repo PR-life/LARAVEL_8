@@ -1,4 +1,31 @@
 @charset "UTF-8";
 
-@import "./_ol.less";
+.-Stories {
 
+    .Story {
+        --c-text:#fff;
+        --Story-bg-text:rgba(0,0,0,.75);
+        --Story-bg-text-2:rgba(0,0,0,.5);
+    }
+
+
+    a,.a,
+    .Btn {
+        pointer-events: all;
+    }
+
+    //
+    .bg-pop {
+        background-color: #000;
+    }
+
+    //
+    .Time {
+        --x-Time-abs-time:10s;
+    }
+}
+
+@import "./Stories.less";
+@import "./Story.less";
+//
+@import "./_ol.less";

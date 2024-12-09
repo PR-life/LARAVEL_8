@@ -1,5 +1,5 @@
 <input 
-    id="input{{ ucfirst($Var) }}_{{$Form}}"
+    id="input{{ ucfirst($Var) }}_{{$Form ?? 'Demo'}}"
     class="{{ $css ?? '' }}"
     type="{{ $type ?? 'text' }}"
     name="{{ $Var }}"
