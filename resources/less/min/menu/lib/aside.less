@@ -1,0 +1,50 @@
+@charset "UTF-8";
+
+ 
+@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
+	.menu.-aside {
+		> li {
+	
+			> ul {
+				padding-top: .5rem;
+
+				ul {
+					padding-top: .5rem;
+				}
+			}
+		}
+		> li {
+			margin-bottom: 1.25rem;
+		}
+	}
+}
+
+//
+.menu.-aside {
+	--fontMenu: 18px;
+	
+	ul {
+		--ulol-font:16.4px;
+        --ulol-line:calc(var(--ulol-font)*1.2);
+	}
+	
+	> li {
+
+		ul {
+ 
+			padding-bottom: .5rem;
+
+			li {
+				margin-bottom: 1rem;
+
+				li {
+					margin-top: .75rem;
+				}
+			}
+		}
+
+		>  ul {
+			padding-bottom: 1.5rem;
+		}
+	}
+}

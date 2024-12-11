@@ -1,61 +1,12 @@
 @charset "UTF-8";
 
-.menu.-aside {
-	--fontMenu: 18px;
-	
-	ul {
-		--ulol-font:16.4px;
-	}
-	
-	> li {
-
-		ul {
- 
-			padding-bottom: .5rem;
-
-			li {
-				margin-bottom: 1rem;
-
-				li {
-					margin-top: .75rem;
-				}
-			}
-		}
-
-		>  ul {
-			padding-bottom: 1.5rem;
-		}
-	}
-}
-
-@media (min-width:@w-menu-2-plus) and (max-width:@w-max) {
-	.menu.-aside {
-		> li {
-	
-			> ul {
-				padding-top: .5rem;
-
-				ul {
-					padding-top: .5rem;
-				}
-			}
-		}
-		> li {
-			margin-bottom: 1.25rem;
-		}
-	}
-}
-
-
 @media (min-width:@w-menu-2-plus) and (max-width:@w-beyond) {
 	.menuBeyond {
-
 		position: fixed !important;
 		top: 0;
 		// bottom: 45px;
 		right: 200%;
 		left: auto;
-
 	}
 }
 
@@ -99,8 +50,7 @@
 }
 
 
-.menu.-aside {
-	ul {
-		--ulol-line:calc(var(--ulol-font)*1.2);
-	}
-}
+ 
+//
+@import "./lib/aside.less";
+@import "./lib/menuMilk.less";

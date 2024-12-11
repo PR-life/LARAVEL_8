@@ -1,0 +1,63 @@
+@charset "UTF-8";
+
+#body.Z2 {
+    .menuMilk .wrap-menu {
+		padding-top: calc(var(--h-Header));
+    }
+}
+
+
+.menuMilk {
+	--x-translateX: calc(0px - var(--edge));
+
+	// 
+	position: fixed !important;
+	top: 0;
+	// bottom: 45px;
+	right: 200%;
+	left: auto;
+	
+
+	.wrap-menu {
+		left: 0;
+
+
+        padding-left: var(--edge);
+
+		padding-top: calc(var(--h-Header) + var(--h-Top));
+    	height: calc(var(--h) + 2rem);
+		min-width: var(--Aside);
+
+
+        background-color: rgba(27, 28, 29, 0.95) !important;
+	}
+}
+
+// .menuMilk,
+#inputMenuMain:checked ~ .menuMilk {
+	right: 0;
+	left:var(--x-translateX);
+
+	.Hook {position: fixed;}
+}
+
+// .menuMilk,
+#inputMenuMain:checked~.menuMilk {
+
+	.x-aside {
+		transform: translateX(calc(var(--x-translateX) - var(--x-translateX)*1.5));
+	}
+
+	.menu {
+		transform: translateX(calc(var(--x-translateX) - var(--x-translateX)*2.5));
+	}
+
+	.x-aside,.menu {
+		transition: transform 0.2s ease 0s;
+	}
+}
+
+// .menuMilk .Hook,
+#inputMenuMain:checked ~ .menuMilk .Hook {
+	background-color: var(--bg-opacity-lighter);
+}
