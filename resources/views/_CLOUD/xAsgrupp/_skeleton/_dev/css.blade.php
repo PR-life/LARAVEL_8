@@ -13,6 +13,10 @@
     padding-left: var(--edge);
   }
 
+  #body.schema-Photo .edge-1012163 {
+    padding-left: 0;
+  }
+
   /* .rerere {
     min-width: var(--w);
   } */

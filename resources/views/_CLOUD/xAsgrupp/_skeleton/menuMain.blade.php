@@ -11,7 +11,7 @@
 					</div>
 					<ul class="menu -aside Family-Inter">
 						{{-- @include('xSi.menu.main') --}}
-                        @include('zTHIS.honeycomb.menu.asgrupp_top')
+                        @includeIf('zTHIS.honeycomb.menu.asgrupp_top')
 					</ul>
 				</div>
 			{{-- </div> --}}

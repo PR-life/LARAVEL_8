@@ -1,36 +1,46 @@
-<div class="few" style="height: 5px"></div>
+<div class="paragraph-s"></div>
 
+<div id="Photo" class="Swipe_1012 /  / index relative">
 
-<div class="Swipe_1012 /  / index relative">
-
-
-    <div class="Plot plot-h -XS 5plot-item / index relative">
+<div id="wrap_11121143" class="" data-localstorage localstorage-picking='wrap_11121143'>
+    <div class="Plot plot-h plot-item / index relative">
         <div class="Shell Roll_PC / _indexMin / index hidden">
-
-            <div class="_scr edge-1012163  Track / cross">
-                <img class="rerere" src="https://asgrupp.ru/ctlg/slider/perila-model-1812/ava.png" alt="">
-                <img class="rerere" src="https://asgrupp.ru/ctlg/slider/perila-model-1812/2.png" alt="">
-                <img class="rerere" src="https://asgrupp.ru/ctlg/slider/perila-model-1812/3.png" alt="">
-                <img class="rerere" src="https://asgrupp.ru/ctlg/slider/perila-model-1812/4.png" alt="">
-            
-                {{-- <img class="rerere" src="https://asgrupp.ru/ctlg/slider/perila-model-1112/ava.png" alt="">
-                <img class="rerere" src="https://asgrupp.ru/ctlg/slider/perila-model-1112/1.png" alt=""> --}}
-
-
-                <img class="noEvents2" src="/images-0/story/vl.png" alt="">
-                <img class="noEvents2" src="https://asgrupp.ru/ctlg/slider/2024-12-1-03-41/1.png" alt="">
-                <img class="noEvents2" src="https://asgrupp.ru/ctlg/slider/2024-12-1-03-41/ava.png" alt="">
-                <img class="noEvents2" src="https://asgrupp.ru/ctlg/slider/perila-model-0212/2.png" alt="">
-                <img class="noEvents2" src="https://asgrupp.ru/ctlg/slider/perila-model-0212/3.png" alt="">
+            <div class="edge-1012163 Track W-100 {{count($photosSlider) ? '' : 'cC'}} / cross-1112">
+                @if(count($photosSlider))
+                    @foreach($photosSlider as $_foto)
+                        <img class="Img -cover" src="{{$_foto}}" alt="" />
+                    @endforeach
+                @else
+                    <img class="Img -cover" src="/storage/item_images/{{$item->image}}" alt="" />
+                @endif
             </div>
-
-
         </div>
 
-        <div class="Abs -r -b">
-            <div class="_btn right / Btn cC">right</div>
-            <div class="_btn left / Btn cC">left</div>
+        <div class="Abs -r -b / edge-rightS_PC">
+            <div class="manager-11121409 / flex cross-xs space-m">
+                <div class="_btn right pointer round">
+                    <span class="Ico -XL space / flex cI cC">
+                        <span class="rotate-l">
+                            <svg><use xlink:href="#svg-arrow"></use></svg>
+                        </span>
+                    </span>
+                </div>
+                <div class="_btn left pointer round">
+                    <span class="Ico -XL space / flex cI cC">
+                        <span class="rotate-r">
+                            <svg><use xlink:href="#svg-arrow"></use></svg>
+                        </span>
+                    </span>
+                </div>
+            </div>
+        </div>
+
+        <div class="Abs -rt / space-s edge-rightS_PC">
+            @include('_CLOUD.xAsgrupp._manager.size_item_foto')
         </div>
     </div>
-    <div class="_thumbnails / flex cC cross-xxs / space"></div>
+
+    @if(count($photosSlider))
+        <div class="_thumbnails / flex cC cross-xxs / space"></div>
+    @endif
 </div>

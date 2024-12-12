@@ -1,4 +1,4 @@
-@component('_wrap.Slump', ['class' => 'Box'])
+@component('_wrap.Slump', ['class' => 'edge-right_PC'])
 	<div class="_right Abs Slump / flex cI / Header -h_PC / pr-2">
 		<div class="noEvents" data-click data-css data-node='body' data-add='fix -geek' data-veil='BtnGeek' data-loop>
 			<div class="paragraph none_PC"></div>

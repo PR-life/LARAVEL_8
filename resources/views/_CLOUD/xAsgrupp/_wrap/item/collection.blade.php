@@ -1,7 +1,7 @@
 @component('_wrap._teaser.wrap.item')
     @slot('css16111209','-Gaud vol-collection x-border x-shadow')
 
-    <div class="paragraph"></div>
+    <div class="paragraphX2"></div>
     <div class="gaud-28111054 / relative">
         <div class="_gaud"></div>
     </div>

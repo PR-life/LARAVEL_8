@@ -45,6 +45,7 @@
         --Btn:13rem;
         //
         --bar:62px;
+		--barMenu:clamp(var(--bar),calc(var(--space)*2 + 35px + var(--Logo)),140px);
         //
 		--hill:62px;
 		--hill-xs: 25px;
@@ -89,8 +90,7 @@
 		--equalizer-aside:0px;
 		--size-aside:0px;
     }
-
-
+ 
 	#body.asideClose {
 		.x-asideClose {
 			--Aside-space:7px;
@@ -121,10 +121,7 @@
 
 
 @media (min-width: @w-beyond-plus) and (max-width: @w-max) {
-	#body,
-	.body {
-		--barMenu:clamp(110px,calc(var(--space)*2 + 25px + var(--Logo)),140px);
-	}
+
 }
  
 
@@ -199,8 +196,6 @@
 	.body  {
         --bar:52px;
 		--Sms: calc(@Sms - 80px);
-		//
-		--barMenu:clamp(110px,calc(12*var(--indexW)),120px);
     }
 
 	.skimp-size_Aside {

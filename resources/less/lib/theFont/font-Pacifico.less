@@ -1,0 +1,19 @@
+@charset "UTF-8";
+
+
+html {
+    --family-Pacifico:'Pacifico';
+}
+
+.familyPacifico,
+.Family-Pacifico * {
+	font-family: var(--family-Pacifico) !important;
+}
+
+@font-face {
+    font-family: 'Pacifico';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Pacifico'), url(/font/Pacifico/400.woff2) format('woff2'); // regular
+    font-display: swap;
+}

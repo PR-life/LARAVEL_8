@@ -4,12 +4,10 @@
 @push('js-bottom-solo')
 
 <script>
-
-
 const container = document.querySelector('.Roll_PC'); // Внешний фиксированный контейнер
-const track = container.querySelector('._scr'); // Двигающийся трек с изображениями
+const track = container.querySelector('.Track'); // Двигающийся трек с изображениями
 const images = track.querySelectorAll('img'); // Все изображения внутри трека
-const thumbnailsContainer = document.querySelector('._thumbnails'); // Контейнер для миниатюр
+const thumbnailsContainer = document.querySelector('._thumbnails') || null; // Контейнер для миниатюр
 const nextButton = document.querySelector('._btn.left'); // Кнопка для прокрутки вперёд
 const prevButton = document.querySelector('._btn.right'); // Кнопка для прокрутки назад
 
@@ -20,17 +18,19 @@ let totalDeltaX = 0; // Суммарное изменение координат
 let isSwiping = false;
 
 // Генерация миниатюр автоматически
-images.forEach((img, index) => {
-  const thumbnail = document.createElement('img');
-  thumbnail.src = img.src;
-  thumbnail.alt = img.alt || `Thumbnail ${index}`;
-  thumbnail.dataset.index = index;
-  thumbnail.classList.add('Max', '-w1', 'pointer');
+if (thumbnailsContainer) {
+  images.forEach((img, index) => {
+    const thumbnail = document.createElement('img');
+    thumbnail.src = img.src;
+    thumbnail.alt = img.alt || `Thumbnail ${index}`;
+    thumbnail.dataset.index = index;
+    thumbnail.classList.add('Max', '-w1', 'pointer');
 
-  thumbnailsContainer.appendChild(thumbnail);
-});
+    thumbnailsContainer.appendChild(thumbnail);
+  });
+}
 
-const thumbnails = thumbnailsContainer.querySelectorAll('img'); // Миниатюры после генерации
+const thumbnails = thumbnailsContainer ? thumbnailsContainer.querySelectorAll('img') : []; // Миниатюры после генерации
 
 // Функция для получения смещения до текущего слайда
 const getOffset = (index) => {
@@ -112,28 +112,6 @@ hammer.on('panmove', (e) => {
 });
 
 // Конец свайпа
-// hammer.on('panend', (e) => {
-//   isSwiping = false;
-
-//   // Рассчитываем количество слайдов, которые нужно перелистнуть
-//   const slideWidth = images[currentIndex].clientWidth;
-//   const slidesToMove = Math.round(totalDeltaX / slideWidth);
-
-//   // Обновляем текущий индекс
-//   currentIndex = Math.min(
-//     Math.max(currentIndex - slidesToMove, 0),
-//     images.length - 1
-//   );
-
-//   // Вычисляем смещение для текущего слайда
-//   const offset = -getOffset(currentIndex);
-//   track.style.transition = 'transform 0.3s ease'; // Плавная анимация
-//   track.style.transform = `translateX(${offset}px)`;
-
-//   totalDeltaX = 0; // Сбрасываем суммарное смещение
-// });
-
-// Конец свайпа
 hammer.on('panend', (e) => {
   isSwiping = false;
 
@@ -141,20 +119,15 @@ hammer.on('panend', (e) => {
   const slideWidth = images[currentIndex].clientWidth;
   const slidesToMove = Math.round(totalDeltaX / slideWidth);
 
-  // Вычисляем новый индекс
   const newIndex = Math.min(
     Math.max(currentIndex - slidesToMove, 0),
     images.length - 1
   );
 
-  // Обновляем активный слайд и миниатюру
-  updateActiveSlide(newIndex);
+  updateActiveSlide(newIndex); // Универсальный вызов для синхронизации
 
   totalDeltaX = 0; // Сбрасываем суммарное смещение
 });
-
-
-
 
 
 

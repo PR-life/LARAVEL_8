@@ -4,22 +4,24 @@
 @media (min-width: @w-menu-2-plus) and (max-width: @w-max) {
    .Burger.vol-def {
       --Burger-line-h: 2px;
+      --Burger-w: clamp(20px,2.5vw,25px);
    }
 }
-@media (min-width: @w-beyond-plus) and (max-width: @w-max) {
-   .Burger.vol-def {
-      --Burger-w: clamp(30px,4vw,40px);
-   }
-}
-@media screen and (max-width: @w-beyond) {
-   .Burger.vol-def {
-      --Burger-w: clamp(25px,3vw,40px);
-   }
-}
+// @media (min-width: @w-beyond-plus) and (max-width: @w-max) {
+//    .Burger.vol-def {
+//       --Burger-w: clamp(30px,4vw,25px);
+//    }
+// }
+// @media screen and (max-width: @w-beyond) {
+//    .Burger.vol-def {
+//       --Burger-w: clamp(25px,3vw,40px);
+//    }
+// }
 
 @media screen and (max-width:@w-menu-2) {
    .Burger.vol-def {
       --Burger-line-h: 2px;
+      --Burger-w: 25px;
    }
 }
 

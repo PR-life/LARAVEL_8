@@ -10,6 +10,8 @@ class BreadcrumbComposer
     {
         $breadcrumbs = [];
 
+        // dd(111);
+
         if (isset($view->item)) {
             $item = $view->item;
 
@@ -21,8 +23,9 @@ class BreadcrumbComposer
                 $this->handleService($breadcrumbs, $item);
             } elseif ($item instanceof \App\Models\Paper) {
                 $this->handlePaper($breadcrumbs, $item);
-            }
-            
+            } elseif ($item instanceof \App\Models\Item) {
+                $this->handleItem($breadcrumbs, $item);
+            } 
         }
 
         $view->with('breadcrumbs', $breadcrumbs);
@@ -41,6 +44,39 @@ class BreadcrumbComposer
             ];
         }
     }
+
+    private function handleItem(array &$breadcrumbs, $product)
+    {
+        if ($product->category) {
+            if ($product->category->parentCategory) {
+                $this->addParentCategories($breadcrumbs, $product->category->parentCategory);
+            }
+            $breadcrumbs[] = [
+                'name' => $product->category->bread_name ?? $product->category->name,
+                'url' => $product->category->canonical ?? "/catalog/{$product->category->slug}",
+                'slug' => $product->category->slug
+            ];
+        }
+
+        if ($product->parent) {
+            if ($product->parent->category && $product->parent->category->parentCategory) {
+                $this->addParentCategories($breadcrumbs, $product->parent->category->parentCategory);
+            }
+            if ($product->parent->category) {
+                $breadcrumbs[] = [
+                    'name' => $product->parent->category->bread_name ?? $product->parent->category->name,
+                    'url' => $product->parent->category->canonical ?? "/catalog/{$product->parent->category->slug}",
+                    'slug' => $product->parent->category->slug
+                ];
+            }
+            $breadcrumbs[] = [
+                'name' => $product->parent->name,
+                'url' => route('asgrupp.ctlg.show', $product->parent),
+                'slug' => $product->parent->slug
+            ];
+        }
+    }
+
 
     private function handleProduct(array &$breadcrumbs, $product)
     {
