@@ -47,6 +47,17 @@ export function initializeEventListeners() {
         }
     });
 
+    // Добавляем обработчик события `animationend` для индикаторов
+    if (this.indicators) {
+        this.indicators.forEach((indicator) => {
+            indicator.addEventListener('animationend', (event) => {
+                if (event.animationName === 'TimeGradient' && indicator.classList.contains('active')) {
+                    this.handleSliderClick('next'); // Переход на следующий слайд
+                }
+            });
+        });
+    }
+
     // Запуск автоплея
     this.startAutoplay();
 }

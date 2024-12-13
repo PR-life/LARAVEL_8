@@ -67,12 +67,12 @@
 	}
 
 }
-
-// .-Pause:not(.on) ._line,
-// .Pause:hover ._line,
-// .Time:hover ._line{
-// 	animation-play-state: paused !important;
-// }
+ 
+.-Pause.pause-on .Time.active ._line,
+.Pause:hover .Time.active ._line,
+.Time.-hover:hover ._line{
+	animation-play-state: paused !important;
+}
 
 
 // .Time.-bg .active > ._line,

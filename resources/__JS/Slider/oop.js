@@ -67,38 +67,33 @@ export default class Slider {
     }
 
 
-
-
-
-
-
     // Движение слайдера к заданному индексу
     Go(index) {
         const isVisible = this.rootElem.getBoundingClientRect().width > 0;
         let attempts = 0;
         const maxAttempts = 10;
-    
+
         while (this.itemWidth === 0 && attempts < maxAttempts) {
             if (isVisible) {
                 this.updateItemWidth();
             }
             attempts++;
         }
-    
+
         if (attempts === maxAttempts) {
             console.warn("Не удалось установить ширину элемента, возможно элемент скрыт.");
             return;
         }
-    
+
         if (index < 0 || index >= this.count) return;
-    
+
         this.move(index);
-    
+
         // Обновление активных элементов
         this.items.forEach((item, i) => {
             const isActive = i === index;
             this.toggleActiveClass(item, 'active', isActive);
-    
+
             // Проверка на <source data-src> внутри <video>
             if (isActive) {
                 const video = item.querySelector('video');
@@ -112,14 +107,18 @@ export default class Slider {
                 }
             }
         });
-    
+
+        // Обновление активных индикаторов
         this.indicators.forEach((indicator, i) => {
-            this.toggleActiveClass(indicator, 'active', i === index);
+            const isActive = i === index;
+
+            if (isActive) this.resetAnimation(indicator); // Сброс и перезапуск анимации
+            this.toggleActiveClass(indicator, 'active', isActive);
         });
-    
+
         this.trigger = true;
     }
-    
+
 
 
 
@@ -214,6 +213,13 @@ export default class Slider {
     // Универсальная функция для управления классами активности
     toggleActiveClass(element, className, add = true) {
         toggleActiveClass(element, className, add);
+    }
+
+    //
+    resetAnimation(element) {
+        element.style.animation = 'none'; // Сбрасываем текущую анимацию
+        element.offsetHeight;            // Перерисовка элемента (reflow)
+        element.style.animation = '';    // Восстанавливаем анимацию
     }
 
     // Метод для плавного движения слайдера

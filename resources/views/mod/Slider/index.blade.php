@@ -1,4 +1,4 @@
-<div id="{{$id ?? 'Slider'}}" class="Slider jsSlider / {!!$css28061029 ?? '-move'!!} index relative" data-current='1' itemscope itemtype="https://schema.org/ImageGallery">
+<div id="{{$id ?? 'Slider'}}" class="Slider jsSlider {!!$css28061029 ?? '-move'!!} / -Pause / index relative" data-current='1' itemscope itemtype="https://schema.org/ImageGallery">
 	<meta itemprop="name" content="слайдер">
 	{!!$img ?? ''!!}
  	{!!$manager ?? ""!!}

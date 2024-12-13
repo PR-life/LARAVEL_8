@@ -47,6 +47,9 @@ class BaseRelationsRequest extends BaseRequest
  
             'item_ids' => 'nullable|array',
             'item_ids.*' => 'nullable|integer|exists:items,id',
+
+            'feature_ids' => 'nullable|array',
+            'feature_ids.*' => 'nullable|integer|exists:features,id',
  
             'service_ids' => 'nullable|array',
             'service_ids.*' => 'nullable|integer|exists:services,id',

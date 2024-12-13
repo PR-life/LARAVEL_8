@@ -1,7 +1,7 @@
 <div class="item Story
             vol-{{$cssVol ?? ''}}
             {{$css06112130 ?? ''}}
-            relative">
+            relative index">
     @include('mod.Stories.wrap.lego.img')
     @include('mod.Stories.wrap.lego.video')
 

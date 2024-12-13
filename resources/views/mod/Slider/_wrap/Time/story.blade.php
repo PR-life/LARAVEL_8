@@ -1,5 +1,4 @@
-<div class="slider-dot W-100 / Time / pointer index {{$loop == 0 ? 'active' : ''}}" data-item='{{$loop + 1}}'>
-
+<div class="slider-dot W-100 param-{{$param ?? ''}} / Time / pointer index {{$loop == 0 ? 'active' : ''}}" data-item='{{$loop + 1}}'>
     {{-- <div class="noEvents relative">
         <div class="content-s Grey">{!!$slot!!}</div>
     </div> --}}

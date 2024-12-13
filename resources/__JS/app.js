@@ -201,6 +201,7 @@ function fooListenerClick(param) {
 			type = c.hasAttribute('data-css') ? 'css' : '',
 			action = c.hasAttribute('data-toggle') ? 'toggle' : '';
 
+		// console.log(c)
 		// console.log(div)
 
 		if(type == 'css') {
