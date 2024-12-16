@@ -1,4 +1,4 @@
-<div class="manager-11121408 / flex cross-xs space">
+<div class="manager-11121408 / flex cross-xs space round-s">
     <div id="addBtn" class="btn-add x-close / pointer" data-click data-node='wrap_11121143' data-css data-add='S' data-loop>
         <svg viewBox="0 0 36 36">
             <path d="m 26,13 0,10 -16,0 0,-10 z m -14,2 12,0 0,6 -12,0 0,-6 z" fill="currentColor" fill-rule="evenodd"></path>
@@ -19,7 +19,7 @@
 </div>
 
 <style>
-    .manager-11121408 .Active {
+    .manager-11121408 .active {
         opacity: .5;
     }
 </style>
@@ -34,11 +34,11 @@
         function updateButtonState() {
             const currentData = JSON.parse(localStorage.getItem(storageKey)) || [];
             if (currentData.length > 0) {
-                addButton.classList.add('Active');
-                removeButton.classList.remove('Active');
+                addButton.classList.add('active');
+                removeButton.classList.remove('active');
             } else {
-                addButton.classList.remove('Active');
-                removeButton.classList.add('Active');
+                addButton.classList.remove('active');
+                removeButton.classList.add('active');
             }
         }
 

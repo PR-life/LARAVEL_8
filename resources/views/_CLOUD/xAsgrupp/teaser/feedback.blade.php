@@ -1,7 +1,7 @@
 @component('_CLOUD.xAsgrupp._wrap.item.index')
-    @slot('css16111209','x-border x-shadow')
+    @slot('css16111209','x-border x-shadow vol-feedback')
     <div class="gaud-28111055 / relative _indexMax"></div>
-    <a href="#" class="_wrap block / relative index">
+    <a href="#" class="_wrap block / H-100 / relative index">
         @include('_._brick.img.squere',['css09071611'=> 'H-100 W-100'])
         <span class="_name / Abs -all / flex dC cI cC / void">
             <span>
@@ -16,8 +16,6 @@
             </span>
         </span>
     </a>
-        
-
 @endcomponent 
 
  

@@ -158,6 +158,22 @@ class Category extends BaseContent
         return 'category_faqs';
     }
 
+    protected function getFeaturePivotTable(){
+        return 'category_features';
+    }
+
+    // TODO fix
+    public function features()
+    {
+        return $this->belongsToMany(
+            Feature::class,
+            'category_faqs',
+            $this->getForeignKey(),
+            'faq_id'
+        );
+    }
+
+
     // LVL 1
     protected function getTagPivotTable(){
         return 'category_tags';

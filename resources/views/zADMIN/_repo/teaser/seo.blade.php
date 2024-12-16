@@ -14,6 +14,6 @@ $x_23101421 .= 'group-'.($Var->group ? $Var->group->slug : 'none');
 @component('zADMIN._wrap.teaser.index', ['Var' => $Var, 'css14051235' => 'space-left '.$x_23101421])
     <div class="flex bC">
         @include('zADMIN._repo.teaser.lego.seo_l')
-        {{-- @include('zADMIN._repo.teaser.lego.seo_r') --}}
+        @include('zADMIN._repo.teaser.lego.seo_r')
     </div>
 @endcomponent

@@ -163,6 +163,16 @@ class BaseContent extends Model
     
 
     // LVL 1
+    public function features()
+    {
+        return $this->belongsToMany(
+            Feature::class,
+            $this->getFeaturePivotTable(),
+            $this->getForeignKey(),
+            'feature_id'
+        );
+    }
+
     public function tags()
     {
         return $this->belongsToMany(

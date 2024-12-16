@@ -1,7 +1,11 @@
 @charset "UTF-8";
 
 .Info {
-	--x-Info-void: ~"calc(var(--font))";
+	--x-Info-void: var(--font);
+}
+
+p.Info,.p.Info {
+	--x-Info-void: var(--rem-p);
 }
 
 

@@ -2,6 +2,18 @@
     
     <div class="W-100 right-text">
 
+        @if(isset($Var->features) && $Var->features->count())
+        <ul class="menu -tag -XS vol-tags / lie cloud">
+            @foreach($Var->features as $_feature)
+            <li>
+                <a class="nowrap content-xxxs round-xs" href="{{route('admin.feature.edit', $_feature->id)}}" target="_blank">
+                    {{$_feature->name}}
+                </a>
+            </li>
+            @endforeach
+        </ul>
+        @endif
+
         @if(isset($Var->tags) && $Var->tags->count())
             <ul class="menu -tag -XS vol-tags / lie cloud">
                 @foreach($Var->tags as $_tag)
@@ -34,9 +46,6 @@
 
                 @endforeach
             </ul>
-
-
-
         @endif
         @isset($Var->categories)
         @if($Var->categories->count())
