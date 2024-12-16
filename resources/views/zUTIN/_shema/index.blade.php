@@ -1,1 +1,0 @@
-@extends('zUTIN._schema.INDEX')
