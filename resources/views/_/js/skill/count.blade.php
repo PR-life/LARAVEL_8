@@ -12,7 +12,7 @@
                 entry.target.dataset.duration || 4,
                 {
                     prefix: entry.target.dataset.prefix || '',
-                    suffix: entry.target .dataset.suffix || ' ₽',
+                    suffix: entry.target .dataset.suffix || ' ₽ / мес',
                     separator: entry.target .dataset.separator || ' '
                 }
                 );
@@ -23,7 +23,7 @@
             }
             })
         });
-        document.querySelectorAll('.jsNumbers .item .x-js').forEach(num => {
+        document.querySelectorAll('.jsNumbers .x-js').forEach(num => {
             numbersObserver.observe(num)
         })
         }
