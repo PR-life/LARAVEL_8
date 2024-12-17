@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+
+.Details.vol-kokoro {
+
+
+    details:hover > summary {
+        ._text {
+            transform: translateX(-1rem);
+        }
+    }
+
+
+    //
+    summary {
+        transition: color linear .2s;
+
+        ._text {
+            transition: transform linear .2s;
+        }
+    }
+ 
+    summary::before {
+        content: '';
+        position: absolute;
+        z-index: 0;
+        inset: 1px;
+        background: rgb(27, 27, 28);
+    }
+
+    details[open] > summary,
+    details:hover > summary {
+        color: #fff;
+        background-color: rgb(27, 27, 28);
+    }
+
+    details[open] {
+        --bg-summary-before-open:#fff;
+    }
+    details[open] > summary {
+        .anime17120852 {
+            opacity: 0;
+        }
+    }
+
+    .anime17120852 {
+        background-color: rgb(242, 242, 242);
+        -webkit-mask: linear-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 100%);
+        mask: linear-gradient(rgb(0, 0, 0) 0%, rgb(0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgba(0, 0, 0, 0) 50%, rgb(0, 0, 0) 50%, rgb(0, 0, 0) 100%);
+        // transition: background-color 0.5s;
+        padding-left: calc((var(--w) - var(--I)) * 0.5);
+        padding-right: calc((var(--w) - var(--I)) * 0.5);
+    }
+}
+
+// details[open] > summary .anime17120852 {
+//     /* -webkit-mask: linear-gradient(
+//         rgb(0, 0, 0) 0%, 
+//         rgba(0, 0, 0, 0) 100%
+//     // ); */
+//     // /* mask: linear-gradient(
+//     //     rgb(0, 0, 0) 0%, 
+//     //     rgba(0, 0, 0, 0) 100%
+//     // ); */
+
+//     opacity: 0;
+// }
+
+ 
+
+/* .x34 {
+    background-color: rgb(242, 242, 242);
+    clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    transition: clip-path 0.5s ease-in-out;
+}
+
+.x34:hover {
+    clip-path: polygon(0 0, 100% 0, 100% 75%, 0 75%);
+} */
+
+
+        /* .x34 {
+            will-change: auto;
+            opacity: 1;
+            background-color: rgb(242, 242, 242);
+            mask: linear-gradient(
+                rgb(0, 0, 0) 0%, 
+                rgb(0, 0, 0) 50%, 
+                rgba(0, 0, 0, 0) 50%, 
+                rgba(0, 0, 0, 0) 50%, 
+                rgb(0, 0, 0) 50%, 
+                rgb(0, 0, 0) 100%
+                );
+        }
+        .x34:hover {
+            mask: linear-gradient(
+                rgb(0, 0, 0) 0%, 
+                rgb(0, 0, 0) 0%, 
+                rgba(0, 0, 0, 0) 0%, 
+                rgba(0, 0, 0, 0) 100%, 
+                rgb(0, 0, 0) 100%, 
+                rgb(0, 0, 0) 100%
+                );
+        } */
+ 
+     

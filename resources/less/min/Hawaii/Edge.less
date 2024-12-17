@@ -55,7 +55,7 @@
 
 	//
 
-	.Edge.-asidePC {
+	.Edge.-aside_PC {
 		.EDGE;
 
 		// может перенести в AI
@@ -63,15 +63,18 @@
 		padding-left: calc(var(--AsideMin) + var(--Edge)*.5);
 	}
  
-	.Edge.-leftBoxPC {
+	.Edge.-leftBox_PC {
 		.EDGE;
 		padding-left: calc((var(--w) - var(--Box))*.5);;
 	}
-	.Edge.-leftIPC {
+	.Edge.-leftI_PC {
 		.EDGE;
 		padding-left: calc((var(--w) - var(--I))*.5);;
 	}
-
+	.Edge.-rightI_PC {
+		.EDGE;
+		padding-right: calc((var(--w) - var(--I))*.5);;
+	}
 	
  
 
@@ -120,11 +123,11 @@
 
 
 @media (min-width:@metrika-60-plus) and (max-width:@w-max) {
-	.Edge.-leftPentePC {
+	.Edge.-leftPente_PC {
 		.EDGE;
 		padding-left: calc((var(--w) - var(--Pente))*.5);;
 	}
-	.Edge.-rightPentePC {
+	.Edge.-rightPente_PC {
 		.EDGE;
 		padding-right: calc((var(--w) - var(--Pente))*.5);;
 	}
