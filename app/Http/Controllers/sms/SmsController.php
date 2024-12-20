@@ -41,6 +41,7 @@ class SmsController extends BaseController
 
     public function storeAsk(AskRequest $request)
     {
+        // dd($request);
         return $this->handleSmsRequest(
             $request, 
             'zPAGE.Lead', 

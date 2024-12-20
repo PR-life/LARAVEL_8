@@ -61,6 +61,25 @@ class Sms extends Model
 		return Carbon::parse($this->created_at);
 	}
 
+
+    ////
+    public function getDisplayName(): string
+    {
+        return $this->isAnonymous() ? 'аноним' : $this->name;
+    }
+    
+    public function getHumanReadableDateAttribute()
+    {
+        return $this->dateAsCarbon->diffForHumans();
+    }
+
+
+    //
+    public function isAnonymous()
+    {
+        return in_array($this->name, ['Аноним', 'форма без имени', 'без имени']);
+    }
+ 
 	
 }
 

@@ -4,6 +4,14 @@
     <input type="hidden" name="label" value="ask">
     <input type="hidden" name="reachgoal_id" value="formAsk">
 
+    @if($item instanceof App\Models\Item)
+        <input type="hidden" name="item_id" value="{{$item->id}}">
+    @endif
+    @if($item instanceof App\Models\Product)
+        <input type="hidden" name="product_id" value="{{$item->id}}">
+    @endif
+
+
     <div class="{{$css_wrap07110929 ?? ''}}">
         {!!$slot ?? ''!!}
         <div class="_shell @error('sms','newAsk') Error Anime vol-shake_hor @enderror">

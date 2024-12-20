@@ -57,20 +57,36 @@
 	--c-text: var(--Chat-c-tail-A);
 }
 
+//
+
+.Q.x-arrowTop,
+.Q.face-top {
+	._wrap::after {
+		top: var(--x-QA-padding-top);
+	}
+}
+
+.Q.face-bottom {
+	._wrap::after {
+		bottom: var(--x-QA-padding-bottom);
+	}
+}
+
+
 .Q {
 	._wrap {position: relative;}
 	._wrap::after {
+		content: '';
 		position: absolute;
 		right: 100%;
-		top: var(--x-QA-padding-top);
 		//
-		content: '';
 		display: block;
 		border-top: var(--Q-tail-size-a) solid transparent;
 		border-bottom: var(--Q-tail-size-a) solid transparent;
 		border-right: var(--Q-tail-size-b) solid var(--Chat-c-tail-Q);
 		margin-top: calc(var(--Q-tail-size-a) - var(--Q-tail-size-a)*2);
 	}
+
 }
 
 

@@ -5,7 +5,7 @@
         </div>
         <div class="Abs tail">@svg('tail')</div>
     </div>
-    <div class="Preamble -row -S / right">
+    {{-- <div class="Preamble -row -S / right">
         <div class="content-s Grey">{{$_sms->answer_user_name}}</div>
-    </div>
+    </div> --}}
 </div>
