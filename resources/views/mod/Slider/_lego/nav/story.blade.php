@@ -2,6 +2,7 @@
     <div class="slider-dots / W-100 flex bC cross-xxs / -Black / index">
         @foreach($arrTile as $key => $_item)
             @component('mod.Slider._wrap.Time.story')
+                @slot('id', $id)
                 @slot('loop', $loop->index)
                 @slot('param', $_item)
                 {!! $key !!}

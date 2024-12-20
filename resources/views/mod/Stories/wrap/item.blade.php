@@ -15,7 +15,7 @@
 
             @isset($LLC)
             <div class="Wings">
-                <div class="_win -t / content b500">
+                <div class="_win -t / content b500 / center-text">
                     {{$LLC}}
                     <div class="paragraph"></div>
                 </div>
@@ -23,7 +23,7 @@
             @endisset
             {!!$slot!!}
         </div>
-        <div class="_footer / space-l _indexMax">
+        <div class="_footer {{$cssFooter ?? ''}} / space-l _indexMax">
             {!!$footer ?? ''!!}
             <div class="paragraphX2 none_mbl"></div>
             <div class="hill none_PC"></div>
